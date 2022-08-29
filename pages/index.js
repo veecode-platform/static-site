@@ -1,14 +1,15 @@
 import Head from 'next/head'
+import { HomeScreen } from '../src/screens'
 
 export default function Home() {
   return (
-    <div>
+    <>
       <Head>
         <title>Platform | Home</title>
         <meta name="description" content="description" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div>page</div>
-    </div>
+      <HomeScreen/>
+    </>
   )
 }
