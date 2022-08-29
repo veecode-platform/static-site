@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import { HomeScreen } from '../src/screens'
+import { Homescreen } from '../src/screens'
 
 export default function Home() {
   return (
@@ -9,7 +9,7 @@ export default function Home() {
         <meta name="description" content="description" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <HomeScreen/>
+      <Homescreen />
     </>
   )
 }
