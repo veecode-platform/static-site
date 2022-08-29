@@ -1,0 +1,23 @@
+@import "../abstract/functions", "../abstract/variables",  "../abstract/responsive";
+
+.button{
+    @include displayFlex(center, center, row);
+    outline: none;
+    padding: 1.1em 3em;
+    font-size: 1.1vw;
+    border-radius: 1.6em;
+    border: 2px solid $color1;
+    color: $color1;
+    cursor: pointer;
+    font-size: 1.2vw;
+    font-weight: 500;
+    background: transparent;
+    margin: 1.5em 0;
+    &:hover{
+        background: $color1;
+        color: $color3;
+        border: $color2;
+        transition: all .8s ease-in-out;
+
+    }
+}
