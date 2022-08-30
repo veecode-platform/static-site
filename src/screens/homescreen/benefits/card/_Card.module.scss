@@ -13,6 +13,11 @@
         @include screenSize(90%,18.5em);
         @include displayFlex(center, center,row);
         margin-bottom:-2.5em;
+        //tablet
+        @include for-tablet-only{
+          @include screenSize(85%,12em);
+          margin-bottom:-1.6em;
+        }
         img{
             @include screenSize(50%,100%);
         }
@@ -23,6 +28,10 @@
         background-color: $color1;
         padding: 3em 5em;
         border-radius: 2em 2em 0 0;
+        //tablet
+        @include for-tablet-only{
+            @include screenSize(100%, 7em);
+        }
         h2{
             @include typography(1.5vw,center,1.2em,600);
         }
@@ -35,6 +44,10 @@
         //viewport
         @include for-viewport-only{
             @include screenSize(100%, 28em);
+        }
+        //tablet
+        @include for-tablet-only{
+            @include screenSize(100%, 25.5em);
         }
         &-item{
             @include screenSize(100%, auto);

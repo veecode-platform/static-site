@@ -9,5 +9,9 @@
         @include screenSize(75%,auto);
         @include displayFlex(center, center, row);
         padding: 10em 0;
+        //tablet
+        @include for-tablet-only{
+            @include screenSize(90%,auto);
+        }
     }
 }
