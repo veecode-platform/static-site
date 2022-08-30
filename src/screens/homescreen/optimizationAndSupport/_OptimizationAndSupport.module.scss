@@ -89,4 +89,43 @@
             }
         }
     }
+    .banner{
+        @include screenSize(100%,auto);
+        @include displayFlex(center,center,row);
+        background: $color1;
+        padding: 4em 0;
+        margin-top: -0.4em;
+        &__container{
+            @include screenSize(50%,auto);
+            @include displayFlex(center,center,row);
+            .left{
+                @include screenSize(20%,auto);
+                img{
+                    width:100%;
+                }
+            }
+            .text{
+                @include screenSize(60%,auto);
+                @include displayFlex(center,center,column);
+                &__title{
+                    @include screenSize(60%,auto);
+                    @include displayFlex(center,center,row);
+                    padding: 1em .3em;
+                    h2{
+                        @include typography(2.3vw,center,1.3em,600);
+                    }
+                }
+                p{
+                    @include typography(1.4vw,center,1.3em,300);
+                    margin: .5em 0;
+                }
+            }
+            .right{
+                @include screenSize(20%,auto);
+                img{
+                    width:100%;
+                }
+            }
+        }
+    }
 }
