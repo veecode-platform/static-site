@@ -1,0 +1,35 @@
+[
+    {
+        "id":0,
+        "image":"/assets/home/icon1.png",
+        "title":"Boost your productivity",
+        "titleItem1":"Be more productive",
+        "descItem1":"More agility and organization in your daily processes",
+        "titleItem2":"Focus on what is needed",
+        "descItem2":"Simplify the creation and maintenance process and work on your business rules",
+        "titleItem3":"Remove barriers",
+        "descItem3":"Bring resilience to your application by following the most modern best practices on the market."
+    },
+    {
+        "id":1,
+        "image":"/assets/home/icon2.png",
+        "title":"Empower your team",
+        "titleItem1":"More autonomous teams",
+        "descItem1":"Increase your team's performance and autonomy by spending less resources to do more",
+        "titleItem2":"Standardize your projects",
+        "descItem2":"Easily and quickly centralize important information",
+        "titleItem3":"Deliver more with less",
+        "descItem3":"Control your artifacts in an easy and organized way, getting feedback faster in one place"
+    },
+    {
+        "id":2,
+        "image":"/assets/home/icon3.png",
+        "title":"Get closer to your customer",
+        "titleItem1":"faster projects",
+        "descItem1":"More agility and organization in your daily processes",
+        "titleItem2":"Publish and centralize",
+        "descItem2":"Simplify the creation and maintenance process and work on your business rules",
+        "titleItem3":"Optimize your processes",
+        "descItem3":"Organize the development of your projects and have a productivity cycle with continuous delivery"
+    }
+]

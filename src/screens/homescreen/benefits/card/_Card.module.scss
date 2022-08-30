@@ -1,0 +1,67 @@
+@import "../abstract/functions", "../abstract/variables",  "../abstract/responsive";
+
+.card{
+    @include screenSize(30%, auto);
+    @include displayFlex(center, center,column);
+    margin: 1.5%;
+    cursor:pointer;
+    &:hover{
+        opacity: .8;
+        transition: all .8s linear;
+    }
+    &__icon{
+        @include screenSize(90%,35vh);
+        @include displayFlex(center, center,row);
+        margin-bottom:-2.5em;
+        img{
+            @include screenSize(50%,100%);
+        }
+    }
+    &__title{
+        @include screenSize(100%, 15vh);
+        @include displayFlex(center,center,row);
+        background-color: $color1;
+        padding: 3em 5em;
+        border-radius: 2em 2em 0 0;
+        h2{
+            @include typography(1.5vw,center,1.2em,600);
+        }
+    }
+    &__options{
+        @include screenSize(100%, 70vh);
+        @include resetList();
+        background-color: $color2;
+        border-radius: 0 0 2em 2em;
+        &-item{
+            @include screenSize(100%, auto);
+            @include displayFlex(center, center, column);
+            background-color: $color2;
+            &:first-child{
+                padding-top: 2em;
+                &::after{
+                    content:"";
+                    width: 40%;
+                    height:2px;
+                    background-color: $color1;
+                    margin-bottom: 2em;
+                }
+            }
+            &:last-child{
+                &::before{
+                    content:"";
+                    width: 40%;
+                    height:2px;
+                    background-color: $color1;
+                    margin-bottom: 2em;
+                }
+            }
+            h3{
+                @include typography(1.1vw,center,1.2em,600);
+            }
+            p{
+                @include typography(.9vw,center,1.2em,300);
+                padding: 2em 1.2em;
+            }
+        }
+    }
+}
