@@ -29,8 +29,9 @@
             }
         }
         &__buttons{
-            @include screenSize(36%, auto);
-            @include displayFlex(space-between, center, row);
+            @include screenSize(35%, auto);
+            @include displayFlex(space-around, center, row);
+            padding: 1em 0;
         }
     }
 }
