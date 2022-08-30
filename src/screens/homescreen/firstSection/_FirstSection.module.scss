@@ -10,7 +10,7 @@
         @include displayFlex(center, flex-start, column);
         margin: 10em 0;
         &__logo{
-            @include screenSize(24%, auto);
+            @include screenSize(20%, auto);
         }
         &__title{
             @include screenSize(50%, auto);
