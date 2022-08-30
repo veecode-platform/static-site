@@ -1,0 +1,46 @@
+@import "../abstract/functions", "../abstract/variables",  "../abstract/responsive";
+
+.wrapper{
+    @include screenSize(100%,auto);
+    @include displayFlex(flex-start, center, row);
+    @include backgroundImage('/assets/home/bg3.png');
+    background-size: 130%;
+    background-position-x: 60%;
+    background-position-y: 40%;
+    .content{
+        @include screenSize(50%,auto);
+        @include displayFlex(center, center, column);
+        color: $color2;
+        &__text{
+            @include screenSize(65%,auto);
+            padding: 10em 0;
+            &-title{
+                @include screenSize(100%,auto);
+                padding: 2em 0;
+                span{
+                    color: $color1;
+                }
+                h2{
+                    @include typography(2.5vw,start,1.2em,600);
+                }
+            }
+            &-desc{
+                @include screenSize(100%,auto);
+                strong{
+                    font-size: 1.1vw;
+                }
+                .list{
+                    list-style-position: inside;
+                    padding: 0.6em 0;
+                    li{
+                        @include typography(1vw,start,1.8em,300);
+                    }
+                }
+            }
+            &-buttonWrapper{
+                @include screenSize(100%,auto);
+                margin: 1.5em 0;
+            }
+        }
+    }
+}
