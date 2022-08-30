@@ -10,7 +10,7 @@
         transition: all .8s linear;
     }
     &__icon{
-        @include screenSize(90%,35vh);
+        @include screenSize(90%,18.5em);
         @include displayFlex(center, center,row);
         margin-bottom:-2.5em;
         img{
@@ -18,7 +18,7 @@
         }
     }
     &__title{
-        @include screenSize(100%, 15vh);
+        @include screenSize(100%, 8.5em);
         @include displayFlex(center,center,row);
         background-color: $color1;
         padding: 3em 5em;
@@ -28,10 +28,14 @@
         }
     }
     &__options{
-        @include screenSize(100%, 70vh);
+        @include screenSize(100%, 36.5em);
         @include resetList();
         background-color: $color2;
         border-radius: 0 0 2em 2em;
+        //viewport
+        @include for-viewport-only{
+            @include screenSize(100%, 28em);
+        }
         &-item{
             @include screenSize(100%, auto);
             @include displayFlex(center, center, column);

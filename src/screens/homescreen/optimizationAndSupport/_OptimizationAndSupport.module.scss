@@ -11,7 +11,6 @@
             @include displayFlex(center,center,row);
             .desc{
                 @include screenSize(70%,auto);
-                padding-top: 5em;
                 span{
                     @include typography(1vw,start,1.1em,400);
                     color: $color4;
@@ -53,7 +52,6 @@
             @include displayFlex(center,center,row);
             .desc{
                 @include screenSize(70%,auto);
-                padding-top: 5em;
                 span{
                     @include typography(1vw,start,1.1em,400);
                     color: $color4;

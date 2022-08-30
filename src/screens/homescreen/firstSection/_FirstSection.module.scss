@@ -5,6 +5,10 @@
     @include displayFlex(center,center,row);
     @include backgroundImage("/assets/home/bg1.png");
     background-position: 20% 80%;
+    //viewport
+    @include for-viewport-only{
+        background-position: 50% 50%;
+    }
     .content{
         @include screenSize(80%, auto);
         @include displayFlex(center, flex-start, column);
