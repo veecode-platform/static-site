@@ -8,11 +8,11 @@
     background-position-x: 60%;
     background-position-y: 40%;
     .content{
-        @include screenSize(50%,auto);
+        @include screenSize(60%,auto);
         @include displayFlex(center, center, column);
         color: $color2;
         &__text{
-            @include screenSize(65%,auto);
+            @include screenSize(60%,auto);
             padding: 10em 0;
             &-title{
                 @include screenSize(100%,auto);
