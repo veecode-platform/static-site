@@ -68,6 +68,7 @@
                 &__text{
                     strong{
                        font-size:1.2vw;
+                       color: $color4;
                     }
                     p{
                         @include typography(1vw,start,1.5em,300);
