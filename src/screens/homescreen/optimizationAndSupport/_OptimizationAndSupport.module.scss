@@ -1,0 +1,91 @@
+@import "../abstract/functions", "../abstract/variables",  "../abstract/responsive";
+
+.wrapper{
+    @include screenSize(100%,auto);
+    @include displayFlex(center,center,column);
+    .optimizationContent{
+        @include screenSize(100%,auto);
+        @include displayFlex(center,center,row);
+        &__desc{
+            @include screenSize(50%,100%);
+            @include displayFlex(center,center,row);
+            .desc{
+                @include screenSize(70%,auto);
+                padding-top: 5em;
+                span{
+                    @include typography(1vw,start,1.1em,400);
+                    color: $color4;
+                }
+                &__title{
+                    @include screenSize(80%,auto);
+                    padding: 1em 0 2em 0;
+                    h2{
+                        @include typography(1.9vw,start,1.2em,500);
+                    }
+                }
+                &__list{
+                    list-style-position: inside;
+                    padding-bottom: 1.8em;
+                    li{
+                        @include typography(1vw,start,1.5em,300);
+                        color: $color4;
+                    }
+                }
+                &__buttonWrapper{
+                    @include screenSize(100%,auto);
+                    @include displayFlex(flex-start, flex-start,row);
+                }
+            }
+        }
+        &__image{
+            @include screenSize(50%,auto);
+            img{
+                width: 100%;
+            }
+        }
+    }
+    .supportContent{
+        @include screenSize(100%,auto);
+        @include displayFlex(center,center,row-reverse);
+        margin-top: -0.5em;
+        &__desc{
+            @include screenSize(50%,100%);
+            @include displayFlex(center,center,row);
+            .desc{
+                @include screenSize(70%,auto);
+                padding-top: 5em;
+                span{
+                    @include typography(1vw,start,1.1em,400);
+                    color: $color4;
+                }
+                &__title{
+                    @include screenSize(80%,auto);
+                    padding: 1em 0 2em 0;
+                    h2{
+                        @include typography(1.9vw,start,1.2em,500);
+                    }
+                }
+                &__text{
+                    strong{
+                       font-size:1.2vw;
+                    }
+                    p{
+                        @include typography(1vw,start,1.5em,300);
+                        color: $color4;
+                        padding: .5em 0 1.8em 0;
+                    }
+                }
+                &__buttonWrapper{
+                    @include screenSize(100%,auto);
+                    @include displayFlex(flex-start, flex-start,row);
+                }
+            }
+        }
+        &__image{
+            @include screenSize(50%,auto);
+            img{
+                width: 100%;
+            }
+        }
+    }
+}
