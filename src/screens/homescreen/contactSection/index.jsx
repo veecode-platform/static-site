@@ -8,7 +8,7 @@ const ContactSection = () => {
         <div className={style.content__text}>
           <div className={style["content__text-title"]}>
             <h2>
-              <span>unlock</span>
+              <span>Unlock</span>
               <br />
               your team's potential
             </h2>
