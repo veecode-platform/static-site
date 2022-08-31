@@ -5,6 +5,21 @@
     @include displayFlex(center, center,column);
     margin: 1.5%;
     cursor:pointer;
+    //tablet
+    @include for-tablet-only{
+        @include screenSize(32%, auto);
+        margin: 0.6%;
+    }
+    //mobile(M)
+    @include for-phone-only{
+        @include screenSize(31%, auto);
+        margin: 0.4%;
+    }
+    //mobile(S)
+    @include for-phoneS-only{
+        @include screenSize(80%, auto);
+        margin: 1.5em 0;
+    }
     &:hover{
         opacity: .8;
         transition: all .8s linear;
@@ -18,6 +33,15 @@
           @include screenSize(85%,12em);
           margin-bottom:-1.6em;
         }
+        //mobile(M)
+        @include for-phone-only{
+            @include screenSize(80%,9em);
+            margin-bottom:-1.6em;
+        }
+        //mobile(S)
+        @include for-phoneS-only{
+            @include screenSize(90%,12em);
+        }
         img{
             @include screenSize(50%,100%);
         }
@@ -30,10 +54,29 @@
         border-radius: 2em 2em 0 0;
         //tablet
         @include for-tablet-only{
-            @include screenSize(100%, 7em);
+            @include screenSize(100%, 6.5em); 
+            padding: 2em;  
+        }
+        //mobile(M)
+        @include for-phone-only{
+            @include screenSize(100%, 5em);
+            padding: 3em 2em;
+            border-radius: 1em 1em 0 0;
         }
         h2{
             @include typography(1.5vw,center,1.2em,600);
+            //tablet
+            @include for-tablet-only{
+                font-size: 1.05em;
+            }
+            //mobile(M)
+            @include for-phone-only{
+                font-size: 18px;
+            }
+            //mobile(S)
+            @include for-phoneS-only{
+                font-size: 20px;
+            }           
         }
     }
     &__options{
@@ -47,7 +90,12 @@
         }
         //tablet
         @include for-tablet-only{
-            @include screenSize(100%, 25.5em);
+            @include screenSize(100%, auto);
+        }
+        //mobile(M)
+        @include for-phone-only{
+            @include screenSize(100%, auto);
+            border-radius: 0 0 1.5em 1.5em;
         }
         &-item{
             @include screenSize(100%, auto);
@@ -61,23 +109,61 @@
                     height:2px;
                     background-color: $color1;
                     margin-bottom: 2em;
+                    //mobile(M)
+                    @include for-phone-only{
+                        margin-bottom: 1.5em;
+                    }
                 }
             }
             &:last-child{
+                //mobile(M)
+                @include for-tablet-only{
+                    padding-bottom: 1.2em;
+                    border-radius: 2em;   
+                }
                 &::before{
                     content:"";
                     width: 40%;
                     height:2px;
                     background-color: $color1;
                     margin-bottom: 2em;
+                    //mobile(M)
+                    @include for-phone-only{
+                        margin-bottom: 1.5em;
+                    }
                 }
             }
             h3{
                 @include typography(1.1vw,center,1.2em,600);
+                //tablet
+                @include for-tablet-only{
+                    font-size: .95em;
+                }
+                //mobile(M)
+                @include for-phone-only{
+                    font-size: 11.5px;
+                }
+                //mobile(S)
+                @include for-phoneS-only{
+                    font-size: 18px;
+                }
             }
             p{
                 @include typography(.9vw,center,1.2em,300);
                 padding: 2em 1.4em;
+                //tablet
+                @include for-tablet-only{
+                    padding: 3em 2.5em;
+                    font-size: .8em;
+                }
+                //mobile(M)
+                @include for-phone-only{
+                    font-size: 11px;
+                }
+                //mobile(S)
+                @include for-phoneS-only{
+                    font-size: 16px;
+                }
             }
         }
     }

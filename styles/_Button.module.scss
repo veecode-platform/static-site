@@ -12,11 +12,19 @@
     font-size: 1.2vw;
     font-weight: 500;
     background: transparent;
-    // margin: 1.5em 0;
     &:hover{
         background: $color1;
         color: $color3;
         transition: all .8s ease-in-out;
 
+    }
+    //mobile(M)
+    @include for-phone-only{
+        font-size: 1.3em;
+    }
+    //mobile(S)
+    @include for-phoneS-only{
+        margin: 0.8em 0;
+        min-width: 250px;
     }
 }

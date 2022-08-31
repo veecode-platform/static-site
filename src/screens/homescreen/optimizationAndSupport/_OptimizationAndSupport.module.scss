@@ -6,40 +6,108 @@
     .optimizationContent{
         @include screenSize(100%,auto);
         @include displayFlex(center,center,row);
+        //mobile(M)
+        @include for-phone-only{
+            @include displayFlex(center,center,column-reverse);
+        }
         &__desc{
             @include screenSize(50%,100%);
             @include displayFlex(center,center,row);
+            //mobile(M)
+            @include for-phone-only{
+                @include screenSize(80%,100%);
+                padding: 5em 0;
+            }
             .desc{
                 @include screenSize(70%,auto);
+                //mobile(M)
+                @include for-phone-only{
+                    @include screenSize(100%, auto);
+                    @include displayFlex(center,center,column);
+                }
                 span{
                     @include typography(1vw,start,1.1em,400);
                     color: $color4;
+                    //mobile(M)
+                    @include for-phone-only{
+                        @include typography(1.4em,center,1.1em,400);
+                    }
+                    //mobile(S)
+                    @include for-phoneS-only{
+                        font-size: 4.5vw;
+                    }
                 }
                 &__title{
                     @include screenSize(80%,auto);
                     padding: 1em 0 2em 0;
+                        //tablet
+                        @include for-tablet-only{
+                            padding: 1em 0;
+                        }
+                        //mobile(M)
+                        @include for-phone-only{
+                            padding: 2em 0;
+                        }
+                        //mobile(S)
+                        @include for-phoneS-only{
+                            @include screenSize(100%,auto);
+                        }
                     h2{
                         @include typography(1.9vw,start,1.2em,500);
+                        //phone(M)
+                        @include for-phone-only{
+                            @include typography(3.2em,center,1.2em,500);
+                        }
+                        //phone(S)
+                        @include for-phoneS-only{
+                            font-size: 38px;
+                        }
                     }
                 }
                 &__list{
                     list-style-position: inside;
                     padding-bottom: 1.8em;
+                    //tablet
+                    @include for-tablet-only{
+                      padding-bottom: 1.5em;
+                    }
                     li{
                         @include typography(1vw,start,1.5em,300);
                         color: $color4;
+                        //mobile(M)
+                        @include for-phone-only{
+                          @include typography(1.3em,center,1.5em,300);
+                        }
+                        //mobile(S)
+                        @include for-phoneS-only{
+                            @include for-phoneS-only{
+                                font-size: 16px;  
+                            }
+                        }
                     }
                 }
                 &__buttonWrapper{
                     @include screenSize(100%,auto);
                     @include displayFlex(flex-start, flex-start,row);
+                    //mobile(M)
+                    @include for-phone-only{
+                        @include displayFlex(center, center,row);
+                    }
                 }
             }
         }
         &__image{
             @include screenSize(50%,auto);
+            //mobile(M)
+            @include for-phone-only{
+                @include screenSize(100%,25em);
+            }
             img{
                 width: 100%;
+                //phone(M)
+                @include for-phone-only{
+                    @include screenSize(100%,100%);
+                }
             }
         }
     }
@@ -47,43 +115,128 @@
         @include screenSize(100%,auto);
         @include displayFlex(center,center,row-reverse);
         margin-top: -0.5em;
+        //mobile(M)
+        @include for-phone-only{
+            margin-top: 0;
+            @include displayFlex(center,center,column-reverse);
+        }
         &__desc{
             @include screenSize(50%,100%);
             @include displayFlex(center,center,row);
+            //mobile(M)
+            @include for-phone-only{
+                @include screenSize(80%,100%);
+                padding: 5em 0;
+            }
+            //mobile(S)
+            @include for-phoneS-only{
+                @include screenSize(82%,100%);
+            }
             .desc{
                 @include screenSize(70%,auto);
+                //mobile(M)
+                @include for-phone-only{
+                    @include screenSize(100%, auto);
+                    @include displayFlex(center,center,column);
+                }
                 span{
                     @include typography(1vw,start,1.1em,400);
                     color: $color4;
+                    //mobile(M)
+                    @include for-phone-only{
+                        @include typography(1.4em,center,1.1em,400);
+                    }
+                    //mobile(S)
+                    @include for-phoneS-only{
+                        font-size: 4.5vw;
+                    }
                 }
                 &__title{
                     @include screenSize(80%,auto);
                     padding: 1em 0 2em 0;
+                        //tablet
+                        @include for-tablet-only{
+                            padding: 1em 0;
+                        }
+                        //mobile(M)
+                        @include for-phone-only{
+                            padding: 2em 0;
+                        }
+                        //mobile(S)
+                        @include for-phoneS-only{
+                            @include screenSize(100%,auto);
+                        }
                     h2{
                         @include typography(1.9vw,start,1.2em,500);
+                            //phone(M)
+                            @include for-phone-only{
+                                @include typography(3.2em,center,1.2em,500);
+                            }
+                            //phone(S)
+                            @include for-phoneS-only{
+                                font-size: 38px;
+                            }
                     }
                 }
                 &__text{
+                    //mobile(M)
+                    @include for-phone-only{
+                        text-align: center;
+                    }
                     strong{
                        font-size:1.2vw;
                        color: $color4;
+                        //mobile(M)
+                        @include for-phone-only{
+                            @include typography(1.4em,center,1.1em,400);
+                        }
+                        //mobile(S)
+                        @include for-phoneS-only{
+                            font-size: 4.5vw;
+                        }
                     }
                     p{
                         @include typography(1vw,start,1.5em,300);
                         color: $color4;
                         padding: .5em 0 1.8em 0;
+                        //tablet
+                        @include for-tablet-only{
+                            padding-bottom: 1.5em;
+                        }
+                        //mobile(M)
+                        @include for-phone-only{
+                            @include typography(1.3em,center,1.5em,300);
+                          }
+                        //mobile(S)
+                        @include for-phoneS-only{
+                            @include for-phoneS-only{
+                                font-size: 16px;  
+                            }
+                        }
                     }
                 }
                 &__buttonWrapper{
                     @include screenSize(100%,auto);
                     @include displayFlex(flex-start, flex-start,row);
+                    //mobile(M)
+                    @include for-phone-only{
+                        @include displayFlex(center, center,row);
+                    }
                 }
             }
         }
         &__image{
             @include screenSize(50%,auto);
+            //mobile(M)
+            @include for-phone-only{
+                @include screenSize(100%,25em);
+            }
             img{
                 width: 100%;
+                //phone(M)
+                @include for-phone-only{
+                    @include screenSize(100%,100%);
+                }
             }
         }
     }
@@ -96,8 +249,20 @@
         &__container{
             @include screenSize(50%,auto);
             @include displayFlex(center,center,row);
+            //mobile(M)
+            @include for-phone-only{
+                @include screenSize(80%,auto);
+            }
+            //mobile(S)
+            @include for-phoneS-only{
+                @include screenSize(100%,auto);
+            }
             .left{
                 @include screenSize(20%,auto);
+                //mobile(S)
+                @include for-phoneS-only{
+                    @include screenSize(25%,auto);
+                }
                 img{
                     width:100%;
                 }
@@ -109,17 +274,46 @@
                     @include screenSize(60%,auto);
                     @include displayFlex(center,center,row);
                     padding: 1em .3em;
+                    //mobile(M)
+                    @include for-phone-only{
+                        @include screenSize(85%,auto);
+                    }
+                    //mobile(S)
+                    @include for-phoneS-only{
+                        @include screenSize(100%,auto);
+                        padding: .5em .3em;
+                    }
                     h2{
                         @include typography(2.3vw,center,1.3em,600);
+                        //mobile(M)
+                        @include for-phone-only{
+                            @include typography(2.2em,center,1.2em,600);
+                        }
+                        //mobile(S)
+                        @include for-phoneS-only{
+                            @include typography(7.5vw,center,1.2em,600);
+                        }
                     }
                 }
                 p{
                     @include typography(1.4vw,center,1.3em,300);
                     margin: .5em 0;
+                    //mobile(M)
+                    @include for-phone-only{
+                        font-size: 1.1em;
+                    }
+                    //mobile(S)
+                    @include for-phoneS-only{
+                        font-size: 3.8vw;
+                    }
                 }
             }
             .right{
                 @include screenSize(20%,auto);
+                //mobile(S)
+                @include for-phoneS-only{
+                    @include screenSize(25%,auto);
+                }
                 img{
                     width:100%;
                 }
