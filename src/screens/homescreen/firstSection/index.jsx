@@ -13,21 +13,19 @@ const FirstSection = () => {
                className={style.content__logo}
                 />
             <div className={style.content__title}>
-                <h1>Create your API in 
+                <h1>Build your API in 
                      <strong> minutes </strong> 
-                     and <strong>free</strong></h1>
+                     and for <strong>free</strong> to use</h1>
             </div>
             <div className={style.content__text}>
                 <p>
-                No more wasting time preparing the environment
-                from development to building your APIs
-                and create your project template in minutes
-                from a spec.
+                 With VeeCode Platform - No wasting your time preparing a development environment 
+                 for building your APIs and creating your project in minutes from our intuitive guidelines.
                 </p>
             </div>
             <div className={style.content__buttons}>
-                <Button>Get start</Button>
-                <Button>Download now</Button>
+                <Button>Start Now</Button>
+                <Button>Download</Button>
             </div>
         </article>
     </section>

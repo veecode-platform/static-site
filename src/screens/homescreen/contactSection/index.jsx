@@ -16,17 +16,15 @@ const ContactSection = () => {
           <div className={style["content__text-desc"]}>
             <strong>Benefits of VeeCode Platform support</strong>
             <ul className={style.list}>
-              <li>Submit your solutions through our portal</li>
-              <li>
-                Track the progress of your request from our support portal
-              </li>
+              <li>Submit your questions through our portal</li>
+              <li>Track the progress of your request</li>
               <li>Access our knowledge base</li>
               <li>Service with established SLA</li>
-              <li>Assistance to your technical team</li>
+              <li>Direct assistance to your technical team</li>
             </ul>
           </div>
           <div className={style["content__text-buttonWrapper"]}>
-            <Button>Contact Us</Button>
+            <Button>Contact here</Button>
           </div>
         </div>
       </article>
