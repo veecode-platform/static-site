@@ -20,7 +20,7 @@ const OptimizationAndSupport = () => {
               What can you generate in 5 minutes?
             </div>
             <div className={style.desc__lists}>
-              <ul>
+              <ul className={style["desc__lists-list"]}>
                 <li>Kong API Gateway</li>
                 <li>Kubernetes</li>
                 <li>AWS eks</li>
@@ -28,7 +28,7 @@ const OptimizationAndSupport = () => {
                 <li>Okta</li>
                 <li>Dev Portal</li>
               </ul>
-              <ul>
+              <ul className={style["desc__lists-list"]}>
                 <li>Insomnia</li>
                 <li>Okteto</li>
                 <li>Git Providers (Github)</li>
@@ -56,7 +56,6 @@ const OptimizationAndSupport = () => {
             </div>
             <div className={style.desc__text}>
               <strong>Optimize your productivity.</strong>
-              <div className={style["desc__text-list"]}>
                 <p>Streamline </p>
                 <ul className={style["desc__text-list"]}>
                   <li>Installations</li>
@@ -68,8 +67,7 @@ const OptimizationAndSupport = () => {
                   <li>Variations in automation processes</li>
                   <li>Teams and squads of different sizes</li>
                   <li>Sets of embedded technology</li>
-                </ul>
-              </div>
+                  </ul>
             </div>
             <div className={style.desc__buttonWrapper}>
               <Button>Find out</Button>
