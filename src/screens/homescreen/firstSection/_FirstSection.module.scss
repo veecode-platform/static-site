@@ -11,7 +11,9 @@
     }
     //mobile(M)
     @include for-phone-only{
-        @include backgroundImage("/assets/home/bg2.png");
+        @include screenSize(100%, 100vh);
+        @include backgroundImage("/assets/home/bgmobile1.png");
+        background-size: 110%;
     }
     .content{
         @include screenSize(80%, auto);
@@ -20,7 +22,7 @@
         //mobile(M)
         @include for-phone-only{
             @include screenSize(90%, auto);
-            margin: 5em 0;
+            margin: 5em;
             @include displayFlex(center, center, column);
         }
         &__logo{
@@ -32,11 +34,11 @@
         }
         &__title{
             @include screenSize(50%, auto);
-            margin: 3em 0 2em 0;
+            margin: 2em 0 1.5em;
             //mobile(M)
             @include for-phone-only{
-                @include screenSize(85%, auto);
-                margin: 1.5em;
+                @include screenSize(70%, auto);
+                margin-top: 30em;
             }
             //mobile(S)
             @include for-phoneS-only{
@@ -47,7 +49,7 @@
                 color: $color2;
                 //mobile(M)
                 @include for-phone-only{
-                    @include typography(56px, center, 1.2em, 300);
+                    @include typography(56px, center, 1.3em, 300);
                 }
                 //mobile(S)
                 @include for-phoneS-only{
@@ -57,13 +59,13 @@
         }
         &__text{
             @include screenSize(50%, auto);
-            margin: 1.2em 0;
+            margin: 1.2em 0 1.5em 0;
             //mobile(M)
             @include for-phone-only{
                 @include screenSize(75%, auto);
             }
             p{
-                @include typography(1.3vw, start, 1.4em, 200);
+                @include typography(1.2vw, start, 1.4em, 200);
                 color: $color2;
                 //mobile(M)
                 @include for-phone-only{
@@ -81,7 +83,8 @@
             padding: 1em 0;
             //mobile(M)
             @include for-phone-only{
-                @include screenSize(95%, auto);
+                @include screenSize(75%, auto);
+                padding: 1em 0 3em 0;
             }
             //mobile(S)
             @include for-phoneS-only{
