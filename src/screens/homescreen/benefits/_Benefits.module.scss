@@ -5,7 +5,7 @@
     @include displayFlex(center, center, column);
     background-color: $color3;
     @include backgroundImage('/assets/home/bg2.png');
-    //mobile(M)  // TO DO
+    //mobile(M) 
     @include for-phone-only{
         margin-top: -0.5em;
     }
@@ -17,12 +17,24 @@
             @include screenSize(60%,auto);
             padding: 8em 0 1em 0;
         }
+        //mobile(M)
+        @include for-phone-only{
+            padding: 6em 0 0 0;
+        }
+        //mobile(S)
+        @include for-phoneS-only{
+            @include screenSize(80%,auto);
+        }
         h2{
             @include typography(2.8vw,center,1.3em,600);
             color: $color2;
             //mobile(M)
             @include for-phone-only{
                 font-size: 48px;
+            }
+            //mobile(S)
+            @include for-phoneS-only{
+                font-size: 40px;
             }
         }
     }
@@ -38,9 +50,14 @@
         @include for-tablet-only{
             @include screenSize(100%,auto);
         }
+        //mobile(M)
+        @include for-phone-only{
+            padding: 5em 0;
+            flex-direction: column;
+        }
         //mobile(S)
         @include for-phoneS-only{
-            padding: 5em 0;
+            padding: 3.5em 0 8em 0;
             flex-direction: column;
         }
     }
