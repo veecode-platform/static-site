@@ -9,8 +9,9 @@
     background-position-y: 40%;
     //mobile(M)
     @include for-phone-only{
-        @include backgroundImage('/assets/home/bg2.png');
-        @include displayFlex(center, center, row);
+        @include screenSize(100%,auto);
+        @include backgroundImage('/assets/home/bgmobile2.png');
+        @include displayFlex(center, flex-start, row);
     }
     .content{
         @include screenSize(60%,auto);
@@ -19,6 +20,7 @@
         //mobile(M)
         @include for-phone-only{
             @include screenSize(85%,auto);
+            padding-top:1.5em;
         }
         &__text{
             @include screenSize(60%,auto);
