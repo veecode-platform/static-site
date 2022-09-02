@@ -19,6 +19,7 @@ jobs:
       - name: Build Project
         run: | 
            yarn version
+           yarn install next react react-dom
            yarn build
               
       - uses: shallwefootball/s3-upload-action@master
