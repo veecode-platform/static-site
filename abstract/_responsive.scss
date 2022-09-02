@@ -4,8 +4,15 @@
   RESPONSIVE
 */
 
-//Phone (S)
+//Phone (XS)
+@mixin for-phoneXS-only {
+    @media (max-width: 290px) {
+        @content;
+    }
+}
 
+
+//Phone (S)
 @mixin for-phoneS-only {
     @media (max-width: 420px) {
         @content;
