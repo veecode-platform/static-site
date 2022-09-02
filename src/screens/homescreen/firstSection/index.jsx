@@ -30,16 +30,16 @@ const FirstSection = () => {
         <div className={style.content__buttons}>
           <Link href="https://docs.platform.vee.codes/docs/intro" passHref>
             <a target="_blank">
-              <Button>Start Now</Button>
+              <Button>Get Started</Button>
             </a>
           </Link>
 
           <Link
-            href="https://docs.platform.vee.codes/docs/installation/safira-cli"
+            href="https://github.com/vfipaas/safira-support/discussions"
             passHref
           >
             <a target="_blank">
-              <Button>Download</Button>
+              <Button>Know More</Button>
             </a>
           </Link>
         </div>
