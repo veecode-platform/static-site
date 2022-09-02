@@ -24,7 +24,7 @@ const ContactSection = () => {
             </ul>
           </div>
           <div className={style["content__text-buttonWrapper"]}>
-            <Button>Contact here</Button>
+            <Button>Support</Button>
           </div>
         </div>
       </article>

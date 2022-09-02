@@ -78,7 +78,11 @@ const OptimizationAndSupport = () => {
               </ul>
             </div>
             <div className={style.desc__buttonWrapper}>
-              <Button>Find out</Button>
+              <Link href="https://docs.platform.vee.codes/docs/intro" passHref>
+                <a target="_blank">
+                  <Button>Start Now</Button>
+                </a>
+              </Link>
             </div>
           </div>
         </div>
