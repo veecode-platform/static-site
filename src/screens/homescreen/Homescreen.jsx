@@ -4,6 +4,7 @@ import FirstSection from "./firstSection";
 import Benefits from "./benefits";
 import OptimizationAndSupport from "./optimizationAndSupport";
 import ContactSection from "./contactSection";
+import Support from "./support";
 
 const Homescreen = () => {
   return (
@@ -12,6 +13,7 @@ const Homescreen = () => {
       <FirstSection/>
       <Benefits/>
       <OptimizationAndSupport/>
+      <Support/>
       <ContactSection/>
     </main>
   )

@@ -45,6 +45,10 @@
             @include screenSize(95%, 12em);
             margin-bottom: -1.8em;
         }
+        //mobile(XS)
+        @include for-phoneXS-only {
+            margin-bottom: -2.8em;
+        }
         img {
             @include screenSize(80%, 100%);
             //mobile(M)
