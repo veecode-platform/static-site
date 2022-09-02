@@ -1,9 +1,9 @@
-@import "../abstract/functions", "../abstract/variables",  "../abstract/responsive";
+@import "../abstract/functions", "../abstract/variables", "../abstract/responsive";
 
-.button{
+.button {
     @include displayFlex(center, center, row);
     outline: none;
-    padding: .9em 2.5em;
+    padding: 0.9em 2.5em;
     font-size: 1.1vw;
     border-radius: 1.6em;
     border: 2px solid $color1;
@@ -12,20 +12,22 @@
     font-size: 1.2vw;
     font-weight: 500;
     background: transparent;
-    transition: all .5s linear;
-    &:hover{
+    transition: all 0.5s linear;
+
+    &:hover {
         background: $color1;
         color: $color3;
-        transition: all .8s linear;
-
+        transition: all 0.8s linear;
     }
+
     //mobile(M)
-    @include for-phone-only{
+    @include for-phone-only {
         font-size: 1.3em;
         margin: 0.5em;
     }
+
     //mobile(S)
-    @include for-phoneS-only{
+    @include for-phoneS-only {
         margin: 0.8em 0;
         min-width: 250px;
     }

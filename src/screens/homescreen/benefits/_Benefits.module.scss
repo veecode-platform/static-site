@@ -1,62 +1,62 @@
-@import "../abstract/functions", "../abstract/variables",  "../abstract/responsive";
+@import "../abstract/functions", "../abstract/variables", "../abstract/responsive";
 
-.wrapper{
-    @include screenSize(100%,auto);
+.wrapper {
+    @include screenSize(100%, auto);
     @include displayFlex(center, center, column);
     background-color: $color3;
-    @include backgroundImage('/assets/home/bg2.png');
-    //mobile(M) 
-    @include for-phone-only{
+    @include backgroundImage("/assets/home/bg2.png");
+    //mobile(M)
+    @include for-phone-only {
         margin-top: -0.5em;
     }
-    .title{
-        @include screenSize(80%,auto);
+    .title {
+        @include screenSize(80%, auto);
         padding: 12em 0 2em 0;
         //tablet
-        @include for-tablet-only{
-            @include screenSize(60%,auto);
+        @include for-tablet-only {
+            @include screenSize(60%, auto);
             padding: 8em 0 1em 0;
         }
         //mobile(M)
-        @include for-phone-only{
+        @include for-phone-only {
             padding: 6em 0 0 0;
         }
         //mobile(S)
-        @include for-phoneS-only{
-            @include screenSize(80%,auto);
+        @include for-phoneS-only {
+            @include screenSize(80%, auto);
         }
-        h2{
-            @include typography(2.8vw,center,1.3em,600);
+        h2 {
+            @include typography(2.8vw, center, 1.3em, 600);
             color: $color2;
             //mobile(M)
-            @include for-phone-only{
+            @include for-phone-only {
                 font-size: 48px;
             }
             //mobile(S)
-            @include for-phoneS-only{
+            @include for-phoneS-only {
                 font-size: 40px;
             }
         }
     }
-    .content{
-        @include screenSize(80%,auto);
+    .content {
+        @include screenSize(80%, auto);
         @include displayFlex(center, center, row);
         padding: 5em 0 10em 0;
         //viewport
-        @include for-viewport-only{
-            @include screenSize(95%,auto);
+        @include for-viewport-only {
+            @include screenSize(95%, auto);
         }
         //tablet
-        @include for-tablet-only{
-            @include screenSize(100%,auto);
+        @include for-tablet-only {
+            @include screenSize(100%, auto);
         }
         //mobile(M)
-        @include for-phone-only{
+        @include for-phone-only {
             padding: 5em 0;
             flex-direction: column;
         }
         //mobile(S)
-        @include for-phoneS-only{
+        @include for-phoneS-only {
             padding: 3.5em 0 8em 0;
             flex-direction: column;
         }

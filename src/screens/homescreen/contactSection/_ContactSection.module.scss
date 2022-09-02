@@ -1,98 +1,98 @@
-@import "../abstract/functions", "../abstract/variables",  "../abstract/responsive";
+@import "../abstract/functions", "../abstract/variables", "../abstract/responsive";
 
-.wrapper{
-    @include screenSize(100%,auto);
+.wrapper {
+    @include screenSize(100%, auto);
     @include displayFlex(flex-start, center, row);
-    @include backgroundImage('/assets/home/bg3.png');
+    @include backgroundImage("/assets/home/bg3.png");
     background-size: 130%;
     background-position-x: 60%;
     background-position-y: 40%;
     //mobile(M)
-    @include for-phone-only{
-        @include screenSize(100%,auto);
-        @include backgroundImage('/assets/home/bgmobile2.png');
+    @include for-phone-only {
+        @include screenSize(100%, auto);
+        @include backgroundImage("/assets/home/bgmobile2.png");
         @include displayFlex(center, flex-start, row);
         padding-bottom: 20em;
         background-position-y: 70%;
     }
     //mobile(S)
-    @include for-phone-only{
+    @include for-phone-only {
         background-position-x: 40%;
         background-position-y: 60%;
     }
-    .content{
-        @include screenSize(60%,auto);
+    .content {
+        @include screenSize(60%, auto);
         @include displayFlex(center, center, column);
         color: $color2;
         //mobile(M)
-        @include for-phone-only{
-            @include screenSize(85%,auto);
-            padding-top:1.5em;
+        @include for-phone-only {
+            @include screenSize(85%, auto);
+            padding-top: 1.5em;
         }
         //mobile(S)
-        @include for-phoneS-only{
-            @include screenSize(90%,auto);
+        @include for-phoneS-only {
+            @include screenSize(90%, auto);
         }
-        &__text{
-            @include screenSize(60%,auto);
+        &__text {
+            @include screenSize(60%, auto);
             padding: 10em 0;
             //mobile(M)
-            @include for-phone-only{
-                @include screenSize(90%,auto);
+            @include for-phone-only {
+                @include screenSize(90%, auto);
                 padding: 4em 0;
             }
-            &-title{
-                @include screenSize(100%,auto);
+            &-title {
+                @include screenSize(100%, auto);
                 padding: 2em 0;
-                span{
+                span {
                     color: $color1;
                 }
-                h2{
-                    @include typography(2.5vw,start,1.2em,600);
+                h2 {
+                    @include typography(2.5vw, start, 1.2em, 600);
                     //mobile(M)
-                    @include for-phone-only{
-                        @include typography(3em,start,1.2em,600);
+                    @include for-phone-only {
+                        @include typography(3em, start, 1.2em, 600);
                     }
                     //mobile(S)
-                    @include for-phoneS-only{
+                    @include for-phoneS-only {
                         font-size: 38px;
                     }
                 }
             }
-            &-desc{
-                @include screenSize(100%,auto);
-                strong{
+            &-desc {
+                @include screenSize(100%, auto);
+                strong {
                     font-size: 1.1vw;
                     //mobile(M)
-                    @include for-phone-only{
+                    @include for-phone-only {
                         font-size: 1.2em;
                     }
                     //mobile(S)
-                    @include for-phoneS-only{
+                    @include for-phoneS-only {
                         font-size: 3.98vw;
                     }
                 }
-                .list{
+                .list {
                     list-style-position: inside;
                     padding: 0.6em 0;
-                    li{
-                        @include typography(1vw,start,1.8em,300);
+                    li {
+                        @include typography(1vw, start, 1.8em, 300);
                         //mobile(M)
-                        @include for-phone-only{
-                            @include typography(1.2em,start,1.8em,300);
+                        @include for-phone-only {
+                            @include typography(1.2em, start, 1.8em, 300);
                         }
                         //mobile(S)
-                        @include for-phoneS-only{
+                        @include for-phoneS-only {
                             font-size: 16px;
                         }
                     }
                 }
             }
-            &-buttonWrapper{
-                @include screenSize(100%,auto);
+            &-buttonWrapper {
+                @include screenSize(100%, auto);
                 margin: 1.5em 0;
                 //phone(S)
-                @include for-phoneS-only{
+                @include for-phoneS-only {
                     @include displayFlex(center, center, row);
                 }
             }
