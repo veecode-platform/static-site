@@ -17,7 +17,8 @@ jobs:
           cache: yarn
       - name: Build Project
         run: |
-           npm install --global yarn  
+           apt update
+           apt install --no-install-recommends yarn
            yarn --version
            yarn build
               
