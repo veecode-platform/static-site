@@ -15,12 +15,9 @@ jobs:
         with:
           node-version: 16.x
           cache: yarn
+      
       - name: Build Project
-        run: |
-           apt update
-           apt install --no-install-recommends yarn
-           yarn --version
-           yarn build
+        run: yarn build
               
       - uses: shallwefootball/s3-upload-action@master
         name: Upload S3
