@@ -8,6 +8,7 @@
     //viewport
     @include for-viewport-only {
         background-position: 50% 50%;
+        margin-bottom: -.5em;
     }
     //mobile(M)
     @include for-phone-only {
@@ -22,6 +23,10 @@
         background-position: 45% 60%;
         background-size: 180%;
         padding-bottom: 1.3em;
+    }
+    //mobile(XS)
+    @include for-phoneXS-only{
+        @include backgroundImage("/assets/home/bg2.png");
     }
     .content {
         @include screenSize(80%, auto);
@@ -55,6 +60,10 @@
             //mobile(S)
             @include for-phoneS-only {
                 @include screenSize(95%, auto);
+            }
+            //mobile(XS)
+            @include for-phoneXS-only{
+                margin-top: 5em;
             }
             h1 {
                 @include typography(3.2vw, start, 1.1em, 300);
