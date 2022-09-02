@@ -1,0 +1,185 @@
+@import "../abstract/functions", "../abstract/variables", "../abstract/responsive";
+
+.card {
+    @include screenSize(30%, auto);
+    @include displayFlex(center, center, column);
+    margin: 1.5%;
+    cursor: pointer;
+    opacity: 0.95;
+    transition: all 0.5s linear;
+    //tablet
+    @include for-tablet-only {
+        @include screenSize(31%, auto);
+        margin: 0.4%;
+    }
+    //mobile(M)
+    @include for-phone-only {
+        @include screenSize(70%, auto);
+        margin: 1.5em 0;
+    }
+    //mobile(S)
+    @include for-phoneS-only {
+        @include screenSize(85%, auto);
+        margin: 0.5em 0;
+    }
+    &:hover {
+        opacity: 1;
+        transition: all 0.5s linear;
+        filter: brightness(120%);
+    }
+    &__icon {
+        @include screenSize(90%, auto);
+        @include displayFlex(center, center, row);
+        margin-bottom: -2.1em;
+        //viewport
+        @include for-viewport-only {
+            @include screenSize(90%, 12em);
+            margin-bottom: -1.6em;
+        }
+        //tablet
+        @include for-tablet-only {
+            @include screenSize(85%, 12em);
+        }
+        //mobile(M)
+        @include for-phone-only {
+            @include screenSize(95%, 12em);
+            margin-bottom: -1.8em;
+        }
+        img {
+            @include screenSize(80%, 100%);
+            //mobile(M)
+            @include for-phone-only {
+                @include screenSize(75%, auto);
+            }
+            //mobile(S)
+            @include for-phoneS-only {
+                @include screenSize(70%, auto);
+            }
+        }
+    }
+    &__title {
+        @include screenSize(100%, 8.5em);
+        @include displayFlex(center, center, row);
+        background-color: $color1;
+        padding: 3em 5em;
+        border-radius: 2em 2em 0 0;
+        //tablet
+        @include for-tablet-only {
+            @include screenSize(100%, 6.5em);
+            padding: 2em;
+        }
+        //mobile(M)
+        @include for-phone-only {
+            @include screenSize(100%, 6.5em);
+            padding: 3em 2em;
+            border-radius: 1em 1em 0 0;
+        }
+        h2 {
+            @include typography(1.5vw, center, 1.2em, 600);
+            //tablet
+            @include for-tablet-only {
+                font-size: 2vw;
+            }
+            //mobile(M)
+            @include for-phone-only {
+                font-size: 25px;
+            }
+            //mobile(S)
+            @include for-phoneS-only {
+                font-size: 4.5vw;
+            }
+        }
+    }
+    &__options {
+        @include screenSize(100%, 36em);
+        @include resetList();
+        @include displayFlex(center, center, column);
+        background-color: $color2;
+        border-radius: 0 0 2em 2em;
+        //viewport
+        @include for-viewport-only {
+            @include screenSize(100%, 28em);
+        }
+        //tablet
+        @include for-tablet-only {
+            @include screenSize(100%, 48.5em);
+        }
+        //mobile(M)
+        @include for-phone-only {
+            @include screenSize(100%, auto);
+            border-radius: 0 0 1.5em 1.5em;
+        }
+        &-item {
+            @include screenSize(100%, auto);
+            @include displayFlex(center, center, column);
+            &:first-child {
+                //tablet
+                @include for-tablet-only {
+                    padding-top: 3em;
+                }
+                &::after {
+                    content: "";
+                    width: 40%;
+                    height: 2px;
+                    background-color: $color1;
+                    margin-bottom: 2em;
+                    //mobile(M)
+                    @include for-phone-only {
+                        margin-bottom: 1.5em;
+                    }
+                }
+            }
+            &:last-child {
+                //mobile(M)
+                @include for-tablet-only {
+                    padding-bottom: 1.2em;
+                    border-radius: 2em;
+                }
+                &::before {
+                    content: "";
+                    width: 40%;
+                    height: 2px;
+                    background-color: $color1;
+                    margin-bottom: 2em;
+                    //mobile(M)
+                    @include for-phone-only {
+                        margin-bottom: 1.5em;
+                    }
+                }
+            }
+            h3 {
+                @include typography(1.1vw, center, 1.2em, 600);
+                //tablet
+                @include for-tablet-only {
+                    font-size: 1.8vw;
+                }
+                //mobile(M)
+                @include for-phone-only {
+                    font-size: 22px;
+                }
+                //mobile(S)
+                @include for-phoneS-only {
+                    font-size: 4.5vw;
+                }
+            }
+            p {
+                @include typography(0.9vw, center, 1.3em, 300);
+                padding: 2em 1.4em;
+                //tablet
+                @include for-tablet-only {
+                    padding: 3em 3.5em;
+                    font-size: 0.9em;
+                }
+                //mobile(M)
+                @include for-phone-only {
+                    font-size: 17px;
+                    padding: 3em;
+                }
+                //mobile(S)
+                @include for-phoneS-only {
+                    @include typography(14px, center, 1.3em, 300);
+                }
+            }
+        }
+    }
+}

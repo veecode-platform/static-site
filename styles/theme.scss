@@ -1,0 +1,28 @@
+@import "../abstract/functions", "../abstract/variables";
+
+* {
+    @include resetAll();
+    &::-webkit-scrollbar {
+        @extend %invisible;
+    }
+}
+
+body {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+    font-family: $font-text;
+    box-sizing: border-box;
+
+    &::-webkit-scrollbar {
+        @extend %invisible;
+    }
+}
+
+a {
+    text-decoration: none;
+
+    &:visited {
+        color: inherit;
+    }
+}
