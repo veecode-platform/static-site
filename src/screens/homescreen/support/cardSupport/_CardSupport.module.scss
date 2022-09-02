@@ -18,7 +18,8 @@
         transition: all .4s linear;
     }
     &__image{ 
-        @include screenSize(50%,auto);
+        @include screenSize(30%,auto);
+        padding-top: 2.5em;
         //mobile(M)
         @include for-phone-only{
             @include screenSize(60%,auto); 
