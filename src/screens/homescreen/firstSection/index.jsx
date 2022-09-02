@@ -1,8 +1,8 @@
-import style from './_FirstSection.module.scss';
-import { Button } from '../../../components';
-import Link from 'next/link';
+import style from "./_FirstSection.module.scss";
+import { Button } from "../../../components";
+import Link from "next/link";
 
-const Logo = 'assets/home/logo.png';
+const Logo = "assets/home/logo.png";
 
 const FirstSection = () => {
   return (
@@ -34,7 +34,10 @@ const FirstSection = () => {
             </a>
           </Link>
 
-          <Link href="https://docs.platform.vee.codes/docs/installation/safira-cli" passHref>
+          <Link
+            href="https://docs.platform.vee.codes/docs/installation/safira-cli"
+            passHref
+          >
             <a target="_blank">
               <Button>Download</Button>
             </a>
@@ -43,6 +46,6 @@ const FirstSection = () => {
       </article>
     </section>
   );
-}
+};
 
-export default FirstSection
+export default FirstSection;

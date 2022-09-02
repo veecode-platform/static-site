@@ -1,6 +1,6 @@
-import Link from 'next/link';
-import { Button } from '../../../components'
-import style from './_OptimizationAndSupport.module.scss'
+import Link from "next/link";
+import { Button } from "../../../components";
+import style from "./_OptimizationAndSupport.module.scss";
 
 const Image1 = "assets/home/image1.png";
 const Image2 = "assets/home/image2.png";
@@ -39,11 +39,14 @@ const OptimizationAndSupport = () => {
               </ul>
             </div>
             <div className={style.desc__buttonWrapper}>
-            <Link href="https://docs.platform.vee.codes/docs/installation/safira-cli" passHref>
-            <a target="_blank">
-              <Button>Download Now</Button>
-            </a>
-          </Link>
+              <Link
+                href="https://docs.platform.vee.codes/docs/installation/safira-cli"
+                passHref
+              >
+                <a target="_blank">
+                  <Button>Download Now</Button>
+                </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -61,18 +64,18 @@ const OptimizationAndSupport = () => {
             </div>
             <div className={style.desc__text}>
               <strong>Optimize your productivity.</strong>
-                <p>Streamline </p>
-                <ul className={style["desc__text-list"]}>
-                  <li>Installations</li>
-                  <li>Configurations </li>
-                  <li>Workflows</li>
-                </ul>
-                <p>We help you focus on</p>
-                <ul className={style["desc__text-list"]}>
-                  <li>Variations in automation processes</li>
-                  <li>Teams and squads of different sizes</li>
-                  <li>Sets of embedded technology</li>
-                  </ul>
+              <p>Streamline </p>
+              <ul className={style["desc__text-list"]}>
+                <li>Installations</li>
+                <li>Configurations </li>
+                <li>Workflows</li>
+              </ul>
+              <p>We help you focus on</p>
+              <ul className={style["desc__text-list"]}>
+                <li>Variations in automation processes</li>
+                <li>Teams and squads of different sizes</li>
+                <li>Sets of embedded technology</li>
+              </ul>
             </div>
             <div className={style.desc__buttonWrapper}>
               <Button>Find out</Button>
@@ -94,7 +97,7 @@ const OptimizationAndSupport = () => {
               <h2>Count on our team of experts</h2>
             </div>
             <p>
-            Our team will help you to be even more useful on our platform.
+              Our team will help you to be even more useful on our platform.
             </p>
           </div>
           <div className={style.right}>
@@ -104,6 +107,6 @@ const OptimizationAndSupport = () => {
       </article>
     </section>
   );
-}
+};
 
-export default OptimizationAndSupport
+export default OptimizationAndSupport;
