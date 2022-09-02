@@ -17,7 +17,9 @@ jobs:
           cache: yarn
       
       - name: Build Project
-        run: yarn build
+        run: | 
+           yarn version
+           yarn build
               
       - uses: shallwefootball/s3-upload-action@master
         name: Upload S3
