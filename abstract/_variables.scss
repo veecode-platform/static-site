@@ -1,0 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+//Variables
+$color1: #33FFCE;
+$color2: #ffffff;
+$color3: #000000;
+$color4: #555555;
+
+//fonts
+$font-text: "Poppins", sans-serif;
+
+:export {
+  color1: $color1;
+  color2: $color2;
+  color3: $color3;
+  color4: $color4;
+}

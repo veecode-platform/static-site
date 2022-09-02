@@ -1,0 +1,35 @@
+@import "functions", "variables";
+
+/*
+  RESPONSIVE
+*/
+
+//Phone (S)
+
+@mixin for-phoneS-only {
+    @media (max-width: 420px) {
+        @content;
+    }
+}
+
+//Phone (M)
+@mixin for-phone-only {
+    @media (max-width: 767px) {
+        @content;
+    }
+}
+
+//Tablet(L)
+@mixin for-tablet-only {
+    @media (max-width: 1199.99px) {
+        @content;
+    }
+}
+
+//viewport(XL)
+@mixin for-viewport-only {
+    @media (max-width: 1300px) {
+        @content;
+    }
+}
+

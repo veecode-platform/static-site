@@ -1,0 +1,17 @@
+@import "../abstract/functions", "../abstract/variables", "../abstract/responsive";
+
+.wrapper {
+    @include screenSize(100%, auto);
+    @include displayFlex(center, center, row);
+    background-color: $color3;
+
+    .content {
+        @include screenSize(40%, auto);
+        @include displayFlex(center, center, row);
+        padding: 2vh 0;
+
+        &__logo {
+            @include screenSize(200px, auto);
+        }
+    }
+}
