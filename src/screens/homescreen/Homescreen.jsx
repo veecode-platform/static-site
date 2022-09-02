@@ -1,10 +1,9 @@
 import style from "../../../styles/_Homescreen.module.scss";
-import { Header } from '../../components';
+import { Footer, Header } from '../../components';
 import FirstSection from "./firstSection";
 import Benefits from "./benefits";
 import OptimizationAndSupport from "./optimizationAndSupport";
 import ContactSection from "./contactSection";
-import Support from "./support";
 
 const Homescreen = () => {
   return (
@@ -13,8 +12,8 @@ const Homescreen = () => {
       <FirstSection/>
       <Benefits/>
       <OptimizationAndSupport/>
-      <Support/>
       <ContactSection/>
+      <Footer/>
     </main>
   )
 }

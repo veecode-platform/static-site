@@ -4,13 +4,15 @@ const CardSupport = ({
     image,
     title,
     subtitle,
-    desc
+    desc,
+    children,
+    price
 }) => {
   return (
     <div className={style.content}>
-        <div className={style.content__image}>
+        {/* <div className={style.content__image}>
             <img src={image} alt={title}/>
-        </div>
+        </div> */}
         <div className={style.content__text}>
             <div className={style["content__text-title"]}>
                 <h3>{title}</h3>
@@ -24,6 +26,13 @@ const CardSupport = ({
                     {desc}
                 </p>
             </div>
+            <span/>
+            <div className={style["content__text-price"]}>
+                <p>
+                    {price}
+                </p>
+            </div>
+            { children !== "" | children !== null ?  children :  null }
         </div>
     </div>
   )

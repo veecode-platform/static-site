@@ -5,35 +5,40 @@
     @include displayFlex(center, center, column);
     margin: 1em; 
     cursor: pointer;
-    opacity: 0.95;
+    opacity: 0.99;
     transition: all .4s linear;
+    //viewport
+    @include for-viewport-only{
+        @include screenSize(90%,auto);
+    }
     //mobile(M)
     @include for-phone-only{
         @include screenSize(100%,auto);
+        margin-bottom: 2em;
     }
     &:hover{
         opacity:1;
         filter: brightness(120%);
-        // margin: 0.5em 1em 1.5em 1em;
         transition: all .4s linear;
     }
-    &__image{ 
-        @include screenSize(30%,auto);
-        padding-top: 2.5em;
-        //mobile(M)
-        @include for-phone-only{
-            @include screenSize(60%,auto); 
-        }
-        margin-bottom: -.8em; 
-        img{
-            width: 100%;
-        }
-    }
+    // &__image{ 
+    //     @include screenSize(30%,auto);
+    //     padding-top: 2.5em;
+    //     //mobile(M)
+    //     @include for-phone-only{
+    //         @include screenSize(60%,auto); 
+    //     }
+    //     margin-bottom: -.8em; 
+    //     img{
+    //         width: 100%;
+    //     }
+    // }
     &__text{
         @include screenSize(80%,auto);
         @include displayFlex(center, center, column);
         overflow: hidden;
         background-color: $color2; 
+        padding-bottom: 2em;
         border-radius: 1.2em;
         //mobile(M)
         @include for-phone-only{
@@ -41,7 +46,7 @@
         }
         &-title{
             @include screenSize(100%,auto);
-            background-color: $color1;
+           background: linear-gradient(45deg,$color7,$color1);
             padding: 2em 0;
             h3{
                 @include typography(1.6vw,center,1.4em,500);
@@ -62,6 +67,10 @@
             h4{
                 @include typography(1.5vw,center,1.4em,500);
                 color: $color5;
+                //tablet
+                @include for-tablet-only{
+                    font-size: 2vw;
+                }
                 //mobile(M)
                 @include for-phone-only {
                     font-size: 4vw;
@@ -73,7 +82,7 @@
             }
         }
         span{
-            @include screenSize(50%,4px);
+            @include screenSize(50%,2px);
             background-color: $color1;
         }
         &-desc{
@@ -86,6 +95,34 @@
             p{
                 @include typography(1.5vw,center,1.4em,500);
                 color: $color5;
+                //tablet
+                @include for-tablet-only{
+                    font-size: 2vw;
+                }
+                //mobile(M)
+                @include for-phone-only {
+                    font-size: 4vw;
+                }
+                //mobile(S)
+                @include for-phoneS-only {
+                    font-size: 4.5vw;
+                }
+            }
+        }
+        &-price{
+            @include screenSize(100%,auto);
+            padding: 2em;      
+            //mobile(M)
+            @include for-phone-only{
+                padding: 3em; 
+            }     
+            p{
+                @include typography(3vw,center,1.4em,600);
+                color: $color4;
+                //tablet
+                @include for-tablet-only{
+                    font-size: 3.5vw;
+                }
                 //mobile(M)
                 @include for-phone-only {
                     font-size: 4vw;

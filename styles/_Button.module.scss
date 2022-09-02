@@ -15,9 +15,9 @@
     transition: all 0.5s linear;
 
     &:hover {
-        background: $color1;
+        background: linear-gradient(45deg,$color1,$color7);
         color: $color3;
-        transition: all 0.8s linear;
+        transition: all 0.4s linear;
     }
 
     //mobile(M)
@@ -30,5 +30,11 @@
     @include for-phoneS-only {
         margin: 0.8em 0;
         min-width: 250px;
+    }
+    //mobile(XS)
+    @include for-phoneXS-only {
+        min-width: 120px;
+        padding: 0.9em 2em;
+        font-size: 6vw;
     }
 }
