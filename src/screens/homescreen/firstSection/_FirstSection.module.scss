@@ -81,11 +81,11 @@
                 @include screenSize(90%, auto);
             }
             p{
-                @include typography(1.2vw, start, 1.4em, 200);
+                @include typography(1.2vw, start, 1.5em, 300);
                 color: $color2;
                 //mobile(M)
                 @include for-phone-only{
-                    @include typography(18px, center, 1.4em, 200);
+                    @include typography(18px, center, 1.4em, 300);
                 }
                 //mobile(S)
                 @include for-phoneS-only{

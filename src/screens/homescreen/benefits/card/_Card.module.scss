@@ -112,7 +112,6 @@
         &-item{
             @include screenSize(100%, auto);
             @include displayFlex(center, center, column);
-            background-color: $color2;
             &:first-child{
                 //tablet
                 @include for-tablet-only{
@@ -164,7 +163,7 @@
                 }
             }
             p{
-                @include typography(.9vw,center,1.2em,300);
+                @include typography(.9vw,center,1.3em,300);
                 padding: 2em 1.4em;
                 //tablet
                 @include for-tablet-only{
