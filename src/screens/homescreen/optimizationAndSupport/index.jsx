@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { Button } from '../../../components'
 import style from './_OptimizationAndSupport.module.scss'
 
@@ -38,7 +39,11 @@ const OptimizationAndSupport = () => {
               </ul>
             </div>
             <div className={style.desc__buttonWrapper}>
+            <Link href="https://docs.platform.vee.codes/docs/installation/safira-cli" passHref>
+            <a target="_blank">
               <Button>Download Now</Button>
+            </a>
+          </Link>
             </div>
           </div>
         </div>
