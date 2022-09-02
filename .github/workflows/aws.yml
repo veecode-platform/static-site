@@ -15,8 +15,11 @@ jobs:
         with:
           node-version: 16.x
           cache: yarn
-      - name: Build with Maven
-        run: yarn build
+      - name: Build Project
+        run: |
+           npm install --global yarn  
+           yarn --version
+           yarn build
               
       - uses: shallwefootball/s3-upload-action@master
         name: Upload S3
