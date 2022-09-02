@@ -19,7 +19,7 @@ jobs:
       - name: Build Project
         run: | 
            yarn version
-           yarn add next react react-dom
+           yarn
            yarn build
            ls -ltrh out
 
