@@ -19,6 +19,7 @@ jobs:
       - name: Build Project
         run: | 
            yarn version
+           yarn add next react react-dom
            yarn install next react react-dom
            yarn build
               
