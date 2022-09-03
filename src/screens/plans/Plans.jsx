@@ -32,7 +32,7 @@ const Plans = () => {
                     title="Standard Support"
                     subtitle="10 Users"
                     desc="Support within 5 business days"
-                    price="FREE"
+                    price="$ 0"
                     >
                       <Button>
                         START NOW
