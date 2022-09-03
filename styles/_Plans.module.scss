@@ -76,7 +76,9 @@
                 @include screenSize(40%,auto);
                 @include displayFlex(center, center, row);
                 span{
-                    padding: .5em 1em;
+                    @include screenSize(40px,40px);
+                    @include displayFlex(center, center, row);
+                    padding: .4em;
                     border-radius: 100px;
                     background: transparent;
                     border: 2px solid $color1;
