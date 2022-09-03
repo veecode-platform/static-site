@@ -95,7 +95,7 @@
         }
     }
     &__options {
-        @include screenSize(100%, 36em);
+        @include screenSize(100%, 38em);
         @include resetList();
         @include displayFlex(center, center, column);
         background-color: $color2;
@@ -134,11 +134,11 @@
                 }
             }
             &:last-child {
-                //mobile(M)
-                @include for-tablet-only {
-                    padding-bottom: 1.2em;
-                    border-radius: 2em;
-                }
+                // //mobile(M)
+                // @include for-tablet-only {
+                //     padding-bottom: 1.2em;
+                //     border-radius: 2em;
+                // }
                 &::before {
                     content: "";
                     width: 40%;
