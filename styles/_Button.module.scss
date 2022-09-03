@@ -18,6 +18,8 @@
         background: linear-gradient(45deg,$color1,$color7);
         color: $color3;
         transition: all 0.4s linear;
+        -webkit-transform: scale(1.05);
+        transform: scale(1.05);
     }
 
     //mobile(M)
