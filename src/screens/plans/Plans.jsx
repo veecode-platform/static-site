@@ -1,7 +1,6 @@
 import Link from 'next/link';
 import style from '../../../styles/_Plans.module.scss';
-import { Button, Footer, Header } from '../../components';
-import { FaAngleRight } from "react-icons/fa";
+import { Breadcrumb, Button, Footer, Header } from '../../components';
 import CardSupport from './cardSupport';
 
 const Icon1 = 'assets/home/icon4.png';
@@ -24,17 +23,9 @@ const Plans = () => {
                   <p>Count on our team to help you get the most out of our platform</p>
               </div>
               {/* Breadcrumb */}
-              <div className={style.content__breadcrumb}>
-                    <div className={style["content__breadcrumb-item"]}>
-                      <span className={style.selected}>1</span> <p>Select Plan</p>
-                    </div>
-                    <div className={style["content__breadcrumb-divider"]}>
-                      <FaAngleRight/>
-                    </div>
-                    <div className={style["content__breadcrumb-item"]}>
-                      <span>2</span> <p>Checkout</p>
-                    </div>
-              </div>
+              <Breadcrumb
+               active={1}
+               />
               <div className={style.content__options}>
                   <CardSupport
                     image={Icon1}
