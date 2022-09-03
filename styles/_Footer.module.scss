@@ -42,10 +42,10 @@
     }
     &__copy{
         @include screenSize(40%, auto);
-        padding: 1.5em 0;
+        // padding: 1.5em 0;
         color: $color2;
         p{
-            @include typography(15px,center,1.3em,400); //CHANGE
+            @include typography(.7vw,center,1.3em,400); //CHANGE
         }
     }
 }
