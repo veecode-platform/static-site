@@ -19,7 +19,7 @@ jobs:
       - name: Build Project
         run: | 
            yarn version
-           yarn add next react react-dom
+           yarn
            yarn build
            ls -ltrh out
 
@@ -31,7 +31,7 @@ jobs:
           aws-region: us-east-1
 
       - name: Deploy static site to S3 bucket
-        run: aws s3 sync out s3://${{ secrets.AWS_BUCKET }}
+        run: aws s3 sync out s3://${{ secrets.AWS_BUCKET }} --acl public-read
               
 #     - uses: shallwefootball/s3-upload-action@master
 #       name: Upload S3
