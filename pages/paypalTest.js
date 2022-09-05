@@ -10,7 +10,7 @@ export default function PaypalTest() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div style={{height: "100vh", width:"100vw", display:"flex", alignItems:"center", justifyContent:"center"}}>
-        <PaypalComponent displayOptions />
+        <PaypalComponent />
       </div>
 
     </>
