@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { Button } from '../../../components';
 import style from './_ContactSection.module.scss'
 
@@ -24,7 +25,13 @@ const ContactSection = () => {
             </ul>
           </div>
           <div className={style["content__text-buttonWrapper"]}>
-            <Button>Contact here</Button>
+            <Link href="/support">
+              <a>
+                <Button>
+                  Support
+                </Button>
+              </a>
+            </Link>
           </div>
         </div>
       </article>

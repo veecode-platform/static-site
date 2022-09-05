@@ -1,0 +1,51 @@
+@import "../abstract/functions", "../abstract/variables", "../abstract/responsive";
+
+.footer{
+    @include screenSize(100%, auto);
+    @include displayFlex(center, center, row);  //CHANGE
+    background-color: $color3;
+    margin-top: -.5em;
+    padding: 2em 0;  //CHANGE
+    .content{
+        @include screenSize(40%, auto);
+        @include displayFlex(center, center, row); // CHANGE
+        color: $color2;
+        &__logo{
+            @include screenSize(40%, auto);
+            @include displayFlex(space-around, center, row);
+            img{
+                width: 50%;
+            }
+        }
+        &__details{
+            @include screenSize(70%, auto);
+            @include displayFlex(center, center, column);
+            &-lists{
+                @include screenSize(100%, auto);
+                @include displayFlex(center, flex-start, row);
+                ul{
+                    @include screenSize(40%, auto);
+                    margin: 1em;
+                    @include resetList();
+                    li{
+                       cursor: pointer;
+                       @include typography(15px,center,1.8em,300);
+                       opacity: .9;
+                       span{
+                        opacity: 1;
+                        @include typography(18px,center,1.9em,500);
+                       }
+                    }
+                }
+            }
+        }
+    }
+    &__copy{
+        @include screenSize(40%, auto);
+        // padding: 1.5em 0;
+        color: $color2;
+        p{
+            @include typography(.7vw,center,1.3em,400); //CHANGE
+        }
+    }
+}

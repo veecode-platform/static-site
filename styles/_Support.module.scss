@@ -1,0 +1,80 @@
+@import "../abstract/functions", "../abstract/variables", "../abstract/responsive";
+
+.wrapper{
+    @include screenSize(100%,auto);
+    @include displayFlex(center, center, row);
+    @include backgroundImage('/assets/home/bg2.png');
+    margin-top: -.5em;
+    .content{
+        @include screenSize(80%,auto);
+        @include displayFlex(center, center, column);
+        color: $color2;
+        &__title{
+            @include screenSize(70%,auto);
+            padding: 4.5em 0 2.2em 0;
+            //mobile(M)
+            @include for-phone-only{
+                @include screenSize(85%,auto);
+            }
+            //mobile(S)
+            @include for-phoneS-only{
+                @include screenSize(90%,auto);
+            }
+
+            h2{
+                @include typography(2.8vw,center,1.4em, 600);
+                color:$color1;
+
+                //mobile(M)
+                @include for-phone-only{
+                    font-size: 6.5vw;
+                }
+                //mobile(S)
+                @include for-phoneS-only {
+                    font-size: 11vw;
+                }
+            }
+        }
+        &__desc{
+            @include screenSize(65%,auto);
+            //mobile(M)
+            @include for-phone-only{
+                @include screenSize(80%,auto);
+            }
+            p{
+                @include typography(1.6vw,center,1.4em, 400);
+                //mobile(M)
+                @include for-phone-only{
+                    font-size: 3vw;
+                }
+                //mobile(S)
+                @include for-phoneS-only {
+                    font-size: 20px;
+                }
+            }
+        }
+        &__options{
+            @include screenSize(80%,auto);
+            @include displayFlex(center, center, row);
+            padding: 4em 0;
+            //viewport
+            @include for-viewport-only{
+                @include screenSize(90%,auto);
+            }
+            //mobile(M)
+            @include for-phone-only{
+                @include displayFlex(center, center, column);
+                padding: 1em 0 6em 0;
+            }
+            //mobile(S)
+             @include for-phoneS-only {
+                @include screenSize(95%,auto);
+                padding: 1em 0;
+            }
+            //mobile(XS)
+            @include for-phoneXS-only{
+                @include screenSize(100%,auto);
+            }
+        }
+    }
+}

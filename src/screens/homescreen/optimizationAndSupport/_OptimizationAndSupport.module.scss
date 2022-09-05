@@ -287,6 +287,10 @@
                 @include for-phoneS-only {
                     @include screenSize(30%, auto);
                 }
+                //mobile(XS)
+                @include for-phoneXS-only {
+                    @include screenSize(50%, auto);
+                }
                 img {
                     width: 100%;
                 }
@@ -307,6 +311,10 @@
                         @include screenSize(100%, auto);
                         padding: 0.5em 0.3em;
                     }
+                    //mobile(XS)
+                    @include for-phoneXS-only {
+                        @include screenSize(65vw, auto);
+                    }
                     h2 {
                         @include typography(2.3vw, center, 1.3em, 600);
                         //mobile(M)
@@ -316,6 +324,10 @@
                         //mobile(S)
                         @include for-phoneS-only {
                             @include typography(24px, center, 1.2em, 600);
+                        }
+                        //mobile(XS)
+                        @include for-phoneS-only {
+                           font-size: 20px;
                         }
                     }
                 }
@@ -330,6 +342,10 @@
                     @include for-phoneS-only {
                         font-size: 16px;
                     }
+                    //mobile(XS)
+                    @include for-phoneS-only {
+                        font-size: 14px;
+                    }
                 }
             }
             .right {
@@ -338,6 +354,11 @@
                 @include for-phoneS-only {
                     @include screenSize(30%, auto);
                 }
+                //mobile(XS)
+                @include for-phoneXS-only {
+                    @include screenSize(50%, auto);
+                }
+
                 img {
                     width: 100%;
                 }
