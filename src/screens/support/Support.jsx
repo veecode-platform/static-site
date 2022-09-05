@@ -34,9 +34,14 @@ const Support = () => {
                     desc="Support within 5 business days"
                     price="$ 0"
                     >
-                      <Button>
-                        START NOW
-                      </Button>
+                      <Link href="/checkout">
+                        <a>
+                        <Button>
+                          START NOW
+                        </Button>
+                        </a>                     
+                      </Link>
+                      
                     </CardSupport>
                   <CardSupport
                     image={Icon2}
@@ -45,9 +50,13 @@ const Support = () => {
                     desc="Support within 3 business days"
                     price="$ 100"
                     >
-                      <Button>
-                        BUY NOW
-                      </Button>
+                      <Link href="/checkout">
+                        <a>
+                        <Button>
+                          BUY NOW
+                        </Button>
+                        </a>                     
+                      </Link>
                   </CardSupport>
               </div>
           </article>

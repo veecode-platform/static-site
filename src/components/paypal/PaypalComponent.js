@@ -29,7 +29,7 @@ const WraperButton = ({plan}) =>{
     }
     return(
         <PayPalButtons 
-            style={{ layout: "vertical", color: "black" }}
+            style={{ layout: "vertical", color: "white" }}
             createSubscription = { async (data, actions) => {
                 return actions.subscription.create({
                     'plan_id': plan
