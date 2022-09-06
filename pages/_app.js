@@ -27,6 +27,10 @@ function MyApp({ Component, pageProps }) {
         a.appendChild(r);
         })(window,document,'https://static.hotjar.com/c/hotjar-%27,%27.js?sv=%27);`}
       </Script> }
+      <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+        <meta charSet="utf-8"></meta>
+      </Head>
       <Component {...pageProps} />
       <ToastContainer
         autoClose={5000}
