@@ -89,6 +89,7 @@
             }   
             p{
                 @include typography(1.5vw,center,1.4em,500);
+                padding: 1em;
                 color: $color5;
                 //tablet
                 @include for-tablet-only{

@@ -102,33 +102,33 @@
         border-radius: 0 0 2em 2em;
         padding: 40px 0;
         //tablet
-        @include for-tablet-only{
+        @include for-tablet-only {
             padding: 20px 0;
         }
         //mobile(M)
-        @include for-phone-only{
+        @include for-phone-only {
             padding-top: 60px;
         }
         &-item {
             @include screenSize(100%, 200px);
             @include displayFlex(center, center, column);
-            padding:  0 0.5em;
+            padding: 0 0.5em;
             //viewport
-            @include for-viewport-only{
+            @include for-viewport-only {
                 height: 120px;
-                padding:  0 1em;
+                padding: 0 1em;
             }
             //tablet
-            @include for-tablet-only{
+            @include for-tablet-only {
                 height: 110px;
-                padding: 0 .5em;
+                padding: 0 0.5em;
             }
             //mobile(M)
-            @include for-phone-only{
+            @include for-phone-only {
                 height: 220px;
             }
             //mobile(XS)
-            @include for-phoneXS-only{
+            @include for-phoneXS-only {
                 height: 250px;
             }
 
@@ -139,15 +139,14 @@
                 background-color: $color1;
             }
 
-
-        &:last-child {
-            &::after {
-                content: "";
-                width: 40%;
-                height: 2px;
-                display: none;
+            &:last-child {
+                &::after {
+                    content: "";
+                    width: 40%;
+                    height: 2px;
+                    display: none;
+                }
             }
-         }
             h3 {
                 @include typography(1.1vw, center, 1.2em, 600);
                 //tablet
