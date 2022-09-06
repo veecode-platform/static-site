@@ -62,17 +62,14 @@
             }
             //mobile(M)
             @include for-phone-only{
+                @include screenSize(90%,auto);
                 @include displayFlex(center, center, column);
                 padding: 1em 0 6em 0;
             }
             //mobile(S)
              @include for-phoneS-only {
-                @include screenSize(95%,auto);
-                padding: 1em 0;
-            }
-            //mobile(XS)
-            @include for-phoneXS-only{
                 @include screenSize(100%,auto);
+                padding: 1em 0;
             }
         }
     }

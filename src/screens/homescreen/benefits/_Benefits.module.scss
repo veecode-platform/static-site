@@ -49,7 +49,7 @@
         //tablet
         @include for-tablet-only {
             padding: 3em 0 10em 0;
-            @include screenSize(100%, auto);
+            @include screenSize(90%, auto);
         }
         //mobile(M)
         @include for-phone-only {
