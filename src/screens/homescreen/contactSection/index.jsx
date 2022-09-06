@@ -25,7 +25,7 @@ const ContactSection = () => {
             </ul>
           </div>
           <div className={style["content__text-buttonWrapper"]}>
-            <Link href="/support">
+            <Link href="/support" prefetch={false}>
               <a>
                 <Button>
                   Support
