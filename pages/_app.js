@@ -18,7 +18,7 @@ function MyApp({ Component, pageProps }) {
         gtag('config', 'G-VH5ZB0M4YZ');`}
       </Script>
       {/*Hotjar Tracking Code for https://platform.vee.codes/ */}
-      <Script>
+      <Script id="hotjar-script-function">
         {`(function(h,o,t,j,a,r){
             h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
             h._hjSettings={hjid:3044176,hjsv:6};
