@@ -6,11 +6,7 @@ import CardSupport from './cardSupport';
 const Support = () => {
   return (
     <main className={style.wrapper}>
-      <Link href="/">
-        <a>
-          <Header/>
-        </a>
-      </Link>
+      <Header/>
           <section className={style.content}>
               <div className={style.content__title}>
                   <h2>A Team Of Experts You Can Count On</h2>
@@ -18,7 +14,6 @@ const Support = () => {
               <div className={style.content__desc}>
                   <p>Count on our team to help you get the most out of our platform</p>
               </div>
-              {/* Breadcrumb */}
               <Breadcrumb
                active={1}
                />
