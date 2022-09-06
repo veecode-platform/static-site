@@ -2,7 +2,7 @@
 
 .wrapper{
     @include screenSize(100%,auto);
-    @include displayFlex(center, center, row);
+    @include displayFlex(center, center, column);
     @include backgroundImage('/assets/home/bg2.png');
     margin-top: -.5em;
     .content{

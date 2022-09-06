@@ -3,19 +3,15 @@ import style from '../../../styles/_Support.module.scss';
 import { Breadcrumb, Button, Header } from '../../components';
 import CardSupport from './cardSupport';
 
-const Icon1 = 'assets/home/icon4.png';
-const Icon2 = 'assets/home/icon5.png';
-
 const Support = () => {
   return (
-    <main>
+    <main className={style.wrapper}>
       <Link href="/">
         <a>
           <Header/>
         </a>
       </Link>
-        <section className={style.wrapper}>
-          <article className={style.content}>
+          <section className={style.content}>
               <div className={style.content__title}>
                   <h2>A Team Of Experts You Can Count On</h2>
               </div>
@@ -28,7 +24,6 @@ const Support = () => {
                />
               <div className={style.content__options}>
                   <CardSupport
-                    image={Icon1}
                     title="Standard Support"
                     subtitle="10 Users"
                     desc="Support within 5 business days"
@@ -44,7 +39,6 @@ const Support = () => {
                       
                     </CardSupport>
                   <CardSupport
-                    image={Icon2}
                     title="Premium Support"
                     subtitle="20 Users"
                     desc="Support within 3 business days"
@@ -59,8 +53,7 @@ const Support = () => {
                       </Link>
                   </CardSupport>
               </div>
-          </article>
-      </section>
+          </section>
     </main>
   )
 }
