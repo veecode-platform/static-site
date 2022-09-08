@@ -1,8 +1,8 @@
 import Link from 'next/link';
 import { Button } from '../../../components';
-import style from './_ContactSection.module.scss'
+import style from './_SupportSection.module.scss'
 
-const ContactSection = () => {
+const SupportSection = () => {
   return (
     <section className={style.wrapper}>
       <article className={style.content}>
@@ -25,7 +25,7 @@ const ContactSection = () => {
             </ul>
           </div>
           <div className={style["content__text-buttonWrapper"]}>
-            <Link href="/support" prefetch={false}>
+            <Link href="/pricing" prefetch={false}>
               <a>
                 <Button>
                   Support
@@ -39,4 +39,4 @@ const ContactSection = () => {
   );
 }
 
-export default ContactSection 
+export default SupportSection 
