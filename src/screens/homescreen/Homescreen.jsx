@@ -1,4 +1,4 @@
-import style from "../../../styles/_Homescreen.module.scss";
+import style from "../../../styles/_PageDefault.module.scss";
 import { Header } from '../../components';
 import FirstSection from "./firstSection";
 // import Benefits from "./benefits";
@@ -7,7 +7,7 @@ import FirstSection from "./firstSection";
 import dynamic from "next/dynamic";
 const Benefits = dynamic (()=> import ('./benefits'));
 const OptimizationAndSupport = dynamic (()=> import ('./optimizationAndSupport'));
-const ContactSection = dynamic (()=> import ('./contactSection'));
+const SupportSection = dynamic (()=> import ('./supportSection'));
 
 const Homescreen = () => {
   return (
@@ -16,7 +16,7 @@ const Homescreen = () => {
       <FirstSection/>
       <Benefits/>
       <OptimizationAndSupport/>
-      <ContactSection/>
+      <SupportSection/>
     </main>
   )
 }
