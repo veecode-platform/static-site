@@ -33,17 +33,32 @@
             @include for-phoneXS-only{
                 @include screenSize(100%,auto);
             }
-            &_formWraper{
-                @include displayFlex(center, flex-start, column);
+            &_infoBoxWrapper{
+                @include displayFlex(center, center, column);
                 min-width: 415px;
                 padding: 1vw 1vw;
                 background-color: $color9;
                 border-radius: 5%;
-
-                &_form{
+                gap: 2vh;
+                
+                &_box{
                     @include displayFlex(center, center, column);
-                    width: 100%;                  
-                    gap: 1.2vh;
+                    width: 100%;
+                    color: $color2;
+                    border-radius: 2%;
+                    padding: 1vh;
+
+                    h1{
+                        color: $color1;
+                    }
+                }
+                &_boxUser{
+                    @include displayFlex(center, center, row);
+                    width: 100%;
+                    gap: 2vw;
+                    color: $color2;
+                    border-radius: 2%;
+                    padding: 1vh;
                 }
             }
         }

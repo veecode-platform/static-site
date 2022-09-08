@@ -1,3 +1,3 @@
 import { PaypalComponent } from "./PaypalComponent";
 
-export { PaypalComponent }
+export { PaypalComponent } 

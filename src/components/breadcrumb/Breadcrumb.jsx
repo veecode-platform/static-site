@@ -11,7 +11,13 @@ const Breadcrumb = ({active}) => {
         <FaAngleRight />
       </div>
       <div className={style.breadcrumb__item}>
-        <span className={active === 2 ? style.selected : null}>2</span> <p>Checkout</p>
+        <span className={active === 2 ? style.selected : null}>2</span> <p>Validate</p>
+      </div>
+      <div className={style.breadcrumb__divider}>
+        <FaAngleRight />
+      </div>
+      <div className={style.breadcrumb__item}>
+        <span className={active === 3 ? style.selected : null}>3</span> <p>Checkout</p>
       </div>
     </div>
   );

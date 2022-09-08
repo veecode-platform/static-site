@@ -1,15 +1,10 @@
 import { Wrapper } from "./styles";
 import React, {useState, useEffect} from "react";
 import { PayPalScriptProvider, PayPalButtons, usePayPalScriptReducer } from "@paypal/react-paypal-js";
-import Radio from '@mui/material/Radio';
-import RadioGroup from '@mui/material/RadioGroup';
-import FormControlLabel from '@mui/material/FormControlLabel';
-import FormControl from '@mui/material/FormControl';
-import FormLabel from '@mui/material/FormLabel';
 import alerts from "../../../utils/alerts";
 
 
-const WraperButton = ({plan}) =>{
+const WraperButton = ({plan, disabled}) =>{
 
     const [{ options, isPending, isResolved, isRejected }, dispatch] = usePayPalScriptReducer();
 
@@ -30,6 +25,7 @@ const WraperButton = ({plan}) =>{
     return(
         <PayPalButtons 
             style={{ layout: "vertical", color: "white" }}
+            disabled={disabled}
             createSubscription = { async (data, actions) => {
                 return actions.subscription.create({
                     'plan_id': plan
@@ -52,7 +48,7 @@ const WraperButton = ({plan}) =>{
     )    
 }
 
-export const PaypalComponent = ({displayOptions}) => {
+export const PaypalComponent = ({disabled, plan}) => {
 
     const initialOptions = {
         "client-id": "AYeZ7RE7NgdD8GC5FvOxmJcJRE69s3_4BbFXzl2824907mW_4JPobDmkwfj42U7vp0UXouYZU3GNxSoN",
@@ -64,22 +60,11 @@ export const PaypalComponent = ({displayOptions}) => {
     };
 
     const [supportValue, setSupportValue] = useState("P-9PV56232W1892461NMMH3YXY");
-    const handleChange = (event) => { setSupportValue(event.target.value) }
 
     return(
-        <Wrapper>
-            {displayOptions && 
-            <FormControl>
-                <FormLabel id="paypal-radio-buttons-group-label" focused={false} color="primary">Support</FormLabel>
-                <RadioGroup row aria-labelledby="paypal-radio-buttons-group-label" name="paypal-radio-buttons-group" onChange={handleChange}>
-                    <FormControlLabel control={<Radio color="default" value="P-9PV56232W1892461NMMH3YXY" />} label="Standart" />
-                    <FormControlLabel control={<Radio color="default" value="P-5UB13821E9039783YMMH33TY" />} label="Premium" />
-                </RadioGroup>
-            </FormControl>
-            }
-            
+        <Wrapper>          
             <PayPalScriptProvider options={initialOptions}>
-               <WraperButton plan={supportValue} /> 
+               <WraperButton plan={supportValue} disabled={disabled} /> 
             </PayPalScriptProvider>
         </Wrapper>
     )
