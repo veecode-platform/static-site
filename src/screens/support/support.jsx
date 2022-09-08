@@ -7,7 +7,7 @@ const Support = () => {
   return (
         <DefaultPage
           title="Support Options"
-          subtitle="Lorem ipsum dolor sit amet consectetur adipisicing elit."
+          subtitle="Lorem ipsum dolor sit amet consectetur adipisicing."
         >
           {/* Comunity Support */}
           <SupportCategories
