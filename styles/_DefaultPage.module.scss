@@ -11,16 +11,32 @@
         @include backgroundImage('/assets/default/banner2.png');
         @include displayFlex(center, center, row);
         padding: 4em 0;
+        // Mobile(M)
+        @include for-phone-only{
+          padding: 2em 0;
+        }
         &__content{
           @include screenSize(70%, auto);
+          //Mobile(M)
+          @include for-phone-only{
+            @include screenSize(80%, auto);
+          }
           &-title{
             @include typography(2.4vw,start,1.3em,600);
             margin-bottom: 2vh;
             color: $color2;
+            // Mobile(M)
+            @include for-phone-only{
+              @include typography(3.5vw,start,1.3em,600);
+            }
           }
           &-subtitle{
             @include typography(1.4vw,start,1.3em,500);
             color: $color1;
+            // Mobile(M)
+            @include for-phone-only{
+              @include typography(2.2vw,start,1.3em,600);
+            }
           }
         }
       }
@@ -29,6 +45,11 @@
         @include displayFlex(center, center, column);
         margin: auto;
         padding: 4em 0;
+        //Mobile(M)
+        @include for-phone-only{
+          @include screenSize(80%, auto);
+          padding: 2.5em 0;
+        }
       }
     }
     .back{
@@ -42,6 +63,10 @@
       &:hover{
         transition: all .5s linear;
         color: $color1;
+      }
+      //Mobile(M)
+      @include for-phone-only{
+        font-size: 3.5vw;
       }
     }
   }

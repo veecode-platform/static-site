@@ -45,7 +45,11 @@
         // padding: 1.5em 0;
         color: $color2;
         p{
-            @include typography(.7vw,center,1.3em,400); //CHANGE
+            @include typography(.7vw,center,1.3em,400);
+            //mobile(M)
+            @include for-phone-only{
+                font-size: 1.2vw;
+            }
         }
     }
 }
