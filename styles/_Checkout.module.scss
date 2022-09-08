@@ -3,7 +3,7 @@
 .wrapper{
     @include screenSize(100%, auto);
     @include displayFlex(center, center, column);
-    @include backgroundImage('/assets/home/bg2.png');
+    background-color: $color9;
     .content{
         @include screenSize(80%,auto);
         @include displayFlex(center, center, column);
