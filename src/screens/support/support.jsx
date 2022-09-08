@@ -1,47 +1,50 @@
-import style from '../../../styles/_Support.module.scss'
-import { Header } from '../../components'
+import { DefaultPage } from "../../components";
+import PricingSection from "./pricingSection";
+import SupportBenefits from "./SupportBenefits";
+import SupportCategories from "./supportCategories";
 
-const AboutSupport = () => {
+const Support = () => {
   return (
-    <main className={style.container}>
-      <Header />
-      <section className={style.content}>
-        <div>
-          <h1>Support Options</h1>
-          <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. </h2>
-        </div>
-        <article>
-            <div>
-                <h2>Community Support</h2>
-                <h3>Included with All Gruntwork Subscriptions</h3>
-                <p>
-                    We encourage our customers to post their questions in our Knowledge Base.
-                    All Gruntwork customers also receive access to our community-only Slack workspace, where you can engage with other Gruntwork customers and Gruntwork engineers.
-                    No Service Level Agreement is provided in the Community Tier.
-                </p>
-            </div>
-            <div>
-                <h2>Standard Support</h2>
-                <h3>Included with All Gruntwork Subscriptions</h3>
-                <p>
-                    We encourage our customers to post their questions in our Knowledge Base.
-                    All Gruntwork customers also receive access to our community-only Slack workspace, where you can engage with other Gruntwork customers and Gruntwork engineers.
-                    No Service Level Agreement is provided in the Community Tier.
-                </p>
-            </div>
-            <div>
-                <h2>Premium Support</h2>
-                <h3>Included with All Gruntwork Subscriptions</h3>
-                <p>
-                    We encourage our customers to post their questions in our Knowledge Base.
-                    All Gruntwork customers also receive access to our community-only Slack workspace, where you can engage with other Gruntwork customers and Gruntwork engineers.
-                    No Service Level Agreement is provided in the Community Tier.
-                </p>
-            </div>
-        </article>
-      </section>
-    </main>
+        <DefaultPage
+          title="Support Options"
+          subtitle="Lorem ipsum dolor sit amet consectetur adipisicing elit."
+        >
+          {/* Comunity Support */}
+          <SupportCategories
+            title="Comunity Support"
+            subtitle="free mode support"
+            desc="With DevOps, it seems like there are a thousand little details you have
+             to get just right—DNS, TLS, VPCs, secrets management, monitoring, alerting, CI, 
+             CD—and never enough time to learn them all. With Gruntwork Professional Support,
+              you get to work with a team of DevOps experts who can help you set up your 
+              infrastructure, design highly available and scalable systems, automate 
+            builds and deployments, troubleshoot issues, and avoid gotchas and pitfalls."/>
+          {/* Standard Support */}
+          <SupportCategories
+            title="Standard Support"
+            subtitle="free mode support"
+            desc="With DevOps, it seems like there are a thousand little details you have
+             to get just right—DNS, TLS, VPCs, secrets management, monitoring, alerting, CI, 
+             CD—and never enough time to learn them all. With Gruntwork Professional Support,
+              you get to work with a team of DevOps experts who can help you set up your 
+              infrastructure, design highly available and scalable systems, automate 
+            builds and deployments, troubleshoot issues, and avoid gotchas and pitfalls."/>
+            {/* Premium Support */}
+          <SupportCategories
+            title="Premium Support"
+            subtitle="free mode support"
+            desc="With DevOps, it seems like there are a thousand little details you have
+             to get just right—DNS, TLS, VPCs, secrets management, monitoring, alerting, CI, 
+             CD—and never enough time to learn them all. With Gruntwork Professional Support,
+              you get to work with a team of DevOps experts who can help you set up your 
+              infrastructure, design highly available and scalable systems, automate 
+            builds and deployments, troubleshoot issues, and avoid gotchas and pitfalls."/>
+            {/* Benefits */}
+            <SupportBenefits/>
+            {/* Pricing Section */}
+            <PricingSection/>
+        </DefaultPage>
   );
-}
+};
 
-export default AboutSupport
+export default Support;

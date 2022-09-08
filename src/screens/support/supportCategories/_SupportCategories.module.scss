@@ -1,0 +1,22 @@
+@import "../abstract/functions", "../abstract/variables", "../abstract/responsive";
+
+.card{
+    @include screenSize(100%,auto);
+    margin-bottom: 2em;
+    &__title{
+        @include typography(1.4vw, start, 1.3em, 400);
+        transition: all .4s linear;
+        cursor: pointer;
+        &:hover{
+            transition: all .4s linear;
+            color: $color1;
+        }
+    }
+    &__subtitle{
+        @include typography(1.1vw, start, 1.4em, 400);
+        margin: .7em 0;
+    }
+    &__desc{
+        @include typography(1vw, start, 1.4em, 300);
+    }
+}

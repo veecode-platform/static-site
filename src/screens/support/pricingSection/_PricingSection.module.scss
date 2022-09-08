@@ -1,0 +1,34 @@
+@import "../abstract/functions", "../abstract/variables", "../abstract/responsive";
+
+.wrapper{
+    @include screenSize(100%, auto);
+    @include displayFlex(center, center, row);
+    padding: 1em 0;
+    .content{
+        @include screenSize(100%, auto);
+        @include displayFlex(center, center, column);
+        &__title{
+            @include typography(1.5vw,start,1.3em,500);
+                margin-bottom: .7em;
+                transition: all .4s linear;
+                cursor: pointer;
+                &:hover{
+                    transition: all .4s linear;
+                    color: $color1;
+                }
+        }
+        &__desc{
+            @include typography(1vw, start, 1.4em, 300);
+            a{
+                color: $color7;
+                font-weight: 600;
+                transition: all .4s linear;
+                &:hover{
+                    transition: all .4s linear;
+                    color: $color1;
+                    text-decoration:underline;
+                }
+            }
+        }
+    }
+}

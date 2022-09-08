@@ -1,0 +1,28 @@
+@import "../abstract/functions", "../abstract/variables", "../abstract/responsive";
+
+.cards{
+    @include screenSize(100%,auto);
+    @include displayFlex(center,center, column);
+    padding: 4em 0;
+    .card{
+        @include displayFlex(center, center, row);
+        padding: 2em 0;
+        &__icon{
+            @include screenSize(10%,auto);
+            @include displayFlex(flex-start, center, row);
+            font-size: 3.2vw;
+            color: $color1;
+            padding: .2em;
+        }
+        &__details{
+            @include screenSize(90%,auto);
+            &-title{
+                @include typography(1.5vw,start,1.3em,500);
+                margin-bottom: .7em;
+            }
+            &-desc{
+                @include typography(1vw,start,1.3em,400);
+            }
+        }
+    }
+}
