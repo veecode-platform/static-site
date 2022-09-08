@@ -2,4 +2,5 @@
 
 .container {
   @include screenSize(100vw, auto);
+  background-color: $color3;
 }

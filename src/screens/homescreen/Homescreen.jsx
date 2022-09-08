@@ -1,4 +1,4 @@
-import style from "../../../styles/_PageDefault.module.scss";
+import style from "../../../styles/_Homescreen.module.scss";
 import { Header } from '../../components';
 import FirstSection from "./firstSection";
 // import Benefits from "./benefits";

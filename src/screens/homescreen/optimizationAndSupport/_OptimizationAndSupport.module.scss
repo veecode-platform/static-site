@@ -3,6 +3,8 @@
 .wrapper {
     @include screenSize(100%, auto);
     @include displayFlex(center, center, column);
+    background-color: $color2;
+    color: $color3;
     .optimizationContent {
         @include screenSize(100%, auto);
         @include displayFlex(center, center, row);
