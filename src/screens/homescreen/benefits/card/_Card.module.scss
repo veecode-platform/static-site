@@ -28,7 +28,7 @@
         filter: brightness(120%);
     }
     &__icon {
-        @include screenSize(90%, auto);
+        @include screenSize(85%, auto);
         @include displayFlex(center, center, row);
         margin-bottom: -2.1em;
         //viewport
