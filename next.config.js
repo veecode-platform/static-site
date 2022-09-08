@@ -5,6 +5,7 @@ const path = require('path')
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
+  trailingSlash: false,
   images: {
     loader: "custom"    
   },

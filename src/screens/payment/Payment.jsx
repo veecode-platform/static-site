@@ -22,7 +22,7 @@ const PaymentPage = () =>{
               <div className={style.content__options}>
                 <div className={style.content__options_infoBoxWrapper}>
                     <div className={style.content__options_infoBoxWrapper_box}>
-                        <h1>1x Premium support plan</h1>
+                        <h1>Premium support plan</h1>
                         <p>$100,00</p>
                         <p>description</p>                       
                     </div>

@@ -34,6 +34,7 @@ const WraperButton = ({plan, disabled}) =>{
             onApprove={ async (data, actions) => {
                 await actions.subscription.get().then(()=>{
                     //console.log("Log: ", data);
+                    //console.log(data);
                     alerts.success("Compra realizada com sucesso!")
                 });                       
             }}

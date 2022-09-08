@@ -27,7 +27,7 @@ export const Checkbox = ({name, placeholder, label, error}) => {
     <Field name={name}>
       {({ field, form, meta }) => (
         <Wrapper>
-          <Checkboxfield {...field} type="checkbox" id={name} name={name} placeholder={placeholder}></Checkboxfield>
+          <Checkboxfield {...field} id={name} name={name} placeholder={placeholder}></Checkboxfield>
         </Wrapper>
       )}
     </Field>
