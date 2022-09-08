@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Platform  |  About our Support</title>
+        <title>Platform  |  Support</title>
         <meta name="description" content="description" />
         <link rel="icon" href="/favicon.ico" />
       </Head>

@@ -1,4 +1,4 @@
-import { DefaultPage } from "../../components";
+import { ContactBar, DefaultPage } from "../../components";
 import PricingSection from "./pricingSection";
 import SupportBenefits from "./SupportBenefits";
 import SupportCategories from "./supportCategories";
@@ -43,6 +43,8 @@ const Support = () => {
             <SupportBenefits/>
             {/* Pricing Section */}
             <PricingSection/>
+            {/* Contact Bar */}
+            <ContactBar/>
         </DefaultPage>
   );
 };
