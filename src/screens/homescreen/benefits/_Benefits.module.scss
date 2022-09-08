@@ -39,21 +39,17 @@
         }
     }
     .content {
-        @include screenSize(80%, auto);
+        @include screenSize(75%, auto);
         @include displayFlex(center, center, row);
         padding: 5em 0 10em 0;
-        //viewport
-        @include for-viewport-only {
-            @include screenSize(95%, auto);
-        }
         //tablet
         @include for-tablet-only {
-            padding: 3em 0 10em 0;
-            @include screenSize(90%, auto);
+            padding: 3em 0 8em 0;
+            @include screenSize(80%, auto);
         }
         //mobile(M)
         @include for-phone-only {
-            padding: 5em 0;
+            padding: 4em 0;
             flex-wrap: wrap;
         }
         //mobile(S)

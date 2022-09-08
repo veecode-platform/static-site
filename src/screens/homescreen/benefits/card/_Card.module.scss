@@ -9,8 +9,8 @@
     transition: all 0.5s linear;
     //tablet
     @include for-tablet-only {
-        @include screenSize(40%, auto);
-        margin: 0.4%;
+        @include screenSize(30%, auto);
+        margin: 0.5%;
     }
     //mobile(M)
     @include for-phone-only {
@@ -33,17 +33,17 @@
         margin-bottom: -2.1em;
         //viewport
         @include for-viewport-only {
-            @include screenSize(90%, 12em);
-            margin-bottom: -1.6em;
+            @include screenSize(80%, 9em);
+            margin-bottom: -1.2em;
         }
         //tablet
         @include for-tablet-only {
-            @include screenSize(60%, 8em);
-            margin-bottom: -1.1em;
+            @include screenSize(60%, 6em);
+            margin-bottom: -1em;
         }
         //mobile(M)
         @include for-phone-only {
-            @include screenSize(95%, 12em);
+            @include screenSize(75%, 10em);
             padding-top: 1em;
             margin-bottom: -1.8em;
         }
@@ -64,23 +64,29 @@
         }
     }
     &__title {
-        @include screenSize(100%, 120px);
+        @include screenSize(100%, 100px);
         @include displayFlex(center, center, row);
         background-color: $color1;
-        padding: 2em 5em;
+        padding: 2.5em 5em;
         border-radius: 2em 2em 0 0;
+        //viewport
+        @include for-viewport-only{
+            padding: 2em;
+            height: 60px; 
+        }
         //tablet
         @include for-tablet-only {
-            height: 80px;
             padding: 1em;
+            border-radius: 1.2em 1.2em 0 0;
         }
         //mobile(M)
         @include for-phone-only {
-            padding: 3em 2em;
+            height: auto;
+            padding: 1.5em;
             border-radius: 1em 1em 0 0;
         }
         h2 {
-            @include typography(1.5vw, center, 1.2em, 600);
+            @include typography(1.2vw, center, 1.2em, 600);
             //tablet
             @include for-tablet-only {
                 font-size: 1.5vw;
@@ -91,27 +97,28 @@
             }
             //mobile(S)
             @include for-phoneS-only {
-                font-size: 4.5vw;
+                font-size: 4vw;
             }
         }
     }
     &__options {
         @include screenSize(100%, auto);
         @include resetList();
-        @include displayFlex(space-evenly, center, column);
         background-color: $color2;
         border-radius: 0 0 2em 2em;
-        padding: 30px 0;
+        padding: 5px 0;
         //tablet
         @include for-tablet-only {
-            padding: 20px 0;
+            padding: 10px 0;
+            border-radius: 0 0 1.2em 1.2em;
         }
         //mobile(M)
         @include for-phone-only {
-            padding-top: 60px;
+            padding-top: 10px;
+            border-radius: 0 0 1em 1em;
         }
         &-item {
-            @include screenSize(100%, 180px);
+            @include screenSize(100%, 160px);
             @include displayFlex(center, center, column);
             padding: 0 0.5em;
             //viewport
@@ -121,16 +128,12 @@
             }
             //tablet
             @include for-tablet-only {
-                height: 110px;
+                height: 3.8em;
                 padding: 0 0.5em;
             }
             //mobile(M)
             @include for-phone-only {
-                height: 220px;
-            }
-            //mobile(XS)
-            @include for-phoneXS-only {
-                height: 250px;
+                height: auto;
             }
 
             &::after {
@@ -138,6 +141,10 @@
                 width: 40%;
                 height: 2px;
                 background-color: $color1;
+                //mobile(M)
+                @include for-phone-only {
+                    height: 1px;
+                }
             }
 
             &:last-child {
@@ -149,36 +156,38 @@
                 }
             }
             h3 {
-                @include typography(1.1vw, center, 1.2em, 600);
+                @include typography(1vw, center, 1.2em, 600);
                 //tablet
                 @include for-tablet-only {
+                    padding-top: .5em;
                     font-size: 1.2vw;
                 }
                 //mobile(M)
                 @include for-phone-only {
-                    font-size: 20px;
+                    font-size: 18px;
+                    padding-top: .5em;
                 }
                 //mobile(S)
                 @include for-phoneS-only {
-                    font-size: 4.5vw;
+                    font-size: 3.8vw;
                 }
             }
             p {
-                @include typography(0.9vw, center, 1.3em, 300);
+                @include typography(0.8vw, center, 1.3em, 300);
                 padding: 2em 1.4em;
                 //tablet
                 @include for-tablet-only {
-                    padding: 1.5em 3em;
-                    font-size: 1vw;
+                    padding: 0.8em 1.5em ;
+                    font-size: .9vw;
                 }
                 //mobile(M)
                 @include for-phone-only {
-                    font-size: 16px;
-                    padding: 3em;
-                }
+                    font-size: 14px;
+                    padding: 1em 2em;
+                } 
                 //mobile(S)
                 @include for-phoneS-only {
-                    @include typography(14px, center, 1.3em, 300);
+                    @include typography(11px, center, 1.2em, 300);
                 }
             }
         }
