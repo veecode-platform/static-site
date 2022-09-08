@@ -1,0 +1,84 @@
+@import "../abstract/functions", "../abstract/variables", "../abstract/responsive";
+
+.wrapper {
+    @include screenSize(100vw, auto);
+    @include displayFlex(center, center, column);
+    background-color: $color9;
+    color: $color2;
+    .content{
+      @include screenSize(100%, auto);
+      .titleWrapper{
+        @include backgroundImage('/assets/default/banner2.png');
+        @include displayFlex(center, center, row);
+        padding: 4em 0;
+        // Mobile(M)
+        @include for-phone-only{
+          padding: 2em 0;
+        }
+        &__content{
+          @include screenSize(70%, auto);
+          //Mobile(M)
+          @include for-phone-only{
+            @include screenSize(80%, auto);
+          }
+          &-title{
+            @include typography(2.4vw,start,1.3em,600);
+            margin-bottom: 2vh;
+            color: $color2;
+            //tablet
+            @include for-tablet-only{
+              font-size: 3.5vw
+            }
+            //mobile(S)
+            @include for-phoneS-only{
+              font-size: 5.5vw;
+            }
+          }
+          &-subtitle{
+            @include typography(1.4vw,start,1.3em,500);
+            color: $color1;
+            //tablet
+            @include for-tablet-only{
+              font-size: 2.2vw
+            }
+            //mobile(S)
+            @include for-phoneS-only{
+              font-size: 2.7vw;
+            }
+          }
+        }
+      }
+      .contentWrapper{
+        @include screenSize(70%, auto);
+        @include displayFlex(center, center, column);
+        margin: auto;
+        padding: 4em 0;
+        //tablet
+        @include for-tablet-only{
+          @include screenSize(80%, auto);
+          padding: 2.5em 0;
+        }
+      }
+    }
+    .back{
+      @include screenSize(100%,auto);
+      @include displayFlex(center, center, row);
+      font-size: 2vw;
+      color: $color7;
+      padding-bottom: 2em;
+      cursor: pointer;
+      transition: all .5s linear;
+      &:hover{
+        transition: all .5s linear;
+        color: $color1;
+      }
+      //tablet
+      @include for-tablet-only{
+        font-size: 3.5vw;
+      }
+      //mobile(S)
+      @include for-phoneS-only{
+        font-size: 6vw;
+      }
+    }
+  }
