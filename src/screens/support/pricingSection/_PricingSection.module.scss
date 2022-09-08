@@ -16,9 +16,33 @@
                     transition: all .4s linear;
                     color: $color1;
                 }
+                //tablet
+                @include for-tablet-only{
+                    font-size: 2.1vw;
+                }               
+                //Mobile(M)
+                @include for-phone-only{
+                    font-size: 2.8vw;
+                }
+                //mobile(S)
+                @include for-phoneS-only{
+                    font-size: 4vw;
+                }
         }
         &__desc{
             @include typography(1vw, start, 1.4em, 300);
+            //tablet
+            @include for-tablet-only{
+                font-size: 1.8vw;
+            }       
+            //Mobile(M)
+            @include for-phone-only{
+                font-size: 2vw;
+            }
+            //mobile(S)
+            @include for-phoneS-only{
+                font-size: 3.5vw;
+            }
             a{
                 color: $color7;
                 font-weight: 600;

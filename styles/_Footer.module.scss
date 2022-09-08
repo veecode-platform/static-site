@@ -46,10 +46,14 @@
         color: $color2;
         p{
             @include typography(.7vw,center,1.3em,400);
-            //mobile(M)
-            @include for-phone-only{
+            //tablet
+            @include for-tablet-only{
                 font-size: 1.2vw;
             }
+            //mobile(S)
+            @include for-phoneS-only{
+                font-size: 1.9vw;
+              }
         }
     }
 }

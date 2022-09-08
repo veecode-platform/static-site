@@ -1,27 +1,83 @@
 @import "../abstract/functions", "../abstract/variables", "../abstract/responsive";
 
-.cards{
-    @include screenSize(100%,auto);
-    @include displayFlex(center,center, column);
+.cards {
+    @include screenSize(100%, auto);
+    @include displayFlex(center, center, column);
     padding: 4em 0;
-    .card{
+    //viewport
+    @include for-viewport-only {
+        padding: 2em 0;
+    }
+    .card {
         @include displayFlex(center, center, row);
         padding: 2em 0;
-        &__icon{
-            @include screenSize(10%,auto);
+        //mobile(M)
+        @include for-phone-only {
+            flex-direction: column;
+            padding: 1.5em 0;
+            border: 1px solid $color4;
+            border-radius: .9em;
+            margin: .5em;
+        }
+        &__icon {
+            @include screenSize(10%, auto);
             @include displayFlex(flex-start, center, row);
             font-size: 3.2vw;
             color: $color1;
-            padding: .2em;
-        }
-        &__details{
-            @include screenSize(90%,auto);
-            &-title{
-                @include typography(1.5vw,start,1.3em,500);
-                margin-bottom: .7em;
+            padding: 0.2em;
+            //tablet
+            @include for-tablet-only{
+                font-size: 4vw;
             }
-            &-desc{
-                @include typography(1vw,start,1.3em,400);
+            //mobile(M)
+            @include for-phone-only {
+                width: 100%;
+                @include displayFlex(center, center, row);
+                font-size: 6vw;
+            }
+            //mobile(S)
+            @include for-phoneS-only{
+                font-size: 10vw;
+            }
+        }
+        &__details {
+            @include screenSize(90%, auto);
+            //mobile(M)
+            @include for-phone-only {
+                padding: 1em 1.2em;
+            }
+            &-title {
+                @include typography(1.5vw, start, 1.3em, 500);
+                margin-bottom: 0.7em;
+                //tablet
+                @include for-tablet-only{
+                    font-size: 2vw;
+                }
+                //mobile(M)
+                @include for-phone-only {
+                    font-size: 2vw;
+                    text-align: center;
+                }
+                //mobile(S)
+                @include for-phoneS-only{
+                    font-size: 4vw;
+                }
+            }
+            &-desc {
+                @include typography(1vw, start, 1.3em, 400);
+                //tablet
+                @include for-tablet-only{
+                    font-size: 1.6vw;
+                }
+                //mobile(M)
+                @include for-phone-only {
+                    font-size: 1.7vw;
+                    text-align: center;
+                }
+                //mobile(S)
+                @include for-phoneS-only{
+                    font-size: 3.2vw;
+                }
             }
         }
     }
