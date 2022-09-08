@@ -1,11 +1,11 @@
 @import "../abstract/functions", "../abstract/variables", "../abstract/responsive";
 
 .wrapper{
-    @include screenSize(100%, 100vh);
+    @include screenSize(100%, auto);
     @include displayFlex(center, flex-start, row);
     @include backgroundImage('/assets/home/bg2.png');
     .content{
-        @include screenSize(80%,auto);
+        @include screenSize(80%, auto);
         @include displayFlex(center, center, column);
         color: $color2;
         
@@ -37,7 +37,7 @@
                 @include displayFlex(center, center, column);
                 min-width: 415px;
                 padding: 1vw 1vw;
-                background-color: $color9;
+                background-color: $color10;
                 border-radius: 5%;
                 gap: 2vh;
                 
