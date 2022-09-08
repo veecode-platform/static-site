@@ -1,9 +1,13 @@
 import style from "../../../styles/_Homescreen.module.scss";
 import { Header } from '../../components';
 import FirstSection from "./firstSection";
-import Benefits from "./benefits";
-import OptimizationAndSupport from "./optimizationAndSupport";
-import ContactSection from "./contactSection";
+// import Benefits from "./benefits";
+// import OptimizationAndSupport from "./optimizationAndSupport";
+// import ContactSection from "./contactSection";
+import dynamic from "next/dynamic";
+const Benefits = dynamic (()=> import ('./benefits'));
+const OptimizationAndSupport = dynamic (()=> import ('./optimizationAndSupport'));
+const SupportSection = dynamic (()=> import ('./supportSection'));
 
 const Homescreen = () => {
   return (
@@ -12,7 +16,7 @@ const Homescreen = () => {
       <FirstSection/>
       <Benefits/>
       <OptimizationAndSupport/>
-      <ContactSection/>
+      <SupportSection/>
     </main>
   )
 }

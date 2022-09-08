@@ -3,24 +3,24 @@
 .card {
     @include screenSize(30%, auto);
     @include displayFlex(center, center, column);
-    margin: 1.5%;
+    margin: 1%;
     cursor: pointer;
     opacity: 0.95;
     transition: all 0.5s linear;
     //tablet
     @include for-tablet-only {
-        @include screenSize(31%, auto);
-        margin: 0.4%;
+        @include screenSize(30%, auto);
+        margin: 0.5%;
     }
     //mobile(M)
     @include for-phone-only {
-        @include screenSize(70%, auto);
+        @include screenSize(75%, auto);
         margin: 1.5em 0;
     }
     //mobile(S)
     @include for-phoneS-only {
         @include screenSize(85%, auto);
-        margin: 0.5em 0;
+        margin: 1em 0;
     }
     &:hover {
         opacity: 1;
@@ -28,21 +28,23 @@
         filter: brightness(120%);
     }
     &__icon {
-        @include screenSize(90%, auto);
+        @include screenSize(85%, auto);
         @include displayFlex(center, center, row);
         margin-bottom: -2.1em;
         //viewport
         @include for-viewport-only {
-            @include screenSize(90%, 12em);
-            margin-bottom: -1.6em;
+            @include screenSize(80%, 9em);
+            margin-bottom: -1.2em;
         }
         //tablet
         @include for-tablet-only {
-            @include screenSize(85%, 12em);
+            @include screenSize(60%, 6em);
+            margin-bottom: -1em;
         }
         //mobile(M)
         @include for-phone-only {
-            @include screenSize(95%, 12em);
+            @include screenSize(75%, 10em);
+            padding-top: 1em;
             margin-bottom: -1.8em;
         }
         //mobile(XS)
@@ -62,27 +64,32 @@
         }
     }
     &__title {
-        @include screenSize(100%, 8.5em);
+        @include screenSize(100%, 100px);
         @include displayFlex(center, center, row);
         background-color: $color1;
-        padding: 3em 5em;
+        padding: 2.5em 5em;
         border-radius: 2em 2em 0 0;
+        //viewport
+        @include for-viewport-only{
+            padding: 2em;
+            height: 60px; 
+        }
         //tablet
         @include for-tablet-only {
-            @include screenSize(100%, 6.5em);
-            padding: 2em;
+            padding: 1em;
+            border-radius: 1.2em 1.2em 0 0;
         }
         //mobile(M)
         @include for-phone-only {
-            @include screenSize(100%, 6.5em);
-            padding: 3em 2em;
+            height: auto;
+            padding: 1.5em;
             border-radius: 1em 1em 0 0;
         }
         h2 {
-            @include typography(1.5vw, center, 1.2em, 600);
+            @include typography(1.2vw, center, 1.2em, 600);
             //tablet
             @include for-tablet-only {
-                font-size: 2vw;
+                font-size: 1.5vw;
             }
             //mobile(M)
             @include for-phone-only {
@@ -90,98 +97,97 @@
             }
             //mobile(S)
             @include for-phoneS-only {
-                font-size: 4.5vw;
+                font-size: 4vw;
             }
         }
     }
     &__options {
-        @include screenSize(100%, 38em);
+        @include screenSize(100%, auto);
         @include resetList();
-        @include displayFlex(center, center, column);
         background-color: $color2;
         border-radius: 0 0 2em 2em;
-        //viewport
-        @include for-viewport-only {
-            @include screenSize(100%, 28em);
-        }
+        padding: 5px 0;
         //tablet
         @include for-tablet-only {
-            @include screenSize(100%, 48.5em);
+            padding: 10px 0;
+            border-radius: 0 0 1.2em 1.2em;
         }
         //mobile(M)
         @include for-phone-only {
-            @include screenSize(100%, auto);
-            border-radius: 0 0 1.5em 1.5em;
+            padding-top: 10px;
+            border-radius: 0 0 1em 1em;
         }
         &-item {
-            @include screenSize(100%, auto);
+            @include screenSize(100%, 160px);
             @include displayFlex(center, center, column);
-            &:first-child {
-                //tablet
-                @include for-tablet-only {
-                    padding-top: 3em;
+            padding: 0 0.5em;
+            //viewport
+            @include for-viewport-only {
+                height: 120px;
+                padding: 0 1em;
+            }
+            //tablet
+            @include for-tablet-only {
+                height: 3.8em;
+                padding: 0 0.5em;
+            }
+            //mobile(M)
+            @include for-phone-only {
+                height: auto;
+            }
+
+            &::after {
+                content: "";
+                width: 40%;
+                height: 2px;
+                background-color: $color1;
+                //mobile(M)
+                @include for-phone-only {
+                    height: 1px;
                 }
+            }
+
+            &:last-child {
                 &::after {
                     content: "";
                     width: 40%;
                     height: 2px;
-                    background-color: $color1;
-                    margin-bottom: 2em;
-                    //mobile(M)
-                    @include for-phone-only {
-                        margin-bottom: 1.5em;
-                    }
-                }
-            }
-            &:last-child {
-                // //mobile(M)
-                // @include for-tablet-only {
-                //     padding-bottom: 1.2em;
-                //     border-radius: 2em;
-                // }
-                &::before {
-                    content: "";
-                    width: 40%;
-                    height: 2px;
-                    background-color: $color1;
-                    margin-bottom: 2em;
-                    //mobile(M)
-                    @include for-phone-only {
-                        margin-bottom: 1.5em;
-                    }
+                    display: none;
                 }
             }
             h3 {
-                @include typography(1.1vw, center, 1.2em, 600);
+                @include typography(1vw, center, 1.2em, 600);
                 //tablet
                 @include for-tablet-only {
-                    font-size: 1.8vw;
+                    padding-top: .5em;
+                    font-size: 1.2vw;
                 }
                 //mobile(M)
                 @include for-phone-only {
-                    font-size: 22px;
+                    font-size: 18px;
+                    padding-top: .5em;
                 }
                 //mobile(S)
                 @include for-phoneS-only {
-                    font-size: 4.5vw;
+                    font-size: 3.8vw;
                 }
             }
             p {
-                @include typography(0.9vw, center, 1.3em, 300);
+                @include typography(0.8vw, center, 1.3em, 300);
                 padding: 2em 1.4em;
                 //tablet
                 @include for-tablet-only {
-                    padding: 3em 3.5em;
-                    font-size: 0.9em;
+                    padding: 0.8em 1.5em ;
+                    font-size: .9vw;
                 }
                 //mobile(M)
                 @include for-phone-only {
-                    font-size: 17px;
-                    padding: 3em;
-                }
+                    font-size: 14px;
+                    padding: 1em 2em;
+                } 
                 //mobile(S)
                 @include for-phoneS-only {
-                    @include typography(14px, center, 1.3em, 300);
+                    @include typography(11px, center, 1.2em, 300);
                 }
             }
         }

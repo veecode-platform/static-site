@@ -1,15 +1,15 @@
 import Head from 'next/head'
-import { Support} from '../src/screens'
+import { Pricing } from '../src/screens'
 
 export default function Home() {
   return (
     <>
       <Head>
-        <title>Platform  |  About our Support</title>
+        <title>Platform  |  Support</title>
         <meta name="description" content="description" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Support />
+      <Pricing />
     </>
   )
 }

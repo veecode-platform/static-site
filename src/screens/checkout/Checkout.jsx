@@ -73,9 +73,8 @@ const CheckoutPage = () =>{
               </div>
           </article>
       </section>
-            
-        </main>
-    )
-}
+    </main>
+  );
+};
 
-export default CheckoutPage
+export default CheckoutPage;

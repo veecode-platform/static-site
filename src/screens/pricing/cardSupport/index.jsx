@@ -1,7 +1,6 @@
 import style from './_CardSupport.module.scss';
 
 const CardSupport = ({
-    image,
     title,
     subtitle,
     desc,
@@ -10,9 +9,6 @@ const CardSupport = ({
 }) => {
   return (
     <div className={style.content}>
-        {/* <div className={style.content__image}>
-            <img src={image} alt={title}/>
-        </div> */}
         <div className={style.content__text}>
             <div className={style["content__text-title"]}>
                 <h3>{title}</h3>
