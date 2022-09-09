@@ -62,9 +62,9 @@ const TermsOfService = () => {
           terminate them and cease to use both “Platform” and “Services”.
         </p>
         <p>
-          1.4
+          1.4 - 
           <strong>
-            If you continue to use “Platform” or “Services” after a revision you
+             If you continue to use “Platform” or “Services” after a revision you
             are bound to the new Terms.
           </strong>
         </p>
@@ -313,11 +313,11 @@ const TermsOfService = () => {
           2.7 - <strong>Support vs Consulting:</strong> support is about
           pointing out misconfiguration issues, identifying or fixing bugs,
           troubleshooting, reviewing code and answering general questions.
-          Support, on the other hand, isn’t consulting: we are not a team to be
+          Support, on the other hand, isn&apos;t consulting: we are not a team to be
           allocated to do your job (although we do plan to offer professional
           services in the future as a subscription add-on). Questions like “what
-          is the best way to do ‘x’” or “what is the best architecture for
-          mission ‘y’” may (and probably will) get an answer in community
+          is the best way to do &apos;x&apos;” or “what is the best architecture for
+          mission &apos;y&apos;” may (and probably will) get an answer in community
           channels (we will gladly help you if we can), but they are not under
           support service scope.
         </p>
