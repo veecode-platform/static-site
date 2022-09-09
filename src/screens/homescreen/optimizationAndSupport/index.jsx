@@ -43,7 +43,12 @@ const OptimizationAndSupport = () => {
                 passHref
               >
                 <a target="_blank">
-                  <Button>Safira CLI</Button>
+                <Button
+                    color="#000000"
+                    background="#33FFCE"
+                  >
+                    Safira CLI
+                  </Button>
                 </a>
               </Link>
               <Link
@@ -51,7 +56,12 @@ const OptimizationAndSupport = () => {
                 passHref
               >
                 <a target="_blank">
-                  <Button>VKPR</Button>
+                <Button
+                    color="#000000"
+                    background="#33FFCE"
+                  >
+                    VKPR
+                  </Button>
                 </a>
               </Link>
             </div>
@@ -79,7 +89,11 @@ const OptimizationAndSupport = () => {
             <div className={style.desc__buttonWrapper}>
               <Link href="https://github.com/vfipaas/safira-support/discussions" passHref>
                 <a target="_blank">
-                  <Button>Join Us</Button>
+                  <Button
+                    color="#000000"
+                    background="#33FFCE">
+                      Join Us
+                    </Button>
                 </a>
               </Link>
             </div>
