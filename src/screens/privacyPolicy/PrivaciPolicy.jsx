@@ -30,9 +30,9 @@ const PrivaciPolicy = () => {
           practices described in this Privacy Policy. Our Privacy Policy covers
           all ICTS websites and complies with the provisions of Law No. 12,965
           of April 23, 2014, referred to as &quot;Marco Civil da Internet&quot; or &quot;MCI&quot;,
-          with Law No. of 2018, referred to as the "General Law for the
-          Protection of Personal Data" or "LGPD", all of which are committed to
-          protecting the privacy and confidentiality of their Users' data and
+          with Law No. of 2018, referred to as the &quot;General Law for the
+          Protection of Personal Data&quot; or &quot;LGPD&quot;, all of which are committed to
+          protecting the privacy and confidentiality of their Users&apos; data and
           information.
         </p>
         <p>
