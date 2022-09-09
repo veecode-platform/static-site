@@ -79,7 +79,7 @@ const OptimizationAndSupport = () => {
             <div className={style.desc__buttonWrapper}>
               <Link href="https://github.com/vfipaas/safira-support/discussions" passHref>
                 <a target="_blank">
-                  <Button>Join</Button>
+                  <Button>Join Us</Button>
                 </a>
               </Link>
             </div>
