@@ -39,15 +39,15 @@ const OptimizationAndSupport = () => {
             </ul>
             <div className={style.desc__buttonWrapper}>
               <Link
-                href="https://docs.platform.vee.codes/docs/installation/safira-cli"
+                href="https://docs.platform.vee.codes/docs/intro/"
                 passHref
               >
                 <a target="_blank">
-                  <Button>SAFIRA CLI</Button>
+                  <Button>Safira CLI</Button>
                 </a>
               </Link>
               <Link
-                href="https://docs.platform.vee.codes/docs/installation/safira-cli"
+                href="https://docs.vkpr.net/docs/intro/"
                 passHref
               >
                 <a target="_blank">
@@ -77,9 +77,9 @@ const OptimizationAndSupport = () => {
               </p>
             </div>
             <div className={style.desc__buttonWrapper}>
-              <Link href="https://docs.platform.vee.codes/docs/intro" passHref>
+              <Link href="https://github.com/vfipaas/safira-support/discussions" passHref>
                 <a target="_blank">
-                  <Button>Github Discussion</Button>
+                  <Button>Join</Button>
                 </a>
               </Link>
             </div>

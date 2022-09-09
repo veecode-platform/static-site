@@ -28,11 +28,11 @@ const FirstSection = () => {
           </p>
         </div>
         <div className={style.content__buttons}>
-          <Link href="https://docs.platform.vee.codes/docs/intro" passHref>
+          {/* <Link href="https://docs.platform.vee.codes/docs/intro" passHref>
             <a target="_blank">
               <Button>How It Works</Button>
             </a>
-          </Link>
+          </Link> */}
 
           <Link
             href="/pricing"

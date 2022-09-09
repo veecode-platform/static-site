@@ -20,13 +20,13 @@ const OptimizeYourBusiness = () => {
               <p>
                 Automate the provisioning and construction of cloud APIs,
                 assisted by our <strong> expert support</strong> and with a
-                <strong>cost that fits in your pocket</strong>.
+                <strong> cost that fits in your pocket</strong>.
               </p>
             </div>
             <div className={style.details__buttonWrapper}>
               <Link href="/support" passHref>
                 <a>
-                  <Button>SUPPORT</Button>
+                  <Button>Support</Button>
                 </a>
               </Link>
             </div>
