@@ -28,7 +28,7 @@ const SupportSection = () => {
             <Link href="/pricing" prefetch={false}>
               <a>
                 <Button>
-                  Support
+                  BUY NOW
                 </Button>
               </a>
             </Link>
