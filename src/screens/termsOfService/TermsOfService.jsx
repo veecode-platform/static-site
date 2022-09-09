@@ -8,8 +8,8 @@ const TermsOfService = () => {
         {/* Definitions */}
         <h2>DEFINITIONS</h2>
         <p>
-          These Terms and Conditions (“Terms”) define “VeeCode Platform” (or
-          “Platform”) as the collection of tools, including (and not limited to)
+          These Terms and Conditions (&quot;Terms&quot;) define &quot;VeeCode Platform&quot; (or
+          &quot;Platform&quot;) as the collection of tools, including (and not limited to)
           source code, code generators, accelerators, developer portals,
           pipeline definitions, command line interfaces, documentation,
           practices, reference architectures and other artifacts, open-sourced
@@ -17,30 +17,30 @@ const TermsOfService = () => {
         </p>
 
         <p>
-          The “Terms” also collectively defines (governing access to and use)
-          our services (“Services”), including (and not limited to) “Platform”
+          The &quot;Terms&quot; also collectively defines (governing access to and use)
+          our services (&quot;Services&quot;), including (and not limited to) &quot;Platform&quot;
           support, generic technical support, our websites (and all support
           channels), support levels, support content and knowledge base,
           community channels, community content and events.
         </p>
 
         <p>
-          Individuals or entities that use our “Platform” and/or our “Services”
-          will be collectively referred as “Customers” or “Users” (sometimes
-          “you” or “your”). In specific situations (as defined below) they may
-          be referred to as “Subscribers” or “Members”.
+          Individuals or entities that use our &quot;Platform&quot; and/or our &quot;Services&quot;
+          will be collectively referred as &quot;Customers&quot; or &quot;Users&quot; (sometimes
+          &quot;you&quot; or &quot;your&quot;). In specific situations (as defined below) they may
+          be referred to as &quot;Subscribers&quot; or &quot;Members&quot;.
         </p>
 
         <p>
-          By using our “Platform” and/or our “Services” you are accepting these
-          “Terms” as a binding contract, whether or not being a paying customer
+          By using our &quot;Platform&quot; and/or our &quot;Services&quot; you are accepting these
+          &quot;Terms&quot; as a binding contract, whether or not being a paying customer
           or member, whether as an individual or an entity you represent.
         </p>
         <p>
           <strong>
-            If you do not agree to these “Terms” or any other rules and
+            If you do not agree to these &quot;Terms&quot; or any other rules and
             conditions here described then you may not use, access or copy any
-            of the “Services” or “Platform”.
+            of the &quot;Services&quot; or &quot;Platform&quot;.
           </strong>
         </p>
         {/* General Terms And Conditions */}
@@ -59,12 +59,12 @@ const TermsOfService = () => {
         </p>
         <p>
           1.3 - If you do not agree to these Terms at any time, you can
-          terminate them and cease to use both “Platform” and “Services”.
+          terminate them and cease to use both &quot;Platform&quot; and &quot;Services&quot;.
         </p>
         <p>
           1.4 - 
           <strong>
-             If you continue to use “Platform” or “Services” after a revision you
+             If you continue to use &quot;Platform&quot; or &quot;Services&quot; after a revision you
             are bound to the new Terms.
           </strong>
         </p>
@@ -91,21 +91,21 @@ const TermsOfService = () => {
         {/* Customers and Users */}
         <h3>3.CUSTOMERS AND USERS</h3>
         <p>
-          3.1 - A “Customer” means an entity (and its representatives) acquiring
+          3.1 - A &quot;Customer&quot; means an entity (and its representatives) acquiring
           a VeeCode Platform Subscription, bound to the Terms here documented
-          and responsible for naming the active “Users” under this subscription
-          (and also the “Administrative Users”).
+          and responsible for naming the active &quot;Users&quot; under this subscription
+          (and also the &quot;Administrative Users&quot;).
         </p>
         <p>
-          3.2 - An “User” (or “member”) is an authorized user under an active
-          “Subscription”, with access to the “Platform” (in the form of - and
+          3.2 - An &quot;User&quot; (or &quot;member&quot;) is an authorized user under an active
+          &quot;Subscription&quot;, with access to the &quot;Platform&quot; (in the form of - and
           not restricted to - assets, code, documents, portals and tools) and
-          “Services” (in the form of - and not restricted to - support portals,
+          &quot;Services&quot; (in the form of - and not restricted to - support portals,
           community forums and knowledge base).
         </p>
         <p>
-          3.3 - An “Administrative Users” is an “User” allowed to add or remove
-          “Users” covered by a valid “Subscription”, restricted to the limited
+          3.3 - An &quot;Administrative Users&quot; is an &quot;User&quot; allowed to add or remove
+          &quot;Users&quot; covered by a valid &quot;Subscription&quot;, restricted to the limited
           number of users specified by the subscription.
         </p>
         <p>
@@ -121,7 +121,7 @@ const TermsOfService = () => {
         </p>
         <p>
           4.2 - An approved order for a subscription will charge your credit
-          card and begin a “Service Year” (or just “year”).
+          card and begin a &quot;Service Year&quot; (or just &quot;year&quot;).
         </p>
         <p>
           4.3 - The minimal duration for a subscription (and support plan) is 12
@@ -185,40 +185,40 @@ const TermsOfService = () => {
         </p>
         <p>
           5.8 - A terminated subscription does not affect the right to use the
-          open-sourced components of the “Platform” or any other component
+          open-sourced components of the &quot;Platform&quot; or any other component
           freely available for non-subscribers. It also does not affect the
           rights of any artifacts generated by the platform and its tools.
         </p>
         {/* Liability Limitations */}
         <h3>6. LIABILITY LIMITATIONS</h3>
         <p>
-          6.1 - The “Platform” is composed of many third-party products in
+          6.1 - The &quot;Platform&quot; is composed of many third-party products in
           addition to products developed by us.
         </p>
         <p>
-          6.2 - The “Platform” contains tools that aid deployment automation of
+          6.2 - The &quot;Platform&quot; contains tools that aid deployment automation of
           these products with pre-configured and opinionated setups. Such
           configurations are expected to be verified and tested by customers
           according to their needs.
         </p>
         <p>
-          6.3 - The “Platform” also delivers tools for code generation and such
+          6.3 - The &quot;Platform&quot; also delivers tools for code generation and such
           code is expected to be manipulated and tested by the customer.
         </p>
         <p>
-          6.4 - Our “Services” include “best effort” support, as defined in <a> Service Terms</a>.
+          6.4 - Our &quot;Services&quot; include &quot;best effort&quot; support, as defined in <a> Service Terms</a>.
         </p>
         <p>
-          6.5 - Therefore under no circumstances and in no event “we” (our
+          6.5 - Therefore under no circumstances and in no event &quot;we&quot; (our
           company or its affiliates, employees, directors, agents, successors)
           will be liable for any damages (of any kind) or lost profits. By using
           our platform or services in any way, whether being an active
-          subscriber or not, you agree to this limitation and to all “Terms”.
+          subscriber or not, you agree to this limitation and to all &quot;Terms&quot;.
         </p>
         {/* INTELLECTUAL PROPERTY */}
         <h3>7. INTELLECTUAL PROPERTY</h3>
         <p>
-          7.1 - The “Platform” is composed of many third-party products in
+          7.1 - The &quot;Platform&quot; is composed of many third-party products in
           addition to products developed by us. All the third party products are
           used, downloaded and configured as permitted by their creators.
         </p>
@@ -289,12 +289,12 @@ const TermsOfService = () => {
           2.4 - <strong>Support channels:</strong> customers will choose support
           level when subscribing. Support can be upgraded or downgraded, as
           explained in <a>Renewal, Upgrade & Termination</a>. Current support
-          levels are “Basic” (5 business days SLA) and “Premium” (2 business
+          levels are &quot;Basic&quot; (5 business days SLA) and &quot;Premium&quot; (2 business
           days SLA).
         </p>
         <p>
           2.5 - <strong>Best effort:</strong> support is provided in a
-          “best-effort” way, where we will do our best to respond to cases
+          &quot;best-effort&quot; way, where we will do our best to respond to cases
           within the SLA limits. This may be affected by a few factors, such as
           a large volume of support requests on the same day or national
           holidays.
@@ -315,9 +315,9 @@ const TermsOfService = () => {
           troubleshooting, reviewing code and answering general questions.
           Support, on the other hand, isn&apos;t consulting: we are not a team to be
           allocated to do your job (although we do plan to offer professional
-          services in the future as a subscription add-on). Questions like “what
-          is the best way to do &apos;x&apos;” or “what is the best architecture for
-          mission &apos;y&apos;” may (and probably will) get an answer in community
+          services in the future as a subscription add-on). Questions like &quot;what
+          is the best way to do &apos;x&apos;&quot; or &quot;what is the best architecture for
+          mission &apos;y&apos;&quot; may (and probably will) get an answer in community
           channels (we will gladly help you if we can), but they are not under
           support service scope.
         </p>

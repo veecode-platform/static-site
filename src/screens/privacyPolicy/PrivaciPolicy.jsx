@@ -29,19 +29,19 @@ const PrivaciPolicy = () => {
           technical content, you (User) formally accept and agree to the
           practices described in this Privacy Policy. Our Privacy Policy covers
           all ICTS websites and complies with the provisions of Law No. 12,965
-          of April 23, 2014, referred to as “Marco Civil da Internet” or “MCI”,
+          of April 23, 2014, referred to as &quot;Marco Civil da Internet&quot; or &quot;MCI&quot;,
           with Law No. of 2018, referred to as the "General Law for the
           Protection of Personal Data" or "LGPD", all of which are committed to
           protecting the privacy and confidentiality of their Users' data and
           information.
         </p>
         <p>
-          For the purposes of this Privacy Policy, “personal data” means
+          For the purposes of this Privacy Policy, &quot;personal data&quot; means
           information about an identified or identifiable individual, such as
-          their name or email address and includes “personal data” as defined by
-          the European Union’s General Data Protection Regulation (“GDPR”) and
-          “personal information” as defined by the California Consumer Privacy
-          Act (“CCPA”). Some information that is automatically disclosed to us
+          their name or email address and includes &quot;personal data&quot; as defined by
+          the European Union’s General Data Protection Regulation (&quot;GDPR&quot;) and
+          &quot;personal information&quot; as defined by the California Consumer Privacy
+          Act (&quot;CCPA&quot;). Some information that is automatically disclosed to us
           or collected by us through your use of our Services meets this
           definition.
         </p>
@@ -79,7 +79,7 @@ const PrivaciPolicy = () => {
           Google advertising network (Google Analytics), we can show you ads on
           other websites that are part of the Google advertising network with
           products and services that you may be interested in. This technique is
-          called “remarketing”. These cookies do not contain any personal data.
+          called &quot;remarketing&quot;. These cookies do not contain any personal data.
         </p>
         {/* Use of Data */}
         <h2>2- USE OF DATA</h2>
