@@ -45,7 +45,7 @@ const OptimizationAndSupport = () => {
                 <a target="_blank">
                 <Button
                     color="#000000"
-                    background="##20a082"
+                    background="#20a082"
                   >
                     Safira CLI
                   </Button>
@@ -58,7 +58,7 @@ const OptimizationAndSupport = () => {
                 <a target="_blank">
                 <Button
                     color="#000000"
-                    background="##20a082"
+                    background="#20a082"
                   >
                     VKPR
                   </Button>
@@ -91,7 +91,7 @@ const OptimizationAndSupport = () => {
                 <a target="_blank">
                   <Button
                     color="#000000"
-                    background="##20a082">
+                    background="#20a082">
                       Join Us
                     </Button>
                 </a>
