@@ -97,7 +97,7 @@ const PrivaciPolicy = () => {
           according to the purpose or need, such as for legal adequacy and
           compliance with a provision of law or rule that has equivalent legal
           force, and it is up to our USER to verify it whenever accessing the
-          Our site
+          Our site.
         </p>
       </article>
     </DefaultPage>
