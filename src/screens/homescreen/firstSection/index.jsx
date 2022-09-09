@@ -22,7 +22,7 @@ const FirstSection = () => {
         </div>
         <div className={style.content__text}>
           <p>
-          Your transition to the cloud doesn't have to be time-consuming, expensive or unaided. Count
+          Your transition to the cloud doesn&lsquo;t have to be time-consuming, expensive or unaided. Count
           on our <strong>professional support</strong> and <strong>free tools</strong> to overcome these challenges quickly and
           easily.
           </p>
