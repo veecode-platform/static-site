@@ -44,7 +44,7 @@ const OptimizationAndSupport = () => {
               >
                 <a target="_blank">
                 <Button
-                    color="#000000"
+                    color="#FFFFFF"
                     background="#20a082"
                   >
                     Safira CLI
@@ -57,7 +57,7 @@ const OptimizationAndSupport = () => {
               >
                 <a target="_blank">
                 <Button
-                    color="#000000"
+                    color="#FFFFFF"
                     background="#20a082"
                   >
                     VKPR
@@ -90,7 +90,7 @@ const OptimizationAndSupport = () => {
               <Link href="https://github.com/vfipaas/safira-support/discussions" passHref>
                 <a target="_blank">
                   <Button
-                    color="#000000"
+                    color="#FFFFFF"
                     background="#20a082">
                       Join Us
                     </Button>
