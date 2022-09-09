@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import style from '../../../styles/_Header.module.scss';
 
-const Logo = 'assets/home/logo.png';
+const Logo = '../assets/home/logo.png';
 
 const Header = () => {
   return (

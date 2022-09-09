@@ -56,7 +56,7 @@ const CheckoutPage = () =>{
                                 <Input name="company" placeholder="Acme, Inc." label="Company / Organization" error={(errors.company && touched.company) && errors.company }/>
                                 <Input name="email" placeholder="you@acme.com" label="Business Email" error={(errors.email && touched.email) && errors.email }/>
                                 <Input name="title" placeholder="Sr Engineer" label="Title" error={(errors.title && touched.title) && errors.title }/>
-                                {/*<Checkbox name="terms" placeholder="ashdb"></Checkbox>*/}
+                                {/*<Checkbox name="terms" label={"Agree with terms of use"}></Checkbox>*/}
                                 <FormGroup style={{alignSelf:"flex-start"}}>
                                     <FormControlLabel 
                                     control={<Checkbox required onChange={async(e)=>{

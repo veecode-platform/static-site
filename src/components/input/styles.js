@@ -39,8 +39,12 @@ export const InputField = styled.input`
 `;
 
 export const Checkboxfield = styled.input.attrs({type:"checkbox"})`
-    border: 2px solid #33FFCE
+    border: 2px solid #33FFCE;
     height: 24px;
+
+    :selected{
+        color: #33FFCE;
+    }
 `;
 
 
