@@ -39,7 +39,7 @@ const PrivaciPolicy = () => {
           For the purposes of this Privacy Policy, &quot;personal data&quot; means
           information about an identified or identifiable individual, such as
           their name or email address and includes &quot;personal data&quot; as defined by
-          the European Union’s General Data Protection Regulation (&quot;GDPR&quot;) and
+          the European Union&quot;s General Data Protection Regulation (&quot;GDPR&quot;) and
           &quot;personal information&quot; as defined by the California Consumer Privacy
           Act (&quot;CCPA&quot;). Some information that is automatically disclosed to us
           or collected by us through your use of our Services meets this
