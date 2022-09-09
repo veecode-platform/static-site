@@ -5,6 +5,7 @@
     @include displayFlex(center, center, column);
     background-color: $color3;
     @include backgroundImage("/assets/home/bg2.png");
+    margin-top: -0.5em;
     //mobile(M)
     @include for-phone-only {
         margin-top: -0.5em;
