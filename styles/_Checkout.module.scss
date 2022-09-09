@@ -35,7 +35,7 @@
             }
             &_formWraper{
                 @include displayFlex(center, flex-start, column);
-                min-width: 415px;
+                width: 415px;
                 padding: 1vw 1vw;
                 background-color: $color10;
                 border-radius: 5%;

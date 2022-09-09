@@ -1,12 +1,12 @@
-import { Label, InputField, Wrapper, LabelWraper, Checkboxfield } from "./styles";
+import { Label, InputField, Wrapper, LabelWraper, Checkboxfield, WrapperCheckbox, CheckboxLabel} from "./styles";
 import React from 'react'
 import { Field } from "formik";
 
-const Input = ({name, placeholder, label, error}) => {
+export const Input = ({name, placeholder, label, error}) => {
 
   return (
     <Field name={name}>
-      {({ field, form, meta }) => (
+      {({ field }) => (
         <Wrapper>
           <LabelWraper>
             <Label htmlFor={name} error={error}>{label}</Label>
@@ -19,16 +19,15 @@ const Input = ({name, placeholder, label, error}) => {
   )
 }
 
-export default Input
-
-export const Checkbox = ({name, placeholder, label, error}) => {
+export const Checkbox = ({name, error}) => {
 
   return (
     <Field name={name}>
-      {({ field, form, meta }) => (
-        <Wrapper>
-          <Checkboxfield {...field} id={name} name={name}></Checkboxfield>
-        </Wrapper>
+      {({ field }) => (
+        <WrapperCheckbox>       
+          <Checkboxfield {...field} id={name} name={name} ></Checkboxfield>
+          <CheckboxLabel error={error}>I have read, understood and agree to Veecode Platform's <a target="_blank" href="/">Terms of service</a> </CheckboxLabel>
+        </WrapperCheckbox>
       )}
     </Field>
   )

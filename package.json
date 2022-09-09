@@ -9,10 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@emotion/react": "^11.10.4",
-    "@emotion/styled": "^11.10.4",
-    "@mui/material": "^5.10.3",
     "@paypal/react-paypal-js": "^7.8.1",
+    "axios": "^0.27.2",
     "classnames": "^2.3.1",
     "formik": "^2.2.9",
     "next": "12.2.5",
