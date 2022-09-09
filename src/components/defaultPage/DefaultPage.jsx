@@ -23,7 +23,7 @@ const DefaultPage = ({title, subtitle, children}) => {
         </article>
       </section>
       <section className={style.back}>
-          <Link href="/pricing" prefetch={false}>
+          <Link href="/" prefetch={false}>
             <a>
              <FaArrowLeft/>
             </a>
