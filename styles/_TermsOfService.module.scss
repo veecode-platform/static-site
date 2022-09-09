@@ -1,0 +1,71 @@
+@import "../abstract/functions", "../abstract/variables", "../abstract/responsive";
+
+.content {
+    @include screenSize(100%, auto);
+    color: $color10;
+    h2 {
+        @include typography(1.4vw, start, 1.3em, 400);
+        transition: all 0.4s linear;
+        cursor: pointer;
+        color: $color2;
+        margin: 0.7em 0;
+        //tablet
+        @include for-tablet-only {
+            font-size: 2vw;
+        }
+        //mobile(M)
+        @include for-phone-only {
+            font-size: 2.5vw;
+        }
+        //mobile(S)
+        @include for-phoneS-only {
+            font-size: 4vw;
+        }
+        &:hover {
+            transition: all 0.4s linear;
+            color: $color1;
+        }
+    }
+    h3 {
+        margin-top: 0.7em;
+        color: $color2;
+        @include typography(1.1vw, start, 1.4em, 400);
+        //tablet
+        @include for-tablet-only {
+            font-size: 1.5vw;
+            margin: 0.5em 0;
+        }
+        //mobile(M)
+        @include for-phone-only {
+            font-size: 2.1vw;
+        }
+        //mobile(S)
+        @include for-phoneS-only {
+            font-size: 3.5vw;
+        }
+    }
+    p {
+        @include typography(1vw, start, 1.4em, 300);
+        //tablet
+        @include for-tablet-only {
+            font-size: 1.6vw;
+        }
+        //mobile(M)
+        @include for-phone-only {
+            font-size: 2vw;
+        }
+        //mobile(S)
+        @include for-phoneS-only {
+            font-size: 3.2vw;
+        }
+    }
+    a {
+        color: $color7;
+        transition: all 0.4s linear;
+        cursor: pointer;
+        &:hover {
+            transition: all 0.4s linear;
+            color: $color1;
+        }
+    }
+}

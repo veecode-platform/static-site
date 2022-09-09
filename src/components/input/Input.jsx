@@ -26,7 +26,7 @@ export const Checkbox = ({name, error}) => {
       {({ field }) => (
         <WrapperCheckbox>       
           <Checkboxfield {...field} id={name} name={name} ></Checkboxfield>
-          <CheckboxLabel error={error}>I have read, understood and agree to Veecode Platform's <a target="_blank" href="/">Terms of service</a> </CheckboxLabel>
+          <CheckboxLabel error={error}>I have read, understood and agree to Veecode Platform's <a target="_blank" href="/terms-of-service">Terms of service</a> </CheckboxLabel>
         </WrapperCheckbox>
       )}
     </Field>

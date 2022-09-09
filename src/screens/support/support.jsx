@@ -1,4 +1,4 @@
-import { DefaultPage } from "../../components";
+import { ContactBar, DefaultPage } from "../../components";
 import PricingSection from "./pricingSection";
 import SupportBenefits from "./SupportBenefits";
 import SupportCategories from "./supportCategories";
@@ -7,7 +7,7 @@ const Support = () => {
   return (
         <DefaultPage
           title="Support Options"
-          subtitle="Lorem ipsum dolor sit amet consectetur adipisicing elit."
+          subtitle="Lorem ipsum dolor sit amet consectetur adipisicing."
         >
           {/* Comunity Support */}
           <SupportCategories
@@ -43,6 +43,8 @@ const Support = () => {
             <SupportBenefits/>
             {/* Pricing Section */}
             <PricingSection/>
+            {/* Contact Bar */}
+            <ContactBar/>
         </DefaultPage>
   );
 };

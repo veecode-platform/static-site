@@ -1,6 +1,7 @@
 import style from "./_FirstSection.module.scss";
 import { Button } from "../../../components";
 import Link from "next/link";
+import TextSlide from "./textSlide";
 
 const Logo = "assets/home/logo.png";
 
@@ -15,31 +16,30 @@ const FirstSection = () => {
         />
         <div className={style.content__title}>
           <h1>
-            Build your API in
-            <strong> minutes </strong>
-            and for <strong>free</strong> to use
+            Your API infrastructure in <strong> minutes </strong>
+            <TextSlide/>
           </h1>
         </div>
         <div className={style.content__text}>
           <p>
-            With VeeCode Platform - No wasting your time preparing a development
-            environment for building your APIs and creating your project in
-            minutes from our intuitive guidelines.
+          Your transition to the cloud doesn't have to be time-consuming, expensive or unaided. Count
+          on our <strong>professional support</strong> and <strong>free tools</strong> to overcome these challenges quickly and
+          easily.
           </p>
         </div>
         <div className={style.content__buttons}>
           <Link href="https://docs.platform.vee.codes/docs/intro" passHref>
             <a target="_blank">
-              <Button>Get Started</Button>
+              <Button>How It Works</Button>
             </a>
           </Link>
 
           <Link
-            href="https://github.com/vfipaas/safira-support/discussions"
+            href="/pricing"
             passHref
           >
-            <a target="_blank">
-              <Button>Know More</Button>
+            <a>
+              <Button>Buy Now</Button>
             </a>
           </Link>
         </div>

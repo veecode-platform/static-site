@@ -68,5 +68,9 @@ export const CheckboxLabel = styled(Label)`
     a{
         text-decoration: underline;
         cursor: pointer
+        
+        :visited{
+            color: white;
+        }
     }
 `;

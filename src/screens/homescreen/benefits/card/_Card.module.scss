@@ -157,6 +157,7 @@
             }
             h3 {
                 @include typography(1vw, center, 1.2em, 600);
+                color: $color11;
                 //tablet
                 @include for-tablet-only {
                     padding-top: .5em;

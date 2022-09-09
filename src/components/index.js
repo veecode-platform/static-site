@@ -6,3 +6,4 @@ export { default as Footer} from './footer/Footer';
 export { Input as Input} from "./input/Input"
 export { Checkbox as Checkbox } from "./input/Input"
 export { default as DefaultPage } from './defaultPage/DefaultPage';
+export { default as ContactBar } from './contactBar/ContactBar';

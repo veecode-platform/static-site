@@ -32,7 +32,7 @@
                 }
                 &__title {
                     @include screenSize(95%, auto);
-                    padding: 1em 0;
+                    padding: 1em 0 .5em 0;
                     //tablet
                     @include for-tablet-only {
                         padding: 0.5em 0;
@@ -53,68 +53,45 @@
                         }
                     }
                 }
-                &__subtitle {
-                    @include screenSize(90%, auto);
-                    @include typography(1vw, start, 1.2em, 400);
-                    color: $color4;
-                    //mobile(M)
-                    @include for-phone-only {
-                        @include screenSize(95%, auto);
-                        @include typography(17px, start, 1.1em, 500);
-                        padding: 1em 0;
-                    }
-                }
-                &__lists {
-                    @include screenSize(90%, auto);
-                    padding: 2em 0;
-                    @include displayFlex(flex-start, center, row);
-                    //mobile(M)
-                    @include for-phone-only {
-                        @include screenSize(100%, auto);
-                        @include displayFlex(center, center, column);
-                    }
-                    &-list {
-                        @include screenSize(50%, auto);
-                        list-style-position: inside;
-                        //mobile(M)
-                        @include for-phone-only {
-                            @include screenSize(80%, auto);
-                        }
-                        //mobile(S)
-                        @include for-phoneS-only {
-                            @include screenSize(100%, auto);
-                        }
-                        li {
-                            @include typography(0.95vw, start, 1.4em, 300);
-                            color: $color4;
-                            //mobile(M)
-                            @include for-phone-only {
-                                font-size: 17px;
-                            }
-                            //mobile(S)
-                            @include for-phoneS-only {
-                                @include for-phoneS-only {
-                                    font-size: 16px;
-                                }
-                            }
-                        }
-                    }
+                &__list {
+                    @include screenSize(100%, auto);
+                    list-style-position: inside;
+                    padding: 1.5em 0;
                     //tablet
                     @include for-tablet-only {
                         padding: 0.7em 0;
                     }
                     //mobile(M)
                     @include for-phone-only {
-                        @include screenSize(80%, auto);
+                        @include screenSize(95%, auto);
+                    }
+                    //mobile(S)
+                    @include for-phoneS-only {
+                        @include screenSize(100%, auto);
+                    }
+                    li {
+                        @include typography(0.95vw, start, 1.4em, 300);
+                        color: $color4;
+                        margin-bottom: .4em;
+                        //mobile(M)
+                        @include for-phone-only {
+                            font-size: 17px;
+                        }
+                        //mobile(S)
+                        @include for-phoneS-only {
+                            @include for-phoneS-only {
+                                font-size: 16px;
+                            }
+                        }
                     }
                 }
                 &__buttonWrapper {
-                    @include screenSize(90%, auto);
-                    @include displayFlex(flex-start, center, row);
+                    @include screenSize(80%, auto);
+                    @include displayFlex(space-around, center, row);
                     //mobile(M)
                     @include for-phone-only {
                         @include screenSize(100%, auto);
-                        @include displayFlex(center, center, row);
+                        @include displayFlex(center, center, column);
                         padding-top: 1.2em;
                     }
                 }
@@ -162,19 +139,6 @@
                 @include for-phoneS-only {
                     @include screenSize(95%, auto);
                 }
-                &__subtitle {
-                    @include screenSize(80%, auto);
-                    @include typography(1vw, start, 1.1em, 400);
-                    color: $color4;
-                    //mobile(M)
-                    @include for-phone-only {
-                        @include typography(17px, start, 1.1em, 500);
-                    }
-                    //mobile(S)
-                    @include for-phoneS-only {
-                        font-size: 4.5vw;
-                    }
-                }
                 &__title {
                     @include screenSize(80%, auto);
                     padding: 1em 0;
@@ -200,18 +164,6 @@
                     }
                 }
                 &__text {
-                    strong {
-                        font-size: 1.2vw;
-                        color: $color4;
-                        //mobile(M)
-                        @include for-phone-only {
-                            @include typography(17px, start, 1.1em, 500);
-                        }
-                        //mobile(S)
-                        @include for-phoneS-only {
-                            font-size: 18px;
-                        }
-                    }
                     p {
                         @include typography(1.1vw, start, 1.3em, 300);
                         padding: 0.5em 0;
@@ -223,15 +175,6 @@
                         //mobile(S)
                         @include for-phoneS-only {
                             font-size: 18px;
-                        }
-                    }
-                    &-list {
-                        list-style-position: inside;
-                        @include typography(0.95vw, start, 1.4em, 300);
-                        color: $color4;
-                        //mobile(M)
-                        @include for-phone-only {
-                            @include typography(17px, start, 1.5em, 300);
                         }
                     }
                 }
@@ -262,107 +205,6 @@
                 //phone(M)
                 @include for-phone-only {
                     @include screenSize(100%, 100%);
-                }
-            }
-        }
-    }
-    .banner {
-        @include screenSize(100%, auto);
-        @include displayFlex(center, center, row);
-        background: $color1;
-        padding: 4em 0;
-        margin-top: -0.5em;
-        &__container {
-            @include screenSize(50%, auto);
-            @include displayFlex(center, center, row);
-            //mobile(M)
-            @include for-phone-only {
-                @include screenSize(80%, auto);
-            }
-            //mobile(S)
-            @include for-phoneS-only {
-                @include screenSize(100%, auto);
-            }
-            .left {
-                @include screenSize(20%, auto);
-                //mobile(S)
-                @include for-phoneS-only {
-                    @include screenSize(30%, auto);
-                }
-                //mobile(XS)
-                @include for-phoneXS-only {
-                    @include screenSize(50%, auto);
-                }
-                img {
-                    width: 100%;
-                }
-            }
-            .text {
-                @include screenSize(60%, auto);
-                @include displayFlex(center, center, column);
-                &__title {
-                    @include screenSize(65%, auto);
-                    @include displayFlex(center, center, row);
-                    padding: 1em 0.3em;
-                    //mobile(M)
-                    @include for-phone-only {
-                        @include screenSize(85%, auto);
-                    }
-                    //mobile(S)
-                    @include for-phoneS-only {
-                        @include screenSize(100%, auto);
-                        padding: 0.5em 0.3em;
-                    }
-                    //mobile(XS)
-                    @include for-phoneXS-only {
-                        @include screenSize(65vw, auto);
-                    }
-                    h2 {
-                        @include typography(2.3vw, center, 1.3em, 600);
-                        //mobile(M)
-                        @include for-phone-only {
-                            @include typography(2.2em, center, 1.2em, 600);
-                        }
-                        //mobile(S)
-                        @include for-phoneS-only {
-                            @include typography(24px, center, 1.2em, 600);
-                        }
-                        //mobile(XS)
-                        @include for-phoneS-only {
-                           font-size: 20px;
-                        }
-                    }
-                }
-                p {
-                    @include typography(1.4vw, center, 1.3em, 300);
-                    margin: 0.5em 0;
-                    //mobile(M)
-                    @include for-phone-only {
-                        font-size: 1.1em;
-                    }
-                    //mobile(S)
-                    @include for-phoneS-only {
-                        font-size: 16px;
-                    }
-                    //mobile(XS)
-                    @include for-phoneS-only {
-                        font-size: 14px;
-                    }
-                }
-            }
-            .right {
-                @include screenSize(20%, auto);
-                //mobile(S)
-                @include for-phoneS-only {
-                    @include screenSize(30%, auto);
-                }
-                //mobile(XS)
-                @include for-phoneXS-only {
-                    @include screenSize(50%, auto);
-                }
-
-                img {
-                    width: 100%;
                 }
             }
         }
