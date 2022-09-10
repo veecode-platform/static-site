@@ -3,45 +3,52 @@
 .wrapper {
     @include screenSize(100%, auto);
     @include displayFlex(center, center, row);
-    @include backgroundImage("/assets/home/bg1.png");
-    background-position: 0 80%;
-    //viewport
-    @include for-viewport-only {
-        background-position: 50% 80%;
-        margin-bottom: -.5em;
-    }
+    position: relative;
     //mobile(M)
-    @include for-phone-only {
-        @include screenSize(100%, auto);
-        @include backgroundImage("/assets/home/bgmobile1.png");
-        background-position: 45% 50%;
-        background-size: 160%;
-        padding-bottom: 3em;
+    @include for-phone-only{
+        padding: 5em 0;
+    }
+    &__background{
+        @include screenSize(100%, 100%);
+        position: absolute;
+        z-index: 0;
+        //mobile(M)
+        @include for-phone-only{
+            @include displayFlex(center, flex-end, row);
+            top:-1.5em;
+        }
+        &-desktop{
+            @include screenSize(100%, 100%);
+            object-fit:cover;
+            //mobile(M)
+            @include for-phone-only{
+                display:none;
+            }
+        }
+        &-mobile{
+            display:none;
+            //mobile(M)
+            @include for-phone-only{
+                display: inline-block;
+                @include screenSize(100%, 100%);
+                object-fit:cover;
+            }
+        }
     }
     //mobile(S)
     @include for-phoneS-only {
-        background-position: auto;
-        background-position: 45% -10em;
-        background-size: 160%;
-        padding-bottom: 1.3em;
-    }
-    //mobile(XS)
-    @include for-phoneXS-only{
-        @include backgroundImage("/assets/home/bg2.png");
+        // padding-bottom: 1.3em;
     }
     .content {
         @include screenSize(80%, auto);
         @include displayFlex(center, flex-start, column);
         padding: 13.5vh 0;
+        z-index: 1;
         //mobile(M)
         @include for-phone-only {
-            @include screenSize(95%, auto);
-            margin: 0em;
+            @include screenSize(95%,auto);
             @include displayFlex(center, center, column);
-        }
-        //mobile(S)
-        @include for-phoneS-only {
-            margin: 0em;
+            padding: 15vh 0 0 0;
         }
         &__logo {
             @include screenSize(20%, auto);
@@ -53,15 +60,20 @@
         &__title {
             @include screenSize(50%, auto);
             margin: 2em 0 1.5em;
+            //tablet
+            @include for-tablet-only{
+                margin: 1.5em 0 .5em 0;
+            }
             //mobile(M)
             @include for-phone-only {
                 @include screenSize(75%, auto);
-                margin-top: 50vh;
+                margin: 2em 0 1.5em;
+                padding-top: 10em;
             }
             //mobile(S)
             @include for-phoneS-only {
                 @include screenSize(95%, auto);
-                margin-top: 65vw;
+                padding-top: 20em;
             }
             //mobile(XS)
             @include for-phoneXS-only{
@@ -76,16 +88,21 @@
                 }
                 //mobile(S)
                 @include for-phoneS-only {
-                    font-size: 42px;
+                    font-size: 11vw;
                 }
             }
         }
         &__text {
             @include screenSize(50%, auto);
             margin: 1.2em 0 1.5em 0;
+            //tablet
+            @include for-tablet-only{
+                margin: 0 0 1.5em 0;
+            }
             //mobile(M)
             @include for-phone-only {
                 @include screenSize(75%, auto);
+                margin: 1.2em 0 1.5em 0;
             }
             //mobile(S)
             @include for-phoneS-only {
@@ -113,6 +130,7 @@
                 @include screenSize(75%, auto);
                 padding: 1em 0 3em 0;
                 flex-wrap: wrap;
+                @include displayFlex(center, center,row); // Change
             }
             //mobile(S)
             @include for-phoneS-only {
