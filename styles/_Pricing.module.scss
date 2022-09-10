@@ -8,6 +8,10 @@
         @include screenSize(80%,auto);
         @include displayFlex(center, center, column);
         color: $color2;
+        //mobile(M)
+        @include for-phone-only{
+            @include screenSize(90%,auto);
+        }
         &__options{
             @include screenSize(80%,auto);
             @include displayFlex(center, center, row);
@@ -18,7 +22,7 @@
             }
             //mobile(M)
             @include for-phone-only{
-                @include screenSize(90%,auto);
+                @include screenSize(100%,auto);
                 @include displayFlex(center, center, column);
                 padding: 1em 0 6em 0;
             }

@@ -8,7 +8,7 @@
     .content{
       @include screenSize(100%, auto);
       .titleWrapper{
-        @include backgroundImage('/assets/default/banner2.png');
+        @include backgroundImage('/assets/default/banner3.png');
         @include displayFlex(center, center, row);
         padding: 4em 0;
         // Mobile(M)
