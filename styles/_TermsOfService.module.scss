@@ -27,7 +27,7 @@
         }
     }
     h3 {
-        margin-top: 0.7em;
+        margin: 1.5em 0 .7em 0;
         color: $color2;
         @include typography(1.1vw, start, 1.4em, 400);
         //tablet
@@ -46,6 +46,7 @@
     }
     p {
         @include typography(1vw, start, 1.4em, 300);
+        margin: 0.5em 0;
         //tablet
         @include for-tablet-only {
             font-size: 1.6vw;
