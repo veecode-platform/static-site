@@ -23,7 +23,7 @@ const DefaultPage = ({title, subtitle, children}) => {
         </article>
       </section>
       <section className={style.back}>
-          <Link href="/" prefetch={false}>
+          <Link href="javascript:history.back()" prefetch={false}>
             <a>
              <FaArrowLeft/>
             </a>
