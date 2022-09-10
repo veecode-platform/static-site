@@ -3,12 +3,14 @@ import { FaArrowLeft } from "react-icons/fa";
 import style from "../../../styles/_DefaultPage.module.scss";
 import { Header, Footer } from "../../components";
 
-const DefaultPage = ({title, subtitle, children}) => {
+const DefaultPage = ({title, subtitle, header, children}) => {
   return (
     <main className={style.wrapper}>
       <Header />
       <section className={style.content}>
-        <article className={style.titleWrapper}>
+        {
+          header === "enable" ? 
+          (<article className={style.titleWrapper}>
           <div className={style.titleWrapper__content}>
             <h1 className={style["titleWrapper__content-title"]}>
                 {title}
@@ -17,13 +19,15 @@ const DefaultPage = ({title, subtitle, children}) => {
               {subtitle}
             </h2>
           </div>
-        </article>
+           </article>) 
+           : null
+        }
         <article className={style.contentWrapper}>
             { children ==! null | children !== "" ? children : null}
         </article>
       </section>
       <section className={style.back}>
-          <Link href="javascript:history.back()" prefetch={false}>
+          <Link href="/" prefetch={false}>
             <a>
              <FaArrowLeft/>
             </a>
