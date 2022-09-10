@@ -10,7 +10,7 @@ const BgMobile = "assets/home/bgmobile1.png";
 const FirstSection = () => {
   return (
     <section className={style.wrapper}>
-      {/* Banner Desktop */}
+      {/* Background */}
       <div className={style.wrapper__background}>
         <img src={BgDesktop} alt="background header - Desktop version" className={style["wrapper__background-desktop"]} />
         <img src={BgMobile} alt="background header - Desktop version" className={style["wrapper__background-mobile"]} />
