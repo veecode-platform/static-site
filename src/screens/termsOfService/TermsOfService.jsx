@@ -3,7 +3,11 @@ import style from '../../../styles/_TermsOfService.module.scss';
 
 const TermsOfService = () => {
   return (
-    <DefaultPage title="Terms Of Service" subtitle="">
+    <DefaultPage 
+      title="Terms Of Service" 
+      subtitle=""
+      header="enable"
+      >
       <article className={style.content}>
         {/* Definitions */}
         <h2>DEFINITIONS</h2>

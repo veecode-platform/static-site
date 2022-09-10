@@ -3,7 +3,10 @@ import style from "../../../styles/_PrivacyPolicy.module.scss";
 
 const PrivaciPolicy = () => {
   return (
-    <DefaultPage title="Privacy Policy" subtitle="">
+    <DefaultPage 
+      title="Privacy Policy"
+      subtitle="" 
+      header="enable">
       <article className={style.content}>
         <span>
           <p>Date: August 24th, 2022</p>

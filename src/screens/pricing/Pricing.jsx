@@ -8,6 +8,7 @@ const Pricing = () => {
     <DefaultPage
       title="A Team Of Experts You Can Count On"
       subtitle="Count on our team to help you get the most out of our platform"
+      header="enable"
     >
       <section className={style.wrapper}>
         <article className={style.content}>

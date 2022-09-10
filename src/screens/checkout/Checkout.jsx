@@ -9,7 +9,9 @@ const CheckoutPage = () => {
   const label = { inputProps: { "aria-label": "Switch demo" } };
 
   return (
-    <DefaultPage title="Check Out">
+    <DefaultPage 
+      header="disable"
+      >
       <section className={style.wrapper}>
         <article className={style.content}>
           <Breadcrumb active={2} />
