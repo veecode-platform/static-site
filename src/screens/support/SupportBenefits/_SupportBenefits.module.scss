@@ -3,12 +3,34 @@
 .cards {
     @include screenSize(100%, auto);
     @include displayFlex(center, center, column);
-    padding: 4em 0;
+    padding: 4em 0 3em 0;
     //viewport
     @include for-viewport-only {
         padding: 2em 0;
     }
+    .title{
+        @include typography(1.4vw, start, 1.3em, 400);
+        transition: all .4s linear;
+        cursor: pointer;
+        //tablet
+        @include for-tablet-only{
+            font-size: 2vw;
+        }
+        //mobile(M)
+        @include for-phone-only{
+            font-size: 2.5vw;
+        }
+        //mobile(S)
+        @include for-phoneS-only{
+            font-size: 4vw;
+        }
+        &:hover{
+            transition: all .4s linear;
+            color: $color1;
+        }
+    }
     .card {
+        @include screenSize(100%, auto);
         @include displayFlex(center, center, row);
         padding: 2em 0;
         //mobile(M)
@@ -20,8 +42,9 @@
             margin: .5em;
         }
         &__icon {
-            @include screenSize(10%, auto);
-            @include displayFlex(flex-start, center, row);
+            @include screenSize(10%, 100%);
+            align-self: flex-start;
+            @include displayFlex(center, center, row);
             font-size: 3.2vw;
             color: $color1;
             padding: 0.2em;
@@ -64,7 +87,7 @@
                 }
             }
             &-desc {
-                @include typography(1vw, start, 1.3em, 400);
+                @include typography(1vw, start, 1.6em, 300);
                 //tablet
                 @include for-tablet-only{
                     font-size: 1.6vw;

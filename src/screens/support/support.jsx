@@ -1,52 +1,34 @@
 import { ContactBar, DefaultPage } from "../../components";
+import ListDetails from "./listDetails";
 import PricingSection from "./pricingSection";
 import SupportBenefits from "./SupportBenefits";
 import SupportCategories from "./supportCategories";
 
 const Support = () => {
   return (
-        <DefaultPage
-          title="Support Options"
-          subtitle="Lorem ipsum dolor sit amet consectetur adipisicing."
-          titleBar="enable"
-          >
-          {/* Comunity Support */}
-          <SupportCategories
-            title="Comunity Support"
-            subtitle="free mode support"
-            desc="With DevOps, it seems like there are a thousand little details you have
-             to get just right—DNS, TLS, VPCs, secrets management, monitoring, alerting, CI, 
-             CD—and never enough time to learn them all. With Gruntwork Professional Support,
-              you get to work with a team of DevOps experts who can help you set up your 
-              infrastructure, design highly available and scalable systems, automate 
-            builds and deployments, troubleshoot issues, and avoid gotchas and pitfalls."/>
-          {/* Standard Support */}
-          <SupportCategories
-            title="Standard Support"
-            subtitle="free mode support"
-            desc="With DevOps, it seems like there are a thousand little details you have
-             to get just right—DNS, TLS, VPCs, secrets management, monitoring, alerting, CI, 
-             CD—and never enough time to learn them all. With Gruntwork Professional Support,
-              you get to work with a team of DevOps experts who can help you set up your 
-              infrastructure, design highly available and scalable systems, automate 
-            builds and deployments, troubleshoot issues, and avoid gotchas and pitfalls."/>
-            {/* Premium Support */}
-          <SupportCategories
-            title="Premium Support"
-            subtitle="free mode support"
-            desc="With DevOps, it seems like there are a thousand little details you have
-             to get just right—DNS, TLS, VPCs, secrets management, monitoring, alerting, CI, 
-             CD—and never enough time to learn them all. With Gruntwork Professional Support,
-              you get to work with a team of DevOps experts who can help you set up your 
-              infrastructure, design highly available and scalable systems, automate 
-            builds and deployments, troubleshoot issues, and avoid gotchas and pitfalls."/>
-            {/* Benefits */}
-            <SupportBenefits/>
-            {/* Pricing Section */}
-            <PricingSection/>
-            {/* Contact Bar */}
-            <ContactBar/>
-        </DefaultPage>
+    <DefaultPage
+      title="Support Options"
+      titleBar="enable"
+    >
+      {/* Platform Support */}
+      <SupportCategories
+        title="Platform Support"
+        desc="Count on our team of qualified and experienced
+         professionals who will help you to get the most out of our products and tools.
+          Considering the details of your IT deparment. 
+          In addition, we can help with doubts that come up while using our
+          products and components that are embedded in our solution. Our plan is to support at
+           a much lower cost than having a full-time specialist professional on your team."
+      />
+      {/* List Details */}
+      <ListDetails/>
+      {/* Benefits */}
+      <SupportBenefits />
+      {/* Pricing Section */}
+      <PricingSection />
+      {/* Contact Bar */}
+      <ContactBar />
+    </DefaultPage>
   );
 };
 
