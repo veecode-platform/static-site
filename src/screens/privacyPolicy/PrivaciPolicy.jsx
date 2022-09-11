@@ -5,8 +5,7 @@ const PrivaciPolicy = () => {
   return (
     <DefaultPage 
       title="Privacy Policy"
-      subtitle="" 
-      header="enable">
+      titleBar="enable">
       <article className={style.content}>
         <span>
           <p>Date: August 24th, 2022</p>

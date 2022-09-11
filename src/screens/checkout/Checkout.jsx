@@ -10,7 +10,7 @@ const CheckoutPage = () => {
 
   return (
     <DefaultPage 
-      header="disable"
+      titleBar="disable"
       >
       <section className={style.wrapper}>
         <article className={style.content}>

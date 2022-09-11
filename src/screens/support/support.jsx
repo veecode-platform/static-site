@@ -8,7 +8,7 @@ const Support = () => {
         <DefaultPage
           title="Support Options"
           subtitle="Lorem ipsum dolor sit amet consectetur adipisicing."
-          header="enable"
+          titleBar="enable"
           >
           {/* Comunity Support */}
           <SupportCategories

@@ -6,7 +6,7 @@ const Image = "assets/notFound/404.png";
 const PageNotFound = () => {
   return (
     <DefaultPage
-        header="disable"
+        titleBar="disable"
         >
       <article className={style.wrapper}>
         <img src={Image} className={style.image} alt="Page Not Found Image" />

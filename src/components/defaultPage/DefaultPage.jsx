@@ -3,13 +3,13 @@ import { FaArrowLeft } from "react-icons/fa";
 import style from "../../../styles/_DefaultPage.module.scss";
 import { Header, Footer } from "../../components";
 
-const DefaultPage = ({title, subtitle, header, children}) => {
+const DefaultPage = ({title, subtitle, titleBar, children}) => {
   return (
     <main className={style.wrapper}>
       <Header />
       <section className={style.content}>
         {
-          header === "enable" ? 
+          titleBar === "enable" ? 
           (<article className={style.titleWrapper}>
           <div className={style.titleWrapper__content}>
             <h1 className={style["titleWrapper__content-title"]}>

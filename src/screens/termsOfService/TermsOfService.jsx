@@ -5,8 +5,7 @@ const TermsOfService = () => {
   return (
     <DefaultPage 
       title="Terms Of Service" 
-      subtitle=""
-      header="enable"
+      titleBar="enable"
       >
       <article className={style.content}>
         {/* Definitions */}
