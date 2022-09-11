@@ -7,7 +7,7 @@
      overflow: hidden;
      //Mobile(M)
      @include for-phone-only{
-        width: 100%;
+        width: 95%;
         display: block;
      }
         .textSlideWrapper{
@@ -57,11 +57,11 @@
                     font-weight: bold;
                     //mobile(M)
                     @include for-phone-only{
-                        font-size: 5vw;
+                        font-size: 5.5vw;
                     }
                     //Mobile(S)
                     @include for-phoneS-only{
-                        font-size: 8vw;
+                        font-size: 8.5vw;
                     }
                 }
             }
