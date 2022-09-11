@@ -167,7 +167,7 @@
                 }
                 &__text {
                     p {
-                        @include typography(1.1vw, start, 1.3em, 300);
+                        @include typography(1.1vw, start, 1.5em, 300);
                         padding: 0.5em 0;
                         color: $color4;
                         //mobile(M)
