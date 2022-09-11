@@ -1,5 +1,5 @@
 import style from "./_SupportBenefits.module.scss";
-import { FaLayerGroup, FaShieldAlt, FaInfoCircle, FaUsers, FaMedal } from "react-icons/fa";
+import { FaLayerGroup, FaInfoCircle, FaUsers, FaMedal, FaWrench } from "react-icons/fa";
 
 const SupportBenefits = () => {
   return (
@@ -35,7 +35,7 @@ const SupportBenefits = () => {
       {/* Card 03 */}
       <div className={style.card}>
         <div className={style.card__icon}>
-        <FaShieldAlt />
+        <FaWrench />
         </div>
         <div className={style.card__details}>
           <h2 className={style["card__details-title"]}>Bug fixes</h2>
@@ -55,7 +55,7 @@ const SupportBenefits = () => {
             Interact with our team
           </h2>
           <p className={style["card__details-desc"]}>
-            All our subscribers havesubscribers users have access to our{" "}
+            All our subscribers havesubscribers users have access to our
             <strong>Service Portal</strong> where they can send and follow the process of fulfilling all their
             requests.
           </p>
@@ -80,7 +80,8 @@ const SupportBenefits = () => {
             <strong>
               It is important to note that the support service is not an
               emergency service. 
-            </strong> In some special cases, support service 
+            </strong> <br/>
+             In some special cases, support service 
             will not be available. These
             days will be informed by email at least 3 weeks in advance.
           </p>
