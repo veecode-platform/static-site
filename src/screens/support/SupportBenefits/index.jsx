@@ -4,7 +4,7 @@ import { FaLayerGroup, FaShieldAlt, FaInfoCircle, FaUsers, FaMedal } from "react
 const SupportBenefits = () => {
   return (
     <div className={style.cards}>
-      <h2 className={style.title}>What's included in our support</h2>
+      <h2 className={style.title}>What&apos;s included in our support</h2>
       {/* Card 01 */}
       <div className={style.card}>
         <div className={style.card__icon}>
