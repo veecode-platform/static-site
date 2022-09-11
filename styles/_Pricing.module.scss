@@ -4,6 +4,7 @@
     @include screenSize(100vw,auto);
     @include displayFlex(center, center, column);
     background-color: $color9;
+    margin-top: -5em;
     .content{
         @include screenSize(80%,auto);
         @include displayFlex(center, center, column);
@@ -22,7 +23,7 @@
             }
             //mobile(M)
             @include for-phone-only{
-                @include screenSize(100%,auto);
+                @include screenSize(65%,auto);
                 @include displayFlex(center, center, column);
                 padding: 1em 0 6em 0;
             }

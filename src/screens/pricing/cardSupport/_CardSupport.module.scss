@@ -48,13 +48,17 @@
                 }
                 //mobile(S)
                 @include for-phoneS-only {
-                    font-size: 4.5vw;
+                    font-size: 5vw;
                 }
             }
         }
         &-subtitle{
             @include screenSize(100%,auto);
-            padding: 2em;
+            padding: 1em .7em .7em .7em;
+            //mobile(M)
+            @include for-phone-only{
+                padding: 1.5em .7em .7em .7em;
+            }
             h4{
                 @include typography(1.5vw,center,1.4em,500);
                 color: $color5;
@@ -68,7 +72,7 @@
                 }
                 //mobile(S)
                 @include for-phoneS-only {
-                    font-size: 4.5vw;
+                    font-size: 5vw;
                 }
             }
         }
@@ -78,18 +82,14 @@
         }
         &-desc{
             @include screenSize(100%,auto);
-            padding: 2em;      
-            //tablet
-            @include for-tablet-only{
-                padding: 3em; 
-            }   
-            //mobile(M)
-            @include for-phone-only{
-                padding: 3.5em; 
+            padding: .7em 1em;   
+            //viewPort
+            @include for-viewport-only{
+                padding: .7em 3em; 
             }   
             p{
                 @include typography(1.5vw,center,1.4em,500);
-                padding: 1em;
+                padding: .7em;
                 color: $color5;
                 //tablet
                 @include for-tablet-only{
@@ -107,11 +107,15 @@
         }
         &-price{
             @include screenSize(100%,auto);
-            padding: 2em;      
+            padding: 1em;      
             //mobile(M)
             @include for-phone-only{
-                padding: 3em; 
+                padding: 1.5em 1em; 
             }     
+            //mobile(S)
+            @include for-phoneS-only{
+                padding: 1em; 
+            } 
             p{
                 @include typography(3vw,center,1.4em,600);
                 color: $color4;
@@ -121,11 +125,11 @@
                 }
                 //mobile(M)
                 @include for-phone-only {
-                    font-size: 4vw;
+                    font-size: 7vw;
                 }
                 //mobile(S)
                 @include for-phoneS-only {
-                    font-size: 4.5vw;
+                    font-size: 10vw;
                 }
             }
         }
