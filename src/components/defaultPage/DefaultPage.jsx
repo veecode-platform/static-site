@@ -11,16 +11,24 @@ const DefaultPage = ({title, subtitle, titleBar, children}) => {
         {
           titleBar === "enable" ? 
           (<article className={style.titleWrapper}>
-          <div className={style.titleWrapper__content}>
-            <h1 className={style["titleWrapper__content-title"]}>
-                {title}
-            </h1>
-            <h2 className={style["titleWrapper__content-subtitle"]}>
-              {subtitle}
-            </h2>
-          </div>
-           </article>) 
-           : null
+              <div className={style.titleWrapper__content}>
+                  {
+                    title !== "" ? (
+                      <h1 className={style["titleWrapper__content-title"]}>
+                        {title}
+                      </h1>
+                    ) : ""
+                  }
+                  {
+                    subtitle !== "" ? (
+                      <h2 className={style["titleWrapper__content-subtitle"]}>
+                        {subtitle}
+                      </h2>
+                    ) : ""
+                  }                
+              </div>
+            </article>) 
+           : ""
         }
         <article className={style.contentWrapper}>
             { children ==! null | children !== "" ? children : null}
