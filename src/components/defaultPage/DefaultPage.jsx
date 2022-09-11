@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { FaArrowLeft } from "react-icons/fa";
+import { FaLongArrowAltLeft } from "react-icons/fa";
 import style from "../../../styles/_DefaultPage.module.scss";
 import { Header, Footer } from "../../components";
 
@@ -37,7 +37,7 @@ const DefaultPage = ({title, subtitle, titleBar, children}) => {
       <section className={style.back}>
           <Link href="/" prefetch={false}>
             <a>
-             <FaArrowLeft/>
+             <FaLongArrowAltLeft/>
             </a>
           </Link>
       </section>
