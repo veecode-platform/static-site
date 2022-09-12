@@ -1,4 +1,4 @@
-import { DefaultPage } from "../../components";
+import { DefaultPage, ScrollTop } from "../../components";
 import style from '../../../styles/_TermsOfService.module.scss';
 
 const TermsOfService = () => {
@@ -330,6 +330,7 @@ const TermsOfService = () => {
           not yet).
         </p>
       </article>
+      <ScrollTop/>
     </DefaultPage>
   );
 };
