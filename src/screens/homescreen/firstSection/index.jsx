@@ -18,8 +18,6 @@ const FirstSection = () => {
             layout="fill"
             src={BgDesktop}
             alt="background header - Desktop Version"
-            width='100%'
-            height='100%'
             unoptimized
             quality={100}
             priority={true}
@@ -31,8 +29,6 @@ const FirstSection = () => {
               layout="fill"
               src={BgMobile}
               alt="background header - Mobile version"
-              width='100%'
-              height='100%'
               unoptimized
               quality={100}
               priority={true}
