@@ -5,7 +5,6 @@
     @include displayFlex(column,flex-start, column);
     .title{
             @include typography(1.4vw, start, 1.3em, 400);
-            transition: all .4s linear;
             cursor: pointer;
             margin: 1.2em 0 .8em 0;
             //tablet
@@ -19,10 +18,6 @@
             //mobile(S)
             @include for-phoneS-only{
                 font-size: 4vw;
-            }
-            &:hover{
-                transition: all .4s linear;
-                color: $color1;
             }
         }
     .details{

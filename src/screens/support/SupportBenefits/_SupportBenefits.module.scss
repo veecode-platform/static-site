@@ -10,7 +10,6 @@
     }
     .title{
         @include typography(1.4vw, start, 1.3em, 400);
-        transition: all .4s linear;
         cursor: pointer;
         //tablet
         @include for-tablet-only{
@@ -23,10 +22,6 @@
         //mobile(S)
         @include for-phoneS-only{
             font-size: 4vw;
-        }
-        &:hover{
-            transition: all .4s linear;
-            color: $color1;
         }
     }
     .card {

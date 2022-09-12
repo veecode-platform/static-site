@@ -28,7 +28,7 @@ const CardSupport = ({
                     {price}
                 </p>
             </div>
-            { children !== "" | children !== null ?  children :  null }
+            { children !== ""  ?  children :  "" }
         </div>
     </div>
   )

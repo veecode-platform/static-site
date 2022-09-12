@@ -31,7 +31,7 @@ const DefaultPage = ({title, subtitle, titleBar, children}) => {
            : ""
         }
         <article className={style.contentWrapper}>
-            { children ==! null | children !== "" ? children : null}
+            { children }
         </article>
       </section>
       <section className={style.back}>
