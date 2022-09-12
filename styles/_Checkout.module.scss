@@ -16,7 +16,7 @@
         &__options{
             @include screenSize(80%,auto);
             @include displayFlex(space-around, center, column);
-            padding: 4vh 0;
+            //padding: 4vh 0;
             //viewport
 
             @include for-viewport-only{

@@ -20,7 +20,6 @@ const PaymentPage = () =>{
                     <Header/>
                 </a>
             </Link>
-
             <section className={style.wrapper}>
             <article className={style.content}>
               <Breadcrumb
@@ -48,8 +47,7 @@ const PaymentPage = () =>{
                             <p>20 users</p>
                             <p>Devportal</p>    
                             <p>Safira-cli</p>    
-                            <p>VKPR</p>
-    
+                            <p>VKPR</p>   
                         </div>
                         <div className={style.content__options_infoBoxWrapper_info_right}>
                             <p>$0/mo</p>

@@ -12,7 +12,7 @@
         &__options{
             @include screenSize(80%,auto);
             @include displayFlex(center, center, column);
-            padding: 4vh 0;
+            //padding: 4vh 0;
             //viewport
 
             @include for-viewport-only{
@@ -51,12 +51,13 @@
                     color: $color3;
                     border-radius: 1vh;
                     width: 100%;
-                    padding: 0.8vw;
+                    padding: 0.5em;
                     &_left{
                         width: 80%;
                     }
                     &_right{
                         text-align: right;
+                        width: 20%;
                     }
                 }
                 &_guarantee{
