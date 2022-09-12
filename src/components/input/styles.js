@@ -52,8 +52,7 @@ export const WrapperCheckbox = styled(Wrapper)`
     align-items: center;
     justify-content: flex-start;
     gap: 0.5vw;
-    height: 40px;
-    
+    height: 60px;  
 `;
 
 export const Checkboxfield = styled.input.attrs({type:"checkbox"})`
@@ -68,9 +67,10 @@ export const CheckboxLabel = styled(Label)`
     a{
         text-decoration: underline;
         cursor: pointer
-        
-        :visited{
-            color: white;
+        color: inherit;
+
+        :link:visited:hover:active{
+            color: inherit;
         }
     }
 `;

@@ -1,9 +1,10 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router'
-import { Breadcrumb, Button, Header, Input, Checkbox} from '../../components';
+import { Breadcrumb, Button, Header, Input, Checkbox, Footer} from '../../components';
 import style from '../../../styles/_Checkout.module.scss';
 import { Formik, Form} from 'formik';
 import { object, string, boolean} from 'yup';
+import { UsePostData } from '../../hooks/UsePostData';
 
 const CheckoutPage = () =>{
 
@@ -21,7 +22,7 @@ const CheckoutPage = () =>{
         await router.push("/payment")
     }
 
-    const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+    //const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
     return(
         <main>
@@ -42,8 +43,9 @@ const CheckoutPage = () =>{
                         initialValues={{name: "", company: "", email: "", title: "", terms: false }}
                         validationSchema={formSchema}
                         onSubmit={async (values)=>{
-                            await sleep(3000)
-                            console.log(values);
+                            //await sleep(3000)
+                            const response = await UsePostData(JSON.stringify(values));
+                            console.log(values, response);
                             await handleFormRedirect();                         
                         }}
                     >
@@ -63,6 +65,7 @@ const CheckoutPage = () =>{
               </div>
           </article>
       </section>
+      <Footer/>
     </main>
   );
 };

@@ -20,11 +20,11 @@ const Pricing = () => {
             title="Standard Support"
             subtitle="10 Users"
             desc="Support within 5 business days"
-            price="$ 0"
+            price="$499/mo"
           >
             <Link href="/checkout">
               <a>
-                <Button>START NOW</Button>
+                <Button>BUY NOW</Button>
               </a>
             </Link>
           </CardSupport>
@@ -32,7 +32,7 @@ const Pricing = () => {
             title="Premium Support"
             subtitle="20 Users"
             desc="Support within 3 business days"
-            price="$ 100"
+            price="$749/mo"
           >
             <Link href="/checkout">
               <a>

@@ -12,8 +12,7 @@
         &__options{
             @include screenSize(80%,auto);
             @include displayFlex(center, center, column);
-            gap: 1vw;
-            padding: 4em 0;
+            padding: 4vh 0;
             //viewport
 
             @include for-viewport-only{
@@ -36,32 +35,45 @@
             &_infoBoxWrapper{
                 @include displayFlex(center, center, column);
                 min-width: 415px;
-                padding: 1vw 1vw;
+                padding: 2vh 1vw;
                 background-color: $color12;
-                border-radius: 5%;
-                gap: 2vh;
+                border-radius: 1vh;
+                gap: 1.5vh;
                 
                 &_box{
-                    @include displayFlex(center, center, column);
+                    @include displayFlex(center, flex-start, column);
                     width: 100%;
-                    color: $color2;
-                    border-radius: 2%;
-                    padding: 1vh;
-
-                    h1{
-                        color: $color1;
+                    color: $color2;            
+                }
+                &_info{
+                    @include displayFlex(center, flex-start, row);
+                    background-color: $color2;
+                    color: $color3;
+                    border-radius: 1vh;
+                    width: 100%;
+                    padding: 0.8vw;
+                    &_left{
+                        width: 80%;
+                    }
+                    &_right{
+                        text-align: right;
                     }
                 }
-                &_boxUser{
-                    @include displayFlex(center, center, row);
+                &_guarantee{
+                    @include displayFlex(flex-start, flex-start, column);
                     width: 100%;
-                    gap: 2vw;
-                    color: $color2;
-                    border-radius: 2%;
-                    padding: 1vh;
+
+                    &_item{
+                        @include displayFlex(flex-start, center, row);
+                        gap: 0.5vw;
+                    }
                 }
             }
         }
         
     }
+}
+
+.backgroundDif{
+    background-color: $color4;
 }

@@ -26,24 +26,36 @@ const WraperButton = ({plan, disabled}) =>{
         <PayPalButtons 
             style={{ layout: "vertical", color: "white" }}
             disabled={disabled}
+            /*createOrder= { async (data, actions) => {
+                return actions.order.create({
+                  purchase_units: [{
+                    amount: {
+                      value: '8988'
+                    }
+                  }]
+                })
+            }}*/
             createSubscription = { async (data, actions) => {
                 return actions.subscription.create({
                     'plan_id': plan
                 });
             }}
             onApprove={ async (data, actions) => {
+                //console.log(data)
+                //alerts.success("Compra realizada com sucesso!")
                 await actions.subscription.get().then(()=>{
                     //console.log("Log: ", data);
                     //console.log(data);
-                    alerts.success("Compra realizada com sucesso!")
-                });                       
+                    alerts.success("Success!")
+                });                
             }}
             onCancel={ async (data, actions) => {
                 //console.log("Log cancel: ", data, actions)
-                alerts.warning("Compra cancelada!")
+                alerts.warning("Canceled")
             }} 
             onError={ async (data, actions) => {
-                alerts.error("Erro ao completar a transacao")
+                console.log(data)
+                alerts.error("Error")
             }}               
         />
     )    
@@ -53,14 +65,15 @@ export const PaypalComponent = ({disabled, plan}) => {
 
     const initialOptions = {
         "client-id": "AYeZ7RE7NgdD8GC5FvOxmJcJRE69s3_4BbFXzl2824907mW_4JPobDmkwfj42U7vp0UXouYZU3GNxSoN",
-        currency: "BRL",
+        currency: "USD",
+        //intent: "capture",
         intent: "subscription",
-        locale: "pt_BR",
+        //locale: "pt_BR",
         components: "buttons",
         vault: true
     };
 
-    const [supportValue, setSupportValue] = useState("P-9PV56232W1892461NMMH3YXY");
+    const [supportValue, setSupportValue] = useState("P-9MG22131P3311111XMMNY2MY");
 
     return(
         <Wrapper>          

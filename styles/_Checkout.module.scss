@@ -2,7 +2,7 @@
 
 .wrapper{
     @include screenSize(100%, auto);
-    @include displayFlex(center, flex-start, row);
+    @include displayFlex(center, center, row);
     @include backgroundImage('/assets/home/bg2.png');
     .content{
         @include screenSize(80%, auto);
@@ -11,9 +11,8 @@
         
         &__options{
             @include screenSize(80%,auto);
-            @include displayFlex(center, center, column);
-            gap: 1vw;
-            padding: 4em 0;
+            @include displayFlex(space-around, center, column);
+            padding: 4vh 0;
             //viewport
 
             @include for-viewport-only{
