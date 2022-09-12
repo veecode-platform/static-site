@@ -5,3 +5,4 @@ export { default as Breadcrumb } from './breadcrumb/Breadcrumb';
 export { default as Footer} from './footer/Footer';
 export { default as DefaultPage } from './defaultPage/DefaultPage';
 export { default as ContactBar } from './contactBar/ContactBar';
+export { default as ScrollTop} from './scrollTop/ScrollTop';
