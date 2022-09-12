@@ -9,9 +9,18 @@
         @include screenSize(40%, auto);
         @include displayFlex(center, center, row);
         padding: 2vh 0;
+        z-index: 99;
+        //include tablet
+        @include for-tablet-only{
+            padding: 5vh 0 6vh 0;
+        }
 
         &__logo {
             @include screenSize(200px, auto);
+            //Mobile(S)
+            @include for-phoneS-only{
+                @include screenSize(150px, auto);
+            }
         }
     }
 }

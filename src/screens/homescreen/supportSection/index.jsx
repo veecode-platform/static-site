@@ -1,10 +1,26 @@
-import Link from 'next/link';
-import { Button } from '../../../components';
-import style from './_SupportSection.module.scss'
+import Link from "next/link";
+import { Button } from "../../../components";
+import style from "./_SupportSection.module.scss";
+
+const BgDesktop = "assets/home/bg3.png";
+const BgMobile = "assets/home/bgmobile2.png";
 
 const SupportSection = () => {
   return (
     <section className={style.wrapper}>
+      {/* Background */}
+      <div className={style.wrapper__background}>
+        <img
+          src={BgDesktop}
+          alt="background header - Desktop version"
+          className={style["wrapper__background-desktop"]}
+        />
+        <img
+          src={BgMobile}
+          alt="background header - Desktop version"
+          className={style["wrapper__background-mobile"]}
+        />
+      </div>
       <article className={style.content}>
         <div className={style.content__text}>
           <div className={style["content__text-title"]}>
@@ -27,9 +43,7 @@ const SupportSection = () => {
           <div className={style["content__text-buttonWrapper"]}>
             <Link href="/pricing" prefetch={false}>
               <a>
-                <Button>
-                  BUY NOW
-                </Button>
+                <Button>Buy Now</Button>
               </a>
             </Link>
           </div>
@@ -37,6 +51,6 @@ const SupportSection = () => {
       </article>
     </section>
   );
-}
+};
 
-export default SupportSection 
+export default SupportSection;

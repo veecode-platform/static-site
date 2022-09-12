@@ -5,7 +5,6 @@
     color: $color10;
     h2 {
         @include typography(1.4vw, start, 1.3em, 400);
-        transition: all 0.4s linear;
         cursor: pointer;
         color: $color2;
         margin: 0.7em 0;
@@ -21,13 +20,9 @@
         @include for-phoneS-only {
             font-size: 4vw;
         }
-        &:hover {
-            transition: all 0.4s linear;
-            color: $color1;
-        }
     }
     h3 {
-        margin-top: 0.7em;
+        margin: 1.5em 0 .7em 0;
         color: $color2;
         @include typography(1.1vw, start, 1.4em, 400);
         //tablet
@@ -46,6 +41,7 @@
     }
     p {
         @include typography(1vw, start, 1.4em, 300);
+        margin: 0.5em 0;
         //tablet
         @include for-tablet-only {
             font-size: 1.6vw;

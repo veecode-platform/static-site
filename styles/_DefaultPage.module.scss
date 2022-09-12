@@ -8,7 +8,7 @@
     .content{
       @include screenSize(100%, auto);
       .titleWrapper{
-        @include backgroundImage('/assets/default/banner2.png');
+        @include backgroundImage('/assets/default/banner3.png');
         @include displayFlex(center, center, row);
         padding: 4em 0;
         // Mobile(M)
@@ -74,8 +74,16 @@
         -webkit-transform: scale(1.05);
         transform: scale(1.05);
       }
-      a:active{
-        color: $color1;
+      a{
+        &:link{
+          color: $color1;
+        }
+        &:active{
+          color: $color1;
+        }
+        &:visited{
+          color: $color1;
+        }
       }
       //tablet
       @include for-tablet-only{

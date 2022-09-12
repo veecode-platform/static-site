@@ -1,9 +1,12 @@
-import { DefaultPage } from "../../components";
+import { DefaultPage, ScrollTop } from "../../components";
 import style from '../../../styles/_TermsOfService.module.scss';
 
 const TermsOfService = () => {
   return (
-    <DefaultPage title="Terms Of Service" subtitle="">
+    <DefaultPage 
+      title="Terms Of Service" 
+      titleBar="enable"
+      >
       <article className={style.content}>
         {/* Definitions */}
         <h2>DEFINITIONS</h2>
@@ -256,7 +259,7 @@ const TermsOfService = () => {
         </p>
         {/* Service Terms */}
         {/* RENEWAL & TERMINATION */}
-        <h3>1. RENEWAL & TERMINATION</h3>
+        <h2>1. RENEWAL & TERMINATION</h2>
         <p>
           1.1 - An active subscription provides access to restricted assets and
           to services, including support services. These are always subject to
@@ -267,7 +270,7 @@ const TermsOfService = () => {
              Upgrade & Termination</a>.
         </p>
         {/* SERVICES DEFINITION */}
-        <h3>2. SERVICES DEFINITION</h3>
+        <h2>2. SERVICES DEFINITION</h2>
         <p>
           2.1 - <strong>Content access:</strong> documents, videos, code
           examples, comde templates, knowledge base and other assets will be
@@ -327,6 +330,7 @@ const TermsOfService = () => {
           not yet).
         </p>
       </article>
+      <ScrollTop/>
     </DefaultPage>
   );
 };

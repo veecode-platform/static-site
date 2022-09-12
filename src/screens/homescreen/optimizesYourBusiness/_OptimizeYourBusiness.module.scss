@@ -4,39 +4,54 @@
     @include screenSize(100%, auto);
     @include displayFlex(center, center, row);
     @include backgroundImage("/assets/home/bg2.png");
-    padding: 8em 0;
+    padding: 6em 0 8em 0;
+    //tablet
+    @include for-tablet-only{
+     padding: 3em 0 4em 0;
+     }
     &__contentWrapper {
         @include screenSize(80%, auto);
-        @include displayFlex(center, center, row);
+        @include displayFlex(center, center, row-reverse);
+        //viewport
+        @include for-viewport-only{
+            @include screenSize(90%, auto);
+        }
+        //mobile
+        @include for-phone-only{
+            @include screenSize(95%, auto);
+            @include displayFlex(center, center, column-reverse);
+        }
        &-text{
         @include screenSize(55%, auto);
         @include displayFlex(center, center, column);
         padding-top: 2em;
+        //mobile(M)
+        @include for-phone-only{
+            @include screenSize(70%, auto);
+            padding: 0em;
+        }
         .title {
             @include screenSize(80%, auto);
             //tablet
             @include for-tablet-only {
-                @include screenSize(60%, auto);
-                padding: 6em 0 1em 0;
+                padding: 6em 0 0 0;
             }
             //mobile(M)
             @include for-phone-only {
-                padding: 6em 0 0 0;
-            }
-            //mobile(S)
-            @include for-phoneS-only {
-                @include screenSize(80%, auto);
+                @include screenSize(100%, auto);
+                padding: 2em 0;
             }
             h2 {
-                @include typography(2.8vw, start, 1.3em, 500);
+                @include typography(2.8vw, start, 1.3em, 400);
                 color: $color2;
                 //mobile(M)
                 @include for-phone-only {
-                    font-size: 48px;
+                    font-size: 6.5vw;
+                    text-align: center;
                 }
                 //mobile(S)
                 @include for-phoneS-only {
-                    font-size: 40px;
+                    font-size: 9vw;
                 }
             }
         }
@@ -44,18 +59,29 @@
             @include screenSize(80%, auto);
             @include displayFlex(center, flex-start, column);
             padding-top: 4em;
+            //tablet
+            @include for-tablet-only{
+                padding: 1.8em 0;
+                }
             //mobile(M)
             @include for-phone-only {
                 @include screenSize(75%, auto);
+                padding: 1em 0;
             }
             //mobile(S)
             @include for-phoneS-only {
-                @include screenSize(90%, auto);
+                @include screenSize(95%, auto);
+                padding: .5em 0;
             }
             &__text {
                 p {
                     @include typography(1.2vw, start, 1.5em, 300);
                     color: $color2;
+                    //viewport
+                    @include for-viewport-only{
+                        @include screenSize(90%, auto);
+                        font-size: 1.3vw;
+                    }
                     //mobile(M)
                     @include for-phone-only {
                         @include typography(18px, center, 1.4em, 300);
@@ -70,6 +96,14 @@
                 width: 100%;
                 @include displayFlex(flex-start, center, row);
                 margin-top: 4em;
+                //tablet
+                @include for-tablet-only{
+                    margin-top: 2em;
+                }
+                //mobile(M)
+                @include for-phone-only{
+                    @include displayFlex(center, center, row);
+                }
             }
         }
     }
@@ -77,8 +111,17 @@
         @include screenSize(45%, auto);
         @include displayFlex(center, center, row);
         padding: 4.5em 0 1em 0;
+        //mobile(M)
+        @include for-phone-only{
+            @include screenSize(70%, auto);
+            padding: 3em 0;
+        }
         img {
             @include screenSize(100%, auto);
+            //mobile(M)
+            @include for-phone-only{
+                width: 90%;
+            }
         }
        }
     }

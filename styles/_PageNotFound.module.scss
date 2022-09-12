@@ -1,0 +1,9 @@
+@import "../abstract/functions", "../abstract/variables", "../abstract/responsive";
+
+.wrapper {
+    @include screenSize(100%, auto);
+    @include displayFlex(center, center, row);
+    .image {
+        @include screenSize(50vw, auto);
+    }
+}

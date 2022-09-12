@@ -47,8 +47,8 @@
                 font-size: 3vw;
             }
             &:hover{
-                background: $color2;
-                color: $color5;
+                background: $color1;
+                color: $color3;
                 transition: all .3s linear;
             }
         }
@@ -69,8 +69,8 @@
             }
         }
         .selected{
-            background: $color2;
-            color: $color5;
+            background: $color1;
+            color: $color3;
         }
     }
     &__divider{

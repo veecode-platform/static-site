@@ -1,14 +1,18 @@
 @import "../abstract/functions", "../abstract/variables", "../abstract/responsive";
 
+.main{
+    @include displayFlex(center, center, column);
+    @include screenSize(100vw, auto);
+}
 .wrapper{
-    @include screenSize(100%, auto);
-    @include displayFlex(center, center, row);
     @include backgroundImage('/assets/home/bg2.png');
+    @include screenSize(100%, auto);
+    @include displayFlex(center, center, column);
+    background-color: $color9;
     .content{
         @include screenSize(80%, auto);
         @include displayFlex(center, center, column);
         color: $color2;
-        
         &__options{
             @include screenSize(80%,auto);
             @include displayFlex(space-around, center, column);

@@ -1,17 +1,17 @@
 import { DefaultPage } from "../../components";
 import style from "../../../styles/_PrivacyPolicy.module.scss";
 
-import React from "react";
-
 const PrivaciPolicy = () => {
   return (
-    <DefaultPage title="Privacy Policy" subtitle="">
+    <DefaultPage 
+      title="Privacy Policy"
+      titleBar="enable">
       <article className={style.content}>
         <span>
           <p>Date: August 24th, 2022</p>
         </span>
         <p>
-          VEE CODE PLATFORM is responsible for always seeking to protect your
+          <strong>VEE CODE PLATFORM</strong> is responsible for always seeking to protect your
           privacy, based on the respect it has with its customers and suppliers,
           and as part of this responsibility, any information received or
           collected is always treated as confidential and will not be disclosed

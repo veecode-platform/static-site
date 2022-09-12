@@ -7,3 +7,4 @@ export { Input as Input} from "./input/Input"
 export { Checkbox as Checkbox } from "./input/Input"
 export { default as DefaultPage } from './defaultPage/DefaultPage';
 export { default as ContactBar } from './contactBar/ContactBar';
+export { default as ScrollTop} from './scrollTop/ScrollTop';
