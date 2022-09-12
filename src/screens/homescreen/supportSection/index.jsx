@@ -3,8 +3,8 @@ import Link from "next/link";
 import { Button } from "../../../components";
 import style from "./_SupportSection.module.scss";
 
-const BgDesktop = "assets/home/bg3.png";
-const BgMobile = "assets/home/bgmobile2.png";
+const BgDesktop = "assets/home/bg3.webp";
+const BgMobile = "assets/home/bgmobile2.webp";
 
 const SupportSection = () => {
   return (

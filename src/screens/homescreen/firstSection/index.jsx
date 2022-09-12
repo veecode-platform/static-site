@@ -5,8 +5,8 @@ import Image from "next/image";
 import TextSlide from "./textSlide";
 
 const Logo = "assets/home/logo.png";
-const BgDesktop = "assets/home/bg1.png"; 
-const BgMobile = "assets/home/bgmobile1.png";
+const BgDesktop = "assets/home/bg1.webp"; 
+const BgMobile = "assets/home/bgmobile1.webp";
 
 const FirstSection = () => {
   return (
