@@ -18,7 +18,7 @@ const Validate = () =>{
     const router = useRouter()
 
     const handleFormRedirect = async () => {
-        await router.push("/payment")
+        await router.push("/checkout")
     }
 
     //const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
