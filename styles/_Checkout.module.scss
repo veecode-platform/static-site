@@ -30,7 +30,7 @@
             @include for-phoneXS-only{
                 @include screenSize(100%,auto);
             }
-            &_infoBoxWrapper{
+            &-infoBoxWrapper{
                 @include displayFlex(center, center, column);
                 min-width: 415px;
                 padding: 2vh 1vw;
@@ -38,31 +38,31 @@
                 border-radius: 1vh;
                 gap: 1.5vh;
                 
-                &_box{
+                .box{
                     @include displayFlex(center, flex-start, column);
                     width: 100%;
                     color: $color2;            
                 }
-                &_info{
+                .info{
                     @include displayFlex(center, flex-start, row);
                     background-color: $color2;
                     color: $color3;
                     border-radius: 1vh;
                     width: 100%;
                     padding: 0.5em;
-                    &_left{
+                    &__left{
                         width: 80%;
                     }
-                    &_right{
+                    &__right{
                         text-align: right;
                         width: 20%;
                     }
                 }
-                &_guarantee{
+                .guarantee{
                     @include displayFlex(flex-start, flex-start, column);
                     width: 100%;
 
-                    &_item{
+                    &__item{
                         @include displayFlex(flex-start, center, row);
                         gap: 0.5vw;
                     }
