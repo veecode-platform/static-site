@@ -1,7 +1,8 @@
 import { DefaultPage } from "../../components";
 import style from "../../../styles/_PageNotFound.module.scss";
+import Image from "next/image";
 
-const Image = "/assets/notFound/404.png";
+const ImageNotFound = "/assets/notFound/404.png";
 
 const PageNotFound = () => {
   return (
@@ -9,7 +10,17 @@ const PageNotFound = () => {
         titleBar="disable"
         >
       <article className={style.wrapper}>
-        <img src={Image} className={style.image} alt="Page Not Found Image" />
+        <div className={style.image}>
+          <Image
+            layout="responsive"
+            src={ImageNotFound} 
+            alt="Page Not Found Image"
+            width='100%'
+            height='100%'
+            unoptimized
+            priority={true}
+             />
+        </div>
       </article>
     </DefaultPage>
   );

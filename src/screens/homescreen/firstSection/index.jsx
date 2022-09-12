@@ -1,6 +1,7 @@
 import style from "./_FirstSection.module.scss";
 import { Button } from "../../../components";
 import Link from "next/link";
+import Image from "next/image";
 import TextSlide from "./textSlide";
 
 const Logo = "assets/home/logo.png";
@@ -12,8 +13,32 @@ const FirstSection = () => {
     <section className={style.wrapper}>
       {/* Background */}
       <div className={style.wrapper__background}>
-        <img src={BgDesktop} alt="background header - Desktop version" className={style["wrapper__background-desktop"]} />
-        <img src={BgMobile} alt="background header - Desktop version" className={style["wrapper__background-mobile"]} />
+        <div className={style["wrapper__background-desktop"]}>
+          <Image
+            layout="fill"
+            src={BgDesktop}
+            alt="background header - Desktop Version"
+            width='100%'
+            height='100%'
+            unoptimized
+            quality={100}
+            priority={true}
+            objectFit="cover"
+            />
+        </div>
+        <div className={style["wrapper__background-mobile"]}>
+          <Image
+              layout="fill"
+              src={BgMobile}
+              alt="background header - Mobile version"
+              width='100%'
+              height='100%'
+              unoptimized
+              quality={100}
+              priority={true}
+              objectFit="cover"
+              />
+        </div>
       </div>
       <article className={style.content}>
         <img

@@ -108,7 +108,7 @@
         }
     }
     &-image {
-        @include screenSize(45%, auto);
+        @include screenSize(45%, 50%);
         @include displayFlex(center, center, row);
         padding: 4.5em 0 1em 0;
         //mobile(M)
@@ -116,7 +116,7 @@
             @include screenSize(70%, auto);
             padding: 3em 0;
         }
-        img {
+        .image{
             @include screenSize(100%, auto);
             //mobile(M)
             @include for-phone-only{

@@ -1,8 +1,9 @@
 import style from "./_OptimizeYourBusiness.module.scss";
 import { Button } from "../../../components";
 import Link from "next/link";
+import Image from "next/image";
 
-const Image = "assets/home/image3.png";
+const Icon = "assets/home/image3.png";
 
 const OptimizeYourBusiness = () => {
   return (
@@ -33,7 +34,17 @@ const OptimizeYourBusiness = () => {
           </div>
         </div>
         <div className={style["content__contentWrapper-image"]}>
-          <img src={Image} alt="Settings Image" />
+          <div className={style.image}>
+            <Image
+                layout="responsive"
+                src={Icon} 
+                alt="Settings Image"
+                width='100%'
+                height='100%'
+                unoptimized
+                priority={true}
+                />
+          </div>
         </div>
       </div>
     </article>
