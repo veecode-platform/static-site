@@ -20,7 +20,7 @@ const Pricing = () => {
               desc="Support within 5 business days"
               price="$499/mo"
             >
-              <Link href="/checkout">
+              <Link href="/validate">
                 <a>
                 <Button
                     color="#FFFFFF"
@@ -36,7 +36,7 @@ const Pricing = () => {
               desc="Support within 3 business days"
               price="$749/mo"
             >
-              <Link href="/checkout">
+              <Link href="/validate">
                 <a>
                  <Button
                     color="#FFFFFF"
