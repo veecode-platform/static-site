@@ -13,10 +13,9 @@
     font-weight: 500;
     background: transparent;
     transition: all 0.5s linear;
- 
+    min-width: 12vw;
 
     &:hover:not([disabled]){
-        min-width: 12vw;
         background: linear-gradient(45deg,$color1,$color7);
         color: $color3;
         transition: all 0.4s linear;

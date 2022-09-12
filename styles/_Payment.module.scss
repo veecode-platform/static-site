@@ -1,20 +1,18 @@
 @import "../abstract/functions", "../abstract/variables", "../abstract/responsive";
 
 .wrapper{
-    @include screenSize(100%, auto);
-    @include displayFlex(center, flex-start, row);
-    @include backgroundImage('/assets/home/bg2.png');
+    @include screenSize(100vw,auto);
+    @include displayFlex(center, center, column);
+    background-color: $color9;
     .content{
         @include screenSize(80%, auto);
         @include displayFlex(center, center, column);
-        color: $color2;
-        
+        color: $color2;  
         &__options{
             @include screenSize(80%,auto);
             @include displayFlex(center, center, column);
-            //padding: 4vh 0;
+            padding: 2em 0 4em 0;
             //viewport
-
             @include for-viewport-only{
                 @include screenSize(90%,auto);
             }

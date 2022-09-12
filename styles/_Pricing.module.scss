@@ -4,7 +4,6 @@
     @include screenSize(100vw,auto);
     @include displayFlex(center, center, column);
     background-color: $color9;
-    margin-top: -5em;
     .content{
         @include screenSize(80%,auto);
         @include displayFlex(center, center, column);
