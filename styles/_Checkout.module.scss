@@ -1,6 +1,5 @@
 @import "../abstract/functions", "../abstract/variables", "../abstract/responsive";
 
-
 .wrapper{
     @include screenSize(100vw,auto);
     @include displayFlex(center, center, column);
@@ -8,10 +7,10 @@
     .content{
         @include screenSize(80%, auto);
         @include displayFlex(center, center, column);
-        color: $color2;
+        color: $color2;  
         &__options{
             @include screenSize(80%,auto);
-            @include displayFlex(space-around, center, column);
+            @include displayFlex(center, center, column);
             padding: 2em 0 4em 0;
             //viewport
             @include for-viewport-only{
@@ -31,20 +30,49 @@
             @include for-phoneXS-only{
                 @include screenSize(100%,auto);
             }
-            &_formWraper{
-                @include displayFlex(center, flex-start, column);
-                width: 415px;
-                padding: 1vw 1vw;
+            &_infoBoxWrapper{
+                @include displayFlex(center, center, column);
+                min-width: 415px;
+                padding: 2vh 1vw;
                 background-color: $color12;
-                border-radius: 5%;
+                border-radius: 1vh;
+                gap: 1.5vh;
+                
+                &_box{
+                    @include displayFlex(center, flex-start, column);
+                    width: 100%;
+                    color: $color2;            
+                }
+                &_info{
+                    @include displayFlex(center, flex-start, row);
+                    background-color: $color2;
+                    color: $color3;
+                    border-radius: 1vh;
+                    width: 100%;
+                    padding: 0.5em;
+                    &_left{
+                        width: 80%;
+                    }
+                    &_right{
+                        text-align: right;
+                        width: 20%;
+                    }
+                }
+                &_guarantee{
+                    @include displayFlex(flex-start, flex-start, column);
+                    width: 100%;
 
-                &_form{
-                    @include displayFlex(center, center, column);
-                    width: 100%;                  
-                    gap: 1.2vh;
+                    &_item{
+                        @include displayFlex(flex-start, center, row);
+                        gap: 0.5vw;
+                    }
                 }
             }
         }
         
     }
+}
+
+.backgroundDif{
+    background-color: $color4;
 }

@@ -1,16 +1,15 @@
 import Head from 'next/head'
-import CheckoutPage from '../src/screens/checkout/Checkout'
+import {Checkout} from '../src/screens';
 
-
-export default function Checkout() {
+export default function CheckoutPage() {
   return (
     <>
       <Head>
-        <title>Platform  |  Checkout</title>
+        <title>Platform | Checkout</title>
         <meta name="description" content="checkout page" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <CheckoutPage/>
+      <Checkout/>
     </>
   )
 }

@@ -1,0 +1,50 @@
+@import "../abstract/functions", "../abstract/variables", "../abstract/responsive";
+
+
+.wrapper{
+    @include screenSize(100vw,auto);
+    @include displayFlex(center, center, column);
+    background-color: $color9;
+    .content{
+        @include screenSize(80%, auto);
+        @include displayFlex(center, center, column);
+        color: $color2;
+        &__options{
+            @include screenSize(80%,auto);
+            @include displayFlex(space-around, center, column);
+            padding: 2em 0 4em 0;
+            //viewport
+            @include for-viewport-only{
+                @include screenSize(90%,auto);
+            }
+            //mobile(M)
+            @include for-phone-only{
+                @include displayFlex(center, center, column);
+                padding: 1em 0 6em 0;
+            }
+            //mobile(S)
+             @include for-phoneS-only {
+                @include screenSize(95%,auto);
+                padding: 1em 0;
+            }
+            //mobile(XS)
+            @include for-phoneXS-only{
+                @include screenSize(100%,auto);
+            }
+            &_formWraper{
+                @include displayFlex(center, flex-start, column);
+                width: 415px;
+                padding: 1vw 1vw;
+                background-color: $color12;
+                border-radius: 5%;
+
+                &_form{
+                    @include displayFlex(center, center, column);
+                    width: 100%;                  
+                    gap: 1.2vh;
+                }
+            }
+        }
+        
+    }
+}

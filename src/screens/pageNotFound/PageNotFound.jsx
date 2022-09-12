@@ -1,7 +1,7 @@
 import { DefaultPage } from "../../components";
 import style from "../../../styles/_PageNotFound.module.scss";
 
-const Image = "assets/notFound/404.png";
+const Image = "/assets/notFound/404.png";
 
 const PageNotFound = () => {
   return (

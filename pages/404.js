@@ -1,12 +1,12 @@
 import Head from 'next/head'
 import { PageNotFound } from '../src/screens'
 
-export default function Home() {
+export default function NotFound() {
   return (
     <>
       <Head>
-        <title>Platform  |  Homepage </title>
-        <meta name="description" content="description" />
+        <title>Page Not Found</title>
+        <meta name="description" content="Page Not Found" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <PageNotFound/>

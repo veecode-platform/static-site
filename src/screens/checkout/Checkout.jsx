@@ -1,68 +1,100 @@
-import Link from 'next/link';
-import { useRouter } from 'next/router'
-import { Breadcrumb, Button, Header, Input, Checkbox, Footer, DefaultPage} from '../../components';
-import style from '../../../styles/_Checkout.module.scss';
-import { Formik, Form} from 'formik';
-import { object, string, boolean} from 'yup';
-import { UsePostData } from '../../hooks/UsePostData';
+import style from "../../../styles/_Checkout.module.scss";
+import { Breadcrumb, Paypal, DefaultPage } from "../../components";
+import { FiCheck } from "react-icons/fi";
 
-const CheckoutPage = () =>{
+const Checkout = () => {
+  /*const [disablePaypal, setDisabledPaypal] = useState(true)
+      const handleDisabled = (e) => {setDisabledPaypal(!e.target.checked)}*/
 
-    const formSchema = object({
-        name: string().required("*required"),
-        company: string().required("*required") ,
-        email: string().email("*invalid email").required("*required"),
-        title: string().required("*required"),
-        terms: boolean().isTrue()
-    });
+  const getDateFormatted = () => {
+    const day = new Date().getDate();
+    const abv = day == 1 ? "st" : day == 2 ? "nd" : day == 3 ? "rd" : "th";
+    return `${day}${abv}.`;
+  };
 
-    const router = useRouter()
+  return (
+    <DefaultPage titleBar="disable">
+      <section className={style.wrapper}>
+        <article className={style.content}>
+          <Breadcrumb active={3} />
+          <div className={style.content__options}>
+            <div className={style.content__options_infoBoxWrapper}>
+              <div className={style.content__options_infoBoxWrapper_box}>
+                <h1>Order summary</h1>
+              </div>
+              <div className={style.content__options_infoBoxWrapper_info}>
+                <div className={style.content__options_infoBoxWrapper_info_left} >
+                  <p>Support plan: Premium</p>
+                  <p>SLA</p>
+                </div>
+                <div className={style.content__options_infoBoxWrapper_info_right}>
+                  <p>$749/mo</p>
+                  <p>3 days</p>
+                </div>
+              </div>
 
-    const handleFormRedirect = async () => {
-        await router.push("/payment")
-    }
+              <div className={style.content__options_infoBoxWrapper_info}>
+                <div className={style.content__options_infoBoxWrapper_info_left}>
+                  <p>20 users</p>
+                  <p>Devportal</p>
+                  <p>Safira-cli</p>
+                  <p>VKPR</p>
+                </div>
+                <div className={style.content__options_infoBoxWrapper_info_right}>
+                  <p>$0/mo</p>
+                  <p>$0/mo</p>
+                  <p>$0/mo</p>
+                  <p>$0/mo</p>
+                </div>
+              </div>
 
-    //const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+              <div className={style.content__options_infoBoxWrapper_info}>
+                <div className={style.content__options_infoBoxWrapper_info_left}>
+                  <p>Due today:</p>
+                  <p style={{ marginBottom: "1em" }}>Due monthly:</p>
+                  <p>
+                    Billed Monthly on the <strong>{getDateFormatted()}</strong>
+                  </p>
+                </div>
+                <div className={style.content__options_infoBoxWrapper_info_right}>
+                  <p>$749/mo</p>
+                  <p>
+                    <strong>$749/mo</strong>
+                  </p>
+                </div>
+              </div>
 
-    return(
-        <DefaultPage 
-            titleBar="disable"
-            >
-            <section className={style.wrapper}>
-                    <article className={style.content}>
-                    <Breadcrumb
-                    active={2}
-                    />
-                    <div className={style.content__options}>
-                        <div className={style.content__options_formWraper}>
-                            <Formik
-                                initialValues={{name: "", company: "", email: "", title: "", terms: false }}
-                                validationSchema={formSchema}
-                                onSubmit={async (values)=>{
-                                    //await sleep(3000)
-                                    const response = await UsePostData(JSON.stringify(values));
-                                    console.log(values, response);
-                                    await handleFormRedirect();                         
-                                }}
-                                >
-                                {({ errors, touched,/* isValid, validateForm, */handleSubmit, isSubmitting}) => (
-                                    
-                                    <Form onSubmit={handleSubmit} className={style.content__options_formWraper_form}>
-                                        <Input name="name" placeholder="First and last name" label="Full Name" error={(errors.name && touched.name) && errors.name }/>
-                                        <Input name="company" placeholder="Acme, Inc." label="Company / Organization" error={(errors.company && touched.company) && errors.company }/>
-                                        <Input name="email" placeholder="you@acme.com" label="Business Email" error={(errors.email && touched.email) && errors.email }/>
-                                        <Input name="title" placeholder="Sr Engineer" label="Title" error={(errors.title && touched.title) && errors.title }/>
-                                        <Checkbox name="terms" error={(errors.terms && touched.terms) && errors.terms}></Checkbox>
-                                        <Button type="submit" loading={isSubmitting}>Continue</Button>
-                                    </Form>
-                                )} 
-                            </Formik>
-                        </div>                 
-                    </div>
-                </article>
-            </section>
-        </DefaultPage>
+              <div className={style.content__options_infoBoxWrapper_guarantee}>
+                <div className={style.content__options_infoBoxWrapper_guarantee_item}>
+                  <FiCheck color="#33FFCE" />
+                  <p>30 day trial</p>
+                </div>
+
+                <div
+                  className={
+                    style.content__options_infoBoxWrapper_guarantee_item
+                  }
+                >
+                  <FiCheck color="#33FFCE" />
+                  <p>Annual contract</p>
+                </div>
+                <div
+                  className={
+                    style.content__options_infoBoxWrapper_guarantee_item
+                  }
+                >
+                  <FiCheck color="#33FFCE" />
+                  <p>Full Access to our knowledge base</p>
+                </div>
+              </div>
+
+              <Paypal />
+            </div>
+          </div>
+        </article>
+      </section>
+    </DefaultPage>
   );
 };
 
-export default CheckoutPage;
+export default Checkout;
