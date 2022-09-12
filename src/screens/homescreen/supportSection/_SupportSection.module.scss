@@ -64,7 +64,7 @@
                     @include typography(2.5vw, start, 1.2em, 600);
                     //mobile(M)
                     @include for-phone-only {
-                        @include typography(3em, center, 1.2em, 600);
+                        @include typography(2.4em, center, 1.2em, 600);
                     }
                     //mobile(S)
                     @include for-phoneS-only {

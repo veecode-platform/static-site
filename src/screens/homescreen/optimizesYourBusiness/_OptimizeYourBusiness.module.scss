@@ -46,7 +46,7 @@
                 color: $color2;
                 //mobile(M)
                 @include for-phone-only {
-                    font-size: 48px;
+                    font-size: 6.5vw;
                     text-align: center;
                 }
                 //mobile(S)
