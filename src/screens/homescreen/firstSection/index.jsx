@@ -37,11 +37,17 @@ const FirstSection = () => {
         </div>
       </div>
       <article className={style.content}>
-        <img
-          src={Logo}
-          alt="Veecode plataform Logo"
-          className={style.content__logo}
-        />
+        <div className={style.content__logo}>
+            <Image
+                layout="responsive"
+                src={Logo} 
+                alt="Settings Image"
+                width='307px'
+                height='96px'
+                unoptimized
+                priority={true}
+                />
+        </div>
         <div className={style.content__title}>
           <h1>
             Your API infrastructure in <strong> minutes </strong>
