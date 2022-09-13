@@ -1,11 +1,13 @@
 import style from '../../../styles/_Homescreen.module.scss';
 import { Footer, Header } from '../../components';
 import FirstSection from './firstSection';
-import Benefits from './benefits';
-import OptimizeYourBusiness from './optimizesYourBusiness';
-import OptimizationAndSupport from './optimizationAndSupport';
-import SupportSection from './supportSection';
-import Banner from './banner';
+import dynamic from 'next/dynamic';
+
+const Benefits = dynamic(()=>import('./benefits'));
+const OptimizeYourBusiness = dynamic(()=>import('./optimizesYourBusiness'));
+const OptimizationAndSupport = dynamic(()=>import('./optimizationAndSupport'));
+const SupportSection = dynamic(()=>import('./supportSection'));
+const Banner = dynamic(()=>import('./banner'));
 
 
 const Homescreen = () => {

@@ -1,26 +1,51 @@
 import style from "./_FirstSection.module.scss";
 import { Button } from "../../../components";
 import Link from "next/link";
+import Image from "next/image";
 import TextSlide from "./textSlide";
 
 const Logo = "assets/home/logo.png";
-const BgDesktop = "assets/home/bg1.png"; 
-const BgMobile = "assets/home/bgmobile1.png";
+const BgDesktop = "assets/home/bg1.webp"; 
+const BgMobile = "assets/home/bgmobile1.webp";
 
 const FirstSection = () => {
   return (
     <section className={style.wrapper}>
       {/* Background */}
       <div className={style.wrapper__background}>
-        <img src={BgDesktop} alt="background header - Desktop version" className={style["wrapper__background-desktop"]} />
-        <img src={BgMobile} alt="background header - Desktop version" className={style["wrapper__background-mobile"]} />
+        <div className={style["wrapper__background-desktop"]}>
+          <Image
+            layout="fill"
+            src={BgDesktop}
+            alt="background header - Desktop Version"
+            quality={65}
+            objectFit="cover"
+            unoptimized
+            />
+        </div>
+        <div className={style["wrapper__background-mobile"]}>
+          <Image
+              layout="fill"
+              src={BgMobile}
+              alt="background header - Mobile version"
+              unoptimized
+              quality={65}
+              objectFit="cover"
+              />
+        </div>
       </div>
       <article className={style.content}>
-        <img
-          src={Logo}
-          alt="Veecode plataform Logo"
-          className={style.content__logo}
-        />
+        <div className={style.content__logo}>
+            <Image
+                layout="responsive"
+                src={Logo} 
+                alt="Settings Image"
+                width='307px'
+                height='96px'
+                unoptimized
+                priority={true}
+                />
+        </div>
         <div className={style.content__title}>
           <h1>
             Your API infrastructure in <strong> minutes </strong>

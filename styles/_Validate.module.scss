@@ -31,17 +31,21 @@
             @include for-phoneXS-only{
                 @include screenSize(100%,auto);
             }
-            &_formWraper{
+            &-formWraper{
                 @include displayFlex(center, flex-start, column);
                 width: 415px;
                 padding: 1vw 1vw;
                 background-color: $color12;
                 border-radius: 5%;
 
-                &_form{
+                .form{
                     @include displayFlex(center, center, column);
                     width: 100%;                  
                     gap: 1.2vh;
+                    &__buttonWrapper{
+                        @include screenSize(100%,auto);
+                        @include displayFlex(center, center, row);
+                    }
                 }
             }
         }

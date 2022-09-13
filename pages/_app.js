@@ -8,8 +8,8 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       {/* Global site tag (gtag.js) - Google Analytics */}
-      <Script src={"https://www.googletagmanager.com/gtag/js?id=G-VH5ZB0M4YZ"}></Script>
-      <Script id="google-tag-script-function">
+      <Script src={"https://www.googletagmanager.com/gtag/js?id=G-VH5ZB0M4YZ"} strategy="lazyOnload"></Script>
+      <Script id="google-tag-script-function" strategy="lazyOnload">
         {`window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
@@ -17,7 +17,7 @@ function MyApp({ Component, pageProps }) {
         gtag('config', 'G-VH5ZB0M4YZ');`}
       </Script>
       {/*Hotjar Tracking Code for https://platform.vee.codes/ */}
-      <Script id="hotjar-script-function">
+      <Script id="hotjar-script-function" strategy="lazyOnload">
         {`(function(h,o,t,j,a,r){
             h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
             h._hjSettings={hjid:3044176,hjsv:6};

@@ -2,8 +2,8 @@ import Link from "next/link";
 import { Button } from "../../../components";
 import style from "./_OptimizationAndSupport.module.scss";
 
-const Image1 = "assets/home/image1.png";
-const Image2 = "assets/home/image2.png";
+const Image1 = "assets/home/image1.webp";
+const Image2 = "assets/home/image2.webp";
 
 const OptimizationAndSupport = () => {
   return (

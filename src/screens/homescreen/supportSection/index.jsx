@@ -1,25 +1,36 @@
+import Image from "next/image";
 import Link from "next/link";
 import { Button } from "../../../components";
 import style from "./_SupportSection.module.scss";
 
-const BgDesktop = "assets/home/bg3.png";
-const BgMobile = "assets/home/bgmobile2.png";
+const BgDesktop = "assets/home/bg3.webp";
+const BgMobile = "assets/home/bgmobile2.webp";
 
 const SupportSection = () => {
   return (
     <section className={style.wrapper}>
       {/* Background */}
       <div className={style.wrapper__background}>
-        <img
-          src={BgDesktop}
-          alt="background header - Desktop version"
-          className={style["wrapper__background-desktop"]}
-        />
-        <img
-          src={BgMobile}
-          alt="background header - Desktop version"
-          className={style["wrapper__background-mobile"]}
-        />
+        <div className={style["wrapper__background-desktop"]}>
+          <Image
+            layout="fill"
+            src={BgDesktop}
+            alt="background header - Desktop version"
+            unoptimized
+            quality={65}
+            objectFit="cover"
+            />
+        </div>
+        <div className={style["wrapper__background-mobile"]}>
+          <Image
+              layout="fill"
+              src={BgMobile}
+              alt="background header - Mobile version"
+              unoptimized
+              quality={65}
+              objectFit="cover"
+              />
+        </div>
       </div>
       <article className={style.content}>
         <div className={style.content__text}>
