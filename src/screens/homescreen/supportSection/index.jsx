@@ -6,6 +6,10 @@ import style from "./_SupportSection.module.scss";
 const BgDesktop = "assets/home/bg3.webp";
 const BgMobile = "assets/home/bgmobile2.webp";
 
+const customLoader = ({ src }) => {
+  return src
+}
+
 const SupportSection = () => {
   return (
     <section className={style.wrapper}>
@@ -16,8 +20,9 @@ const SupportSection = () => {
             layout="fill"
             src={BgDesktop}
             alt="background header - Desktop version"
-            unoptimized
-            quality={100}
+            loader={customLoader}
+            width='100'
+            height='100'
             priority={true}
             objectFit="cover"
             />
@@ -27,8 +32,9 @@ const SupportSection = () => {
               layout="fill"
               src={BgMobile}
               alt="background header - Mobile version"
-              unoptimized
-              quality={100}
+              loader={customLoader}
+              width='100'
+              height='100'
               priority={true}
               objectFit="cover"
               />
