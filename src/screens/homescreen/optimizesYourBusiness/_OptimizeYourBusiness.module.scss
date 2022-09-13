@@ -9,6 +9,10 @@
     @include for-tablet-only{
      padding: 3em 0 4em 0;
      }
+    //mobile(M)
+    @include for-phone-only{
+        margin-top: -2.5em;
+    }
     &__contentWrapper {
         @include screenSize(80%, auto);
         @include displayFlex(center, center, row-reverse);
