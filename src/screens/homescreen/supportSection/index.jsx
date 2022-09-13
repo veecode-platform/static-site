@@ -17,7 +17,7 @@ const SupportSection = () => {
             src={BgDesktop}
             alt="background header - Desktop version"
             unoptimized
-            priority={true}
+            quality={65}
             objectFit="cover"
             />
         </div>
@@ -27,7 +27,7 @@ const SupportSection = () => {
               src={BgMobile}
               alt="background header - Mobile version"
               unoptimized
-              priority={true}
+              quality={65}
               objectFit="cover"
               />
         </div>

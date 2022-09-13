@@ -18,7 +18,7 @@ const FirstSection = () => {
             layout="fill"
             src={BgDesktop}
             alt="background header - Desktop Version"
-            priority={true}
+            quality={65}
             objectFit="cover"
             unoptimized
             />
@@ -29,7 +29,7 @@ const FirstSection = () => {
               src={BgMobile}
               alt="background header - Mobile version"
               unoptimized
-              priority={true}
+              quality={65}
               objectFit="cover"
               />
         </div>
