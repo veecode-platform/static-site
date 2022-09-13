@@ -8,10 +8,6 @@ const Logo = "assets/home/logo.png";
 const BgDesktop = "assets/home/bg1.webp"; 
 const BgMobile = "assets/home/bgmobile1.webp";
 
-const customLoader = ({ src }) => {
-  return src
-}
-
 const FirstSection = () => {
   return (
     <section className={style.wrapper}>
@@ -24,9 +20,7 @@ const FirstSection = () => {
             alt="background header - Desktop Version"
             priority={true}
             objectFit="cover"
-            loader={customLoader}
-            width='100'
-            height='100'
+            unoptimized
             />
         </div>
         <div className={style["wrapper__background-mobile"]}>
@@ -34,9 +28,7 @@ const FirstSection = () => {
               layout="fill"
               src={BgMobile}
               alt="background header - Mobile version"
-              loader={customLoader}
-              width='100'
-              height='100'
+              unoptimized
               priority={true}
               objectFit="cover"
               />
