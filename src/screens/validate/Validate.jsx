@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router'
 import { Breadcrumb, Button, Input, Checkbox, DefaultPage} from '../../components';
-import style from '../../../styles/_Checkout.module.scss';
+import style from '../../../styles/_Validate.module.scss';
 import { Formik, Form} from 'formik';
 import { object, string, boolean} from 'yup';
 import { UsePostData } from '../../hooks/UsePostData';
@@ -16,9 +16,10 @@ const Validate = () =>{
     });
 
     const router = useRouter()
+    const plan = router.query.plan;
 
     const handleFormRedirect = async () => {
-        await router.push("/payment")
+        await router.push("/checkout")
     }
 
     //const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
@@ -35,7 +36,7 @@ const Validate = () =>{
                     <div className={style.content__options}>
                         <div className={style.content__options_formWraper}>
                             <Formik
-                                initialValues={{name: "", company: "", email: "", title: "", terms: false }}
+                                initialValues={{ name: "", company: "", email: "", title: "", terms: false, plan: plan }}
                                 validationSchema={formSchema}
                                 onSubmit={async (values)=>{
                                     //await sleep(3000)

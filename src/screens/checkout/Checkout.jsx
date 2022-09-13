@@ -1,10 +1,10 @@
+import React, {useState, useEffect} from "react";
 import style from "../../../styles/_Checkout.module.scss";
-import { Breadcrumb, Paypal, DefaultPage } from "../../components";
-import { FiCheck } from "react-icons/fi";
+import { Breadcrumb, Paypal, DefaultPage, Switch } from "../../components";
+import { FaCheck } from 'react-icons/fa';
+import storage from "../../../utils/storage";
 
 const Checkout = () => {
-  /*const [disablePaypal, setDisabledPaypal] = useState(true)
-      const handleDisabled = (e) => {setDisabledPaypal(!e.target.checked)}*/
 
   const getDateFormatted = () => {
     const day = new Date().getDate();
@@ -12,8 +12,37 @@ const Checkout = () => {
     return `${day}${abv}.`;
   };
 
+  const userData = JSON.parse(storage.getData("user"))
+
+  const [billing, setBilling] = useState(true);
+  const handleBilling = () =>{ setBilling(!billing) }
+
+  const [price, setPrice] = useState("$749")
+  const handlePrice = () => {
+    if(billing){
+      if(userData.plan == "premium") { setPrice("$674") }
+      else { setPrice("$449")}
+    }
+    else{
+      if(userData.plan == "premium") { setPrice("$749") }
+      else { setPrice("$499") }
+    }
+  }
+
+  useEffect(()=>{
+    handlePrice()
+  }, [billing])
+
+  let info = {
+    plan: userData.plan,
+    sla: userData.plan == "premium" ? "3 days" : "5 days",
+    price: price,
+    users: userData.plan == "premium" ? "20" : "10",
+    billing: billing
+  }
+
   return (
-    <DefaultPage titleBar="disable">
+    <DefaultPage titleBar="disable" noBack>
       <section className={style.wrapper}>
         <article className={style.content}>
           <Breadcrumb active={3} />
@@ -24,18 +53,18 @@ const Checkout = () => {
               </div>
               <div className={style.content__options_infoBoxWrapper_info}>
                 <div className={style.content__options_infoBoxWrapper_info_left} >
-                  <p>Support plan: Premium</p>
+                  <p>Support plan: {info.plan}</p>
                   <p>SLA</p>
                 </div>
                 <div className={style.content__options_infoBoxWrapper_info_right}>
-                  <p>$749/mo</p>
-                  <p>3 days</p>
+                  <p>{info.price}/mo</p>
+                  <p>{info.sla}</p>
                 </div>
               </div>
 
               <div className={style.content__options_infoBoxWrapper_info}>
                 <div className={style.content__options_infoBoxWrapper_info_left}>
-                  <p>20 users</p>
+                  <p>{info.users} users</p>
                   <p>Devportal</p>
                   <p>Safira-cli</p>
                   <p>VKPR</p>
@@ -51,23 +80,23 @@ const Checkout = () => {
               <div className={style.content__options_infoBoxWrapper_info}>
                 <div className={style.content__options_infoBoxWrapper_info_left}>
                   <p>Due today:</p>
-                  <p style={{ marginBottom: "1em" }}>Due monthly:</p>
+                  <p style={{ marginBottom: "1em" }}>Due {billing ? "yearly" : "monthly"}:</p>
                   <p>
                     Billed Monthly on the <strong>{getDateFormatted()}</strong>
                   </p>
                 </div>
                 <div className={style.content__options_infoBoxWrapper_info_right}>
-                  <p>$749/mo</p>
+                  <p>{info.price}</p>
                   <p>
-                    <strong>$749/mo</strong>
+                    <strong>{info.price}</strong>
                   </p>
                 </div>
               </div>
 
               <div className={style.content__options_infoBoxWrapper_guarantee}>
                 <div className={style.content__options_infoBoxWrapper_guarantee_item}>
-                  <FiCheck color="#33FFCE" />
-                  <p>30 day trial</p>
+                  <FaCheck color="#33FFCE" />
+                  <p>15 day trial</p>
                 </div>
 
                 <div
@@ -75,7 +104,7 @@ const Checkout = () => {
                     style.content__options_infoBoxWrapper_guarantee_item
                   }
                 >
-                  <FiCheck color="#33FFCE" />
+                  <FaCheck color="#33FFCE" />
                   <p>Annual contract</p>
                 </div>
                 <div
@@ -83,12 +112,12 @@ const Checkout = () => {
                     style.content__options_infoBoxWrapper_guarantee_item
                   }
                 >
-                  <FiCheck color="#33FFCE" />
+                  <FaCheck color="#33FFCE" />
                   <p>Full Access to our knowledge base</p>
                 </div>
               </div>
-
-              <Paypal />
+              <Switch label={"subscription"} isOn={billing} handleToggle={handleBilling}/>
+              <Paypal plan={{plan: info.plan, billing: info.billing}}/>
             </div>
           </div>
         </article>

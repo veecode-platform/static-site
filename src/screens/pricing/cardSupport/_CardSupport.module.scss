@@ -133,5 +133,33 @@
                 }
             }
         }
+        &-sub{
+            @include screenSize(100%,auto);
+            padding: 1em;      
+            //mobile(M)
+            @include for-phone-only{
+                padding: 1.5em 1em; 
+            }     
+            //mobile(S)
+            @include for-phoneS-only{
+                padding: 1em; 
+            } 
+            p{
+                @include typography(0.8vw, center, 1em, 300);
+                color: $color4;
+                //tablet
+                @include for-tablet-only{
+                    font-size: 2vw;
+                }
+                //mobile(M)
+                @include for-phone-only {
+                    font-size: 4vw;
+                }
+                //mobile(S)
+                @include for-phoneS-only {
+                    font-size: 8vw;
+                }
+            }
+        }
     }
 }

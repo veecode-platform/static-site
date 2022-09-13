@@ -5,7 +5,8 @@ const CardSupport = ({
     subtitle,
     desc,
     children,
-    price
+    price, 
+    sub
 }) => {
   return (
     <div className={style.content}>
@@ -26,6 +27,15 @@ const CardSupport = ({
             <div className={style["content__text-price"]}>
                 <p>
                     {price}
+                </p>
+            </div>
+            <span/>
+            <div className={style["content__text-sub"]}>
+                <p>
+                    {sub[0]}
+                </p>
+                <p>
+                    {sub[1]}
                 </p>
             </div>
             { children !== ""  ?  children :  "" }

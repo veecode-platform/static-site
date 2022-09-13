@@ -8,3 +8,4 @@ export { Checkbox as Checkbox } from "./input/Input"
 export { default as DefaultPage } from './defaultPage/DefaultPage';
 export { default as ContactBar } from './contactBar/ContactBar';
 export { default as ScrollTop} from './scrollTop/ScrollTop';
+export { default as Switch} from "./switch/Switch"
