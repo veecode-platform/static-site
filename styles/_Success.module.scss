@@ -1,0 +1,34 @@
+@import "../abstract/functions", "../abstract/variables", "../abstract/responsive";
+
+.content{
+    @include screenSize(100%,auto);
+    @include displayFlex(center, center, column);
+    padding: 4em 0;
+    &__image{
+        @include screenSize(25%,auto);
+        @include displayFlex(center, center, row);
+        img{
+            @include screenSize(100%,auto);
+        }
+    }
+    &__details{
+        margin-top: 4em;
+        p{
+            @include typography(1.2vw, center, 1.5em, 400);
+            cursor: pointer;
+            color: $color2;
+            //tablet
+            @include for-tablet-only {
+                font-size: 2vw;
+            }
+            //mobile(M)
+            @include for-phone-only {
+                font-size: 2.5vw;
+            }
+            //mobile(S)
+            @include for-phoneS-only {
+                font-size: 4vw;
+            }
+        }
+    }
+}
