@@ -1,13 +1,9 @@
 @import "../abstract/functions", "../abstract/variables", "../abstract/responsive";
 
 .wrapper {
-    @include screenSize(100%, 90vh);
+    @include screenSize(100%, auto);
     @include displayFlex(center, center, row);
     position: relative;
-    //viewport
-    @include for-viewport-only{
-        @include screenSize(100%, auto);
-    }
     //mobile(M)
     @include for-phone-only{
         padding: 5em 0;

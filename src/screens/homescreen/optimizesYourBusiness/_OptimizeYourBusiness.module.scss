@@ -1,15 +1,10 @@
 @import "../abstract/functions", "../abstract/variables", "../abstract/responsive";
 
 .content {
-    @include screenSize(100%, 110vh);
+    @include screenSize(100%, auto);
     @include displayFlex(center, center, row);
     @include backgroundImage("/assets/home/bg2.webp");
-    padding: 8em 0;
-    //viewport
-    @include for-viewport-only{
-        @include screenSize(100%, auto);
-        padding: 6em 0 8em 0;
-    }
+    padding: 6em 0 8em 0;
     //tablet
     @include for-tablet-only{
      padding: 3em 0 4em 0;
