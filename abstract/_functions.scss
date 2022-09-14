@@ -137,22 +137,28 @@ EFFECTS
     animation-duration: 0.5s;
     -webkit-animation-timing-function: linear;
     animation-timing-function: linear;
-    -webkit-animation-iteration-count: infinite;
-    animation-iteration-count: infinite;
     -webkit-animation-direction: alternate;
     animation-direction: alternate;
 
     @-webkit-keyframes ef-pulse-grow {
-        to {
+        50% {
             -webkit-transform: scale(1.1);
             transform: scale(1.1);
+        }
+        100%{
+            -webkit-transform: scale(1);
+            transform: scale(1);
         }
     }
 
     @keyframes ef-pulse-grow {
-        to {
+        50% {
             -webkit-transform: scale(1.1);
             transform: scale(1.1);
+        }
+        100%{
+            -webkit-transform: scale(1);
+            transform: scale(1);
         }
     }
 }
