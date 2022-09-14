@@ -91,7 +91,7 @@
 }
 
 //font
-@mixin typography($fontSize,$align,$lineHeight,$weight){
+@mixin typography($fontSize, $align, $lineHeight, $weight) {
     width: 100%;
     font-size: $fontSize;
     text-align: $align;
@@ -121,4 +121,38 @@ EFFECTS
 
 @mixin boxShadow() {
     box-shadow: rgba(0, 0, 0, 0.897) 0px 19px 38px, rgba(0, 0, 0, 0.692) 0px 15px 12px;
+}
+
+//pulse animation
+@mixin pulseAnimation() {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px transparent;
+
+    -webkit-animation-name: ef-pulse-grow;
+    animation-name: ef-pulse-grow;
+    -webkit-animation-duration: 0.5s;
+    animation-duration: 0.5s;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate;
+
+    @-webkit-keyframes ef-pulse-grow {
+        to {
+            -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+        }
+    }
+
+    @keyframes ef-pulse-grow {
+        to {
+            -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+        }
+    }
 }
