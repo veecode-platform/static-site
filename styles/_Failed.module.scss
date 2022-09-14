@@ -3,12 +3,13 @@
 .content{
     @include screenSize(100%,auto);
     @include displayFlex(center, center, column);
-    padding: 4em 0;
+    padding: 2em 0;
     &__image{
         @include screenSize(25%,auto);
         @include displayFlex(center, center, row);
         img{
             @include screenSize(100%,auto);
+            @include pulseAnimation();
         }
     }
     &__details{
