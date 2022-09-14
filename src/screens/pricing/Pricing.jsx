@@ -6,9 +6,9 @@ import CardSupport from "./cardSupport";
 const Pricing = () => {
   return (
     <DefaultPage
-      title="A Team Of Experts You Can Count On"
-      subtitle="Count on our team to help you get the most out of our platform"
-      titleBar="disable"
+      title="Select the Plan"
+      subtitle="Choose the plan just right for your team."
+      titleBar="enable"
     >
       <section className={style.wrapper}>
         <article className={style.content}>
@@ -47,9 +47,11 @@ const Pricing = () => {
               </Link>
             </CardSupport>
           </div>
+          <article className={style.contactBar}>
+          <ContactBar/>
+        </article>
         </article>
       </section>
-      <ContactBar />
     </DefaultPage>
   );
 };
