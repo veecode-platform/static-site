@@ -135,29 +135,26 @@
         }
         &-sub{
             @include screenSize(100%,auto);
-            padding: 1em;      
-            //mobile(M)
-            @include for-phone-only{
-                padding: 1.5em 1em; 
-            }     
-            //mobile(S)
-            @include for-phoneS-only{
-                padding: 1em; 
-            } 
+            padding: .7em 1em;   
+            //viewPort
+            @include for-viewport-only{
+                padding: .7em 3em; 
+            }   
             p{
-                @include typography(0.8vw, center, 1em, 300);
-                color: $color4;
+                @include typography(1.3vw,center,1.4em,500);
+                padding: .7em;
+                color: $color5;
                 //tablet
                 @include for-tablet-only{
-                    font-size: 2vw;
+                    font-size: 1.8vw;
                 }
                 //mobile(M)
                 @include for-phone-only {
-                    font-size: 4vw;
+                    font-size: 3.8vw;
                 }
                 //mobile(S)
                 @include for-phoneS-only {
-                    font-size: 8vw;
+                    font-size: 4.3vw;
                 }
             }
         }

@@ -33,8 +33,7 @@ const CardSupport = ({
             <div className={style["content__text-sub"]}>
                 <p>
                     {sub[0]}
-                </p>
-                <p>
+                    <br/>
                     {sub[1]}
                 </p>
             </div>
