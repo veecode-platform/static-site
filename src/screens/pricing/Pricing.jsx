@@ -18,13 +18,13 @@ const Pricing = () => {
               title="Standard Support"
               subtitle="10 Users"
               desc="Support within 5 business days"
-              price="$499/mo"
+              price="$449/mo*"
+              sub={["*over annual subscription", "$499/mo"]}
             >
-              <Link href="/validate">
+              <Link href="/validate?plan=standard">
                 <a>
                 <Button
-                    color="#FFFFFF"
-                    background="#20a082">
+                    alt >
                     BUY NOW
                   </Button>
                 </a>
@@ -34,13 +34,13 @@ const Pricing = () => {
               title="Premium Support"
               subtitle="20 Users"
               desc="Support within 3 business days"
-              price="$749/mo"
+              price="$674/mo*"
+              sub={["*over annual subscription", "$749/mo" ]}
             >
-              <Link href="/validate">
+              <Link href="/validate?plan=premium">
                 <a>
                  <Button
-                    color="#FFFFFF"
-                    background="#20a082">
+                    alt>
                     BUY NOW
                   </Button>
                 </a>

@@ -1,9 +1,10 @@
-import Link from "next/link";
 import { FaLongArrowAltLeft } from "react-icons/fa";
 import style from "../../../styles/_DefaultPage.module.scss";
 import { Header, Footer } from "../../components";
+import { useRouter } from 'next/router'
 
-const DefaultPage = ({title, subtitle, titleBar, children}) => {
+const DefaultPage = ({title, subtitle, titleBar, children, noBack}) => {
+  const router = useRouter()
   return (
     <main className={style.wrapper}>
       <Header />
@@ -34,13 +35,14 @@ const DefaultPage = ({title, subtitle, titleBar, children}) => {
             { children }
         </article>
       </section>
-      <section className={style.back}>
-          <Link href="/" prefetch={false}>
-            <a>
-             <FaLongArrowAltLeft/>
-            </a>
-          </Link>
-      </section>
+      {!noBack &&
+        <section className={style.back}>
+          <a onClick={()=>router.back()}>
+            <FaLongArrowAltLeft/>
+          </a>
+        </section>
+      }
+        
       <Footer/>
     </main>
   );

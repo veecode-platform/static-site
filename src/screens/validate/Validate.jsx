@@ -16,6 +16,7 @@ const Validate = () =>{
     });
 
     const router = useRouter()
+    const plan = router.query.plan;
 
     const handleFormRedirect = async () => {
         await router.push("/checkout")
@@ -35,7 +36,7 @@ const Validate = () =>{
                     <div className={style.content__options}>
                         <div className={style["content__options-formWraper"]}>
                             <Formik
-                                initialValues={{name: "", company: "", email: "", title: "", terms: false }}
+                                initialValues={{ name: "", company: "", email: "", title: "", terms: false, plan: plan }}
                                 validationSchema={formSchema}
                                 onSubmit={async (values)=>{
                                     //await sleep(3000)
