@@ -3,38 +3,34 @@ import style from "../../../styles/_Checkout.module.scss";
 import { Breadcrumb, Paypal, DefaultPage, Switch } from "../../components";
 import { FaCheck } from 'react-icons/fa';
 import storage from "../../../utils/storage";
+//import { parseCookies } from 'nookies'
 
 const Checkout = () => {
+  const [userData, setUserData] = useState({});
+  const [price, setPrice] = useState("")
+  const [billing, setBilling] = useState(true);
 
-  const getDateFormatted = () => {
-    const day = new Date().getDate();
-    const abv = day == 1 ? "st" : day == 2 ? "nd" : day == 3 ? "rd" : "th";
-    return `${day}${abv}.`;
-  };
 
-  const [userData, setUserData] = useState({})
   useEffect(()=>{
     setUserData(JSON.parse(storage.getData("user")))
-  }, [])
+    handlePrice()
+    
+  }, [price])
 
-  const [billing, setBilling] = useState(true);
-  const handleBilling = () =>{ setBilling(!billing) }
-
-  const [price, setPrice] = useState("$749")
+  const handleBilling = () => { setBilling(!billing) }
   const handlePrice = () => {
-    if(billing){
-      if(userData.plan == "premium") { setPrice("$674") }
-      else { setPrice("$449")}
+    if(userData.plan == "premium" ){
+      billing ? setPrice(674) : setPrice(749)
     }
     else{
-      if(userData.plan == "premium") { setPrice("$749") }
-      else { setPrice("$499") }
+      billing ? setPrice(449) : setPrice(499)
     }
   }
 
   useEffect(()=>{
     handlePrice()
   }, [billing])
+
 
   let info = {
     plan: userData.plan,
@@ -43,6 +39,12 @@ const Checkout = () => {
     users: userData.plan == "premium" ? "20" : "10",
     billing: billing
   }
+
+  const getDateFormatted = () => {
+    const day = new Date().getDate();
+    const abv = day == 1 ? "st" : day == 2 ? "nd" : day == 3 ? "rd" : "th";
+    return `${day}${abv}.`;
+  };
 
   return (
     <DefaultPage titleBar="disable" noBack>
@@ -60,7 +62,7 @@ const Checkout = () => {
                   <p>SLA</p>
                 </div>
                 <div className={style.info__right}>
-                  <p>{info.price}/mo</p>
+                  <p>${info.price}/mo</p>
                   <p>{info.sla}</p>
                 </div>
               </div>
@@ -73,10 +75,10 @@ const Checkout = () => {
                   <p>VKPR</p>
                 </div>
                 <div className={style.info__right}>
-                  <p>$0/mo</p>
-                  <p>$0/mo</p>
-                  <p>$0/mo</p>
-                  <p>$0/mo</p>
+                  <p></p>
+                  <p></p>
+                  <p></p>
+                  <p></p>
                 </div>
               </div>
 
@@ -85,13 +87,13 @@ const Checkout = () => {
                   <p>Due today:</p>
                   <p style={{ marginBottom: "1em" }}>Due {billing ? "yearly" : "monthly"}:</p>
                   <p>
-                    Billed Monthly on the <strong>{getDateFormatted()}</strong>
+                    Billed {billing ? "yearly" : "monthly" } on the <strong>{getDateFormatted()}</strong>
                   </p>
                 </div>
                 <div className={style.info__right}>
-                  <p>{info.price}</p>
+                  <p>${billing ? info.price*12 : info.price}</p>
                   <p>
-                    <strong>{info.price}</strong>
+                    <strong>${billing ? info.price*12 : info.price}</strong>
                   </p>
                 </div>
               </div>
@@ -119,6 +121,8 @@ const Checkout = () => {
                   <p>Full Access to our knowledge base</p>
                 </div>
               </div>
+            </div>
+            <div className={style["content__options-infoBoxWrapper"]}>
               <Switch label={"subscription"} isOn={billing} handleToggle={handleBilling}/>
               <Paypal plan={{plan: info.plan, billing: info.billing}}/>
             </div>
@@ -128,5 +132,6 @@ const Checkout = () => {
     </DefaultPage>
   );
 };
+
 
 export default Checkout;

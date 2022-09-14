@@ -10,8 +10,9 @@
         color: $color2;  
         &__options{
             @include screenSize(80%,auto);
-            @include displayFlex(center, center, column);
-            padding: 2em 0 4em 0;
+            @include displayFlex(center, center, row);
+            padding: 2em 0;
+            gap: 2vw;
             //viewport
             @include for-viewport-only{
                 @include screenSize(90%,auto);
@@ -39,7 +40,7 @@
                 gap: 1.5vh;
                 
                 .box{
-                    @include displayFlex(center, flex-start, column);
+                    @include displayFlex(flex-start, center, row);
                     width: 100%;
                     color: $color2;            
                 }

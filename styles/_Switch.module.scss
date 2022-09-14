@@ -3,22 +3,23 @@
 .wrapper{
     width: 100%;
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
     align-items: center;
 }
 
 .wraper-switch{
     width: 50%;
     display: flex;
-    justify-content: center;
+    //justify-content: space-between;
     align-items: center;
-    gap: 1vw;
+    column-gap: 1vw;
 }
 
 .switch-checkbox {
     height: 0;
     width: 0;
     visibility: hidden;
+    display: none;
 }
   
 .switch-label {

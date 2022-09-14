@@ -69,7 +69,7 @@ export const CheckboxLabel = styled(Label)`
         cursor: pointer
         color: inherit;
 
-        :link:visited:hover:active{
+        :link, :visited, :hover, :active{
             color: inherit;
         }
     }

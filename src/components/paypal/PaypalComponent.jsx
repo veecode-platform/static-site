@@ -2,9 +2,11 @@ import { Wrapper} from "./styles";
 import React, {useState, useEffect} from "react";
 import { PayPalScriptProvider, PayPalButtons, usePayPalScriptReducer } from "@paypal/react-paypal-js";
 import alerts from "../../../utils/alerts";
+import { useRouter } from 'next/router'
 
 
 const WraperButton = ({plan, disabled}) =>{
+    const router = useRouter()
 
     const [{ options, isPending, isResolved, isRejected }, dispatch] = usePayPalScriptReducer();
 
@@ -53,7 +55,8 @@ const WraperButton = ({plan, disabled}) =>{
                     await actions.subscription.get().then(()=>{
                         //console.log("Log: ", data);
                         //console.log(data);
-                        alerts.success("Success!")
+                        //alerts.success("Success!")
+                        router.push("/success")
                     });                
                 }}
                 onCancel={ async (data, actions) => {
@@ -62,7 +65,7 @@ const WraperButton = ({plan, disabled}) =>{
                 }} 
                 onError={ async (data, actions) => {
                     console.log(data)
-                    alerts.error("Error")
+                    router.push("/failed")
                 }}               
             />
         )
@@ -80,7 +83,7 @@ export const PaypalComponent = ({disabled, plan}) => {
         components: "buttons",
         vault: true
     };
-    
+
     /*
     support premium anual - P-89U45817275828443MMPY56A
     support premium - P-68Y40169MN964201DMMPY3SY
@@ -89,7 +92,6 @@ export const PaypalComponent = ({disabled, plan}) => {
     */
 
     const supportValue = plan.plan == "premium" ? plan.billing ? "P-89U45817275828443MMPY56A" : "P-68Y40169MN964201DMMPY3SY" : plan.billing ? "P-67C50367DL8388341MMPY67Q" : "P-9G9684018V798073BMMPY6MY"
-
     return(
         <Wrapper>          
             <PayPalScriptProvider options={initialOptions}>
