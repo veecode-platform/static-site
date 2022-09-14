@@ -27,7 +27,7 @@ const Success = () => {
           <Link href="/" passHref>
             <a>
               <Button>
-                Go Home
+                Home
               </Button>
             </a>
           </Link>
