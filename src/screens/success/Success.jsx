@@ -1,7 +1,9 @@
-import { Button, DefaultPage } from "../../components";
+import { Button } from "../../components";
 import style from "../../../styles/_Success.module.scss";
 import Link from "next/link";
+import dynamic from "next/dynamic";
 
+const DefaultPage = dynamic(()=> import('../../components/defaultPage/DefaultPage'));
 const SuccessImage = "/assets/icons/success.png";
 
 const Success = () => {

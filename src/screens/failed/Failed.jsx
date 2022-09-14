@@ -1,6 +1,9 @@
-import { Button, DefaultPage } from "../../components";
+import { Button } from "../../components";
 import style from "../../../styles/_Failed.module.scss";
 import Link from "next/link";
+import dynamic from "next/dynamic";
+
+const DefaultPage = dynamic(()=> import('../../components/defaultPage/DefaultPage'));
 
 const SuccessImage = "/assets/icons/failed.png";
 
