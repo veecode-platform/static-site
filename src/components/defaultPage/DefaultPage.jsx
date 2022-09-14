@@ -41,8 +41,7 @@ const DefaultPage = ({title, subtitle, titleBar, children, noBack}) => {
             <FaLongArrowAltLeft/>
           </a>
         </section>
-      }
-        
+      }      
       <Footer/>
     </main>
   );
