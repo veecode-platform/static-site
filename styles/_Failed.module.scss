@@ -3,6 +3,7 @@
 .content{
     @include screenSize(100%,auto);
     @include displayFlex(center, center, column);
+    background-color: $color9;
     padding: 1em 0 3em 0;
     &__image{
         @include screenSize(25%,auto);
