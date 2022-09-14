@@ -1,11 +1,15 @@
 @import "../abstract/functions", "../abstract/variables", "../abstract/responsive";
 
 .wrapper {
-    @include screenSize(100%, auto);
+    @include screenSize(100%, 150vh);
     @include displayFlex(center, center, column);
     background-color: $color3;
     @include backgroundImage("/assets/home/bg2.png");
     margin-top: -0.5em;
+    //viewport
+    @include for-viewport-only{
+        @include screenSize(100%, auto);
+    }
     //mobile(M)
     @include for-phone-only {
         margin-top: -0.5em;
