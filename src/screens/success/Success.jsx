@@ -2,7 +2,7 @@ import { Button, DefaultPage } from "../../components";
 import style from "../../../styles/_Success.module.scss";
 import Link from "next/link";
 
-const SuccessImage = "/assets/icons/success.gif";
+const SuccessImage = "/assets/icons/success.png";
 
 const Success = () => {
   return (
