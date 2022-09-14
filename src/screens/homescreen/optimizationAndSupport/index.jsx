@@ -13,7 +13,7 @@ const OptimizationAndSupport = () => {
         <div className={style.optimizationContent__desc}>
           <div className={style.desc}>
             <div className={style.desc__title}>
-              <h2>Discover our Free Tools.</h2>
+              <h2>Discover our Free Tools</h2>
             </div>
             <ul className={style.desc__list}>
               <li>
@@ -74,14 +74,14 @@ const OptimizationAndSupport = () => {
         <div className={style.supportContent__desc}>
           <div className={style.desc}>
             <div className={style.desc__title}>
-              <h2>Join our community.</h2>
+              <h2>Join our community</h2>
             </div>
             <div className={style.desc__text}>
               <p>
                 Vee Code Platform encourages its users to help each other in a
                 collaborative and selfsufficient environment. Join our
                 community, bring your insights about services and products,
-                increasing your productivity also helping the community to grow
+                increasing your productivity also helping the community to grow.
               </p>
             </div>
             <div className={style.desc__buttonWrapper}>

@@ -32,5 +32,8 @@
                 padding: 1em 0;
             }
         }
+        .contactBar{
+            @include screenSize(66%,auto);
+        }
     }
 }

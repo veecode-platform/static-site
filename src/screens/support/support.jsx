@@ -8,6 +8,7 @@ const Support = () => {
   return (
     <DefaultPage
       title="Support Options"
+      subtitle="A team of Experts You Can Count On"
       titleBar="enable"
     >
       {/* Platform Support */}

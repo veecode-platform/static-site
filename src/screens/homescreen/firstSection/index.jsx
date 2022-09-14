@@ -18,9 +18,10 @@ const FirstSection = () => {
             layout="fill"
             src={BgDesktop}
             alt="background header - Desktop Version"
-            quality={65}
+            quality={100}
             objectFit="cover"
             unoptimized
+            priority={true}
             />
         </div>
         <div className={style["wrapper__background-mobile"]}>
@@ -29,8 +30,9 @@ const FirstSection = () => {
               src={BgMobile}
               alt="background header - Mobile version"
               unoptimized
-              quality={65}
+              quality={100}
               objectFit="cover"
+              priority={true}
               />
         </div>
       </div>

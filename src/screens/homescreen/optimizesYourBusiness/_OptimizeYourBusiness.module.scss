@@ -62,7 +62,7 @@
         .details {
             @include screenSize(80%, auto);
             @include displayFlex(center, flex-start, column);
-            padding-top: 4em;
+            padding-top: 3em;
             //tablet
             @include for-tablet-only{
                 padding: 1.8em 0;
