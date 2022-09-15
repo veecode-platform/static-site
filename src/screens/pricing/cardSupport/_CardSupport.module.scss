@@ -17,7 +17,6 @@
     }
     &:hover{
         opacity:1;
-        filter: brightness(120%);
         transition: all .4s linear;
     }
     &__text{
@@ -108,6 +107,8 @@
         &-price{
             @include screenSize(100%,auto);
             padding: 1em;      
+            -webkit-text-stroke-width: .5px;
+            -webkit-text-stroke-color: #cdcdcd;
             //mobile(M)
             @include for-phone-only{
                 padding: 1.5em 1em; 
