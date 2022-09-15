@@ -47,7 +47,10 @@ const Checkout = () => {
   };
 
   return (
-    <DefaultPage titleBar="disable" noBack>
+    <DefaultPage 
+      titleBar="disable"
+      noBack
+      >
       <section className={style.wrapper}>
         <article className={style.content}>
           <Breadcrumb active={3} />
