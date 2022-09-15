@@ -3,8 +3,11 @@ import style from "../../../styles/_DefaultPage.module.scss";
 import { Header, Footer } from "../../components";
 import { useRouter } from 'next/router'
 
-const DefaultPage = ({title, subtitle, titleBar, children, noBack}) => {
-  const router = useRouter()
+const DefaultPage = ({title, subtitle, titleBar, children, noPrevious, noBack}) => {
+  const router = useRouter();
+  const HandlerBack = () => {
+       noPrevious ? router.push("/") : router.back();
+  }
   return (
     <main className={style.wrapper}>
       <Header />
@@ -37,7 +40,7 @@ const DefaultPage = ({title, subtitle, titleBar, children, noBack}) => {
       </section>
       {!noBack &&
         <section className={style.back}>
-          <a onClick={()=>router.back()}>
+          <a onClick={HandlerBack}>
             <FaLongArrowAltLeft/>
           </a>
         </section>
