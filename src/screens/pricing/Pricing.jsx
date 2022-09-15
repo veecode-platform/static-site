@@ -17,7 +17,7 @@ const Pricing = () => {
             <CardSupport
               title="Standard Support"
               subtitle="10 Users"
-              desc="Includes 5 business days"
+              desc="Includes 5 business days of SLA"
               price="$899/mo*"
               sub={["*over annual subscription", "$809/mo"]}
             >
@@ -33,7 +33,7 @@ const Pricing = () => {
             <CardSupport
               title="Premium Support"
               subtitle="10 Users"
-              desc="Includes 3 business days"
+              desc="Includes 3 business days of SLA"
               price="$1049/mo*"
               sub={["*over annual subscription", "$944/mo" ]}
             >
