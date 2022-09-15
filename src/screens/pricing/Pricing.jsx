@@ -17,9 +17,9 @@ const Pricing = () => {
             <CardSupport
               title="Standard Support"
               subtitle="10 Users"
-              desc="Support within 5 business days"
-              price="$449/mo*"
-              sub={["*over annual subscription", "$499/mo"]}
+              desc="Includes 5 business days"
+              price="$899/mo*"
+              sub={["*over annual subscription", "$809/mo"]}
             >
               <Link href="/validate?plan=standard">
                 <a>
@@ -32,10 +32,10 @@ const Pricing = () => {
             </CardSupport>
             <CardSupport
               title="Premium Support"
-              subtitle="20 Users"
-              desc="Support within 3 business days"
-              price="$674/mo*"
-              sub={["*over annual subscription", "$749/mo" ]}
+              subtitle="10 Users"
+              desc="Includes 3 business days"
+              price="$1049/mo*"
+              sub={["*over annual subscription", "$944/mo" ]}
             >
               <Link href="/validate?plan=premium">
                 <a>
