@@ -8,6 +8,7 @@ const PageNotFound = () => {
   return (
     <DefaultPage
         titleBar="disable"
+        noPrevious
         >
       <article className={style.wrapper}>
         <div className={style.image}>
