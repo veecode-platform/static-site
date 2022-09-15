@@ -13,7 +13,11 @@
         padding: 4em 0;
         // Mobile(M)
         @include for-phone-only{
-          padding: 2em 0;
+          padding: 2.5em 0;
+        }
+        //mobile(XS)
+        @include for-phoneXS-only{
+          padding: 1.5em 0;
         }
         &__content{
           @include screenSize(70%, auto);
@@ -57,6 +61,10 @@
         @include for-tablet-only{
           @include screenSize(80%, auto);
           padding: 2.5em 0;
+        }
+        //mobile
+        @include for-phone-only{
+          padding: 4em 0;
         }
       }
     }
