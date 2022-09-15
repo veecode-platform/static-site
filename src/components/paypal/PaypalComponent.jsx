@@ -3,6 +3,7 @@ import React, {useState, useEffect} from "react";
 import { PayPalScriptProvider, PayPalButtons, usePayPalScriptReducer } from "@paypal/react-paypal-js";
 import alerts from "../../../utils/alerts";
 import { useRouter } from 'next/router'
+import { UsePatchData } from "../../hooks/UsePatchData";
 
 
 const WraperButton = ({plan, disabled}) =>{
@@ -35,26 +36,22 @@ const WraperButton = ({plan, disabled}) =>{
             <PayPalButtons 
                 style={{ layout: "vertical", color: "white" }}
                 disabled={disabled}
-                /*createOrder= { async (data, actions) => {
-                    return actions.order.create({
-                    purchase_units: [{
-                        amount: {
-                        value: '8988'
-                        }
-                    }]
-                    })
-                }}*/
                 createSubscription = { async (data, actions) => {
                     return actions.subscription.create({
                         'plan_id': plan
                     });
                 }}
                 onApprove={ async (data, actions) => {
-                    //console.log(data)
-                    //alerts.success("Compra realizada com sucesso!")
-                    await actions.subscription.get().then(()=>{
-                        //console.log("Log: ", data);
-                        //console.log(data);
+                    return actions.subscription.get().then(async (details)=>{
+                        //console.log("Details: ", details);
+                        //console.log("Data: ", data)
+                        const patch = {
+                            orderId: data.orderID,
+                            subscriptionId: data.subscriptionID,
+                            planId: details.plan_id
+                        }
+                        const dataPatched =  await UsePatchData(patch)
+                        //console.log("Patched", dataPatched);
                         //alerts.success("Success!")
                         router.push("/success")
                     });                
@@ -77,9 +74,7 @@ export const PaypalComponent = ({disabled, plan}) => {
     const initialOptions = {
         "client-id": "AYeZ7RE7NgdD8GC5FvOxmJcJRE69s3_4BbFXzl2824907mW_4JPobDmkwfj42U7vp0UXouYZU3GNxSoN",
         currency: "USD",
-        //intent: "capture",
         intent: "subscription",
-        //locale: "pt_BR",
         components: "buttons",
         vault: true
     };

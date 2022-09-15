@@ -1,7 +1,5 @@
 import api from "../../services/api"
 import storage from "../../utils/storage"
-import { setCookie } from 'nookies'
-
 
 export const UsePostData = async (values) => {
 
@@ -15,15 +13,11 @@ export const UsePostData = async (values) => {
       "phone": values.cel
     }
 
-    //const { data } = await api.post("/purchases", JSON.stringify(model))
+    const { data } = await api.post("", model)
 
-    storage.setData("user", values)
-    setCookie(null, 'USER', values, {
-      maxAge: 86400,
-      path: '/checkout',
-    })
+    storage.setData("user", JSON.stringify({...values, id: data.id}))
 
-    return true
+    return data
   }
 
   catch(error){

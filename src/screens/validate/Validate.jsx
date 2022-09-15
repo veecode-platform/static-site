@@ -18,13 +18,10 @@ const Validate = () =>{
 
     const router = useRouter()
     const plan = router.query.plan;
-    const price = plan == "premium" ? [674, 649] : [449, 499]
 
     const handleFormRedirect = async () => {
         await router.push("/checkout")
     }
-
-    //const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
     return(
         <DefaultPage 
@@ -38,16 +35,15 @@ const Validate = () =>{
                     <div className={style.content__options}>
                         <div className={style["content__options-formWraper"]}>
                             <Formik
-                                initialValues={{ name: "", company: "", email: "", title: "", terms: false, cel: "", plan: plan, price: price }}
+                                initialValues={{ name: "", company: "", email: "", title: "", terms: false, cel: "", plan: plan}}
                                 validationSchema={formSchema}
                                 onSubmit={async (values)=>{
-                                    //await sleep(3000)
-                                    const response = await UsePostData(JSON.stringify(values));
-                                    console.log(values, response);
+                                    const response = await UsePostData(values);
+                                    //console.log(values, response);
                                     await handleFormRedirect();                         
                                 }}
                                 >
-                                {({ errors, touched,/* isValid, validateForm, */handleSubmit, isSubmitting}) => (
+                                {({ errors, touched, handleSubmit, isSubmitting}) => (
                                     
                                     <Form onSubmit={handleSubmit} className={style.form}>
                                         <Input name="name" placeholder="First and last name" label="Full Name" error={(errors.name && touched.name) && errors.name }/>

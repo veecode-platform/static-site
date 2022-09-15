@@ -3,7 +3,6 @@ import style from "../../../styles/_Checkout.module.scss";
 import { Breadcrumb, Paypal, DefaultPage, Switch } from "../../components";
 import { FaCheck } from 'react-icons/fa';
 import storage from "../../../utils/storage";
-//import { parseCookies } from 'nookies'
 
 const Checkout = () => {
   const [userData, setUserData] = useState({});
@@ -13,17 +12,16 @@ const Checkout = () => {
 
   useEffect(()=>{
     setUserData(JSON.parse(storage.getData("user")))
-    handlePrice()
-    
+    if(Object.keys(userData).length !== 0 ) handlePrice();
   }, [price])
 
   const handleBilling = () => { setBilling(!billing) }
   const handlePrice = () => {
     if(userData.plan == "premium" ){
-      billing ? setPrice(674) : setPrice(749)
+      billing ? setPrice(944) : setPrice(1049)
     }
     else{
-      billing ? setPrice(449) : setPrice(499)
+      billing ? setPrice(809) : setPrice(899)
     }
   }
 
@@ -40,9 +38,13 @@ const Checkout = () => {
     billing: billing
   }
 
-  const getDateFormatted = () => {
-    const day = new Date().getDate();
+  const getDateFormatted = (displayMonth) => {
+    let date = new Date();
+    date.setDate(date.getDate() + 15);
+    const day = date.getDate();
+    const month = date.toLocaleString('en-us', { month: 'long' });
     const abv = day == 1 ? "st" : day == 2 ? "nd" : day == 3 ? "rd" : "th";
+    if(displayMonth) return `${day}${abv} of ${month}.`;
     return `${day}${abv}.`;
   };
 
@@ -58,8 +60,9 @@ const Checkout = () => {
               </div>
               <div className={style.info}>
                 <div className={style.info__left} >
-                  <p>Support plan: {info.plan}</p>
+                  <p>Support plan: <strong>{info.plan}</strong></p>
                   <p>SLA</p>
+                  {info.plan == "premium" ? <p>Priorization for bug issues</p>: null}
                 </div>
                 <div className={style.info__right}>
                   <p>${info.price}/mo</p>
@@ -84,10 +87,11 @@ const Checkout = () => {
 
               <div className={style.info}>
                 <div className={style.info__left}>
-                  <p>Due today:</p>
-                  <p style={{ marginBottom: "1em" }}>Due {billing ? "yearly" : "monthly"}:</p>
+                  <p>After the 15th day of trial:</p>
+                  <p style={billing ? {marginBottom: "1em"} : null}>Due {billing ? "yearly" : "monthly"}:</p>
+                  {!billing ? <p style={{ marginBottom: "1em" }}>Yearly: </p>: null}
                   <p>
-                    Billed {billing ? "yearly" : "monthly" } on the <strong>{getDateFormatted()}</strong>
+                    Billed {billing ? "yearly" : "monthly" } on the <strong>{getDateFormatted(billing)}</strong>
                   </p>
                 </div>
                 <div className={style.info__right}>
@@ -95,6 +99,7 @@ const Checkout = () => {
                   <p>
                     <strong>${billing ? info.price*12 : info.price}</strong>
                   </p>
+                  {!billing ? <p style={{color:"red"}}><strong>${info.price*12}</strong></p>: null}
                 </div>
               </div>
 

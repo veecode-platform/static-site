@@ -12,7 +12,7 @@
     display: flex;
     //justify-content: space-between;
     align-items: center;
-    column-gap: 1vw;
+    column-gap: 0.5vw;
 }
 
 .switch-checkbox {
@@ -36,7 +36,7 @@
 }
   
 .switch-label .switch-button {
-    content: '';
+    //content: '';
     position: absolute;
     top: 2px;
     left: 2px;
