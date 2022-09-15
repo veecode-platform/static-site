@@ -6,7 +6,7 @@ const TermsOfService = () => {
     <DefaultPage 
       title="Terms Of Service" 
       titleBar="enable"
-      noBack
+      noPrevious
       >
       <article className={style.content}>
         {/* Definitions */}

@@ -3,21 +3,25 @@
 .breadcrumb{
     @include screenSize(40%,auto);
     @include displayFlex(center, center, row);
-    //margin: 1em 0 0 0;
     padding: 1.5em 0;
     border-radius: 1.3em;
     color: $color2;
     //viewport
     @include for-viewport-only{
-        @include screenSize(60%,auto);
+        @include screenSize(50%,auto);
+    }
+    //tablet
+    @include for-viewport-only{
+        @include screenSize(65%,auto);
     }
     //mobile(M)
     @include for-phone-only{
-        @include screenSize(100%,auto);
+        @include screenSize(85%,auto);
     }
     //mobile(S)
     @include for-phoneS-only{
         @include screenSize(90vw,auto);
+        padding: 0;
 
     }
     &__item{
@@ -40,15 +44,19 @@
             }
             //mobile(M)
             @include for-phone-only{
-                @include screenSize(32px,32px);
-                padding: .3em;
-                font-size: 2.3vw;
+                font-size: 2.4vw;
             }
             //mobile(S)
             @include for-phone-only{
-                @include screenSize(31px,31px);
+                @include screenSize(30px,30px);
                 padding: .3em;
                 font-size: 2.3vw;
+            }
+            //mobile(XS)
+            @include for-phoneXS-only{
+                @include screenSize(15px,15px);
+                padding: .2em;
+                font-size: 2.4vw;
             }
             &:hover{
                 background: $color1;
@@ -66,12 +74,16 @@
             //mobile(M)
             @include for-phone-only{
                 margin-left: .2em;
-                font-size: 2.7vw;
+                font-size: 3vw;
             }
             //mobile(S)
             @include for-phone-only{
                 margin-left: 0;
-                font-size: 2.4vw;
+                font-size: 2.8vw;
+            }
+            //mobile(XS)
+            @include for-phoneXS-only{
+                font-size: 3vw;
             }
         }
         .selected{

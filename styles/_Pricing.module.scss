@@ -33,7 +33,23 @@
             }
         }
         .contactBar{
-            @include screenSize(66%,auto);
+            @include screenSize(67%,auto);
+            //viewport
+            @include for-viewport-only{
+                @include screenSize(80%,auto);
+            }
+            //tablet
+            @include for-tablet-only{
+                @include screenSize(85%,auto);
+            }
+            //mobile(M)
+            @include for-phone-only{
+                @include screenSize(85%,auto);
+            }
+            //mobile(S)
+            @include for-phoneS-only{
+                @include screenSize(90%,auto);
+            }
         }
     }
 }

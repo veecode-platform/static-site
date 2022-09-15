@@ -14,7 +14,8 @@
         }
         &__desc {
             @include screenSize(50%, 100%);
-            @include displayFlex(center, center, row);
+            @include displayFlex(space-evenly, center, row);
+            padding-left: 2%;
             //mobile(M)
             @include for-phone-only {
                 @include screenSize(80%, 100%);
@@ -88,8 +89,8 @@
                     }
                 }
                 &__buttonWrapper {
-                    @include screenSize(80%, auto);
-                    @include displayFlex(space-around, center, row);
+                    @include screenSize(75%, auto);
+                    @include displayFlex(space-between, center, row);
                     //mobile(M)
                     @include for-phone-only {
                         @include screenSize(100%, auto);
@@ -126,6 +127,7 @@
         &__desc {
             @include screenSize(50%, 100%);
             @include displayFlex(center, center, row);
+            padding-right: 2%;
             //mobile(M)
             @include for-phone-only {
                 @include screenSize(80%, 100%);
@@ -142,7 +144,7 @@
                     @include screenSize(95%, auto);
                 }
                 &__title {
-                    @include screenSize(80%, auto);
+                    @include screenSize(100%, auto);
                     padding: 1em 0;
                     //tablet
                     @include for-tablet-only {
@@ -154,7 +156,7 @@
                         padding: 1em 0;
                     }
                     h2 {
-                        @include typography(2.2vw, start, 1.15em, 500);
+                        @include typography(2.2vw, end, 1.3em, 500);
                         //phone(M)
                         @include for-phone-only {
                             @include typography(32px, center, 1.2em, 500);
@@ -167,8 +169,8 @@
                 }
                 &__text {
                     p {
-                        @include typography(1.1vw, start, 1.5em, 300);
-                        padding: 0.5em 0;
+                        @include typography(1.1vw, end, 1.5em, 300);
+                        padding: .5em 0 .5em 1.5em;
                         color: $color4;
                         //mobile(M)
                         @include for-phone-only {
@@ -183,7 +185,7 @@
                 &__buttonWrapper {
                     @include screenSize(100%, auto);
                     padding: 1.5em 0;
-                    @include displayFlex(flex-start, flex-start, row);
+                    @include displayFlex(flex-end, flex-start, row);
                     //tablet
                     @include for-tablet-only {
                         padding: 0.5em 0;

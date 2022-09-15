@@ -27,15 +27,22 @@
         }
        &-text{
         @include screenSize(55%, auto);
-        @include displayFlex(center, center, column);
+        @include displayFlex(center, flex-end, column);
         padding-top: 2em;
         //mobile(M)
         @include for-phone-only{
+            @include displayFlex(center, center, column);
             @include screenSize(70%, auto);
             padding: 0em;
         }
+        //mobile(S)
+        @include for-phoneS-only{
+            @include screenSize(100%, auto);
+        }
+
         .title {
             @include screenSize(80%, auto);
+            margin: auto;
             //tablet
             @include for-tablet-only {
                 padding: 6em 0 0 0;
@@ -46,7 +53,8 @@
                 padding: 2em 0;
             }
             h2 {
-                @include typography(2.8vw, start, 1.3em, 400);
+
+                @include typography(2.8vw, end, 1.3em, 400);
                 color: $color2;
                 //mobile(M)
                 @include for-phone-only {
@@ -69,7 +77,7 @@
                 }
             //mobile(M)
             @include for-phone-only {
-                @include screenSize(75%, auto);
+                @include screenSize(90%, auto);
                 padding: 1em 0;
             }
             //mobile(S)
@@ -78,8 +86,9 @@
                 padding: .5em 0;
             }
             &__text {
+                @include screenSize(95%,auto);
                 p {
-                    @include typography(1.2vw, start, 1.5em, 300);
+                    @include typography(1.2vw, end, 1.5em, 300);
                     color: $color2;
                     //viewport
                     @include for-viewport-only{
@@ -97,15 +106,16 @@
                 }
             }
             &__buttonWrapper {
-                width: 100%;
-                @include displayFlex(flex-start, center, row);
+                width: 85%;
+                @include displayFlex(flex-end, center, row);
                 margin-top: 4em;
-                //tablet
-                @include for-tablet-only{
+                //viewport
+                @include for-viewport-only{
                     margin-top: 2em;
                 }
                 //mobile(M)
                 @include for-phone-only{
+                    width: 100%;
                     @include displayFlex(center, center, row);
                 }
             }

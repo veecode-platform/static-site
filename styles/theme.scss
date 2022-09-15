@@ -1,13 +1,13 @@
 @import "../abstract/functions", "../abstract/variables";
 
-* {
+html, * {
     @include resetAll();
     &::-webkit-scrollbar {
         @extend %invisible;
     }
 }
 
-body {
+html, body {
     overflow-x: hidden;
     scroll-behavior: smooth;
     scroll-snap-type: y mandatory;
