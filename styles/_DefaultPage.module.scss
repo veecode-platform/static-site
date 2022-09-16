@@ -47,7 +47,7 @@
             }
             //mobile(S)
             @include for-phoneS-only{
-              font-size: 2.7vw;
+              display: none;
             }
           }
         }
