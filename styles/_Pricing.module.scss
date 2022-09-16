@@ -8,8 +8,12 @@
         @include screenSize(80%,auto);
         @include displayFlex(center, center, column);
         color: $color2;
-        //mobile(M)
-        @include for-phone-only{
+        //tablet(s)
+        @include for-tabletS-only{
+            @include screenSize(95%,auto);
+        }
+        //mobile(S)
+        @include for-phoneS-only{
             @include screenSize(90%,auto);
         }
         &__options{
