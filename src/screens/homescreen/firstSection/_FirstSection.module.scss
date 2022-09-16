@@ -6,7 +6,7 @@
     position: relative;
     //mobile(M)
     @include for-phone-only{
-        padding: 5em 0;
+        padding: 8vh 0;     //testar 5em 0
     }
     &__background{
         @include screenSize(100%, 100%);
@@ -14,7 +14,7 @@
         z-index: 0;
         //mobile(M)
         @include for-phone-only{
-            @include displayFlex(center, flex-end, row);
+            @include screenSize(100%, 100%);
             top:-1.5em;
         }
         &-desktop{
@@ -34,23 +34,28 @@
                 display: inline-block;
                 @include screenSize(100%, 100%);
                 object-fit:cover;
+                object-position:  50% 55%;
             }
         }
     }
-    //mobile(S)
-    @include for-phoneS-only {
-        // padding-bottom: 1.3em;
+    //mobile(M)
+    @include for-phone-only {       
+        padding-bottom: 3em;
     }
     .content {
         @include screenSize(80%, auto);
         @include displayFlex(center, flex-start, column);
         padding: 13.5vh 0;
         z-index: 1;
+        //tablet
+        @include for-tabletS-only{
+            padding: 9vh 0;
+        }
         //mobile(M)
         @include for-phone-only {
-            @include screenSize(95%,auto);
+            @include screenSize(80%,auto);
             @include displayFlex(center, center, column);
-            padding: 15vh 0 0 0;
+            padding: 13vh 0 0 0;
         }
         &__logo {
             @include screenSize(20%, auto);
@@ -64,18 +69,17 @@
             margin: 2em 0 1.5em;
             //tablet
             @include for-tablet-only{
-                margin: 1.5em 0 .5em 0;
+                margin: 1em 0 .5em 0;
             }
             //mobile(M)
             @include for-phone-only {
-                @include screenSize(75%, auto);
+                @include screenSize(80%, auto);
                 margin: 2em 0 1.5em;
-                padding-top: 10em;
+                padding-top: 22em;
             }
             //mobile(S)
             @include for-phoneS-only {
                 @include screenSize(95%, auto);
-                padding-top: 20em;
             }
             //mobile(XS)
             @include for-phoneXS-only{
@@ -86,7 +90,7 @@
                 color: $color2;
                 //mobile(M)
                 @include for-phone-only {
-                    @include typography(6.5vw, center, 1.3em, 300);
+                    @include typography(8vw, center, 1.3em, 300);
                 }
                 //mobile(S)
                 @include for-phoneS-only {
@@ -99,7 +103,7 @@
             margin: 1.2em 0 1.5em 0;
             //tablet
             @include for-tablet-only{
-                margin: 0 0 1.5em 0;
+                margin: 0;
             }
             //mobile(M)
             @include for-phone-only {
