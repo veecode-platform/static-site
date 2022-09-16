@@ -34,7 +34,7 @@ const Checkout = () => {
     plan: userData.plan,
     sla: userData.plan == "premium" ? "3 days" : "5 days",
     price: price,
-    users: userData.plan == "premium" ? "20" : "10",
+    users: "10",
     billing: billing
   }
 

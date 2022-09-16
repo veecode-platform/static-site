@@ -72,21 +72,34 @@ const WraperButton = ({plan, disabled}) =>{
 export const PaypalComponent = ({disabled, plan}) => {
 
     const initialOptions = {
-        "client-id": "AYeZ7RE7NgdD8GC5FvOxmJcJRE69s3_4BbFXzl2824907mW_4JPobDmkwfj42U7vp0UXouYZU3GNxSoN",
+        //sandobx"client-id": "AUTvrP9lwGpVkbRcqLXOkyFjrmYE__0dl15nncMeyELndDvXCYnE1DElLJETUsoplegGy0WNR30TyIwT",
+        "client-id": "AWlXI0P_nEhVbB0mZK3e6RL7KTc7mD0xsCGKc6byAvoM6kgZLERKm_xfXnoy6QQrVh-DPqv7yAcXwo97",
         currency: "USD",
         intent: "subscription",
         components: "buttons",
         vault: true
     };
 
-    /*
-    support premium anual - P-89U45817275828443MMPY56A
-    support premium - P-68Y40169MN964201DMMPY3SY
-    support standard anual - P-67C50367DL8388341MMPY67Q
-    support standard - P-9G9684018V798073BMMPY6MY
-    */
+/*SANDOBOX
+P-62H3948438124174PMMSIT4Y
+Standard Yearly
 
-    const supportValue = plan.plan == "premium" ? plan.billing ? "P-89U45817275828443MMPY56A" : "P-68Y40169MN964201DMMPY3SY" : plan.billing ? "P-67C50367DL8388341MMPY67Q" : "P-9G9684018V798073BMMPY6MY"
+P-4GC62224405371731MMSIPRQ
+Standard Monthly
+
+P-83415534J8087031TMMSIOZQ
+Premium Yearly
+
+P-6BT27473RX516543MMMSINJA
+Premium Monthly
+    */
+   //const standardYearly = "P-62H3948438124174PMMSIT4Y";
+   //const stadardMonthly = "P-4GC62224405371731MMSIPRQ";
+   //const premiumYearly = "P-83415534J8087031TMMSIOZQ";
+   //const premiumMonthly = "P-6BT27473RX516543MMMSINJA";
+
+    //const supportValue = plan.plan == "premium" ? plan.billing ? premiumYearly : premiumMonthly : plan.billing ? standardYearly : stadardMonthly
+    const supportValue = "P-0405669190448135PMMSJIUY"
     return(
         <Wrapper>          
             <PayPalScriptProvider options={initialOptions}>
