@@ -1,9 +1,25 @@
 import Link from "next/link";
+import { useEffect } from "react";
 import style from "../../../styles/_Pricing.module.scss";
 import { Breadcrumb, Button, ContactBar, DefaultPage } from "../../components";
 import CardSupport from "./cardSupport";
 
 const Pricing = () => {
+
+  useEffect(()=>{
+    if (typeof window !== "undefined"){
+      if ( window.innerWidth > 1300){
+          setTimeout(() => {
+            window.scrollTo({
+              top: 350,
+              left: 350,
+              behavior: 'smooth'
+            });
+          }, 1000);
+      }
+    }
+  },[])
+
   return (
     <DefaultPage
       title="Select the Plan"
@@ -12,9 +28,9 @@ const Pricing = () => {
     >
       <section className={style.wrapper}>
         <article className={style.content}>
-          <Breadcrumb active={1} />
+          <Breadcrumb active={1}/>
           <div className={style.content__options}>
-            <CardSupport
+            <CardSupport 
               title="Standard Support"
               subtitle="10 Users"
               desc="Includes 5 business days of SLA"
