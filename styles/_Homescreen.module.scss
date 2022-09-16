@@ -2,5 +2,6 @@
 
 .container {
   @include screenSize(100vw, auto);
+  @include displayFlex(center, center, column);
   background-color: $color3;
 }
