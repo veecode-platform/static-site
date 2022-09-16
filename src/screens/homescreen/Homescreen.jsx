@@ -10,16 +10,16 @@ import SupportSection from './supportSection';
 const Homescreen = () => {
   return (
     <main className={style.container}>
-      <Header/>
-      <FirstSection/>
-      <OptimizeYourBusiness/>
-      <OptimizationAndSupport/>
-      <Benefits/>
-      <Banner/>
-      <SupportSection/>
-      <Footer/>
+      <Header />
+      <FirstSection />
+      <OptimizeYourBusiness />
+      <OptimizationAndSupport />
+      <Benefits />
+      <Banner />
+      <SupportSection />
+      <Footer />
     </main>
-  )
+  );
 }
 
 export default Homescreen
