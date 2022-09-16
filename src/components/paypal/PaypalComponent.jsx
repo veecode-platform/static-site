@@ -74,7 +74,7 @@ export const PaypalComponent = ({disabled, plan}) => {
     const initialOptions = {
         //sandobx"client-id": "AUTvrP9lwGpVkbRcqLXOkyFjrmYE__0dl15nncMeyELndDvXCYnE1DElLJETUsoplegGy0WNR30TyIwT",
         "client-id": "AWlXI0P_nEhVbB0mZK3e6RL7KTc7mD0xsCGKc6byAvoM6kgZLERKm_xfXnoy6QQrVh-DPqv7yAcXwo97",
-        currency: "USD",
+        //currency: "USD",
         intent: "subscription",
         components: "buttons",
         vault: true
@@ -99,7 +99,7 @@ Premium Monthly
    //const premiumMonthly = "P-6BT27473RX516543MMMSINJA";
 
     //const supportValue = plan.plan == "premium" ? plan.billing ? premiumYearly : premiumMonthly : plan.billing ? standardYearly : stadardMonthly
-    const supportValue = "P-0405669190448135PMMSJIUY"
+    const supportValue = "P-83400514756756319MMSLI7Q"
     return(
         <Wrapper>          
             <PayPalScriptProvider options={initialOptions}>
