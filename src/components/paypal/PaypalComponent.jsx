@@ -99,7 +99,7 @@ Premium Monthly
    //const premiumMonthly = "P-6BT27473RX516543MMMSINJA";
 
     //const supportValue = plan.plan == "premium" ? plan.billing ? premiumYearly : premiumMonthly : plan.billing ? standardYearly : stadardMonthly
-    const supportValue = plan.plan == "premium" ? "P-0405669190448135PMMSJIUY" : "P-7GD18375GX3788334MMSLRII";
+    const supportValue = plan.plan == "premium" ? "P-7V362987MT3340127MMSNAZQ" : "P-7GD18375GX3788334MMSLRII";
     return(
         <Wrapper>          
             <PayPalScriptProvider options={initialOptions}>
