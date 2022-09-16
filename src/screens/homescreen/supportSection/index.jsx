@@ -11,26 +11,16 @@ const SupportSection = () => {
     <section className={style.wrapper}>
       {/* Background */}
       <div className={style.wrapper__background}>
-        <div className={style["wrapper__background-desktop"]}>
-          <Image
-            layout="fill"
+          <img
             src={BgDesktop}
             alt="background header - Desktop version"
-            unoptimized
-            quality={65}
-            objectFit="cover"
+            className={style["wrapper__background-desktop"]}
             />
-        </div>
-        <div className={style["wrapper__background-mobile"]}>
-          <Image
-              layout="fill"
+          <img
               src={BgMobile}
               alt="background header - Mobile version"
-              unoptimized
-              quality={65}
-              objectFit="cover"
+              className={style["wrapper__background-mobile"]}
               />
-        </div>
       </div>
       <article className={style.content}>
         <div className={style.content__text}>
@@ -44,11 +34,11 @@ const SupportSection = () => {
           <div className={style["content__text-desc"]}>
             <strong>Benefits of VeeCode Platform support</strong>
             <ul className={style.list}>
-              <li>Submit your questions through our portal</li>
-              <li>Track the progress of your request</li>
-              <li>Access our knowledge base</li>
-              <li>Service with established SLA</li>
-              <li>Direct assistance to your technical team</li>
+              <li>Submit your questions through our portal.</li>
+              <li>Track the progress of your request.</li> 
+              <li>Access our knowledge base.</li>
+              <li>Service with established SLA.</li>
+              <li>Direct assistance to your technical team.</li>
             </ul>
           </div>
           <div className={style["content__text-buttonWrapper"]}>
