@@ -43,6 +43,10 @@
     &__copy{
         @include screenSize(40%, auto);
         // padding: 1.5em 0;
+        //mobile
+        @include for-phone-only{
+            @include screenSize(80%, auto);
+        }
         color: $color2;
         p{
             @include typography(.7vw,center,1.3em,400);
@@ -52,7 +56,7 @@
             }
             //mobile(S)
             @include for-phoneS-only{
-                font-size: 1.9vw;
+                font-size: 3.5vw;
               }
         }
     }

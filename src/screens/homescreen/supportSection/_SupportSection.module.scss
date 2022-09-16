@@ -30,7 +30,7 @@
                 display: inline-block;
                 position: relative;
                 @include screenSize(100%, 100%);
-                object-fit:cover;
+                object-fit:fill;
             }
         }
     }
@@ -46,14 +46,14 @@
         }
         //mobile(S)
         @include for-phoneS-only {
-            @include screenSize(90%, auto);
+            @include screenSize(80%, auto);
         }
         &__text {
             @include screenSize(60%, auto);
             padding: 10em 0;
             //mobile(M)
             @include for-phone-only {
-                @include screenSize(90%, auto);
+                @include screenSize(85%, auto);
                 padding: 4em 0;
             }
             &-title {
@@ -85,6 +85,8 @@
                     //mobile(M)
                     @include for-phone-only {
                         font-size: 1.2em;
+                        text-align: center;
+                        margin-bottom: .5em;
                     }
                     //mobile(S)
                     @include for-phoneS-only {
@@ -94,6 +96,10 @@
                 .list {
                     list-style-position: inside;
                     padding: 0.9em 0;
+                    //mobile(S)
+                    @include for-phoneS-only{
+                        @include screenSize(100%,auto);
+                    }
                     li {
                         @include typography(1vw, start, 1.8em, 300);
                         //mobile(M)
@@ -102,7 +108,7 @@
                         }
                         //mobile(S)
                         @include for-phoneS-only {
-                            font-size: 16px;
+                            font-size: 14px;
                         }
                     }
                 }
@@ -112,6 +118,7 @@
                 margin: 1.5em 0;
                 //Mobile(M)
                 @include for-phone-only {
+                    @include screenSize(100%, auto);
                     @include displayFlex(center, center, row);
                     margin: 1.5em 0 0 0;
                 }

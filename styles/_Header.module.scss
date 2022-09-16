@@ -9,10 +9,6 @@
         @include displayFlex(center, center, row);
         padding: 2vh 0;
         z-index: 99;
-        //include tablet
-        @include for-tablet-only{
-            padding: 5vh 0 6vh 0;
-        }
         //mobile(M)
         @include for-phone-only{
             padding: 2.5vh 0;
@@ -21,8 +17,8 @@
         &__logo {
             @include screenSize(200px, auto);
             max-width: 200px;
-            //Mobile(S)
-            @include for-phoneS-only{
+            //tablet
+            @include for-tablet-only{
                 @include screenSize(150px, auto);
             }
         }

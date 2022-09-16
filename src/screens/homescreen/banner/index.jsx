@@ -5,8 +5,8 @@ const Element2 = "assets/home/element2.png";
 
 const Banner = () => {
   return (
-          <article className={style.banner}>
-          <div className={style.banner__container}>
+          <section className={style.banner}>
+          <article className={style.banner__container}>
             <div className={style.left}>
               <img src={Element1} alt="Element 1 picture" />
             </div>
@@ -21,8 +21,8 @@ const Banner = () => {
             <div className={style.right}>
               <img src={Element2} alt="Element 2 picture" />
             </div>
-          </div>
-        </article>
+          </article>
+        </section>
   )
 }
 

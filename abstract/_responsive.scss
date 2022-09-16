@@ -26,9 +26,16 @@
     }
 }
 
-//Tablet(L)
+//Tablet
 @mixin for-tablet-only {
     @media (max-width: 1199.99px) {
+        @content;
+    }
+}
+
+//Tablet(S)
+@mixin for-tabletS-only {
+    @media (max-width: 940px) {
         @content;
     }
 }

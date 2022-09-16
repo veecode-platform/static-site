@@ -35,6 +35,7 @@
     @include for-phoneS-only {
         margin: 0.8em 0;
         min-width: 250px;
+        border-radius: 1.3em;
     }
     //mobile(XS)
     @include for-phoneXS-only {

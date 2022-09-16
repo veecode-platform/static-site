@@ -81,7 +81,7 @@
         }
         &-desc{
             @include screenSize(100%,auto);
-            padding: .7em 1em;   
+            padding: .7em 1.5em;   
             //viewPort
             @include for-viewport-only{
                 padding: .7em 3em; 
@@ -142,20 +142,20 @@
                 padding: .7em 3em; 
             }   
             p{
-                @include typography(1.3vw,center,1.4em,500);
+                @include typography(1.2vw,center,1.4em,500);
                 padding: .7em;
                 color: $color5;
                 //tablet
                 @include for-tablet-only{
-                    font-size: 1.8vw;
+                    font-size: 1.7vw;
                 }
                 //mobile(M)
                 @include for-phone-only {
-                    font-size: 3.8vw;
+                    font-size: 3.7vw;
                 }
                 //mobile(S)
                 @include for-phoneS-only {
-                    font-size: 4.3vw;
+                    font-size: 4.2vw;
                 }
             }
         }
