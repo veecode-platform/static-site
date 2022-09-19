@@ -1,4 +1,4 @@
-import style from "../../../styles/_ScrollTop.module.scss";
+import style from "../../../styles/ScrollTop.module.scss";
 import { useState } from "react";
 import { FaAngleUp } from "react-icons/fa";
 

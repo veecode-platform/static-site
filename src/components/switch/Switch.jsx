@@ -1,5 +1,5 @@
 import React from "react";
-import style from '../../../styles/_Switch.module.scss';
+import style from '../../../styles/Switch.module.scss';
 
 const SwitchComponent = ({label, isOn, handleToggle}) => {
     return (

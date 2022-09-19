@@ -1,5 +1,5 @@
 import { Button } from "../../components";
-import style from "../../../styles/_Success.module.scss";
+import style from "../../../styles/Success.module.scss";
 import Link from "next/link";
 import dynamic from "next/dynamic";
 

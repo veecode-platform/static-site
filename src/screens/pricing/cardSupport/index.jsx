@@ -1,4 +1,4 @@
-import style from './_CardSupport.module.scss';
+import style from './CardSupport.module.scss';
 
 const CardSupport = ({
     title,

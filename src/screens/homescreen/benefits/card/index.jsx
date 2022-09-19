@@ -1,4 +1,4 @@
-import style from './_Card.module.scss'
+import style from './Card.module.scss'
 
 const Card = ({
     image,

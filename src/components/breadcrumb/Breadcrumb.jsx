@@ -1,4 +1,4 @@
-import style from "../../../styles/_Breadcrumb.module.scss";
+import style from "../../../styles/Breadcrumb.module.scss";
 import { FaAngleRight } from "react-icons/fa";
 
 const Breadcrumb = ({ active }) => {

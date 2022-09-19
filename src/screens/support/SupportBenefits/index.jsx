@@ -1,4 +1,4 @@
-import style from "./_SupportBenefits.module.scss";
+import style from "./SupportBenefits.module.scss";
 import { FaLayerGroup, FaInfoCircle, FaUsers, FaMedal, FaWrench } from "react-icons/fa";
 
 const SupportBenefits = () => {

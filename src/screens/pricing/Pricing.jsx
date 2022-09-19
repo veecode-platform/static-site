@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { useEffect } from "react";
-import style from "../../../styles/_Pricing.module.scss";
+import style from "../../../styles/Pricing.module.scss";
 import { Breadcrumb, Button, ContactBar, DefaultPage } from "../../components";
 import CardSupport from "./cardSupport";
 

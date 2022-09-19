@@ -1,4 +1,4 @@
-import style from '../../../styles/_Button.module.scss';
+import style from '../../../styles/Button.module.scss';
 
 const Button = ({children, loading, type, alt}) => {
   return(

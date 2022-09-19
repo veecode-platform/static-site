@@ -1,4 +1,4 @@
-import style from "../../../styles/_Footer.module.scss";
+import style from "../../../styles/Footer.module.scss";
 
 const Logo = "assets/home/logo2.png";
 

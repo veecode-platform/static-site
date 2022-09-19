@@ -1,4 +1,4 @@
-import style from '../../../styles/_Homescreen.module.scss';
+import style from '../../../styles/Homescreen.module.scss';
 import { Footer, Header } from '../../components';
 import FirstSection from './firstSection';
 import OptimizeYourBusiness from './optimizesYourBusiness';

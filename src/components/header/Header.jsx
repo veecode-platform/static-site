@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import style from '../../../styles/_Header.module.scss';
+import style from '../../../styles/Header.module.scss';
 
 const Logo = '../assets/home/logo.png';
 

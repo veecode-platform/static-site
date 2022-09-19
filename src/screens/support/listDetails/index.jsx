@@ -1,5 +1,5 @@
 import { FaCheck } from 'react-icons/fa';
-import style from './_ListDetails.module.scss';
+import style from './ListDetails.module.scss';
 
 const ListDetails = () => {
   return (

@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "../../../components";
-import style from "./_SupportSection.module.scss";
+import style from "./SupportSection.module.scss";
 
 const BgDesktop = "assets/home/bg3.webp";
 const BgMobile = "assets/home/bgmobile2.webp";
