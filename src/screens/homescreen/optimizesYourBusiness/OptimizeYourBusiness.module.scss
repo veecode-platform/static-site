@@ -15,22 +15,13 @@
     }
     &__contentWrapper {
         @include screenSize(80%, auto);
-        @include displayFlex(center, center, row-reverse);
-        //viewport
-        @include for-viewport-only{
-            @include screenSize(90%, auto);
-        }
+        @include displayFlex(space-between, center, row-reverse);
         //mobile
         @include for-phone-only{
-            @include screenSize(80%, auto);
             @include displayFlex(center, center, column-reverse);
         }
-        //mobile(S)
-        @include for-phoneS-only{
-            @include screenSize(80%,auto);
-        }
        &-text{
-        @include screenSize(55%, auto);
+        @include screenSize(45%, auto);
         @include displayFlex(center, flex-end, column);
         padding-top: 2em;
         //mobile(M)
@@ -41,11 +32,11 @@
         }
         //mobile(S)
         @include for-phoneS-only{
-            @include screenSize(95%, auto);
+            @include screenSize(90%, auto);
         }
 
         .title {
-            @include screenSize(80%, auto);
+            @include screenSize(100%, auto);
             margin: auto;
             //tablet
             @include for-tablet-only {
@@ -94,7 +85,7 @@
                 padding: .5em 0;
             }
             &__text {
-                @include screenSize(88%,auto);
+                @include screenSize(100%,auto);
                 @include displayFlex(flex-start,center,row);
                 //viewport
                 @include for-viewport-only{
@@ -110,16 +101,16 @@
                     }
                     //mobile(M)
                     @include for-phone-only {
-                        @include typography(18px, center, 1.4em, 300);
+                        @include typography(3vw, center, 1.4em, 300);
                     }
                     //mobile(S)
                     @include for-phoneS-only {
-                        font-size: 16px;
+                        font-size: 4vw;
                     }
                 }
             }
             &__buttonWrapper {
-                width: 88%;
+                width: 100%;
                 @include displayFlex(flex-end, center, row);
                 margin-top: 4em;
                 //viewport
