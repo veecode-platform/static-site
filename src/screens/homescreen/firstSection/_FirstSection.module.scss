@@ -6,7 +6,7 @@
     position: relative;
     //mobile(M)
     @include for-phone-only{
-        padding: 8vh 0;     //testar 5em 0
+        padding: 8vh 0;    
     }
     &__background{
         @include screenSize(100%, 100%);
