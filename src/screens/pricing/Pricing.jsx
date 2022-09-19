@@ -15,7 +15,7 @@ const Pricing = () => {
               left: 350,
               behavior: 'smooth'
             });
-          }, 1000);
+          }, 500);
       }
     }
   },[])
