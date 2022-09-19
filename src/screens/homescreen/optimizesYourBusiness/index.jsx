@@ -1,4 +1,4 @@
-import style from "./_OptimizeYourBusiness.module.scss";
+import style from "./OptimizeYourBusiness.module.scss";
 import { Button } from "../../../components";
 import Link from "next/link";
 import Image from "next/image";

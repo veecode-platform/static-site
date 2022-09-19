@@ -1,4 +1,4 @@
-import style from './_SupportCategories.module.scss'
+import style from './SupportCategories.module.scss'
 
 const SupportCategories = ({title, subtitle, desc}) => {
   return (

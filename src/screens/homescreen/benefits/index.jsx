@@ -1,5 +1,5 @@
 import dynamic from 'next/dynamic'
-import style from './_Benefits.module.scss'
+import style from './Benefits.module.scss'
 import Data from './benefits.json'
 
 const Card = dynamic(()=> import('./card'));

@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router'
 import { Breadcrumb, Button, Input, Checkbox, DefaultPage} from '../../components';
-import style from '../../../styles/_Validate.module.scss';
+import style from '../../../styles/Validate.module.scss';
 import { Formik, Form} from 'formik';
 import { object, string, boolean} from 'yup';
 import { UsePostData } from '../../hooks/UsePostData';

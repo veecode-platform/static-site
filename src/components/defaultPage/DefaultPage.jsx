@@ -1,5 +1,5 @@
 import { FaLongArrowAltLeft } from "react-icons/fa";
-import style from "../../../styles/_DefaultPage.module.scss";
+import style from "../../../styles/DefaultPage.module.scss";
 import { Header, Footer } from "../../components";
 import { useRouter } from 'next/router'
 

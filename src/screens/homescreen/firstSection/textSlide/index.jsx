@@ -1,5 +1,5 @@
 import { FaCloud,FaNetworkWired, FaRegPaperPlane,  } from 'react-icons/fa';
-import style from './_TextSlide.module.scss';
+import style from './TextSlide.module.scss';
 
 const TextSlide = () => {
   return (

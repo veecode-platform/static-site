@@ -1,5 +1,5 @@
 import { DefaultPage } from "../../components";
-import style from "../../../styles/_PrivacyPolicy.module.scss";
+import style from "../../../styles/PrivacyPolicy.module.scss";
 
 const PrivaciPolicy = () => {
   return (

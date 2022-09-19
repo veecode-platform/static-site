@@ -1,5 +1,5 @@
 import Link from "next/link";
-import style from "../../../styles/_ContactBar.module.scss";
+import style from "../../../styles/ContactBar.module.scss";
 import Button from "../button/Button";
 
 const ContactBar = () => {

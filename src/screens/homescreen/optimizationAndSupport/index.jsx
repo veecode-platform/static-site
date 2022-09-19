@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Button } from "../../../components";
-import style from "./_OptimizationAndSupport.module.scss";
+import style from "./OptimizationAndSupport.module.scss";
 
 const Image1 = "assets/home/image1.webp";
 const Image2 = "assets/home/image2.webp";
@@ -17,24 +17,15 @@ const OptimizationAndSupport = () => {
             </div>
             <ul className={style.desc__list}>
               <li>
-                Using <strong>DevPortal</strong> all your Specs APIs will be
-                able to be made available to your partners in an organized,
-                centralized and secure way. The DevPortal also has the ability
-                to run tests with mocked data as well, improving the quality of
-                your code.
+                 Using <strong>DevPortal</strong> all your APIs will be able to be made available to your partners in an organized and secure way. 
               </li>
               <li>
-                <strong>Safira-CLI</strong> is an built-in API acceleration
-                tool. The product offers a set of commands capable of
-                eliminating repetitive tasks, generating configurable and
-                intelligent project templates and also proposing a relevant set
-                of configurations in the microservices construction process.
+                <strong>Safira-CLI</strong> is a built-in API acceleration tool. The product offers multiple commands
+                 that boost productivity and eliminate repetitive tasks.
               </li>
               <li>
-                <strong>VKPR</strong> is our solution for Cloud Infrastructure.
-                With the CLI, you will provide a Kubernetes cluster in seconds,
-                installing and configuring complex products and components from
-                a set of templates to attend to your company&apos;s needs.
+                <strong>VKPR</strong> is our solution for Cloud Infrastructure. With the CLI, you will provide a Kubernetes 
+                cluster to attend to your company&apos;s needs. 
               </li>
             </ul>
             <div className={style.desc__buttonWrapper}>

@@ -1,5 +1,5 @@
 import { DefaultPage, ScrollTop } from "../../components";
-import style from '../../../styles/_TermsOfService.module.scss';
+import style from '../../../styles/TermsOfService.module.scss';
 
 const TermsOfService = () => {
   return (

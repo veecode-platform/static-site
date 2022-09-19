@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from "react";
-import style from "../../../styles/_Checkout.module.scss";
+import style from "../../../styles/Checkout.module.scss";
 import { Breadcrumb, Paypal, DefaultPage, Switch } from "../../components";
 import { FaCheck } from 'react-icons/fa';
 import storage from "../../../utils/storage";

@@ -61,7 +61,7 @@
                 &__list {
                     @include screenSize(100%, auto);
                     list-style-position: inside;
-                    padding: 1.5em 0;
+                    padding: 1em 0;
                     //tablet
                     @include for-tablet-only {
                         padding: 0.7em 0;
@@ -76,20 +76,12 @@
                         @include screenSize(85%, auto);
                     }
                     li {
-                        @include typography(0.95vw, start, 1.4em, 300);
+                        @include typography(1.1vw, start, 1.3em, 300);
+                        padding: .5em 0 .5em 0;
                         color: $color4;
-                        margin-bottom: .4em;
                         //mobile(M)
                         @include for-phone-only {
-                            font-size: 17px;
-                            text-align: center;
-                        }
-                        //mobile(S)
-                        @include for-phoneS-only {
-                            @include for-phoneS-only {
-                                font-size: 16px;
-                                line-height: 1.6em;
-                            }
+                            @include typography(17px,center, 1.5em, 400);
                         }
                     }
                 }

@@ -4,9 +4,9 @@
         "image":"/assets/home/icon1.png",
         "title":"Boost your productivity",
         "titleItem1":"Be more productive",
-        "descItem1":"Add efficiency, tools, and organization into your daily workflow.",
+        "descItem1":"Add efficiency, tools, and organization into your day-to-day workflow.",
         "titleItem2":"Focus on what is needed",
-        "descItem2":"Ensure the successful creation and maintenance for your business processes",
+        "descItem2":"Ensure the successful creation and maintenance for your business processes.",
         "titleItem3":"Remove barriers",
         "descItem3":"Simplify your Cloud transition with our support team and easy-to-use platform."
     },
@@ -15,21 +15,21 @@
         "image":"/assets/home/icon2.png",
         "title":"Empower your team",
         "titleItem1":"More flexible teams",
-        "descItem1":"Increase your team's performance and productivity by spending less resources to do more",
+        "descItem1":"Increase your team's performance and productivity by spending less to do more.",
         "titleItem2":"Standardize your projects",
-        "descItem2":"Easily and quickly centralize your API's services.",
+        "descItem2":"Systemize your projects easily, and concentrate API's services in minutes.",
         "titleItem3":"Deliver more with less effort",
-        "descItem3":"Challenge the environment's status quo and get more done by eliminating repetitive tasks."
+        "descItem3":"Challenge the status quo and get more done by eliminating repetitive tasks."
     },
     {
         "id":2,
         "image":"/assets/home/icon3.png",
         "title":"Get closer to your customer",
         "titleItem1":"Fast projects",
-        "descItem1":"Bring reliability to your application by following best practices on the market while keeping image modern and professional",
+        "descItem1":"Bring reliability to your application keeping it modern and professional.",
         "titleItem2":"Faster Feedback",
-        "descItem2":"Control your projects in an easy, organized way and get feedback faster",
+        "descItem2":"Constructive assessments to control and organize your projects easier.",
         "titleItem3":"Optimize your processes",
-        "descItem3":"Improve the development of your projects using a productivity cycle that ensures continuous delivery"
+        "descItem3":"Improve development using a productivity cycle that ensures continuous delivery."
     }
 ]

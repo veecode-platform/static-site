@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import style from './_PricingSection.module.scss'
+import style from './PricingSection.module.scss'
 
 const PricingSection = () => {
   return (

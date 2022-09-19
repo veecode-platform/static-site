@@ -1,11 +1,11 @@
 import { Button } from "../../components";
-import style from "../../../styles/_Failed.module.scss";
+import style from "../../../styles/Failed.module.scss";
 import Link from "next/link";
 import dynamic from "next/dynamic";
 
 const DefaultPage = dynamic(()=> import('../../components/defaultPage/DefaultPage'));
 
-const SuccessImage = "/assets/icons/failed.png";
+const FailedImage = "/assets/icons/failed.png";
 
 const Failed = () => {
   return (
@@ -15,8 +15,8 @@ const Failed = () => {
       <article className={style.content}>
         <div className={style.content__image}>
           <img
-            src={SuccessImage}
-            alt="Success Animation"
+            src={FailedImage}
+            alt="Failed Animation"
              />
         </div>
         <div className={style.content__details}>

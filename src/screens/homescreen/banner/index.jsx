@@ -1,4 +1,4 @@
-import style from './_Banner.module.scss'
+import style from './Banner.module.scss'
 
 const Element1 = "assets/home/element1.png";
 const Element2 = "assets/home/element2.png";

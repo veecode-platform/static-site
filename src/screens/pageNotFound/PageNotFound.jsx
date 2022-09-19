@@ -1,5 +1,5 @@
 import { DefaultPage } from "../../components";
-import style from "../../../styles/_PageNotFound.module.scss";
+import style from "../../../styles/PageNotFound.module.scss";
 import Image from "next/image";
 
 const ImageNotFound = "/assets/notFound/404.png";
