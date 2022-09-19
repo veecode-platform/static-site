@@ -24,7 +24,8 @@ const OptimizationAndSupport = () => {
                  that boost productivity and eliminate repetitive tasks.
               </li>
               <li>
-                <strong>VKPR</strong> is our solution for Cloud Infrastructure. With the CLI, you will provide a Kubernetes cluster to attend to your company&apos;s needs. 
+                <strong>VKPR</strong> is our solution for Cloud Infrastructure. With the CLI, you will provide a Kubernetes 
+                cluster to attend to your company&apos;s needs. 
               </li>
             </ul>
             <div className={style.desc__buttonWrapper}>
