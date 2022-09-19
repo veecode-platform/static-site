@@ -52,7 +52,10 @@ export const WrapperCheckbox = styled(Wrapper)`
     align-items: center;
     justify-content: flex-start;
     gap: 0.5vw;
-    height: 60px;  
+    height: 60px; 
+    @media (max-width: 420px) {
+        gap: 3vw;
+    }
 `;
 
 export const Checkboxfield = styled.input.attrs({type:"checkbox"})`
@@ -60,6 +63,10 @@ export const Checkboxfield = styled.input.attrs({type:"checkbox"})`
     width: 1.1vw;
     height: 1.1vw;
     accent-color: #33FFCE;
+    @media (max-width: 420px) {
+        width: 4vw;
+        height: 4vw;
+    }
 `;
 
 export const CheckboxLabel = styled(Label)`

@@ -6,14 +6,24 @@ import storage from "../../../utils/storage";
 
 const Checkout = () => {
   const [userData, setUserData] = useState({});
-  const [price, setPrice] = useState("")
+  const [price, setPrice] = useState();
   const [billing, setBilling] = useState(true);
 
+  const getDateFormatted = (displayMonth) => {
+    let date = new Date();
+    date.setDate(date.getDate() + 15);
+    const day = date.getDate();
+    const month = date.toLocaleString('en-us', { month: 'long' });
+    const abv = day == 1 ? "st" : day == 2 ? "nd" : day == 3 ? "rd" : "th";
+    if(displayMonth) return `${day}${abv} of ${month}.`;
+    return `${day}${abv}.`;
+  };
 
-  useEffect(()=>{
-    setUserData(JSON.parse(storage.getData("user")))
-    if(Object.keys(userData).length !== 0 ) handlePrice();
-  }, [price])
+  const formatter = new Intl.NumberFormat('en-US', {
+    style: 'currency',
+    currency: 'USD',
+    maximumFractionDigits: 0
+  });
 
   const handleBilling = () => { setBilling(!billing) }
   const handlePrice = () => {
@@ -26,6 +36,11 @@ const Checkout = () => {
   }
 
   useEffect(()=>{
+    setUserData(JSON.parse(storage.getData("user")))
+    if(Object.keys(userData).length !== 0 ) handlePrice();
+  }, [price])
+
+  useEffect(()=>{
     handlePrice()
   }, [billing])
 
@@ -33,21 +48,12 @@ const Checkout = () => {
   let info = {
     plan: userData.plan,
     sla: userData.plan == "premium" ? "3 days" : "5 days",
-    price: price,
+    price: formatter.format(price),
+    priceA: formatter.format(price*12),
+    priceDeleted: price*12*1.1112,
     users: "10",
     billing: billing
   }
-
-  const getDateFormatted = (displayMonth) => {
-    let date = new Date();
-    date.setDate(date.getDate() + 15);
-    const day = date.getDate();
-    const month = date.toLocaleString('en-us', { month: 'long' });
-    const abv = day == 1 ? "st" : day == 2 ? "nd" : day == 3 ? "rd" : "th";
-    if(displayMonth) return `${day}${abv} of ${month}.`;
-    return `${day}${abv}.`;
-  };
-
   return (
     <DefaultPage 
       titleBar="disable"
@@ -68,7 +74,7 @@ const Checkout = () => {
                   {info.plan == "premium" ? <p>Priorization for bug issues</p>: null}
                 </div>
                 <div className={style.info__right}>
-                  <p>${info.price}/mo</p>
+                  <p>{info.price}/mo</p>
                   <p>{info.sla}</p>
                 </div>
               </div>
@@ -91,19 +97,19 @@ const Checkout = () => {
               <div className={style.info}>
                 <div className={style.info__left}>
                   <p>After the 15th day of trial:</p>
-                  <p style={billing ? {marginBottom: "1em"} : null}>Due {billing ? "yearly" : "monthly"}:</p>
-                  {!billing ? <p style={{ marginBottom: "1em" }}>Yearly: </p>: null}
-                  <p>
+                  <p>Due {billing ? "yearly" : "monthly"}:</p>
+                  {!billing ? <p >Yearly: </p>: null}                 
+                  <p style={{marginTop: "1em"}}>
                     Billed {billing ? "yearly" : "monthly" } on the <strong>{getDateFormatted(billing)}</strong>
                   </p>
                 </div>
                 <div className={style.info__right}>
-                  <p>${billing ? info.price*12 : info.price}</p>
+                  <p>{billing ? info.priceA : info.price}</p>
                   <p>
-                    <strong>${billing ? info.price*12 : info.price}</strong>
+                  {billing ? <del>{formatter.format(info.priceDeleted)}</del> : null}&nbsp;<strong>{billing ? info.priceA : info.price}</strong>
                   </p>
-                  {!billing ? <p style={{color:"red"}}><strong>${info.price*12}</strong></p>: null}
-                </div>
+                  {!billing ? <p style={{color:"red"}}><strong>{info.priceA}</strong></p>: null}
+                </div>               
               </div>
 
               <div className={style.guarantee}>

@@ -13,7 +13,7 @@ export const UsePatchData = async (values) => {
         "plan-id" : values.planId
     }
 
-    const { data } = await api.patch(`/${id}`, model)
+    const { data } = await api.patch(`/purchases/${id}`, model)
 
     storage.updateData("user", model)
 

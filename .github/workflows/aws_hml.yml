@@ -20,6 +20,16 @@ jobs:
         run: | 
            yarn version
            yarn
+           cat > '.env.local' <<EOT
+           NEXT_PUBLIC_ANALYTICS_ID=${{ secrets.ANALYTICS_ID }}
+           NEXT_PUBLICLAMBDA_BASE_URL=${{ secrets.LAMBDA_BASE_URL }}
+           NEXT_PUBLIC_PAYPAL_CLIENT_ID=${{ secrets.PAYPAL_CLIENT_ID }}
+           NEXT_PUBLIC_PAYPAL_PREMIUM_ANUAL=${{ secrets.PAYPAL_PREMIUM_ANUAL }}
+           NEXT_PUBLIC_PAYPAL_PREMIUM_MONTHLY=${{ secrets.PAYPAL_PREMIUM_MONTHLY }}
+           NEXT_PUBLIC_PAYPAL_STANDARD_ANUAL=${{ secrets.PAYPAL_STANDARD_ANUAL }}
+           NEXT_PUBLIC_PAYPAL_STANDARD_MONTHLY=${{ secrets.PAYPAL_STANDARD_MONTHLY }}
+
+           EOT
            yarn build
            ls -ltrh out
 

@@ -13,7 +13,7 @@ export const UsePostData = async (values) => {
       "phone": values.cel
     }
 
-    const { data } = await api.post("", model)
+    const { data } = await api.post("/purchases", model)
 
     storage.setData("user", JSON.stringify({...values, id: data.id}))
 

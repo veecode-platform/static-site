@@ -1,5 +1,5 @@
 import { Wrapper} from "./styles";
-import React, {useState, useEffect} from "react";
+import React, {useEffect} from "react";
 import { PayPalScriptProvider, PayPalButtons, usePayPalScriptReducer } from "@paypal/react-paypal-js";
 import alerts from "../../../utils/alerts";
 import { useRouter } from 'next/router'
@@ -43,21 +43,16 @@ const WraperButton = ({plan, disabled}) =>{
                 }}
                 onApprove={ async (data, actions) => {
                     return actions.subscription.get().then(async (details)=>{
-                        //console.log("Details: ", details);
-                        //console.log("Data: ", data)
                         const patch = {
                             orderId: data.orderID,
                             subscriptionId: data.subscriptionID,
                             planId: details.plan_id
                         }
                         const dataPatched =  await UsePatchData(patch)
-                        //console.log("Patched", dataPatched);
-                        //alerts.success("Success!")
                         router.push("/success")
                     });                
                 }}
                 onCancel={ async (data, actions) => {
-                    //console.log("Log cancel: ", data, actions)
                     alerts.warning("Canceled")
                 }} 
                 onError={ async (data, actions) => {
@@ -72,34 +67,19 @@ const WraperButton = ({plan, disabled}) =>{
 export const PaypalComponent = ({disabled, plan}) => {
 
     const initialOptions = {
-        //sandobx"client-id": "AUTvrP9lwGpVkbRcqLXOkyFjrmYE__0dl15nncMeyELndDvXCYnE1DElLJETUsoplegGy0WNR30TyIwT",
-        "client-id": "AWlXI0P_nEhVbB0mZK3e6RL7KTc7mD0xsCGKc6byAvoM6kgZLERKm_xfXnoy6QQrVh-DPqv7yAcXwo97",
-        //currency: "USD",
+        "client-id": process.env.NEXT_PUBLIC_PAYPAL_CLIENT_ID,
         intent: "subscription",
         components: "buttons",
         vault: true
     };
 
-/*SANDOBOX
-P-62H3948438124174PMMSIT4Y
-Standard Yearly
+    const standardYearly = process.env.NEXT_PUBLIC_PAYPAL_STANDARD_ANUAL;
+    const stadardMonthly = process.env.NEXT_PUBLIC_PAYPAL_STANDARD_MONTHLY;
+    const premiumYearly = process.env.NEXT_PUBLIC_PAYPAL_PREMIUM_ANUAL;
+    const premiumMonthly = process.env.NEXT_PUBLIC_PAYPAL_PREMIUM_MONTHLY;
 
-P-4GC62224405371731MMSIPRQ
-Standard Monthly
-
-P-83415534J8087031TMMSIOZQ
-Premium Yearly
-
-P-6BT27473RX516543MMMSINJA
-Premium Monthly
-    */
-   //const standardYearly = "P-62H3948438124174PMMSIT4Y";
-   //const stadardMonthly = "P-4GC62224405371731MMSIPRQ";
-   //const premiumYearly = "P-83415534J8087031TMMSIOZQ";
-   //const premiumMonthly = "P-6BT27473RX516543MMMSINJA";
-
-    //const supportValue = plan.plan == "premium" ? plan.billing ? premiumYearly : premiumMonthly : plan.billing ? standardYearly : stadardMonthly
-    const supportValue = plan.plan == "premium" ? "P-7V362987MT3340127MMSNAZQ" : "P-7GD18375GX3788334MMSLRII";
+    const supportValue = plan.plan == "premium" ? plan.billing ? premiumYearly : premiumMonthly : plan.billing ? standardYearly : stadardMonthly
+    
     return(
         <Wrapper>          
             <PayPalScriptProvider options={initialOptions}>

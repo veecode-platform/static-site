@@ -8,13 +8,13 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       {/* Global site tag (gtag.js) - Google Analytics */}
-      <Script src={"https://www.googletagmanager.com/gtag/js?id=G-VH5ZB0M4YZ"} strategy="lazyOnload"></Script>
+      <Script src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_ANALYTICS_ID}`} strategy="lazyOnload"></Script>
       <Script id="google-tag-script-function" strategy="lazyOnload">
         {`window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
 
-        gtag('config', 'G-VH5ZB0M4YZ');`}
+        gtag('config', '${process.env.NEXT_PUBLIC_ANALYTICS_ID}');`}
       </Script>
       {/*Hotjar Tracking Code for https://platform.vee.codes/ */}
       <Script id="hotjar-script-function" strategy="lazyOnload">

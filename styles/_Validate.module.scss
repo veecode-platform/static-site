@@ -23,7 +23,7 @@
                 padding: 1em 0 6em 0;
             }
             //mobile(S)
-             @include for-phoneS-only {
+            @include for-phoneS-only {
                 @include screenSize(95%,auto);
                 padding: 1em 0;
             }
@@ -37,6 +37,9 @@
                 padding: 1vw 1vw;
                 background-color: $color12;
                 border-radius: 5%;
+                @include for-phoneS-only {
+                    width: 95vw;
+                }
 
                 .form{
                     @include displayFlex(center, center, column);
