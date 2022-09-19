@@ -3,10 +3,8 @@
 .card {
     @include screenSize(30%, auto);
     @include displayFlex(center, center, column);
-    // opacity: 0.95;
     margin: 1%;
     cursor: pointer;
-    // transition: all 0.5s linear;
     //tablet
     @include for-tablet-only {
         @include screenSize(30%, auto);
@@ -22,11 +20,6 @@
         @include screenSize(85%, auto);
         margin: 1em 0;
     }
-    // &:hover {
-    //     opacity: 1;
-    //     transition: all 0.5s linear;
-    //     filter: brightness(120%);
-    // }
     &__icon {
         @include screenSize(85%, auto);
         @include displayFlex(center, center, row);
