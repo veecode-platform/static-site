@@ -7,8 +7,8 @@ const Icon = "assets/home/image3.webp";
 
 const OptimizeYourBusiness = () => {
   return (
-    <article className={style.content}>
-      <div className={style.content__contentWrapper}>
+    <section className={style.content}>
+      <article className={style.content__contentWrapper}>
         <div className={style["content__contentWrapper-text"]}>
           <div className={style.title}>
             <h2>
@@ -46,8 +46,8 @@ const OptimizeYourBusiness = () => {
                 />
           </div>
         </div>
-      </div>
-    </article>
+      </article>
+    </section>
   );
 };
 
