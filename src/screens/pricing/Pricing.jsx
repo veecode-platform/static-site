@@ -11,8 +11,8 @@ const Pricing = () => {
       if ( window.innerWidth > 1300){
           setTimeout(() => {
             window.scrollTo({
-              top: 350,
-              left: 350,
+              top: 360,
+              left: 300,
               behavior: 'smooth'
             });
           }, 500);
