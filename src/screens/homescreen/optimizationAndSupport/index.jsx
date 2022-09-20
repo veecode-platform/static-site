@@ -30,7 +30,7 @@ const OptimizationAndSupport = () => {
             </ul>
             <div className={style.desc__buttonWrapper}>
               <Link
-                href="https://docs.platform.vee.codes/"
+                href="https://docs.platform.vee.codes/docs/intro"
                 passHref
               >
                 <a target="_blank">
