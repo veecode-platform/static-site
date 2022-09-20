@@ -93,7 +93,7 @@
         @include resetList();
         background-color: $color2;
         border-radius: 0 0 2em 2em;
-        padding-bottom: 1em;
+        padding: 0.5em 0 1.5em 0;
         //tablet
         @include for-tablet-only {
             // padding: 10px 0;
