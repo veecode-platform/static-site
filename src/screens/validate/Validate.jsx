@@ -4,8 +4,23 @@ import style from '../../../styles/Validate.module.scss';
 import { Formik, Form} from 'formik';
 import { object, string, boolean} from 'yup';
 import { UsePostData } from '../../hooks/UsePostData';
+import { useEffect } from 'react';
 
 const Validate = () =>{
+
+    useEffect(()=>{
+        if (typeof window !== "undefined"){
+          if ( window.innerWidth > 1300){
+              setTimeout(() => {
+                window.scrollTo({
+                  top: 100,
+                  left: 300,
+                  behavior: 'smooth'
+                });
+              }, 500);
+          }
+        }
+      },[]);
 
     const formSchema = object({
         name: string().required("*required"),
