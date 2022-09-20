@@ -44,7 +44,6 @@ const Checkout = () => {
     handlePrice()
   }, [billing])
 
-
   let info = {
     plan: userData.plan,
     sla: userData.plan == "premium" ? "3 days" : "5 days",
@@ -54,6 +53,7 @@ const Checkout = () => {
     users: "10",
     billing: billing
   }
+
   return (
     <DefaultPage 
       titleBar="disable"
@@ -64,77 +64,100 @@ const Checkout = () => {
           <Breadcrumb active={3} />
           <div className={style.content__options}>
             <div className={style["content__options-infoBoxWrapper"]}>
+
               <div className={style.box}>
                 <h1>Order summary</h1>
               </div>
+
               <div className={style.info}>
-                <div className={style.info__left} >
-                  <p>Support plan: <strong>{info.plan}</strong></p>
-                  <p>SLA</p>
-                  {info.plan == "premium" ? <p>Priorization for bug issues</p>: null}
+                <div className={style.letterWrapper}>
+                  <div className={style.letterWrapper__left}>
+                    <p>Support plan: <strong>{info.plan}</strong></p>
+                  </div>
+                  <div className={style.letterWrapper__right}>
+                    <p>{info.price}/mo</p>
+                  </div>
                 </div>
-                <div className={style.info__right}>
-                  <p>{info.price}/mo</p>
-                  <p>{info.sla}</p>
+
+                <div className={style.letterWrapper}>
+                  <div className={style.letterWrapper__left}>
+                    <p>SLA</p>
+                  </div>
+                  <div className={style.letterWrapper__right}>
+                    <p>{info.sla}</p>
+                  </div>
                 </div>
+
+                {info.plan == "premium" && <div className={style.letterWrapper}>
+                  <div className={style.letterWrapper__center}>
+                    <p>Priorization for bug issues</p>
+                  </div>                
+                </div>}
               </div>
 
               <div className={style.info}>
-                <div className={style.info__left}>
+                <div>
                   <p>{info.users} users</p>
                   <p>Devportal</p>
                   <p>Safira-cli</p>
                   <p>VKPR</p>
                 </div>
-                <div className={style.info__right}>
-                  <p></p>
-                  <p></p>
-                  <p></p>
-                  <p></p>
-                </div>
               </div>
 
               <div className={style.info}>
-                <div className={style.info__left}>
-                  <p>After the 15th day of trial:</p>
-                  <p>Due {billing ? "yearly" : "monthly"}:</p>
-                  {!billing ? <p >Yearly: </p>: null}                 
-                  <p style={{marginTop: "1em"}}>
-                    Billed {billing ? "yearly" : "monthly" } on the <strong>{getDateFormatted(billing)}</strong>
-                  </p>
+                <div className={style.letterWrapper}>
+                  <div className={style.letterWrapper__left}>
+                    <p>After the 15th day of trial:</p>
+                  </div>
+                  <div className={style.letterWrapper__right}>
+                    <p>{billing ? info.priceA : info.price}</p>
+                  </div>
                 </div>
-                <div className={style.info__right}>
-                  <p>{billing ? info.priceA : info.price}</p>
-                  <p>
-                  {billing ? <del>{formatter.format(info.priceDeleted)}</del> : null}&nbsp;<strong>{billing ? info.priceA : info.price}</strong>
-                  </p>
-                  {!billing ? <p style={{color:"red"}}><strong>{info.priceA}</strong></p>: null}
-                </div>               
-              </div>
 
+                <div className={style.letterWrapper}>
+                  <div className={style.letterWrapper__left}>
+                    <p>Due {billing ? "yearly" : "monthly"}:</p>
+                  </div>
+                  <div className={style.letterWrapper__right}>
+                    <p>
+                      {billing ? <del>{formatter.format(info.priceDeleted)}</del> : null}&nbsp;<strong>{billing ? info.priceA : info.price}</strong>
+                    </p>
+                  </div>
+                </div>
+
+                {!billing && <div className={style.letterWrapper}>
+                  <div className={style.letterWrapper__left}>
+                    <p >Yearly: </p>   
+                  </div>
+                  <div className={style.letterWrapper__right}>
+                    <p style={{color:"red"}}><strong>{info.priceA}</strong></p>
+                  </div>
+                </div>
+                }
+
+                <div className={style.letterWrapper} style={{marginTop: "1em"}}>
+                  <div className={style.letterWrapper__center}>
+                    <p>Billed {billing ? "yearly" : "monthly" } on the <strong>{getDateFormatted(billing)}</strong></p>
+                  </div>                
+                </div>
+              </div>
+              
               <div className={style.guarantee}>
                 <div className={style.guarantee__item}>
                   <FaCheck color="#33FFCE" />
                   <p>15 day trial</p>
                 </div>
 
-                <div
-                  className={
-                    style.guarantee__item
-                  }
-                >
+                <div className={style.guarantee__item}>
                   <FaCheck color="#33FFCE" />
                   <p>Annual contract</p>
                 </div>
-                <div
-                  className={
-                    style.guarantee__item
-                  }
-                >
+
+                <div className={style.guarantee__item}>
                   <FaCheck color="#33FFCE" />
                   <p>Full Access to our knowledge base</p>
                 </div>
-              </div>
+              </div>             
             </div>
             <div className={style["content__options-infoBoxWrapper"]}>
               <Switch label={"subscription"} isOn={billing} handleToggle={handleBilling}/>

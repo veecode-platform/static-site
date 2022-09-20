@@ -30,7 +30,6 @@ jobs:
            NEXT_PUBLIC_PAYPAL_STANDARD_MONTHLY=${{ secrets.PAYPAL_STANDARD_MONTHLY }}
 
            EOT
-           cat .env.local 
            yarn build
            ls -ltrh out
 

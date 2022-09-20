@@ -49,19 +49,28 @@
                     color: $color2;            
                 }
                 .info{
-                    @include displayFlex(center, flex-start, row);
+                    @include displayFlex(center, flex-start, column);
                     background-color: $color2;
                     color: $color3;
                     border-radius: 1vh;
                     width: 100%;
                     padding: 0.5em;
-                    &__left{
-                        width: 65%;
+                    
+                    .letterWrapper{
+                        @include displayFlex(center, flex-start, row);
+                        width: 100%;
+                        &__left{
+                            width: 65%;
+                        }
+                        &__right{
+                            text-align: right;
+                            width: 35%;                   
+                        }
+                        &__center{
+                            width: 100%;
+                        }
                     }
-                    &__right{
-                        text-align: right;
-                        width: 35%;
-                    }
+                    
                 }
                 .guarantee{
                     @include displayFlex(flex-start, flex-start, column);
