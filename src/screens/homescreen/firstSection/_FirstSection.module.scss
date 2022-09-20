@@ -9,7 +9,7 @@
         padding: 8vh 0;    
     }
     &__background{
-        @include screenSize(100%, 100%);
+        @include screenSize(100vw, 100%);
         position: absolute;
         z-index: 0;
         //mobile(M)
@@ -119,11 +119,11 @@
                 color: $color2;
                 //mobile(M)
                 @include for-phone-only {
-                    @include typography(18px, center, 1.4em, 300);
+                    @include typography(3vw, center, 1.4em, 300);
                 }
                 //mobile(S)
                 @include for-phoneS-only {
-                    font-size: 16px;
+                    font-size: 4vw;
                 }
             }
         }

@@ -41,12 +41,12 @@
         z-index: 1;
         //mobile(M)
         @include for-phone-only {
-            @include screenSize(85%, auto);
+            @include screenSize(80%, auto);
             padding-top: 1.5em;
         }
         //mobile(S)
         @include for-phoneS-only {
-            @include screenSize(80%, auto);
+            @include screenSize(85%, auto);
         }
         &__text {
             @include screenSize(60%, auto);
@@ -58,19 +58,19 @@
             }
             &-title {
                 @include screenSize(100%, auto);
-                padding: 2em 0;
+                padding: 2.2em 0;
                 span {
                     color: $color1;
                 }
                 h2 {
-                    @include typography(2.5vw, start, 1.2em, 600);
+                    @include typography(2.6vw, start, 1.2em, 600);
                     //mobile(M)
                     @include for-phone-only {
-                        @include typography(2.4em, center, 1.2em, 600);
+                        @include typography(6.5vw, center, 1.2em, 600);
                     }
                     //mobile(S)
                     @include for-phoneS-only {
-                        font-size: 38px;
+                        font-size: 11vw;
                     }
                 }
             }
@@ -84,31 +84,36 @@
                     font-size: 1.1vw;
                     //mobile(M)
                     @include for-phone-only {
-                        font-size: 1.2em;
+                        font-size: 3.1vw;
                         text-align: center;
                         margin-bottom: .5em;
                     }
                     //mobile(S)
                     @include for-phoneS-only {
-                        font-size: 3.98vw;
+                        font-size: 4.5vw;
                     }
                 }
                 .list {
                     list-style-position: inside;
                     padding: 0.9em 0;
+                    //mobile(M)
+                    @include for-phone-only{
+                        @include screenSize(90%,auto);
+                    }
                     //mobile(S)
                     @include for-phoneS-only{
                         @include screenSize(100%,auto);
+                        margin: 1.1em 0;
                     }
                     li {
-                        @include typography(1vw, start, 1.8em, 300);
+                        @include typography(1.09vw, start, 1.8em, 300);
                         //mobile(M)
                         @include for-phone-only {
-                            @include typography(1.2em, center, 1.8em, 300);
+                            @include typography(3vw, center, 1.8em, 300);
                         }
                         //mobile(S)
                         @include for-phoneS-only {
-                            font-size: 14px;
+                            font-size: 4vw;
                         }
                     }
                 }

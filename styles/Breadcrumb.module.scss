@@ -1,7 +1,7 @@
 @import "../abstract/functions", "../abstract/variables", "../abstract/responsive";
 
 .breadcrumb{
-    @include screenSize(40%,auto);
+    @include screenSize(45%,auto);
     @include displayFlex(center, center, row);
     padding: 1.5em 0;
     border-radius: 1.3em;

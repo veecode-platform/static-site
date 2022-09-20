@@ -4,7 +4,7 @@
     @include screenSize(100%, auto);
     @include displayFlex(center, center, column);
     background-color: $color3;
-    @include backgroundImage("/assets/home/bg2.png");
+    @include backgroundImage("/assets/home/bg2.webp");
     margin-top: -0.5em;
     //mobile(M)
     @include for-phone-only {
@@ -35,7 +35,7 @@
             }
             //mobile(S)
             @include for-phoneS-only {
-                font-size: 40px;
+                font-size: 10vw;
             }
         }
     }

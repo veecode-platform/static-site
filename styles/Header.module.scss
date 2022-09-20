@@ -7,7 +7,7 @@
     .content {
         @include screenSize(40%, auto);
         @include displayFlex(center, center, row);
-        padding: 2vh 0;
+        padding: 1.5vh 0;
         z-index: 99;
         //mobile(M)
         @include for-phone-only{
@@ -15,8 +15,8 @@
         }
 
         &__logo {
-            @include screenSize(200px, auto);
-            max-width: 200px;
+            @include screenSize(10vw, auto);
+            min-width: 180px;
             //tablet
             @include for-tablet-only{
                 @include screenSize(150px, auto);

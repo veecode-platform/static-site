@@ -38,11 +38,25 @@ const Checkout = () => {
   useEffect(()=>{
     setUserData(JSON.parse(storage.getData("user")))
     if(Object.keys(userData).length !== 0 ) handlePrice();
-  }, [price])
+  }, [price]);
 
   useEffect(()=>{
     handlePrice()
-  }, [billing])
+  }, [billing]);
+
+  useEffect(()=>{
+    if (typeof window !== "undefined"){
+      if ( window.innerWidth > 1300){
+          setTimeout(() => {
+            window.scrollTo({
+              top: 115,
+              left: 300,
+              behavior: 'smooth'
+            });
+          }, 500);
+      }
+    }
+  },[]);
 
   let info = {
     plan: userData.plan,
