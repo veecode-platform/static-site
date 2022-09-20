@@ -89,7 +89,7 @@ const TermsOfService = () => {
           SLA.
         </p>
         <p>
-          2.4 - This document also includes specific <a>Service Terms</a> that
+          2.4 - This document also includes specific Service Terms that
           provide more detail for such services.
         </p>
         {/* Customers and Users */}
@@ -210,7 +210,7 @@ const TermsOfService = () => {
           code is expected to be manipulated and tested by the customer.
         </p>
         <p>
-          6.4 - Our &quot;Services&quot; include &quot;best effort&quot; support, as defined in <a> Service Terms</a>.
+          6.4 - Our &quot;Services&quot; include &quot;best effort&quot; support, as defined in  Service Terms.
         </p>
         <p>
           6.5 - Therefore under no circumstances and in no event &quot;we&quot; (our
@@ -264,11 +264,11 @@ const TermsOfService = () => {
         <p>
           1.1 - An active subscription provides access to restricted assets and
           to services, including support services. These are always subject to
-          the <a>General Terms</a> in addition to the terms in this section.
+          the General Terms in addition to the terms in this section.
         </p>
         <p>
-          1.2 - Service renewal or termination is governed by the terms in <a>Renewal,
-             Upgrade & Termination</a>.
+          1.2 - Service renewal or termination is governed by the terms in Renewal,
+             Upgrade & Termination.
         </p>
         {/* SERVICES DEFINITION */}
         <h2>2. SERVICES DEFINITION</h2>
@@ -292,7 +292,7 @@ const TermsOfService = () => {
         <p>
           2.4 - <strong>Support channels:</strong> customers will choose support
           level when subscribing. Support can be upgraded or downgraded, as
-          explained in <a>Renewal, Upgrade & Termination</a>. Current support
+          explained in Renewal, Upgrade & Termination. Current support
           levels are &quot;Basic&quot; (5 business days SLA) and &quot;Premium&quot; (2 business
           days SLA).
         </p>
