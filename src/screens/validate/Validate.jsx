@@ -13,7 +13,7 @@ const Validate = () =>{
           if ( window.innerWidth > 1300){
               setTimeout(() => {
                 window.scrollTo({
-                  top: 100,
+                  top: 115,
                   left: 300,
                   behavior: 'smooth'
                 });
