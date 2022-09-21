@@ -50,8 +50,8 @@ const Pricing = () => {
               title="Premium Support"
               subtitle="10 Users"
               desc="Includes 3 business days of SLA"
-              price="$1134/mo*"
-              sub={["*over annual subscription", "$1260/mo"]}
+              price="$1260/mo*"
+              sub={["*over annual subscription", "$1134/mo"]}
             >
               <Link href="/validate?plan=premium">
                 <a>
