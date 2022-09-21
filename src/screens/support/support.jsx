@@ -26,7 +26,7 @@ const Support = () => {
       {/* Benefits */}
       <SupportBenefits />
       {/* Pricing Section */}
-      {/* <PricingSection /> */}
+      <PricingSection />
       {/* Contact Bar */}
       <ContactBar />
     </DefaultPage>
