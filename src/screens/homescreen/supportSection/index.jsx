@@ -42,16 +42,16 @@ const SupportSection = () => {
             </ul>
           </div>
           <div className={style["content__text-buttonWrapper"]}>
-            {/* <Link href="/pricing" prefetch={false}>
+            <Link href="/pricing" prefetch={false}>
               <a>
                 <Button>Buy Now</Button>
               </a>
-            </Link> */}
-            <Link href="/support" prefetch={false}>
+            </Link>
+            {/* <Link href="/support" prefetch={false}>
               <a>
                 <Button>Support</Button>
               </a>
-            </Link>
+            </Link> */}
           </div>
         </div>
       </article>
