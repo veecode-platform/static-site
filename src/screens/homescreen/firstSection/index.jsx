@@ -53,17 +53,17 @@ const FirstSection = () => {
         </div>
         <div className={style.content__buttons}>
           {/* Change for How it Works */}
-          <Link href="https://docs.platform.vee.codes/docs/intro" passHref>
+          {/* <Link href="https://docs.platform.vee.codes/docs/intro" passHref>
             <a target="_blank">
               <Button>Get Started</Button>
             </a>
-          </Link>
+          </Link> */}
 
-          {/* <Link href="/pricing" passHref>
+          <Link href="/pricing" passHref>
             <a>
               <Button>Buy Now</Button>
             </a>
-          </Link> */}
+          </Link>
         </div>
       </article>
     </section>
