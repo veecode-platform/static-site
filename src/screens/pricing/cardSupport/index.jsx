@@ -1,5 +1,7 @@
 import style from './CardSupport.module.scss';
 
+const IconOffer = '/assets/icons/special-offer.png';
+
 const CardSupport = ({
     title,
     subtitle,
@@ -10,6 +12,7 @@ const CardSupport = ({
 }) => {
   return (
     <div className={style.content}>
+        <img src={IconOffer} alt='special offer' className={style.iconOffer}/>
         <div className={style.content__text}>
             <div className={style["content__text-title"]}>
                 <h3>{title}</h3>
