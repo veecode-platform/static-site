@@ -14,26 +14,7 @@ const nextConfig = {
   },
   compiler: {
     styledComponents: true
-  },
-  async redirects() {//remover com tudo em prod ok
-    return [
-      {
-        source: '/pricing', 
-        destination: '/404',
-        permanent: false,       
-      },
-      {
-        source: '/validate', 
-        destination: '/404',
-        permanent: false,               
-      },
-      {
-        source: '/checkout', 
-        destination: '/404',
-        permanent: false,           
-      },
-    ]
-  },
+  }
 }
 
 module.exports = nextConfig;

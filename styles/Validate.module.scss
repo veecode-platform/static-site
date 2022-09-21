@@ -36,9 +36,10 @@
                 width: 415px;
                 padding: 1vw 1vw;
                 background-color: $color12;
-                border-radius: 5%;
+                border-radius: 1vh;
                 @include for-phoneS-only {
                     width: 95vw;
+                    padding: 1.5vh 3vw;
                 }
 
                 .form{

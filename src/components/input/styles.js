@@ -14,7 +14,7 @@ export const LabelWraper = styled.div`
 `;
 
 export const Label = styled.label`
-    color: ${props => props.error ? "#F00014" : "white" };
+    color: ${props => props.error ? "#DB0000" : "white" };
     font-size: small;
     min-width: 50%;
     text-align: ${props => props.errorLabel ? "right" : "left"};
@@ -25,7 +25,7 @@ export const InputField = styled.input`
     border-radius: 4px;
     height: 48px;
     outline: none;
-    border: ${props => props.error ? "2px solid #F00014" : "2px solid #33FFCE" };
+    border: ${props => props.error ? "1px solid #DB0000" : "1px solid #33FFCE" };
     font-size: medium;
     padding: 0.25em 0.5em;
 
@@ -35,7 +35,7 @@ export const InputField = styled.input`
     }
 
     :focus{
-        border: 2px solid black;
+        border: 1px solid #33FFCE;
         font-size: large;
     }
 
