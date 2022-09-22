@@ -54,7 +54,7 @@ const Validate = () =>{
                                 validationSchema={formSchema}
                                 onSubmit={async (values)=>{
                                     const response = await UsePostData(values);
-                                    //console.log(values, response);
+                                    console.log(values, response);
                                     await handleFormRedirect();                         
                                 }}
                                 >

@@ -47,6 +47,11 @@ const SupportSection = () => {
                 <Button>Buy Now</Button>
               </a>
             </Link>
+            {/* <Link href="/support" prefetch={false}>
+              <a>
+                <Button>Support</Button>
+              </a>
+            </Link> */}
           </div>
         </div>
       </article>

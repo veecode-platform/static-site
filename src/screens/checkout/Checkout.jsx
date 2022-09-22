@@ -28,7 +28,7 @@ const Checkout = () => {
   const handleBilling = () => { setBilling(!billing) }
   const handlePrice = () => {
     if(userData.plan == "premium" ){
-      billing ? setPrice(944) : setPrice(1049)
+      billing ? setPrice(1134) : setPrice(1260)
     }
     else{
       billing ? setPrice(809) : setPrice(899)
@@ -63,7 +63,7 @@ const Checkout = () => {
     sla: userData.plan == "premium" ? "3 days" : "5 days",
     price: formatter.format(price),
     priceA: formatter.format(price*12),
-    priceDeleted: price*12*1.1112,
+    priceDeleted: price*12*(userData.plan == "premium" ? 1.1111 : 1.1112),
     users: "10",
     billing: billing
   }

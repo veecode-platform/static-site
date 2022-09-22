@@ -56,7 +56,7 @@ const SupportBenefits = () => {
           </h2>
           <p className={style["card__details-desc"]}>
             All our subscribers havesubscribers users have access to our
-            <strong>Service Portal</strong> where they can send and follow the process of fulfilling all their
+            {" "}<strong>Service Portal</strong> where they can send and follow the process of fulfilling all their
             requests.
           </p>
         </div>
