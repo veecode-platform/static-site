@@ -103,7 +103,7 @@
 EFFECTS
 **/
 @mixin glassEffect() {
-    background: rgba(116, 204, 255, 0.178);
+    background: #091d292d;
     backdrop-filter: blur(13.5px);
     -webkit-backdrop-filter: blur(13.5px);
     border-radius: 10px;
