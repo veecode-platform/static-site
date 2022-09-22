@@ -4,22 +4,19 @@ import style from '../../../styles/Switch.module.scss';
 const SwitchComponent = ({label, isOn, handleToggle}) => {
     return (
       <div className={style.wrapper}>
-        <div className={style["wraper-switch"]}>
-            <input
-                checked={isOn}
-                onChange={handleToggle}
-                className={style["switch-checkbox"]}
-                id={label}
-                type="checkbox"
-            />
-            <label
-                className={style["switch-label"]}
-                htmlFor={label}
-            >
-                <span className={style[`switch-button`]}/>
-            </label>
-            <span>{isOn ? "Annual" : "Monthly"}</span>
+        <div className={style.switchButton}>
+          <input
+            type="checkbox"
+            checked={isOn}
+            onChange={handleToggle}
+            id={label}
+          />
+          <label
+            htmlFor={label}
+          >
+            <strong>{isOn ? "Annual" : "Monthly"}</strong></label>
         </div>
+
       </div>
     );
   };
