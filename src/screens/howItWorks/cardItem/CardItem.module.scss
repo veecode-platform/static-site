@@ -1,0 +1,28 @@
+@import "../abstract/functions", "../abstract/variables", "../abstract/responsive";
+
+.cardItem{
+    @include screenSize(100%,auto);
+    @include displayFlex(center,flex-start,row);
+    margin-bottom: 10vh;
+    &__image{
+        @include screenSize(25%,auto);
+        @include displayFlex(flex-start,center,row);
+        img{
+            @include screenSize(60%,auto);
+        }
+    }
+    &__details{
+        @include screenSize(75%,auto);
+        @include displayFlex(center,center,column);
+        &-title{
+            @include screenSize(100%,auto);
+            @include typography(1.7vw,left,1.4em,500);
+        }
+        &-text{
+            @include screenSize(100%,auto);
+            @include typography(1.08vw,left,1.4em,300);
+            margin: 1vh 0;
+            text-indent: .5em;
+        }
+    }
+}

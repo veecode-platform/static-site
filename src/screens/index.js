@@ -8,4 +8,5 @@ export { default as PrivacyPolicy } from './privacyPolicy/PrivaciPolicy';
 export { default as PageNotFound } from './pageNotFound/PageNotFound';
 export { default as Success } from './success/Success';
 export { default as Failed } from './failed/Failed';
-export { default as ContactUs} from './contactUs/ContactUs'
+export { default as ContactUs} from './contactUs/ContactUs';
+export { default as HowItWorks } from './howItWorks/HowItWorks';

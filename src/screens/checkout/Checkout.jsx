@@ -1,13 +1,17 @@
 import React, {useState, useEffect} from "react";
 import style from "../../../styles/Checkout.module.scss";
-import { Breadcrumb, Paypal, DefaultPage, Switch } from "../../components";
-import { FaCheck } from 'react-icons/fa';
+import { Breadcrumb, DefaultPage, Switch, Loading, Paypal } from "../../components";
 import storage from "../../../utils/storage";
+import InfoBox from "./infoBox";
+
+const ImageCard = "/assets/icons/card.png";
 
 const Checkout = () => {
+
   const [userData, setUserData] = useState({});
   const [price, setPrice] = useState();
   const [billing, setBilling] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
 
   const getDateFormatted = (displayMonth) => {
     let date = new Date();
@@ -25,7 +29,10 @@ const Checkout = () => {
     maximumFractionDigits: 0
   });
 
-  const handleBilling = () => { setBilling(!billing) }
+  const handleBilling = () => { 
+    setBilling(!billing) ;
+    LoadingAnimation();
+  }
   const handlePrice = () => {
     if(userData.plan == "premium" ){
       billing ? setPrice(1134) : setPrice(1260)
@@ -68,6 +75,13 @@ const Checkout = () => {
     billing: billing
   }
 
+  const LoadingAnimation = () => {
+    setIsLoading(true);
+    setTimeout(() => {
+        setIsLoading(false);
+    }, 500);
+  }
+
   return (
     <DefaultPage 
       titleBar="disable"
@@ -78,104 +92,27 @@ const Checkout = () => {
           <Breadcrumb active={3} />
           <div className={style.content__options}>
             <div className={style["content__options-infoBoxWrapper"]}>
-
-              <div className={style.box}>
-                <h1>Order summary</h1>
-              </div>
-
-              <div className={style.info}>
-                <div className={style.letterWrapper}>
-                  <div className={style.letterWrapper__left}>
-                    <p>Support plan: <strong>{info.plan}</strong></p>
-                  </div>
-                  <div className={style.letterWrapper__right}>
-                    <p>{info.price}/mo</p>
-                  </div>
-                </div>
-
-                <div className={style.letterWrapper}>
-                  <div className={style.letterWrapper__left}>
-                    <p>SLA</p>
-                  </div>
-                  <div className={style.letterWrapper__right}>
-                    <p>{info.sla}</p>
-                  </div>
-                </div>
-
-                {info.plan == "premium" && <div className={style.letterWrapper}>
-                  <div className={style.letterWrapper__center}>
-                    <p>Priorization for bug issues</p>
-                  </div>                
-                </div>}
-              </div>
-
-              <div className={style.info}>
-                <div>
-                  <p>{info.users} users</p>
-                  <p>Devportal</p>
-                  <p>Safira-cli</p>
-                  <p>VKPR</p>
-                </div>
-              </div>
-
-              <div className={style.info}>
-                <div className={style.letterWrapper}>
-                  <div className={style.letterWrapper__left}>
-                    <p>After the 15th day of trial:</p>
-                  </div>
-                  <div className={style.letterWrapper__right}>
-                    <p>{billing ? info.priceA : info.price}</p>
-                  </div>
-                </div>
-
-                <div className={style.letterWrapper}>
-                  <div className={style.letterWrapper__left}>
-                    <p>Due {billing ? "yearly" : "monthly"}:</p>
-                  </div>
-                  <div className={style.letterWrapper__right}>
-                    <p>
-                      {billing ? <del>{formatter.format(info.priceDeleted)}</del> : null}&nbsp;<strong>{billing ? info.priceA : info.price}</strong>
-                    </p>
-                  </div>
-                </div>
-
-                {!billing && <div className={style.letterWrapper}>
-                  <div className={style.letterWrapper__left}>
-                    <p >Yearly: </p>   
-                  </div>
-                  <div className={style.letterWrapper__right}>
-                    <p style={{color:"red"}}><strong>{info.priceA}</strong></p>
-                  </div>
-                </div>
-                }
-
-                <div className={style.letterWrapper} style={{marginTop: "1em"}}>
-                  <div className={style.letterWrapper__center}>
-                    <p>Billed {billing ? "yearly" : "monthly" } on the <strong>{getDateFormatted(billing)}</strong></p>
-                  </div>                
-                </div>
-              </div>
-              
-              <div className={style.guarantee}>
-                <div className={style.guarantee__item}>
-                  <FaCheck color="#33FFCE" />
-                  <p>15 day trial</p>
-                </div>
-
-                <div className={style.guarantee__item}>
-                  <FaCheck color="#33FFCE" />
-                  <p>Annual contract</p>
-                </div>
-
-                <div className={style.guarantee__item}>
-                  <FaCheck color="#33FFCE" />
-                  <p>Full Access to our knowledge base</p>
-                </div>
-              </div>             
+              {
+                isLoading ? <Loading/> : (
+                  <InfoBox 
+                  info={info}
+                  billing={billing}
+                  formatter={formatter}
+                  getDateFormatted={getDateFormatted}
+                  />    
+                )
+              }
             </div>
-            <div className={style["content__options-infoBoxWrapper"]}>
-              <Switch label={"subscription"} isOn={billing} handleToggle={handleBilling}/>
-              <Paypal plan={{plan: info.plan, billing: info.billing}}/>
+            <div className={style["content__options-payment"]}>
+              <div className={style.image}>
+                <img src={ImageCard}/>
+              </div>
+              <div className={style.switchButton}>
+                <Switch label={"subscription"} isOn={billing} handleToggle={handleBilling}/>
+              </div>
+              <div className={style.paypalBox}>
+                <Paypal plan={{plan: info.plan, billing: info.billing}}/>
+              </div>
             </div>
           </div>
         </article>

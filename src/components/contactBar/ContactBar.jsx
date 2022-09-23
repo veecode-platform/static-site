@@ -10,7 +10,7 @@ const ContactBar = () => {
       </div>
       <div className={style.content__button}>
       <Link
-        href="mailto:platform-sales@vee.codes"
+        href="/contact-us"
         passHref
         >
         <a target="_blank">

@@ -5,7 +5,7 @@
     color: $color10;
     h2 {
         @include typography(1.4vw, start, 1.3em, 400);
-        cursor: pointer;
+        @include screenSize(100%, auto);
         color: $color2;
         margin: 0.7em 0;
         //tablet
