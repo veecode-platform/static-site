@@ -26,7 +26,7 @@ const Validate = () =>{
         name: string().required("*required"),
         company: string().required("*required") ,
         email: string().email("*invalid email").required("*required"),
-        cel: string(). required("*required"),
+        cel: string().required("*required"),
         title: string().required("*required"),
         terms: boolean().isTrue()
     });
@@ -66,7 +66,7 @@ const Validate = () =>{
                                         <Input name="email" placeholder="you@acme.com" label="Business Email" error={(errors.email && touched.email) && errors.email }/>
                                         <Input name="cel" placeholder="number" label="Cel number" error={(errors.cel && touched.cel) && errors.cel }/>
                                         <Input name="title" placeholder="Sr Engineer" label="Title" error={(errors.title && touched.title) && errors.title }/>
-                                        <Checkbox name="terms" error={(errors.terms && touched.terms) && errors.terms}></Checkbox>
+                                        <Checkbox name="terms" terms error={(errors.terms && touched.terms) && errors.terms}/>
                                         <div className={style.form__buttonWrapper}><Button type="submit" loading={isSubmitting}>Continue</Button></div>
                                     </Form>
                                 )} 

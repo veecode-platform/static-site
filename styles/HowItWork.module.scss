@@ -2,37 +2,15 @@
 
 .content{
     @include screenSize(100%,auto);
-    h2 {
-        @include typography(1.4vw, start, 1.3em, 400);
-        color: $color2;
-        margin: 0.7em 0;
-        //tablet
-        @include for-tablet-only {
-            font-size: 2vw;
-        }
-        //mobile(M)
-        @include for-phone-only {
-            font-size: 2.5vw;
-        }
-        //mobile(S)
-        @include for-phoneS-only {
-            font-size: 4vw;
-        }
+    padding-top: 5vh;
+    @include displayFlex(center, center, column);
+    //Tablet(S)
+    @include for-tabletS-only{
+        @include screenSize(100%,auto);
+        padding-top: 3vh;
     }
-    p {
-        @include typography(1vw, start, 1.4em, 300);
-        //tablet
-        @include for-tablet-only {
-            font-size: 1.6vw;
-        }
-        //mobile(M)
-        @include for-phone-only {
-            font-size: 2vw;
-        }
-        //mobile(S)
-        @include for-phoneS-only {
-            font-size: 3.2vw;
-        }
+    //mobile(S)
+    @include for-phoneS-only{
+        padding-top: 1vh;
     }
-
 }

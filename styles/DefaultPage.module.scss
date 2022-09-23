@@ -31,19 +31,19 @@
             color: $color1;
             //tablet
             @include for-tablet-only{
-              font-size: 3.5vw
-            }
-            //mobile(S)
-            @include for-phoneS-only{
-              font-size: 5.5vw;
+              font-size: 22px;
             }
           }
           &-subtitle{
-            @include typography(1.2vw,start,1.3em,500);
+            @include typography(1.3vw,start,1.3em,500);
             color: $color2;
             //tablet
             @include for-tablet-only{
-              font-size: 2.2vw
+              font-size: 17px;
+            }
+            //tablet
+            @include for-tablet-only{
+              font-size: 16px;
             }
             //mobile(S)
             @include for-phoneS-only{

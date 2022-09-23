@@ -42,7 +42,9 @@ jobs:
           aws-region: us-east-1
 
       - name: Deploy static site to S3 bucket
-        run: aws s3 sync out s3://${{ secrets.AWS_BUCKET }} --acl public-read
+        run: |
+           aws s3 sync out s3://${{ secrets.AWS_BUCKET }} --acl public-read
+           aws cloudfront create-invalidation --distribution-id E10554892ALDF9 --paths "/*"
               
 #     - uses: shallwefootball/s3-upload-action@master
 #       name: Upload S3

@@ -1,0 +1,16 @@
+import Head from 'next/head'
+import { ContactUs } from '../src/screens'
+
+
+export default function ContactUsPage() {
+  return (
+    <>
+      <Head>
+        <title>Validate</title>
+        <meta name="description" content="Contact us page" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <ContactUs/>
+    </>
+  )
+}

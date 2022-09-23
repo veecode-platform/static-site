@@ -22,6 +22,7 @@ export const Label = styled.label`
 
 export const InputField = styled.input`
     width: 100%;
+    max-width: 415px;
     border-radius: 4px;
     height: 48px;
     outline: none;
@@ -52,7 +53,7 @@ export const WrapperCheckbox = styled(Wrapper)`
     align-items: center;
     justify-content: flex-start;
     gap: 0.5vw;
-    height: 60px; 
+    height: ${props => props.fullHeight ? "60px": "42px" }; 
     @media (max-width: 420px) {
         gap: 3vw;
     }
@@ -81,3 +82,25 @@ export const CheckboxLabel = styled(Label)`
         }
     }
 `;
+/*end checkbox*/
+export const WrapperTextArea = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 15vh;
+    width: 100%;
+    gap: 0.5vh;
+`;
+
+export const TextAreaField = styled.textarea`
+    width: 100%;
+    max-width: 415px;
+    border-radius: 4px;
+    height: 90%;
+    outline: none;
+    border: ${props => props.error ? "1px solid #DB0000" : "1px solid #33FFCE" };
+    font-size: medium;
+    padding: 0.25em 0.5em;
+    resize: none;
+    font-family: inherit;
+`
