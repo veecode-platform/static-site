@@ -3,4 +3,13 @@
 .content{
     @include screenSize(100%,auto);
     padding-top: 5vh;
+    @include displayFlex(center, center, column);
+    //mobile(M)
+    @include for-phone-only{
+        padding-top: 3vh;
+    }
+    //mobile(S)
+    @include for-phoneS-only{
+        padding-top: 1vh;
+    }
 }

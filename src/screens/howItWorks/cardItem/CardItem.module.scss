@@ -4,25 +4,80 @@
     @include screenSize(100%,auto);
     @include displayFlex(center,flex-start,row);
     margin-bottom: 8vh;
+    //mobile(M)
+    @include for-phone-only{
+        @include screenSize(100%,auto);
+        @include displayFlex(center,center,column);
+        margin-bottom: 5vh;
+        border: 1px solid $color4;
+        border-radius: 1em;
+        padding: 3em;
+    }
+    //mobile(S)
+    @include for-phoneS-only{
+        @include screenSize(90vw,auto);
+    }
     &__image{
         @include screenSize(25%,auto);
         @include displayFlex(flex-start,center,row);
+        //mobile(M)
+        @include for-phone-only{
+            @include screenSize(100%,auto);
+            @include displayFlex(center,center,column);
+        }
         img{
             @include screenSize(60%,auto);
+        //mobile(M)
+        @include for-phone-only{
+            @include screenSize(20%,auto);
+        }
+        //mobile(S)
+        @include for-phone-only{
+            @include screenSize(40%,auto);
+        }
         }
     }
     &__details{
         @include screenSize(75%,auto);
         @include displayFlex(center,center,column);
+        //mobile(M)
+        @include for-phone-only{
+            @include screenSize(100%,auto);
+        }
         &-title{
             @include screenSize(100%,auto);
             @include typography(1.7vw,left,1.4em,500);
+            //tablet
+            @include for-tablet-only{
+                font-size: 22px;
+            }
+            //mobile(M)
+            @include for-phone-only{
+                text-align: center;
+                padding: 1.5em 0;
+            }
+            //mobile(S)
+            @include for-phoneS-only{
+                @include typography(4.5vw,center,1.4em,500);
+            }
         }
         &-text{
             @include screenSize(100%,auto);
             @include typography(1.08vw,left,1.4em,300);
-            margin: 1vh 0;
             text-indent: .5em;
+            //tablet
+            @include for-tablet-only{
+                font-size: 14px;
+            }
+            //mobile(M)
+            @include for-phone-only{
+                font-size: 16px;
+                margin: .5em 0;
+            }
+            //mobile(S)
+            @include for-phoneS-only{
+                @include typography(4vw,center,1.4em,300);
+            }
         }
     }
 }
