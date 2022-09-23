@@ -12,7 +12,6 @@
     }
         h2 {
             @include typography(1.4vw, start, 1.3em, 400);
-            cursor: pointer;
             color: $color2;
             margin: 0.7em 0;
             //tablet
