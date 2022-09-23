@@ -32,7 +32,7 @@ const Footer = () => {
 
       <div className={style.footer__copy}>
         <p>
-          Copyright &copy; {new Date().getFullYear()} Veecode Plataform. All
+          Copyright &copy; {new Date().getFullYear()} VeeCode Plataform. All
           rights reserved
         </p>
       </div>
