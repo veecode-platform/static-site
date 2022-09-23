@@ -2,66 +2,100 @@
 
 .footer{
     @include screenSize(100%, auto);
-    @include displayFlex(center, center, row);  //CHANGE
+    @include displayFlex(center, center, column);  
     background-color: $color3;
     margin-top: -.5em;
-    padding: 2em 0;  //CHANGE
-    .content{
-        @include screenSize(40%, auto);
-        @include displayFlex(center, center, row); // CHANGE
+    padding: 15vh 0 5vh 0;  
+    a{
         color: $color2;
-        &__logo{
-            @include screenSize(40%, auto);
-            @include displayFlex(space-around, center, row);
-            img{
+        transition: all .5s linear;
+        &:visited{
+            color: $color2;
+        }
+        &:hover{
+            transition: all .5s ease-in-out;
+            color: $color1;
+        }
+        &:active{
+            color: $color1;
+        }
+    }
+    .content{
+        @include screenSize(80%, auto);
+        @include displayFlex(space-between, flex-start, row); 
+        color: $color2;
+        padding-bottom: 5vh;
+        &__logoAndSocial{
+            @include screenSize(40%, 100%);
+            @include displayFlex(center, center, column);
+            .logo{
                 width: 50%;
+                margin-bottom: 1.8em;
             }
+            .items{
+                    @include resetList();
+                    @include screenSize(50%,auto);
+                    @include displayFlex(space-evenly,center,row);
+                    li{
+                        @include displayFlex(center,center,row);
+                        @include screenSize(70px,70px);
+                        color: $color1;
+                        font-size: 70px;
+                        transition: all .5s linear;
+                        cursor: pointer;
+                        a{
+                            color:$color1;
+                        }
+                        &:hover{
+                            transition: all .5s linear;
+                            color: $color2;
+                            transform: scale(1.05);
+                        }
+                        img{
+                            @include screenSize(100%,100%);
+                            opacity: .9;
+                            cursor: pointer;
+                            transition: all .4s ease-in-out;
+                            &:hover{
+                                transition: all .4s ease-in-out;
+                                opacity: 1;
+                            }
+                        }
+                    }
+                }
         }
         &__details{
-            @include screenSize(70%, auto);
+            @include screenSize(45%, auto);
             @include displayFlex(center, center, column);
             &-lists{
                 @include screenSize(100%, auto);
-                @include displayFlex(center, flex-start, row);
+                @include displayFlex(flex-start, flex-start, row);
                 ul{
                     @include screenSize(40%, auto);
+                    @include displayFlex(center, flex-start, column);
                     margin: 1em;
                     @include resetList();
                     li{
                        cursor: pointer;
-                       @include typography(15px,center,1.8em,300);
+                       @include typography(18px,left,1.4em,300);
                        opacity: .9;
                        span{
                         opacity: 1;
-                        @include typography(18px,center,1.9em,500);
+                        @include typography(20px,center,1.9em,600);
                        }
                     }
                 }
             }
         }
     }
+
     &__copy{
-        @include screenSize(40%, auto);
-        // padding: 1.5em 0;
-        //mobile
-        @include for-phone-only{
-            @include screenSize(80%, auto);
-        }
+        @include screenSize(80%, auto);
+        @include displayFlex(center,flex-end,row);
+        padding: 15vh 0 1vh 0;
         color: $color2;
         p{
-            @include typography(.7vw,center,1.3em,400);
-            //tablet
-            @include for-tablet-only{
-                font-size: 1.2vw;
-            }
-            //mobile(M)
-            @include for-phone-only{
-                font-size:2.2vw;
-            }
-            //mobile(S)
-            @include for-phoneS-only{
-                font-size: 3.5vw;
-              }
+            @include typography(.8vw,center,1.3em,400);
         }
     }
 }
