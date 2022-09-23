@@ -4,7 +4,6 @@
     @include screenSize(100%,auto);
     @include displayFlex(center,flex-start,row);
     margin-bottom: 8vh;
-    min-height: 300px;
     &__image{
         @include screenSize(25%,auto);
         @include displayFlex(flex-start,center,row);
