@@ -1,11 +1,9 @@
 @import "../abstract/functions", "../abstract/variables", "../abstract/responsive";
 
-.content {
-    @include screenSize(100%, auto);
-    color: $color10;
+.content{
+    @include screenSize(100%,auto);
     h2 {
         @include typography(1.4vw, start, 1.3em, 400);
-        @include screenSize(100%, auto);
         color: $color2;
         margin: 0.7em 0;
         //tablet
@@ -21,27 +19,8 @@
             font-size: 4vw;
         }
     }
-    h3 {
-        margin: 1.5em 0 .7em 0;
-        color: $color2;
-        @include typography(1.1vw, start, 1.4em, 400);
-        //tablet
-        @include for-tablet-only {
-            font-size: 1.5vw;
-            margin: 0.5em 0;
-        }
-        //mobile(M)
-        @include for-phone-only {
-            font-size: 2.1vw;
-        }
-        //mobile(S)
-        @include for-phoneS-only {
-            font-size: 3.5vw;
-        }
-    }
     p {
         @include typography(1vw, start, 1.4em, 300);
-        margin: 0.5em 0;
         //tablet
         @include for-tablet-only {
             font-size: 1.6vw;
@@ -55,13 +34,5 @@
             font-size: 3.2vw;
         }
     }
-    a {
-        color: $color7;
-        transition: all 0.4s linear;
-        cursor: pointer;
-        &:hover {
-            transition: all 0.4s linear;
-            color: $color1;
-        }
-    }
+
 }

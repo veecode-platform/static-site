@@ -129,7 +129,7 @@
         }
         &__buttons {
             @include screenSize(35%, auto);
-            @include displayFlex(flex-start, center, row);
+            @include displayFlex(space-between, center, row);
             padding: 1em 0;
             //mobile(M)
             @include for-phone-only {

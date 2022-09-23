@@ -51,12 +51,12 @@ const FirstSection = () => {
             easily.
           </p>
         </div>
-        <div className={style.content__buttons}>
-          {/* <Link href="https://docs.platform.vee.codes/docs/intro" passHref>
-            <a target="_blank">
+        <div className={style.content__buttons}>      
+          <Link href="/how-it-works" passHref>
+            <a>
               <Button>How it Works</Button>
             </a>
-          </Link> */}
+          </Link>
 
           <Link href="/pricing" passHref>
             <a>

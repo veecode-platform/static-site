@@ -7,78 +7,87 @@
     .content{
         @include screenSize(80%, auto);
         @include displayFlex(center, center, column);
-        color: $color2;  
+        color: $color2; 
+        //viewport
+        @include for-viewport-only{
+            @include screenSize(100%, auto);
+        } 
         &__options{
-            @include screenSize(80%,auto);
-            @include displayFlex(center, center, row);
+            @include screenSize(100%,auto);
+            @include displayFlex(center, center, row); 
             padding: 2em 0;
-            gap: 2vw;
+
             //viewport
             @include for-viewport-only{
-                @include screenSize(90%,auto);
+                @include screenSize(100%,auto);
+            }
+            //tablet
+            @include for-tabletS-only{
+                @include displayFlex(center, center, column);
+                padding: 2em 0 6em 0;
             }
             //mobile(M)
             @include for-phone-only{
-                @include displayFlex(center, center, column);
-                padding: 1em 0 6em 0;
+                @include screenSize(100%, auto);
             }
             //mobile(S)
              @include for-phoneS-only {
-                @include screenSize(95%,auto);
                 padding: 1em 0;
             }
-            //mobile(XS)
-            @include for-phoneXS-only{
-                @include screenSize(100%,auto);
-            }
             &-infoBoxWrapper{
+                @include screenSize(40%,574px);
                 @include displayFlex(center, center, column);
-                width: 415px;
                 padding: 2vh 1vw;
                 background-color: $color12;
                 border-radius: 1vh;
                 gap: 1.5vh;
-
+                border: 1px double $color4;
+                @include glassEffect();
+                //tablet(S)
+                @include for-tabletS-only{
+                    width: 70%;
+                }
+                //mobile(M)
                 @include for-phone-only{
-                    width: 95vw;
+                    width: 95%;
                 }
-                
-                .box{
+            }
+            &-payment{
+                @include screenSize(35%,auto);
+                @include displayFlex(center, center, column);
+                //tablet(S)
+                @include for-tabletS-only{
+                    width: 90%;
+                    padding: 5vh 0;
+                }
+                .image{
+                    width: 70%;
                     @include displayFlex(flex-start, center, row);
-                    width: 100%;
-                    color: $color2;            
-                }
-                .info{
-                    @include displayFlex(center, flex-start, column);
-                    background-color: $color2;
-                    color: $color3;
-                    border-radius: 1vh;
-                    width: 100%;
-                    padding: 0.5em;
-                    
-                    .letterWrapper{
-                        @include displayFlex(center, flex-start, row);
-                        width: 100%;
-                        &__left{
-                            width: 65%;
-                        }
-                        &__right{
-                            text-align: right;
-                            width: 35%;                   
-                        }
-                        &__center{
-                            width: 100%;
-                        }
+                    //tablet(S)
+                    @include for-tabletS-only{
+                        display: none;
                     }
-                    
+                    img{
+                        width: 100%;
+                        @include pulseAnimation();
+                    }
                 }
-                .guarantee{
-                    @include displayFlex(flex-start, flex-start, column);
-                    width: 100%;
-
-                    &__item{
-                        @include displayFlex(flex-start, center, row);
-                        gap: 0.5vw;
+                .switchButton{
+                    @include screenSize(70%,auto);
+                    padding-bottom: .5em;
+                    //tablet(S)
+                    @include for-tabletS-only{
+                        @include screenSize(100%,auto);
+                        @include displayFlex(center, center, row);
+                        margin-bottom: 2vh;
+                    }
+                }
+                .paypalBox{
+                    @include screenSize(75%,160px);
+                    //tablet(S)
+                    @include for-tabletS-only{
+                        @include screenSize(100%,auto);
+                        @include displayFlex(center, center, row);
                     }
                 }
             }
@@ -88,5 +97,5 @@
 }
 
 .backgroundDif{
-    background-color: $color4;
+    background-color: red;
 }
