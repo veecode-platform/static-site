@@ -27,7 +27,7 @@
         }
     }
     &__info{
-        @include screenSize(100%,135px);
+        @include screenSize(100%,auto);
         @include displayFlex(center, flex-start, column);
         color: $color2;
         border-radius: 1vh;
