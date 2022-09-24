@@ -29,18 +29,18 @@
             @include screenSize(40%, 100%);
             @include displayFlex(center, center, column);
             .logo{
-                width: 50%;
-                margin-bottom: 1.8em;
+                width: 40%;
+                margin-bottom: 1.4em;
             }
             .items{
                     @include resetList();
-                    @include screenSize(50%,auto);
+                    @include screenSize(35%,auto);
                     @include displayFlex(space-evenly,center,row);
                     li{
                         @include displayFlex(center,center,row);
-                        @include screenSize(70px,70px);
+                        @include screenSize(50px,50px);
                         color: $color1;
-                        font-size: 70px;
+                        font-size: 50px;
                         transition: all .5s linear;
                         cursor: pointer;
                         a{
