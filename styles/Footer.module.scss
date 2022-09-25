@@ -5,7 +5,7 @@
     @include displayFlex(center, center, column);  
     background-color: $color3;
     margin-top: -.5em;
-    padding: 15vh 0 5vh 0;  
+    padding-top: 25vh;  
     a{
         color: $color2;
         transition: all .5s linear;
@@ -27,14 +27,14 @@
         padding-bottom: 5vh;
         &__logoAndSocial{
             @include screenSize(40%, 100%);
-            @include displayFlex(center, center, column);
+            @include displayFlex(center, flex-start, column);
             .logo{
                 width: 40%;
                 margin-bottom: 1.4em;
             }
             .items{
                     @include resetList();
-                    @include screenSize(35%,auto);
+                    @include screenSize(40%,auto);
                     @include displayFlex(space-evenly,center,row);
                     li{
                         @include displayFlex(center,center,row);
@@ -65,11 +65,11 @@
                 }
         }
         &__details{
-            @include screenSize(45%, auto);
+            @include screenSize(60%, auto);
             @include displayFlex(center, center, column);
             &-lists{
                 @include screenSize(100%, auto);
-                @include displayFlex(flex-start, flex-start, row);
+                @include displayFlex(center, flex-start, row);
                 ul{
                     @include screenSize(40%, auto);
                     @include displayFlex(center, flex-start, column);
@@ -91,8 +91,8 @@
 
     &__copy{
         @include screenSize(80%, auto);
-        @include displayFlex(center,flex-end,row);
-        padding: 15vh 0 1vh 0;
+        @include displayFlex(center,center,row);
+        padding: 15vh 0 3vh 0;
         color: $color2;
         p{
             @include typography(.8vw,center,1.3em,400);

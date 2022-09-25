@@ -37,13 +37,18 @@ const Footer = () => {
           <div className={style["content__details-lists"]}>
             <ul>
               <li>
-                <span>About</span>
+                <span>About Platform</span>
+              </li>
+              <Link href="/how-it-works"><a><li>How it Works</li></a></Link>
+              <Link href="/support"><a><li>Support</li></a></Link>
+              <Link href="https://github.com/vfipaas/safira-support/discussions" passHref><a target="_blank"><li>Join our Comunity</li></a></Link>
+            </ul>
+            <ul>
+              <li>
+                <span>Docs</span>
               </li>
               <Link href="https://docs.platform.vee.codes/docs/intro" passHref><a target="_blank"><li>Safira CLI</li></a></Link>
               <Link href="https://docs.vkpr.net/docs/intro/" passHref><a target="_blank"><li>VKPR</li></a></Link>
-              <Link href="/how-it-works"><a><li>How to Works</li></a></Link>
-              <Link href="/support"><a><li>Support</li></a></Link>
-              <Link href="https://github.com/vfipaas/safira-support/discussions" passHref><a target="_blank"><li>Join our Comunity</li></a></Link>
             </ul>
             <ul>
               <li>
