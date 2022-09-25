@@ -35,7 +35,7 @@
             .items{
                     @include resetList();
                     @include screenSize(40%,auto);
-                    @include displayFlex(space-evenly,center,row);
+                    @include displayFlex(space-between,center,row);
                     li{
                         @include displayFlex(center,center,row);
                         @include screenSize(50px,50px);
