@@ -4,6 +4,20 @@
     @include screenSize(100%,auto);
     @include displayFlex(center,flex-start,row);
     margin-bottom: 8vh;
+    a{
+        color: $color5;
+        transition: all .3s ease-in-out;
+        &:hover{
+            color: $color1;
+            transition: all .3s ease-in-out;
+        }
+        &:active{
+            color: $color1;
+        }
+        &:visited{
+            color: $color1;
+        }
+    }
     //mobile(M)
     @include for-phone-only{
         @include screenSize(100%,auto);
@@ -18,15 +32,15 @@
         @include screenSize(90vw,auto);
     }
     &__image{
-        @include screenSize(25%,auto);
-        @include displayFlex(center,center,row);
+        @include screenSize(20%,auto);
+        @include displayFlex(flex-start,center,row);
         //mobile(M)
         @include for-phone-only{
             @include screenSize(100%,auto);
             @include displayFlex(center,center,column);
         }
         img{
-            @include screenSize(60%,auto);
+            @include screenSize(70%,auto);
         //mobile(M)
         @include for-phone-only{
             @include screenSize(30%,auto);
@@ -38,7 +52,7 @@
         }
     }
     &__details{
-        @include screenSize(75%,auto);
+        @include screenSize(80%,auto);
         @include displayFlex(center,center,column);
         //mobile(M)
         @include for-phone-only{
@@ -64,19 +78,21 @@
         }
         &-text{
             @include screenSize(100%,auto);
-            @include typography(1vw,left,1.4em,300);
-            //tablet
-            @include for-tablet-only{
-                font-size: 14px;
-            }
-            //mobile(M)
-            @include for-phone-only{
-                font-size: 16px;
-                margin: .5em 0;
-            }
-            //mobile(S)
-            @include for-phoneS-only{
-                @include typography(4vw,center,1.4em,300);
+            p{
+                @include typography(1vw,left,1.4em,300);
+                 //tablet
+                @include for-tablet-only{
+                    font-size: 14px;
+                }
+                //mobile(M)
+                @include for-phone-only{
+                    font-size: 16px;
+                    margin: .5em 0;
+                }
+                //mobile(S)
+                @include for-phoneS-only{
+                    @include typography(4vw,center,1.4em,300);
+                }
             }
         }
     }
