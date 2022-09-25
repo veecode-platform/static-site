@@ -91,7 +91,7 @@
 
     &__copy{
         @include screenSize(80%, auto);
-        @include displayFlex(center,center,row);
+        @include displayFlex(center,center,column);
         padding: 15vh 0 3vh 0;
         color: $color2;
         p{
