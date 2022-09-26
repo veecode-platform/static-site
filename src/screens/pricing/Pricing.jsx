@@ -25,6 +25,7 @@ const Pricing = () => {
       title="Select the Plan"
       subtitle="Choose the plan just right for your team."
       titleBar="enable"
+      noFooter
     >
       <section className={style.wrapper}>
         <article className={style.content}>
