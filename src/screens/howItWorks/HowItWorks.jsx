@@ -29,7 +29,7 @@ const HowItWorks = () => {
                     <p>You need to deliver solutions, not just apps. You&apos;ll have to learn how to deal and manage the cloud, and are expected to do it spending less money.
                     But there are infinite choices for each resource available: clusters, databases, load balancers, keys, the list goes on and on.</p>
                     <p>We have automated most of this under VKPR - you can skip most of the learning curve and keep your focus on the fun parts. Our tools will take you there through automation,
-                    IaC and GitOps</p>
+                    IaC and GitOps.</p>
                     </CardItem>
                 <CardItem
                     image={Icon2}
@@ -49,7 +49,7 @@ const HowItWorks = () => {
                     <p>You keep hearing the wonders of IaC but every tool is a whole new rabbit hole. Terraform, Docker, Kubernetes and many others,
                     not to mention so many scripts to glue them together - and too many choices as well.</p>
                     <p>We are building IaC libraries for you, publishing them as automated pipelines so that any team member can create and recycle resources,
-                    keeping them in sync with a desired configuration</p>
+                    keeping them in sync with a desired configuration.</p>
                     </CardItem>
                 <CardItem
                     image={Icon4}
@@ -59,7 +59,7 @@ const HowItWorks = () => {
                     We can help you define your architecture by bringing to your cluster the necessary components that will make them production ready.
                     Yes, you will need components for observability, an API gateway, load balancers, databases and security. And we will support all of them,
                     providing a self-service experience so that clusters are no big deal.</p>
-                    <p>What we want is for you not to take months to decide your IT architecture. You can do it today</p>
+                    <p>What we want is for you not to take months to decide your IT architecture. You can do it today!</p>
                     </CardItem>
                 <CardItem
                     image={Icon5}
@@ -69,7 +69,7 @@ const HowItWorks = () => {
                     We also provide best-effort support to the products we help you install, so that you can take advantage of their combined features and better
                     decide when or why to license them (if ever - they are all open source too).</p>
                     <p>It gets better. If our tools left you short of anything you can have a shot at asking us to improve them for free.
-                    Yes, we are continually enhancing our toolset and we really need your feedback</p>
+                    Yes, we are continually enhancing our toolset and we really need your feedback.</p>
                     </CardItem>
                 <CardItem
                     image={Icon6}
