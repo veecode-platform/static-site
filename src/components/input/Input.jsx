@@ -28,7 +28,7 @@ export const Checkbox = ({name, error, children}) => {
       {({ field }) => (
         <WrapperCheckbox fullHeight={children ? false : true}>       
           <Checkboxfield {...field} id={name} name={name}></Checkboxfield>
-          <CheckboxLabel error={error}>{children ? children : terms}</CheckboxLabel>
+          <CheckboxLabel altColor={children ? true : false} error={error}>{children ? <strong>{children}</strong> : terms}</CheckboxLabel>
         </WrapperCheckbox>
       )}
     </Field>

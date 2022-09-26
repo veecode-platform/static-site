@@ -14,7 +14,7 @@ export const LabelWraper = styled.div`
 `;
 
 export const Label = styled.label`
-    color: ${props => props.error ? "#DB0000" : "white" };
+    color: ${props => props.error ? "#DB0000" : "#FAFAFA" };
     font-size: small;
     min-width: 50%;
     text-align: ${props => props.errorLabel ? "right" : "left"};
@@ -52,8 +52,10 @@ export const WrapperCheckbox = styled(Wrapper)`
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
-    gap: 0.5vw;
-    height: ${props => props.fullHeight ? "60px": "42px" }; 
+    column-gap: 0.5vw;
+    row-gap: 0vh;
+    height: ${props => props.fullHeight ? "60px": "32px" };
+    width: ${props => props.fullHeight ? "auto": "49%"};
     @media (max-width: 420px) {
         gap: 3vw;
     }
@@ -61,8 +63,8 @@ export const WrapperCheckbox = styled(Wrapper)`
 
 export const Checkboxfield = styled.input.attrs({type:"checkbox"})`
     cursor: pointer;
-    width: 1.1vw;
-    height: 1.1vw;
+    width: 0.8vw;
+    height: 0.8vw;
     accent-color: #33FFCE;
     @media (max-width: 420px) {
         width: 4vw;
@@ -72,6 +74,7 @@ export const Checkboxfield = styled.input.attrs({type:"checkbox"})`
 
 export const CheckboxLabel = styled(Label)`
     font-size: small;
+    color: ${props => props.altColor ? "grey": "inherit"};
     a{
         text-decoration: underline;
         cursor: pointer
@@ -82,12 +85,14 @@ export const CheckboxLabel = styled(Label)`
         }
     }
 `;
+
 /*end checkbox*/
 export const WrapperTextArea = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 15vh;
+    height: auto;
+    min-height: 15v;
     width: 100%;
     gap: 0.5vh;
 `;
@@ -96,11 +101,12 @@ export const TextAreaField = styled.textarea`
     width: 100%;
     max-width: 415px;
     border-radius: 4px;
-    height: 90%;
+    height: auto;
+    min-height: 15vh;
     outline: none;
     border: ${props => props.error ? "1px solid #DB0000" : "1px solid #33FFCE" };
     font-size: medium;
     padding: 0.25em 0.5em;
-    resize: none;
     font-family: inherit;
+    resize: vertical;
 `

@@ -33,6 +33,7 @@
             }
             &-formWraper{
                 @include displayFlex(center, flex-start, column);
+                @include glassEffect();
                 width: 415px;
                 padding: 1vw 1vw;
                 background-color: $color12;

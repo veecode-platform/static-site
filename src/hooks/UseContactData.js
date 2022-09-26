@@ -4,12 +4,19 @@ export const UseContactData = async (values) => {
 
   try{
 
+    let interests = []
+    if(values.vkpr) interests.push("vkpr");
+    if(values.safiracli) interests.push("safira-cli");
+    if(values.support) interests.push("support");
+    if(values.devportal) interests.push("devportal");
+
+
     const model = {
       "full-name": values.name,
       "organization": values.company,
       "e-mail": values.email,
-      "job-title": values.title,
-      "phone": values.cel
+      "interests": interests,
+      "question": values.question,
     }
 
     const { data } = await api.post("/contact", model)

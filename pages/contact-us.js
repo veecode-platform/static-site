@@ -6,7 +6,7 @@ export default function ContactUsPage() {
   return (
     <>
       <Head>
-        <title>Validate</title>
+        <title>Contact Us</title>
         <meta name="description" content="Contact us page" />
         <link rel="icon" href="/favicon.ico" />
       </Head>

@@ -10,9 +10,9 @@
         @include displayFlex(center, center, column);
         color: $color2;
         &__options{
-            @include screenSize(80%,auto);
-            @include displayFlex(space-around, center, column);
-            padding: 2em 0 4em 0;
+            @include screenSize(100%,auto);
+            @include displayFlex(space-around, center, row);
+            padding: 1em 0 1em 0;
             //viewport
             @include for-viewport-only{
                 @include screenSize(90%,auto);
@@ -31,8 +31,22 @@
             @include for-phoneXS-only{
                 @include screenSize(100%,auto);
             }
+            
+            &-decoration{
+                @include displayFlex(center, center, column);
+                max-width: 50%;
+                img{
+                    width: 90%;
+                    @include pulseAnimation();
+                }
+                @include for-tablet-only{
+                    display: none;
+                }
+            }
+
             &-formWraper{
                 @include displayFlex(center, center, column);
+                @include glassEffect();
                 width: 415px;
                 padding: 1vw 1vw;
                 background-color: $color12;
@@ -53,14 +67,16 @@
 
                     &__checkboxWrapper{
                         display: flex;
-                        flex-direction: column;
+                        flex-direction: row;
                         justify-content: flex-start;
                         align-items: flex-start;
                         gap: 0.1vh;
                         width: 100%;
                         margin: 1vh;
-                        span{
-                            font-size: small;
+                        flex-basis: 100%;
+                        flex-wrap: wrap;
+                        h1{
+                            width: 100%;
                         }
                     }
                 }

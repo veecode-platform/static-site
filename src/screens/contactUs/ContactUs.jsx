@@ -1,7 +1,9 @@
 import {Button, Input, Checkbox, DefaultPage, TextArea} from '../../components';
 import style from '../../../styles/ContactUs.module.scss';
 import { Formik, Form} from 'formik';
-import { object, string, boolean} from 'yup';
+import { object, string} from 'yup';
+import { UseContactData } from '../../hooks/UseContactData';
+import { useRouter } from 'next/router'
 
 const ContactUs = () =>{
 
@@ -9,36 +11,47 @@ const ContactUs = () =>{
         name: string().required("*required"),
         company: string().required("*required") ,
         email: string().email("*invalid email").required("*required"),
-        vkpr: boolean().isTrue(),
-        safiracli: boolean().isTrue(),
-        support: boolean().isTrue(),
         question: string().required("*required")
     });
 
+    const router = useRouter()
+
+    const handleFormRedirect = async () => {
+        await router.push("/contact-success")
+    }
+    const flowImage = "/assets/icons/contact_form_img.png";
+
     return(
-        <DefaultPage titleBar="enable" title="Speak to a real human!" subtitle="Use the form below or send an email to vee@codes.com">
+        <DefaultPage titleBar="enable" title="Find out how we can help your business" noBack subtitle={<>Talk to our sales specialist. Use the form below or send an email to <a href='mailto: platform-sales@vee.codes' style={{cursor: "pointer", color: '#33FFCE'}}> platform-sales@vee.codes</a></>}>
         <section className={style.wrapper}>
                     <article className={style.content}>
                     <div className={style.content__options}>
+                        <div className={style["content__options-decoration"]}>
+                            <img src={flowImage}/>
+                        </div>
+
                         <div className={style["content__options-formWraper"]}>
                             <Formik
-                                initialValues={{ name: "", company: "", email: "", question: "", vkpr: false, safiracli: false, support: false}}
+                                initialValues={{ name: "", company: "", email: "", question: "", vkpr: false, safiracli: false, support: false, devportal: false}}
                                 validationSchema={formSchema}
                                 onSubmit={async (values)=>{                   
-                                    console.log(values);                                                          
+                                    //console.log(values);
+                                    const response = await UseContactData(values)
+                                    await handleFormRedirect()                                         
                                 }}
                                 >
                                 {({ errors, touched, handleSubmit, isSubmitting}) => (
                                     
                                     <Form onSubmit={handleSubmit} className={style.form}>
-                                        <Input name="name" placeholder="First and last name" label="Full Name" error={(errors.name && touched.name) && errors.name }/>
+                                        <Input name="name" placeholder="First and last name" label="Your name" error={(errors.name && touched.name) && errors.name }/>
                                         <Input name="email" placeholder="you@acme.com" label="Email" error={(errors.email && touched.email) && errors.email }/>
                                         <Input name="company" placeholder="Acme, Inc." label="Company / Organization" error={(errors.company && touched.company) && errors.company }/>
                                         <div className={style.form__checkboxWrapper}>
-                                            <span>Which products are you interested in?</span>
+                                        <h1>Which products are you interested in?</h1>
                                             <Checkbox name="vkpr">VKPR</Checkbox>
                                             <Checkbox name="safiracli">Safira-cli</Checkbox>
-                                            <Checkbox name="support">Support</Checkbox>
+                                            <Checkbox name="support">Expert Support</Checkbox>
+                                            <Checkbox name="devportal">Devportal</Checkbox>
                                         </div>
                                         <TextArea name="question" placeholder="Your message" label="How can we help?" error={(errors.question && touched.question) && errors.question }></TextArea>
 

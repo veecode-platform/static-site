@@ -61,7 +61,7 @@ const Validate = () =>{
                                 {({ errors, touched, handleSubmit, isSubmitting}) => (
                                     
                                     <Form onSubmit={handleSubmit} className={style.form}>
-                                        <Input name="name" placeholder="First and last name" label="Full Name" error={(errors.name && touched.name) && errors.name }/>
+                                        <Input name="name" placeholder="First and last name" label="Your name" error={(errors.name && touched.name) && errors.name }/>
                                         <Input name="company" placeholder="Acme, Inc." label="Company / Organization" error={(errors.company && touched.company) && errors.company }/>
                                         <Input name="email" placeholder="you@acme.com" label="Business Email" error={(errors.email && touched.email) && errors.email }/>
                                         <Input name="cel" placeholder="number" label="Cel number" error={(errors.cel && touched.cel) && errors.cel }/>
