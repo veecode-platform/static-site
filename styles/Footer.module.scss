@@ -4,7 +4,7 @@
     @include screenSize(100%, auto);
     @include displayFlex(center, center, column);  
     background-color: $color3;
-    padding-top: 25vh;  
+    padding-top: 15vh;  
     a{
         color: $color2;
         transition: all .5s linear;
@@ -18,10 +18,6 @@
         &:active{
             color: $color1;
         }
-    }
-    //viewport
-    @include for-viewport-only{
-        padding-top: 15vh;
     }
     //tablet(S)
     @include for-tabletS-only{
