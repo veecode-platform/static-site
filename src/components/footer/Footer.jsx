@@ -3,10 +3,6 @@ import { FaFacebookSquare, FaInstagram, FaLinkedin, FaTwitterSquare } from "reac
 import Link from "next/link";
 
 const Logo = "/assets/home/logo.png";
-const facebook = "/assets/icons/facebook.svg";
-const instagram = "/assets/icons/instagram.svg";
-const linkedin = "/assets/icons/linkedin.svg";
-const twitter = "/assets/icons/twitter.svg";
 
 const Footer = () => {
   return (
@@ -16,28 +12,36 @@ const Footer = () => {
           <img src={Logo} alt="Veecode Plataform" className={style.logo}/>
             <ul className={style.items}>
               <li>
-                {/* <img src={facebook} alt="Platform Facebook"/> */}
-                <Link href="https://web.facebook.com/veecodeplatform/" passHref><a target="_blank"><FaFacebookSquare/></a></Link>
+                <Link href="https://web.facebook.com/veecodeplatform/" passHref>
+                  <a target="_blank">
+                  <FaFacebookSquare/>
+                  </a>
+                </Link>
               </li>
               <li>
-                {/* <img src={instagram} alt="Platform Instagram"/> */}
-                <Link href="https://www.instagram.com/veecodeplatform/" passHref><a target="_blank"><FaInstagram /></a></Link>
+                <Link href="https://www.instagram.com/veecodeplatform/" passHref>
+                  <a target="_blank">
+                    <FaInstagram />
+                  </a>
+                </Link>
               </li>
               <li>
-                {/* <img src={linkedin} alt="Platform Linkedin" /> */}
-                <Link href="https://www.linkedin.com/showcase/veecode-platform/" passHref><a target="_blank"><FaLinkedin /></a></Link>
+                <Link href="https://www.linkedin.com/showcase/veecode-platform/" passHref>
+                  <a target="_blank">
+                    <FaLinkedin />
+                  </a>
+                </Link>
               </li>
-              <li>
-                {/* <img src={twitter} alt="Platform Twitter"/> */}
+              {/* <li>
                 <Link href="/support" passHref><a target="_blank"><FaTwitterSquare /></a></Link>
-              </li>
+              </li> */}
             </ul>
         </div>
         <div className={style.content__details}>
           <div className={style["content__details-lists"]}>
             <ul>
               <li>
-                <span>About Platform</span>
+                <span>About</span>
               </li>
               <Link href="/how-it-works"><a><li>How it Works</li></a></Link>
               <Link href="/support"><a><li>Support</li></a></Link>
