@@ -40,7 +40,7 @@
             @include displayFlex(center,center,column);
         }
         img{
-            @include screenSize(70%,auto);
+            @include screenSize(60%,auto);
         //mobile(M)
         @include for-phone-only{
             @include screenSize(30%,auto);
@@ -80,6 +80,9 @@
             @include screenSize(100%,auto);
             p{
                 @include typography(1vw,left,1.4em,300);
+                &:first-child{
+                    margin-bottom: .3em;
+                }
                  //tablet
                 @include for-tablet-only{
                     font-size: 14px;
