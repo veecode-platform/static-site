@@ -11,6 +11,7 @@ const Failed = () => {
   return (
     <DefaultPage
        titleBar="disable"
+       noFooter
        noBack>
       <article className={style.content}>
         <div className={style.content__image}>
