@@ -41,6 +41,7 @@ const Validate = () =>{
     return(
         <DefaultPage 
             titleBar="disable"
+            noFooter
             >
             <section className={style.wrapper}>
                     <article className={style.content}>

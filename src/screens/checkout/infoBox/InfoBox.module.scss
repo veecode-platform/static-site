@@ -6,8 +6,7 @@
     padding: 0.5em;
     &__title{
         @include displayFlex(flex-start, center, row);
-        width: 100%; 
-        // background: green;  
+        width: 100%;   
         h2{
             @include typography(1.2vw,left,1.3em,500);
             margin-bottom: .5em;

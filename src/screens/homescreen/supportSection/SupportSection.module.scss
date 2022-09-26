@@ -82,6 +82,10 @@
                 }
                 strong {
                     font-size: 1.1vw;
+                    //tablet
+                    @include for-tablet-only{
+                        font-size: 1.2vw;
+                    }
                     //mobile(M)
                     @include for-phone-only {
                         font-size: 3.1vw;
@@ -107,6 +111,10 @@
                     }
                     li {
                         @include typography(1.09vw, start, 1.8em, 300);
+                        //tablet
+                        @include for-tablet-only{
+                            font-size: 1.2vw;
+                        }
                         //mobile(M)
                         @include for-phone-only {
                             @include typography(3vw, center, 1.8em, 300);
