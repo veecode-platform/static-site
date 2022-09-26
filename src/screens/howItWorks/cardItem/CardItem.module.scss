@@ -32,7 +32,7 @@
         @include screenSize(90vw,auto);
     }
     &__image{
-        @include screenSize(20%,auto);
+        @include screenSize(15%,auto);
         @include displayFlex(flex-start,center,row);
         //mobile(M)
         @include for-phone-only{
@@ -40,7 +40,8 @@
             @include displayFlex(center,center,column);
         }
         img{
-            @include screenSize(60%,auto);
+            @include screenSize(65%,auto);
+            margin-top: 1vh;
         //mobile(M)
         @include for-phone-only{
             @include screenSize(30%,auto);
@@ -52,7 +53,7 @@
         }
     }
     &__details{
-        @include screenSize(80%,auto);
+        @include screenSize(85%,auto);
         @include displayFlex(center,center,column);
         //mobile(M)
         @include for-phone-only{
