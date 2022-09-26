@@ -97,7 +97,6 @@
                         @include displayFlex(center,center,row);
                         @include screenSize(3vw,auto);
                         font-size: 2.8vw;
-                        transition: all .5s linear;
                         cursor: pointer;
                         //tablet
                         @include for-tablet-only{
@@ -116,10 +115,11 @@
                         }
                         a{
                             color:$color1;
-                        }
-                        &:hover{
                             transition: all .5s linear;
-                            color: $color2;
+                            &:hover{
+                                transition: all .5s linear;
+                                color: $color10;
+                            }
                         }
                     }
                 }
