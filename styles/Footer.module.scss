@@ -1,7 +1,7 @@
 @import "../abstract/functions", "../abstract/variables", "../abstract/responsive";
 
 .footer{
-    @include screenSize(100%, auto);
+    @include screenSize(100vw, auto);
     @include displayFlex(center, center, column);  
     background-color: $color3;
     padding-top: 15vh;  
@@ -21,8 +21,7 @@
     }
     //tablet(S)
     @include for-tabletS-only{
-        @include screenSize(95%, auto);
-        padding-top: 10vh;
+        padding-top: 5vh;
     }
     //Mobile
     @include for-phone-only{
@@ -34,6 +33,10 @@
         @include displayFlex(space-between, flex-start, row); 
         color: $color2;
         padding-bottom: 5vh;
+        //tablet(S)
+        @include for-tabletS-only{
+            @include screenSize(70%, auto);
+        }
         //mobile
         @include for-phone-only{
             @include screenSize(70%, auto);
@@ -93,7 +96,6 @@
                     li{
                         @include displayFlex(center,center,row);
                         @include screenSize(3vw,auto);
-                        color: $color1;
                         font-size: 2.8vw;
                         transition: all .5s linear;
                         cursor: pointer;
@@ -118,7 +120,6 @@
                         &:hover{
                             transition: all .5s linear;
                             color: $color2;
-                            transform: scale(1.05);
                         }
                     }
                 }
@@ -217,7 +218,12 @@
         //viewport
         @include for-viewport-only{
             @include screenSize(65%, auto);
-            padding: 8vh 0 3vh 0;
+            padding: 3vh 0;
+        }
+        //tablet
+        @include for-tabletS-only{
+            @include screenSize(65%, auto);
+            padding: 5vh 0 3vh 0;
         }
         p{
             @include typography(.8vw,center,1.3em,400);
