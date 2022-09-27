@@ -43,7 +43,7 @@ const ContactUs = () =>{
                                 {({ errors, touched, handleSubmit, isSubmitting}) => (
                                     
                                     <Form onSubmit={handleSubmit} className={style.form}>
-                                        <Input name="name" placeholder="First and last name" label="Your name" error={(errors.name && touched.name) && errors.name }/>
+                                        <Input name="name" placeholder="Your name" label="Full name" error={(errors.name && touched.name) && errors.name }/>
                                         <Input name="email" placeholder="you@acme.com" label="Email" error={(errors.email && touched.email) && errors.email }/>
                                         <Input name="company" placeholder="Acme, Inc." label="Company / Organization" error={(errors.company && touched.company) && errors.company }/>
                                         <div className={style.form__checkboxWrapper}>
