@@ -33,7 +33,7 @@
             }
             
             &-decoration{
-                @include displayFlex(center, center, column);
+                @include displayFlex(center, flex-end, column);
                 max-width: 50%;
                 img{
                     width: 90%;

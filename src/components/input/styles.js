@@ -26,6 +26,8 @@ export const InputField = styled.input`
     border-radius: 4px;
     height: 48px;
     outline: none;
+    //background-color: transparent;
+    //color: #FAFAFA;
     border: ${props => props.error ? "1px solid #DB0000" : "1px solid #33FFCE" };
     font-size: medium;
     padding: 0.25em 0.5em;
@@ -42,7 +44,7 @@ export const InputField = styled.input`
 
     ::placeholder{
         font-size: medium;
-    }
+    }  
 `;
 
 /*end input*/
