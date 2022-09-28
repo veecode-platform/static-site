@@ -51,8 +51,7 @@ const FirstSection = () => {
             easily.
           </p>
         </div>
-        <div className={style.content__buttons}>
-      
+        <div className={style.content__buttons}>      
           <Link href="/how-it-works" passHref>
             <a>
               <Button>How it Works</Button>
