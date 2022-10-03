@@ -5,7 +5,7 @@ export default function FailedPage() {
   return (
     <>
       <Head>
-        <title> Failed Operation </title>
+        <title>Platform | Failed Operation </title>
         <meta name="description" content="Failed Page" />
         <link rel="icon" href="/favicon.ico" />
       </Head>

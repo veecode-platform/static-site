@@ -5,7 +5,7 @@ export default function SuccessPage() {
   return (
     <>
       <Head>
-        <title> Waiting Confirmation</title>
+        <title>Platform | Waiting Confirmation</title>
         <meta name="description" content="Success Page" />
         <link rel="icon" href="/favicon.ico" />
       </Head>

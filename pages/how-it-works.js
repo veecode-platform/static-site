@@ -5,7 +5,7 @@ export default function HowItWorksPage() {
   return (
     <>
       <Head>
-        <title> Platform | How It Works</title>
+        <title>Platform | How It Works</title>
         <meta name="description" content="How It Works Page" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
