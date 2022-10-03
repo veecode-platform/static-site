@@ -5,7 +5,7 @@ export default function SupportPage() {
   return (
     <>
       <Head>
-        <title>Platform  |  Support</title>
+        <title>Platform | Support</title>
         <meta name="description" content="Support Page" />
         <link rel="icon" href="/favicon.ico" />
       </Head>

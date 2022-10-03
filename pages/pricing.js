@@ -5,7 +5,7 @@ export default function PricingPage() {
   return (
     <>
       <Head>
-        <title>Platform  |  Pricing</title>
+        <title>Platform | Pricing</title>
         <meta name="description" content="Pricing Page" />
         <link rel="icon" href="/favicon.ico" />
       </Head>

@@ -4,9 +4,10 @@ import { PayPalScriptProvider, PayPalButtons, usePayPalScriptReducer } from "@pa
 import alerts from "../../../utils/alerts";
 import { useRouter } from 'next/router'
 import { UsePatchData } from "../../hooks/UsePatchData";
+import { gtagPurchase } from "../../../utils/gtag";
 
 
-const WraperButton = ({plan, disabled}) =>{
+const WraperButton = ({plan, disabled, planName, price}) =>{
     const router = useRouter()
 
     const [{ options, isPending, isResolved, isRejected }, dispatch] = usePayPalScriptReducer();
@@ -49,6 +50,7 @@ const WraperButton = ({plan, disabled}) =>{
                             planId: details.plan_id
                         }
                         const dataPatched =  await UsePatchData(patch)
+                        gtagPurchase(data.orderID, { value:price, id:details.plan_id, name:planName });
                         router.push("/success")
                     });                
                 }}
@@ -83,7 +85,7 @@ export const PaypalComponent = ({disabled, plan}) => {
     return(
         <Wrapper>          
             <PayPalScriptProvider options={initialOptions}>
-               <WraperButton plan={supportValue} disabled={disabled} /> 
+               <WraperButton plan={supportValue} disabled={disabled} planName={plan.plan} price={plan.price} /> 
             </PayPalScriptProvider>
         </Wrapper>
     )
