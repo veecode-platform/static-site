@@ -69,7 +69,7 @@ const OptimizationAndSupport = () => {
             </div>
             <div className={style.desc__text}>
               <p>
-                Vee Code Platform encourages its users to help each other in a
+                VeeCode Platform encourages its users to help each other in a
                 collaborative and selfsufficient environment. Join our
                 community, bring your insights about services and products,
                 increasing your productivity also helping the community to grow.
