@@ -7,7 +7,7 @@ import "../styles/theme.scss";
 function MyApp({ Component, pageProps }) {
   return (
     <>
-      {/* Global site tag (gtag.js) - Google Analytics */}
+     {/* Global site tag (gtag.js) - Google Analytics */}
       <Script src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_ANALYTICS_ID}`}></Script>
       <Script id="google-tag-script-function">
         {`window.dataLayer = window.dataLayer || [];
@@ -15,6 +15,15 @@ function MyApp({ Component, pageProps }) {
         gtag('js', new Date());
 
         gtag('config', '${process.env.NEXT_PUBLIC_ANALYTICS_ID}');`}
+      </Script>
+      {/*  Google tag (gtag.js)  */}
+       <Script async src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_ANALYTICS_ID_ADS}`}></Script>
+       <Script id="google-tag-script-function">
+        {`window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', '${process.env.NEXT_PUBLIC_ANALYTICS_ID_ADS}');`}
       </Script>
       {/*Hotjar Tracking Code for https://platform.vee.codes/ */}
       <Script id="hotjar-script-function">
