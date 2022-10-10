@@ -11,3 +11,7 @@ export const gtagPurchase = (id, plan) => {
     }
     window.gtag("event", "purchase", params)
   }
+
+  export const gtagSafiraDocs = () => {//create unique event
+    window.gtag("event", "safiraDocs");
+  }

@@ -3,6 +3,7 @@ import { Button } from "../../../components";
 import Link from "next/link";
 import Image from "next/image";
 import TextSlide from "./textSlide";
+import { gtagSafiraDocs } from "../../../../utils/gtag";
 
 const Logo = "assets/home/logo.png";
 const BgDesktop = "assets/home/bg1.webp"; 
@@ -52,15 +53,15 @@ const FirstSection = () => {
           </p>
         </div>
         <div className={style.content__buttons}>      
-          <Link href="/how-it-works" passHref>
+          {/*<Link href="/how-it-works" passHref>
             <a>
               <Button>How it Works</Button>
             </a>
-          </Link>
+          </Link>*/}
 
-          <Link href="/pricing" passHref>
-            <a>
-              <Button>Buy Now</Button>
+          <Link href="https://docs.platform.vee.codes/docs/installation/safira-cli">
+            <a target="_blank" onClick={gtagSafiraDocs}>
+              <Button >Get started for free</Button>
             </a>
           </Link>
         </div>
