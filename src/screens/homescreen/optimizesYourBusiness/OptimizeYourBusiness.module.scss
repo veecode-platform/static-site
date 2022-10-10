@@ -111,7 +111,7 @@
             }
             &__buttonWrapper {
                 width: 100%;
-                @include displayFlex(flex-end, center, row);
+                @include displayFlex(space-around, center, row);
                 margin-top: 4em;
                 //viewport
                 @include for-viewport-only{
@@ -120,7 +120,7 @@
                 //mobile(M)
                 @include for-phone-only{
                     width: 100%;
-                    @include displayFlex(center, center, row);
+                    @include displayFlex(center, center, column);
                 }
             }
         }

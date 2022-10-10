@@ -4,6 +4,9 @@
     @include screenSize(100%, auto);
     @include displayFlex(center, center, row);
     background-color: $color3;
+    position: fixed;
+    top: 0;
+    z-index: 99;
     .content {
         @include screenSize(40%, auto);
         @include displayFlex(center, center, row);
@@ -20,6 +23,13 @@
             //tablet
             @include for-tablet-only{
                 @include screenSize(150px, auto);
+            }
+        }
+        &__buyButton{
+            position: fixed;
+            right: 4vw;
+            @include for-phone-only{
+                display: none;
             }
         }
     }

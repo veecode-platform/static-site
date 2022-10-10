@@ -25,6 +25,11 @@ const OptimizeYourBusiness = () => {
               </p>
             </div>
             <div className={style.details__buttonWrapper}>
+              <Link href="/how-it-works" passHref>
+                <a>
+                  <Button>How it Works</Button>
+                </a>
+              </Link>
               <Link href="/support" passHref>
                 <a>
                   <Button>Support</Button>

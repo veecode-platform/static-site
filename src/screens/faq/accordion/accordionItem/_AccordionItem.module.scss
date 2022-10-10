@@ -1,0 +1,102 @@
+@import "../../../../../abstract/functions", "../../../../../abstract/variables", "../../../../../abstract/responsive";
+
+.item{ 
+    @include displayFlex(space-between, center, column);
+    padding: 1.5vh 2vw;
+    margin-bottom: 2vh;
+    transition: all .5s ease-in-out;
+    @include glassEffectDark();
+    color: $color2;
+    border-radius: 35px;
+    cursor: pointer;
+    //viewport
+    @include for-viewport-only{
+        border-radius: 1.5em;
+    }
+    &__title{
+        @include text(1.5vw, start);
+        @include displayFlex(space-between, center, row);
+        //tablet(S)
+        @include for-tabletS-only{
+           font-size: 2vw;
+        }
+        //mobile(M)
+        @include for-phone-only {
+            @include text(3.2vw, start);
+        }
+        //mobile(S)
+        @include for-phoneS-only{
+           font-size: 16px;
+           font-weight: 500;
+        }
+    }
+    &__active{
+        opacity: 1.1;
+    }
+    //tablet(S)
+    @include for-tabletS-only{
+        @include text(2.2vw, start);
+    }
+    //Mobile(M)
+    @include for-phone-only {
+        padding: 1.5vh 4vw;
+        @include text(3.2vw, start);
+    }
+    button{
+        @include screenSize(60px,60px);
+        @include displayFlex(center, center, row);
+        outline: none;
+        border: none;
+        border-radius: 50%;
+        background: $color1;
+        color: $color8;
+        font-size: 2vw;
+        cursor: pointer;
+        //viewport
+        @include for-viewport-only{
+            @include screenSize(40px,40px);
+        }
+        //Mobile(M)
+        @include for-phone-only {
+            font-size: 7vw;
+
+        }
+    }
+    .cardAnswer{
+        @include screenSize(100%,100px);
+        @include text(1.2vw, start);
+        color: $color10;
+        transition: all .2s ease-in-out;
+        opacity: 1;
+        &__reset{
+            opacity: 0;
+            transition: all .2s ease-in-out;
+        }
+        //tablet(S)
+        @include for-tabletS-only{
+            @include screenSize(80%,100px);
+            @include text(2vw, start);
+        }
+        //Mobile(M)
+        @include for-phone-only {
+            @include screenSize(80%,100px);
+            @include text(3vw, start);
+        }
+        //mobile(S)
+        @include for-phoneS-only{
+            font-size: 15px;
+            font-weight: 300;
+         }
+    }
+    .hide{
+        height: 0;
+        overflow: hidden;
+        transition: all .5s ease-in;
+    }
+    .show{
+        height: 100px;
+        @include displayFlex(flex-start, center, row);
+        width: 100%;       
+        transition: all .5s ease-in-out;
+    }
+}
