@@ -20,6 +20,7 @@ const HowItWorks = () => {
             titleBar="enable"
             title="How It Works"
             subtitle="VeeCode Platform can help you get your API&apos;s infrastructure in minutes. Here&apos;s how it works."
+            showButton
         >
             <article className={style.content}>
                 <CardItem

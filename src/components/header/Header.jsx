@@ -5,9 +5,9 @@ import Button from '../button/Button';
 
 const Logo = '../assets/home/logo.png';
 
-const Header = () => {
+const Header = ({fixedHeader, showButton}) => {
   return (
-    <header className={style.wrapper}>
+    <header className={style.wrapper} style={fixedHeader? {position: "fixed",top: "0"}:{}}>
       <section className={style.content}>
         <Link href="/">
           <a>
@@ -18,13 +18,13 @@ const Header = () => {
             />
           </a>
         </Link>
-        <div className={style.content__buyButton}>
+        {showButton && <div className={style.content__buyButton} >
           <Link href="/pricing" passHref>            
             <a>
               <Button headerButton>Buy Now</Button>
             </a>         
           </Link>
-        </div>
+        </div>}
       </section>
     </header>
   );

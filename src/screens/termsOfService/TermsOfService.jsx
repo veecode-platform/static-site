@@ -7,6 +7,7 @@ const TermsOfService = () => {
       title="Terms Of Service" 
       titleBar="enable"
       noPrevious
+      showButton
       >
       <article className={style.content}>
         {/* Definitions */}

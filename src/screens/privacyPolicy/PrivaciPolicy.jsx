@@ -7,6 +7,7 @@ const PrivaciPolicy = () => {
       title="Privacy Policy"
       titleBar="enable"
       noPrevious
+      showButton
       >
       <article className={style.content}>
         <span>

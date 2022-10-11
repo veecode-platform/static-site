@@ -10,7 +10,7 @@ import SupportSection from './supportSection';
 const Homescreen = () => {
   return (
     <main className={style.container}>
-      <Header />
+      <Header fixedHeader showButton />
       <FirstSection />
       <OptimizeYourBusiness />
       <OptimizationAndSupport />

@@ -3,9 +3,7 @@
 .wrapper {
     @include screenSize(100%, auto);
     @include displayFlex(center, center, row);
-    background-color: $color3;
-    position: fixed;
-    top: 0;
+    background-color: $color3;  
     z-index: 99;
     .content {
         @include screenSize(40%, auto);
@@ -26,7 +24,7 @@
             }
         }
         &__buyButton{
-            position: fixed;
+            position: absolute;
             right: 4vw;
             @include for-phone-only{
                 display: none;

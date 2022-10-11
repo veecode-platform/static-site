@@ -22,7 +22,7 @@ const ContactUs = () =>{
     const flowImage = "/assets/icons/contact_form_img.png";
 
     return(
-        <DefaultPage titleBar="enable" title="Find out how we can help your business" noBack subtitle={<>Talk to our sales specialist. Use the form below or send an email to <a href='mailto: platform-sales@vee.codes' style={{cursor: "pointer", color: '#33FFCE'}}> platform-sales@vee.codes</a></>}>
+        <DefaultPage showButton titleBar="enable" title="Find out how we can help your business" noBack subtitle={<>Talk to our sales specialist. Use the form below or send an email to <a href='mailto: platform-sales@vee.codes' style={{cursor: "pointer", color: '#33FFCE'}}> platform-sales@vee.codes</a></>}>
         <section className={style.wrapper}>
                     <article className={style.content}>
                     <div className={style.content__options}>
