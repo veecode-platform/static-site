@@ -3,14 +3,14 @@ import style from "../../../styles/DefaultPage.module.scss";
 import { Header, Footer } from "../../components";
 import { useRouter } from 'next/router'
 
-const DefaultPage = ({title, subtitle, titleBar, children, noPrevious, noBack, noFooter}) => {
+const DefaultPage = ({title, subtitle, titleBar, children, noPrevious, noBack, noFooter, showButton}) => {
   const router = useRouter();
   const HandlerBack = () => {
        noPrevious ? router.push("/") : router.back();
   }
   return (
     <main className={style.wrapper}>
-      <Header />
+      <Header showButton={showButton} />
       <section className={style.content}>
         {
           titleBar === "enable" ? 

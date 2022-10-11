@@ -5,6 +5,10 @@
     @include displayFlex(center, center, column);
     background-color: $color9;
     color: $color2;
+    /*margin-top: 8vh;
+    @include for-phone-only{
+      margin-top: 12vh;
+    }*/
     .content{
       @include screenSize(100%, auto);
       .titleWrapper{
