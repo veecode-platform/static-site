@@ -6,8 +6,10 @@ export default function TermsOfServicePage() {
     <>
       <Head>
         <title>Platform | Terms of Service</title>
-        <meta name="description" content="Terms of Service Page" />
-        <link rel="icon" href="/favicon.ico" />
+        <meta 
+         name="description"
+         content="Please feel free to review our terms of service."
+         />
       </Head>
       <TermsOfService/>
     </>

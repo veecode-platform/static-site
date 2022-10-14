@@ -6,8 +6,9 @@ export default function ContactSuccessPage() {
     <>
       <Head>
         <title>Platform | Contact success</title>
-        <meta name="description" content="Contact success Page" />
-        <link rel="icon" href="/favicon.ico" />
+        <meta name="description" 
+        content="If you have reached this page, congratulations on the initiative! we will get in touch with you soon." 
+        />
       </Head>
       <ContactSuccess/>
     </>

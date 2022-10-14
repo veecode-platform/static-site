@@ -6,8 +6,10 @@ export default function CheckoutPage() {
     <>
       <Head>
         <title>Platform | Checkout</title>
-        <meta name="description" content="checkout page" />
-        <link rel="icon" href="/favicon.ico" />
+        <meta
+         name="description"
+          content="Get the best out of our tool with a specialized support service."
+         />
       </Head>
       <Checkout/>
     </>

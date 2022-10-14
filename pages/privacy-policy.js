@@ -6,8 +6,10 @@ export default function PrivacyPolicyPage() {
     <>
       <Head>
         <title>Platform | Privacy Policy</title>
-        <meta name="description" content="Privacy Policy Page" />
-        <link rel="icon" href="/favicon.ico" />
+        <meta 
+         name="description"
+         content="We do everything thought out to the smallest detail, feel free to review our privacy policy."
+         />
       </Head>
       <PrivacyPolicy/>
     </>
