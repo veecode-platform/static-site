@@ -4,9 +4,14 @@
     @include screenSize(100%, auto);
     @include displayFlex(center, center, row);
     position: relative;
+    margin-top: 5rem;
     //mobile(M)
     @include for-phone-only{
         padding: 8vh 0;    
+    }
+    //mobile(S)
+    @include for-phoneS-only{
+        margin-top: 0;
     }
     &__background{
         @include screenSize(100vw, 100%);
