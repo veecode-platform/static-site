@@ -5,6 +5,10 @@
     @include displayFlex(center, center, row);
     background-color: $color3;  
     z-index: 99;
+    &__fixedHeader{
+        position: fixed;
+        top: 0;
+    }
     .content {
         @include screenSize(40%, auto);
         @include displayFlex(center, center, row);

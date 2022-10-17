@@ -6,8 +6,10 @@ export default function SupportPage() {
     <>
       <Head>
         <title>Platform | Support</title>
-        <meta name="description" content="Support Page" />
-        <link rel="icon" href="/favicon.ico" />
+        <meta
+         name="description"
+         content="We have a team of experts ready to help you."
+         />
       </Head>
       <Support />
     </>

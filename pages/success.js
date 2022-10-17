@@ -6,8 +6,10 @@ export default function SuccessPage() {
     <>
       <Head>
         <title>Platform | Waiting Confirmation</title>
-        <meta name="description" content="Success Page" />
-        <link rel="icon" href="/favicon.ico" />
+        <meta
+         name="description"
+         content="This session is for those who know where they want to go! Congratulations for being part of the platform!"
+          />
       </Head>
       <Success/>
     </>

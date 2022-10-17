@@ -6,8 +6,10 @@ export default function ValidatePage() {
     <>
       <Head>
         <title>Platform | Validate</title>
-        <meta name="description" content="Validate page" />
-        <link rel="icon" href="/favicon.ico" />
+        <meta 
+          name="description"
+          content="In this step we will validate your data."
+        />
       </Head>
       <Validate/>
     </>

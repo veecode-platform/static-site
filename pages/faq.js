@@ -6,8 +6,10 @@ export default function FaqPage() {
     <>
       <Head>
         <title>Platform | Faq</title>
-        <meta name="description" content="Platform - Faq Page" />
-        <link rel="icon" href="/favicon.ico" />
+        <meta
+         name="description"
+         content="Session with frequently asked questions and their respective answers, enjoy and stay on top of everything!"
+          />
       </Head>
       <Faq/>
     </>

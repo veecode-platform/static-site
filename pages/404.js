@@ -5,9 +5,13 @@ export default function NotFound() {
   return (
     <>
       <Head>
-        <title>Page Not Found</title>
-        <meta name="description" content="Page Not Found" />
-        <link rel="icon" href="/favicon.ico" />
+        <title>
+          Page Not Found
+        </title>
+        <meta
+         name="description"
+         content="Erro 404 - Page Not Found"
+          />
       </Head>
       <PageNotFound/>
     </>

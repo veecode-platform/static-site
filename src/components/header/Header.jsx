@@ -1,3 +1,5 @@
+/* eslint-disable @next/next/no-img-element */
+import classNames from 'classnames';
 import Link from 'next/link';
 import style from '../../../styles/Header.module.scss';
 import Button from '../button/Button';
@@ -7,7 +9,13 @@ const Logo = '../assets/home/logo.png';
 
 const Header = ({fixedHeader, showButton}) => {
   return (
-    <header className={style.wrapper} style={fixedHeader? {position: "fixed",top: "0"}:{}}>
+    <header
+      className={
+      classNames({
+                  [style.wrapper] : true ,
+                  [style.wrapper__fixedHeader] : fixedHeader
+                })}
+       >
       <section className={style.content}>
         <Link href="/">
           <a>

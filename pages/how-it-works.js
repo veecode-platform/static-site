@@ -6,8 +6,10 @@ export default function HowItWorksPage() {
     <>
       <Head>
         <title>Platform | How It Works</title>
-        <meta name="description" content="How It Works Page" />
-        <link rel="icon" href="/favicon.ico" />
+        <meta
+         name="description"
+         content="Get to know how this powerful tools works." 
+         />
       </Head>
       <HowItWorks/>
     </>
