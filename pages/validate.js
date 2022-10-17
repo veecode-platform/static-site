@@ -8,7 +8,7 @@ export default function ValidatePage() {
         <title>Platform | Validate</title>
         <meta 
           name="description"
-          content="In this step we will validate your data and payment method."
+          content="In this step we will validate your data."
         />
       </Head>
       <Validate/>

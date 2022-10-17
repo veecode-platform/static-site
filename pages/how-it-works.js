@@ -8,7 +8,7 @@ export default function HowItWorksPage() {
         <title>Platform | How It Works</title>
         <meta
          name="description"
-         content="Get to know how this powerful tool works."
+         content="Get to know how this powerful tools works." 
          />
       </Head>
       <HowItWorks/>

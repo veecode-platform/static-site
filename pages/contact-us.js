@@ -7,7 +7,7 @@ export default function ContactUsPage() {
       <Head>
         <title>Platform | Contact Us</title>
         <meta name="description"
-          content="Contact our team and get more detailed information." 
+          content="Get in touch with our team, ask your questions and get more detailed information." 
           />
       </Head>
       <ContactUs/>
