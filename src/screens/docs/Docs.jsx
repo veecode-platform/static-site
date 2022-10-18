@@ -25,7 +25,7 @@ const Docs = () => {
         </div>
         <div className={style.container__cards}>
           <h2 className={style["container__cards-title"]}><span><FaLayerGroup /></span> VKPR</h2>
-          <p className={style["container__cards-desc"]}> Is our solution for Cloud Infrastructure. With the CLI, you will provide a Kubernetes cluster to attend to your company.s needs.</p>
+          <p className={style["container__cards-desc"]}> Is our solution for Cloud Infrastructure. With the CLI, you will provide a Kubernetes cluster to attend to your company&apos;s needs.</p>
           <Link href="https://docs.vkpr.net/docs/intro/">
             <a target="_blank" >
               <Button>See Docs</Button>
