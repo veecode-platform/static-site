@@ -3,7 +3,7 @@ import style from "../../../styles/DefaultPage.module.scss";
 import { Header, Footer } from "../../components";
 import { useRouter } from 'next/router'
 
-const DefaultPage = ({title, subtitle, titleBar, children, noPrevious, noBack, noFooter, showButton}) => {
+const DefaultPage = ({titleBar,title, subtitle, children, noPrevious, noBack, noFooter, showButton}) => {
   const router = useRouter();
   const HandlerBack = () => {
        noPrevious ? router.push("/") : router.back();

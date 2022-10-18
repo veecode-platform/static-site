@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import style from "./_FirstSection.module.scss";
 import { Button } from "../../../components";
 import Link from "next/link";
@@ -59,8 +60,8 @@ const FirstSection = () => {
             </a>
           </Link>*/}
 
-          <Link href="https://docs.platform.vee.codes/docs/installation/safira-cli">
-            <a target="_blank" onClick={gtagSafiraDocs}>
+          <Link href="/docs" passHref>
+            <a>
               <Button >Get started for free</Button>
             </a>
           </Link>
