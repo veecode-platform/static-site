@@ -1,0 +1,52 @@
+@import "../abstract/functions", "../abstract/variables", "../abstract/responsive";
+
+.container{
+    @include screenSize(100%,auto);
+    @include displayFlex(center, center, row);
+    gap: 1em;
+    padding: 1em 0;
+    //mobile(M)
+    @include for-phone-only{
+        flex-direction: column;
+        gap: 2em;
+    }
+    &__cards{
+        @include screenSize(100%,auto);
+        @include displayFlex(center,center,column);
+        padding: 2.5em;
+        @include glassEffect();
+        //mobile(XS)
+        @include for-phoneXS-only{
+            padding: 2.5em 0;
+        }
+        &-title{
+            @include typography(2vw,center,1.2rem,500);
+            padding: 1em 0;
+            //tablet(S)
+            @include for-tabletS-only{
+                font-size: 22px;
+            }
+            //mobile(M)
+            @include for-phone-only{
+                font-size: 26px;
+            }
+            span{
+                color: $color1;
+            }
+        }
+        &-desc{
+            @include typography(1vw,center,1.4rem,400);
+            padding: 0 1.5em 2em 1.5em;
+            //tablet(S)
+            @include for-tabletS-only{
+                font-size: 12px;
+                line-height: 1.2rem;
+            }
+            //mobile(M)
+            @include for-phone-only{
+                font-size:16px;
+                padding: 1.5em 1em;
+            }
+        }
+    }
+}
