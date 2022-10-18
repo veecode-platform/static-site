@@ -7,7 +7,7 @@ export default function DocsPage() {
       <Head>
         <title>Platform | Get Started For Free</title>
         <meta name="description"
-          content="Learn more about our tools here." 
+          content="Choose the technology that is most compatible with your business." 
           />
       </Head>
       <Docs/>
