@@ -3,7 +3,7 @@ import { Button, DefaultPage } from '../../components';
 import style from '../../../styles/Docs.module.scss';
 import { FaLayerGroup, FaRocket } from 'react-icons/fa';
 import Link from 'next/link';
-import { gtagSafiraDocs } from '../../../utils/gtag';
+import { gtagSafiraDocs, gtagVkprDocs } from '../../../utils/gtag';
 
 const Docs = () => {
   return (
@@ -27,7 +27,7 @@ const Docs = () => {
           <h2 className={style["container__cards-title"]}><span><FaLayerGroup /></span> VKPR</h2>
           <p className={style["container__cards-desc"]}> Is our solution for Cloud Infrastructure. With the CLI, you will provide a Kubernetes cluster to attend to your company&apos;s needs.</p>
           <Link href="https://docs.vkpr.net/docs/intro/">
-            <a target="_blank" >
+            <a target="_blank" onClick={gtagVkprDocs}>
               <Button>See Docs</Button>
             </a>
           </Link>
