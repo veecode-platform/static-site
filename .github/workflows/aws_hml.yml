@@ -6,6 +6,10 @@ on:
   pull_request:
     branches: [ homolog ]
 
+permissions:
+  id-token: write
+  contents: read
+
 jobs:
   upload:
     runs-on: ubuntu-latest
@@ -42,7 +46,7 @@ jobs:
 
       - name: Deploy static site to S3 bucket
         run: |
-           aws s3 sync build s3://platform.vee.code.hml --acl public-read
+           aws s3 sync out s3://${{ secrets.AWS_BUCKET_HML }} --acl public-read
       - name: Homolog docs URL
         run: |
           echo "http://platform.vee.code.hml.s3-website-us-east-1.amazonaws.com/"
