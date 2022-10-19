@@ -41,13 +41,8 @@ jobs:
           aws-region: us-east-1
 
       - name: Deploy static site to S3 bucket
-        run: aws s3 sync out s3://${{ secrets.AWS_BUCKET_HML }} --acl public-read
-              
-#     - uses: shallwefootball/s3-upload-action@master
-#       name: Upload S3
-#       id: S3
-#       with:
-#         aws_key_id: ${{ secrets.AWS_KEY_ID }}
-#         aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY}}
-#         aws_bucket: ${{ secrets.AWS_BUCKET }}
-#         source_dir: 'out'
+        run: |
+           aws s3 sync build s3://platform.vee.code.hml --acl public-read
+      - name: Homolog docs URL
+        run: |
+          echo "http://platform.vee.code.hml.s3-website-us-east-1.amazonaws.com/"
