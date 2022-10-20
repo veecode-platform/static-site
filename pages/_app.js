@@ -37,6 +37,12 @@ function MyApp({ Component, pageProps }) {
         })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');`}
       </Script>
       <Head>
+        
+        <meta property="og:title" content="Veecode Platform"/>
+        <meta property="og:image" content="/thumbnail-1200x627.png"/>
+        <meta property="og:description" content="Your transition to the cloud doesn't have to be time-consuming, expensive, or unaided. Count on our professional support and free tools to overcome these challenges quickly and easily."/>
+        <meta property="og:url" content="//www.example.com/URL of the article"/>
+
         <meta
           name="viewport"
           content="width=device-width, initial-scale=1"
