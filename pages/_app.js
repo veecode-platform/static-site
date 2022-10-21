@@ -7,8 +7,10 @@ import "../styles/theme.scss";
 function MyApp({ Component, pageProps }) {
   return (
     <>
-     {/* Global site tag (gtag.js) - Google Analytics */}
-      <Script src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_ANALYTICS_ID}`}></Script>
+      {/* Global site tag (gtag.js) - Google Analytics */}
+      <Script
+        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_ANALYTICS_ID}`}
+      ></Script>
       <Script id="google-tag-script-function">
         {`window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
@@ -17,8 +19,11 @@ function MyApp({ Component, pageProps }) {
         gtag('config', '${process.env.NEXT_PUBLIC_ANALYTICS_ID}');`}
       </Script>
       {/*  Google tag (gtag.js)  */}
-       <Script async src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_ANALYTICS_ID_ADS}`}></Script>
-       <Script id="google-tag-script-function">
+      <Script
+        async
+        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_ANALYTICS_ID_ADS}`}
+      ></Script>
+      <Script id="google-tag-script-function">
         {`window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
@@ -37,26 +42,59 @@ function MyApp({ Component, pageProps }) {
         })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');`}
       </Script>
       <Head>
-        
-        <meta property="og:title" content="Veecode Platform"/>
-        <meta property="og:image" content="/thumbnail-1200x627.png"/>
-        <meta property="og:description" content="Your transition to the cloud doesn't have to be time-consuming, expensive, or unaided. Count on our professional support and free tools to overcome these challenges quickly and easily."/>
-        <meta property="og:url" content="//www.example.com/URL of the article"/>
-
+        <title>
+          Your API infrastructure in minutes Cloud On-premises With Support
+        </title>
         <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1"
+          name="title"
+          content="Your API infrastructure in minutes Cloud On-premises With Support"
         />
-        <meta charSet="utf-8"/>
+        <meta
+          name="description"
+          content="Count on our professional support and free tools to overcome DevOps challenges quickly."
+        />
+
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:url"
+          content="http://platform.vee.code.hml.s3-website-us-east-1.amazonaws.com/"
+        />
+        <meta
+          property="og:title"
+          content="Your API infrastructure in minutes Cloud On-premises With Support"
+        />
+        <meta
+          property="og:description"
+          content="Count on our professional support and free tools to overcome DevOps challenges quickly."
+        />
+        <meta
+          property="og:image"
+          content="http://platform.vee.code.hml.s3-website-us-east-1.amazonaws.com/thumbnail-1200x627.png"
+        />
+
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta
+          property="twitter:url"
+          content="http://platform.vee.code.hml.s3-website-us-east-1.amazonaws.com/"
+        />
+        <meta
+          property="twitter:title"
+          content="Your API infrastructure in minutes Cloud On-premises With Support"
+        />
+        <meta
+          property="twitter:description"
+          content="Count on our professional support and free tools to overcome DevOps challenges quickly."
+        />
+        <meta
+          property="twitter:image"
+          content="http://platform.vee.code.hml.s3-website-us-east-1.amazonaws.com/thumbnail-1200x627.png"
+        />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta charSet="utf-8" />
         <link rel="icon" href="/favicon.ico" />
-        <link
-         rel="apple-touch-icon"
-         href="/apple-touch-icon.png"
-         />
-        <link
-          rel="shortcut icon"
-           href="/favicon.ico"
-         />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="/favicon.ico" />
         <link
           rel="apple-touch-icon"
           sizes="180x180"
@@ -74,10 +112,7 @@ function MyApp({ Component, pageProps }) {
           sizes="16x16"
           href="/favicon-16x16.png"
         />
-        <link
-          rel="mask-icon"
-          href="/safari-pinned-tab.svg"
-        />
+        <link rel="mask-icon" href="/safari-pinned-tab.svg" />
       </Head>
       <Component {...pageProps} />
       <ToastContainer autoClose={5000} hideProgressBar={true} />
