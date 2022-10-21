@@ -22,8 +22,8 @@ jobs:
       
       - name: Build Project
         run: | 
-           yarn version
            yarn
+           yarn version
            cat > '.env.local' <<EOT
            NEXT_PUBLIC_ANALYTICS_ID=${{ secrets.ANALYTICS_ID }}
            NEXT_PUBLIC_LAMBDA_BASE_URL=${{ secrets.LAMBDA_BASE_URL_HOMOLOG }}
