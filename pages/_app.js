@@ -57,7 +57,7 @@ function MyApp({ Component, pageProps }) {
         <meta property="og:type" content="website" />
         <meta
           property="og:url"
-          content="http://platform.vee.code.hml.s3-website-us-east-1.amazonaws.com/"
+          content="https://platform.vee.codes"
         />
         <meta
           property="og:title"
@@ -69,13 +69,13 @@ function MyApp({ Component, pageProps }) {
         />
         <meta
           property="og:image"
-          content="http://platform.vee.code.hml.s3-website-us-east-1.amazonaws.com/thumbnail-1200x627.png"
+          content="https://platform.vee.codes/thumbnail-1200x627.png"
         />
 
         <meta property="twitter:card" content="summary_large_image" />
         <meta
           property="twitter:url"
-          content="http://platform.vee.code.hml.s3-website-us-east-1.amazonaws.com/"
+          content="https://platform.vee.codes"
         />
         <meta
           property="twitter:title"
@@ -87,7 +87,7 @@ function MyApp({ Component, pageProps }) {
         />
         <meta
           property="twitter:image"
-          content="http://platform.vee.code.hml.s3-website-us-east-1.amazonaws.com/thumbnail-1200x627.png"
+          content="https://platform.vee.codes/thumbnail-1200x627.png"
         />
 
         <meta name="viewport" content="width=device-width, initial-scale=1" />
