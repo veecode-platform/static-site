@@ -49,4 +49,4 @@ jobs:
            aws s3 sync out s3://${{ secrets.AWS_BUCKET_HML }} --acl public-read
       - name: Homolog docs URL
         run: |
-          echo "http://platform.vee.code.hml.s3-website-us-east-1.amazonaws.com/"
+          echo "http://${{ secrets.AWS_BUCKET_HML }}.s3-website-us-east-1.amazonaws.com/"
