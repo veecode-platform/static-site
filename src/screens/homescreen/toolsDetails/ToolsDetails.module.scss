@@ -1,0 +1,58 @@
+@import "../abstract/functions", "../abstract/variables", "../abstract/responsive";
+
+.content {
+    @include screenSize(100vw, auto);
+    padding: 10em 0 12em 0;
+    background: $color13;
+    @include displayFlex(center, center, column);
+    position: relative;
+    //mobile
+    @include for-phone-only{
+         padding: 8em 0;
+    }
+    &__title{
+            @include screenSize(100%, auto);
+            padding-bottom: 6em;
+            span{
+                color: $color1;
+            }
+            //tablet
+            @include for-tablet-only {
+                @include screenSize(80%, auto);
+                padding-bottom: 5em;
+            }
+            //mobile(M)
+            @include for-phone-only {
+                @include screenSize(50%, auto);
+            }
+            //mobile(S)
+            @include for-phoneS-only {
+                @include screenSize(70%, auto);
+            }
+            h2 {
+                @include typography(2.8vw, center, 1.3em, 600);
+                color: $color3;
+                //mobile(M)
+                @include for-phone-only {
+                    font-size: 7vw;
+                }
+                //mobile(S)
+                @include for-phoneS-only {
+                    font-size: 11vw;
+                }
+        }
+    }
+    &__wrapper{
+        @include screenSize(80%,auto);
+        display: grid;
+        grid-template: 1fr/ repeat(4,1fr);
+        gap: 1%;
+        //mobile
+        @include for-phone-only{
+            grid-template: 1fr/1fr;
+            justify-content: center;
+            align-items: center;
+            gap:0;
+        }
+    }
+}
