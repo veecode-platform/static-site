@@ -12,9 +12,6 @@ const Card = ({
 }) => {
     return (
         <div className={style.card}>
-            <div className={style.card__icon}>
-                <img src={image} alt={title} className={style["card__icon-image"]}/>
-            </div>
             <div className={style.card__title}>
                 <h2>{title}</h2>
             </div>
