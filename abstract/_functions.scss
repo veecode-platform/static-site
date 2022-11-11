@@ -131,6 +131,10 @@ EFFECTS
     box-shadow: rgba(0, 0, 0, 0.897) 0px 19px 38px, rgba(0, 0, 0, 0.692) 0px 15px 12px;
 }
 
+@mixin boxShadow2(){
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
 //pulse animation
 @mixin pulseAnimation() {
     display: inline-block;
