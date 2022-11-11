@@ -1,0 +1,58 @@
+@import '/abstract/functions','/abstract/responsive','/abstract/variables';
+
+.card{
+    @include screenSize(100%,auto);
+    @include displayFlex(space-between, center,column);
+    padding: 2em 1.5em;
+    @include shadowSpecial();
+    border-radius: .8em;
+    background: #FFF;
+    overflow-y: auto;
+    box-sizing: border-box;
+    //mobile
+    @include for-phone-only{
+        @include screenSize(75%, auto);
+        margin: 0 auto 2em auto;
+    }
+    //mobile(S)
+    @include for-phoneS-only{
+        @include screenSize(75vw, auto);
+    }
+    &__image{
+        @include screenSize(6.5vw,auto);
+        //mobile
+        @include for-phone-only{
+            width: 120px;
+        }
+    }
+    &__title{
+        @include typography(1.4vw,center,auto,600);
+        margin: 1em 0;
+        //mobile
+        @include for-phone-only{
+            font-size: 3.8vw;
+        }
+        //mobile(S)
+        @include for-phoneS-only{
+            font-size: 22px;
+        }
+    }
+    &__desc{
+        @include typography(1vw,center,auto,500);
+        color: $color4;
+        //mobile
+        @include for-phone-only{
+            font-size: 3vw;
+            padding: 0 .5em;
+        }
+        //mobile(S)
+        @include for-phoneS-only{
+            font-size: 18px;
+        }
+    }
+    &__buttonWrapper{
+        @include screenSize(90%,auto);
+        @include displayFlex(center, center,row);
+        margin: 1.2em 0 1em 0;
+    }
+}
