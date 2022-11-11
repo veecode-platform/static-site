@@ -1,0 +1,72 @@
+@import '/abstract/functions', '/abstract/responsive','/abstract/variables';
+
+.tools{
+    @include screenSize(100vw,auto);
+    @include displayFlex(center, center, column);
+    background: $color9;
+    padding: 10em 0 2em 0;
+    //mobile
+    @include for-phone-only{
+        padding: 8em 0 4em 0;
+    }
+    &__title{
+        @include screenSize(100%, auto);
+        padding-bottom: 6em;
+        //tablet
+        @include for-tablet-only {
+            @include screenSize(80%, auto);
+        }
+        //mobile(M)
+        @include for-phone-only {
+            @include screenSize(50%, auto);
+            padding-bottom: 4em;
+        }
+        //mobile(S)
+        @include for-phoneS-only {
+            @include screenSize(70%, auto);
+        }
+        h2 {
+            @include typography(2.8vw, center, 1.3em, 600);
+            color: $color2;
+            //mobile(M)
+            @include for-phone-only {
+                font-size: 7vw;
+            }
+            //mobile(S)
+            @include for-phoneS-only {
+                font-size: 11vw;
+            }
+    }
+}
+    &__wrapper{
+        @include screenSize(75%,auto);
+        padding-bottom: 12em;
+        display: grid;
+        grid-template: repeat(2,1fr)/repeat(4,20%);
+        justify-content: center;
+        gap: 1em;
+        //tablet
+        @include for-tablet-only{
+            padding-bottom: 8em;
+        }  
+        //mobile
+        @include for-phone-only{
+            grid-template: repeat(3,1fr)/repeat(3,30%);
+        }    
+        //mobile(S)
+        @include for-phoneS-only{
+            grid-template: repeat(4,1fr)/repeat(2,50%);
+        }
+        .toolsImg{
+            @include screenSize(100%,auto);
+            @include glassEffectDark();
+            //mobile
+            @include for-phone-only{
+            }
+            //mobile(S)
+            @include for-phoneS-only{
+                padding: .5em;
+            }
+        }
+    }
+}
