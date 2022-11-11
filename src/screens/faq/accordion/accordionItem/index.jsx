@@ -1,5 +1,4 @@
 import React, { useRef } from "react";
-import { FaAngleRight, FaAngleDown } from "react-icons/fa";
 import style from "./_AccordionItem.module.scss";
 import classNames from "classnames";
 import { BsPlus ,BsDash} from "react-icons/bs";
