@@ -40,17 +40,18 @@ const FirstSection = () => {
         </div>
         <div className={style.content__title}>
           <h1>
-            Your API infrastructure in <strong> minutes </strong>
+            Your API infrastructure in <strong> minutes </strong> with
             <TextSlide />
           </h1>
         </div>
         <div className={style.content__text}>
           <p>
             Your transition to the cloud doesn&lsquo;t have to be
-            time-consuming, expensive, or unaided. Count on our{" "}
+            time-consuming, expensive, or lonely. Count on our{" "}
             <strong>professional support</strong> and{" "}
-            <strong>free tools</strong> to overcome these challenges quickly and
-            easily.
+            <strong>free tools</strong> to overcome your challenges quickly 
+            and easily! 
+            {/* incorporating: */}
           </p>
         </div>
         <div className={style.content__buttons}>      
