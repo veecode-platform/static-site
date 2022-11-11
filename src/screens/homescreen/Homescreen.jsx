@@ -2,7 +2,6 @@ import style from '../../../styles/Homescreen.module.scss';
 import { Footer, Header } from '../../components';
 import FirstSection from './firstSection';
 import OptimizeYourBusiness from './optimizesYourBusiness';
-import OptimizationAndSupport from './optimizationAndSupport';
 import Benefits from './benefits';
 import Banner from './banner';
 import SupportSection from './supportSection';
@@ -17,7 +16,6 @@ const Homescreen = () => {
       <OptimizeYourBusiness />
       <ToolsDetails/>
       <Tools/>
-      {/* <OptimizationAndSupport /> */}
       <Benefits />
       <Banner />
       <SupportSection />
