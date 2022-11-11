@@ -49,7 +49,7 @@
             @include screenSize(85%, auto);
         }
         &__text {
-            @include screenSize(60%, auto);
+            @include screenSize(65%, auto);
             padding: 10em 0;
             //mobile(M)
             @include for-phone-only {
@@ -58,15 +58,19 @@
             }
             &-title {
                 @include screenSize(100%, auto);
-                padding: 2.2em 0;
+                padding: 2.2em 0 3.2em 0;
                 span {
                     color: $color1;
                 }
+                //mobile(S)
+                @include for-phoneS-only{
+                    padding-bottom: 3.5em;
+                }
                 h2 {
-                    @include typography(2.6vw, start, 1.2em, 600);
+                    @include typography(2.8vw, start, 1.2em, 600);
                     //mobile(M)
                     @include for-phone-only {
-                        @include typography(6.5vw, center, 1.2em, 600);
+                        @include typography(7vw, center, 1.2em, 600);
                     }
                     //mobile(S)
                     @include for-phoneS-only {

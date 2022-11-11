@@ -90,11 +90,11 @@
                 margin-top: 5em;
             }
             h1 {
-                @include typography(3.1vw, start, 1.1em, 300);
+                @include typography(2.8vw, start, 1.1em, 400);
                 color: $color2;
                 //mobile(M)
                 @include for-phone-only {
-                    @include typography(8vw, center, 1.3em, 300);
+                    @include typography(7vw, center, 1.3em, 300);
                 }
                 //mobile(S)
                 @include for-phoneS-only {
@@ -119,11 +119,15 @@
                 @include screenSize(90%, auto);
             }
             p {
-                @include typography(1.2vw, start, 1.5em, 300);
+                @include typography(1.1vw, start, 1.5em, 300);
                 color: $color2;
+                //tablet
+                @include for-tablet-only{
+                    margin-bottom: .5em;
+                }
                 //mobile(M)
                 @include for-phone-only {
-                    @include typography(3vw, center, 1.4em, 300);
+                    @include typography(2.6vw, center, 1.4em, 300);
                 }
                 //mobile(S)
                 @include for-phoneS-only {

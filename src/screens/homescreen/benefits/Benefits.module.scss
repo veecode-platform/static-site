@@ -5,37 +5,42 @@
     @include displayFlex(center, center, column);
     background-color: $color3;
     @include backgroundImage("/assets/home/bg2.webp");
-    margin-top: -0.5em;
+    position: relative;
+    padding: 8em 0 2em 0;
     //mobile(M)
     @include for-phone-only {
-        margin-top: -0.5em;
+        padding: 8em 0;
     }
     .title {
         @include screenSize(80%, auto);
-        padding: 9em 0 2em 0;
+        padding: 5em 0;
+        span{
+            color: $color1;
+        }
         //tablet
         @include for-tablet-only {
             @include screenSize(60%, auto);
-            padding: 6em 0 1em 0;
+            padding-bottom: 3em;
         }
         //mobile(M)
         @include for-phone-only {
-            padding: 6em 0 0 0;
+            padding: 4em  0;
         }
         //mobile(S)
         @include for-phoneS-only {
             @include screenSize(70%, auto);
+            padding-bottom: 2.5em;
         }
         h2 {
             @include typography(2.8vw, center, 1.3em, 600);
             color: $color2;
             //mobile(M)
             @include for-phone-only {
-                font-size: 6.5vw;
+                font-size: 7vw;
             }
             //mobile(S)
             @include for-phoneS-only {
-                font-size: 10vw;
+                font-size: 11vw;
             }
         }
     }

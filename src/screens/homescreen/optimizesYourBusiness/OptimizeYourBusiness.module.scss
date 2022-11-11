@@ -53,14 +53,14 @@
                 color: $color2;
                 //mobile(M)
                 @include for-phone-only {
-                    font-size: 6.5vw;
+                    font-size: 7vw;
                     text-align: center;
                 }
                 //mobile(S)
                 @include for-phoneS-only {
-                    font-size: 9vw;
+                    font-size: 9.5vw;
                     strong{
-                        font-size: 11.5vw;
+                        font-size: 11vw;
                     }
                 }
             }
@@ -92,7 +92,7 @@
                     @include displayFlex(flex-end,center,row);
                 }
                 p {
-                    @include typography(1.2vw, end, 1.5em, 300);
+                    @include typography(1.07vw, end, 1.5em, 300);
                     color: $color2;
                     //viewport
                     @include for-viewport-only{
@@ -101,7 +101,7 @@
                     }
                     //mobile(M)
                     @include for-phone-only {
-                        @include typography(3vw, center, 1.4em, 300);
+                        @include typography(2.6vw, center, 1.4em, 300);
                     }
                     //mobile(S)
                     @include for-phoneS-only {
@@ -116,6 +116,12 @@
                 //viewport
                 @include for-viewport-only{
                     margin-top: 2em;
+                }
+                //tablet
+                @include for-tablet-only{
+                    width: 92%;
+                    align-self: end;
+                    justify-content: space-between;
                 }
                 //mobile(M)
                 @include for-phone-only{

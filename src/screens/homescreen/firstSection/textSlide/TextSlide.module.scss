@@ -23,25 +23,31 @@
             -webkit-animation-direction:alternate;
             animation-direction: alternate;
             @-webkit-keyframes move {
-                25%{
+                20%{
                     transform: translateY(0px);
                 }
-                50%{
+                45%{
                     transform: translateY(-60px);
                 }
-                100%{
+                65%{
                     transform: translateY(-120px);
+                }
+                100%{
+                    transform: translateY(-180px);
                 }
               }
               @keyframes move {
-                25%{
+                20%{
                     transform: translateY(0px);
                 }
-                50%{
+                45%{
                     transform: translateY(-60px);
                 }
-                100%{
+                65%{
                     transform: translateY(-120px);
+                }
+                100%{
+                    transform: translateY(-180px);
                 }
               }
             &__item{
@@ -51,6 +57,18 @@
                     @include for-phone-only{
                         @include displayFlex(center, center, row);
                     }
+                img{
+                    @include screenSize(2vw,auto);
+                    margin-right: .06em;
+                    //mobile(M)
+                    @include for-phone-only{
+                        @include screenSize(5.5vw,auto);
+                    }
+                    //Mobile(S)
+                    @include for-phoneS-only{
+                        @include screenSize(8.5vw,auto);
+                    }
+                }
                 p{
                     font-size: 2.2vw;
                     color: $color1;
