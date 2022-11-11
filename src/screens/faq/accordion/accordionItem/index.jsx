@@ -2,6 +2,7 @@ import React, { useRef } from "react";
 import { FaAngleRight, FaAngleDown } from "react-icons/fa";
 import style from "./_AccordionItem.module.scss";
 import classNames from "classnames";
+import { BsPlus ,BsDash} from "react-icons/bs";
 
 const AccordionItem = ({item , onToggle, active}) => {
   
@@ -19,7 +20,7 @@ const AccordionItem = ({item , onToggle, active}) => {
       <span className={style.item__title}>
         {title}
         <button onClick={onToggle}>
-            {active ? <FaAngleDown /> : <FaAngleRight />}
+            {active ? <BsDash /> : <BsPlus />}
         </button>
       </span>
       <span

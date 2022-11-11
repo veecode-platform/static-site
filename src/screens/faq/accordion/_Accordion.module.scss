@@ -19,7 +19,7 @@
         }
         //mobile(S)
         @include for-phoneS-only{
-            padding: .5em 0;
+            padding: 0;
         }
         &__faqList{
             @include resetList();

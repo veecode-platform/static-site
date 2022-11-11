@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import style from "../../../styles/Footer.module.scss";
 import { FaFacebookSquare, FaInstagram, FaLinkedin, FaTwitterSquare } from "react-icons/fa";
 import Link from "next/link";
@@ -61,7 +62,7 @@ const Footer = () => {
               <Link href="/terms-of-service"><a><li>Terms of Service</li></a></Link>
               <Link href="/privacy-policy"><a><li>Policy Privacy</li></a></Link>
               <Link href="/contact-us"><a><li>Contact Us</li></a></Link>
-              {/*<Link href="/faq"><a><li>FAQ</li></a></Link>*/}
+              <Link href="/faq"><a><li>FAQ</li></a></Link>
             </ul>
           </div>
         </div>
