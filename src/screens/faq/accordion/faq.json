@@ -1,7 +1,7 @@
 [{
     "id": 1,
     "title": "Do I have to pay to use VeeCode Platform products?",
-    "desc": "No. Our products are free, we only charge for the personalized support service that offers help in stacks that permeate the world of API's, microservices and Devops."
+    "desc": "No. Our products are free, we only charge for the personalized support service that offers help in stacks that permeate the world of APIs, microservices and Devops."
 },
 {
     "id": 2,
@@ -41,6 +41,6 @@
 {
     "id":9,
     "title":"What is DevPortal? What is it for?",
-    "desc":"DevPortal is a platform that centralizes your Specs and API's making it easy to control microservices. Today we understand that the microservices architecture is necessary to deliver value to our users. Devportal works as a showcase of specifications and API's that facilitate the control and testing of services."
+    "desc":"DevPortal is a platform that centralizes your Specs and APIs making it easy to control microservices. Today we understand that the microservices architecture is necessary to deliver value to our users. Devportal works as a showcase of specifications and APIs that facilitate the control and testing of services."
 }
 ]
