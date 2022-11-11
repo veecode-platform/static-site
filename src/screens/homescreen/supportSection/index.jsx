@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "../../../components";
@@ -34,11 +35,11 @@ const SupportSection = () => {
           <div className={style["content__text-desc"]}>
             <strong>Benefits of VeeCode Platform support</strong>
             <ul className={style.list}>
-              <li>Submit your questions through our portal.</li>
-              <li>Track the progress of your request.</li> 
-              <li>Access our knowledge base.</li>
-              <li>Service with established SLA.</li>
               <li>Direct assistance to your technical team.</li>
+              <li>Get the best technology support on hand.</li> 
+              <li>Service with established SLA.</li>
+              <li>Most affordable price on the market.</li>
+              <li>Solve all of your problems with Devops, IaC, Cloud, Microsservices and more.</li>
             </ul>
           </div>
           <div className={style["content__text-buttonWrapper"]}>
