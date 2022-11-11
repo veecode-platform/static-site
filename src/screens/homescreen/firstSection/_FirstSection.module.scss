@@ -69,7 +69,7 @@
             }
         }
         &__title {
-            @include screenSize(50%, auto);
+            @include screenSize(40%, auto);
             margin: 2em 0 1.5em;
             //tablet
             @include for-tablet-only{

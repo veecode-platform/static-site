@@ -40,7 +40,7 @@ const FirstSection = () => {
         </div>
         <div className={style.content__title}>
           <h1>
-            Your API infrastructure in <strong> minutes </strong> with
+          We provide <strong>instant support</strong> on
             <TextSlide />
           </h1>
         </div>

@@ -12,8 +12,8 @@ const OptimizeYourBusiness = () => {
         <div className={style["content__contentWrapper-text"]}>
           <div className={style.title}>
             <h2>
-              <strong>VeeCode Platform</strong> Optimizes Your Business
-              Transformation
+              <strong>VeeCode Platform</strong> 
+              {" "} automates your API Infrastructure
             </h2>
           </div>
           <div className={style.details}>

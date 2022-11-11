@@ -3,7 +3,7 @@
   .textSlide{
     display: inline-flex;
      height: 60px;
-     margin-left: .2em;
+     margin-left: .21em;
      overflow: hidden;
      //Mobile(M)
      @include for-phone-only{
@@ -23,31 +23,43 @@
             -webkit-animation-direction:alternate;
             animation-direction: alternate;
             @-webkit-keyframes move {
-                20%{
+                16%{
                     transform: translateY(0px);
                 }
-                45%{
+                32%{
                     transform: translateY(-60px);
                 }
-                65%{
+                48%{
                     transform: translateY(-120px);
                 }
-                100%{
+                64%{
                     transform: translateY(-180px);
+                }
+                80%{
+                    transform: translateY(-240px);
+                }
+                100%{
+                    transform: translateY(-300px);
                 }
               }
               @keyframes move {
-                20%{
+                16%{
                     transform: translateY(0px);
                 }
-                45%{
+                32%{
                     transform: translateY(-60px);
                 }
-                65%{
+                48%{
                     transform: translateY(-120px);
                 }
-                100%{
+                64%{
                     transform: translateY(-180px);
+                }
+                80%{
+                    transform: translateY(-240px);
+                }
+                100%{
+                    transform: translateY(-300px);
                 }
               }
             &__item{
@@ -70,7 +82,7 @@
                     }
                 }
                 p{
-                    font-size: 2.2vw;
+                    font-size: 2.27vw;
                     color: $color1;
                     font-weight: bold;
                     //mobile(M)
