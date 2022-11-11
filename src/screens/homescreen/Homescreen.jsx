@@ -6,6 +6,8 @@ import OptimizationAndSupport from './optimizationAndSupport';
 import Benefits from './benefits';
 import Banner from './banner';
 import SupportSection from './supportSection';
+import Tools from './tools';
+import ToolsDetails from './toolsDetails';
 
 const Homescreen = () => {
   return (
@@ -13,7 +15,9 @@ const Homescreen = () => {
       <Header fixedHeader showButton />
       <FirstSection />
       <OptimizeYourBusiness />
-      <OptimizationAndSupport />
+      <ToolsDetails/>
+      <Tools/>
+      {/* <OptimizationAndSupport /> */}
       <Benefits />
       <Banner />
       <SupportSection />
