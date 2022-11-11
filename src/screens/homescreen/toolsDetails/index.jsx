@@ -18,7 +18,7 @@ const Tools = [
     id: 1,
     image:"assets/home/toolsDetails/image2.png",
     title:"Safira-CLI",
-    desc:"Is our command line interface that speeds up the building of API's from an OpenAPI file.",
+    desc:"Is our command line interface that speeds up the building of APIs from an OpenAPI file.",
     buttonLabel:"Safira-CLI",
     link:"https://docs.platform.vee.codes/docs/installation/safira-cli",
   },
