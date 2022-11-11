@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
 import { Button } from "../../../components";
 import style from "./OptimizationAndSupport.module.scss";
@@ -9,7 +10,7 @@ const OptimizationAndSupport = () => {
   return (
     <section className={style.wrapper}>
       {/* Part 1 */}
-      <article className={style.optimizationContent}>
+      {/* <article className={style.optimizationContent}>
         <div className={style.optimizationContent__desc}>
           <div className={style.desc}>
             <div className={style.desc__title}>
@@ -17,15 +18,13 @@ const OptimizationAndSupport = () => {
             </div>
             <ul className={style.desc__list}>
               <li>
-                 Using <strong>DevPortal</strong> all your APIs will be able to be made available to your partners in an organized and secure way. 
+                 <strong>DevPortal</strong> is a platform that centralizes your Specs and API&apos;S s making it easy to control microservices.
               </li>
               <li>
-                <strong>Safira-CLI</strong> is a built-in API acceleration tool. The product offers multiple commands
-                 that boost productivity and eliminate repetitive tasks.
+                <strong>Safira-CLI</strong> accelerates the building of API&apos;s from an OpenAPI file..
               </li>
               <li>
-                <strong>VKPR</strong> is our solution for Cloud Infrastructure. With the CLI, you will provide a Kubernetes 
-                cluster to attend to your company&apos;s needs. 
+                <strong>VKPR</strong> builds for you a Cloud Infrastructure with a few lines of code.
               </li>
             </ul>
             <div className={style.desc__buttonWrapper}>
@@ -55,11 +54,11 @@ const OptimizationAndSupport = () => {
               </Link>
             </div>
           </div>
-        </div>
-        <div className={style.optimizationContent__image}>
+        </div> 
+        {/* <div className={style.optimizationContent__image}>
           <img src={Image1} alt="Optimization section image" />
-        </div>
-      </article>
+        </div> 
+      </article>*/}
       {/* Part 2 */}
       <article className={style.supportContent}>
         <div className={style.supportContent__desc}>
