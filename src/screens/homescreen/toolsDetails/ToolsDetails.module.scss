@@ -3,7 +3,8 @@
 .content {
     @include screenSize(100vw, auto);
     padding: 10em 0 12em 0;
-    background: $color13;
+    // background: $color13;
+    @include backgroundImage('/assets/home/bglight.webp');
     @include displayFlex(center, center, column);
     position: relative;
     //mobile

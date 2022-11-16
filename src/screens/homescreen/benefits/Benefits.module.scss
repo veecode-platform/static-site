@@ -32,7 +32,7 @@
             padding-bottom: 2.5em;
         }
         h2 {
-            @include typography(2.8vw, center, 1.3em, 600);
+            @include typography(2.6vw, center, 1.3em, 600);
             color: $color2;
             //mobile(M)
             @include for-phone-only {
