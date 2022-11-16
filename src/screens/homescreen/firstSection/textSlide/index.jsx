@@ -1,6 +1,4 @@
 /* eslint-disable @next/next/no-img-element */
-import { FaAws,FaNetworkWired, FaRegPaperPlane,  } from 'react-icons/fa';
-import { SiKubernetes,SiAmazonaws,SiTerraform } from "react-icons/si";
 import style from './TextSlide.module.scss';
 
 const Techs = [
