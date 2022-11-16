@@ -110,9 +110,10 @@
                 }
             }
             &__buttonWrapper {
-                width: 100%;
-                @include displayFlex(space-around, center, row);
+                width: 95%;
+                @include displayFlex(space-between, center, row);
                 margin-top: 4em;
+                align-self: flex-end;
                 //viewport
                 @include for-viewport-only{
                     margin-top: 2em;
