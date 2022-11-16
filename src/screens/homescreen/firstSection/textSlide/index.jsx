@@ -3,24 +3,60 @@ import { FaAws,FaNetworkWired, FaRegPaperPlane,  } from 'react-icons/fa';
 import { SiKubernetes,SiAmazonaws,SiTerraform } from "react-icons/si";
 import style from './TextSlide.module.scss';
 
-const Kubernetes = "/assets/home/text_slide/kubernetes.png";
-const Aws = "/assets/home/text_slide/aws.png";
-const Api = "/assets/home/text_slide/api.png";
-const Kong = "/assets/home/text_slide/kong.png";
-const Iac = "/assets/home/text_slide/iac.png";
-const CICD = "/assets/home/text_slide/cicd.png";
+const Techs = [
+  {
+    id:"0",
+    image:"/assets/home/text_slide/kubernetes.png",
+    title:"Kubernetes"
+  },
+  {
+    id:"1",
+    image:"/assets/home/text_slide/aws.png",
+    title:"AWS"
+  },
+  {
+    id:"2",
+    image:"/assets/home/text_slide/api.png",
+    title:"API"
+  },
+  {
+    id:"3",
+    image:"/assets/home/text_slide/kong.png",
+    title:"Kong"
+  },
+  {
+    id:"4",
+    image:"/assets/home/text_slide/iac.png",
+    title:"IaC"
+  },
+  {
+    id:"5",
+    image:"/assets/home/text_slide/cicd.png",
+    title:"CI/CD"
+  }
+]
 
 
 const TextSlide = () => {
   return (
     <div className={style.textSlide}>
     <div className={style.textSlideWrapper}>
-        <div className={style.textSlideWrapper__item}> <img src={Kubernetes} alt="kubernetes logo"/> <p>Kubernetes</p></div>
-        <div className={style.textSlideWrapper__item}> <img src={Aws} alt="Aws logo"/> <p> AWS</p></div>
-        <div className={style.textSlideWrapper__item}> <img src={Kong} alt="Kong logo"/> <p> Kong</p></div>
-        <div className={style.textSlideWrapper__item}> <img src={Iac} alt="Kong logo"/> <p> Iac</p></div>
-        <div className={style.textSlideWrapper__item}> <img src={CICD} alt="Kong logo"/> <p> CI/CD</p></div>
-        <div className={style.textSlideWrapper__item}> <img src={Api} alt="Kong logo"/> <p> API</p></div>
+        { 
+          Techs.map(
+            tech => (
+              <div 
+                className={style.textSlideWrapper__item}
+                key={tech.id}> 
+                <img src={tech.image}
+                   alt={tech.title}
+                />
+                 <p>
+                  {tech.title}
+                 </p>
+              </div>
+            )
+          )
+        }
       </div>
   </div>
   )
