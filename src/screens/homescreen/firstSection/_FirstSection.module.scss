@@ -69,7 +69,7 @@
             }
         }
         &__title {
-            @include screenSize(40%, auto);
+            @include screenSize(48%, auto);
             margin: 2em 0 1.5em;
             //tablet
             @include for-tablet-only{
@@ -90,7 +90,7 @@
                 margin-top: 5em;
             }
             h1 {
-                @include typography(2.6vw, start, 1.1em, 400);
+                @include typography(2.8vw, start, 1.1em, 400);
                 color: $color2;
                 //mobile(M)
                 @include for-phone-only {

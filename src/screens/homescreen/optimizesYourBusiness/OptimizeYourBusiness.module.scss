@@ -49,7 +49,7 @@
             }
             h2 {
 
-                @include typography(2.6vw, end, 1.3em, 400);
+                @include typography(2.8vw, end, 1.3em, 400);
                 color: $color2;
                 //mobile(M)
                 @include for-phone-only {

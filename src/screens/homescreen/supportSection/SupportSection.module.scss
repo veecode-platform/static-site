@@ -67,7 +67,7 @@
                     padding-bottom: 3.5em;
                 }
                 h2 {
-                    @include typography(2.6vw, start, 1.2em, 600);
+                    @include typography(2.8vw, start, 1.2em, 600);
                     //mobile(M)
                     @include for-phone-only {
                         @include typography(7vw, center, 1.2em, 600);
