@@ -23,47 +23,35 @@
             -webkit-animation-direction:alternate;
             animation-direction: alternate;
             @-webkit-keyframes move {
-                16%{
+                25%{
                     transform: translateY(0px);
                 }
-                32%{
+                50%{
                     transform: translateY(-60px);
                 }
-                48%{
+                75%{
                     transform: translateY(-120px);
                 }
-                64%{
-                    transform: translateY(-180px);
-                }
-                80%{
-                    transform: translateY(-240px);
-                }
                 100%{
-                    transform: translateY(-300px);
+                    transform: translateY(-180px);
                 }
               }
               @keyframes move {
-                16%{
+                25%{
                     transform: translateY(0px);
                 }
-                32%{
+                50%{
                     transform: translateY(-60px);
                 }
-                48%{
+                75%{
                     transform: translateY(-120px);
                 }
-                64%{
-                    transform: translateY(-180px);
-                }
-                80%{
-                    transform: translateY(-240px);
-                }
                 100%{
-                    transform: translateY(-300px);
+                    transform: translateY(-180px);
                 }
               }
             &__item{
-                @include screenSize(100%,100%);
+                @include screenSize(100%,60px);
                 @include displayFlex(flex-start, center, row);
                     //mobile(M)
                     @include for-phone-only{
@@ -82,7 +70,7 @@
                     }
                 }
                 p{
-                    font-size: 2.27vw;
+                    font-size: 1.54vw;
                     color: $color1;
                     font-weight: bold;
                     //mobile(M)

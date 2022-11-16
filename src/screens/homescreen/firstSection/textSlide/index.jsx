@@ -15,22 +15,12 @@ const Techs = [
   {
     id:"2",
     image:"/assets/home/text_slide/api.png",
-    title:"API"
+    title:"API development"
   },
   {
     id:"3",
     image:"/assets/home/text_slide/kong.png",
-    title:"Kong"
-  },
-  {
-    id:"4",
-    image:"/assets/home/text_slide/iac.png",
-    title:"IaC"
-  },
-  {
-    id:"5",
-    image:"/assets/home/text_slide/cicd.png",
-    title:"CI/CD"
+    title:"Kong Gateway"
   }
 ]
 
