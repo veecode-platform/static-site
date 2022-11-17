@@ -21,6 +21,11 @@ const Techs = [
     id:"3",
     image:"/assets/home/text_slide/kong.png",
     title:"Kong Gateway"
+  },
+  {
+    id:"4",
+    image:"/assets/home/text_slide/iac.png",
+    title:"IaC"
   }
 ]
 
