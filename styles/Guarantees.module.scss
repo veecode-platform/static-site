@@ -1,0 +1,59 @@
+@import "/abstract/functions", "/abstract/responsive","/abstract/variables";
+
+.container{
+    @include screenSize(67%,auto);
+    @include displayFlex(center, center, row);
+    //viewport
+    @include for-viewport-only{
+        @include screenSize(80%,auto);
+    }
+    //tablet
+    @include for-tablet-only{
+        @include screenSize(85%,auto);
+    }
+    //mobile(M)
+    @include for-phone-only{
+        @include screenSize(85%,auto);
+    }
+    //mobile(S)
+    @include for-phoneS-only{
+        @include screenSize(90%,auto);
+    }
+    .guaranteesWrapper{
+        @include screenSize(100%,auto);
+        @include displayFlex(center, center, column);
+        margin: 2em 0;
+        color: $color10;
+        &__text{
+            @include screenSize(100%,auto);
+            padding: 3em 0 5em 0;
+            &-info{
+                @include typography(18px,center, auto,500);
+                color: $color2;
+                //mobile(S)
+                @include for-phoneS-only{
+                    font-size: 16px;
+                }
+                a{
+                    color: $color7;
+                    transition: all .5s ease-in-out;
+                    &:hover{
+                        color: $color1;
+                        transition: all .5s ease-in;
+                    }
+                }
+            }
+        }
+        &__cards{
+            @include screenSize(100%,auto);
+            display: grid;
+            grid-template: 1fr/repeat(3,1fr);
+            justify-content: space-between;
+            //mobile(S)
+            @include for-phoneS-only{
+                grid-template: repeat(3,1fr) / 1fr;
+            }
+        }
+    }
+    
+}
