@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { useEffect } from "react";
 import style from "../../../styles/Pricing.module.scss";
-import { Breadcrumb, Button, ContactBar, DefaultPage } from "../../components";
+import { Breadcrumb, Button, ContactBar, DefaultPage, Guarantees } from "../../components";
 import CardSupport from "./cardSupport";
 
 const Pricing = () => {
@@ -64,9 +64,10 @@ const Pricing = () => {
               </Link>
             </CardSupport>
           </div>
-          <article className={style.contactBar}>
+          <div className={style.contactBar}>
           <ContactBar/>
-        </article>
+          </div>
+            <Guarantees/>
         </article>
       </section>
     </DefaultPage>
