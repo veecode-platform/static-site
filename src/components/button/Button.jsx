@@ -1,12 +1,13 @@
 import style from '../../../styles/Button.module.scss';
 
-const Button = ({children, loading, type, alt, headerButton}) => {
+const Button = ({children, loading, type, alt, headerButton, handleClick}) => {
   return(
     <button
       type={type || "button"}
       disabled={loading}
       className={style.button} 
       style={alt ? {color: "#FFFFFF", backgroundColor: "#20a082"} : headerButton ? {minWidth: "6vw", height: "4vh", padding:"1em 1.2em"} : {}}
+      onClick={handleClick}
       >
       {
         loading ?

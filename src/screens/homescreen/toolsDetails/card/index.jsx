@@ -1,10 +1,12 @@
 /* eslint-disable @next/next/no-img-element */
 import Link from 'next/link';
 import React from 'react';
+import { gtagEvents } from '../../../../../utils/gtag';
 import { Button } from '../../../../components';
 import style from './_card.module.scss';
 
-const Card = ({ image, title, desc, buttonLabel, link }) => {
+const Card = ({ image, title, desc, buttonLabel, link ,tag}) => {
+
   return (
     <div className={style.card}>
       <img src={image} alt={title} className={style.card__image} />
@@ -13,7 +15,12 @@ const Card = ({ image, title, desc, buttonLabel, link }) => {
       <div className={style.card__buttonWrapper}>
         <Link href={link}>
           <a target="_blank">
-            <Button alt>{buttonLabel}</Button>
+            <Button 
+             alt
+             handleClick={()=>gtagEvents(tag)}
+             >
+              {buttonLabel}
+            </Button>
           </a>
         </Link>
       </div>

@@ -13,6 +13,7 @@ const Tools = [
     desc:"Is a platform that centralizes your Specs and APIs making it easy to control microservices.",
     buttonLabel:"Devportal",
     link:"https://docs.platform.vee.codes/docs/tutorials/devportal/",
+    tag:"devportal"
   },
   {
     id: 1,
@@ -21,6 +22,7 @@ const Tools = [
     desc:"Is our command line interface that speeds up the building of APIs from an OpenAPI file.",
     buttonLabel:"Safira-CLI",
     link:"https://docs.platform.vee.codes/docs/installation/safira-cli",
+    tag:"safiraDocs"
   },
   {
     id:2,
@@ -29,6 +31,7 @@ const Tools = [
     desc:"Builds for you a Cloud Infrastructure with a few lines of code.",
     buttonLabel:"VKPR",
     link:"https://docs.vkpr.net/docs/intro/",
+    tag:"vkprDocs"
   },
   {
     id:3,
@@ -37,6 +40,7 @@ const Tools = [
     desc:"Increase your productivity also helping the community to grow.",
     buttonLabel:"Join Us",
     link:"https://github.com/veecode-platform/safira-support/discussions",
+    tag:"joinUs"
   },
 ]
 
@@ -45,12 +49,15 @@ const ToolsDetails = () => {
     <section className={style.content}>
       <div className={style.content__title}>
         <h2>
-        Discover our <span>Free Tools</span>
+          Discover our <span>Free Tools</span>
         </h2>
       </div>
       <article className={style.content__wrapper}>
         {Tools.map(item => (
-          <Card key={item.id} {...item}/>
+          <Card 
+            key={item.id}
+            {...item}
+            />
         ))}
       </article>
       <Divider/>
