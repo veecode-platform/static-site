@@ -25,8 +25,16 @@
         margin: 2em 0;
         color: $color10;
         &__text{
-            @include screenSize(100%,auto);
-            padding: 3em 0 5em 0;
+            @include screenSize(80%,auto);
+            padding: 1em 0 6em 0;
+            //tablet
+            @include for-tablet-only{
+                @include screenSize(100%,auto);
+            }
+            //mobile(M)
+            @include for-phone-only{
+                padding: 1em 0 4em 0;
+            }
             &-info{
                 @include typography(18px,center, auto,500);
                 color: $color2;
