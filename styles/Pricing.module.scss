@@ -38,6 +38,7 @@
         }
         .contactBar{
             @include screenSize(67%,auto);
+            @include displayFlex(center, center, row);
             //viewport
             @include for-viewport-only{
                 @include screenSize(80%,auto);
