@@ -22,6 +22,7 @@ const ContactUs = () =>{
                         <div className={style["content__options-formWraper"]}>
                           <FormElement
                             checkbox
+                            company
                             />
                         </div>                 
                     </div>
