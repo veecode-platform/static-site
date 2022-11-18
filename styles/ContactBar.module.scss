@@ -3,10 +3,10 @@
  .content{
         @include screenSize(100%, auto);
         @include displayFlex(center, center, row);
-        border: 2px solid $color1;
         padding: 3em;
         border-radius: .5em;
         margin: 5vh 0;
+        @include glassEffect();
         //Mobile(M)
         @include for-phone-only{
             flex-direction: column;

@@ -38,7 +38,7 @@
         }
         .sectionBar{
             @include screenSize(67%,auto);
-            @include displayFlex(center, center, row);
+            @include displayFlex(center, center, column);
             //viewport
             @include for-viewport-only{
                 @include screenSize(80%,auto);
