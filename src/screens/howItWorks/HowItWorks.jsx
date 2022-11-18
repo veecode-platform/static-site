@@ -78,7 +78,7 @@ const HowItWorks = () => {
                     title="Speed up your cloud provisioning"
                     >
                     <p>Currently the most successful services in the market have gone through their digital transition, and most of them have had difficulties with this process,
-                    needing to hire consultants and expensive services to deal with this challenge. Now with <Link href="https://docs.vkpr.net/docs/intro/" passHref><a target="_blank" onClick={gtagEvents('vkprDocs')}>VKPR</a></Link>{" "}
+                    needing to hire consultants and expensive services to deal with this challenge. Now with <Link href="https://docs.vkpr.net/docs/intro/" passHref><a target="_blank" >VKPR</a></Link>{" "}
                      your transition and use of cloud-native tools becomes simpler.
                     We built a command line interface dedicated to build kubernetes clusters in a fast, simple and automated way through IaC pipelines following the GitOps methodology.
                     Along with a helper tool that makes it easy to install and manage applications that are in the cloud-native world, without having any lock-in from use.</p>
@@ -87,7 +87,7 @@ const HowItWorks = () => {
                     image={Icon7}
                     title="Automate your API building"
                     >
-                    <p>We know how expensive and time-consuming it is to build an API. To solve this problem, we built a command-line interface, <Link href="https://docs.platform.vee.codes/docs/intro" passHref><a target="_blank" onClick={gtagEvents('safiraDocs')}>Safira-Cli</a></Link>.
+                    <p>We know how expensive and time-consuming it is to build an API. To solve this problem, we built a command-line interface, <Link href="https://docs.platform.vee.codes/docs/intro" passHref><a target="_blank">Safira-Cli</a></Link>.
                     By using an open API file, along with a simple command, our CLI builds a complete API template in the most used Java frameworks on the market: SpringBoot and Quarkus.
                     All this in a fast and automated way. In addition, our solution allows customizations that bring robustness to the project, such as using Mockserver,
                     pipelining configurations and containerization by Docker and Kubernetes, as well as a high level of security with API gateway like Kong and authenticator like Okta.</p>
