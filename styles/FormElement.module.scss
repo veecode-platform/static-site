@@ -1,0 +1,38 @@
+@import "/abstract/functions","/abstract/responsive","/abstract/variables";
+
+.formWraper{
+    @include displayFlex(center, center, column);
+    @include glassEffect();
+    width: 415px;
+    padding: 1vw 1vw;
+    border-radius: 1vh;
+    @include for-phoneS-only {
+        width: 95vw;
+        padding: 1.5vh 3vw;
+    }
+
+    .form{
+        @include displayFlex(center, center, column);
+        width: 100%;                  
+        gap: 1.2vh;
+        &__buttonWrapper{
+            @include screenSize(100%,auto);
+            @include displayFlex(center, center, row);
+        }
+
+        &__checkboxWrapper{
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: flex-start;
+            gap: 0.1vh;
+            width: 100%;
+            margin: 1vh;
+            flex-basis: 100%;
+            flex-wrap: wrap;
+            h1{
+                width: 100%;
+            }
+        }
+    }
+}
