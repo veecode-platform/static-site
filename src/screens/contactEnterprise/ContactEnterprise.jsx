@@ -1,8 +1,23 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { DefaultPage, FormElement } from "../../components";
 import style from "../../../styles/ContactEnterprise.module.scss";
 
 const ContactEnterprise = () => {
+
+  useEffect(()=>{
+    if (typeof window !== "undefined"){
+      if ( window.innerWidth > 1300){
+          setTimeout(() => {
+            window.scrollTo({
+              top: 100,
+              left: 300,
+              behavior: 'smooth'
+            });
+          }, 500);
+      }
+    }
+  },[])
+
   return (
     <DefaultPage
       titleBar="enable"
