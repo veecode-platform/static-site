@@ -30,12 +30,5 @@
   .form {
     @include screenSize(100%, auto);
     @include displayFlex(center, center, row);
-    @include displayFlex(center, center, column);
-    @include glassEffect();
-    padding: 1em;
-    //mobile(S)
-    @include for-phoneS-only{
-        width: 85vw;
-    }
   }
 }

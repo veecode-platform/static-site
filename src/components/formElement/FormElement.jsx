@@ -21,7 +21,8 @@ const FormElement = ({ checkbox }) => {
   };
 
   return (
-    <Formik
+   <div className={style.formWrapper}>
+     <Formik
       initialValues={{
         name: "",
         company: "",
@@ -83,7 +84,8 @@ const FormElement = ({ checkbox }) => {
         </Form>
       )}
     </Formik>
-  );
+
+   </div>  );
 };
 
 export default FormElement;

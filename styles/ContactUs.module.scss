@@ -11,7 +11,7 @@
         color: $color2;
         &__options{
             @include screenSize(100%,auto);
-            @include displayFlex(space-around, center, row);
+            @include displayFlex(space-evenly, center, row);
             padding: 1em 0 1em 0;
             //viewport
             @include for-viewport-only{
@@ -45,41 +45,16 @@
             }
 
             &-formWraper{
-                @include displayFlex(center, center, column);
-                @include glassEffect();
-                width: 415px;
-                padding: 1vw 1vw;
-                background-color: $color12;
-                border-radius: 1vh;
-                @include for-phoneS-only {
-                    width: 95vw;
-                    padding: 1.5vh 3vw;
-                }
-
-                .form{
-                    @include displayFlex(center, center, column);
-                    width: 100%;                  
-                    gap: 1.2vh;
-                    &__buttonWrapper{
-                        @include screenSize(100%,auto);
-                        @include displayFlex(center, center, row);
+                    @include screenSize(40%, auto);
+                    @include displayFlex(center, center, row);
+                    //tablet
+                    @include for-tablet-only{
+                        @include screenSize(60%, auto);
                     }
-
-                    &__checkboxWrapper{
-                        display: flex;
-                        flex-direction: row;
-                        justify-content: flex-start;
-                        align-items: flex-start;
-                        gap: 0.1vh;
-                        width: 100%;
-                        margin: 1vh;
-                        flex-basis: 100%;
-                        flex-wrap: wrap;
-                        h1{
-                            width: 100%;
-                        }
+                    //mobile
+                    @include for-phone-only{
+                        @include screenSize(80vw, auto);
                     }
-                }
             }
         }
         
