@@ -1,6 +1,4 @@
 /* eslint-disable @next/next/no-img-element */
-import Link from "next/link";
-import { Button } from "../../../components";
 import Card from "./card";
 import Divider from "./divider";
 import style from "./ToolsDetails.module.scss";
