@@ -64,10 +64,12 @@ const Pricing = () => {
               </Link>
             </CardSupport>
           </div>
-          <div className={style.contactBar}>
+          <div className={style.sectiontBar}>
           <ContactBar/>
           </div>
+          <div className={style.sectionBar}>
             <Guarantees/>
+          </div>
         </article>
       </section>
     </DefaultPage>
