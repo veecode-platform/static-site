@@ -3,7 +3,7 @@ import React from 'react';
 import { Button } from '../../../components';
 import style from './plansDetails.module.scss';
 
-const PlansDetails = ({ title, subtitle, link, label,children }) => {
+const PlansDetails = ({ title, subtitle, link, label, emphasis,text, buttonLabel,children }) => {
   return (
     <div className={style.planTable}>
       <div
@@ -22,10 +22,15 @@ const PlansDetails = ({ title, subtitle, link, label,children }) => {
         </p>
       </div>
       <div className={style.planTable__button}>
+        <div className={style["planTable__button-label"]}>
+            {label && <p>{label}</p>}
+            {<strong>{emphasis}</strong>}
+            {text && <p>{text}</p>}
+        </div>
         <Link href={link}>
           <a>
             <Button alt>
-              {label}
+              {buttonLabel}
             </Button>
           </a>
         </Link>
