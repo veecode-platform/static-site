@@ -1,0 +1,45 @@
+@import '/abstract/functions','/abstract//responsive','/abstract/variables';
+
+.content{
+    @include screenSize(100%,auto);
+    display: grid;
+    grid-template: 1fr / repeat(2,1fr);
+    margin: 2.5em auto;
+}
+.sublist{
+    @include resetList();
+    margin: 1em 0 .5em 0;
+    padding: 0.7em;
+    @include glassEffect();
+    li{
+        font-size: 18px;
+        line-height: 1em;
+        span{
+            color: $color10;
+            font-size: .7vw;
+            margin: 0 1em;
+        }
+    }
+}
+
+.guaranteesBar{
+        @include screenSize(100%,auto);
+        @include displayFlex(center, center, row);
+        padding-top: 2em;
+        //viewport
+        @include for-viewport-only{
+            @include screenSize(80%,auto);
+        }
+        //tablet
+        @include for-tablet-only{
+            @include screenSize(85%,auto);
+        }
+        //mobile(M)
+        @include for-phone-only{
+            @include screenSize(85%,auto);
+        }
+        //mobile(S)
+        @include for-phoneS-only{
+            @include screenSize(90%,auto);
+        }
+}

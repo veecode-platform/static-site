@@ -1,0 +1,43 @@
+@import "/abstract/functions","/abstract/responsive","/abstract/variables";
+
+.planTable{
+    @include screenSize(auto, 100%);
+    @include displayFlex(flex-start, center,column);
+    border: 1px solid $color7;
+    &__title{
+        @include screenSize(100%,auto);
+        @include displayFlex(center, center, row);
+        padding-top: 4em;
+        &-title{
+            @include typography(1.8vw,center,auto,500);
+        }
+    }
+    &__subtitle{
+        @include screenSize(90%,200px);
+        @include displayFlex(center, center,column);
+        &-subtitle{
+            @include typography(1vw,center,auto,300);
+        }
+    }
+    &__button{
+        @include screenSize(80%,auto);
+        @include displayFlex(center,center,column);
+    }
+    &__list{
+        @include resetList();
+        @include screenSize(80%,auto);
+        padding: 4em 0 3em 0;
+        li{
+            @include typography(18px,left,auto,400);
+            padding: .5em 0;
+            span{
+                font-size: 1vw;
+                color: $color5;
+                margin-right: .4em;
+            }
+            .sublist{
+                @include resetList();
+            }
+        }
+    }
+}
