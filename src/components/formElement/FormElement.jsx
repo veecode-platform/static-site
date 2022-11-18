@@ -6,7 +6,7 @@ import { object, string } from "yup";
 import { UseContactData } from "../../hooks/UseContactData";
 import { useRouter } from "next/router";
 
-const FormElement = ({ checkbox }) => {
+const FormElement = ({ company, checkbox }) => {
   const formSchema = object({
     name: string().required("*required"),
     company: string().required("*required"),
@@ -54,12 +54,14 @@ const FormElement = ({ checkbox }) => {
             label="Email"
             error={errors.email && touched.email && errors.email}
           />
-          <Input
-            name="company"
-            placeholder="Acme, Inc."
-            label="Company / Organization"
-            error={errors.company && touched.company && errors.company}
-          />
+          {company && (
+                      <Input
+                      name="company"
+                      placeholder="Acme, Inc."
+                      label="Company / Organization"
+                      error={errors.company && touched.company && errors.company}
+                    />
+          )}
           {checkbox && (
             <div className={style.form__checkboxWrapper}>
               <h1>Which products are you interested in?</h1>
