@@ -2,6 +2,7 @@
 import style from "../../../styles/Footer.module.scss";
 import { FaFacebookSquare, FaInstagram, FaLinkedin, FaTwitterSquare } from "react-icons/fa";
 import Link from "next/link";
+import { gtagEvents } from "../../../utils/gtag";
 
 const Logo = "/assets/home/logo.png";
 
@@ -46,15 +47,15 @@ const Footer = () => {
               </li>
               <Link href="/how-it-works"><a><li>How it Works</li></a></Link>
               <Link href="/support"><a><li>Support</li></a></Link>
-              <Link href="https://github.com/vfipaas/safira-support/discussions" passHref><a target="_blank"><li>Join our Comunity</li></a></Link>
+              <Link href="https://github.com/vfipaas/safira-support/discussions" passHref><a target="_blank" onClick={()=>gtagEvents('joinUs')}><li>Join our Comunity</li></a></Link>
             </ul>
             <ul>
               <li>
                 <span>Docs</span>
               </li>
-              <Link href="https://docs.platform.vee.codes/docs/intro" passHref><a target="_blank"><li>Safira CLI</li></a></Link>
-              <Link href="https://docs.vkpr.net/docs/intro/" passHref><a target="_blank"><li>VKPR</li></a></Link>
-              <Link href="https://docs.platform.vee.codes/docs/tutorials/devportal/" passHref><a target="_blank" ><li>Devportal</li></a></Link>
+              <Link href="https://docs.platform.vee.codes/docs/intro" passHref><a target="_blank" onClick={()=>gtagEvents('safiraDocs')}><li>Safira CLI</li></a></Link>
+              <Link href="https://docs.vkpr.net/docs/intro/" passHref><a target="_blank" onClick={()=>gtagEvents('vkprDocs')}><li>VKPR</li></a></Link>
+              <Link href="https://docs.platform.vee.codes/docs/tutorials/devportal/" passHref><a target="_blank" onClick={()=>gtagEvents('devportal')} ><li>Devportal</li></a></Link>
             </ul>
             <ul>
               <li>
