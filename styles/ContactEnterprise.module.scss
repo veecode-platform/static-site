@@ -5,6 +5,7 @@
   display: grid;
   grid-template: 1fr / repeat(2, 1fr);
   gap: 2em;
+  padding-bottom: 3em;
   //mobile(M)
   @include for-phone-only {
     @include displayFlex(center, center, column);
