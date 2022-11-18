@@ -43,7 +43,7 @@ const SupportSection = () => {
             </ul>
           </div>
           <div className={style["content__text-buttonWrapper"]}>
-            <Link href="/pricing" prefetch={false}>
+            <Link href="/compare-plans" prefetch={false}>
               <a>
                 <Button>Buy Now</Button>
               </a>
