@@ -8,7 +8,8 @@ const ContactEnterprise = () => {
       titleBar="enable"
       title="Our Support Enterprise"
       subtitle={<>We do it for you and by you. Use the form below or send an email to <a href='mailto: platform-sales@vee.codes' style={{cursor: "pointer", color: '#33FFCE'}}> platform-sales@vee.codes</a></>}
-    >
+      noFooter
+   >
       <article className={style.content}>
         {/* DETAILS */}
         <div className={style.details}>
