@@ -3,6 +3,7 @@ import { DefaultPage, ScrollTop } from '../../components';
 import style from '../../../styles/HowItWork.module.scss';
 import CardItem from './cardItem';
 import Link from 'next/link';
+import { gtagEvents } from '../../../utils/gtag';
 
 const Icon1 = "/assets/howitworks/icon1.png";
 const Icon2 = "/assets/howitworks/icon2.png";

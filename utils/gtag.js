@@ -13,15 +13,14 @@ export const gtagPurchase = (id, plan) => {
   window.gtag("event", "purchase", params);
 };
 
-/**
- * Tags:
- * devportal
- * safiraDocs
- * vkprDocs
- * joinUs 
- */
+
+//   Tags:
+//   devportal
+//  safiraDocs
+//  vkprDocs
+//   joinUs 
+ 
 
 export const gtagEvents = (tag) => {
-  if (typeof window !== "undefined")
   window.gtag("event", `${tag}`);
 };
