@@ -14,3 +14,4 @@ export { default as HowItWorks } from './howItWorks/HowItWorks';
 export { default as Faq } from './faq/Faq';
 export { default as Docs } from './docs/Docs';
 export { default as ComparePlans } from './comparePlans/ComparePlans';
+export { default as ContactEnterprise } from './contactEnterprise/ContactEnterprise';
