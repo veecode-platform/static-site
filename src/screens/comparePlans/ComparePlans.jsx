@@ -1,5 +1,5 @@
 import React from "react";
-import { Breadcrumb, DefaultPage, Guarantees } from "../../components";
+import { Breadcrumb, ContactBar, DefaultPage, Guarantees } from "../../components";
 import style from "../../../styles/ComparePlans.module.scss";
 import PlansDetails from "./plansDetails";
 import { FaCheck, FaCheckCircle, FaMinus } from "react-icons/fa";
@@ -15,11 +15,14 @@ const ComparePlans = () => {
       <article className={style.content}>
         {/* STANDARD */}
         <PlansDetails
-          title="STANDARD"
+          title="Standard"
           subtitle="Rely on our standard support to solve your digital transition
           problems."
           link="/pricing"
-          label="Know Our Plans"
+          label="Start at"
+          emphasis="$ 899"
+          text="per Mouth"
+          buttonLabel="Know Our Plans"
           >
           <li><span><FaCheck/></span>Professional Support.</li>
           <li><span><FaCheck/></span>Access to professional specialists</li>
@@ -29,10 +32,11 @@ const ComparePlans = () => {
         </PlansDetails>
         {/* ENTERPRISE */}
         <PlansDetails 
-         title="ENTERPRISE"
+         title="Enterprise"
          subtitle="We solve it for you and by you. Our enterprise plan covers all your needs with the digital transition with same-day SLA. Ideal for your company."
-         link="/form-enterprise"
-         label="Contact Us"
+         link="/contact-enterprise"
+         emphasis="Contact Us"
+         buttonLabel="Contact Us"
          >
           <li><span><FaCheck/></span>
            Support for you company needs as:
@@ -41,7 +45,7 @@ const ComparePlans = () => {
               <li><span><FaCheckCircle/></span>Kubernetes</li>
               <li><span><FaCheckCircle/></span>AWS</li>
               <li><span><FaCheckCircle/></span>Terraform</li>
-              <li><span><FaCheckCircle/></span>And everything on Devops, IaC and Microservices </li>
+              <li><span><FaCheckCircle/></span>IaC and Microservices </li>
            </ul>
           </li>
           <li><span><FaCheck/></span>Unlimited Users</li>
@@ -52,7 +56,8 @@ const ComparePlans = () => {
           <li><span><FaCheck/></span>Same business day SLA</li>
         </PlansDetails>
       </article>
-      <article className={style.guaranteesBar}>
+      <article className={style.sectionBar}>
+        <ContactBar/>
         <Guarantees/>
       </article>
     </DefaultPage>
