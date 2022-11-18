@@ -22,5 +22,6 @@ export const gtagPurchase = (id, plan) => {
  */
 
 export const gtagEvents = (tag) => {
+  if (typeof window !== "undefined")
   window.gtag("event", `${tag}`);
 };
