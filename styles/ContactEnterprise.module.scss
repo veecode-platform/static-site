@@ -1,6 +1,20 @@
 @import '/abstract/functions','/abstract/responsive','/abstract/variables';
 
-.details{
-    &__label{}
-    &__text{}
+.content{
+    @include screenSize(100%,auto);
+    display: grid;
+    grid-template: 1fr/repeat(2,1fr);
+    .details{
+        &__label{
+            @include typography(1.4vw,left,auto,500);
+        }
+        &__text{
+            @include typography(1vw,left,auto,300);
+            margin: 1.5em 0;
+        }
+    }
+    .form{
+        @include screenSize(100%,auto);
+        @include displayFlex(center, center, row);
+    }
 }
