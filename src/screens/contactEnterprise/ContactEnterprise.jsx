@@ -1,5 +1,5 @@
 import React from "react";
-import { DefaultPage } from "../../components";
+import { DefaultPage, FormElement } from "../../components";
 import style from "../../../styles/ContactEnterprise.module.scss";
 
 const ContactEnterprise = () => {
@@ -7,9 +7,9 @@ const ContactEnterprise = () => {
     <DefaultPage
       titleBar="enable"
       title="Our Support Enterprise"
-      subtitle="We do it for you and by you. Use the form below or send an email to platform-sales@vee.codes"
+      subtitle={<>We do it for you and by you. Use the form below or send an email to <a href='mailto: platform-sales@vee.codes' style={{cursor: "pointer", color: '#33FFCE'}}> platform-sales@vee.codes</a></>}
     >
-      <article>
+      <article className={style.content}>
         {/* DETAILS */}
         <div className={style.details}>
           <strong className={style.details__label}>
@@ -31,6 +31,10 @@ const ContactEnterprise = () => {
           <p className={style.details__text}>
             Contact us, we are excited to welcome you on our team!
           </p>
+        </div>
+        {/* FORM */}
+        <div className={style.form}>
+          <FormElement/>
         </div>
       </article>
     </DefaultPage>
