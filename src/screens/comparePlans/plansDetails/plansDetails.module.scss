@@ -51,7 +51,7 @@
   }
   &__button {
     @include screenSize(80%, auto);
-    @include displayFlex(space-between, center, column);
+    @include displayFlex(space-around, center, column);
     border-top: 1px solid $color7;
     min-height: 16em;
     padding-bottom: 2em;
@@ -73,7 +73,6 @@
       }
       p {
         @include typography(15px, center, auto, 400);
-        color: $color10;
         //mobile(M)
         @include for-phone-only {
           font-size: 16px;
@@ -81,6 +80,7 @@
       }
       strong {
         @include typography(2.5vw, center, auto, 800);
+        color: $color2;
         //mobile(M)
         @include for-phone-only {
           font-size: 42px;
