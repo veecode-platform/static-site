@@ -27,7 +27,7 @@ const Header = ({fixedHeader, showButton}) => {
           </a>
         </Link>
         {showButton && <div className={style.content__buyButton} >
-          <Link href="/pricing" passHref>            
+          <Link href="/compare-plans" passHref>            
             <a>
               <Button headerButton>Buy Now</Button>
             </a>         
