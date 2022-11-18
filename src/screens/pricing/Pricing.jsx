@@ -64,11 +64,9 @@ const Pricing = () => {
               </Link>
             </CardSupport>
           </div>
-          <div className={style.sectiontBar}>
-          <ContactBar/>
-          </div>
           <div className={style.sectionBar}>
-            <Guarantees/>
+          <ContactBar/>
+          <Guarantees/>
           </div>
         </article>
       </section>
