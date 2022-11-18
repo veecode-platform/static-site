@@ -23,42 +23,42 @@ const ComparePlans = () => {
           emphasis="$ 899"
           text="per Mouth"
           buttonLabel="Know Our Plans"
-          >
-          <li><span><FaCheck/></span>Professional Support.</li>
-          <li><span><FaCheck/></span>Access to professional specialists</li>
-          <li><span><FaCheck/></span>Up to 10 Users</li>
-          <li><span><FaCheck/></span>3-5 days SLA</li>
-          <li><span><FaCheck/></span>Community Support</li>
+        >
+          <li><span><FaCheck /></span>Professional Support.</li>
+          <li><span><FaCheck /></span>Access to professional specialists</li>
+          <li><span><FaCheck /></span>Up to 10 Users</li>
+          <li><span><FaCheck /></span>3-5 days SLA</li>
+          <li><span><FaCheck /></span>Community Support</li>
         </PlansDetails>
         {/* ENTERPRISE */}
-        <PlansDetails 
-         title="Enterprise"
-         subtitle="We solve it for you and by you. Our enterprise plan covers all your needs with the digital transition with same-day SLA. Ideal for your company."
-         link="/contact-enterprise"
-         emphasis="Contact Us"
-         buttonLabel="Contact Us"
-         >
-          <li><span><FaCheck/></span>
-           Support for you company needs as:
-           <ul className={style.sublist}>
-              <li><span><FaCheckCircle/></span>Kong</li>
-              <li><span><FaCheckCircle/></span>Kubernetes</li>
-              <li><span><FaCheckCircle/></span>AWS</li>
-              <li><span><FaCheckCircle/></span>Terraform</li>
-              <li><span><FaCheckCircle/></span>IaC and Microservices </li>
-           </ul>
+        <PlansDetails
+          title="Enterprise"
+          subtitle="We solve it for you and by you. Our enterprise plan covers all your needs with the digital transition with same-day SLA. Ideal for your company."
+          link="/contact-enterprise"
+          emphasis="Contact Us"
+          buttonLabel="Contact Us"
+        >
+          <li><span><FaCheck /></span>
+            Support for you company needs as:
+            <ul className={style.sublist}>
+              <li><span><FaCheckCircle /></span>Kong</li>
+              <li><span><FaCheckCircle /></span>Kubernetes</li>
+              <li><span><FaCheckCircle /></span>AWS</li>
+              <li><span><FaCheckCircle /></span>Terraform</li>
+              <li><span><FaCheckCircle /></span>IaC and Microservices </li>
+            </ul>
           </li>
-          <li><span><FaCheck/></span>Unlimited Users</li>
-          <li><span><FaCheck/></span>Direct access to professional specialists</li>
-          <li><span><FaCheck/></span>DevOps Training & Docs</li>
-          <li><span><FaCheck/></span>Enterprise Support</li>
-          <li><span><FaCheck/></span>Prioritized Bug Fixes</li>
-          <li><span><FaCheck/></span>Same business day SLA</li>
+          <li><span><FaCheck /></span>Unlimited Users</li>
+          <li><span><FaCheck /></span>Direct access to professional specialists</li>
+          <li><span><FaCheck /></span>DevOps Training & Docs</li>
+          <li><span><FaCheck /></span>Enterprise Support</li>
+          <li><span><FaCheck /></span>Prioritized Bug Fixes</li>
+          <li><span><FaCheck /></span>Same business day SLA</li>
         </PlansDetails>
       </article>
       <article className={style.sectionBar}>
-        <ContactBar/>
-        <Guarantees/>
+        <ContactBar />
+        <Guarantees />
       </article>
     </DefaultPage>
   );
