@@ -36,7 +36,7 @@
                 padding: 1em 0;
             }
         }
-        .contactBar{
+        .sectionBar{
             @include screenSize(67%,auto);
             @include displayFlex(center, center, row);
             //viewport
