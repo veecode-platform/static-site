@@ -1,20 +1,33 @@
-@import '/abstract/functions','/abstract/responsive','/abstract/variables';
+@import "/abstract/functions", "/abstract/responsive", "/abstract/variables";
 
-.content{
-    @include screenSize(100%,auto);
-    display: grid;
-    grid-template: 1fr/repeat(2,1fr);
-    .details{
-        &__label{
-            @include typography(1.4vw,left,auto,500);
-        }
-        &__text{
-            @include typography(1vw,left,auto,300);
-            margin: 1.5em 0;
-        }
+.content {
+  @include screenSize(100%, auto);
+  display: grid;
+  grid-template: 1fr / repeat(2, 1fr);
+  //mobile(M)
+  @include for-phone-only {
+    @include displayFlex(center, center, column);
+    gap: 2em;
+  }
+  .details {
+    &__label {
+      @include typography(1.4vw, left, auto, 500);
+      //mobile(M)
+      @include for-phone-only {
+        font-size: 18px;
+      }
     }
-    .form{
-        @include screenSize(100%,auto);
-        @include displayFlex(center, center, row);
+    &__text {
+      @include typography(1vw, left, auto, 300);
+      margin: 1.5em 0;
+      //mobile(M)
+      @include for-phone-only {
+        font-size: 16px;
+      }
     }
+  }
+  .form {
+    @include screenSize(100%, auto);
+    @include displayFlex(center, center, row);
+  }
 }
