@@ -38,7 +38,6 @@ const FormElement = ({ checkbox }) => {
         const response = await UseContactData(values);
         await handleFormRedirect();
       }}
-      className={style.formWrapper}
     >
       {({ errors, touched, handleSubmit, isSubmitting }) => (
         <Form onSubmit={handleSubmit} className={style.form}>
@@ -77,7 +76,7 @@ const FormElement = ({ checkbox }) => {
           ></TextArea>
 
           <div className={style.form__buttonWrapper}>
-            <Button type="submit" loading={isSubmitting}>
+            <Button type="submit" loading={isSubmitting} alt>
               Submit
             </Button>
           </div>

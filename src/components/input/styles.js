@@ -14,22 +14,22 @@ export const LabelWraper = styled.div`
 `;
 
 export const Label = styled.label`
-    color: ${props => props.error ? "#DB0000" : "#FAFAFA" };
-    font-size: small;
+    color: ${props => props.error ? "#DB0000" : "#f3f3f3" };
+    font-size: 12px;
+    font-weight:500;
     min-width: 50%;
     text-align: ${props => props.errorLabel ? "right" : "left"};
 `;
 
 export const InputField = styled.input`
     width: 100%;
-    max-width: 415px;
     border-radius: 4px;
     height: 48px;
     outline: none;
-    //background-color: transparent;
+    background-color: #f3f3f3;
     //color: #FAFAFA;
     border: ${props => props.error ? "1px solid #DB0000" : "1px solid #33FFCE" };
-    font-size: medium;
+    font-size: 16px;
     padding: 0.25em 0.5em;
 
     @media (max-width: 415px) {
@@ -45,6 +45,12 @@ export const InputField = styled.input`
     ::placeholder{
         font-size: medium;
     }  
+    :-webkit-autofill {
+        -webkit-box-shadow: 0 0 0 30px #f3fefe inset;
+      }
+      &:-webkit-autofill {
+        -webkit-text-fill-color: #111111 !important;
+      }
 `;
 
 /*end input*/
@@ -101,14 +107,17 @@ export const WrapperTextArea = styled.div`
 
 export const TextAreaField = styled.textarea`
     width: 100%;
-    max-width: 415px;
     border-radius: 4px;
     height: auto;
     min-height: 15vh;
     outline: none;
     border: ${props => props.error ? "1px solid #DB0000" : "1px solid #33FFCE" };
-    font-size: medium;
+    font-size: 16px;
     padding: 0.25em 0.5em;
+    color: #f3f3f3;
     font-family: inherit;
     resize: vertical;
+    background-color: #f3f3f3;
+    margin-bottom: 1em;
+
 `

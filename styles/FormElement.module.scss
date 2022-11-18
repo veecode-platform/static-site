@@ -1,16 +1,5 @@
 @import "/abstract/functions","/abstract/responsive","/abstract/variables";
 
-.formWraper{
-    @include displayFlex(center, center, column);
-    @include glassEffect();
-    width: 415px;
-    padding: 1vw 1vw;
-    border-radius: 1vh;
-    @include for-phoneS-only {
-        width: 95vw;
-        padding: 1.5vh 3vw;
-    }
-
     .form{
         @include displayFlex(center, center, column);
         width: 100%;                  
@@ -35,4 +24,3 @@
             }
         }
     }
-}
