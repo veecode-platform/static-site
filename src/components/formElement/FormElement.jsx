@@ -9,7 +9,7 @@ import { useRouter } from "next/router";
 const FormElement = ({ company, checkbox }) => {
   const formSchema = object({
     name: string().required("*required"),
-    company: string().required("*required"),
+    company: company ? string().required("*required") : null,
     email: string().email("*invalid email").required("*required"),
     question: string().required("*required"),
   });

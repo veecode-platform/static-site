@@ -114,7 +114,6 @@ export const TextAreaField = styled.textarea`
     border: ${props => props.error ? "1px solid #DB0000" : "1px solid #33FFCE" };
     font-size: 16px;
     padding: 0.25em 0.5em;
-    color: #f3f3f3;
     font-family: inherit;
     resize: vertical;
     background-color: #f3f3f3;

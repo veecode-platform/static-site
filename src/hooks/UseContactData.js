@@ -4,7 +4,7 @@ export const UseContactData = async (values) => {
 
   try{
 
-    let interests = []
+    let interests = [""]
     if(values.vkpr) interests.push("vkpr");
     if(values.safiracli) interests.push("safira-cli");
     if(values.support) interests.push("support");
@@ -15,7 +15,7 @@ export const UseContactData = async (values) => {
       "full-name": values.name,
       "organization": values.company ? values.company : "contact-enterprise",
       "e-mail": values.email,
-      "interests": interests ? interests : [""],
+      "interests": interests,
       "question": values.question,
     }
 
