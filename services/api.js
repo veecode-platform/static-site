@@ -1,4 +1,4 @@
-import axios from "axios";
+import axios from "axios"; 
 
 const URL_API = process.env.NEXT_PUBLIC_LAMBDA_BASE_URL
 
