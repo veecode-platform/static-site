@@ -11,11 +11,11 @@ export const UseContactData = async (values) => {
     if(values.devportal) interests.push("devportal");
 
 
-    const model = {
+    let model = {
       "full-name": values.name,
-      "organization": values.company,
+      "organization": values.company ? values.company : "contact-enterprise",
       "e-mail": values.email,
-      "interests": interests,
+      "interests": interests ? interests : [""],
       "question": values.question,
     }
 
