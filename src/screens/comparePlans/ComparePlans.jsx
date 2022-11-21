@@ -33,7 +33,7 @@ const ComparePlans = () => {
         {/* ENTERPRISE */}
         <PlansDetails
           title="Enterprise"
-          subtitle="We solve it for you and by you. Our enterprise plan covers all your needs with the digital transition with same-day SLA. Ideal for your company."
+          subtitle="We do it with you and for you. Our enterprise plan covers all your needs with the digital transition with same-day SLA. Ideal for your company."
           link="/contact-enterprise"
           emphasis="Contact Us"
           buttonLabel="Contact Us"

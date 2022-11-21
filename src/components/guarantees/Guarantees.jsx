@@ -31,7 +31,7 @@ function Guarantees() {
                 <div className={style.guaranteesWrapper__text}>
                     <p className={style["guaranteesWrapper__text-info"]}>
                         Discounted pricing is available for non-profits, educational
-                        institutions, and startups with fewer than 10 employees. <Link href="/contact-us"><a>Contact us</a></Link> to
+                        institutions, and startups with fewer than 10 employees. <Link href="/contact-us"><a target="_blank">Contact us</a></Link> to
                         get the discounted pricing.
                     </p>
                 </div>
