@@ -21,7 +21,7 @@ const ComparePlans = () => {
           link="/pricing"
           label="Start at"
           emphasis="$ 899"
-          text="per Mouth"
+          text="per Month"
           buttonLabel="Know Our Plans"
         >
           <li><span><FaCheck /></span>Professional Support.</li>
