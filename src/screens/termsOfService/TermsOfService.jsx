@@ -275,9 +275,8 @@ const TermsOfService = () => {
         {/* SERVICES DEFINITION */}
         <h2>2. SERVICES DEFINITION</h2>
         <p>
-          2.1 - <strong>Content access:</strong> documents, videos, code
-          examples, comde templates, knowledge base and other assets will be
-          available to users under an active subscription.
+          2.1 - <strong>Content access:</strong> documents, videos, code examples, code templates, 
+          knowledge base and other assets will be available to users under an active subscription.
         </p>
         <p>
           2.2 - <strong>Community channels:</strong> users will have access to
