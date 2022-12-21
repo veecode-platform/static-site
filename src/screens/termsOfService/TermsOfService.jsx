@@ -291,11 +291,8 @@ const TermsOfService = () => {
           be explained and provisioned during customer onboarding.
         </p>
         <p>
-          2.4 - <strong>Support channels:</strong> customers will choose support
-          level when subscribing. Support can be upgraded or downgraded, as
-          explained in Renewal, Upgrade & Termination. Current support
-          levels are &quot;Basic&quot; (5 business days SLA) and &quot;Premium&quot; (2 business
-          days SLA).
+          2.4 - <strong>Support channels:</strong> customers will choose support level when subscribing. Support can be upgraded or downgraded, as explained in Renewal, Upgrade & Termination. 
+          Current support levels are &quote;Standard&quote; (1 business day SLA) and &quote;Enterprise&quote; (same day response).
         </p>
         <p>
           2.5 - <strong>Best effort:</strong> support is provided in a
