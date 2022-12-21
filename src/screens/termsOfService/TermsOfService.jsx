@@ -312,21 +312,18 @@ const TermsOfService = () => {
           resolve issues.
         </p>
         <p>
-          2.7 - <strong>Support vs Consulting:</strong> support is about
-          pointing out misconfiguration issues, identifying or fixing bugs,
-          troubleshooting, reviewing code and answering general questions.
-          Support, on the other hand, isn&apos;t consulting: we are not a team to be
-          allocated to do your job (although we do plan to offer professional
-          services in the future as a subscription add-on). Questions like &quot;what
-          is the best way to do &apos;x&apos;&quot; or &quot;what is the best architecture for
-          mission &apos;y&apos;&quot; may (and probably will) get an answer in community
-          channels (we will gladly help you if we can), but they are not under
-          support service scope.
+          2.7 - <strong>Support vs Consulting:</strong> support is about pointing out misconfiguration issues, 
+          identifying or fixing bugs, troubleshooting, reviewing code and answering general questions. 
+          Standard Support, on the other hand, isn't consulting: we are not a team to be allocated to do your job. 
+          At standard you have access to 10 monthly support calls, with a maximum of 2 simultaneous, 
+          with the possibility of not using the total number of support tickets and exchanging them 
+          for synchronous meeting sessions to solve specific problems
         </p>
         <p>
-          2.8 - <strong>Same day or Emergency support:</strong> we do not offer
-          same-day support nor will we be available for an emergency call (well,
-          not yet).
+          2.8 - At Enterprise Support, you will have access to our platform with specialized professionals that 
+          will build the technical scope of the solution during the onboarding session with you, and will help your 
+          team to execute this scope, besides mentoring sessions, 
+          pair programming and auditing the execution of the roadmap of the planned solution;
         </p>
       </article>
       <ScrollTop/>
