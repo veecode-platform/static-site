@@ -18,7 +18,7 @@ const ComparePlans = () => {
           title="Standard"
           subtitle="Rely on our standard support to solve your digital transition
           problems."
-          link="/pricing"
+          link="/validate?plan=standard"
           label="Start at"
           emphasis="$ 899"
           text="per Month"
