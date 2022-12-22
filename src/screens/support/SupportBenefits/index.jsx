@@ -73,9 +73,9 @@ const SupportBenefits = () => {
           <p className={style["card__details-desc"]}>
             We ensure that we will respond to your requests according to the
             type of support contracted.
-            <br />- In <strong>Support Standard</strong> we respond within 5
-            working days.
-            <br />- In <strong>Support Premium</strong> within 3 working days.
+            <br />- In <strong>Standard Support</strong> Best-effort support with 1-business day SLA. Access to 10 monthly support calls, with a maximum of 2 simultaneous, with the possibility of not using the total number of support tickets and exchanging them for synchronous meeting sessions to solve specific problems (with a maximum of two hours duration), access to our community and support channels, asset library.
+            <br />- In <strong>Enterprise Support</strong> Same day response, 24/7 support, with customizable adjustments with the customer. 
+            Agreement being marketed via direct contact.
             <br />
             <strong>
               It is important to note that the support service is not an
