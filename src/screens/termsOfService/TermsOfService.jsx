@@ -314,7 +314,7 @@ const TermsOfService = () => {
         <p>
           2.7 - <strong>Support vs Consulting:</strong> support is about pointing out misconfiguration issues, 
           identifying or fixing bugs, troubleshooting, reviewing code and answering general questions. 
-          Standard Support, on the other hand, isn't consulting: we are not a team to be allocated to do your job. 
+          Standard Support, on the other hand, isn&apos;t consulting: we are not a team to be allocated to do your job. 
           At standard you have access to 10 monthly support calls, with a maximum of 2 simultaneous, 
           with the possibility of not using the total number of support tickets and exchanging them 
           for synchronous meeting sessions to solve specific problems
