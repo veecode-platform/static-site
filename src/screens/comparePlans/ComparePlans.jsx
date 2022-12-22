@@ -33,27 +33,16 @@ const ComparePlans = () => {
         {/* ENTERPRISE */}
         <PlansDetails
           title="Enterprise"
-          subtitle="We do it with you and for you. Our enterprise plan covers all your needs with the digital transition with same-day SLA. Ideal for your company."
+          subtitle="Get personalized service according to your company's specific needs."
           link="/contact-enterprise"
-          emphasis="Contact Us"
+          emphasis="Personalize your experience"
           buttonLabel="Contact Us"
         >
-          <li><span><FaCheck /></span>
-            Support for you company needs as:
-            <ul className={style.sublist}>
-              <li><span><FaCheckCircle /></span>Kong</li>
-              <li><span><FaCheckCircle /></span>Kubernetes</li>
-              <li><span><FaCheckCircle /></span>AWS</li>
-              <li><span><FaCheckCircle /></span>Terraform</li>
-              <li><span><FaCheckCircle /></span>IaC and Microservices </li>
-            </ul>
-          </li>
-          <li><span><FaCheck /></span>Unlimited Users</li>
-          <li><span><FaCheck /></span>Direct access to professional specialists</li>
-          <li><span><FaCheck /></span>DevOps Training & Docs</li>
-          <li><span><FaCheck /></span>Enterprise Support</li>
-          <li><span><FaCheck /></span>Prioritized Bug Fixes</li>
-          <li><span><FaCheck /></span>Same business day SLA</li>
+          <li><span><FaCheck /></span>24x7 support</li>
+          <li><span><FaCheck /></span>SLA on the same business day</li>
+          <li><span><FaCheck /></span>Prioritized bug fixes</li>
+          <li><span><FaCheck /></span>Direct access to technical professionals</li>
+          <li><span><FaCheck /></span>DevOps training and documentation.</li>
         </PlansDetails>
       </article>
       <article className={style.sectionBar}>
