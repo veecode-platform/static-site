@@ -1,8 +1,8 @@
 import React from "react";
-import { Breadcrumb, ContactBar, DefaultPage, Guarantees } from "../../components";
+import { Breadcrumb, ContactBar,DefaultPage, Guarantees } from "../../components";
 import style from "../../../styles/ComparePlans.module.scss";
 import PlansDetails from "./plansDetails";
-import { FaCheck, FaCheckCircle, FaMinus } from "react-icons/fa";
+import { FaCheck } from "react-icons/fa";
 
 const ComparePlans = () => {
   return (

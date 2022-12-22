@@ -38,17 +38,15 @@ const InfoBox = ({info, billing,formatter,getDateFormatted}) => {
 
                 <div className={style.content__info}>
                   <div>
-                    <p>{info.users} users</p>
-                    <p>Devportal</p>
-                    <p>Safira-cli</p>
-                    <p>VKPR</p>
+                    <p>{info.users} Tickets per month</p>
+                    <p>Up to 2 tickets simultaneously</p>
                   </div>
                 </div>
 
                 <div className={style.content__info}>
                   <div className={style["content__info-letterWrapper"]}>
                     <div className={style.left}>
-                      <p>After the 15th day of trial:</p>
+                      <p>After the 7th day of trial:</p>
                     </div>
                     <div className={style.right}>
                       <p>{billing ? info.priceA : info.price}</p>
@@ -86,17 +84,12 @@ const InfoBox = ({info, billing,formatter,getDateFormatted}) => {
                 <div className={style.content__guarantee}>
                   <div className={style["content__guarantee-item"]}>
                     <FaCheck color="#33FFCE" />
-                    <p>15 day trial</p>
+                    <p>7 day trial</p>
                   </div>
 
                   <div className={style["content__guarantee-item"]}>
                     <FaCheck color="#33FFCE" />
                     <p>Annual contract</p>
-                  </div>
-
-                  <div className={style["content__guarantee-item"]}>
-                    <FaCheck color="#33FFCE" />
-                    <p>Full Access to our knowledge base</p>
                   </div>
                 </div>         
    </div>
