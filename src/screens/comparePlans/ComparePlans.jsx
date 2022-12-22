@@ -16,19 +16,19 @@ const ComparePlans = () => {
         {/* STANDARD */}
         <PlansDetails
           title="Standard"
-          subtitle="Rely on our standard support to solve your digital transition
-          problems."
+          subtitle="Solve your company's technological barriers in a practical and objective way."
           link="/pricing"
-          label="Start at"
-          emphasis="$ 899"
+          emphasis="$ 1990"
           text="per Month"
-          buttonLabel="Know Our Plans"
+          buttonLabel="Sign the plan"
         >
-          <li><span><FaCheck /></span>Professional Support.</li>
-          <li><span><FaCheck /></span>Access to professional specialists</li>
-          <li><span><FaCheck /></span>Up to 10 Users</li>
-          <li><span><FaCheck /></span>3-5 days SLA</li>
-          <li><span><FaCheck /></span>Community Support</li>
+          <li><span><FaCheck /></span>8x5 Support</li>
+          <li><span><FaCheck /></span>Attendance from 9h to 18h</li>
+          <li><span><FaCheck /></span>Ticketing tools for service</li>
+          <li><span><FaCheck /></span>10 tickets per month</li>
+          <li><span><FaCheck /></span>2 simultaneous tickets</li>
+          <li><span><FaCheck /></span>One business day SLA</li>
+          <li><span><FaCheck /></span>Direct access to technical professionals.</li>
         </PlansDetails>
         {/* ENTERPRISE */}
         <PlansDetails
