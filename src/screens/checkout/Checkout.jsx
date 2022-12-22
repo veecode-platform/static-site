@@ -38,7 +38,7 @@ const Checkout = () => {
       billing ? setPrice(1134) : setPrice(1260)
     }
     else{
-      billing ? setPrice(809) : setPrice(899)
+      billing ? setPrice(1790) : setPrice(1990)
     }
   }
 
@@ -67,7 +67,7 @@ const Checkout = () => {
 
   let info = {
     plan: userData.plan,
-    sla: userData.plan == "premium" ? "3 days" : "5 days",
+    sla: userData.plan == "premium" ? "3 days" : "1 Business day",
     price: formatter.format(price),
     priceA: formatter.format(price*12),
     priceDeleted: price*12*(userData.plan == "premium" ? 1.1111 : 1.1112),
