@@ -1,5 +1,5 @@
 export { default as Homescreen } from './homescreen/Homescreen';
-export { default as Pricing } from './pricing/Pricing';
+// export { default as Pricing } from './pricing/Pricing';
 export { default as Support } from './support/support';
 export { default as Validate } from './validate/Validate';
 export { default as Checkout } from './checkout/Checkout';
