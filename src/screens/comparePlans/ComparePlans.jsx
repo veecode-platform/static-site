@@ -17,7 +17,7 @@ const ComparePlans = () => {
         <PlansDetails
           title="Standard"
           subtitle="Solve your company's technological barriers in a practical and objective way."
-          link="/validate/?plan=standard"
+          link="/validate?plan=standard"
           emphasis="$ 1990"
           text="per Month"
           buttonLabel="Sign the plan"
