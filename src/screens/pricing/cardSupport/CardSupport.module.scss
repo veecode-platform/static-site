@@ -1,199 +1,199 @@
-// @import "../abstract/functions", "../abstract/variables", "../abstract/responsive";
+@import "../abstract/functions", "../abstract/variables", "../abstract/responsive";
 
-// .content{
-//     @include screenSize(45%,auto);
-//     @include displayFlex(center, center, column);
-//     margin: 1em; 
-//     cursor: pointer;
-//     opacity: 0.99;
-//     transition: all .4s linear;
-//     position: relative;
-//     //viewport
-//     @include for-viewport-only{
-//         @include screenSize(90%,auto);
-//     }
-//     //mobile(M)
-//     @include for-phone-only{
-//         margin: 2em 0;
-//     }
-//     &:hover{
-//         opacity:1;
-//         transition: all .4s linear;
-//     }
-//     .iconOffer{
-//         width: 5.8vw;
-//         position: absolute;
-//         top: -.2%;
-//         left: 10%;
-//         //viewport
-//         @include for-viewport-only{
-//             width: 7vw;
-//         }
-//         //tablet
-//         @include for-tablet-only{
-//             width: 9vw;
-//             top: -.2%;
-//             left: 2%;
-//         }
-//         //tablet(S)
-//         @include for-tabletS-only{
-//             width: 10vw;
-//         }
-//         //phone(M)
-//         @include for-phone-only{
-//             width: 13vw;
-//             left: 0;
-//         }
-//         //phone(S)
-//         @include for-phoneS-only{
-//             width: 22vw;
-//             left: 0;
-//         }
-//         //phone(XS)
-//         @include for-phoneXS-only{
-//             width: 22vw;
-//             left: 0;
-//         }
-//     }
-//     &__text{
-//         @include screenSize(80%,auto);
-//         @include displayFlex(center, center, column);
-//         overflow: hidden;
-//         background-color: $color2; 
-//         padding-bottom: 2em;
-//         border-radius: 1.2em;
-//         //tablet
-//         @include for-tablet-only{
-//             @include screenSize(95%,auto);
-//         }
-//         //mobile(M)
-//         @include for-phone-only{
-//             @include screenSize(100%,auto);
-//         }
-//         &-title{
-//             @include screenSize(100%,auto);
-//            background: linear-gradient(45deg,$color7,$color1);
-//             padding: 1em 0;
-//             h3{
-//                 @include typography(1.6vw,center,1.4em,500);
-//                 color: $color3;
-//                 //mobile(M)
-//                 @include for-phone-only {
-//                     font-size: 4vw;
-//                 }
-//                 //mobile(S)
-//                 @include for-phoneS-only {
-//                     font-size: 5vw;
-//                 }
-//             }
-//         }
-//         &-subtitle{
-//             @include screenSize(100%,auto);
-//             padding: 1em .7em .7em .7em;
-//             //mobile(M)
-//             @include for-phone-only{
-//                 padding: 1.5em .7em .7em .7em;
-//             }
-//             h4{
-//                 @include typography(1.5vw,center,1.4em,500);
-//                 color: $color5;
-//                 //tablet
-//                 @include for-tablet-only{
-//                     font-size: 2vw;
-//                 }
-//                 //mobile(M)
-//                 @include for-phone-only {
-//                     font-size: 4vw;
-//                 }
-//                 //mobile(S)
-//                 @include for-phoneS-only {
-//                     font-size: 5vw;
-//                 }
-//             }
-//         }
-//         span{
-//             @include screenSize(50%,2px);
-//             background-color: $color1;
-//         }
-//         &-desc{
-//             @include screenSize(100%,auto);
-//             padding: .7em 1.5em;   
-//             //viewPort
-//             @include for-viewport-only{
-//                 padding: .7em 3em; 
-//             }   
-//             p{
-//                 @include typography(1.5vw,center,1.4em,500);
-//                 padding: .7em;
-//                 color: $color5;
-//                 //tablet
-//                 @include for-tablet-only{
-//                     font-size: 2vw;
-//                 }
-//                 //mobile(M)
-//                 @include for-phone-only {
-//                     font-size: 4vw;
-//                 }
-//                 //mobile(S)
-//                 @include for-phoneS-only {
-//                     font-size: 4.5vw;
-//                 }
-//             }
-//         }
-//         &-price{
-//             @include screenSize(100%,auto);
-//             padding: 1em;      
-//             -webkit-text-stroke-width: .5px;
-//             -webkit-text-stroke-color: #cdcdcd;
-//             //mobile(M)
-//             @include for-phone-only{
-//                 padding: 1.5em 1em; 
-//             }     
-//             //mobile(S)
-//             @include for-phoneS-only{
-//                 padding: 1em; 
-//             } 
-//             p{
-//                 @include typography(3vw,center,1.4em,600);
-//                 color: $color4;
-//                 //tablet
-//                 @include for-tablet-only{
-//                     font-size: 3.5vw;
-//                 }
-//                 //mobile(M)
-//                 @include for-phone-only {
-//                     font-size: 7vw;
-//                 }
-//                 //mobile(S)
-//                 @include for-phoneS-only {
-//                     font-size: 10vw;
-//                 }
-//             }
-//         }
-//         &-sub{
-//             @include screenSize(100%,auto);
-//             padding: .7em 1em;   
-//             //viewPort
-//             @include for-viewport-only{
-//                 padding: .7em 3em; 
-//             }   
-//             p{
-//                 @include typography(1.2vw,center,1.4em,500);
-//                 padding: .7em;
-//                 color: $color5;
-//                 //tablet
-//                 @include for-tablet-only{
-//                     font-size: 1.7vw;
-//                 }
-//                 //mobile(M)
-//                 @include for-phone-only {
-//                     font-size: 3.7vw;
-//                 }
-//                 //mobile(S)
-//                 @include for-phoneS-only {
-//                     font-size: 4.2vw;
-//                 }
-//             }
-//         }
-//     }
-// }
+.content{
+    @include screenSize(45%,auto);
+    @include displayFlex(center, center, column);
+    margin: 1em; 
+    cursor: pointer;
+    opacity: 0.99;
+    transition: all .4s linear;
+    position: relative;
+    //viewport
+    @include for-viewport-only{
+        @include screenSize(90%,auto);
+    }
+    //mobile(M)
+    @include for-phone-only{
+        margin: 2em 0;
+    }
+    &:hover{
+        opacity:1;
+        transition: all .4s linear;
+    }
+    .iconOffer{
+        width: 5.8vw;
+        position: absolute;
+        top: -.2%;
+        left: 10%;
+        //viewport
+        @include for-viewport-only{
+            width: 7vw;
+        }
+        //tablet
+        @include for-tablet-only{
+            width: 9vw;
+            top: -.2%;
+            left: 2%;
+        }
+        //tablet(S)
+        @include for-tabletS-only{
+            width: 10vw;
+        }
+        //phone(M)
+        @include for-phone-only{
+            width: 13vw;
+            left: 0;
+        }
+        //phone(S)
+        @include for-phoneS-only{
+            width: 22vw;
+            left: 0;
+        }
+        //phone(XS)
+        @include for-phoneXS-only{
+            width: 22vw;
+            left: 0;
+        }
+    }
+    &__text{
+        @include screenSize(80%,auto);
+        @include displayFlex(center, center, column);
+        overflow: hidden;
+        background-color: $color2; 
+        padding-bottom: 2em;
+        border-radius: 1.2em;
+        //tablet
+        @include for-tablet-only{
+            @include screenSize(95%,auto);
+        }
+        //mobile(M)
+        @include for-phone-only{
+            @include screenSize(100%,auto);
+        }
+        &-title{
+            @include screenSize(100%,auto);
+           background: linear-gradient(45deg,$color7,$color1);
+            padding: 1em 0;
+            h3{
+                @include typography(1.6vw,center,1.4em,500);
+                color: $color3;
+                //mobile(M)
+                @include for-phone-only {
+                    font-size: 4vw;
+                }
+                //mobile(S)
+                @include for-phoneS-only {
+                    font-size: 5vw;
+                }
+            }
+        }
+        &-subtitle{
+            @include screenSize(100%,auto);
+            padding: 1em .7em .7em .7em;
+            //mobile(M)
+            @include for-phone-only{
+                padding: 1.5em .7em .7em .7em;
+            }
+            h4{
+                @include typography(1.5vw,center,1.4em,500);
+                color: $color5;
+                //tablet
+                @include for-tablet-only{
+                    font-size: 2vw;
+                }
+                //mobile(M)
+                @include for-phone-only {
+                    font-size: 4vw;
+                }
+                //mobile(S)
+                @include for-phoneS-only {
+                    font-size: 5vw;
+                }
+            }
+        }
+        span{
+            @include screenSize(50%,2px);
+            background-color: $color1;
+        }
+        &-desc{
+            @include screenSize(100%,auto);
+            padding: .7em 1.5em;   
+            //viewPort
+            @include for-viewport-only{
+                padding: .7em 3em; 
+            }   
+            p{
+                @include typography(1.5vw,center,1.4em,500);
+                padding: .7em;
+                color: $color5;
+                //tablet
+                @include for-tablet-only{
+                    font-size: 2vw;
+                }
+                //mobile(M)
+                @include for-phone-only {
+                    font-size: 4vw;
+                }
+                //mobile(S)
+                @include for-phoneS-only {
+                    font-size: 4.5vw;
+                }
+            }
+        }
+        &-price{
+            @include screenSize(100%,auto);
+            padding: 1em;      
+            -webkit-text-stroke-width: .5px;
+            -webkit-text-stroke-color: #cdcdcd;
+            //mobile(M)
+            @include for-phone-only{
+                padding: 1.5em 1em; 
+            }     
+            //mobile(S)
+            @include for-phoneS-only{
+                padding: 1em; 
+            } 
+            p{
+                @include typography(3vw,center,1.4em,600);
+                color: $color4;
+                //tablet
+                @include for-tablet-only{
+                    font-size: 3.5vw;
+                }
+                //mobile(M)
+                @include for-phone-only {
+                    font-size: 7vw;
+                }
+                //mobile(S)
+                @include for-phoneS-only {
+                    font-size: 10vw;
+                }
+            }
+        }
+        &-sub{
+            @include screenSize(100%,auto);
+            padding: .7em 1em;   
+            //viewPort
+            @include for-viewport-only{
+                padding: .7em 3em; 
+            }   
+            p{
+                @include typography(1.2vw,center,1.4em,500);
+                padding: .7em;
+                color: $color5;
+                //tablet
+                @include for-tablet-only{
+                    font-size: 1.7vw;
+                }
+                //mobile(M)
+                @include for-phone-only {
+                    font-size: 3.7vw;
+                }
+                //mobile(S)
+                @include for-phoneS-only {
+                    font-size: 4.2vw;
+                }
+            }
+        }
+    }
+}
