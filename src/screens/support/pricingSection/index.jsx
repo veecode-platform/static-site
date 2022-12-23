@@ -7,8 +7,8 @@ const PricingSection = () => {
         <div className={style.content}>
             <h2 className={style.content__title}>Pricing</h2>
             <p className={style.content__desc}>
-                To get access to Premium Support, you must be a Platform subscriber. Check out the 
-                <Link href="/pricing" prefetch={false}>
+                To get access to Support, you must be a Platform subscriber. Check out the 
+                <Link href="/compare-plans" prefetch={false}>
                     <a> pricing page </a>
                 </Link>
                 for details.
