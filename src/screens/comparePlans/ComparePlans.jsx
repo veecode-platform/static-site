@@ -34,7 +34,7 @@ const ComparePlans = () => {
           title="Enterprise"
           subtitle="Get personalized service according to your company's specific needs."
           link="/contact-enterprise"
-          emphasis="Personalize your experience"
+          headline="Personalize your experience"
           buttonLabel="Contact Us"
         >
           <li><span><FaCheck /></span>24x7 support</li>

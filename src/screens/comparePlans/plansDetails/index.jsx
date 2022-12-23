@@ -9,6 +9,7 @@ const PlansDetails = ({
   link,
   label,
   emphasis,
+  headline,
   text,
   buttonLabel,
   children,
@@ -26,6 +27,7 @@ const PlansDetails = ({
           {label && <p>{label}</p>}
           {<strong>{emphasis}</strong>}
           {text && <p>{text}</p>}
+          {headline && <h3>{headline}</h3>}
         </div>
         <Link href={link}>
           <a>
