@@ -33,7 +33,7 @@ const OptimizeYourBusiness = () => {
               
               <Link href="/docs" passHref> 
                 <a>
-                  <Button>Get started for free</Button>
+                  <Button className={style.button}>Get started</Button>
                 </a>
               </Link>
             </div>
