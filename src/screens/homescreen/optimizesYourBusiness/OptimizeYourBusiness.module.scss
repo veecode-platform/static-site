@@ -111,9 +111,6 @@
             }
             &__buttonWrapper {
                 width: 95%;
-                // .button {
-                //     padding: 1em;
-                // }
 
                 @include displayFlex(space-between, center, row);
                 margin-top: 4em;
@@ -127,6 +124,9 @@
                     width: 92%;
                     align-self: end;
                     justify-content: space-between;
+                    .button {
+                        padding: 0.5em;
+                    }
                 }
                 //mobile(M)
                 @include for-phone-only{
