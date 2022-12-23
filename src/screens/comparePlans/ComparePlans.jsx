@@ -24,11 +24,9 @@ const ComparePlans = () => {
           buttonLabel="Sign the plan"
         >
           <li><span><FaCheck /></span>8x5 support</li>
-          <li><span><FaCheck /></span>Attendance from 9h to 18h</li>
-          <li><span><FaCheck /></span>Ticketing tools for service</li>
+          <li><span><FaCheck /></span>One business day SLA</li>
           <li><span><FaCheck /></span>10 tickets per month</li>
           <li><span><FaCheck /></span>2 simultaneous tickets</li>
-          <li><span><FaCheck /></span>One business day SLA</li>
           <li><span><FaCheck /></span>Direct access to technical professionals</li>
         </PlansDetails>
         {/* ENTERPRISE */}
