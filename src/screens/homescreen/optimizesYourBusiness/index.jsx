@@ -30,9 +30,10 @@ const OptimizeYourBusiness = () => {
                   <Button>How it Works</Button>
                 </a>
               </Link>
-              <Link href="/support" passHref>
+              
+              <Link href="/docs" passHref> 
                 <a>
-                  <Button>Support</Button>
+                  <Button >Get started for free</Button>
                 </a>
               </Link>
             </div>
