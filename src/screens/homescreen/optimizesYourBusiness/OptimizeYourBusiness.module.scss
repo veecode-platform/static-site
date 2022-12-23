@@ -111,6 +111,9 @@
             }
             &__buttonWrapper {
                 width: 95%;
+                .button {
+                    padding: 5px;
+                }
                 @include displayFlex(space-between, center, row);
                 margin-top: 4em;
                 align-self: flex-end;
