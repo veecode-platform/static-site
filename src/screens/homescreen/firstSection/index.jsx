@@ -27,7 +27,7 @@ const FirstSection = () => {
               />
       </div>
       <article className={style.content}>
-        <div className={style.content__logo}>
+        {/* <div className={style.content__logo}>
             <Image
                 layout="responsive"
                 src={Logo} 
@@ -37,23 +37,22 @@ const FirstSection = () => {
                 unoptimized
                 priority={true}
                 />
-        </div>
+        </div> */}
         <div className={style.content__title}>
           <h1>
-          We provide <strong>instant support</strong> on
-            <TextSlide />
+            Get expert support from the best solutions on the market in just a few clicks at an affordable price.
+            {/* <TextSlide /> */}
           </h1>
         </div>
-        <div className={style.content__text}>
+        {/* <div className={style.content__text}>
           <p>
             Your transition to the cloud doesn&lsquo;t have to be
             time-consuming, expensive, or lonely. Count on our{" "}
             <strong>professional support</strong> and{" "}
             <strong>free tools</strong> to overcome your challenges quickly 
             and easily! 
-            {/* incorporating: */}
           </p>
-        </div>
+        </div> */}
         <div className={style.content__buttons}>      
           {/*<Link href="/how-it-works" passHref>
             <a>
