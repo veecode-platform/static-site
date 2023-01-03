@@ -88,14 +88,14 @@
 
             //tablet
             @include for-tablet-only {
-                margin: 1em 0 .5em 0;
+                margin: 22em 0 .5em 0;
             }
 
             //mobile(M)
             @include for-phone-only {
                 @include screenSize(80%, auto);
-                margin: 2em 0 1.5em;
-                padding-top: 22em;
+                margin: 18em 0 1.5em;
+                // padding-top: 22em;
             }
 
             //mobile(S)
@@ -114,12 +114,12 @@
 
                 //mobile(M)
                 @include for-phone-only {
-                    @include typography(7vw, center, 1.3em, 300);
+                    @include typography(4vw, center, 1.3em, 300);
                 }
 
                 //mobile(S)
                 @include for-phoneS-only {
-                    font-size: 11vw;
+                    font-size: 5vw;
                 }
             }
         }
@@ -168,6 +168,7 @@
             //mobile(M)
             @include for-phone-only {
                 @include screenSize(75%, auto);
+                margin: 1em 0 1em;
                 padding: 1em 0 3em 0;
                 flex-wrap: wrap;
                 @include displayFlex(center, center, row); // Change
