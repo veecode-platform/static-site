@@ -8,7 +8,7 @@ import { gtagSafiraDocs } from "../../../../utils/gtag";
 
 const Logo = "assets/home/logo.png";
 const BgDesktop = "assets/home/background.png"; 
-const BgMobile = "assets/home/bgmobile1.webp";
+const BgMobile = "assets/home/background-mobile.png";
 
 const FirstSection = () => {
   return (
