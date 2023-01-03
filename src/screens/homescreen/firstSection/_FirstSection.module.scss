@@ -25,7 +25,7 @@
         &-desktop{
             @include screenSize(100%, 100%);
             object-fit:cover;
-            position: relative;
+            background-position-y: 2rem;
             //mobile(M)
             @include for-phone-only{
                 display:none;

@@ -7,7 +7,7 @@ import TextSlide from "./textSlide";
 import { gtagSafiraDocs } from "../../../../utils/gtag";
 
 const Logo = "assets/home/logo.png";
-const BgDesktop = "assets/home/bg1.webp"; 
+const BgDesktop = "assets/home/background.png"; 
 const BgMobile = "assets/home/bgmobile1.webp";
 
 const FirstSection = () => {
