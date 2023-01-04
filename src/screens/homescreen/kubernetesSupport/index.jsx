@@ -1,19 +1,19 @@
 import dynamic from 'next/dynamic'
-import style from './Kong.module.scss'
-import Data from './kong.json'
+import style from './Kubernetes.module.scss'
+import Data from './kubernetes.json'
 
 const Card = dynamic(()=> import('./card'));
 // const kongLogo = "assets/home/tools/KONG.png"; 
 
-const Kong = () => {
+const Kubernetes = () => {
   return (
     <section className={style.wrapper}>
       <div className={style.title}>
       {/* <img
-            src={kongLogo}
+            src={KubernetesLogo}
             alt="background header - Desktop Version"
             /> */}
-        <h2>Kong Gateway<span> Support</span></h2>
+        <h2>Kubernetes <span>Support</span></h2>
       </div>
       <article className={style.content}>
         {Data.map((item) => (
@@ -24,4 +24,4 @@ const Kong = () => {
   );
 }
 
-export default Kong
+export default Kubernetes

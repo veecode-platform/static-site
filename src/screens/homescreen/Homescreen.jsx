@@ -8,6 +8,7 @@ import Kong from './kongSupport';
 import SupportSection from './supportSection';
 import Tools from './tools';
 import ToolsDetails from './toolsDetails';
+import Kubernetes from './kubernetesSupport';
 
 const Homescreen = () => {
   return (
@@ -15,6 +16,7 @@ const Homescreen = () => {
       <Header fixedHeader showButton />
       <FirstSection />
       <Kong />
+      <Kubernetes />
       <OptimizeYourBusiness />
       <ToolsDetails/>
       <Tools/>
