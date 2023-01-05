@@ -1,6 +1,7 @@
 import style from './AwsSupport.module.scss'
 import Data from './awsSupport.json'
-
+import Link from 'next/link';
+import Button from '../../../components/button/Button.jsx';
 import Card from '../kongSupport/card/index.jsx';
 const awsLogo = "assets/home/text_slide/aws.png"; 
 
@@ -24,6 +25,13 @@ const AwsSupport = () => {
           <Card key={item.id} {...item} />
         ))}
       </article>
+      <div className={style.content__button}>
+        <Link href="/compare-plans" prefetch={false}>
+          <a>
+            <Button>Check the Plans</Button>
+          </a>
+        </Link>
+      </div>
     </section> 
   );
 }
