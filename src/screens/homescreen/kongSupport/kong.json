@@ -3,26 +3,29 @@
         "id":0,
         "image":"/assets/home/icon1.png",
         "title":"How we help you?",
-        "titleItem1":"Kong Gateway installation and support.",
-        "titleItem2":"Configuration for high availability scenarios.",
-        "titleItem3":"Automations for provisioning."
+        "items":[
+            "Kong Gateway installation and support.",
+            "Configuration for high availability scenarios.",
+            "Automations for provisioning."]
     },
     {
         "id":1,
         "image":"/assets/home/icon2.png",
         "title":"What do you achieve?",
-        "titleItem1":"Ease of integration of legacy services.",
-        "titleItem2":"End-to-end automation for APIs (APIOps).",
-        "titleItem3":"Observability of APIs.",
-        "titleItem4":"Security with APIs.",
-        "titleItem5":"Microservices with optimized learning curve."
+        "items":[
+            "Ease of integration of legacy services.",
+            "End-to-end automation for APIs (APIOps).",
+            "Observability of APIs.",
+            "Security with APIs.",
+            "Microservices with optimized learning curve."]
     },
     {
         "id":2,
         "image":"/assets/home/icon3.png",
         "title":"Prerequisites",
-        "titleItem1":"Be looking for a modern API Gateway.",
-        "titleItem2":"Need professional support for your open source choices.",
-        "titleItem3":"You use or intend to use the Kong Gateway."
+        "items":[
+            "Be looking for a modern API Gateway.",
+            "Need professional support for your open source choices.",
+            "You use or intend to use the Kong Gateway."]
     }
 ]
