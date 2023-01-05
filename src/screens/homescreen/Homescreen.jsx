@@ -10,6 +10,7 @@ import Tools from './tools';
 import ToolsDetails from './toolsDetails';
 import Kubernetes from './kubernetesSupport';
 import ApiSupport from './apiSupport';
+import AwsSupport from './awsSupport';
 
 const Homescreen = () => {
   return (
@@ -19,6 +20,7 @@ const Homescreen = () => {
       <Kong />
       <ApiSupport />
       <Kubernetes />
+      <AwsSupport />
       <OptimizeYourBusiness />
       <ToolsDetails/>
       <Tools/>
