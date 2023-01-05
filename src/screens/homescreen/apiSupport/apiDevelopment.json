@@ -3,35 +3,25 @@
         "id":0,
         "image":"/assets/home/icon1.png",
         "title":"How we help you?",
-        "titleItem1":"Title 1",
-        "descItem1":"Ready-made automations for building, testing, and delivering APIs.",
-        "titleItem2":"Title 2",
-        "descItem2":" Project templates and pipelines.",
-        "titleItem3":"Title 3",
-        "descItem3":"Spec-first development with OpenAPI.",
-        "titleItem4":"Title 4",
-        "descItem4":" Standardization for APIOps."
+        "titleItem1":"Ready-made automations for building, testing, and delivering APIs.",
+        "titleItem2":" Project templates and pipelines.",
+        "titleItem3":"Spec-first development with OpenAPI.",
+        "titleItem4":" Standardization for APIOps."
     },
     {
         "id":1,
         "image":"/assets/home/icon2.png",
         "title":"What do you achieve?",
-        "titleItem1":"Title 1",
-        "descItem1":"Speed of API development.",
-        "titleItem2":"Title 2",
-        "descItem2":"Optimization of API delivery pipelines.",
-        "titleItem3":"Title 3",
-        "descItem3":"Process standardization (APIOps).",
-        "titleItem4":"Title 4",
-        "descItem4":"Developers deal with less complexity."
+        "titleItem1":"Speed of API development.",
+        "titleItem2":"Optimization of API delivery pipelines.",
+        "titleItem3":"Process standardization (APIOps).",
+        "titleItem4":"Developers deal with less complexity."
     },
     {
         "id":2,
         "image":"/assets/home/icon3.png",
         "title":"Prerequisites",
-        "titleItem1":"Title 1",
-        "descItem1":"Spec-first strategy in API development.",
-        "titleItem2":"Title 2",
-        "descItem2":"Desire to adopt microservices but avoiding complexity for teams."
+        "titleItem1":"Spec-first strategy in API development.",
+        "titleItem2":"Desire to adopt microservices but avoiding complexity for teams."
     }
 ]
