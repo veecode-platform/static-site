@@ -9,6 +9,7 @@ import SupportSection from './supportSection';
 import Tools from './tools';
 import ToolsDetails from './toolsDetails';
 import Kubernetes from './kubernetesSupport';
+import ApiSupport from './apiSupport';
 
 const Homescreen = () => {
   return (
@@ -16,6 +17,7 @@ const Homescreen = () => {
       <Header fixedHeader showButton />
       <FirstSection />
       <Kong />
+      <ApiSupport />
       <Kubernetes />
       <OptimizeYourBusiness />
       <ToolsDetails/>
