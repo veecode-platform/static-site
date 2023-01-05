@@ -4,7 +4,7 @@
     @include screenSize(100%, auto);
     @include displayFlex(center, center, column);
     background-color: $color3;
-    @include backgroundImage("/assets/home/bg_up.png");
+    @include backgroundImage("/assets/home/bg_try.png");
     position: relative;
     padding: 8em 0 2em 0;
     //mobile(M)
