@@ -3,17 +3,22 @@ import style from './AwsSupport.module.scss'
 import Data from './awsSupport.json'
 
 const Card = dynamic(()=> import('./card'));
-// const kongLogo = "assets/home/tools/KONG.png"; 
+const awsLogo = "assets/home/text_slide/aws.png"; 
 
 const AwsSupport = () => {
   return (
     <section className={style.wrapper}>
-      <div className={style.title}>
-      {/* <img
-            src={AwsSupportLogo}
-            alt="background header - Desktop Version"
-            /> */}
-        <h2>AWS <span>Support</span></h2>
+      <div className={style.container}>
+        <div>
+          <img 
+            className={style.container__logo}
+            src={awsLogo}
+            alt="AWS Support Logo - Desktop Version"
+          />
+        </div>
+        <div className={style.container__title}>
+          <h2>AWS <span>Support</span></h2>
+        </div>
       </div>
       <article className={style.content}>
         {Data.map((item) => (
