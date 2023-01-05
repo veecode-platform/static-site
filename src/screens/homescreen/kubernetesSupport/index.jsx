@@ -1,8 +1,6 @@
-import dynamic from 'next/dynamic'
-import style from './Kubernetes.module.scss'
-import Data from './kubernetes.json'
-
-const Card = dynamic(()=> import('./card'));
+import style from './Kubernetes.module.scss';
+import Data from './kubernetes.json';
+import Card from '../kongSupport/card/index.jsx';
 const kubernetesLogo = "assets/home/text_slide/kubernetes.png"; 
 
 const Kubernetes = () => {

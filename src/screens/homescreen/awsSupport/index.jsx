@@ -1,8 +1,7 @@
-import dynamic from 'next/dynamic'
 import style from './AwsSupport.module.scss'
 import Data from './awsSupport.json'
 
-const Card = dynamic(()=> import('./card'));
+import Card from '../kongSupport/card/index.jsx';
 const awsLogo = "assets/home/text_slide/aws.png"; 
 
 const AwsSupport = () => {

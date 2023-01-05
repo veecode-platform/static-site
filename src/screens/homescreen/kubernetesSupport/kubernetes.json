@@ -3,24 +3,24 @@
         "id":0,
         "image":"/assets/home/icon1.png",
         "title":"How we help you?",
-        "titleItem1":"Automations for cluster provisioning;",
-        "titleItem2":" Production-ready clusters in minutes;",
-        "titleItem3":"Reactive and proactive support of your clusters and their key components.",
-        "titleItem4":" 5x8 or 24x7 models."
+        "items":["Automations for cluster provisioning.",
+        " Production-ready clusters in minutes.",
+        "Reactive and proactive support of your clusters and their key components.",
+        " 5x8 or 24x7 models."]
     },
     {
         "id":1,
         "image":"/assets/home/icon2.png",
         "title":"What do you achieve?",
-        "titleItem1":"Self-Service days for teams.",
-        "titleItem2":"Cloud-native maturity with low investment.",
-        "titleItem3":"Modernizing IT Operations.",
-        "titleItem4":"Reduced cost and operational risk."
+        "items":["Self-Service days for teams.",
+        "Cloud-native maturity with low investment.",
+        "Modernizing IT Operations.",
+        "Reduced cost and operational risk."]
     },
     {
         "id":2,
         "image":"/assets/home/icon3.png",
         "title":"Prerequisites",
-        "titleItem1":"Management committed to operational excellence."
+        "items":["Management committed to operational excellence."]
     }
 ]
