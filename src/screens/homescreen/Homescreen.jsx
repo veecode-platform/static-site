@@ -11,7 +11,7 @@ import ToolsDetails from './toolsDetails';
 import Kubernetes from './kubernetesSupport';
 import ApiSupport from './apiSupport';
 import AwsSupport from './awsSupport';
-
+import Plans from './plans';
 const Homescreen = () => {
   return (
     <main className={style.container}>
@@ -24,6 +24,7 @@ const Homescreen = () => {
       {/* <OptimizeYourBusiness /> */}
       <ToolsDetails/>
       <Tools/>
+      <Plans />
       {/* <Benefits /> */}
       {/* <Banner /> */}
       {/* <SupportSection /> */}
