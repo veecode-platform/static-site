@@ -1,7 +1,7 @@
 import style from '../../../styles/Homescreen.module.scss';
 import { Footer, Header } from '../../components';
 import FirstSection from './firstSection';
-import OptimizeYourBusiness from './optimizesYourBusiness';
+// import OptimizeYourBusiness from './optimizesYourBusiness';
 import Benefits from './benefits';
 import Banner from './banner';
 import Kong from './kongSupport';
@@ -21,12 +21,12 @@ const Homescreen = () => {
       <ApiSupport />
       <Kubernetes />
       <AwsSupport />
-      <OptimizeYourBusiness />
+      {/* <OptimizeYourBusiness /> */}
       <ToolsDetails/>
       <Tools/>
-      <Benefits />
-      <Banner />
-      <SupportSection />
+      {/* <Benefits /> */}
+      {/* <Banner /> */}
+      {/* <SupportSection /> */}
       <Footer />
     </main>
   );
