@@ -50,6 +50,9 @@ const ToolsDetails = () => {
           Discover our <span>Free Tools</span>
         </h2>
       </div>
+      <div className={style.content__subtitle}>
+        <p>With our <span>Support</span> and our <span>Open Source tools</span> your team is free to serve your business areas.</p>
+      </div>
       <article className={style.content__wrapper}>
         {Tools.map(item => (
           <Card 
