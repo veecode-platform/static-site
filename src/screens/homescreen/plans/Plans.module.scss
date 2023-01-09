@@ -63,7 +63,7 @@
         padding-bottom: 3em;
         color: $color4;
         p {
-            @include typography(1.5vw,center,auto,400);
+            @include typography(1.5vw, start,auto,400);
             color: $color2;
         }
 
@@ -125,8 +125,9 @@
         padding-bottom: 0.5em;
 
         &__logo {
-            padding: 0em 1em;
             padding-top: 1.2em;
+            padding-left: 0em;
+            padding-right: 1em;
             width: 15vw;
 
             @include for-tablet-only {
