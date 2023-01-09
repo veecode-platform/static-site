@@ -2,7 +2,6 @@
 
 .card {
     @include screenSize(100%, 100%);
-    background: green;
     @include displayFlex(space-between, center, column);
     overflow-y: auto;
     box-sizing: border-box;
