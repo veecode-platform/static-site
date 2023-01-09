@@ -3,13 +3,24 @@ import Divider from "./divider";
 import style from "./Plans.module.scss";
 import PlansDetails from "./plansDetails";
 import { FaCheck } from "react-icons/fa";
+
+const veeCodeLogo = 'assets/home/logo.png';
 const Plans = () => {
   return (
     <section className={style.content}>
-      <div className={style.content__title}>
-        <h2>
-          <span>Plans</span>
-        </h2>
+      <div className={style.header}>
+        <div>
+          <img 
+            className={style.container__logo}
+            src={veeCodeLogo}
+            alt="Vee Code Logo - Desktop Version"
+          />
+        </div>
+        <div className={style.content__title}>
+          <h2>
+            <span>Plans</span>
+          </h2>
+        </div>
       </div>
       <div className={style.content__subtitle}>
         <p>
