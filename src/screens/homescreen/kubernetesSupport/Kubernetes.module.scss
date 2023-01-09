@@ -3,7 +3,6 @@
 .wrapper {
     @include screenSize(100%, auto);
     @include displayFlex(center, center, column);
-    background-color: $color3;
     @include backgroundImage("/assets/home/bg_try.png");
     position: relative;
     padding: 8em 0 2em 0;
@@ -12,11 +11,12 @@
         padding: 8em 0;
     }
     .container {
-        @include screenSize(40%, auto);
-        @include displayFlex(center, center, row);
+        @include screenSize(50%, auto);
+        @include displayFlex(flex-end, center, row);
+        
         &__logo {
             padding: 3em 1em;
-            width: 6vw;
+            width: 7vw;
 
             @include for-tablet-only {
                 padding: 2em 0 0 0;
@@ -25,8 +25,10 @@
         
 
         &__title {
-            @include screenSize(80%, auto);
+            @include screenSize(70%, auto);
             padding: 3em 1em;
+            // margin-left: 1em;
+
             span {
                 color: $color1;
             }
@@ -45,7 +47,7 @@
                 padding-bottom: 2.5em;
             }
             h2 {
-                @include typography(2.6vw, center, 1.3em, 600);
+                @include typography(2.6vw, start, 1.3em, 600);
                 color: $color2;
 
                 @include for-tablet-only {
@@ -69,26 +71,9 @@
             @include displayFlex(center, center, column);
         }
     }
-    .content {
-        @include screenSize(85%, auto);
-        @include displayFlex(center, center, row);
-        padding: 3em 0 2.5em 0;
-        //tablet
-        @include for-tablet-only {
-            padding: 3em 0 8em 0;
-        }
-        //mobile(M)
-        @include for-phone-only {
-            padding: 1em 0 4em 0;
-            flex-wrap: wrap;
-        }
-        //mobile(S)
-        @include for-phoneS-only {
-            padding: 2em 0 5em 0;
-        }
 
-        &__button {
-            padding: 2em 0;
-        }
+    .cards {
+        @include screenSize(80%, auto);
+        @include displayFlex(center, center, row);
     }
 }

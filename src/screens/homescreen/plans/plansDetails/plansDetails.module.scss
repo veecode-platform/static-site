@@ -1,0 +1,141 @@
+@import "/abstract/functions", "/abstract/responsive", "/abstract/variables";
+
+.planTable {
+  @include screenSize(auto, 100%);
+  @include displayFlex(flex-start, center, column);
+  @include glassEffect();
+  background-color: #F5F5F5;
+  border: 1px solid $color7;
+
+  
+  //mobile(M)
+  @include for-phone-only {
+    height: auto;
+    @include displayFlex(center, center, column);
+  }
+  &__title {
+    @include screenSize(100%, auto);
+    @include displayFlex(center, center, row);
+
+    padding-top: 4em;
+    //viewport
+    @include for-viewport-only {
+      padding-top: 3em;
+    }
+    &-title {
+      color: $color1;
+
+      @include typography(1.8vw, center, auto, 600);
+      //tablet
+      @include for-tablet-only {
+        font-size: 2.5vw;
+      }
+      //mobile(M)
+      @include for-phone-only {
+        font-size: 23px;
+      }
+    }
+  }
+  &__subtitle {
+    @include screenSize(90%, 200px);
+    @include displayFlex(center, center, column);
+    &-subtitle {
+      @include typography(0.95vw, center, auto, 300px);
+      //viewport
+      @include for-viewport-only {
+        font-size: 1.1vw;
+      }
+      //tablet
+      @include for-tablet-only {
+        font-size: 1.35vw;
+      }
+      //mobile(M)
+      @include for-phone-only {
+        font-size: 17px;
+        height: auto;
+      }
+    }
+  }
+  &__button {
+    @include screenSize(80%, auto);
+    @include displayFlex(space-around, center, column);
+    border-top: 1px solid $color1;
+
+    min-height: 16em;
+    padding-bottom: 2em;
+    //viewport
+    @include for-viewport-only {
+      min-height: 13em;
+    }
+    //mobile(M)
+    @include for-phone-only {
+      min-height: auto;
+    }
+    &-label {
+      @include screenSize(100%, auto);
+      @include displayFlex(center, center, column);
+      padding: 1em 0;
+      //mobile(M)
+      @include for-phone-only {
+        padding: 2em 0;
+      }
+      p {
+        @include typography(15px, center, auto, 400);
+        //mobile(M)
+        @include for-phone-only {
+          font-size: 16px;
+        }
+      }
+      strong {
+        @include typography(2.5vw, center, auto, 800);
+        // color: $color7;
+        //mobile(M)
+        @include for-phone-only {
+          font-size: 42px;
+        }
+      }
+      h2 {
+        text-align: center;
+      }
+    }
+  }
+  &__list {
+    border-top: 1px solid $color7;
+
+    @include resetList();
+    @include screenSize(80%, auto);
+    padding: 3em 0;
+    li {
+      @include typography(0.95vw, left, auto, 400);
+      padding: 0.5em 0;
+      //viewport
+      @include for-viewport-only {
+        font-size: 1vw;
+      }
+      //tablet
+      @include for-tablet-only {
+        font-size: 1.5vw;
+      }
+      //mobile(M)
+      @include for-phone-only {
+        font-size: 16px;
+      }
+      span {
+        font-size: 1vw;
+        color: $color5;
+        margin-right: 0.4em;
+        //tablet
+        @include for-tablet-only {
+          font-size: 1.5vw;
+        }
+        //mobile(M)
+        @include for-phone-only {
+          font-size: 16px;
+        }
+      }
+      .sublist {
+        @include resetList();
+      }
+    }
+  }
+}

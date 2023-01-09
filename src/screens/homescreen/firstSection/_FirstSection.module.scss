@@ -17,7 +17,7 @@
     }
 
     &__background {
-        @include screenSize(100vw, 100%);
+        @include screenSize(100vw, 100vh);
         position: absolute;
         z-index: 0;
 
@@ -59,36 +59,29 @@
 
     .content {
         @include screenSize(80%, auto);
-        @include displayFlex(center, flex-start, row);
-        padding: 14vh 0;
+        @include displayFlex(center, center, row);
         z-index: 1;
 
         //tablet
         @include for-tabletS-only {
             padding: 9vh 0;
         }
-
         //mobile(M)
         @include for-phone-only {
             @include displayFlex(center, center, column);
             padding: 13vh 0 0 0;
         }
 
-        // &__logo {
-        //     @include screenSize(20%, auto);
-        //     //mobile(M)
-        //     @include for-phone-only {
-        //         display: none;
-        //     }
-        // }
         &__title {
             @include screenSize(100vw, 60%);
-            margin: 23em 0 1em;
+            margin: 35em 0 1em;
             padding: 1em 0;
-
+            span {
+                color: $color1;
+            }
             //tablet
             @include for-tablet-only {
-                margin: 22em 0 .5em 0;
+                margin: 25em 0 .5em 0;
             }
 
             //mobile(M)
@@ -104,11 +97,11 @@
 
             //mobile(XS)
             @include for-phoneXS-only {
-                margin-top: 5em;
+                margin-top: 10em;
             }
 
             h1 {
-                @include typography(1.8vw, start, 1.4em, 300);
+                @include typography(2vw, start, 1.4em, 400);
                 color: $color2;
 
                 //mobile(M)
@@ -123,54 +116,24 @@
             }
         }
 
-        // &__text {
-        //     @include screenSize(100%, auto);
-        //     margin: 10em 0 1.5em 0;
-        //     //tablet
-        //     @include for-tablet-only{
-        //         margin: 0;
-        //     }
-        //     //mobile(M)
-        //     @include for-phone-only {
-        //         @include screenSize(75%, auto);
-        //         margin: 1.2em 0 1.5em 0;
-        //     }
-        //     //mobile(S)
-        //     @include for-phoneS-only {
-        //         @include screenSize(90%, auto);
-        //     }
-        //     p {
-        //         @include typography(1.1vw, start, 1.5em, 300);
-        //         color: $color2;
-        //         //tablet
-        //         @include for-tablet-only{
-        //             margin-bottom: .5em;
-        //         }
-        //         //mobile(M)
-        //         @include for-phone-only {
-        //             @include typography(2.6vw, center, 1.4em, 300);
-        //         }
-        //         //mobile(S)
-        //         @include for-phoneS-only {
-        //             font-size: 4vw;
-        //         }
-        //     }
-        // }
         &__buttons {
             @include screenSize(20vw, auto);
-            // margin: 22em  1.5em 1.5em;
-            margin: 22.7em 0 1em;
-
             @include displayFlex(space-between, center, row-reverse);
+            margin: 35.9em 0 1em;
             padding: 1em 0;
+
+            @include for-tablet-only {
+                margin: 25em 0 1em;
+            }
 
             //mobile(M)
             @include for-phone-only {
                 @include screenSize(75%, auto);
+                @include displayFlex(center, center, row); // Change
+
                 margin: 1em 0 1em;
                 padding: 1em 0 3em 0;
                 flex-wrap: wrap;
-                @include displayFlex(center, center, row); // Change
             }
 
             //mobile(S)

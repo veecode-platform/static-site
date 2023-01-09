@@ -1,9 +1,10 @@
-@import "../abstract/functions", "../abstract/variables", "../abstract/responsive";
+@import "/abstract/functions","/abstract/responsive","/abstract/variables";
 
 .card {
-    @include screenSize(30%, auto);
-    @include displayFlex(center, center, column);
-    margin: 1%;
+    @include screenSize(100%, 100%);
+    @include displayFlex(space-between, center, column);
+    overflow-y: auto;
+    box-sizing: border-box;
     //mobile(M)
     @include for-phone-only {
         @include screenSize(75%, auto);
@@ -89,7 +90,8 @@
         }
     }
     &__options {
-        @include screenSize(100%, auto);
+        @include screenSize(100%,100%);
+        @include displayFlex(space-evenly, center, column);
         @include resetList();
         background-color: $color2;
         border-radius: 0 0 2em 2em;
@@ -106,8 +108,8 @@
         }
         &-item {
             @include screenSize(100%, auto);
-            @include displayFlex(center, center, column);
-            padding: 0 0.5em;
+            @include displayFlex(space-between, center, column);
+            padding: 0.5em;
 
             &::after {
                 content: "";
@@ -130,7 +132,8 @@
             }
             h3 {
                 @include typography(1.1vw, center, 1.2em, 600);
-                padding: 1em 1.4em;
+                // padding: 1em 1.4em;
+                padding: .8em 2.5em;
                 color: $color11;
                 //tablet
                 @include for-tablet-only {

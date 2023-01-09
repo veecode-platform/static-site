@@ -1,9 +1,9 @@
-import dynamic from 'next/dynamic'
 import style from './Kong.module.scss'
 import Data from './kong.json'
 import Link from 'next/link';
 import Button from '../../../components/button/Button.jsx';
-const Card = dynamic(()=> import('./card'));
+import { SupportCards } from '../../../components';
+
 const kongLogo = "assets/home/text_slide/kong.png"; 
 
 const Kong = () => {
@@ -11,8 +11,8 @@ const Kong = () => {
     <section className={style.wrapper}>
       <div className={style.container}>
         <div>
-          <img 
-            className={style.container__logo}
+          <img
+            className={style.container__logo} 
             src={kongLogo}
             alt="Kong Gateway Support Logo - Desktop Version"
           />
@@ -22,10 +22,8 @@ const Kong = () => {
         </div>
       </div>
       
-      <article className={style.content}>
-        {Data.map((item) => (
-          <Card key={item.id} {...item} />
-        ))}
+      <article className={style.cards}>
+          <SupportCards data={Data} />
       </article>
       <div className={style.content__button}>
         <Link href="/compare-plans" prefetch={false}>
@@ -34,7 +32,7 @@ const Kong = () => {
           </a>
         </Link>
       </div>
-    </section> 
+    </section>
   );
 }
 

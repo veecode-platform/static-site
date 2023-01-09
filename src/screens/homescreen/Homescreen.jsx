@@ -11,10 +11,12 @@ import ToolsDetails from './toolsDetails';
 import Kubernetes from './kubernetesSupport';
 import ApiSupport from './apiSupport';
 import AwsSupport from './awsSupport';
-
+import Plans from './plans';
 const Homescreen = () => {
   return (
     <main className={style.container}>
+      <span className={style.left}></span>
+      <span className={style.right}></span>
       <Header fixedHeader showButton />
       <FirstSection />
       <Kong />
@@ -24,6 +26,7 @@ const Homescreen = () => {
       {/* <OptimizeYourBusiness /> */}
       <ToolsDetails/>
       <Tools/>
+      <Plans />
       {/* <Benefits /> */}
       {/* <Banner /> */}
       {/* <SupportSection /> */}
