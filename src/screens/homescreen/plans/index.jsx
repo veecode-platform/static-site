@@ -4,13 +4,13 @@ import style from "./Plans.module.scss";
 import PlansDetails from "./plansDetails";
 import { FaCheck } from "react-icons/fa";
 
-const veeCodeLogo = 'assets/home/logo.png';
+const veeCodeLogo = 'assets/home/black_logo.png';
 const Plans = () => {
   return (
     <section className={style.content}>
       <div className={style.header}>
         <div>
-          <img 
+          <img
             className={style.header__logo}
             src={veeCodeLogo}
             alt="Vee Code Logo - Desktop Version"
@@ -22,11 +22,12 @@ const Plans = () => {
           </h2>
         </div>
       </div>
-      <div className={style.content__subtitle}>
+      <div className={style.subtitle}>
         <p>
           Lower the barriers for your development team through our specialized support in the stacks you work in.
         </p>
       </div>
+
       <article className={style.plans}>
         {/* STANDARD */}
         <PlansDetails
@@ -59,7 +60,7 @@ const Plans = () => {
           <li><span><FaCheck /></span> DevOps training and documentation</li>
         </PlansDetails>
       </article>
-      <Divider/>
+      <Divider />
     </section>
   );
 };
