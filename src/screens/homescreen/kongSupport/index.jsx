@@ -3,6 +3,7 @@ import Data from './kong.json'
 import Link from 'next/link';
 import Button from '../../../components/button/Button.jsx';
 import { SupportCards } from '../../../components';
+
 const kongLogo = "assets/home/text_slide/kong.png"; 
 
 const Kong = () => {

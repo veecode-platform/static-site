@@ -1,17 +1,17 @@
-/* eslint-disable @next/next/no-img-element */
-import style from "./Kubernetes.module.scss";
-import Data from "./kubernetes.json";
+import style from './Kubernetes.module.scss'
+import Data from './kubernetes.json'
+import Link from 'next/link';
+import Button from '../../../components/button/Button.jsx';
+import { SupportCards } from '../../../components';
+
 const kubernetesLogo = "assets/home/text_slide/kubernetes.png";
-import Link from "next/link";
-import Button from "../../../components/button/Button.jsx";
-import { SupportCards } from "../../../components";
+
 const Kubernetes = () => {
   return (
     <section className={style.wrapper}>
       <div className={style.container}>
-        <div>
+        <div className={style.container__logo}>
           <img
-            className={style.container__logo}
             src={kubernetesLogo}
             alt="Kubernetes Support Logo - Desktop Version"
           />
@@ -22,7 +22,7 @@ const Kubernetes = () => {
           </h2>
         </div>
       </div>
-      <article className={style.content}>
+      <article className={style.cards}>
         <SupportCards 
           data={Data}
           />
