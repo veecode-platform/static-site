@@ -17,7 +17,7 @@
     }
 
     &__background {
-        @include screenSize(100vw, 100%);
+        @include screenSize(100vw, 100vh);
         position: absolute;
         z-index: 0;
 
@@ -59,8 +59,7 @@
 
     .content {
         @include screenSize(80%, auto);
-        @include displayFlex(center, flex-start, row);
-        padding: 14vh 0;
+        @include displayFlex(center, center, row);
         z-index: 1;
 
         //tablet
@@ -75,14 +74,14 @@
 
         &__title {
             @include screenSize(100vw, 60%);
-            margin: 27em 0 1em;
+            margin: 35em 0 1em;
             padding: 1em 0;
             span {
                 color: $color1;
             }
             //tablet
             @include for-tablet-only {
-                margin: 22em 0 .5em 0;
+                margin: 25em 0 .5em 0;
             }
 
             //mobile(M)
@@ -120,11 +119,11 @@
         &__buttons {
             @include screenSize(20vw, auto);
             @include displayFlex(space-between, center, row-reverse);
-            margin: 27.9em 0 1em;
+            margin: 35.9em 0 1em;
             padding: 1em 0;
 
             @include for-tablet-only {
-                margin: 22em 0 1em;
+                margin: 25em 0 1em;
             }
 
             //mobile(M)

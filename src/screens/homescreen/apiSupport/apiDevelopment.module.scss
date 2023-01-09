@@ -12,7 +12,7 @@
     }
     .container {
         @include screenSize(50%, auto);
-        @include displayFlex(end, center, row);
+        @include displayFlex(flex-end, center, row);
         
         &__logo {
             padding: 3em 1em;
@@ -48,7 +48,7 @@
             }
 
             h2 {
-                @include typography(2.6vw, start, 1.3em, 600);
+                @include typography(2.6vw, flex-start, 1.3em, 600);
                 color: $color2;
 
                 @include for-tablet-only {

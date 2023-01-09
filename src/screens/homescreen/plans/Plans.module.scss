@@ -1,27 +1,23 @@
 @import "../abstract/functions", "../abstract/variables", "../abstract/responsive";
 
 .content {
+    @include screenSize(100%,auto);
     @include backgroundImage('/assets/home/bglight.webp');
-
-    @include screenSize(100vw,auto);
     @include displayFlex(flex-start, center, column);
+
     //viewport
     @include for-viewport-only{
-        @include screenSize(80%,auto);
+        @include screenSize(100%,auto);
     }
     //tablet
     @include for-tablet-only{
-        @include screenSize(85%,auto);
+        @include screenSize(100%,auto);
     }
     //mobile(M)
     @include for-phone-only{
-        @include screenSize(85%,auto);
         @include displayFlex(center, center,column);
         gap: 1.5em;
-    }
-    //mobile(S)
-    @include for-phoneS-only{
-        @include screenSize(100%,auto);
+        flex-wrap: wrap;
     }
 
     &__wrapper{
@@ -112,7 +108,7 @@
     }
     .subtitle {
         @include screenSize(80%, auto);
-        @include displayFlex(start, center, row);
+        @include displayFlex(flex-start, center, row);
         // margin: 1em;
         padding-bottom: 3em;
         color: $color4;

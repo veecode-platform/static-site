@@ -20,7 +20,7 @@
 
         &__logo {
             @include screenSize(20%, auto);
-            @include displayFlex(start, center, row);
+            @include displayFlex(flex-start, center, row);
             padding: 1em 2em;
             width: 6%;
 
@@ -87,5 +87,6 @@
     .cards {
         @include screenSize(80%, auto);
         @include displayFlex(center, center, row);
+
     }
 }

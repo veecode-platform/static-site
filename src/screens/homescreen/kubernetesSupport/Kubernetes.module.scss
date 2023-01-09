@@ -12,7 +12,7 @@
     }
     .container {
         @include screenSize(50%, auto);
-        @include displayFlex(end, center, row);
+        @include displayFlex(flex-end, center, row);
         
         &__logo {
             padding: 3em 1em;

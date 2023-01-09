@@ -1,5 +1,4 @@
 /* eslint-disable @next/next/no-img-element */
-import Divider from "./divider";
 import style from "./Plans.module.scss";
 import PlansDetails from "./plansDetails";
 import { FaCheck } from "react-icons/fa";
@@ -60,7 +59,6 @@ const Plans = () => {
           <li><span><FaCheck /></span> DevOps training and documentation</li>
         </PlansDetails>
       </article>
-      <Divider />
     </section>
   );
 };

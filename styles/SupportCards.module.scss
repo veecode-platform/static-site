@@ -15,6 +15,7 @@
     }
     //mobile(M)
     @include for-phone-only {
+        @include displayFlex(center, center, column);
         padding: 1em 0 4em 0;
         flex-wrap: wrap;
     }
