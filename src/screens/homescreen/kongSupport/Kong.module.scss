@@ -3,7 +3,6 @@
 .wrapper {
     @include screenSize(100%, auto);
     @include displayFlex(center, center, column);
-    background-color: $color3;
     @include backgroundImage("/assets/home/bg_try.png");
     position: relative;
     padding: 8em 0 2em 0;
@@ -72,8 +71,12 @@
 
     .content {
         @include screenSize(85%, auto);
-        @include displayFlex(center, center, row);
-        padding: 3em 0 2.5em 0;
+        display: grid;
+        grid-template: 1fr/ repeat(3,1fr);
+        margin: 3em 0 2.5em 0;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 1rem;
         //tablet
         @include for-tablet-only {
             padding: 3em 0 8em 0;

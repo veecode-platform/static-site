@@ -1,17 +1,19 @@
+/* eslint-disable @next/next/no-img-element */
 import style from './AwsSupport.module.scss'
 import Data from './awsSupport.json'
 import Link from 'next/link';
 import Button from '../../../components/button/Button.jsx';
-import Card from '../kongSupport/card/index.jsx';
+import { CardElement } from '../../../components';
 const awsLogo = "assets/home/text_slide/aws.png"; 
 
 const AwsSupport = () => {
   return (
     <section className={style.wrapper}>
       <div className={style.container}>
-        <div>
+        <div 
+         className={style.container__logo}
+         >
           <img 
-            className={style.container__logo}
             src={awsLogo}
             alt="AWS Support Logo - Desktop Version"
           />
@@ -22,7 +24,11 @@ const AwsSupport = () => {
       </div>
       <article className={style.content}>
         {Data.map((item) => (
-          <Card key={item.id} {...item} />
+          <CardElement 
+           key={item.id}
+           title={item.title}
+           items={item.items}
+            />
         ))}
       </article>
       <div className={style.content__button}>
