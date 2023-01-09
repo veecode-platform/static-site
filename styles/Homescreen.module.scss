@@ -4,4 +4,19 @@
   @include screenSize(100vw, auto);
   @include displayFlex(center, center, column);
   background-color: $color3;
+  position: relative;
+  .left{
+      @include screenSize(2px,100%);
+      background: red;
+      position: absolute;
+      left:10%;
+      z-index: 99999999999999999999999999999;
+  }
+  .right{
+    @include screenSize(2px,100%);
+    background: red;
+    position: absolute;
+    right:10%;
+    z-index: 99999999999999999999999999999;
+  }
 }

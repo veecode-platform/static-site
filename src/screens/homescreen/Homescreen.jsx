@@ -15,6 +15,8 @@ import Plans from './plans';
 const Homescreen = () => {
   return (
     <main className={style.container}>
+      <span className={style.left}></span>
+      <span className={style.right}></span>
       <Header fixedHeader showButton />
       <FirstSection />
       <Kong />

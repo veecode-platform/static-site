@@ -70,7 +70,7 @@
     }
 
     .cards {
-        @include screenSize(85%, auto);
+        @include screenSize(80%, auto);
         @include displayFlex(center, center, row);
          }
 }
