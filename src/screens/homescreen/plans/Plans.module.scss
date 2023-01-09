@@ -1,11 +1,10 @@
 @import "../abstract/functions", "../abstract/variables", "../abstract/responsive";
 
 .content {
-    // @include backgroundImage('/assets/home/bglight.webp');
+    @include backgroundImage('/assets/home/bglight.webp');
 
-    @include screenSize(80%,auto);
+    @include screenSize(100vw,auto);
     @include displayFlex(center, center, column);
-
     //viewport
     @include for-viewport-only{
         @include screenSize(80%,auto);
@@ -64,7 +63,7 @@
         color: $color4;
         p {
             @include typography(1.5vw, start,auto,400);
-            color: $color2;
+            color: $color3;
         }
 
         span {
