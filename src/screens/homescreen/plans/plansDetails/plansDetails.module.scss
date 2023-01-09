@@ -5,6 +5,8 @@
   @include displayFlex(flex-start, center, column);
   @include glassEffect();
   background-color: #F5F5F5;
+  border: 1px solid $color7;
+
   
   //mobile(M)
   @include for-phone-only {
@@ -21,9 +23,9 @@
       padding-top: 3em;
     }
     &-title {
-      color: $color3;
+      color: $color1;
 
-      @include typography(1.8vw, center, auto, 500);
+      @include typography(1.8vw, center, auto, 600);
       //tablet
       @include for-tablet-only {
         font-size: 2.5vw;
@@ -57,7 +59,8 @@
   &__button {
     @include screenSize(80%, auto);
     @include displayFlex(space-around, center, column);
-    border-top: 1px solid $color3;
+    border-top: 1px solid $color1;
+
     min-height: 16em;
     padding-bottom: 2em;
     //viewport
@@ -98,6 +101,7 @@
   }
   &__list {
     border-top: 1px solid $color7;
+
     @include resetList();
     @include screenSize(80%, auto);
     padding: 3em 0;
