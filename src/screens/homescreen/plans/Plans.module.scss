@@ -25,38 +25,38 @@
         @include screenSize(100%,auto);
     }
 
-    &__title{
-            @include screenSize(100%, auto);
-            padding-bottom: 0.5em;
-            span{
-                color: $color1;
-            }
-            //tablet
-            @include for-tablet-only {
-                @include screenSize(80%, auto);
-                padding-bottom: 1em;
-            }
-            //mobile(M)
-            @include for-phone-only {
-                @include screenSize(50%, auto);
-            }
-            //mobile(S)
-            @include for-phoneS-only {
-                @include screenSize(70%, auto);
-            }
-            h2 {
-                @include typography(2.8vw, center, 1.3em, 600);
-                color: $color2;
-                //mobile(M)
-                @include for-phone-only {
-                    font-size: 7vw;
-                }
-                //mobile(S)
-                @include for-phoneS-only {
-                    font-size: 11vw;
-                }
-        }
-    }
+    // &__title{
+    //         @include screenSize(100%, auto);
+    //         padding-bottom: 0.5em;
+    //         span{
+    //             color: $color1;
+    //         }
+    //         //tablet
+    //         @include for-tablet-only {
+    //             @include screenSize(80%, auto);
+    //             padding-bottom: 1em;
+    //         }
+    //         //mobile(M)
+    //         @include for-phone-only {
+    //             @include screenSize(50%, auto);
+    //         }
+    //         //mobile(S)
+    //         @include for-phoneS-only {
+    //             @include screenSize(70%, auto);
+    //         }
+    //         h2 {
+    //             @include typography(2.8vw, center, 1.3em, 600);
+    //             color: $color2;
+    //             //mobile(M)
+    //             @include for-phone-only {
+    //                 font-size: 7vw;
+    //             }
+    //             //mobile(S)
+    //             @include for-phoneS-only {
+    //                 font-size: 11vw;
+    //             }
+    //     }
+    // }
     &__subtitle {
         @include screenSize(80%, auto);
         margin: 1em;
@@ -118,5 +118,52 @@
         @include for-phoneS-only{
             @include screenSize(100%,auto);
         }
+    }
+    .header {
+        @include screenSize(80%,auto);
+        @include displayFlex(center, center, row);
+        padding-bottom: 0.5em;
+
+        &__logo {
+            padding: 0em 1em;
+            padding-top: 1.2em;
+            width: 15vw;
+
+            @include for-tablet-only {
+                padding: 2em 0 0 0;
+            }
+        }
+        &__title{
+            @include screenSize(100%, auto);
+            padding: 2em 0em;
+            span{
+                color: $color1;
+            }
+            //tablet
+            @include for-tablet-only {
+                @include screenSize(80%, auto);
+                padding-bottom: 1em;
+            }
+            //mobile(M)
+            @include for-phone-only {
+                @include screenSize(50%, auto);
+            }
+            //mobile(S)
+            @include for-phoneS-only {
+                @include screenSize(70%, auto);
+            }
+            h2 {
+                @include typography(2.8vw, start, 1.3em, 600);
+                color: $color2;
+                //mobile(M)
+                @include for-phone-only {
+                    font-size: 7vw;
+                }
+                //mobile(S)
+                @include for-phoneS-only {
+                    font-size: 11vw;
+                }
+        }
+    }
     }
 }

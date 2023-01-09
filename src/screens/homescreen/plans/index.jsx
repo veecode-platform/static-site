@@ -11,12 +11,12 @@ const Plans = () => {
       <div className={style.header}>
         <div>
           <img 
-            className={style.container__logo}
+            className={style.header__logo}
             src={veeCodeLogo}
             alt="Vee Code Logo - Desktop Version"
           />
         </div>
-        <div className={style.content__title}>
+        <div className={style.header__title}>
           <h2>
             <span>Plans</span>
           </h2>
