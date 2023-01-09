@@ -1,9 +1,6 @@
-import style from "../../../styles/CardElement.module.scss";
+import style from "./CardElement.module.scss";
 
 const CardElement = ({ title, items }) => {
-
-    console.log(items);
-
     return (
         <div className={style.card}>
             <div className={style.card__title}>

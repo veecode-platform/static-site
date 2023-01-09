@@ -5,7 +5,7 @@ import Data from './kong.json'
 import Link from 'next/link';
 import Button from '../../../components/button/Button.jsx';
 // const Card = dynamic(()=> import('./card'));
-import { CardElement } from '../../../components';
+import { CardElement, SupportCards } from '../../../components';
 const kongLogo = "assets/home/text_slide/kong.png"; 
 
 const Kong = () => {
@@ -23,10 +23,8 @@ const Kong = () => {
         </div>
       </div>
       
-      <article className={style.content}>
-        {Data.map((item) => (
-          <CardElement key={item.id} title={item.title} items={item.items}/>
-        ))}
+      <article className={style.cards}>
+          <SupportCards data={Data} />
       </article>
       <div className={style.content__button}>
         <Link href="/compare-plans" prefetch={false}>

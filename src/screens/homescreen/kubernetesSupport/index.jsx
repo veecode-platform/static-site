@@ -1,10 +1,10 @@
 /* eslint-disable @next/next/no-img-element */
 import style from "./Kubernetes.module.scss";
 import Data from "./kubernetes.json";
-import { CardElement } from "../../../components";
 const kubernetesLogo = "assets/home/text_slide/kubernetes.png";
 import Link from "next/link";
 import Button from "../../../components/button/Button.jsx";
+import { SupportCards } from "../../../components";
 const Kubernetes = () => {
   return (
     <section className={style.wrapper}>
@@ -23,13 +23,9 @@ const Kubernetes = () => {
         </div>
       </div>
       <article className={style.content}>
-        {Data.map((item) => (
-          <CardElement
-           key={item.id}
-           title={item.title}
-           items={item.items}
-            />
-        ))}
+        <SupportCards 
+          data={Data}
+          />
       </article>
       <div className={style.content__button}>
         <Link
