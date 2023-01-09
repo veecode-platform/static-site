@@ -23,13 +23,9 @@ const Homescreen = () => {
       <ApiSupport />
       <Kubernetes />
       <AwsSupport />
-      {/* <OptimizeYourBusiness /> */}
+      <Plans />
       <ToolsDetails/>
       <Tools/>
-      <Plans />
-      {/* <Benefits /> */}
-      {/* <Banner /> */}
-      {/* <SupportSection /> */}
       <Footer />
     </main>
   );
