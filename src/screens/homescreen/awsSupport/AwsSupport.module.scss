@@ -11,14 +11,18 @@
     @include for-phone-only {
         padding: 8em 0;
     }
-
+    .img {
+        width: 6vw;
+    }
     .container {
         @include screenSize(50%, auto);
-        @include displayFlex(end, center, row);
+        @include displayFlex(center, center, row);
 
         &__logo {
-            padding: 2em 0em;
-            width: 4vw;
+            @include screenSize(20%, auto);
+            @include displayFlex(start, center, row);
+            padding: 1em 2em;
+            width: 6%;
 
             @include for-tablet-only {
                 padding: 2em 0 0 0;
@@ -30,6 +34,7 @@
             @include screenSize(70%, auto);
             padding: 3em 1em;
             margin-left: 1em;
+            
             span {
                 color: $color1;
             }
@@ -52,7 +57,7 @@
             }
 
             h2 {
-                @include typography(2.6vw, start, 1.3em, 600);
+                @include typography(2.6vw, center, 1.3em, 600);
                 color: $color2;
 
                 @include for-tablet-only {

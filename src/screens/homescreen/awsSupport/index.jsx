@@ -10,9 +10,9 @@ const AwsSupport = () => {
   return (
     <section className={style.wrapper}>
       <div className={style.container}>
-        <div>
-          <img
-            className={style.container__logo} 
+        <div className={style.container__logo}>
+          <img 
+            className={style.img}
             src={awsLogo}
             alt="AWS Support Logo - Desktop Version"
           />

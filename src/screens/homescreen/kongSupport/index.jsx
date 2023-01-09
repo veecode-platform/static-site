@@ -10,8 +10,9 @@ const Kong = () => {
   return (
     <section className={style.wrapper}>
       <div className={style.container}>
-        <div className={style.container__logo}>
-          <img 
+        <div>
+          <img
+            className={style.container__logo} 
             src={kongLogo}
             alt="Kong Gateway Support Logo - Desktop Version"
           />

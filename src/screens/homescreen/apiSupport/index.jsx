@@ -11,8 +11,9 @@ const ApiSupport = () => {
   return (
     <section className={style.wrapper}>
       <div className={style.container}>
-        <div className={style.container__logo}>
+        <div>
           <img 
+            className={style.container__logo}
             src={apiDevelopmentLogo}
             alt="Api Development Support Logo - Desktop Version"
           />
