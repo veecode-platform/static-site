@@ -3,7 +3,7 @@
 .wrapper {
     @include screenSize(100%, auto);
     @include displayFlex(center, center, column);
-    // @include backgroundImage("/assets/home/bg_try.png");
+    @include backgroundImage("/assets/home/black.png");
     position: relative;
     padding: 8em 0 2em 0;
     //mobile(M)
@@ -76,5 +76,8 @@
     .cards {
         @include screenSize(80%, auto);
         @include displayFlex(center, center, row);
-         }
+    }
+    .button {
+        margin: 2em 0;
+    }
 }

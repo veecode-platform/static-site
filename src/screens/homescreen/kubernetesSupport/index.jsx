@@ -27,7 +27,7 @@ const Kubernetes = () => {
           data={Data}
           />
       </article>
-      <div className={style.content__button}>
+      <div className={style.button}>
         <Link
          href="#plans"
          prefetch={false}>
