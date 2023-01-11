@@ -29,7 +29,7 @@ const AwsSupport = () => {
       <div className={style.content__button}>
         <Link href="/compare-plans" prefetch={false}>
           <a>
-            <Button>Check the Plans</Button>
+            <Button>Check Plans</Button>
           </a>
         </Link>
       </div>
