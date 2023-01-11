@@ -63,8 +63,12 @@
         @include displayFlex(center, center, row);
         padding-bottom: 0.5em;
 
+        @include for-phone-only {
+            @include displayFlex(center, center, column);
+        }
+
         &__logo {
-            padding-top: 1.2em;
+            padding-top: .9em;
             padding-left: 0em;
             padding-right: 1em;
             width: 15vw;
@@ -73,10 +77,11 @@
                 padding: 2em 0 0 0;
             }
         }
+
         &__title{
             @include screenSize(100%, auto);
             padding: 2em 0em;
-            span{
+            span {
                 color: $color1;
             }
             //tablet
@@ -84,20 +89,26 @@
                 @include screenSize(80%, auto);
                 padding-bottom: 1em;
             }
+
             //mobile(M)
             @include for-phone-only {
                 @include screenSize(50%, auto);
+                padding: 0.1em;
             }
+
             //mobile(S)
             @include for-phoneS-only {
                 @include screenSize(70%, auto);
             }
+
             h2 {
                 @include typography(2.9vw, start, 1.3em, 700);
                 color: $color2;
+                
                 //mobile(M)
                 @include for-phone-only {
-                    font-size: 7vw;
+                    // font-size: 7vw;
+                    @include typography(8vw, center, 1.3em, 700);
                 }
                 //mobile(S)
                 @include for-phoneS-only {
@@ -112,24 +123,30 @@
         // margin: 1em;
         padding-bottom: 3em;
         color: $color4;
+
+        @include for-phone-only{
+            padding: 2em 1em;
+        }
+
         p {
-            @include typography(1.8vw, start, 1.3em, 400);
+            @include typography(1.8vw, start, 1.3em, 500);
             color: $color3;
+
+                //mobile
+            @include for-phone-only{
+                @include typography(4vw, center, 1.3em, 500);
+            }
+            //mobile(S)
+            @include for-phoneS-only{
+                font-size: 18px;
+            }
         }
 
         span {
             font-weight: 700;
             color: $color1;
         }
-        //mobile
-        @include for-phone-only{
-            font-size: 3vw;
-            padding: 0 1em;
-        }
-        //mobile(S)
-        @include for-phoneS-only{
-            font-size: 18px;
-        }
+        
     }
 
 }
