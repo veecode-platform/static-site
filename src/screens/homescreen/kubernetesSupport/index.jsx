@@ -29,7 +29,7 @@ const Kubernetes = () => {
       </article>
       <div className={style.content__button}>
         <Link
-         href="/compare-plans"
+         href="#Plans"
          prefetch={false}>
           <a>
             <Button>Check Plans</Button>
