@@ -59,7 +59,7 @@
 
     .content {
         @include screenSize(80%, auto);
-        @include displayFlex(center, center, row);
+        @include displayFlex(center, center, column);
         z-index: 1;
 
         //tablet
@@ -73,11 +73,22 @@
         }
 
         &__title {
-            @include screenSize(100vw, 60%);
-            margin: 35em 0 1em;
+            @include screenSize(100%, 60%);
+            margin: 25em 0 1em;
             padding: 1em 0;
             span {
+                @include typography(2.2vw, center, 1.4em, 500);
                 color: $color1;
+
+                //mobile(M)
+                @include for-phone-only {
+                    @include typography(4vw, center, 1.3em, 300);
+                }
+
+                //mobile(S)
+                @include for-phoneS-only {
+                    font-size: 5vw;
+                }
             }
             //tablet
             @include for-tablet-only {
@@ -101,7 +112,7 @@
             }
 
             h1 {
-                @include typography(2vw, start, 1.4em, 400);
+                @include typography(2.1vw, center, 1.4em, 500);
                 color: $color2;
 
                 //mobile(M)
@@ -118,12 +129,11 @@
 
         &__buttons {
             @include screenSize(20vw, auto);
-            @include displayFlex(space-between, center, row-reverse);
-            margin: 35.9em 0 1em;
+            @include displayFlex(center, center, row-reverse);
             padding: 1em 0;
 
             @include for-tablet-only {
-                margin: 25em 0 1em;
+                // margin: 25em 0 1em;
             }
 
             //mobile(M)

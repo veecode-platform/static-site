@@ -2,11 +2,12 @@
 import style from "./Plans.module.scss";
 import PlansDetails from "./plansDetails";
 import { FaCheck } from "react-icons/fa";
-
+import Divider from "./divider";
 const veeCodeLogo = 'assets/home/black_logo.png';
+
 const Plans = () => {
   return (
-    <section className={style.content}>
+    <section className={style.content} id="plans">
       <div className={style.header}>
         <div>
           <img
@@ -23,7 +24,7 @@ const Plans = () => {
       </div>
       <div className={style.subtitle}>
         <p>
-          Lower the barriers for your development team through our specialized support in the stacks you work in.
+          <strong>Lower the barriers</strong> for your development team through our specialized support in the stacks you work in.
         </p>
       </div>
 
@@ -36,7 +37,7 @@ const Plans = () => {
           label="Start at"
           emphasis="$ 1990"
           text="per Month"
-          buttonLabel="Sign the plan"
+          buttonLabel="Sign Plan"
         >
           <li><span><FaCheck /></span>8x5 support</li>
           <li><span><FaCheck /></span>One business day SLA</li>

@@ -26,10 +26,10 @@ const AwsSupport = () => {
           data={Data}
           />
       </article>
-      <div className={style.button}>
-        <Link href="/compare-plans" prefetch={false}>
+      <div className={style.content__button}>
+        <Link href="#plans" prefetch={false}>
           <a>
-            <Button>Check the Plans</Button>
+            <Button>Check Plans</Button>
           </a>
         </Link>
       </div>

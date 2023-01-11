@@ -29,10 +29,10 @@ const Kubernetes = () => {
       </article>
       <div className={style.button}>
         <Link
-         href="/compare-plans"
+         href="#plans"
          prefetch={false}>
           <a>
-            <Button>Check the Plans</Button>
+            <Button>Check Plans</Button>
           </a>
         </Link>
       </div>

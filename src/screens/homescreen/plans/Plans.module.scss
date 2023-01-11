@@ -33,6 +33,97 @@
             gap:0;
         }
     }
+    .header {
+        @include screenSize(80%,auto);
+        @include displayFlex(center, center, row);
+        padding-bottom: 0.5em;
+
+        @include for-phone-only {
+            @include displayFlex(center, center, column);
+        }
+
+        &__logo {
+            padding-top: .9em;
+            padding-left: 0em;
+            padding-right: 1em;
+            width: 15vw;
+
+            @include for-tablet-only {
+                padding: 2em 0 0 0;
+            }
+        }
+
+        &__title{
+            @include screenSize(100%, auto);
+            padding: 2em 0em;
+            span {
+                color: $color1;
+            }
+            //tablet
+            @include for-tablet-only {
+                @include screenSize(80%, auto);
+                padding-bottom: 1em;
+            }
+
+            //mobile(M)
+            @include for-phone-only {
+                @include screenSize(50%, auto);
+                padding: 0.1em;
+            }
+
+            //mobile(S)
+            @include for-phoneS-only {
+                @include screenSize(70%, auto);
+            }
+
+            h2 {
+                @include typography(2.9vw, start, 1.3em, 700);
+                color: $color2;
+                
+                //mobile(M)
+                @include for-phone-only {
+                    // font-size: 7vw;
+                    @include typography(8vw, center, 1.3em, 700);
+                }
+                //mobile(S)
+                @include for-phoneS-only {
+                    font-size: 11vw;
+                }
+            }
+        }
+    }
+    .subtitle {
+        @include screenSize(80%, auto);
+        @include displayFlex(flex-start, center, row);
+        // margin: 1em;
+        padding-bottom: 3em;
+        color: $color4;
+
+        @include for-phone-only{
+            padding: 2em 1em;
+        }
+
+        p {
+            @include typography(1.8vw, start, 1.3em, 500);
+            color: $color3;
+
+                //mobile
+            @include for-phone-only{
+                @include typography(4vw, center, 1.3em, 500);
+            }
+            //mobile(S)
+            @include for-phoneS-only{
+                font-size: 18px;
+            }
+        }
+
+        span {
+            font-weight: 700;
+            color: $color1;
+        }
+        
+    }
+
     .plans {
         @include screenSize(75%,auto);
         display: grid;
@@ -56,79 +147,6 @@
         //mobile(S)
         @include for-phoneS-only{
             @include screenSize(100%,auto);
-        }
-    }
-    .header {
-        @include screenSize(80%,auto);
-        @include displayFlex(center, center, row);
-        padding-bottom: 0.5em;
-
-        &__logo {
-            padding-top: 1.2em;
-            padding-left: 0em;
-            padding-right: 1em;
-            width: 15vw;
-
-            @include for-tablet-only {
-                padding: 2em 0 0 0;
-            }
-        }
-        &__title{
-            @include screenSize(100%, auto);
-            padding: 2em 0em;
-            span{
-                color: $color1;
-            }
-            //tablet
-            @include for-tablet-only {
-                @include screenSize(80%, auto);
-                padding-bottom: 1em;
-            }
-            //mobile(M)
-            @include for-phone-only {
-                @include screenSize(50%, auto);
-            }
-            //mobile(S)
-            @include for-phoneS-only {
-                @include screenSize(70%, auto);
-            }
-            h2 {
-                @include typography(2.9vw, start, 1.3em, 700);
-                color: $color2;
-                //mobile(M)
-                @include for-phone-only {
-                    font-size: 7vw;
-                }
-                //mobile(S)
-                @include for-phoneS-only {
-                    font-size: 11vw;
-                }
-            }
-        }
-    }
-    .subtitle {
-        @include screenSize(80%, auto);
-        @include displayFlex(flex-start, center, row);
-        // margin: 1em;
-        padding-bottom: 3em;
-        color: $color4;
-        p {
-            @include typography(1.8vw, start, 1.3em, 400);
-            color: $color3;
-        }
-
-        span {
-            font-weight: 700;
-            color: $color1;
-        }
-        //mobile
-        @include for-phone-only{
-            font-size: 3vw;
-            padding: 0 1em;
-        }
-        //mobile(S)
-        @include for-phoneS-only{
-            font-size: 18px;
         }
     }
 
