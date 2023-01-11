@@ -2,7 +2,7 @@
 import style from "./_FirstSection.module.scss";
 import { Button } from "../../../components";
 import Link from "next/link";
-const BgDesktop = "assets/home/bg4.png"; 
+const BgDesktop = "assets/home/backy.webp"; 
 const BgMobile = "assets/home/background-mobile.png";
 
 const FirstSection = () => {
@@ -24,11 +24,11 @@ const FirstSection = () => {
       <article className={style.content}>
         <div className={style.content__title}>
           <h1>
-            Get expert support from the best solutions on the market in just a few clicks at an affordable price.
+            Get <span><strong>expert support</strong></span> from the <strong>best solutions</strong> on the market in just a few clicks at an <strong>affordable price</strong>.
           </h1>
         </div>
         <div className={style.content__buttons}>      
-          <Link href="/support" passHref>
+          <Link href="#Plans" passHref>
             <a>
               <Button>Learn More</Button>
             </a>
