@@ -28,7 +28,7 @@ const ApiSupport = () => {
          />
       </article>
       <div className={style.content__button}>
-        <Link href="#Plans" prefetch={false}>
+        <Link href="#plans" prefetch={false}>
           <a>
             <Button>Check Plans</Button>
           </a>

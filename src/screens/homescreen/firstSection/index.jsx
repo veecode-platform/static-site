@@ -28,7 +28,7 @@ const FirstSection = () => {
           </h1>
         </div>
         <div className={style.content__buttons}>      
-          <Link href="#Plans" passHref>
+          <Link href="#plans" passHref>
             <a>
               <Button>Learn More</Button>
             </a>

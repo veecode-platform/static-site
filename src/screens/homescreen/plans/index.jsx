@@ -6,7 +6,7 @@ import { FaCheck } from "react-icons/fa";
 const veeCodeLogo = 'assets/home/black_logo.png';
 const Plans = () => {
   return (
-    <section className={style.content} id="Plans">
+    <section className={style.content} id="plans">
       <div className={style.header}>
         <div>
           <img
