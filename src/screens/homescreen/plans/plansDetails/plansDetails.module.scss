@@ -18,21 +18,23 @@
     @include displayFlex(center, center, row);
 
     padding-top: 4em;
+    
     //viewport
     @include for-viewport-only {
       padding-top: 3em;
     }
+
     &-title {
       color: $color1;
 
-      @include typography(1.8vw, center, auto, 600);
+      @include typography(2vw, center, auto, 700);
       //tablet
       @include for-tablet-only {
-        font-size: 2.5vw;
+        font-size: 3vw;
       }
       //mobile(M)
       @include for-phone-only {
-        font-size: 23px;
+        font-size: 7vw;
       }
     }
   }
@@ -40,7 +42,7 @@
     @include screenSize(90%, 200px);
     @include displayFlex(center, center, column);
     &-subtitle {
-      @include typography(0.95vw, center, auto, 300px);
+      @include typography(1.3vw, center, auto, 300px);
       //viewport
       @include for-viewport-only {
         font-size: 1.1vw;
@@ -106,7 +108,7 @@
     @include screenSize(80%, auto);
     padding: 3em 0;
     li {
-      @include typography(0.95vw, left, auto, 400);
+      @include typography(1.3vw, left, auto, 400);
       padding: 0.5em 0;
       //viewport
       @include for-viewport-only {

@@ -37,7 +37,7 @@ const Plans = () => {
           label="Start at"
           emphasis="$ 1990"
           text="per Month"
-          buttonLabel="Sign the plan"
+          buttonLabel="Sign Plan"
         >
           <li><span><FaCheck /></span>8x5 support</li>
           <li><span><FaCheck /></span>One business day SLA</li>

@@ -33,31 +33,6 @@
             gap:0;
         }
     }
-    .plans {
-        @include screenSize(75%,auto);
-        display: grid;
-        grid-template: 1fr / repeat(2,1fr);
-        margin: 2.5em auto;
-        gap: 2em;
-        //viewport
-        @include for-viewport-only{
-            @include screenSize(80%,auto);
-        }
-        //tablet
-        @include for-tablet-only{
-            @include screenSize(85%,auto);
-        }
-        //mobile(M)
-        @include for-phone-only{
-            @include screenSize(85%,auto);
-            @include displayFlex(center, center,column);
-            gap: 1.5em;
-        }
-        //mobile(S)
-        @include for-phoneS-only{
-            @include screenSize(100%,auto);
-        }
-    }
     .header {
         @include screenSize(80%,auto);
         @include displayFlex(center, center, row);
@@ -147,6 +122,32 @@
             color: $color1;
         }
         
+    }
+
+    .plans {
+        @include screenSize(75%,auto);
+        display: grid;
+        grid-template: 1fr / repeat(2,1fr);
+        margin: 2.5em auto;
+        gap: 2em;
+        //viewport
+        @include for-viewport-only{
+            @include screenSize(80%,auto);
+        }
+        //tablet
+        @include for-tablet-only{
+            @include screenSize(85%,auto);
+        }
+        //mobile(M)
+        @include for-phone-only{
+            @include screenSize(85%,auto);
+            @include displayFlex(center, center,column);
+            gap: 1.5em;
+        }
+        //mobile(S)
+        @include for-phoneS-only{
+            @include screenSize(100%,auto);
+        }
     }
 
 }
