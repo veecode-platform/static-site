@@ -4,10 +4,12 @@ import SupportSection from "./supportSection";
 import data from "./data.json";
 import { Footer, Header } from "../../components";
 import Plans from "./plans";
+import FirstSection from "./firstSection";
 
 const SupportPlans = () => {
   return (
     <main className={style.wrapper}>
+      <FirstSection />
       <Header fixedHeader showButton />
       {/* FIRST SECTION */}
       {data.map((item) => {
