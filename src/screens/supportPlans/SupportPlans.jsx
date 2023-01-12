@@ -9,7 +9,7 @@ const SupportPlans = () => {
     className={style.wrapper}
      >
       {
-        data.map((item,index)=>{
+        data.map((item)=>{
           return(
             <SupportSection
               key={item.title}
