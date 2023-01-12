@@ -13,14 +13,14 @@
     }
     &__title{
             @include screenSize(100%, auto);
-            padding-bottom: 6em;
+            padding-bottom: 3em;
             span{
                 color: $color1;
             }
             //tablet
             @include for-tablet-only {
                 @include screenSize(80%, auto);
-                padding-bottom: 5em;
+                padding-bottom: 1.5em;
             }
             //mobile(M)
             @include for-phone-only {
@@ -43,6 +43,43 @@
                 }
         }
     }
+    
+    &__subtitle {
+        @include screenSize(80%, auto);
+        margin: 1em;
+        padding-bottom: 3em;
+        
+        p {
+            @include typography(1.5vw,center,auto,400);
+            color: $color3;
+
+            @include for-phone-only{
+                @include typography(3vw,center,auto,400);
+                padding-bottom: 1.5em;
+            }
+        }
+
+        span {
+            font-weight: 600;
+            color: $color1;
+        }
+
+        //tablet
+        @include for-tablet-only{
+            padding-bottom: 1.5em;
+        }
+
+        //mobile
+        @include for-phone-only{
+            font-size: 3vw;
+            padding: 0 1em;
+        }
+        //mobile(S)
+        @include for-phoneS-only{
+            font-size: 18px;
+        }
+    }
+
     &__wrapper{
         @include screenSize(80%,auto);
         display: grid;
