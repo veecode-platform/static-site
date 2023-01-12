@@ -3,6 +3,7 @@ import style from "../../../styles/SupportPlans.module.scss";
 import SupportSection from "./supportSection";
 import data from "./data.json";
 import { Footer, Header } from "../../components";
+import Plans from "./plans";
 
 const SupportPlans = () => {
   return (
@@ -21,6 +22,7 @@ const SupportPlans = () => {
           />
         );
       })}
+      <Plans />
       <Footer />
     </main>
   );
