@@ -4,7 +4,7 @@ import { Button } from "../../../components";
 import Link from "next/link";
 import Image from "next/image";
 
-const BgDesktop = "assets/support/bg1.webp";
+const BgDesktop = "/assets/support/bg1.webp";
 const BgMobile = "assets/home/background-mobile.png";
 const Logo = "/assets/home/logo.avif";
 const animation = "/assets/support/platform_animation.gif";
