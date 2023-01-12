@@ -4,7 +4,7 @@ import { FaFacebookSquare, FaInstagram, FaLinkedin, FaTwitterSquare } from "reac
 import Link from "next/link";
 import { gtagEvents } from "../../../utils/gtag";
 
-const Logo = "/assets/home/logo.png";
+const Logo = "/assets/home/logo.avif";
 
 const Footer = () => {
   return (

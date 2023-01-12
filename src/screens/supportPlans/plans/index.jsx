@@ -3,7 +3,7 @@ import style from "./Plans.module.scss";
 import PlansDetails from "./plansDetails";
 import { FaCheck } from "react-icons/fa";
 
-const veeCodeLogo = 'assets/home/black_logo.png';
+const veeCodeLogo = '/assets/home/black_logo.avif';
 
 const Plans = () => {
     return (
