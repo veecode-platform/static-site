@@ -85,7 +85,7 @@
 
             &__logo {
                 @include screenSize(50%, auto);
-
+                width: 15vw;
                 //mobile(M)
                 @include for-phone-only {
                     display: none;
