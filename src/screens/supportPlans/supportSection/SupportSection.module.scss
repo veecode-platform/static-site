@@ -39,7 +39,7 @@
             }
             //mobile(M)
             @include for-phone-only {
-                @include typography(2.6vw, center, 1.3em, 600);
+                @include typography(2vw, center, 1.3em, 600);
                 font-size: 7vw;
             }
             //mobile(S)
@@ -67,6 +67,11 @@
             // }
     
             
+           }
+
+           @include for-phone-only{
+            @include displayFlex(center, center, column);
+
            }
         }
 
