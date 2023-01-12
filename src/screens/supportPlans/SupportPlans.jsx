@@ -2,12 +2,14 @@ import React from 'react';
 import style from '../../../styles/SupportPlans.module.scss';
 import SupportSection from './supportSection';
 import data from './data.json';
+import { Footer, Header } from '../../components';
 
 const SupportPlans = () => {
   return (
-    <section 
+    <main 
     className={style.wrapper}
      >
+      <Header fixedHeader showButton/>
       {
         data.map((item)=>{
           return(
@@ -22,7 +24,8 @@ const SupportPlans = () => {
           )
         })
       }
-  </section>
+      <Footer/>
+  </main>
   )
 }
 
