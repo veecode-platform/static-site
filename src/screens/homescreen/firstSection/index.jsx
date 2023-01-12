@@ -2,8 +2,13 @@
 import style from "./_FirstSection.module.scss";
 import { Button } from "../../../components";
 import Link from "next/link";
-const BgDesktop = "assets/home/backy.webp"; 
-const BgMobile = "assets/home/background-mobile.png";
+import Image from "next/image";
+import TextSlide from "./textSlide";
+import { gtagSafiraDocs } from "../../../../utils/gtag";
+
+const Logo = "assets/home/logo.avif";
+const BgDesktop = "assets/home/bg1.webp"; 
+const BgMobile = "assets/home/bgmobile1.webp";
 
 const FirstSection = () => {
   return (
@@ -22,13 +27,41 @@ const FirstSection = () => {
               />
       </div>
       <article className={style.content}>
+        <div className={style.content__logo}>
+            <Image
+                layout="responsive"
+                src={Logo} 
+                alt="Settings Image"
+                width='307px'
+                height='96px'
+                unoptimized
+                priority={true}
+                />
+        </div>
         <div className={style.content__title}>
           <h1>
-            Get <span><strong>expert support</strong></span> from the <strong>best solutions</strong> on the market in just a few clicks at an <strong>affordable price</strong>.
+          We provide <strong>instant support</strong> on
+            <TextSlide />
           </h1>
         </div>
+        <div className={style.content__text}>
+          <p>
+            Your transition to the cloud doesn&lsquo;t have to be
+            time-consuming, expensive, or lonely. Count on our{" "}
+            <strong>professional support</strong> and{" "}
+            <strong>free tools</strong> to overcome your challenges quickly 
+            and easily! 
+            {/* incorporating: */}
+          </p>
+        </div>
         <div className={style.content__buttons}>      
-          <Link href="#plans" passHref>
+          {/*<Link href="/how-it-works" passHref>
+            <a>
+              <Button>How it Works</Button>
+            </a>
+          </Link>*/}
+
+          <Link href="/support" passHref>
             <a>
               <Button>Learn More</Button>
             </a>

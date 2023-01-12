@@ -1,0 +1,102 @@
+@import "/abstract/functions", "/abstract/variables", "/abstract/responsive";
+
+.wrapper {
+    @include screenSize(100%, auto);
+    @include displayFlex(center, center, column);
+    @include backgroundImage("/assets/home/black.png");
+    position: relative;
+    padding: 8em 0 2em 0;
+
+    //mobile(M)
+    @include for-phone-only {
+        padding: 8em 0;
+    }
+
+    .container {
+        @include screenSize(50%, auto);
+        @include displayFlex(center, center, row);
+
+        .title {
+            @include screenSize(95%, auto);
+            @include displayFlex(center, center, row);
+            padding-bottom: 1.5em;
+
+            &__logo {
+                width: 7vw;
+
+                // tablet
+                @include for-tablet-only {
+                    padding: 2em 0 0 0;
+                }
+
+                @include for-phone-only {
+                    padding-bottom: 1em;
+                }
+            }
+
+            &__text {
+                @include typography(2.6vw, start, 1.3em, 600);
+                @include displayFlex(center, center, row);
+                gap: 10px;
+                color: $color2;
+
+                // tablet
+                @include for-tablet-only {
+                    @include typography(4vw, center, 1.3em, 600);
+                }
+
+                //mobile(M)
+                @include for-phone-only {
+                    @include typography(2vw, center, 1.3em, 600);
+                    font-size: 7vw;
+                }
+
+                //mobile(S)
+                @include for-phoneS-only {
+                    @include typography(2.6vw, center, 1.3em, 600);
+                    font-size: 11vw;
+                }
+
+                span {
+                    color: $color1;
+                }
+
+                //tablet
+                // @include for-tablet-only {
+                //     @include screenSize(50vw, auto);
+                //     padding-bottom: 3em;
+                // }
+                //mobile(M)
+                // @include for-phone-only {
+                //     padding: 4em  0;
+                // }
+                // //mobile(S)
+                // @include for-phoneS-only {
+                //     @include screenSize(70%, auto);
+                //     padding-bottom: 2.5em;
+                // }
+
+
+            }
+
+            @include for-phone-only {
+                @include displayFlex(center, center, column);
+
+            }
+        }
+
+        @include for-tablet-only {
+            @include screenSize(100%, auto);
+            @include displayFlex(center, center, column);
+        }
+    }
+
+    .cards {
+        @include screenSize(80%, auto);
+        @include displayFlex(center, center, row);
+    }
+
+    .button {
+        margin: 2em 0;
+    }
+}

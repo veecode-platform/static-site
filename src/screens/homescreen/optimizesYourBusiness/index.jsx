@@ -3,7 +3,7 @@ import { Button } from "../../../components";
 import Link from "next/link";
 import Image from "next/image";
 
-const Icon = "assets/home/image3.png";
+const Icon = "assets/home/image3.avif";
 
 const OptimizeYourBusiness = () => {
   return (
