@@ -40,7 +40,7 @@ const Tools = () => {
   return (
     <div className={style.tools}>
         <div className={style.tools__title}>
-          <h2>Some Stacks we worked on</h2>
+          <h2>Our support also includes</h2>
         </div>
         <div className={style.tools__wrapper}>
           {
