@@ -1,0 +1,156 @@
+[
+    {
+        "id": 0,
+        "title": "Kong Gateway",
+        "img": "/assets/home/text_slide/kong.png",
+        "buttonLabel": "Check Plans",
+        "buttonLink": "#plans",
+        "data": [
+            {
+                "id": 0,
+                "title": "How we help you?",
+                "items": [
+                    "Kong Gateway installation and support.",
+                    "Configuration for high availability scenarios.",
+                    "Automations for provisioning."
+                ]
+            },
+            {
+                "id": 1,
+                "title": "What do you achieve?",
+                "items": [
+                    "Ease of integration of legacy services.",
+                    "End-to-end automation for APIs (APIOps).",
+                    "Observability of APIs.",
+                    "Security with APIs.",
+                    "Microservices with optimized learning curve."
+                ]
+            },
+            {
+                "id": 2,
+                "title": "Prerequisites",
+                "items": [
+                    "Be looking for a modern API Gateway.",
+                    "Need professional support for your open source choices.",
+                    "You use or intend to use the Kong Gateway."
+                ]
+            }
+        ]
+    },
+    {
+        "id": 1,
+        "title": "API Development",
+        "img": "/assets/home/text_slide/api.png",
+        "buttonLabel": "Check Plans",
+        "buttonLink": "#plans",
+        "data": [
+            {
+                "id": 0,
+                "title": "How we help you?",
+                "items": [
+                    "Ready-made automations for building, testing, and delivering APIs.",
+                    "Project templates and pipelines.",
+                    "Spec-first development with OpenAPI.",
+                    "Standardization for APIOps."
+                ]
+            },
+            {
+                "id": 1,
+                "title": "What do you achieve?",
+                "items": [
+                    "Speed of API development.",
+                    "Optimization of API delivery pipelines.",
+                    "Process standardization (APIOps).",
+                    "Developers deal with less complexity."
+                ]
+            },
+            {
+                "id": 2,
+                "title": "Prerequisites",
+                "items": [
+                    "Spec-first strategy in API development.",
+                    "Desire to adopt microservices but avoiding complexity for teams."
+                ]
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "title": "Kubernetes",
+        "img": "/assets/home/text_slide/kubernetes.png",
+        "buttonLabel": "Check Plans",
+        "buttonLink": "#plans",
+        "data": [
+            {
+                "id": 0,
+                "image": "/assets/home/icon1.png",
+                "title": "How we help you?",
+                "items": [
+                    "Automations for cluster provisioning.",
+                    " Production-ready clusters in minutes.",
+                    "Reactive and proactive support of your clusters and their key components.",
+                    " 5x8 or 24x7 models."
+                ]
+            },
+            {
+                "id": 1,
+                "image": "/assets/home/icon2.png",
+                "title": "What do you achieve?",
+                "items": [
+                    "Self-Service days for teams.",
+                    "Cloud-native maturity with low investment.",
+                    "Modernizing IT Operations.",
+                    "Reduced cost and operational risk."
+                ]
+            },
+            {
+                "id": 2,
+                "image": "/assets/home/icon3.png",
+                "title": "Prerequisites",
+                "items": [
+                    "Management committed to operational excellence."
+                ]
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "title": "AWS",
+        "img": "/assets/home/text_slide/aws.png",
+        "buttonLabel": "Check Plans",
+        "buttonLink": "#plans",
+        "data": [
+            {
+                "id": 0,
+                "image": "/assets/home/icon1.png",
+                "title": "How we help you?",
+                "items": [
+                    "Ready-made automations for building, testing, and delivering APIs.",
+                    " Project templates and pipelines.",
+                    "Spec-first development with OpenAPI.",
+                    " Standardization for APIOps."
+                ]
+            },
+            {
+                "id": 1,
+                "image": "/assets/home/icon2.png",
+                "title": "What do you achieve?",
+                "items": [
+                    "Speed of API development.",
+                    "Optimization of API delivery pipelines.",
+                    "Process standardization (APIOps).",
+                    "Developers deal with less complexity."
+                ]
+            },
+            {
+                "id": 2,
+                "image": "/assets/home/icon3.png",
+                "title": "Prerequisites",
+                "items": [
+                    "Spec-first strategy in API development.",
+                    "Desire to adopt microservices but avoiding complexity for teams."
+                ]
+            }
+        ]
+    }
+]

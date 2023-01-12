@@ -1,0 +1,7 @@
+@import "../abstract/functions", "../abstract/variables", "../abstract/responsive";
+
+.wrapper {
+    @include screenSize(100%, auto);
+    @include displayFlex(center, center, column);
+    background:black;
+}
