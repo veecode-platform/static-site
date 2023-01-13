@@ -4,7 +4,6 @@ import React from 'react';
 import { Button } from '../../../components';
 import SupportCards from './SupportCards';
 import style from './SupportSection.module.scss';
-
 const SupportSection = ({ title, img, data, buttonLabel, buttonLink }) => {
     return (
         <section className={style.wrapper}>
