@@ -121,7 +121,7 @@
     },
     {
         "id": 3,
-        "title": "AWS",
+        "title": "Cloud AWS",
         "img": "/assets/home/text_slide/aws.png",
         "buttonLabel": "Check Plans",
         "buttonLink": "#plans",
@@ -131,10 +131,10 @@
                 "image": "/assets/home/icon1.png",
                 "title": "How we help you?",
                 "items": [
-                    "Ready-made automations for building, testing, and delivering APIs.",
-                    " Project templates and pipelines.",
-                    "Spec-first development with OpenAPI.",
-                    " Standardization for APIOps."
+                    "Resource Provisioning Automations.",
+                    "Facilitating AWS adoption.",
+                    "Migrating your services to the cloud.",
+                    "Observability for network performance."
                 ]
             },
             {
@@ -142,10 +142,10 @@
                 "image": "/assets/home/icon2.png",
                 "title": "What do you achieve?",
                 "items": [
-                    "Speed of API development.",
-                    "Optimization of API delivery pipelines.",
-                    "Process standardization (APIOps).",
-                    "Developers deal with less complexity."
+                    "Self-service journeys for teams.",
+                    "Cloud-native maturity with low investment.",
+                    "Modernization of IT operation.",
+                    "Cost and operational risk reduction."
                 ]
             },
             {
@@ -153,8 +153,10 @@
                 "image": "/assets/home/icon3.png",
                 "title": "To Whom?",
                 "items": [
-                    "Spec-first strategy in API development.",
-                    "Desire to adopt microservices but avoiding complexity for teams."
+                    "Pursuit of digital transition and scalability in the enterprise.",
+                    "Management committed to operational excellence.",
+                    "Searching for DevOps culture and practice to the team.",
+                    "Seeking to decrease cognitive load."
                 ]
             }
         ]
