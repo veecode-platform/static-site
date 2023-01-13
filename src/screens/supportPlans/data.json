@@ -89,10 +89,10 @@
                 "image": "/assets/home/icon1.png",
                 "title": "How we help you?",
                 "items": [
-                    "Automations for cluster provisioning.",
-                    " Production-ready clusters in minutes.",
-                    "Reactive and proactive support of your clusters and their key components.",
-                    " 5x8 or 24x7 models."
+                    "Cluster Provisioning Automations.",
+                    "Clusters “production-ready” in minutes.",
+                    "Monitoring the health of the application, mitigating risks.",
+                    "Observability, performance, and integration."
                 ]
             },
             {
@@ -100,10 +100,10 @@
                 "image": "/assets/home/icon2.png",
                 "title": "What do you achieve?",
                 "items": [
-                    "Self-Service days for teams.",
-                    "Cloud-native maturity with low investment.",
-                    "Modernizing IT Operations.",
-                    "Reduced cost and operational risk."
+                    "Self-service journeys for teams.",
+                    "Modernization of IT operation.",
+                    "Cost and operational risk reduction.",
+                    "Scaling management of the application."
                 ]
             },
             {
@@ -111,7 +111,10 @@
                 "image": "/assets/home/icon3.png",
                 "title": "To Whom?",
                 "items": [
-                    "Management committed to operational excellence."
+                    "Seeking scalability in the business.",
+                    "Apply DevOps culture quickly and cost-effectively.",
+                    "Management committed to operational excellence.",
+                    "Wishes to monitor application performance"
                 ]
             }
         ]
