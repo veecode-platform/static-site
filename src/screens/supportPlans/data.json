@@ -10,29 +10,30 @@
                 "id": 0,
                 "title": "How we help you?",
                 "items": [
+                    "Setup for high-availability scenarios.",
+                    "Provisioning Automation.",
                     "Kong Gateway installation and support.",
-                    "Configuration for high availability scenarios.",
-                    "Automations for provisioning."
+                    "Sustainment Service"
                 ]
             },
             {
                 "id": 1,
                 "title": "What do you achieve?",
                 "items": [
-                    "Ease of integration of legacy services.",
-                    "End-to-end automation for APIs (APIOps).",
-                    "Observability of APIs.",
-                    "Security with APIs.",
-                    "Microservices with optimized learning curve."
+                    "End-to-end automation for API's (APIOps).",
+                    "APIs Observability.",
+                    "APIs Security.",
+                    "Organization of APIs in Microservices architecture."
                 ]
             },
             {
                 "id": 2,
-                "title": "Prerequisites",
+                "title": "To Whom?",
                 "items": [
-                    "Be looking for a modern API Gateway.",
-                    "Need professional support for your open source choices.",
-                    "You use or intend to use the Kong Gateway."
+                    "Looking for an API Manager.",
+                    "Looking for a modern API Gateway, prioritizing Kong.",
+                    "Using Kong Community.",
+                    "Need professional support for your open source choice"
                 ]
             }
         ]
@@ -66,7 +67,7 @@
             },
             {
                 "id": 2,
-                "title": "Prerequisites",
+                "title": "To Whom?",
                 "items": [
                     "Spec-first strategy in API development.",
                     "Desire to adopt microservices but avoiding complexity for teams."
@@ -106,7 +107,7 @@
             {
                 "id": 2,
                 "image": "/assets/home/icon3.png",
-                "title": "Prerequisites",
+                "title": "To Whom?",
                 "items": [
                     "Management committed to operational excellence."
                 ]
@@ -145,7 +146,7 @@
             {
                 "id": 2,
                 "image": "/assets/home/icon3.png",
-                "title": "Prerequisites",
+                "title": "To Whom?",
                 "items": [
                     "Spec-first strategy in API development.",
                     "Desire to adopt microservices but avoiding complexity for teams."
