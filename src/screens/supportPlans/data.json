@@ -10,29 +10,30 @@
                 "id": 0,
                 "title": "How we help you?",
                 "items": [
+                    "Setup for high-availability scenarios.",
+                    "Provisioning Automation.",
                     "Kong Gateway installation and support.",
-                    "Configuration for high availability scenarios.",
-                    "Automations for provisioning."
+                    "Sustainment Service"
                 ]
             },
             {
                 "id": 1,
                 "title": "What do you achieve?",
                 "items": [
-                    "Ease of integration of legacy services.",
-                    "End-to-end automation for APIs (APIOps).",
-                    "Observability of APIs.",
-                    "Security with APIs.",
-                    "Microservices with optimized learning curve."
+                    "End-to-end automation for API's (APIOps).",
+                    "APIs Observability.",
+                    "APIs Security.",
+                    "Organization of APIs in Microservices architecture."
                 ]
             },
             {
                 "id": 2,
-                "title": "Prerequisites",
+                "title": "To Whom?",
                 "items": [
-                    "Be looking for a modern API Gateway.",
-                    "Need professional support for your open source choices.",
-                    "You use or intend to use the Kong Gateway."
+                    "Looking for an API Manager.",
+                    "Looking for a modern API Gateway, prioritizing Kong.",
+                    "Using Kong Community.",
+                    "Need professional support for your open source choice"
                 ]
             }
         ]
@@ -48,7 +49,7 @@
                 "id": 0,
                 "title": "How we help you?",
                 "items": [
-                    "Ready-made automations for building, testing, and delivering APIs.",
+                    "Ready-made automations for building, testing and delivering API's.",
                     "Project templates and pipelines.",
                     "Spec-first development with OpenAPI.",
                     "Standardization for APIOps."
@@ -58,18 +59,20 @@
                 "id": 1,
                 "title": "What do you achieve?",
                 "items": [
-                    "Speed of API development.",
+                    "Speed in API development.",
                     "Optimization of API delivery pipelines.",
-                    "Process standardization (APIOps).",
-                    "Developers deal with less complexity."
+                    "Developers dealing with less complexity.",
+                    "Testing Environment."
                 ]
             },
             {
                 "id": 2,
-                "title": "Prerequisites",
+                "title": "To Whom?",
                 "items": [
                     "Spec-first strategy in API development.",
-                    "Desire to adopt microservices but avoiding complexity for teams."
+                    "Desire to adopt microservices but avoiding complexity for teams.",
+                    "Searching for modernization and growth.",
+                    "Having an OpenAPI file."
                 ]
             }
         ]
@@ -86,10 +89,10 @@
                 "image": "/assets/home/icon1.png",
                 "title": "How we help you?",
                 "items": [
-                    "Automations for cluster provisioning.",
-                    " Production-ready clusters in minutes.",
-                    "Reactive and proactive support of your clusters and their key components.",
-                    " 5x8 or 24x7 models."
+                    "Cluster Provisioning Automations.",
+                    "Clusters “production-ready” in minutes.",
+                    "Monitoring the health of the application, mitigating risks.",
+                    "Observability, performance, and integration."
                 ]
             },
             {
@@ -97,25 +100,28 @@
                 "image": "/assets/home/icon2.png",
                 "title": "What do you achieve?",
                 "items": [
-                    "Self-Service days for teams.",
-                    "Cloud-native maturity with low investment.",
-                    "Modernizing IT Operations.",
-                    "Reduced cost and operational risk."
+                    "Self-service journeys for teams.",
+                    "Modernization of IT operation.",
+                    "Cost and operational risk reduction.",
+                    "Scaling management of the application."
                 ]
             },
             {
                 "id": 2,
                 "image": "/assets/home/icon3.png",
-                "title": "Prerequisites",
+                "title": "To Whom?",
                 "items": [
-                    "Management committed to operational excellence."
+                    "Seeking scalability in the business.",
+                    "Apply DevOps culture quickly and cost-effectively.",
+                    "Management committed to operational excellence.",
+                    "Wishes to monitor application performance"
                 ]
             }
         ]
     },
     {
         "id": 3,
-        "title": "AWS",
+        "title": "Cloud AWS",
         "img": "/assets/home/text_slide/aws.png",
         "buttonLabel": "Check Plans",
         "buttonLink": "#plans",
@@ -125,10 +131,10 @@
                 "image": "/assets/home/icon1.png",
                 "title": "How we help you?",
                 "items": [
-                    "Ready-made automations for building, testing, and delivering APIs.",
-                    " Project templates and pipelines.",
-                    "Spec-first development with OpenAPI.",
-                    " Standardization for APIOps."
+                    "Resource Provisioning Automations.",
+                    "Facilitating AWS adoption.",
+                    "Migrating your services to the cloud.",
+                    "Observability for network performance."
                 ]
             },
             {
@@ -136,19 +142,21 @@
                 "image": "/assets/home/icon2.png",
                 "title": "What do you achieve?",
                 "items": [
-                    "Speed of API development.",
-                    "Optimization of API delivery pipelines.",
-                    "Process standardization (APIOps).",
-                    "Developers deal with less complexity."
+                    "Self-service journeys for teams.",
+                    "Cloud-native maturity with low investment.",
+                    "Modernization of IT operation.",
+                    "Cost and operational risk reduction."
                 ]
             },
             {
                 "id": 2,
                 "image": "/assets/home/icon3.png",
-                "title": "Prerequisites",
+                "title": "To Whom?",
                 "items": [
-                    "Spec-first strategy in API development.",
-                    "Desire to adopt microservices but avoiding complexity for teams."
+                    "Pursuit of digital transition and scalability in the enterprise.",
+                    "Management committed to operational excellence.",
+                    "Searching for DevOps culture and practice to the team.",
+                    "Seeking to decrease cognitive load."
                 ]
             }
         ]
