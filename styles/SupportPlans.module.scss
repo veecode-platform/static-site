@@ -3,5 +3,9 @@
 .wrapper {
     @include screenSize(100%, auto);
     @include displayFlex(center, center, column);
-    background:black;
+    .stacks{
+        @include displayFlex(center, center, column);
+        background: $color15;
+        padding: 2em  0 6em 0;
+    }
 }

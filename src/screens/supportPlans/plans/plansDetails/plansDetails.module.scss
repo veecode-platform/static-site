@@ -3,9 +3,11 @@
 .planTable {
     @include screenSize(auto, 100%);
     @include displayFlex(flex-start, center, column);
-    @include glassEffect();
-    background-color: #F5F5F5;
-    border: 1px solid $color7;
+    // @include glassEffect();
+    background: $color2;
+    @include cardShadow();
+    // border: 1px solid $color7;
+    border-radius: .8em;
 
 
     //mobile(M)

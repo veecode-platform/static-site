@@ -1,11 +1,10 @@
 @import "/abstract/functions", "/abstract/variables", "/abstract/responsive";
 
 .wrapper {
-    @include screenSize(100%, auto);
+    @include screenSize(95%, auto);
     @include displayFlex(center, center, column);
-    @include backgroundImage("/assets/home/black.png");
     position: relative;
-    padding: 8em 0 2em 0;
+    padding: 10em 0 2em 0;
 
     //mobile(M)
     @include for-phone-only {

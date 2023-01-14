@@ -9,9 +9,9 @@ import FirstSection from "./firstSection";
 const SupportPlans = () => {
   return (
     <main className={style.wrapper}>
-      <FirstSection />
       <Header fixedHeader showButton />
-      {/* FIRST SECTION */}
+      <FirstSection />
+      <section className={style.stacks}>
       {data.map((item) => {
         return (
           <SupportSection
@@ -24,6 +24,7 @@ const SupportPlans = () => {
           />
         );
       })}
+      </section>
       <Plans />
       <Footer />
     </main>

@@ -14,3 +14,4 @@ export { default as Switch} from "./switch/Switch";
 export { default as Loading } from "./loading/Loading";
 export { default as Guarantees } from "./guarantees/Guarantees";
 export { default as FormElement} from "./formElement/FormElement";
+export { default as DividerBottom } from "./dividerBottom/DividerBottom";
