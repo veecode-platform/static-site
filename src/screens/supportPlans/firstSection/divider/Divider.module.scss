@@ -1,12 +1,13 @@
 @import '/abstract//functions','/abstract//responsive','/abstract//variables';
 
 .divider{
-    fill: #111111; 
     width: 100%; 
-    height: 35px; 
+    height: 165px; 
+    fill: $color15;
     transform: rotate(180deg) scaleX(-1);
     position: absolute;
     bottom: -.5%;
+    z-index: 0;
     //mobile
     @include for-phone-only{
         bottom: -.2%;

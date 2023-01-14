@@ -1,191 +1,184 @@
-@import "../abstract/functions", "../abstract/variables", "../abstract/responsive";
+@import "/abstract/functions", "/abstract/variables", "/abstract/responsive";
 
 .wrapper {
-    @include screenSize(100%, auto);
+  @include screenSize(100%, auto);
+  @include displayFlex(center, center, column);
+  position: relative;
+  margin-top: 5rem;
+  background: linear-gradient(90deg,$color3, $color14, $color14,$color14);
+
+  //mobile(M)
+  @include for-phone-only {
+    padding: 5vh 0;
+  }
+
+  //mobile(S)
+  @include for-phoneS-only {
+    margin-top: 0;
+  }
+
+  //mobile(M)
+  @include for-phone-only {
+    padding-bottom: 3em;
+  }
+
+  .content {
+    @include screenSize(80%, auto);
     @include displayFlex(center, center, row);
-    position: relative;
-    margin-top: 5rem;
+    padding: 12em 0 6.5em 0;
+    z-index: 1;
+
+    //tablet
+    @include for-tabletS-only {
+      @include displayFlex(center, center, column-reverse);
+
+      padding: 9vh 0;
+    }
 
     //mobile(M)
     @include for-phone-only {
-        padding: 5vh 0;
+      padding: 5vh 0 0 0;
     }
 
-    //mobile(S)
-    @include for-phoneS-only {
-        margin-top: 0;
-    }
+    .info {
+      @include screenSize(50%, auto);
+      @include displayFlex(center, flex-start, column);
 
-    &__background {
-        @include screenSize(100vw, 100vh);
-        position: absolute;
-        z-index: 0;
+      @include for-tabletS-only {
+        @include screenSize(100%, auto);
+        @include displayFlex(center, center, column);
+      }
+
+      &__logo {
+        @include screenSize(50%, auto);
+        display: none;
+        width: 15vw;
 
         //mobile(M)
-        @include for-phone-only {
-            @include screenSize(100%, 100%);
-            top: -1.5em;
+        @include for-tabletS-only {
+          display: none;
         }
+      }
 
-        &-desktop {
-            @include screenSize(100vw, 100vh);
-            object-fit: cover;
-            position: relative;
+      &__title {
+        @include screenSize(80%, 60%);
+        margin: 2em 0 1em;
+        padding: 1em 0;
 
-            //mobile(M)
-            @include for-phone-only {
-                display: none;
-            }
+        span {
+          @include typography(2.5vw, center, 1.4em, 400);
+          color: $color1;
+
+          //mobile(M)
+          @include for-phone-only {
+            @include typography(4vw, center, 1.3em, 300);
+          }
+
+          //mobile(S)
+          @include for-phoneS-only {
+            font-size: 5vw;
+          }
         }
-
-        &-mobile {
-            display: none;
-
-            //mobile(M)
-            @include for-phone-only {
-                position: relative;
-                display: inline-block;
-                @include screenSize(100%, 100%);
-                object-fit: cover;
-                object-position: 50% 55%;
-            }
-        }
-    }
-
-    //mobile(M)
-    @include for-phone-only {
-        padding-bottom: 3em;
-    }
-
-    .content {
-        @include screenSize(80%, auto);
-        @include displayFlex(center, center, row);
-        padding: 14vh 0;
-        z-index: 1;
 
         //tablet
-        @include for-tabletS-only {
-            padding: 9vh 0;
+        @include for-tablet-only {
+          margin: 2em 0 0.5em 0;
         }
 
         //mobile(M)
         @include for-phone-only {
-            @include displayFlex(center, center, column-reverse);
-            padding: 5vh 0 0 0;
+          @include screenSize(80%, auto);
+          margin: 3em 0 1.5em;
         }
 
-        .info {
-            @include screenSize(100%, auto);
-            @include displayFlex(center, flex-start, column);
-
-            @include for-phone-only {
-                @include screenSize(100%, auto);
-                @include displayFlex(center, center, column);
-            }
-
-            &__logo {
-                @include screenSize(50%, auto);
-                width: 15vw;
-                //mobile(M)
-                @include for-phone-only {
-                    display: none;
-                }
-            }
-
-            &__title {
-                @include screenSize(100%, 60%);
-                margin: 2em 0 1em;
-                padding: 1em 0;
-
-                span {
-                    @include typography(2.5vw, center, 1.4em, 400);
-                    color: $color1;
-
-                    //mobile(M)
-                    @include for-phone-only {
-                        @include typography(4vw, center, 1.3em, 300);
-                    }
-
-                    //mobile(S)
-                    @include for-phoneS-only {
-                        font-size: 5vw;
-                    }
-                }
-
-                //tablet
-                @include for-tablet-only {
-                    margin: 2em 0 .5em 0;
-                }
-
-                //mobile(M)
-                @include for-phone-only {
-                    @include screenSize(80%, auto);
-                    margin: 3em 0 1.5em;
-                }
-
-                //mobile(S)
-                @include for-phoneS-only {
-                    @include screenSize(95%, auto);
-                }
-
-                //mobile(XS)
-                @include for-phoneXS-only {
-                    margin-top: 10em;
-                }
-
-                h1 {
-                    @include typography(2.5vw, flex-start, 1.5em, 300);
-                    color: $color2;
-
-                    //mobile(M)
-                    @include for-phone-only {
-                        @include typography(4vw, center, 1.3em, 300);
-                    }
-
-                    //mobile(S)
-                    @include for-phoneS-only {
-                        font-size: 5vw;
-                    }
-                }
-            }
-
-            &__buttons {
-                @include screenSize(20vw, auto);
-                @include displayFlex(start, center, row-reverse);
-                padding: 1em 0;
-
-                @include for-tablet-only {
-                    // margin: 25em 0 1em;
-                }
-
-                //mobile(M)
-                @include for-phone-only {
-                    @include screenSize(75%, auto);
-                    @include displayFlex(center, center, row); // Change
-
-                    margin: 1em 0 1em;
-                    padding: 1em 0 3em 0;
-                    flex-wrap: wrap;
-                }
-
-                //mobile(S)
-                @include for-phoneS-only {
-                    @include screenSize(100%, auto);
-                    flex-direction: column;
-                }
-            }
+        //mobile(S)
+        @include for-phoneS-only {
+          @include screenSize(95%, auto);
         }
 
-        .animation {
-            @include screenSize(50%, auto);
-
-            @include for-phone-only {
-                @include screenSize(100%, auto);
-                @include displayFlex(center, center, row);
-
-            }
-
+        //mobile(XS)
+        @include for-phoneXS-only {
+          margin-top: 10em;
         }
 
+        h1 {
+          @include typography(2.3vw, left, 1.5em, 300);
+          color: $color2;
+
+          //tablet(s)
+          @include for-tabletS-only {
+            @include typography(3vw, center, 1.3em, 300);
+          }
+
+          @include for-phone-only {
+            @include typography(4vw, center, 1.3em, 300);
+          }
+
+          //mobile(S)
+          @include for-phoneS-only {
+            font-size: 5vw;
+          }
+        }
+      }
+
+      &__buttons {
+        @include screenSize(20vw, auto);
+        @include displayFlex(flex-end, center, row-reverse);
+        padding: 1em 0;
+
+        @include for-tablet-only {
+          // margin: 25em 0 1em;
+        }
+
+        //mobile(M)
+        @include for-tabletS-only {
+          @include screenSize(75%, auto);
+          @include displayFlex(center, center, row); // Change
+
+          margin: 1em 0 1em;
+          padding: 1em 0 3em 0;
+          flex-wrap: wrap;
+        }
+
+        //mobile(S)
+        @include for-phoneS-only {
+          @include screenSize(100%, auto);
+          flex-direction: column;
+        }
+      }
     }
+
+    .animation {
+      @include screenSize(65%, auto);
+      z-index: 1;
+
+      @include for-phone-only {
+        @include screenSize(100%, auto);
+        @include displayFlex(center, center, row);
+      }
+
+      &__img {
+        width: 100%;
+        transform: scale(1.3);
+      }
+    }
+
+    &__staticNote {
+      @include screenSize(60%, auto);
+
+      @include for-tablet-only {
+        @include screenSize(70%, auto);
+        width: 60vw;
+      }
+
+      @include for-tabletS-only {
+        @include screenSize(100%, auto);
+        @include displayFlex(center, center, row);
+      }
+
+      @include for-phone-only {
+        width: 20%;
+      }
+    }
+  }
 }

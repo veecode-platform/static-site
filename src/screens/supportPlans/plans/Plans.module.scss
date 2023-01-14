@@ -34,31 +34,29 @@
         }
     }
     .header {
-        @include screenSize(80%,auto);
+        @include screenSize(70%,auto);
         @include displayFlex(center, center, row);
         padding-bottom: 0.5em;
-
+        // mobile
         @include for-phone-only {
             @include displayFlex(center, center, column);
         }
-
         &__logo {
             padding-top: .9em;
             padding-left: 0em;
             padding-right: 1em;
             width: 15vw;
-
+            // tablet
             @include for-tablet-only {
                 padding: 2em 0 0 0;
             }
-
+            // mobile
             @include for-phone-only {
                 display: none;
             }
         }
 
         &__title{
-            @include screenSize(100%, auto);
             padding: 2em 0em;
             span {
                 color: $color1;
@@ -82,7 +80,7 @@
             }
 
             h2 {
-                @include typography(2.9vw, start, 1.3em, 700);
+                @include typography(2.9vw, center, 1.3em, 700);
                 color: $color2;
                 
                 //mobile(M)
@@ -98,7 +96,7 @@
         }
     }
     .subtitle {
-        @include screenSize(80%, auto);
+        @include screenSize(70%, auto);
         @include displayFlex(flex-start, center, row);
         // margin: 1em;
         padding-bottom: 3em;
@@ -130,11 +128,12 @@
     }
 
     .plans {
-        @include screenSize(75%,auto);
+        @include screenSize(70%,auto);
         display: grid;
         grid-template: 1fr / repeat(2,1fr);
         margin: 2.5em auto;
         gap: 2em;
+        padding: 2em 0 10em 0;
         //viewport
         @include for-viewport-only{
             @include screenSize(80%,auto);

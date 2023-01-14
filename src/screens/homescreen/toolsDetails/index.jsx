@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
+import { DividerBottom } from "../../../components";
 import Card from "./card";
-import Divider from "./divider";
 import style from "./ToolsDetails.module.scss";
 
 const Tools = [
@@ -61,7 +61,7 @@ const ToolsDetails = () => {
             />
         ))}
       </article>
-      <Divider/>
+      <DividerBottom color="#111111"/>
     </section>
   );
 };
