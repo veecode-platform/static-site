@@ -5,7 +5,7 @@ import { Button } from "../../../components";
 import Link from "next/link";
 import Divider from "./divider";
 
-const animation = "/assets/support/animation.svg";
+const animation = "/assets/support/animation.gif";
 
 const FirstSection = () => {
   return (

@@ -132,7 +132,7 @@
         display: grid;
         grid-template: 1fr / repeat(2,1fr);
         margin: 2.5em auto;
-        gap: 2em;
+        gap: 3em;
         padding: 2em 0 10em 0;
         //viewport
         @include for-viewport-only{

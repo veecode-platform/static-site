@@ -6,6 +6,5 @@
     .stacks{
         @include displayFlex(center, center, column);
         background: $color15;
-        padding: 2em  0 6em 0;
     }
 }
