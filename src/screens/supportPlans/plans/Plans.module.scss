@@ -42,6 +42,15 @@
         @include displayFlex(center, center, row);
         padding-bottom: 0.5em;
 
+        //tablet 
+        @include for-tablet-only {
+            @include screenSize(100%, auto);
+            @include displayFlex(center, center, column);
+
+
+        }
+
+        
         // mobile
         @include for-phone-only {
             @include displayFlex(center, center, column);
@@ -55,7 +64,7 @@
 
             // tablet
             @include for-tablet-only {
-                padding: 2em 0 0 0;
+                display: none;
             }
 
             // mobile
@@ -78,7 +87,7 @@
 
             //tablet
             @include for-tablet-only {
-                @include screenSize(80%, auto);
+                @include screenSize(50%, auto);
                 padding-bottom: 1em;
             }
 
@@ -97,6 +106,12 @@
             h2 {
                 @include typography(2.9vw, center, 1.3em, 700);
                 // color: $color2;
+
+                //mobile(M)
+                @include for-tablet-only {
+                    // font-size: 7vw;
+                    @include typography(3vw, flex-start, 1.3em, 700);
+                }
 
                 //mobile(M)
                 @include for-phone-only {
