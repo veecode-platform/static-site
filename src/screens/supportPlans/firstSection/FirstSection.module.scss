@@ -71,7 +71,7 @@
 
           //mobile(M)
           @include for-phone-only {
-            @include typography(4vw, center, 1.3em, 300);
+            @include typography(5vw, center, 1.3em, 300);
           }
 
           //mobile(S)
@@ -111,7 +111,7 @@
           }
 
           @include for-phone-only {
-            @include typography(4vw, center, 1.3em, 300);
+            @include typography(5vw, center, 1.3em, 300);
           }
 
           //mobile(S)

@@ -9,6 +9,7 @@
     align-items: flex-start;
     justify-content: center;
     gap: 1rem;
+    
     //tablet
     @include for-tablet-only {
         padding: 3em 0 8em 0;
@@ -21,7 +22,8 @@
     }
     //mobile(S)
     @include for-phoneS-only {
-        padding: 2em 0 5em 0;
+        padding: 1em 0em;
+        margin-bottom: 1em;
     }
 
     &__button {
