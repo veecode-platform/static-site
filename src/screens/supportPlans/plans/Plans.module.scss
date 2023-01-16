@@ -142,6 +142,11 @@
             @include typography(1.8vw, center, 1.3em, 500);
             color: $color3;
 
+            //tablet
+            @include for-tablet-only {
+                @include typography(2.3vw, center, 1.3em, 500);
+            }
+
             //mobile
             @include for-phone-only {
                 @include typography(4vw, center, 1.3em, 500);
