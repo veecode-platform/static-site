@@ -6,7 +6,7 @@ import Image from "next/image";
 import TextSlide from "./textSlide";
 import { gtagSafiraDocs } from "../../../../utils/gtag";
 
-const Logo = "assets/home/logo.avif";
+const Logo = "assets/home/logo.png";
 const BgDesktop = "assets/home/bg1.webp"; 
 const BgMobile = "assets/home/bgmobile1.webp";
 

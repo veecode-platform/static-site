@@ -5,7 +5,7 @@ import style from '../../../styles/Header.module.scss';
 import Button from '../button/Button';
 
 
-const Logo = '../assets/home/logo.avif';
+const Logo = '../assets/home/logo.png';
 
 const Header = ({fixedHeader, showButton}) => {
   return (
