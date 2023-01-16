@@ -4,6 +4,7 @@ import PlansDetails from "./plansDetails";
 import { FaCheck } from "react-icons/fa";
 
 const veeCodeLogo = '/assets/home/black_logo.png';
+const stacks = '/assets/home/stacks_plan.png'
 
 const Plans = () => {
     return (
@@ -22,11 +23,21 @@ const Plans = () => {
                     </h2>
                 </div>
             </div>
-            <div className={style.subtitle}>
-                <p>
-                    <strong>Lower the barriers</strong> for your development team through our specialized support in the stacks you work in.
-                </p>
+            <div className={style.body}>
+                <div className={style.subtitle}>
+                    <p>
+                        <strong>Lower the barriers</strong> for your development team through our specialized support in the stacks you work in.
+                    </p>
+                </div>
+                <div className={style.group}>
+                    <img
+                        className={style.group__img}
+                        src={stacks}
+                        alt="Stacks Logo - Desktop Version"
+                    />
+                </div>
             </div>
+
 
             <article className={style.plans}>
                 {/* STANDARD */}
