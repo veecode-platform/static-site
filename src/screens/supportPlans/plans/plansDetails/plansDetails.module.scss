@@ -9,7 +9,7 @@
     // border: 1px solid $color7;
     border-radius: .8em;
 
-
+    font-family: $font-text;
     //mobile(M)
     @include for-phone-only {
         height: auto;
@@ -28,9 +28,9 @@
         }
 
         &-title {
-            color: $color1;
+            color: $color5;
 
-            @include typography(2vw, center, auto, 700);
+            @include typography(2.7vw, center, auto, 700);
 
             //tablet
             @include for-tablet-only {
@@ -49,7 +49,7 @@
         @include displayFlex(center, center, column);
 
         &-subtitle {
-            @include typography(1.3vw, center, auto, 300px);
+            @include typography(1.4vw, center, center, 300px);
 
             //viewport
             @include for-viewport-only {
@@ -72,7 +72,7 @@
     &__button {
         @include screenSize(80%, auto);
         @include displayFlex(space-around, center, column);
-        border-top: 1px solid $color1;
+        border-top: 1px solid $color5;
 
         min-height: 16em;
         padding-bottom: 2em;

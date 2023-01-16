@@ -2,7 +2,6 @@
 import style from "./Plans.module.scss";
 import PlansDetails from "./plansDetails";
 import { FaCheck } from "react-icons/fa";
-import Divider from "./divider";
 const veeCodeLogo = 'assets/home/black_logo.png';
 
 const Plans = () => {

@@ -4,7 +4,7 @@
   @include screenSize(100%, auto);
   @include displayFlex(center, center, column);
   position: relative;
-  margin-top: 5rem;
+  margin-top: 2rem;
   background: linear-gradient(90deg,$color3, $color14, $color14,$color14);
 
   //mobile(M)
