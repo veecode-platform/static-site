@@ -15,7 +15,8 @@ const SupportSection = ({ title, img, data, buttonLabel, buttonLink }) => {
                         alt={title}
                     />
                     <h2 className={style.title__text}> 
-                    {title}<span> Support</span></h2>
+                    {title}<span>Support</span>
+                    </h2>
                 </div>
             </div>
 

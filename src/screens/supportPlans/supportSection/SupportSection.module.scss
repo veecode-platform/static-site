@@ -16,7 +16,7 @@
 
     //mobile(M)
     @include for-phone-only {
-        padding: 8em 0;
+        padding: 2em 0;
     }
 
     .container {
@@ -54,36 +54,22 @@
 
                 //mobile(M)
                 @include for-phone-only {
-                    @include typography(2vw, center, 1.3em, 600);
+                    @include typography(1vw, center, 1.3em, 600);
                     font-size: 7vw;
                 }
 
                 //mobile(S)
                 @include for-phoneS-only {
                     @include typography(2.6vw, center, 1.3em, 600);
-                    font-size: 11vw;
+                    font-size: 7vw;
                 }
 
                 span {
                     color: $color1;
+                    @include for-phone-only {
+                        flex-wrap: wrap;
+                    }
                 }
-
-                //tablet
-                // @include for-tablet-only {
-                //     @include screenSize(50vw, auto);
-                //     padding-bottom: 3em;
-                // }
-                //mobile(M)
-                // @include for-phone-only {
-                //     padding: 4em  0;
-                // }
-                // //mobile(S)
-                // @include for-phoneS-only {
-                //     @include screenSize(70%, auto);
-                //     padding-bottom: 2.5em;
-                // }
-
-
             }
 
             @include for-phone-only {
