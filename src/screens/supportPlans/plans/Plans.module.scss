@@ -131,6 +131,11 @@
         @include screenSize(70%, auto);
         @include displayFlex(center, center, column);
         padding-bottom: .5em;
+
+        @include for-phone-only {
+         @include screenSize(90%, auto);
+
+        }
     }
     .group {
         @include screenSize(100%, auto);
@@ -138,6 +143,9 @@
 
         &__img {
             width: 60vw;
+            @include for-phone-only{
+                width: 85vw;
+            }
         }
 
     }
