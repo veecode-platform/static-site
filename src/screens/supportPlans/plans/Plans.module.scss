@@ -48,8 +48,6 @@
         @include for-tablet-only {
             @include screenSize(100%, auto);
             @include displayFlex(center, center, column);
-
-
         }
 
         
@@ -129,11 +127,26 @@
         }
     }
 
-    .subtitle {
+    .body {
         @include screenSize(70%, auto);
+        @include displayFlex(center, center, column);
+        padding-bottom: .5em;
+    }
+    .group {
+        @include screenSize(100%, auto);
+        @include displayFlex(center, center, row);
+
+        &__img {
+            width: 60vw;
+        }
+
+    }
+
+    .subtitle {
+        @include screenSize(80%, auto);
         @include displayFlex(center, center, row);
         // margin: 1em;
-        padding-bottom: 2em;
+        padding-bottom: .5em;
         color: $color4;
 
         @include for-phone-only {
@@ -171,7 +184,7 @@
         @include screenSize(70%, auto);
         display: grid;
         grid-template: 1fr / repeat(2, 1fr);
-        margin: 2.5em auto;
+        margin: 1.5em auto;
         gap: 3em;
         padding: 2em 0 10em 0;
 
