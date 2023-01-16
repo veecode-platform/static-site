@@ -5,6 +5,8 @@
     @include backgroundImage('/assets/home/bglight.webp');
     @include displayFlex(flex-start, center, column);
 
+    
+
     //viewport
     @include for-viewport-only {
         @include screenSize(100%, auto);
@@ -74,11 +76,11 @@
         }
 
         &__title {
-            background-image: linear-gradient(to bottom, $color1, $color7, $color1);
-            color: $color1;
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            // background-image: linear-gradient(to bottom, $color1, $color7, $color1);
+            color: $color16;
+            // background-clip: text;
+            // -webkit-background-clip: text;
+            // -webkit-text-fill-color: transparent;
             padding: 2em 0em;
 
             span {
@@ -160,7 +162,7 @@
 
         span {
             font-weight: 700;
-            color: $color5;
+            color: $color16;
         }
 
     }
