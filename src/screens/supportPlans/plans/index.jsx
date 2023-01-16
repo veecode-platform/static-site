@@ -24,7 +24,7 @@ const Plans = () => {
             </div>
             <div className={style.subtitle}>
                 <p>
-                    <strong>Lower the barriers</strong> for your development team through our specialized support in the stacks you work in.
+                    <strong>Lower the barriers</strong> for your development team through our specialized support in the stacks you work in
                 </p>
             </div>
 
@@ -32,7 +32,7 @@ const Plans = () => {
                 {/* STANDARD */}
                 <PlansDetails
                     title="Standard"
-                    subtitle="Solve your company's technological barriers in a practical and objective way."
+                    subtitle="Solve your company's technological barriers in a practical and objective way"
                     link="/validate?plan=standard"
                     label="Start at"
                     emphasis="$ 1990"
@@ -48,7 +48,7 @@ const Plans = () => {
                 {/* ENTERPRISE */}
                 <PlansDetails
                     title="Enterprise"
-                    subtitle="Get personalized service according to your company's specific needs."
+                    subtitle="Get personalized service according to your company's specific needs"
                     link="/contact-enterprise"
                     headline="Personalize your experience"
                     buttonLabel="Contact Us"

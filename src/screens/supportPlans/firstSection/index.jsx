@@ -15,7 +15,7 @@ const FirstSection = () => {
 
           <div className={style.info__title}>
             <h1>
-              Get <span><strong>expert support</strong></span> from the <strong>best solutions</strong> on the market in just a few clicks at an <strong>affordable price</strong>.
+              Get <span><strong>expert support</strong></span> from the <strong>best solutions</strong> on the market in just a few clicks at an <strong>affordable price</strong>
             </h1>
           </div>
           <div className={style.info__buttons}>

@@ -47,7 +47,7 @@ const Plans = () => {
         {/* ENTERPRISE */}
         <PlansDetails
           title="Enterprise"
-          subtitle="Get personalized service according to your company's specific needs."
+          subtitle="Get personalized service according to your company's specific needs"
           link="/contact-enterprise"
           headline="Personalize your experience"
           buttonLabel="Contact Us"
