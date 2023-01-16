@@ -4,7 +4,7 @@
     @include screenSize(100%, auto);
     @include displayFlex(center, center, column);
     position: relative;
-    padding: 6em  0;
+    padding: 2em 0;
 
     // &:nth-child(even){
     //     background: #000;
