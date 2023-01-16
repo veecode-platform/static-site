@@ -49,16 +49,6 @@
         @include displayFlex(center, center, column);
       }
 
-      &__logo {
-        @include screenSize(50%, auto);
-        display: none;
-        width: 15vw;
-
-        //mobile(M)
-        @include for-tabletS-only {
-          display: none;
-        }
-      }
 
       &__title {
         @include screenSize(80%, 60%);
@@ -77,6 +67,7 @@
           //mobile(S)
           @include for-phoneS-only {
             font-size: 7vw;
+            margin-bottom: 0;
           }
         }
 
@@ -110,6 +101,7 @@
             @include typography(3vw, center, 1.3em, 300);
           }
 
+          //mobile
           @include for-phone-only {
             @include typography(5vw, center, 1.3em, 300);
           }
@@ -144,6 +136,8 @@
         @include for-phoneS-only {
           @include screenSize(100%, auto);
           flex-direction: column;
+          margin:0em;
+          padding-top: 0em;
         }
       }
     }
