@@ -40,11 +40,7 @@ const Tools = () => {
   return (
     <div className={style.tools}>
         <div className={style.tools__title}>
-<<<<<<< HEAD
-          <h2>Our Support Also Includes</h2>
-=======
           <h2>Our support also includes</h2>
->>>>>>> homolog
         </div>
         <div className={style.tools__wrapper}>
           {
