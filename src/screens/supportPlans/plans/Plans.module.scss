@@ -1,0 +1,220 @@
+@import "../abstract/functions", "../abstract/variables", "../abstract/responsive";
+
+.content {
+    @include screenSize(100%, auto);
+    @include backgroundImage('/assets/home/bglight.webp');
+    @include displayFlex(flex-start, center, column);
+    
+    //viewport
+    @include for-viewport-only {
+        @include screenSize(100%, auto);
+    }
+
+    //tablet
+    @include for-tablet-only {
+        @include screenSize(100%, auto);
+    }
+
+    //mobile(M)
+    @include for-phone-only {
+        @include displayFlex(center, center, column);
+        gap: 1.5em;
+        flex-wrap: wrap;
+    }
+
+    &__wrapper {
+        @include screenSize(80%, auto);
+        display: grid;
+        grid-template: 1fr/ repeat(4, 1fr);
+        gap: 1%;
+
+        //mobile
+        @include for-phone-only {
+            grid-template: 1fr/1fr;
+            justify-content: center;
+            align-items: center;
+            gap: 0;
+        }
+    }
+
+    .header {
+        @include screenSize(70%, auto);
+        @include displayFlex(center, center, row);
+        padding-bottom: 0.5em;
+
+        //tablet 
+        @include for-tablet-only {
+            @include screenSize(100%, auto);
+            @include displayFlex(center, center, column);
+        }
+
+        
+        // mobile
+        @include for-phone-only {
+            @include displayFlex(center, center, column);
+        }
+
+        &__logo {
+            padding-top: .9em;
+            padding-left: 0em;
+            padding-right: 1em;
+            width: 15vw;
+
+            // tablet
+            @include for-tablet-only {
+                display: none;
+            }
+
+            // mobile
+            @include for-phone-only {
+                display: none;
+            }
+        }
+
+        &__title {
+            // background-image: linear-gradient(to bottom, $color1, $color7, $color1);
+            color: $color16;
+            // background-clip: text;
+            // -webkit-background-clip: text;
+            // -webkit-text-fill-color: transparent;
+            padding: 2em 0em;
+
+            span {
+                color: $color5;
+            }
+
+            //tablet
+            @include for-tablet-only {
+                @include screenSize(50%, auto);
+                padding-bottom: 1em;
+            }
+
+            //mobile(M)
+            @include for-phone-only {
+                @include screenSize(50%, auto);
+                padding-top: 3em;
+                padding-bottom: .5em;
+            }
+
+            //mobile(S)
+            @include for-phoneS-only {
+                @include screenSize(70%, auto);
+            }
+
+            h2 {
+                @include typography(2.9vw, center, 1.3em, 700);
+                // color: $color2;
+
+                //mobile(M)
+                @include for-tablet-only {
+                    // font-size: 7vw;
+                    @include typography(3vw, flex-start, 1.3em, 700);
+                }
+
+                //mobile(M)
+                @include for-phone-only {
+                    // font-size: 7vw;
+                    @include typography(8vw, center, 1.3em, 700);
+                }
+
+                //mobile(S)
+                @include for-phoneS-only {
+                    font-size: 11vw;
+                }
+            }
+        }
+    }
+
+    .body {
+        @include screenSize(70%, auto);
+        @include displayFlex(center, center, column);
+        padding-bottom: .5em;
+
+        @include for-phone-only {
+         @include screenSize(90%, auto);
+
+        }
+    }
+    .group {
+        @include screenSize(100%, auto);
+        @include displayFlex(center, center, row);
+
+        &__img {
+            width: 60vw;
+            @include for-phone-only{
+                width: 85vw;
+            }
+        }
+
+    }
+
+    .subtitle {
+        @include screenSize(80%, auto);
+        @include displayFlex(center, center, row);
+        // margin: 1em;
+        padding-bottom: .5em;
+        color: $color4;
+
+        @include for-phone-only {
+            padding: 2em 1em;
+        }
+
+        p {
+            @include typography(1.8vw, center, 1.3em, 500);
+            color: $color3;
+
+            //tablet
+            @include for-tablet-only {
+                @include typography(2.3vw, center, 1.3em, 500);
+            }
+
+            //mobile
+            @include for-phone-only {
+                @include typography(4vw, center, 1.3em, 500);
+            }
+
+            //mobile(S)
+            @include for-phoneS-only {
+                font-size: 18px;
+            }
+        }
+
+        span {
+            font-weight: 700;
+            color: $color16;
+        }
+
+    }
+
+    .plans {
+        @include screenSize(70%, auto);
+        display: grid;
+        grid-template: 1fr / repeat(2, 1fr);
+        margin: 1.5em auto;
+        gap: 3em;
+        padding: 2em 0 10em 0;
+
+        //viewport
+        @include for-viewport-only {
+            @include screenSize(80%, auto);
+        }
+
+        //tablet
+        @include for-tablet-only {
+            @include screenSize(85%, auto);
+        }
+
+        //mobile(M)
+        @include for-phone-only {
+            @include screenSize(85%, auto);
+            @include displayFlex(center, center, column);
+            gap: 1.5em;
+        }
+
+        //mobile(S)
+        @include for-phoneS-only {
+            @include screenSize(100%, auto);
+        }
+    }
+
+}

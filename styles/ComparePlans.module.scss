@@ -1,6 +1,6 @@
 @import '/abstract/functions','/abstract//responsive','/abstract/variables';
 
-.content{
+.content{ 
     @include screenSize(75%,auto);
     display: grid;
     grid-template: 1fr / repeat(2,1fr);

@@ -1,0 +1,97 @@
+@import "/abstract/functions", "/abstract/variables", "/abstract/responsive";
+
+.wrapper {
+    @include screenSize(100%, auto);
+    @include displayFlex(center, center, column);
+    position: relative;
+    padding: 3em 0;
+
+    //mobile(M)
+    @include for-phone-only {
+        padding: 2em 0;
+    }
+
+    .container {
+        @include screenSize(50%, auto);
+        @include displayFlex(center, center, row);
+
+        .title {
+            @include screenSize(95%, auto);
+            @include displayFlex(center, center, row);
+            padding-bottom: 1.5em;
+            
+            &__logo {
+                width: 7vw;
+
+                // tablet
+                @include for-tablet-only {
+                    padding: 0 .5em;
+                }
+
+                //mobile
+                @include for-phone-only {
+                    padding: 0;
+                    padding-bottom: 1em;
+                }
+            }
+
+            &__text {
+                @include typography(2.6vw, start, 1.3em, 600);
+                @include displayFlex(center, center, row);
+                gap: 10px;
+                color: $color2;
+
+                // tablet
+                @include for-tablet-only {
+                    @include typography(4vw, end, 1.3em, 600);
+                }
+
+                //mobile(M)
+                @include for-phone-only {
+                    @include typography(1vw, center, 1.3em, 600);
+                    font-size: 5vw;
+                }
+
+                //mobile(S)
+                @include for-phoneS-only {
+                    @include typography(2.6vw, center, 1.3em, 600);
+                    font-size: 7vw;
+                }
+
+                span {
+                    color: $color1;
+                    @include for-phone-only {
+                        flex-wrap: wrap;
+                    }
+                }
+            }
+
+            //tablet
+            @include for-tablet-only {
+                @include screenSize(70%, auto);
+                @include displayFlex(center, center, row);
+
+            }
+
+            //phone
+            @include for-phone-only {
+                @include displayFlex(center, center, column);
+
+            }
+        }
+
+        @include for-tablet-only {
+            @include screenSize(100%, auto);
+            @include displayFlex(center, center, column);
+        }
+    }
+
+    .cards {
+        @include screenSize(80%, auto);
+        @include displayFlex(center, center, row);
+    }
+
+    .button {
+        padding: 2em 0;
+    }
+}

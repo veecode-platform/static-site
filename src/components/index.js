@@ -1,5 +1,6 @@
 export { default as Header } from './header/Header';
 export { default as Button } from './button/Button';
+export { default as SupportCards } from './supportCards/SupportCards';
 export { PaypalComponent as Paypal } from './paypal/PaypalComponent';
 export { default as Breadcrumb } from './breadcrumb/Breadcrumb';
 export { default as Footer} from './footer/Footer';
@@ -13,3 +14,4 @@ export { default as Switch} from "./switch/Switch";
 export { default as Loading } from "./loading/Loading";
 export { default as Guarantees } from "./guarantees/Guarantees";
 export { default as FormElement} from "./formElement/FormElement";
+export { default as DividerBottom } from "./dividerBottom/DividerBottom";
