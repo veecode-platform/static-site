@@ -59,7 +59,6 @@
         @include screenSize(80%, 60%);
         margin: 2em 0 1em;
         padding: 1em 0;
-
         span {
           @include typography(2.5vw, center, 1.4em, 400);
           color: $color1;

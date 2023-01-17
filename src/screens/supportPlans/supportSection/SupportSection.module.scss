@@ -19,7 +19,7 @@
             @include screenSize(95%, auto);
             @include displayFlex(center, center, row);
             padding-bottom: 1.5em;
-
+            
             &__logo {
                 width: 7vw;
 
