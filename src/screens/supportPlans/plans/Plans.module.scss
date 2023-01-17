@@ -4,9 +4,7 @@
     @include screenSize(100%, auto);
     @include backgroundImage('/assets/home/bglight.webp');
     @include displayFlex(flex-start, center, column);
-
     
-
     //viewport
     @include for-viewport-only {
         @include screenSize(100%, auto);

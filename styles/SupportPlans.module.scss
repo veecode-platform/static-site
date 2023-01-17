@@ -5,6 +5,7 @@
     @include displayFlex(center, center, column);
     .stacks{
         @include displayFlex(center, center, column);
-        background: $color15;
+        background: linear-gradient($color15,$color8);
+        padding: 2em 0 4em 0;
     }
 }

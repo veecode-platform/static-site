@@ -4,8 +4,13 @@
   @include screenSize(100%, auto);
   @include displayFlex(center, center, column);
   position: relative;
-  // margin-top: 2rem;
   background: linear-gradient(90deg,$color3, $color14, $color14,$color14);
+  padding: 2em 0 3em 0;
+
+  // tablet
+  @include for-tablet-only{
+    padding: 1em 0 0 0;
+  }
 
   //mobile(M)
   @include for-phone-only {

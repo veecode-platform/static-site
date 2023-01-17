@@ -4,15 +4,7 @@
     @include screenSize(100%, auto);
     @include displayFlex(center, center, column);
     position: relative;
-    padding: 2em 0;
-
-    // &:nth-child(even){
-    //     background: #000;
-    // }
-
-    // &:last-child{
-    //     background: green;
-    // }
+    padding: 3em 0;
 
     //mobile(M)
     @include for-phone-only {
