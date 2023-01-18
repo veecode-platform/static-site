@@ -2,7 +2,7 @@
 
 .content {
     @include screenSize(100%, auto);
-    @include backgroundImage('/assets/home/bglight.webp');
+    @include backgroundImage('/assets/home/bglight.svg');
     background-position-x: 60%;
     @include displayFlex(flex-start, center, column);
     padding: 1em 0;
