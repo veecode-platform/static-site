@@ -5,33 +5,48 @@
     @include displayFlex(center, center, column);
     position: relative;
     padding: 3em 0;
-
     //mobile(M)
     @include for-phone-only {
         padding: 2em 0;
     }
-
     .container {
         @include screenSize(50%, auto);
         @include displayFlex(center, center, row);
-
+        // mobile
+        @include for-phone-only{
+            @include screenSize(70%, auto);
+        }
+        //mobile(S)
+        @include for-phoneS-only{
+            @include screenSize(85%, auto);
+        }
         .title {
             @include screenSize(95%, auto);
             @include displayFlex(center, center, row);
             padding-bottom: 1.5em;
-            
+            // vieport
+            @include for-viewport-only{
+                @include screenSize(auto, auto);
+                gap: .8rem;
+            }
+            // // mobile
+            // @include for-phone-only{
+            //     width: 100%;
+            // }         
             &__logo {
                 width: 7vw;
-
+                // vieport
+                @include for-viewport-only{
+                    width: 4vw;
+                }
                 // tablet
                 @include for-tablet-only {
-                    padding: 0 .5em;
+                    width: 4.8vw;
+                    min-width: 48px;
                 }
-
                 //mobile
                 @include for-phone-only {
-                    padding: 0;
-                    padding-bottom: 1em;
+                    width: 8vw;
                 }
             }
 
@@ -40,24 +55,18 @@
                 @include displayFlex(center, center, row);
                 gap: 10px;
                 color: $color2;
-
                 // tablet
                 @include for-tablet-only {
-                    @include typography(4vw, end, 1.3em, 600);
+                    @include typography(2.2vw, center, 1.3em, 600);
                 }
-
                 //mobile(M)
                 @include for-phone-only {
-                    @include typography(1vw, center, 1.3em, 600);
-                    font-size: 5vw;
+                    @include typography(4.5vw, center, 1.3em, 600);
                 }
-
                 //mobile(S)
                 @include for-phoneS-only {
-                    @include typography(2.6vw, center, 1.3em, 600);
-                    font-size: 7vw;
+                    @include typography(5vw, center, 1.3em, 600);
                 }
-
                 span {
                     color: $color1;
                     @include for-phone-only {
@@ -65,24 +74,6 @@
                     }
                 }
             }
-
-            //tablet
-            @include for-tablet-only {
-                @include screenSize(70%, auto);
-                @include displayFlex(center, center, row);
-
-            }
-
-            //phone
-            @include for-phone-only {
-                @include displayFlex(center, center, column);
-
-            }
-        }
-
-        @include for-tablet-only {
-            @include screenSize(100%, auto);
-            @include displayFlex(center, center, column);
         }
     }
 
