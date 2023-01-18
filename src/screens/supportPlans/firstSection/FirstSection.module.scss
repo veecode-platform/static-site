@@ -6,73 +6,55 @@
   position: relative;
   background: linear-gradient(90deg,$color3, $color14, $color14,$color14);
   padding: 2em 0 3em 0;
-
   // tablet
   @include for-tablet-only{
     padding: 1em 0 0 0;
   }
-
   //mobile(M)
   @include for-phone-only {
     padding: 5vh 0;
   }
-
   //mobile(S)
   @include for-phoneS-only {
     margin-top: 0;
   }
-
-  //mobile(M)
-  @include for-phone-only {
-    padding-bottom: 3em;
-  }
-
   .content {
     @include screenSize(80%, auto);
     @include displayFlex(center, center, row);
     padding: 8em 0 14em 0;
     z-index: 1;
-
     //tablet
     @include for-tabletS-only {
       @include displayFlex(center, center, column-reverse);
-
       padding: 9vh 0;
     }
-
     //mobile(M)
     @include for-phone-only {
       padding: 5vh 0 0 0;
     }
-
     .info {
       @include screenSize(50%, auto);
       @include displayFlex(center, flex-start, column);
-
+      // tablet
       @include for-tabletS-only {
         @include screenSize(100%, auto);
         @include displayFlex(center, center, column);
       }
-
-
       &__title {
         @include screenSize(80%, 60%);
         margin: 2em 0 1em;
         padding: 1em 0;
         span {
-          @include typography(2.5vw, center, 1.4em, 400);
+          @include typography(2.5vw, center, 1.4em, 700);
           color: $color1;
-
           //tablet(s)
           @include for-tabletS-only {
-            @include typography(3vw, center, 1.3em, 300);
+            @include typography(3vw, center, 1.3em, 700);
           }
-
           //mobile(M)
           @include for-phone-only {
-            @include typography(5vw, center, 1.3em, 300);
+            @include typography(5vw, center, 1.3em, 700);
           }
-
           //mobile(S)
           @include for-phoneS-only {
             font-size: 7vw;
@@ -84,63 +66,52 @@
         @include for-tablet-only {
           margin: 2em 0 0.5em 0;
         }
-
         //mobile(M)
         @include for-phone-only {
           @include screenSize(80%, auto);
           margin: 3em 0 1.5em;
         }
-
         //mobile(S)
         @include for-phoneS-only {
           @include screenSize(95%, auto);
         }
-
         //mobile(XS)
         @include for-phoneXS-only {
           margin-top: 10em;
         }
-
         h1 {
           @include typography(2.3vw, left, 1.5em, 300);
           color: $color2;
-
           //tablet(s)
           @include for-tabletS-only {
             @include typography(3vw, center, 1.3em, 300);
           }
-
           //mobile
           @include for-phone-only {
             @include typography(5vw, center, 1.3em, 300);
           }
-
           //mobile(S)
           @include for-phoneS-only {
             font-size: 7vw;
           }
         }
       }
-
       &__buttons {
         @include screenSize(20vw, auto);
         @include displayFlex(flex-end, center, row-reverse);
         padding: 1em 0;
-
+        // tablet
         @include for-tablet-only {
           // margin: 25em 0 1em;
         }
-
         //mobile(M)
         @include for-tabletS-only {
           @include screenSize(75%, auto);
           @include displayFlex(center, center, row); // Change
-
           margin: 1em 0 1em;
           padding: 1em 0 3em 0;
           flex-wrap: wrap;
         }
-
         //mobile(S)
         @include for-phoneS-only {
           @include screenSize(100%, auto);
@@ -150,37 +121,16 @@
         }
       }
     }
-
     .animation {
       @include screenSize(65%, auto);
       z-index: -1;
-
       @include for-phone-only {
         @include screenSize(100%, auto);
         @include displayFlex(center, center, row);
       }
-
       &__img {
         width: 100%;
         transform: scale(1.3);
-      }
-    }
-
-    &__staticNote {
-      @include screenSize(60%, auto);
-
-      @include for-tablet-only {
-        @include screenSize(70%, auto);
-        width: 60vw;
-      }
-
-      @include for-tabletS-only {
-        @include screenSize(100%, auto);
-        @include displayFlex(center, center, row);
-      }
-
-      @include for-phone-only {
-        width: 20%;
       }
     }
   }
