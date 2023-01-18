@@ -44,6 +44,11 @@
         min-height: 80px;
         // padding: 0 1em;
         margin: 2.5em 1em;
+        // tablet(S)
+        @include for-tabletS-only{
+            min-height: 50px;
+            padding: 0 1em;
+        }
         // mobile
         @include for-phone-only{
             min-height: auto;
@@ -153,6 +158,10 @@
             //tablet
             @include for-tablet-only {
                 font-size: 1.04vw;
+            }
+            //tablet(S)
+            @include for-tabletS-only {
+                font-size: 1.1vw;
             }
             //mobile(M)
             @include for-phone-only {
