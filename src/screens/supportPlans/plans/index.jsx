@@ -29,13 +29,6 @@ const Plans = () => {
                         <strong>Lower the barriers</strong> for your development team through our specialized support in the stacks you work in.
                     </p>
                 </div>
-                <div className={style.group}>
-                    <img
-                        className={style.group__img}
-                        src={stacks}
-                        alt="Stacks Logo - Desktop Version"
-                    />
-                </div>
             </div>
 
 

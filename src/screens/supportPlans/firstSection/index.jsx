@@ -12,10 +12,12 @@ const FirstSection = () => {
     <section className={style.wrapper}>
       <article className={style.content}>
         <div className={style.info}>
-
           <div className={style.info__title}>
             <h1>
-              Get <span><strong>expert support</strong></span> from the <strong>best solutions</strong> on the market in just a few clicks at an <strong>affordable price</strong>.
+              Get <span>expert support</span>{" "} 
+              from the <strong>best solutions</strong>{" "}
+               on the market in just a few clicks at an 
+               {" "}<strong>affordable price</strong>.
             </h1>
           </div>
           <div className={style.info__buttons}>
@@ -34,13 +36,6 @@ const FirstSection = () => {
             />
           </div>
         </div>
-        {/* <div className={style.content__staticNote}>
-          <div>
-            <img
-              src={static_note}
-            />
-          </div>
-        </div> */}
       </article>
       <Divider/>
     </section>
