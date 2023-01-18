@@ -8,6 +8,7 @@
   padding: 2em 0 3.5em 0;
   // tablet
   @include for-tablet-only{
+    background: $color14;
     padding: 1em 0 0 0;
   }
   //mobile(M)
@@ -26,11 +27,15 @@
     //tablet
     @include for-tabletS-only {
       @include displayFlex(center, center, column-reverse);
-      padding: 9vh 0;
+      padding: 8em 0;
     }
     //mobile(M)
     @include for-phone-only {
-      padding: 5vh 0 0 0;
+      padding: 7em 1em;
+    }
+    // mobile(S)
+    @include for-phoneS-only{
+      padding: 5em 1em;
     }
     .info {
       @include screenSize(50%, auto);
@@ -124,9 +129,14 @@
     .animation {
       @include screenSize(65%, auto);
       z-index: -1;
+      // mobile(M)
       @include for-phone-only {
         @include screenSize(100%, auto);
         @include displayFlex(center, center, row);
+      }
+      // mobile(S)
+      @include for-phoneS-only{
+        width: 85vw;
       }
       &__img {
         width: 100%;

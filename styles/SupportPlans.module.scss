@@ -3,6 +3,7 @@
 .wrapper {
     @include screenSize(100%, auto);
     @include displayFlex(center, center, column);
+    background: #000;
     font-family: $font-text;
     .stacks{
         @include displayFlex(center, center, column);

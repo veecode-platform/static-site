@@ -2,7 +2,7 @@ import React from "react";
 import style from "../../../styles/SupportPlans.module.scss";
 import SupportSection from "./supportSection";
 import data from "./data.json";
-import { Footer, Header } from "../../components";
+import { Footer, Header, Tools } from "../../components";
 import Plans from "./plans";
 import FirstSection from "./firstSection";
 
@@ -26,6 +26,7 @@ const SupportPlans = () => {
       })}
       </section>
       <Plans />
+      {/* <Tools bg="#131313"/> */}
       <Footer />
     </main>
   );
