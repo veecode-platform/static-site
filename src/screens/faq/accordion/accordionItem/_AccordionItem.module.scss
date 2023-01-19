@@ -99,7 +99,7 @@
         //mobile
         @include for-phone-only{
             height: 100%;
-            padding: .1em 0;
+            padding: 1em 0;
         }
         //mobile(S)
         @include for-phoneS-only{
