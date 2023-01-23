@@ -98,11 +98,12 @@
         transition: all .5s ease-in-out;
         //mobile
         @include for-phone-only{
-            height: 200px;
+            height: 100%;
+            padding: 1em 0;
         }
         //mobile(S)
         @include for-phoneS-only{
-            max-height: 250px;
+            // max-height: 250px;
         }
     }
 }

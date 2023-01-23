@@ -1,5 +1,5 @@
 import React from 'react'
-import { DefaultPage } from '../../components'
+import { ContactBar, DefaultPage } from '../../components'
 import Accordion from './accordion'
 
 const Faq = () => {
@@ -11,6 +11,7 @@ const Faq = () => {
     subtitle="Frequently Asked Questions"
     >
     <Accordion/>
+    <ContactBar />
     </DefaultPage>
   )
 }
