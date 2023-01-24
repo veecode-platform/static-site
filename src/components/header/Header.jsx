@@ -3,12 +3,15 @@ import classNames from 'classnames';
 import Link from 'next/link';
 import style from '../../../styles/Header.module.scss';
 import Button from '../button/Button';
+import { useTranslation } from 'react-i18next';
 
 
 const Logo = '../assets/home/logo.png';
 
 const Header = ({fixedHeader, showButton}) => {
-  return (
+  const { t } = useTranslation();
+  
+  return (  
     <header
       className={
       classNames({
@@ -29,7 +32,7 @@ const Header = ({fixedHeader, showButton}) => {
         {showButton && <div className={style.content__buyButton} >
           <Link href="/compare-plans" passHref>            
             <a>
-              <Button headerButton>Buy Now</Button>
+              <Button headerButton>{t('Buy Now')}</Button>
             </a>         
           </Link>
         </div>}
