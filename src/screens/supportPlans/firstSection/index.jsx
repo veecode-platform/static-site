@@ -20,7 +20,7 @@ const FirstSection = () => {
               {t('Get')} <span>{t('expert support')}</span>{" "} 
               {t('from the')} <strong>{t('best solutions')}</strong>{" "}
                {t('on the market in just a few clicks at an')} 
-               {" "}<strong>{t('affordable price')}</strong>.
+               {" "}<strong>{t('affordable price')}</strong>
             </h1>
           </div>
           <div className={style.info__buttons}>
