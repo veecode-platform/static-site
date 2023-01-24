@@ -1,12 +1,15 @@
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 import PTHOME from './locales/pt/homescreen.json';
+import PTLP from './locales/pt/support-plans.json';
 import ENHOME from './locales/en/homescreen.json';
-import i18next from 'i18next';
+import ENLP from './locales/en/suppot-plans.json';
+
 
 const resources = {
-    'pt-BR': PTHOME,
-    'en-US': ENHOME
+    'pt-BR': PTLP,
+    'en-US': ENLP,
+    
 }
 
 i18n
