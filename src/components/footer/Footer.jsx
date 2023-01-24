@@ -3,10 +3,13 @@ import style from "../../../styles/Footer.module.scss";
 import { FaFacebookSquare, FaInstagram, FaLinkedin, FaTwitterSquare } from "react-icons/fa";
 import Link from "next/link";
 import { gtagEvents } from "../../../utils/gtag";
+import { useTranslation } from 'react-i18next';
 
 const Logo = "/assets/home/logo.png";
 
 const Footer = () => {
+  const { t } = useTranslation();
+
   return (
     <footer className={style.footer}>
       <section className={style.content}>
@@ -43,27 +46,27 @@ const Footer = () => {
           <div className={style["content__details-lists"]}>
             <ul>
               <li>
-                <span>About</span>
+                <span>{t('About')}</span>
               </li>
-              <Link href="/how-it-works"><a><li>How it Works</li></a></Link>
-              <Link href="/support"><a><li>Support</li></a></Link>
-              <Link href="https://github.com/vfipaas/safira-support/discussions" passHref><a target="_blank" onClick={()=>gtagEvents('joinUs')}><li>Join our Comunity</li></a></Link>
+              <Link href="/how-it-works"><a><li>{t('How it Works')}</li></a></Link>
+              <Link href="/support"><a><li>{t('Support')}</li></a></Link>
+              <Link href="https://github.com/vfipaas/safira-support/discussions" passHref><a target="_blank" onClick={()=>gtagEvents('joinUs')}><li>{t('Join our Comunity')}</li></a></Link>
             </ul>
             <ul>
               <li>
-                <span>Docs</span>
+                <span>{t('Docs')}</span>
               </li>
-              <Link href="https://docs.platform.vee.codes/docs/intro" passHref><a target="_blank" onClick={()=>gtagEvents('safiraDocs')}><li>Safira CLI</li></a></Link>
+              <Link href="https://docs.platform.vee.codes/docs/intro" passHref><a target="_blank" onClick={()=>gtagEvents('safiraDocs')}><li>{t('Safira CLI')}</li></a></Link>
               <Link href="https://docs.vkpr.net/docs/intro/" passHref><a target="_blank" onClick={()=>gtagEvents('vkprDocs')}><li>VKPR</li></a></Link>
               <Link href="https://docs.platform.vee.codes/docs/tutorials/devportal/" passHref><a target="_blank" onClick={()=>gtagEvents('devportal')} ><li>Devportal</li></a></Link>
             </ul>
             <ul>
               <li>
-                <span>More</span>
+                <span>{t('More')}</span>
               </li>
-              <Link href="/terms-of-service"><a><li>Terms of Service</li></a></Link>
-              <Link href="/privacy-policy"><a><li>Policy Privacy</li></a></Link>
-              <Link href="/contact-us"><a><li>Contact Us</li></a></Link>
+              <Link href="/terms-of-service"><a><li>{t('Terms of Service')}</li></a></Link>
+              <Link href="/privacy-policy"><a><li>{t('Policy Privacy')}</li></a></Link>
+              <Link href="/contact-us"><a><li>{t('Contact Us')}</li></a></Link>
               <Link href="/faq"><a><li>FAQ</li></a></Link>
             </ul>
           </div>
@@ -71,8 +74,7 @@ const Footer = () => {
       </section>
       <section className={style.footer__copy}>
         <p>
-          Copyright &copy; {new Date().getFullYear()} VeeCode Platform. All
-          rights reserved
+          Copyright &copy; {new Date().getFullYear()} VeeCode Platform. {t('All rights reserved')}
         </p>
       </section>
     </footer>

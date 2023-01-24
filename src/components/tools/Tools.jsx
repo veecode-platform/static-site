@@ -1,8 +1,10 @@
 /* eslint-disable @next/next/no-img-element */
 import React from 'react'
 import style from '../../../styles/Tools.module.scss';
+import { useTranslation } from 'react-i18next';
 
 const Tools = ({bg, title}) => {
+
   const images = [
     { 
       src:"/assets/home/tools/ARGO.png",
@@ -37,7 +39,11 @@ const Tools = ({bg, title}) => {
       alt:"AWS Logo"
     }
   ]
+
+  const { t } = useTranslation();
+
   return (
+    
     <div className={style.tools}
       style={{background:`${bg}`}}
       >
@@ -45,7 +51,7 @@ const Tools = ({bg, title}) => {
           title && (
             <div 
               className={style.tools__title}>
-              <h2>Our support also includes</h2>
+              <h2>{t('Our support also includes')}</h2>
             </div>
           )
         }

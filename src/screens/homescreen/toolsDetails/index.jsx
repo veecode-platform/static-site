@@ -2,6 +2,7 @@
 import { DividerBottom } from "../../../components";
 import Card from "./card";
 import style from "./ToolsDetails.module.scss";
+import { useTranslation } from 'react-i18next';
 
 const Tools = [
   {
@@ -43,15 +44,17 @@ const Tools = [
 ]
 
 const ToolsDetails = () => {
+  const { t } = useTranslation();
+
   return (
     <section className={style.content}>
       <div className={style.content__title}>
         <h2>
-          Discover our <span>Free Tools</span>
+          {t('Discover our')} <span>{t('Free Tools')}</span>
         </h2>
       </div>
       <div className={style.content__subtitle}>
-        <p>With our <span>Support</span> and our <span>Open Source tools</span> your team is free to serve your business areas.</p>
+        <p>{t('With our')} <span>{t('Support')}</span> {t('and our')} <span>{t('Open Source tools')}</span> {t('your team is free to serve your business areas.')}</p>
       </div>
       <article className={style.content__wrapper}>
         {Tools.map(item => (
