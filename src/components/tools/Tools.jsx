@@ -48,7 +48,7 @@ const Tools = ({bg, title}) => {
       style={{background:`${bg}`}}
       >
         {
-          title && (
+          t(title) && (
             <div 
               className={style.tools__title}>
               <h2>{t('Our support also includes')}</h2>
