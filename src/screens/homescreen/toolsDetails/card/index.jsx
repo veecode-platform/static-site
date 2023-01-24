@@ -13,7 +13,7 @@ const Card = ({ image, title, desc, buttonLabel, link ,tag}) => {
     <div className={style.card}>
       <img src={image} alt={title} className={style.card__image} />
       <h3 className={style.card__title}>{title}</h3>
-      <p className={style.card__desc}>{t({desc})}</p>
+      <p className={style.card__desc}>{t(desc)}</p>
       <div className={style.card__buttonWrapper}>
         <Link href={link}>
           <a target="_blank">
