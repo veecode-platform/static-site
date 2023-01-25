@@ -6,7 +6,7 @@ import Button from '../button/Button';
 import { useTranslation } from 'react-i18next';
 
 
-const Logo = '../assets/logo/logo.png';
+const Logo = '/assets/logo/logo.png';
 
 const Header = ({fixedHeader, showButton}) => {
   const { t } = useTranslation();
