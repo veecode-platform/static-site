@@ -66,7 +66,7 @@ const FirstSection = () => {
 
           <Link href="/support" passHref>
             <a>
-              <Button>{t('Learn More')}</Button>
+              <Button>Learn More</Button>
             </a>
           </Link>
         </div>
