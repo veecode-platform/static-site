@@ -4,6 +4,7 @@ import PTHOME from './locales/pt/homescreen.json';
 import PTLP from './locales/pt/support-plans.json';
 import ENHOME from './locales/en/homescreen.json';
 import ENLP from './locales/en/suppot-plans.json';
+import i18next from 'i18next';
 
 
 const resources = {
@@ -16,8 +17,10 @@ i18n
     .use(initReactI18next)
     .init({
     resources,
-    fallbackLng: ["en-US"],
-    lng : "pt-BR",
+    fallbackLng: "pt-BR",
+    supportedLngs:['pt-BR', 'en-US'],
+    lng : i18n.language,
+    ns: 'translation',
     interpolation: {
         escapeValue:false
     }
