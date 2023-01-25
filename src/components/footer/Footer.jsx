@@ -5,7 +5,7 @@ import Link from "next/link";
 import { gtagEvents } from "../../../utils/gtag";
 import { useTranslation } from 'react-i18next';
 
-const Logo = "/assets/home/logo.png";
+const Logo = "/assets/logo/logo.png";
 
 const Footer = () => {
   const { t } = useTranslation();

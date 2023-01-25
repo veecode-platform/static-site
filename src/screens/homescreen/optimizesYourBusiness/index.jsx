@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 // import { useTranslation } from 'react-i18next';
 
-const Icon = "assets/home/image3.avif";
+const Icon = "/assets/home/image3.avif";
 
 const OptimizeYourBusiness = () => {
   // const { t } = useTranslation();

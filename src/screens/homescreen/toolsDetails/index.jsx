@@ -7,7 +7,7 @@ import { useTranslation } from 'react-i18next';
 const Tools = [
   {
     id: 0,
-    image: "assets/home/toolsDetails/image1.png",
+    image: "/assets/home/toolsDetails/image1.png",
     title: "Devportal",
     desc: "Is a platform that centralizes your Specs and APIs making it easy to control microservices.",
     buttonLabel: "Devportal",
@@ -16,7 +16,7 @@ const Tools = [
   },
   {
     id: 1,
-    image: "assets/home/toolsDetails/image2.png",
+    image: "/assets/home/toolsDetails/image2.png",
     title: "Safira-CLI",
     desc: "Is our command line interface that speeds up the building of APIs from an OpenAPI file.",
     buttonLabel: "Safira-CLI",
@@ -25,7 +25,7 @@ const Tools = [
   },
   {
     id: 2,
-    image: "assets/home/toolsDetails/image3.png",
+    image: "/assets/home/toolsDetails/image3.png",
     title: "VKPR",
     desc: "Builds for you a Cloud Infrastructure with a few lines of code.",
     buttonLabel: "VKPR",
@@ -34,7 +34,7 @@ const Tools = [
   },
   {
     id: 3,
-    image: "assets/home/toolsDetails/image4.png",
+    image: "/assets/home/toolsDetails/image4.png",
     title: "Join In Comunity",
     desc: "Increase your productivity also helping the community to grow.",
     buttonLabel: "Join Us",
