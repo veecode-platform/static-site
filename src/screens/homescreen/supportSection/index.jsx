@@ -5,8 +5,8 @@ import { Button } from "../../../components";
 import style from "./SupportSection.module.scss";
 // import { useTranslation } from 'react-i18next';
 
-const BgDesktop = "assets/home/bg3.webp";
-const BgMobile = "assets/home/bgmobile2.webp";
+const BgDesktop = "/assets/home/bg3.webp";
+const BgMobile = "/assets/home/bgmobile2.webp";
 
 const SupportSection = () => {
   // const { t } = useTranslation();

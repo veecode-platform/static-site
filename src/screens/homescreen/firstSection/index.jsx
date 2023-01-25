@@ -6,9 +6,9 @@ import Image from "next/image";
 import TextSlide from "./textSlide";
 import { gtagSafiraDocs } from "../../../../utils/gtag";
 
-const Logo = "assets/home/logo.png";
-const BgDesktop = "assets/home/bg1.webp"; 
-const BgMobile = "assets/home/bgmobile1.webp";
+const Logo = "/assets/logo/logo.png";
+const BgDesktop = "/assets/home/bg1.webp"; 
+const BgMobile = "/assets/home/bgmobile1.webp";
 // import '../../i18n';
 import { useTranslation } from 'react-i18next';
 

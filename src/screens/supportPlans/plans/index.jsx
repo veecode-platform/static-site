@@ -4,7 +4,7 @@ import PlansDetails from "./plansDetails";
 import { FaCheck } from "react-icons/fa";
 import { useTranslation } from 'react-i18next';
 
-const veeCodeLogo = '/assets/home/black_logo.png';
+const veeCodeLogo = '/assets/logo/black_logo.png';
 const stacks = '/assets/home/stacks_plan.png'
 
 const Plans = () => {

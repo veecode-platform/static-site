@@ -1,8 +1,8 @@
 import style from './Banner.module.scss'
 import { useTranslation } from 'react-i18next';
 
-const Element1 = "assets/home/element1.png";
-const Element2 = "assets/home/element2.png";
+const Element1 = "/assets/home/element1.png";
+const Element2 = "/assets/home/element2.png";
 
 const Banner = () => {
   const { t } = useTranslation();
