@@ -22,7 +22,7 @@ const OptimizeYourBusiness = () => {
           <div className={style.details}>
             <div className={style.details__text}>
               <p>
-                Automate the provisioning and construction of cloud APIs, assisted by our')} 
+                Automate the provisioning and construction of cloud APIs, assisted by our 
                 <strong> expert support</strong> and with a
                 <strong> cost that fits in your pocket.</strong>
               </p>
