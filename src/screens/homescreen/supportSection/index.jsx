@@ -3,11 +3,14 @@ import Image from "next/image";
 import Link from "next/link";
 import { Button } from "../../../components";
 import style from "./SupportSection.module.scss";
+import { useTranslation } from 'react-i18next';
 
 const BgDesktop = "assets/home/bg3.webp";
 const BgMobile = "assets/home/bgmobile2.webp";
 
 const SupportSection = () => {
+  const { t } = useTranslation();
+
   return (
     <section className={style.wrapper}>
       {/* Background */}
@@ -27,25 +30,25 @@ const SupportSection = () => {
         <div className={style.content__text}>
           <div className={style["content__text-title"]}>
             <h2>
-              <span>Unlock</span>
+              <span>{t('Unlock')}</span>
               <br />
-              your team&apos;s potential
+              {t("your team's potential")}
             </h2>
           </div>
           <div className={style["content__text-desc"]}>
-            <strong>Benefits of VeeCode Platform support</strong>
+            <strong>{t('Benefits of VeeCode Platform support')}</strong>
             <ul className={style.list}>
-              <li>Direct assistance to your technical team.</li>
-              <li>Get the best technology support on hand.</li> 
-              <li>Service with established SLA.</li>
-              <li>Most affordable price on the market.</li>
-              <li>Solve all of your problems with Devops, IaC, Cloud, Microsservices and more.</li>
+              <li>{t('Direct assistance to your technical team.')}</li>
+              <li>{t('Get the best technology support on hand.')}</li> 
+              <li>{t('Service with established SLA.')}</li>
+              <li>{t('Most affordable price on the market.')}</li>
+              <li>{t('Solve all of your problems with Devops, IaC, Cloud, Microsservices and more.')}</li>
             </ul>
           </div>
           <div className={style["content__text-buttonWrapper"]}>
             <Link href="/compare-plans" prefetch={false}>
               <a>
-                <Button>Buy Now</Button>
+                <Button>{t('Buy Now')}</Button>
               </a>
             </Link>
             {/* <Link href="/support" prefetch={false}>

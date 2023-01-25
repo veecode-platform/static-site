@@ -2,11 +2,14 @@
 import style from "./Plans.module.scss";
 import PlansDetails from "./plansDetails";
 import { FaCheck } from "react-icons/fa";
+import { useTranslation } from 'react-i18next';
 
 const veeCodeLogo = '/assets/home/black_logo.png';
 const stacks = '/assets/home/stacks_plan.png'
 
 const Plans = () => {
+  const { t } = useTranslation();
+
     return (
         <section className={style.content} id="plans">
             <div className={style.header}>
@@ -19,14 +22,14 @@ const Plans = () => {
                 </div>
                 <div className={style.header__title}>
                     <h2>
-                        <span>Plans</span>
+                        <span>{t('Plans')}</span>
                     </h2>
                 </div>
             </div>
             <div className={style.body}>
                 <div className={style.subtitle}>
                     <p>
-                        <strong>Lower the barriers</strong> for your development team through our specialized support in the stacks you work in.
+                        <strong>{t('Lower the barriers')}</strong> {t('for your development team through our specialized support in the stacks you work in')}
                     </p>
                 </div>
             </div>
@@ -35,33 +38,33 @@ const Plans = () => {
             <article className={style.plans}>
                 {/* STANDARD */}
                 <PlansDetails
-                    title="Standard"
-                    subtitle="Solve your company's technological barriers in a practical and objective way."
+                    title={t("Standard")}
+                    subtitle={t("Solve your company's technological barriers in a practical and objective way")}
                     link="/validate?plan=standard"
-                    label="Start at"
+                    label={t("Start at")}
                     emphasis="$ 1990"
-                    text="per Month"
-                    buttonLabel="Sign Plan"
+                    text={t("per Month")}
+                    buttonLabel={t("Sign Plan")}
                 >
-                    <li><span><FaCheck /></span>8x5 support</li>
-                    <li><span><FaCheck /></span>One business day SLA</li>
-                    <li><span><FaCheck /></span>10 tickets per month</li>
-                    <li><span><FaCheck /></span>2 simultaneous tickets</li>
-                    <li><span><FaCheck /></span>Direct access to technical professionals</li>
+                    <li><span><FaCheck /></span>{t('8x5 support')}</li>
+                    <li><span><FaCheck /></span>{t('One business day SLA')}</li>
+                    <li><span><FaCheck /></span>{t('10 tickets per month')}</li>
+                    <li><span><FaCheck /></span>{t('2 simultaneous tickets')}</li>
+                    <li><span><FaCheck /></span>{t('Direct access to technical professionals')}</li>
                 </PlansDetails>
                 {/* ENTERPRISE */}
                 <PlansDetails
-                    title="Enterprise"
-                    subtitle="Get personalized service according to your company's specific needs."
+                    title={t("Enterprise")}
+                    subtitle={t("Get personalized service according to your company's specific needs")}
                     link="/contact-enterprise"
-                    headline="Personalize your experience"
-                    buttonLabel="Contact Us"
+                    headline={t('Personalize your experience')}
+                    buttonLabel={t('Contact Us')}
                 >
-                    <li><span><FaCheck /></span>24x7 support</li>
-                    <li><span><FaCheck /></span>SLA on the same business day</li>
-                    <li><span><FaCheck /></span>Prioritized bug fixes</li>
-                    <li><span><FaCheck /></span> Direct access to technical professionals</li>
-                    <li><span><FaCheck /></span> DevOps training and documentation</li>
+                    <li><span><FaCheck /></span>{t('24x7 support')}</li>
+                    <li><span><FaCheck /></span>{t('SLA on the same business day')}</li>
+                    <li><span><FaCheck /></span>{t('Prioritized bug fixes')}</li>
+                    <li><span><FaCheck /></span> {t('Direct access to technical professionals')}</li>
+                    <li><span><FaCheck /></span> {t('DevOps training and documentation')}</li>
                 </PlansDetails>
             </article>
         </section>

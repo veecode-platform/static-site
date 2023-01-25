@@ -7,6 +7,7 @@ import Banner from './banner';
 import SupportSection from './supportSection';
 import Tools from './tools';
 import ToolsDetails from './toolsDetails';
+import '../../i18n';
 
 const Homescreen = () => {
   return (
