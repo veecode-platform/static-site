@@ -5,22 +5,24 @@ import PTLP from './locales/pt/support-plans.json';
 import ENHOME from './locales/en/homescreen.json';
 import ENLP from './locales/en/suppot-plans.json';
 import i18next from 'i18next';
-
+import detector from "i18next-browser-languagedetector";
 
 const resources = {
-    'pt-BR': PTLP,
-    'en-US': ENLP,
+    'pt': PTLP,
+    'en': ENLP,
     
 }
-
+console.log(detector);
 i18n
+    .use(detector)
     .use(initReactI18next)
     .init({
     resources,
-    fallbackLng: "pt-BR",
-    supportedLngs:['pt-BR', 'en-US'],
+    fallbackLng: "pt",
+    supportedLngs:['pt', 'en'],
     lng : i18n.language,
     ns: 'translation',
+    useBrowserDefault: true,
     interpolation: {
         escapeValue:false
     }
