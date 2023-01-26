@@ -8,31 +8,31 @@
         "data": [
             {
                 "id": 0,
-                "title": "How we help you?",
+                "title": "How we help you",
                 "items": [
-                    "Setup for high-availability scenarios.",
-                    "Provisioning Automation.",
-                    "Kong Gateway installation and support.",
+                    "Setup for high-availability scenarios",
+                    "Provisioning Automation",
+                    "Kong Gateway installation and support",
                     "Sustainment Service"
                 ]
             },
             {
                 "id": 1,
-                "title": "What do you achieve?",
+                "title": "What do you achieve",
                 "items": [
-                    "End-to-end automation for API's (APIOps).",
-                    "APIs Observability.",
-                    "APIs Security.",
-                    "Organization of APIs in Microservices architecture."
+                    "End-to-end automation for API's (APIOps)",
+                    "APIs Observability",
+                    "APIs Security",
+                    "Organization of APIs in Microservices architecture"
                 ]
             },
             {
                 "id": 2,
-                "title": "To Whom?",
+                "title": "To Whom",
                 "items": [
-                    "Looking for an API Manager.",
-                    "Looking for a modern API Gateway, prioritizing Kong.",
-                    "Using Kong Community.",
+                    "Looking for an API Manager",
+                    "Looking for a modern API Gateway, prioritizing Kong",
+                    "Using Kong Community",
                     "Need professional support for your open source choice"
                 ]
             }
@@ -47,32 +47,32 @@
         "data": [
             {
                 "id": 0,
-                "title": "How we help you?",
+                "title": "How we help you",
                 "items": [
-                    "Ready-made automations for building, testing and delivering API's.",
-                    "Project templates and pipelines.",
-                    "Spec-first development with OpenAPI.",
-                    "Standardization for APIOps."
+                    "Ready-made automations for building, testing and delivering API's",
+                    "Project templates and pipelines",
+                    "Spec-first development with OpenAPI",
+                    "Standardization for APIOps"
                 ]
             },
             {
                 "id": 1,
-                "title": "What do you achieve?",
+                "title": "What do you achieve",
                 "items": [
-                    "Speed in API development.",
-                    "Optimization of API delivery pipelines.",
-                    "Developers dealing with less complexity.",
-                    "Testing Environment."
+                    "Speed in API development",
+                    "Optimization of API delivery pipelines",
+                    "Developers dealing with less complexity",
+                    "Testing Environment"
                 ]
             },
             {
                 "id": 2,
-                "title": "To Whom?",
+                "title": "To Whom",
                 "items": [
-                    "Spec-first strategy in API development.",
-                    "Desire to adopt microservices but avoiding complexity for teams.",
-                    "Searching for modernization and growth.",
-                    "Having an OpenAPI file."
+                    "Spec-first strategy in API development",
+                    "Desire to adopt microservices but avoiding complexity for teams",
+                    "Searching for modernization and growth",
+                    "Having an OpenAPI file"
                 ]
             }
         ]
@@ -87,33 +87,33 @@
             {
                 "id": 0,
                 "image": "/assets/home/icon1.png",
-                "title": "How we help you?",
+                "title": "How we help you",
                 "items": [
-                    "Cluster Provisioning Automations.",
-                    "Clusters “production-ready” in minutes.",
-                    "Monitoring the health of the application, mitigating risks.",
-                    "Observability, performance, and integration."
+                    "Cluster Provisioning Automations",
+                    "Clusters “production-ready” in minutes",
+                    "Monitoring the health of the application, mitigating risks",
+                    "Observability, performance, and integration"
                 ]
             },
             {
                 "id": 1,
                 "image": "/assets/home/icon2.png",
-                "title": "What do you achieve?",
+                "title": "What do you achieve",
                 "items": [
-                    "Self-service journeys for teams.",
-                    "Modernization of IT operation.",
-                    "Cost and operational risk reduction.",
-                    "Scaling management of the application."
+                    "Self-service journeys for teams",
+                    "Modernization of IT operation",
+                    "Cost and operational risk reduction",
+                    "Scaling management of the application"
                 ]
             },
             {
                 "id": 2,
                 "image": "/assets/home/icon3.png",
-                "title": "To Whom?",
+                "title": "To Whom",
                 "items": [
-                    "Seeking scalability in the business.",
-                    "Apply DevOps culture quickly and cost-effectively.",
-                    "Management committed to operational excellence.",
+                    "Seeking scalability in the business",
+                    "Apply DevOps culture quickly and cost-effectively",
+                    "Management committed to operational excellence",
                     "Wishes to monitor application performance"
                 ]
             }
@@ -129,34 +129,34 @@
             {
                 "id": 0,
                 "image": "/assets/home/icon1.png",
-                "title": "How we help you?",
+                "title": "How we help you",
                 "items": [
-                    "Resource Provisioning Automations.",
-                    "Facilitating AWS adoption.",
-                    "Migrating your services to the cloud.",
-                    "Observability for network performance."
+                    "Resource Provisioning Automations",
+                    "Facilitating AWS adoption",
+                    "Migrating your services to the cloud",
+                    "Observability for network performance"
                 ]
             },
             {
                 "id": 1,
                 "image": "/assets/home/icon2.png",
-                "title": "What do you achieve?",
+                "title": "What do you achieve",
                 "items": [
-                    "Self-service journeys for teams.",
-                    "Cloud-native maturity with low investment.",
-                    "Modernization of IT operation.",
-                    "Cost and operational risk reduction."
+                    "Self-service journeys for teams",
+                    "Cloud-native maturity with low investment",
+                    "Modernization of IT operation",
+                    "Cost and operational risk reduction"
                 ]
             },
             {
                 "id": 2,
                 "image": "/assets/home/icon3.png",
-                "title": "To Whom?",
+                "title": "To Whom",
                 "items": [
-                    "Pursuit of digital transition and scalability in the enterprise.",
-                    "Management committed to operational excellence.",
-                    "Searching for DevOps culture and practice to the team.",
-                    "Seeking to decrease cognitive load."
+                    "Pursuit of digital transition and scalability in the enterprise",
+                    "Management committed to operational excellence",
+                    "Searching for DevOps culture and practice to the team",
+                    "Seeking to decrease cognitive load"
                 ]
             }
         ]

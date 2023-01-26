@@ -3,11 +3,14 @@ import Image from "next/image";
 import Link from "next/link";
 import { Button } from "../../../components";
 import style from "./SupportSection.module.scss";
+// import { useTranslation } from 'react-i18next';
 
-const BgDesktop = "assets/home/bg3.webp";
-const BgMobile = "assets/home/bgmobile2.webp";
+const BgDesktop = "/assets/home/bg3.webp";
+const BgMobile = "/assets/home/bgmobile2.webp";
 
 const SupportSection = () => {
+  // const { t } = useTranslation();
+
   return (
     <section className={style.wrapper}>
       {/* Background */}
@@ -29,7 +32,7 @@ const SupportSection = () => {
             <h2>
               <span>Unlock</span>
               <br />
-              your team&apos;s potential
+              your team`&apos;`s potential
             </h2>
           </div>
           <div className={style["content__text-desc"]}>

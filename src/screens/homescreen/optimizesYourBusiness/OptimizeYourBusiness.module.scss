@@ -4,7 +4,8 @@
     @include screenSize(100%, auto);
     @include displayFlex(center, center, row);
     @include backgroundImage("/assets/home/bg2.webp");
-    padding: 5em 0 8em 0;
+
+    padding: 1.5em 0 5em 0;
     //tablet
     @include for-tablet-only{
      padding: 3em 0 4em 0;
@@ -16,14 +17,17 @@
     &__contentWrapper {
         @include screenSize(80%, auto);
         @include displayFlex(space-between, center, row-reverse);
+
         //mobile
         @include for-phone-only{
             @include displayFlex(center, center, column-reverse);
         }
+        
        &-text{
-        @include screenSize(45%, auto);
+        @include screenSize(40%, auto);
         @include displayFlex(center, flex-end, column);
         padding-top: 2em;
+
         //mobile(M)
         @include for-phone-only{
             @include displayFlex(center, center, column);
@@ -38,6 +42,7 @@
         .title {
             @include screenSize(100%, auto);
             margin: auto;
+
             //tablet
             @include for-tablet-only {
                 padding: 6em 0 0 0;
@@ -47,6 +52,7 @@
                 @include screenSize(100%, auto);
                 padding: 2em 0;
             }
+
             h2 {
 
                 @include typography(2.8vw, end, 1.3em, 400);
@@ -65,8 +71,9 @@
                 }
             }
         }
+
         .details {
-            @include screenSize(80%, auto);
+            @include screenSize(90%, auto);
             @include displayFlex(center, flex-start, column);
             padding-top: 3em;
             //tablet
@@ -110,7 +117,7 @@
                 }
             }
             &__buttonWrapper {
-                width: 95%;
+                width: 100%;
 
                 @include displayFlex(space-between, center, row);
                 margin-top: 4em;
@@ -136,17 +143,19 @@
             }
         }
     }
+    
     &-image {
-        @include screenSize(45%, 50%);
+        @include screenSize(65%, 50%);
         @include displayFlex(center, center, row);
-        padding: 4.5em 0 1em 0;
+        padding: 1em 0 1em 0;
         //mobile(M)
         @include for-phone-only{
-            @include screenSize(70%, auto);
+            @include screenSize(80%, auto);
             padding: 3em 0;
         }
-        .image{
+        .image {
             @include screenSize(100%, auto);
+            
             //mobile(M)
             @include for-phone-only{
                 width: 90%;

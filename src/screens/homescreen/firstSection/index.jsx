@@ -6,11 +6,15 @@ import Image from "next/image";
 import TextSlide from "./textSlide";
 import { gtagSafiraDocs } from "../../../../utils/gtag";
 
-const Logo = "assets/home/logo.png";
-const BgDesktop = "assets/home/bg1.webp"; 
-const BgMobile = "assets/home/bgmobile1.webp";
+const Logo = "/assets/logo/logo.png";
+const BgDesktop = "/assets/home/bg1.webp"; 
+const BgMobile = "/assets/home/bgmobile1.webp";
+// import '../../i18n';
+import { useTranslation } from 'react-i18next';
 
 const FirstSection = () => {
+  const { t } = useTranslation();
+
   return (
     <section className={style.wrapper}>
       {/* Background */}
@@ -46,11 +50,10 @@ const FirstSection = () => {
         </div>
         <div className={style.content__text}>
           <p>
-            Your transition to the cloud doesn&lsquo;t have to be
-            time-consuming, expensive, or lonely. Count on our{" "}
+            Your transition to the cloud doesn&lsquo;t have to be time-consuming, expensive, or lonely. Count on our{" "}
             <strong>professional support</strong> and{" "}
-            <strong>free tools</strong> to overcome your challenges quickly 
-            and easily! 
+            <strong>free tools</strong> 
+            to overcome your challenges quickly and easily! 
             {/* incorporating: */}
           </p>
         </div>
