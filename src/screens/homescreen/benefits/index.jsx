@@ -13,7 +13,7 @@ const Benefits = () => {
     <section className={style.wrapper}>
       <Divider/>
       <div className={style.title}>
-        <h2>What's missing from <span>your team</span>?</h2>
+        <h2>What`&apos;`s missing from <span>your team</span>?</h2>
       </div>
       <article className={style.content}>
         {Data.map((item) => (
@@ -23,5 +23,4 @@ const Benefits = () => {
     </section>
   );
 }
-
 export default Benefits
