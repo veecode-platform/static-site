@@ -32,7 +32,7 @@ const SupportSection = () => {
             <h2>
               <span>Unlock</span>
               <br />
-              your team's potential
+              your team`&apos;`s potential
             </h2>
           </div>
           <div className={style["content__text-desc"]}>
