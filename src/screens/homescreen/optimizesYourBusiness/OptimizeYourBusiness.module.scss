@@ -17,14 +17,17 @@
     &__contentWrapper {
         @include screenSize(80%, auto);
         @include displayFlex(space-between, center, row-reverse);
+
         //mobile
         @include for-phone-only{
             @include displayFlex(center, center, column-reverse);
         }
+        
        &-text{
         @include screenSize(40%, auto);
         @include displayFlex(center, flex-end, column);
         padding-top: 2em;
+
         //mobile(M)
         @include for-phone-only{
             @include displayFlex(center, center, column);
@@ -39,6 +42,7 @@
         .title {
             @include screenSize(100%, auto);
             margin: auto;
+
             //tablet
             @include for-tablet-only {
                 padding: 6em 0 0 0;
@@ -48,6 +52,7 @@
                 @include screenSize(100%, auto);
                 padding: 2em 0;
             }
+
             h2 {
 
                 @include typography(2.8vw, end, 1.3em, 400);
@@ -66,6 +71,7 @@
                 }
             }
         }
+
         .details {
             @include screenSize(90%, auto);
             @include displayFlex(center, flex-start, column);
@@ -111,7 +117,7 @@
                 }
             }
             &__buttonWrapper {
-                width: 95%;
+                width: 100%;
 
                 @include displayFlex(space-between, center, row);
                 margin-top: 4em;
@@ -137,8 +143,9 @@
             }
         }
     }
+    
     &-image {
-        @include screenSize(60%, 50%);
+        @include screenSize(65%, 50%);
         @include displayFlex(center, center, row);
         padding: 1em 0 1em 0;
         //mobile(M)
