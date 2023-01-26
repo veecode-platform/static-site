@@ -49,7 +49,7 @@ const Footer = () => {
                 <span>{t('About')}</span>
               </li>
               <Link href="/how-it-works"><a><li>{t('How it Works')}</li></a></Link>
-              <Link href="/support"><a><li>{t('Support')}</li></a></Link>
+              <Link href="/support"><a><li>Support</li></a></Link>
               <Link href="https://github.com/vfipaas/safira-support/discussions" passHref><a target="_blank" onClick={()=>gtagEvents('joinUs')}><li>{t('Join our Comunity')}</li></a></Link>
             </ul>
             <ul>

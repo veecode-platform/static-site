@@ -12,13 +12,13 @@ const resources = {
     'en': ENLP,
     
 }
-console.log(detector);
+
 i18n
     .use(detector)
     .use(initReactI18next)
     .init({
     resources,
-    fallbackLng: "pt",
+    fallbackLng: "en",
     supportedLngs:['pt', 'en'],
     lng : i18n.language,
     ns: 'translation',
