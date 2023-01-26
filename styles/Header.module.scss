@@ -3,34 +3,79 @@
 .wrapper {
     @include screenSize(100%, auto);
     @include displayFlex(center, center, row);
-    background-color: $color3;  
+    background-color: $color3;
     z-index: 99;
-    &__fixedHeader{
+    a {
+        color: $color2;
+        transition: all .5s linear;
+
+        &:visited {
+            color: $color2;
+        }
+
+        &:hover {
+            transition: all .5s ease-in-out;
+            color: $color1;
+        }
+
+        &:active {
+            color: $color1;
+        }
+    }
+
+    &__fixedHeader {
         position: fixed;
         top: 0;
     }
+
     .content {
-        @include screenSize(40%, auto);
-        @include displayFlex(center, center, row);
+        @include screenSize(80%, auto);
+        @include displayFlex(flex-start, center, row);
         padding: 1.5vh 0;
         z-index: 99;
+        justify-content: space-between;
+
         //mobile(M)
-        @include for-phone-only{
+        @include for-phone-only {
             padding: 2.5vh 0;
         }
 
         &__logo {
-            @include screenSize(10vw, auto);
-            min-width: 180px;
+            @include screenSize(12vw, auto);
+            min-width: 100px;
+
             //tablet
-            @include for-tablet-only{
+            @include for-tablet-only {
                 @include screenSize(150px, auto);
             }
         }
-        &__buyButton{
-            position: absolute;
+
+
+    }
+
+    .nav {
+        @include screenSize(50%, auto);
+        @include displayFlex(flex-end, center, row);
+
+        
+
+        &__options {
+            margin: 0 2em;
+            h2 {
+                cursor: pointer;
+                opacity: 1;
+                @include typography(1.3vw, center, 1.9em, 400);
+                // text-decoration: underline;
+            }
+
+        }
+
+        &__buyButton {
+            margin-left: 1em;
+            // position: absolute;
             right: 4vw;
-            @include for-phone-only{
+
+            @include for-phone-only {
                 display: none;
             }
         }
