@@ -49,6 +49,10 @@
         p {
             @include typography(1.5vw,center,auto,400);
             color: $color4;
+
+            @include for-phone-only{
+                font-size: 4.5vw;
+            }
         }
 
         span {
@@ -59,6 +63,7 @@
         @include for-phone-only{
             font-size: 3vw;
             padding: 0 1em;
+            padding-bottom: 2em;
         }
         //mobile(S)
         @include for-phoneS-only{
