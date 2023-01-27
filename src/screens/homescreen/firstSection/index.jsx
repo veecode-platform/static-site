@@ -58,12 +58,6 @@ const FirstSection = () => {
           </p>
         </div>
         <div className={style.content__buttons}>      
-          {/*<Link href="/how-it-works" passHref>
-            <a>
-              <Button>How it Works</Button>
-            </a>
-          </Link>*/}
-
           <Link href="/support" passHref>
             <a>
               <Button>Learn More</Button>
