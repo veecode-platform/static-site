@@ -31,7 +31,7 @@ const FirstSection = () => {
               />
       </div>
       <article className={style.content}>
-        <div className={style.content__logo}>
+        {/* <div className={style.content__logo}>
             <Image
                 layout="responsive"
                 src={Logo} 
@@ -41,7 +41,7 @@ const FirstSection = () => {
                 unoptimized
                 priority={true}
                 />
-        </div>
+        </div> */}
         <div className={style.content__title}>
           <h1>
           We provide <strong>instant support</strong> on
