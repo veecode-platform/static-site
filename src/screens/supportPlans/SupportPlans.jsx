@@ -6,11 +6,12 @@ import { Footer, Header, Tools } from "../../components";
 import Plans from "./plans";
 import FirstSection from "./firstSection";
 import FooterSection from "./footer";
+import HeaderSection from "./header";
 
 const SupportPlans = () => {
   return (
     <main className={style.wrapper}>
-      <Header showButton/>
+      <HeaderSection showButton/>
       <FirstSection />
       <section className={style.stacks}>
       {data.map((item) => {
