@@ -46,7 +46,7 @@ const InfoBox = ({info, billing,formatter,getDateFormatted}) => {
                 <div className={style.content__info}>
                   <div className={style["content__info-letterWrapper"]}>
                     <div className={style.left}>
-                      <p>After the 7th day of trial:</p>
+                      <p>After the 15th day of trial:</p>
                     </div>
                     <div className={style.right}>
                       <p>{billing ? info.priceA : info.price}</p>
@@ -84,7 +84,7 @@ const InfoBox = ({info, billing,formatter,getDateFormatted}) => {
                 <div className={style.content__guarantee}>
                   <div className={style["content__guarantee-item"]}>
                     <FaCheck color="#33FFCE" />
-                    <p>7 days trial</p>
+                    <p>15 days trial</p>
                   </div>
 
                   <div className={style["content__guarantee-item"]}>
