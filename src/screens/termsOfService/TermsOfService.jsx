@@ -134,7 +134,7 @@ const TermsOfService = () => {
           4.3 - The minimal duration for a subscription (and support plan) is 12
           months (an entire service year). As an exception to this rule, a new
           customer has the option to cancel the subscription (and to be
-          refunded) until 7 days after starting the first service year.
+          refunded) until 15 days after starting the first service year.
         </p>
         <p>
           4.4 - All orders are subject to approval from VeeCode. 
