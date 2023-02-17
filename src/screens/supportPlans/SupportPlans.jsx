@@ -5,6 +5,7 @@ import data from "./data.json";
 import { Footer, Header, Tools } from "../../components";
 import Plans from "./plans";
 import FirstSection from "./firstSection";
+import FooterSection from "./footer";
 
 const SupportPlans = () => {
   return (
@@ -27,7 +28,7 @@ const SupportPlans = () => {
       </section>
       <Plans />
       {/* <Tools bg="#131313"/> */}
-      <Footer />
+      <FooterSection />
     </main>
   );
 };
