@@ -12,6 +12,7 @@ const ComparePlans = () => {
       subtitle="No more stress with the digital transition, choose the support that most fits your need:"
     >
       <Breadcrumb active={1} />
+
       <article className={style.content}>
         {/* STANDARD */}
         <PlansDetails
@@ -22,6 +23,7 @@ const ComparePlans = () => {
           emphasis="$ 1990"
           text="per Month"
           buttonLabel="Sign the plan"
+          banner
         >
           <li><span><FaCheck /></span>8x5 support</li>
           <li><span><FaCheck /></span>One business day SLA</li>
@@ -36,6 +38,7 @@ const ComparePlans = () => {
           link="/contact-enterprise"
           headline="Personalize your experience"
           buttonLabel="Contact Us"
+          banner={false}
         >
           <li><span><FaCheck /></span>24x7 support</li>
           <li><span><FaCheck /></span>SLA on the same business day</li>
