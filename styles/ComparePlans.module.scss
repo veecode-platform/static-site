@@ -1,23 +1,5 @@
 @import '/abstract/functions', '/abstract//responsive', '/abstract/variables';
 
-.image {
-    @include screenSize(80vw, auto);
-    // @include displayFlex(flex-start, flex-start,center);
-
-    position: absolute;
-    z-index: 99;
-    top: 29.3em;
-    left: 20em;
-    // background-color: aqua;
-
-    &__banner {
-        left: 0;
-        top: 0;
-        width: 12vw;
-
-    }
-}
-
 .content {
     @include screenSize(75%, auto);
     display: grid;
