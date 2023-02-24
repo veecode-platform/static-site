@@ -2,7 +2,6 @@ import React from "react";
 import style from "../../../styles/SupportPlans.module.scss";
 import SupportSection from "./supportSection";
 import data from "./data.json";
-import { Footer, Header, Tools } from "../../components";
 import Plans from "./plans";
 import FirstSection from "./firstSection";
 import FooterSection from "./footer";

@@ -8,6 +8,7 @@ const TermsOfService = () => {
       titleBar="enable"
       noPrevious
       showButton
+      showOptions
       >
       <article className={style.content}>
         {/* Definitions */}

@@ -7,6 +7,7 @@ import { FaCheck, FaCheckCircle, FaMinus } from "react-icons/fa";
 const ComparePlans = () => {
   return (
     <DefaultPage
+      showOptions
       titleBar="enable"
       title="Chose our support for you"
       subtitle="No more stress with the digital transition, choose the support that most fits your need:"

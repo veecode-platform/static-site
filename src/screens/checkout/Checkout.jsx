@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import style from "../../../styles/Checkout.module.scss";
 import { Breadcrumb, DefaultPage, Switch, Loading, Paypal } from "../../components";
 import storage from "../../../utils/storage";
@@ -19,7 +19,7 @@ const Checkout = () => {
     const day = date.getDate();
     const month = date.toLocaleString('en-us', { month: 'long' });
     const abv = day == 1 ? "st" : day == 2 ? "nd" : day == 3 ? "rd" : "th";
-    if(displayMonth) return `${day}${abv} of ${month}.`;
+    if (displayMonth) return `${day}${abv} of ${month}.`;
     return `${day}${abv}.`;
   };
 
@@ -29,48 +29,48 @@ const Checkout = () => {
     maximumFractionDigits: 0
   });
 
-  const handleBilling = () => { 
-    setBilling(!billing) ;
+  const handleBilling = () => {
+    setBilling(!billing);
     LoadingAnimation();
   }
   const handlePrice = () => {
-    if(userData.plan == "premium" ){
+    if (userData.plan == "premium") {
       billing ? setPrice(1134) : setPrice(1260)
     }
-    else{
+    else {
       billing ? setPrice(1790) : setPrice(1990)
     }
   }
 
-  useEffect(()=>{
+  useEffect(() => {
     setUserData(JSON.parse(storage.getData("user")))
-    if(Object.keys(userData).length !== 0 ) handlePrice();
+    if (Object.keys(userData).length !== 0) handlePrice();
   }, [price]);
 
-  useEffect(()=>{
+  useEffect(() => {
     handlePrice()
   }, [billing]);
 
-  useEffect(()=>{
-    if (typeof window !== "undefined"){
-      if ( window.innerWidth > 1300){
-          setTimeout(() => {
-            window.scrollTo({
-              top: 115,
-              left: 300,
-              behavior: 'smooth'
-            });
-          }, 500);
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      if (window.innerWidth > 1300) {
+        setTimeout(() => {
+          window.scrollTo({
+            top: 115,
+            left: 300,
+            behavior: 'smooth'
+          });
+        }, 500);
       }
     }
-  },[]);
+  }, []);
 
   let info = {
     plan: userData.plan,
     sla: userData.plan == "premium" ? "3 days" : "1 Business day",
     price: formatter.format(price),
-    priceA: formatter.format(price*12),
-    priceDeleted: price*12*(userData.plan == "premium" ? 1.1111 : 1.1112),
+    priceA: formatter.format(price * 12),
+    priceDeleted: price * 12 * (userData.plan == "premium" ? 1.1111 : 1.1112),
     users: "10",
     billing: billing
   }
@@ -78,41 +78,42 @@ const Checkout = () => {
   const LoadingAnimation = () => {
     setIsLoading(true);
     setTimeout(() => {
-        setIsLoading(false);
+      setIsLoading(false);
     }, 500);
   }
 
   return (
-    <DefaultPage 
+    <DefaultPage
       titleBar="disable"
       noBack
+      showOptions
       noFooter
-      >
+    >
       <section className={style.wrapper}>
         <article className={style.content}>
           <Breadcrumb active={3} />
           <div className={style.content__options}>
             <div className={style["content__options-infoBoxWrapper"]}>
               {
-                isLoading ? <Loading/> : (
-                  <InfoBox 
-                  info={info}
-                  billing={billing}
-                  formatter={formatter}
-                  getDateFormatted={getDateFormatted}
-                  />    
+                isLoading ? <Loading /> : (
+                  <InfoBox
+                    info={info}
+                    billing={billing}
+                    formatter={formatter}
+                    getDateFormatted={getDateFormatted}
+                  />
                 )
               }
             </div>
             <div className={style["content__options-payment"]}>
               <div className={style.image}>
-                <img src={ImageCard}/>
+                <img src={ImageCard} />
               </div>
               <div className={style.switchButton}>
-                <Switch label={"subscription"} isOn={billing} handleToggle={handleBilling}/>
+                <Switch label={"subscription"} isOn={billing} handleToggle={handleBilling} />
               </div>
               <div className={style.paypalBox}>
-                <Paypal plan={{plan: info.plan, billing: info.billing, price: info.priceA}}/>
+                <Paypal plan={{ plan: info.plan, billing: info.billing, price: info.priceA }} />
               </div>
             </div>
           </div>

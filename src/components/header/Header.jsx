@@ -8,7 +8,7 @@ import { useTranslation } from 'react-i18next';
 
 const Logo = '/assets/logo/logo.png';
 
-const Header = ({ fixedHeader, showButton }) => {
+const Header = ({ fixedHeader, showButton, showOptions }) => {
   const { t } = useTranslation();
 
   return (
@@ -32,20 +32,20 @@ const Header = ({ fixedHeader, showButton }) => {
           </Link>
         </div>
         <div className={style.nav}>
-          <div className={style.nav__options}>
+          {showOptions && <div className={style.nav__options}>
             <Link href='/'>
               <a>
                 <h2>Home</h2>
               </a>
             </Link>
-          </div>
-          <div className={style.nav__options}>
+          </div>}
+          {showOptions && <div className={style.nav__options}>
             <Link href='/support-plans'>
               <a>
                 <h2>Plans</h2>
               </a>
             </Link>
-          </div>
+          </div>}
 
           {showButton && <div className={style.nav__buyButton} >
             <Link href="/compare-plans" passHref>

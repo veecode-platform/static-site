@@ -4,27 +4,28 @@ import style from "../../../styles/ContactEnterprise.module.scss";
 
 const ContactEnterprise = () => {
 
-  useEffect(()=>{
-    if (typeof window !== "undefined"){
-      if ( window.innerWidth > 1300){
-          setTimeout(() => {
-            window.scrollTo({
-              top: 105,
-              left: 300,
-              behavior: 'smooth'
-            });
-          }, 500);
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      if (window.innerWidth > 1300) {
+        setTimeout(() => {
+          window.scrollTo({
+            top: 105,
+            left: 300,
+            behavior: 'smooth'
+          });
+        }, 500);
       }
     }
-  },[])
+  }, [])
 
   return (
     <DefaultPage
       titleBar="enable"
       title="Our Support Enterprise"
-      subtitle={<>We do it with you and for you. Use the form below or send an email to <a href='mailto: platform-sales@vee.codes' style={{cursor: "pointer", color: '#33FFCE'}}> platform-sales@vee.codes</a></>}
+      subtitle={<>We do it with you and for you. Use the form below or send an email to <a href='mailto: platform-sales@vee.codes' style={{ cursor: "pointer", color: '#33FFCE' }}> platform-sales@vee.codes</a></>}
       noFooter
-   >
+      showOptions
+    >
       <article className={style.content}>
         {/* DETAILS */}
         <div className={style.details}>
@@ -50,7 +51,7 @@ const ContactEnterprise = () => {
         </div>
         {/* FORM */}
         <div className={style.form}>
-          <FormElement/>
+          <FormElement />
         </div>
       </article>
     </DefaultPage>
