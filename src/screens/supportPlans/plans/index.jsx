@@ -45,6 +45,7 @@ const Plans = () => {
                     emphasis="$ 1990"
                     text={t("per Month")}
                     buttonLabel={t("Sign Plan")}
+                    banner
                 >
                     <li><span><FaCheck /></span>{t('8x5 support')}</li>
                     <li><span><FaCheck /></span>{t('One business day SLA')}</li>
@@ -59,6 +60,7 @@ const Plans = () => {
                     link="/contact-enterprise"
                     headline={t('Personalize your experience')}
                     buttonLabel={t('Contact Us')}
+                    banner={false}
                 >
                     <li><span><FaCheck /></span>{t('24x7 support')}</li>
                     <li><span><FaCheck /></span>{t('SLA on the same business day')}</li>

@@ -3,6 +3,8 @@ import React from "react";
 import { Button } from "../../../../components";
 import style from "./plansDetails.module.scss";
 
+const offer = "/assets/icons/offer.png";
+
 const PlansDetails = ({
     title,
     subtitle,
@@ -13,9 +15,11 @@ const PlansDetails = ({
     text,
     buttonLabel,
     children,
+    banner
 }) => {
     return (
         <div className={style.planTable}>
+            {banner === true && <img src={offer} className={style.image} />}
             <div className={style.planTable__title}>
                 <h2 className={style["planTable__title-title"]}>{title}</h2>
             </div>
