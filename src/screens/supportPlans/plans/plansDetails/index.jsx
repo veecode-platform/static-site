@@ -3,7 +3,7 @@ import React from "react";
 import { Button } from "../../../../components";
 import style from "./plansDetails.module.scss";
 
-const offer = "/assets/icons/offer.png";
+const offer = "/assets/icons/offerPT.png";
 
 const PlansDetails = ({
     title,
