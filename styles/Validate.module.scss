@@ -1,59 +1,102 @@
 @import "../abstract/functions", "../abstract/variables", "../abstract/responsive";
 
 
-.wrapper{
-    @include screenSize(100vw,auto);
+.wrapper {
+    @include screenSize(100vw, auto);
     @include displayFlex(center, center, column);
     background-color: $color9;
-    .content{
-        @include screenSize(80%, auto);
+
+    .container {
+        @include screenSize(100%, auto);
         @include displayFlex(center, center, column);
         color: $color2;
-        &__options{
-            @include screenSize(80%,auto);
-            @include displayFlex(space-around, center, column);
+    }
+
+    .content {
+        @include screenSize(80%, auto);
+        @include displayFlex(center, center, row);
+        margin-top: 1.5em;
+
+        .text {
+            @include screenSize(50%, auto);
+            @include displayFlex(flex-start, center, column);
             padding: 2em 0 4em 0;
-            //viewport
-            @include for-viewport-only{
-                @include screenSize(90%,auto);
+
+            span {
+                color: $color1;
             }
+
+            &__header {
+                margin: 2em 0 1.5em;
+
+                h2 {
+                    @include typography(2.8vw, start, 1.1em, 500);
+                    color: $color2;
+                }
+            }
+
+            &__resume {
+                margin: 1.2em 0 1.5em 0;
+
+                p {
+                    @include typography(1.3vw, start, 1.2em, 300);
+                    color: $color2;
+                }
+            }
+        }
+
+        &__options {
+            @include screenSize(50%, auto);
+            @include displayFlex(center, center, column);
+            padding: 2em 0 4em 0;
+
+            //viewport
+            @include for-viewport-only {
+                @include screenSize(90%, auto);
+            }
+
             //mobile(M)
-            @include for-phone-only{
+            @include for-phone-only {
                 @include displayFlex(center, center, column);
                 padding: 1em 0 6em 0;
             }
+
             //mobile(S)
             @include for-phoneS-only {
-                @include screenSize(95%,auto);
+                @include screenSize(95%, auto);
                 padding: 1em 0;
             }
+
             //mobile(XS)
-            @include for-phoneXS-only{
-                @include screenSize(100%,auto);
+            @include for-phoneXS-only {
+                @include screenSize(100%, auto);
             }
-            &-formWraper{
+
+            &-formWraper {
                 @include displayFlex(center, flex-start, column);
                 @include glassEffect();
                 width: 415px;
                 padding: 1vw 1vw;
                 background-color: $color12;
                 border-radius: 1vh;
+
                 @include for-phoneS-only {
                     width: 95vw;
                     padding: 1.5vh 3vw;
                 }
 
-                .form{
+                .form {
                     @include displayFlex(center, center, column);
-                    width: 100%;                  
+                    width: 100%;
                     gap: 1.2vh;
-                    &__buttonWrapper{
-                        @include screenSize(100%,auto);
+
+                    &__buttonWrapper {
+                        @include screenSize(100%, auto);
                         @include displayFlex(center, center, row);
                     }
                 }
             }
         }
-        
+
     }
 }
