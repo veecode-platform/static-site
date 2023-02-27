@@ -13,9 +13,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       {/* Global site tag (gtag.js) - Google Analytics */}
-      <Script
-        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_ANALYTICS_ID}`}
-      ></Script>
+      <Script src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_ANALYTICS_ID}`}></Script>
       <Script id="google-tag-script-function">
         {`window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
