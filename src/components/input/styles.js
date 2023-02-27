@@ -71,8 +71,8 @@ export const WrapperCheckbox = styled(Wrapper)`
 
 export const Checkboxfield = styled.input.attrs({type:"checkbox"})`
     cursor: pointer;
-    width: 0.8vw;
-    height: 0.8vw;
+    width: 0.9vw;
+    height: 0.9vw;
     accent-color: #33FFCE;
     @media (max-width: 420px) {
         width: 4vw;

@@ -60,7 +60,6 @@ const Validate = () => {
                                     We guarantee that your information is secure and that we follow all privacy policies and comply with all applicable regulations and laws. <br/><br/>
                                     Try our solutions and take advantage of our dedicated support to answer any questions you may have.<br/><br/>
                                     After submitting the form, you will receive an email with access to our ticketing platform, where you can start asking questions and developing your business right away!<br/><br/>
-                                    Don't waste any more time and sign up for our free 15-day trial of the Standard Plan. Fill out the form to the side now and start enjoying everything we have to offer!
 
                                 </p>
                             </div>
