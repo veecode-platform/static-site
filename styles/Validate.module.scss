@@ -50,35 +50,25 @@
                     color: $color2;
 
                     @include for-phone-only {
-                        @include typography(3.2vw, center, 1.1em, 500);
+                        @include typography(6vw, center, 1.1em, 500);
                     }
 
-                    @include for-phone-only {
-                        @include typography(5vw, center, 1.1em, 500);
+                    @include for-phoneS-only {
+                        @include typography(8vw, center, 1.1em, 500);
                     }
                 }
             }
 
             &__resume {
-                margin: 1.2em 0 1.5em 0;
+                margin: 1.2em .5em 1.5em 0;
 
                 @include for-phone-only {
-                    // display: none;
-                    margin: .5em;
-
+                    display: none;
                 }
 
                 p {
                     @include typography(1.3vw, start, 1.2em, 300);
                     color: $color2;
-
-                    @include for-phone-only {
-                        @include typography(2.2vw, center, 1.2em, 300);
-                    }
-
-                    @include for-phoneS-only {
-                        @include typography(3vw, center, 1.2em, 300);
-                    }
                 }
             }
         }
