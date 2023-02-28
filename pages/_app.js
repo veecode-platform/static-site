@@ -3,26 +3,24 @@ import Script from "next/script";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "../styles/theme.scss";
-import TagManager from 'react-gtm-module';
-import { useEffect } from 'react';
+//import TagManager from 'react-gtm-module';
+//import { useEffect } from 'react';
 
 function MyApp({ Component, pageProps }) {
-  useEffect(() => {
+  /*useEffect(() => {
     TagManager.initialize({ gtmId: `${process.env.NEXT_PUBLIC_GOOGLE_TAG_MANAGER}` });
-  }, []);
+  }, []);*/
   return (
     <>
       {/* Global site tag (gtag.js) - Google Analytics */}
-      <Script
-        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_ANALYTICS_ID}`}
-      ></Script>
+      {/*<Script src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_ANALYTICS_ID}`}></Script>
       <Script id="google-tag-script-function">
         {`window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
 
         gtag('config', '${process.env.NEXT_PUBLIC_ANALYTICS_ID}');`}
-      </Script>
+      </Script>*/}
       {/*Hotjar Tracking Code for https://platform.vee.codes/ */}
       <Script id="hotjar-script-function">
         {`(function(h,o,t,j,a,r){
