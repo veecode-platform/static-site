@@ -3,13 +3,13 @@ import Script from "next/script";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "../styles/theme.scss";
-import TagManager from 'react-gtm-module';
-import { useEffect } from 'react';
+//import TagManager from 'react-gtm-module';
+//import { useEffect } from 'react';
 
 function MyApp({ Component, pageProps }) {
-  useEffect(() => {
+  /*useEffect(() => {
     TagManager.initialize({ gtmId: `${process.env.NEXT_PUBLIC_GOOGLE_TAG_MANAGER}` });
-  }, []);
+  }, []);*/
   return (
     <>
       {/* Global site tag (gtag.js) - Google Analytics */}
