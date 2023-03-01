@@ -3,12 +3,12 @@ import style from "./FooterSection.module.scss";
 import { FaFacebookSquare, FaInstagram, FaLinkedin, FaTwitterSquare } from "react-icons/fa";
 import Link from "next/link";
 import { gtagEvents } from "../../../../utils/gtag";
-// import { useTranslation } from 'react-i18next';
+import { useTranslation } from 'react-i18next';
 
 const Logo = "/assets/logo/logo.png";
 
 const FooterSection = () => {
-  // const { t } = useTranslation();
+  const { t } = useTranslation();
 
   return (
     <footer className={style.footer}>
@@ -48,9 +48,9 @@ const FooterSection = () => {
               <li>
                 <span>Sobre</span>
               </li>
-              <Link href="/how-it-works"><a><li>Como Funciona</li></a></Link>
-              <Link href="/support"><a><li>Suporte</li></a></Link>
-              <Link href="https://github.com/vfipaas/safira-support/discussions" passHref><a target="_blank" onClick={()=>gtagEvents('joinUs')}><li>Conheça nossa comunidade</li></a></Link>
+              <Link href="/how-it-works"><a><li>{t('How it works')}</li></a></Link>
+              <Link href="/support"><a><li>{t('Support')}</li></a></Link>
+              <Link href="https://github.com/vfipaas/safira-support/discussions" passHref><a target="_blank" onClick={()=>gtagEvents('joinUs')}><li>{t('Join our Comunity')}</li></a></Link>
             </ul>
             <ul>
               <li>
@@ -62,11 +62,11 @@ const FooterSection = () => {
             </ul>
             <ul>
               <li>
-                <span>Saiba Mais</span>
+                <span>{t('More')}</span>
               </li>
-              <Link href="/terms-of-service"><a><li>Termos de Uso</li></a></Link>
-              <Link href="/privacy-policy"><a><li>Política de Privacidade</li></a></Link>
-              <Link href="/contact-us"><a><li>Fale Conosco</li></a></Link>
+              <Link href="/terms-of-service"><a><li>{t('Terms of Service')}</li></a></Link>
+              <Link href="/privacy-policy"><a><li>{t('Policy Privacy')}</li></a></Link>
+              <Link href="/contact-us"><a><li>{t('Contact Us')}</li></a></Link>
               <Link href="/faq"><a><li>FAQ</li></a></Link>
             </ul>
           </div>
@@ -74,7 +74,7 @@ const FooterSection = () => {
       </section>
       <section className={style.footer__copy}>
         <p>
-          Copyright &copy; {new Date().getFullYear()} VeeCode Platform. Todos os direitos são reservados
+          Copyright &copy; {new Date().getFullYear()} VeeCode Platform. {t('All rights reserved')}
         </p>
       </section>
     </footer>

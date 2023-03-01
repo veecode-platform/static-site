@@ -81,6 +81,16 @@
         "Contact Us":"Contact Us",
         "Plans":"Plans",
         "Standard":"Standard",
-        "Enterprise":"Enterprise"
+        "Enterprise":"Enterprise",
+        "Buy Now":"Buy Now",
+        "Home":"Home",
+        "More":"More",
+        "Terms of Service":"Terms of Service",
+        "Policy Privacy":"Policy Privacy",
+        "How it Works":"How it Works",
+        "Join our Comunity":"Join our Comunity",
+        "About":"About",
+        "All rights reserved":"All rights reserved"
+
     }
 }
