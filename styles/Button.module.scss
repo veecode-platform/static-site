@@ -47,10 +47,24 @@
 
 .buttonModal {
     @extend .button;
-    min-width: 5vw;
-    font-size: .8vw;
-    // color:;
-    // background: ;
+    width: small;
+    font-size: .9vw;
+    font-weight: 600;
+    color:white;
+    border: none;
+    min-width: 9vw;
+    padding: 1em;
+    border-radius: 4px;
+    background-color: $color7;
+
+    &:hover:not([disabled]){
+        border-radius: 4px;
+        background: linear-gradient(45deg,$color1);
+        color: white;
+        transition: all 0.4s linear;
+        // -webkit-transform: scale(1.03);
+        // transform: scale(1.03);
+    }
 }
 
 .loader {

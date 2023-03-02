@@ -176,10 +176,10 @@ const Validate = () => {
                                                         }}
                                                     />
                                                     <DialogActions className={style.actions} >
-                                                        <Button modal handleClick={handleClose}>Cancel</Button>
-                                                        <Button modal handleClick={submitForm}>Confirm</Button>
+                                                        <Button modal handleClick={handleClose}>CANCEL</Button>
+                                                        <Button modal handleClick={submitForm}>CONFIRM</Button>
                                                     </DialogActions>
-                                                    <Link href='/checkout' passHref className={style.link}>
+                                                    <Link href='/checkout' passHref>
                                                         <a target="_blank">
                                                             <p style={{textDecoration:"underline", fontSize:".7em",textAlignLast:"center", padding:"1em 0"}}>Or, go to checkout</p>
                                                         </a>

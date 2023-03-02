@@ -134,21 +134,13 @@
                         @include screenSize(100%, auto);
                         @include displayFlex(center, center, row);
                     }
-                    
+
                     .actions {
-                        @include displayFlex(center, center, row);
-                    }
-                    .link {
-                        @include screenSize(100%, auto);
-                        @include displayFlex(center, center, row);
-                        a {
-                            font-size: .8em;
-                            text-decoration: underline;
-                        }
+                        @include displayFlex(space-between, center, row);
+                        padding: 2.5rem 0;
                     }
                 }
             }
         }
-        
     }
 }
