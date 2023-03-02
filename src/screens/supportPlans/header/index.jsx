@@ -3,10 +3,12 @@ import classNames from 'classnames';
 import Link from 'next/link';
 import style from './Header.module.scss';
 import Button from '../../../components/button/Button';
+import { useTranslation } from 'react-i18next';
 
 const Logo = '/assets/logo/logo.png';
 
 const HeaderSection = ({ fixedHeader, showButton }) => {
+  const { t } = useTranslation();
 
   return (
     <header
@@ -32,14 +34,14 @@ const HeaderSection = ({ fixedHeader, showButton }) => {
           <div className={style.nav__options}>
             <Link href='/'>
               <a>
-                <h2>Início</h2>
+                <h2>{t('Home')}</h2>
               </a>
             </Link>
           </div>
           <div className={style.nav__options}>
             <Link href='/support-plans'>
               <a>
-                <h2>Planos</h2>
+                <h2>{t('Plans')}</h2>
               </a>
             </Link>
           </div>
@@ -47,7 +49,7 @@ const HeaderSection = ({ fixedHeader, showButton }) => {
           {showButton && <div className={style.nav__buyButton} >
             <Link href="/compare-plans" passHref>
               <a>
-                <Button headerButton>Contrate</Button>
+                <Button headerButton>{t('Buy Now')}</Button>
               </a>
             </Link>
           </div>}
