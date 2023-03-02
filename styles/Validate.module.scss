@@ -134,10 +134,17 @@
                         @include screenSize(100%, auto);
                         @include displayFlex(center, center, row);
                     }
+                    
                     .actions {
                         @include displayFlex(center, center, row);
-                        gap:1rem;
-                        width: 80%;
+                    }
+                    .link {
+                        @include screenSize(100%, auto);
+                        @include displayFlex(center, center, row);
+                        a {
+                            font-size: .8em;
+                            text-decoration: underline;
+                        }
                     }
                 }
             }

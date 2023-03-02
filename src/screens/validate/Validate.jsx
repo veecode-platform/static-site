@@ -11,6 +11,7 @@ import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
+import Link from "next/link";
 
 const Validate = () => {
     const router = useRouter()
@@ -27,7 +28,7 @@ const Validate = () => {
         plan: plan
     });
 
-    useEffect(()=> {
+    useEffect(() => {
         localStorage.setItem("user", JSON.stringify(values))
     }, [values]);
 
@@ -54,14 +55,11 @@ const Validate = () => {
         terms: boolean().isTrue()
     });
 
-    
+
 
     const handleFormRedirect = async () => {
         await router.push("/checkout")
     }
-
-
-
 
     const handleClose = () => {
         setOpen(false);
@@ -108,7 +106,7 @@ const Validate = () => {
                                     onSubmit={(values) => {
                                         setValues(values);
                                         setOpen(true);
-
+                                        isSubmitting = false;
                                     }}
 
                                 >
@@ -121,7 +119,7 @@ const Validate = () => {
                                             <Input name="email" placeholder="you@acme.com" label="Business Email" error={(errors.email && touched.email) && errors.email} />
                                             {/* <Input name="cel" placeholder="number" label="Cel number" error={(errors.cel && touched.cel) && errors.cel }/> */}
                                             <Checkbox name="terms" terms error={(errors.terms && touched.terms) && errors.terms} />
-                                            <div className={style.form__buttonWrapper}><Button type="link" loading={isSubmitting}>Continue</Button></div>
+                                            <div className={style.form__buttonWrapper}><Button type="link">Continue</Button></div>
 
                                             <Dialog open={open} onClose={handleClose} fullWidth>
                                                 <DialogTitle>Almost There!</DialogTitle>
@@ -140,6 +138,7 @@ const Validate = () => {
                                                             readOnly: true,
                                                         }}
                                                     />
+
                                                     <TextField
                                                         margin="dense"
                                                         id="title"
@@ -180,6 +179,11 @@ const Validate = () => {
                                                         <Button modal handleClick={handleClose}>Cancel</Button>
                                                         <Button modal handleClick={submitForm}>Confirm</Button>
                                                     </DialogActions>
+                                                    <Link href='/checkout' passHref className={style.link}>
+                                                        <a target="_blank">
+                                                            <p style={{textDecoration:"underline", fontSize:".7em",textAlignLast:"center", padding:"1em 0"}}>Or, go to checkout</p>
+                                                        </a>
+                                                    </Link>
                                                 </DialogContent>
 
                                             </Dialog>
@@ -193,7 +197,7 @@ const Validate = () => {
                     </article>
                 </article>
             </section>
-        </DefaultPage>
+        </DefaultPage >
     );
 };
 
