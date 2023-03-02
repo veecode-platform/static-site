@@ -8,7 +8,10 @@ const ImageCard = "/assets/icons/card.png";
 
 const Checkout = () => {
 
-  const [userData, setUserData] = useState({});
+  const [userData, setUserData] = useState(JSON.parse(localStorage.getItem("user")));
+  console.log(userData);
+  console.log("cima");
+
   const [price, setPrice] = useState();
   const [billing, setBilling] = useState(true);
   const [isLoading, setIsLoading] = useState(false);
@@ -43,10 +46,10 @@ const Checkout = () => {
   }
 
   useEffect(() => {
-    setUserData(JSON.parse(storage.getData("user")))
+    setUserData(JSON.parse(localStorage.getItem("user")))
     if (Object.keys(userData).length !== 0) handlePrice();
   }, [price]);
-
+  console.log(userData);
   useEffect(() => {
     handlePrice()
   }, [billing]);

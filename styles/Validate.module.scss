@@ -134,12 +134,14 @@
                         @include screenSize(100%, auto);
                         @include displayFlex(center, center, row);
                     }
+                    .actions {
+                        @include displayFlex(center, center, row);
+                        gap:1rem;
+                        width: 80%;
+                    }
                 }
             }
         }
-        .action {
-            width: 4vw;
-            font-size: .8vw;
-        }
+        
     }
 }

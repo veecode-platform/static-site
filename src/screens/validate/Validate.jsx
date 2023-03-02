@@ -13,6 +13,23 @@ import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
 
 const Validate = () => {
+    const router = useRouter()
+    const plan = router.query.plan;
+    // Modal  
+
+    const [open, setOpen] = useState(false);
+    const [values, setValues] = useState({
+        name: "",
+        company: "",
+        email: "",
+        title: "",
+        terms: false,
+        plan: plan
+    });
+
+    useEffect(()=> {
+        localStorage.setItem("user", JSON.stringify(values))
+    }, [values]);
 
     useEffect(() => {
         if (typeof window !== "undefined") {
@@ -37,26 +54,25 @@ const Validate = () => {
         terms: boolean().isTrue()
     });
 
-    const router = useRouter()
-    const plan = router.query.plan;
+    
 
     const handleFormRedirect = async () => {
         await router.push("/checkout")
     }
 
-    // Modal  
 
-    const [open, setOpen] = useState(false);
 
-    const handleClickOpen = () => {
-        setOpen(true);
-    };
+
     const handleClose = () => {
         setOpen(false);
     };
 
-    const valuesF = { name: "" };
-
+    const submitForm = async () => {
+        console.log('cheguei');
+        const response = await UsePostData(values);
+        console.log(values, response);
+        await handleFormRedirect();
+    };
 
     return (
         <DefaultPage
@@ -90,14 +106,11 @@ const Validate = () => {
                                     initialValues={{ name: "", company: "", email: "", title: "", terms: false, plan: plan }}
                                     validationSchema={formSchema}
                                     onSubmit={(values) => {
-                                        valuesF.name = values.name;
-                                        console.log(valuesF);
-
+                                        setValues(values);
                                         setOpen(true);
-                                        // const response = await UsePostData(values);
-                                        // console.log(values, response);
-                                        // await handleFormRedirect();
+
                                     }}
+
                                 >
                                     {({ errors, touched, handleSubmit, isSubmitting }) => (
 
@@ -108,7 +121,7 @@ const Validate = () => {
                                             <Input name="email" placeholder="you@acme.com" label="Business Email" error={(errors.email && touched.email) && errors.email} />
                                             {/* <Input name="cel" placeholder="number" label="Cel number" error={(errors.cel && touched.cel) && errors.cel }/> */}
                                             <Checkbox name="terms" terms error={(errors.terms && touched.terms) && errors.terms} />
-                                            <div className={style.form__buttonWrapper}><Button type="submit" loading={isSubmitting}>Continue</Button></div>
+                                            <div className={style.form__buttonWrapper}><Button type="link" loading={isSubmitting}>Continue</Button></div>
 
                                             <Dialog open={open} onClose={handleClose} fullWidth>
                                                 <DialogTitle>Almost There!</DialogTitle>
@@ -122,50 +135,50 @@ const Validate = () => {
                                                         type="name"
                                                         fullWidth
                                                         variant="standard"
-                                                        defaultValue={valuesF.name}
+                                                        defaultValue={values.name}
                                                         InputProps={{
                                                             readOnly: true,
                                                         }}
                                                     />
                                                     <TextField
                                                         margin="dense"
-                                                        id="name"
+                                                        id="title"
                                                         label="Title"
                                                         type="title"
                                                         fullWidth
                                                         variant="standard"
-                                                        value="title"
+                                                        value={values.title}
                                                         InputProps={{
                                                             readOnly: true,
                                                         }}
                                                     />
                                                     <TextField
                                                         margin="dense"
-                                                        id="name"
+                                                        id="company"
                                                         label="Company / Organization"
-                                                        type="title"
+                                                        type="company"
                                                         fullWidth
                                                         variant="standard"
-                                                        value="title"
+                                                        value={values.company}
                                                         InputProps={{
                                                             readOnly: true,
                                                         }}
                                                     />
                                                     <TextField
                                                         margin="dense"
-                                                        id="name"
+                                                        id="email"
                                                         label="Business Email"
-                                                        type="title"
+                                                        type="email"
                                                         fullWidth
                                                         variant="standard"
-                                                        value="title"
+                                                        value={values.email}
                                                         InputProps={{
                                                             readOnly: true,
                                                         }}
                                                     />
-                                                    <DialogActions>
-                                                        <Button  onClick={handleClose}>Cancel</Button>
-                                                        <Button onClick={handleClose}>Subscribe</Button>
+                                                    <DialogActions className={style.actions} >
+                                                        <Button modal handleClick={handleClose}>Cancel</Button>
+                                                        <Button modal handleClick={submitForm}>Confirm</Button>
                                                     </DialogActions>
                                                 </DialogContent>
 

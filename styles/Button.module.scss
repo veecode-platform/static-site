@@ -45,6 +45,14 @@
     }
 }
 
+.buttonModal {
+    @extend .button;
+    min-width: 5vw;
+    font-size: .8vw;
+    // color:;
+    // background: ;
+}
+
 .loader {
     width: 1.1vw;
     height: 1.1vw;
