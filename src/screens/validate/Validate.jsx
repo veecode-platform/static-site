@@ -4,7 +4,13 @@ import style from '../../../styles/Validate.module.scss';
 import { Formik, Form } from 'formik';
 import { object, string, boolean } from 'yup';
 import { UsePostData } from '../../hooks/UsePostData';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
+import TextField from '@mui/material/TextField';
+import Dialog from '@mui/material/Dialog';
+import DialogActions from '@mui/material/DialogActions';
+import DialogContent from '@mui/material/DialogContent';
+import DialogContentText from '@mui/material/DialogContentText';
+import DialogTitle from '@mui/material/DialogTitle';
 
 const Validate = () => {
 
@@ -38,6 +44,20 @@ const Validate = () => {
         await router.push("/checkout")
     }
 
+    // Modal  
+
+    const [open, setOpen] = useState(false);
+
+    const handleClickOpen = () => {
+        setOpen(true);
+    };
+    const handleClose = () => {
+        setOpen(false);
+    };
+
+    const valuesF = { name: "" };
+
+
     return (
         <DefaultPage
             titleBar="disable"
@@ -56,10 +76,10 @@ const Validate = () => {
                             </div>
                             <div className={style.text__resume}>
                                 <p>
-                                    Fill out the form on the side and get access to all the features and our support for a 15-day free trial! <br/><br/>
-                                    We guarantee that your information is secure and that we follow all privacy policies and comply with all applicable regulations and laws. <br/><br/>
-                                    Try our solutions and take advantage of our dedicated support to answer any questions you may have.<br/><br/>
-                                    After submitting the form, you will receive an email with access to our ticketing platform, where you can start asking questions and developing your business right away!<br/><br/>
+                                    Fill out the form on the side and get access to all the features and our support for a 15-day free trial! <br /><br />
+                                    We guarantee that your information is secure and that we follow all privacy policies and comply with all applicable regulations and laws. <br /><br />
+                                    Try our solutions and take advantage of our dedicated support to answer any questions you may have.<br /><br />
+                                    After submitting the form, you will receive an email with access to our ticketing platform, where you can start asking questions and developing your business right away!<br /><br />
 
                                 </p>
                             </div>
@@ -69,10 +89,14 @@ const Validate = () => {
                                 <Formik
                                     initialValues={{ name: "", company: "", email: "", title: "", terms: false, plan: plan }}
                                     validationSchema={formSchema}
-                                    onSubmit={async (values) => {
-                                        const response = await UsePostData(values);
-                                        console.log(values, response);
-                                        await handleFormRedirect();
+                                    onSubmit={(values) => {
+                                        valuesF.name = values.name;
+                                        console.log(valuesF);
+
+                                        setOpen(true);
+                                        // const response = await UsePostData(values);
+                                        // console.log(values, response);
+                                        // await handleFormRedirect();
                                     }}
                                 >
                                     {({ errors, touched, handleSubmit, isSubmitting }) => (
@@ -85,11 +109,74 @@ const Validate = () => {
                                             {/* <Input name="cel" placeholder="number" label="Cel number" error={(errors.cel && touched.cel) && errors.cel }/> */}
                                             <Checkbox name="terms" terms error={(errors.terms && touched.terms) && errors.terms} />
                                             <div className={style.form__buttonWrapper}><Button type="submit" loading={isSubmitting}>Continue</Button></div>
+
+                                            <Dialog open={open} onClose={handleClose} fullWidth>
+                                                <DialogTitle>Almost There!</DialogTitle>
+                                                <DialogContent>
+                                                    <DialogContentText>Verify your data and confirm to start your 15 days trial</DialogContentText>
+
+                                                    <TextField
+                                                        margin="dense"
+                                                        id="name"
+                                                        label="Your name"
+                                                        type="name"
+                                                        fullWidth
+                                                        variant="standard"
+                                                        defaultValue={valuesF.name}
+                                                        InputProps={{
+                                                            readOnly: true,
+                                                        }}
+                                                    />
+                                                    <TextField
+                                                        margin="dense"
+                                                        id="name"
+                                                        label="Title"
+                                                        type="title"
+                                                        fullWidth
+                                                        variant="standard"
+                                                        value="title"
+                                                        InputProps={{
+                                                            readOnly: true,
+                                                        }}
+                                                    />
+                                                    <TextField
+                                                        margin="dense"
+                                                        id="name"
+                                                        label="Company / Organization"
+                                                        type="title"
+                                                        fullWidth
+                                                        variant="standard"
+                                                        value="title"
+                                                        InputProps={{
+                                                            readOnly: true,
+                                                        }}
+                                                    />
+                                                    <TextField
+                                                        margin="dense"
+                                                        id="name"
+                                                        label="Business Email"
+                                                        type="title"
+                                                        fullWidth
+                                                        variant="standard"
+                                                        value="title"
+                                                        InputProps={{
+                                                            readOnly: true,
+                                                        }}
+                                                    />
+                                                    <DialogActions>
+                                                        <Button  onClick={handleClose}>Cancel</Button>
+                                                        <Button onClick={handleClose}>Subscribe</Button>
+                                                    </DialogActions>
+                                                </DialogContent>
+
+                                            </Dialog>
                                         </Form>
                                     )}
+
                                 </Formik>
                             </div>
                         </div>
+
                     </article>
                 </article>
             </section>
