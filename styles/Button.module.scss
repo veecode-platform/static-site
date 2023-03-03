@@ -50,20 +50,18 @@
     width: small;
     font-size: .9vw;
     font-weight: 600;
-    color:white;
+    color:#FFF;
     border: none;
     min-width: 9vw;
     padding: 1em;
-    border-radius: 4px;
     background-color: $color7;
 
     &:hover:not([disabled]){
-        border-radius: 4px;
         background: linear-gradient(45deg,$color1);
-        color: white;
+        color: #FFF;
         transition: all 0.4s linear;
-        // -webkit-transform: scale(1.03);
-        // transform: scale(1.03);
+        -webkit-transform: scale(1.03);
+        transform: scale(1.03);
     }
 }
 

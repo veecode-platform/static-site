@@ -175,7 +175,7 @@ const Validate = () => {
                                                             readOnly: true,
                                                         }}
                                                     />
-                                                    <DialogActions className={style.actions} >
+                                                    <DialogActions className={style.actions} style={{justifyContent:"center", gap:"2.5rem", margin:"1em 0"}} >
                                                         <Button modal handleClick={handleClose}>CANCEL</Button>
                                                         <Button modal handleClick={submitForm}>CONFIRM</Button>
                                                     </DialogActions>
