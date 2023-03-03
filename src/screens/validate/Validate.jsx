@@ -12,6 +12,8 @@ import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
 import Link from "next/link";
+import CloseIcon from '@mui/icons-material/Close';
+import IconButton from '@mui/material/IconButton';
 
 const Validate = () => {
     const router = useRouter()
@@ -19,6 +21,7 @@ const Validate = () => {
     // Modal  
 
     const [open, setOpen] = useState(false);
+    const [success, setSuccess] = useState(false);
     const [values, setValues] = useState({
         name: "",
         company: "",
@@ -63,13 +66,16 @@ const Validate = () => {
 
     const handleClose = () => {
         setOpen(false);
+        setSuccess(false);
     };
 
     const submitForm = async () => {
         console.log('cheguei');
         const response = await UsePostData(values);
         console.log(values, response);
-        await handleFormRedirect();
+        // await handleFormRedirect();
+        setOpen(false);
+        setSuccess(true);
     };
 
     return (
@@ -89,6 +95,8 @@ const Validate = () => {
                                 <h2>15 Days <strong><span>Free Trial</span></strong> of Standard Plan</h2>
                             </div>
                             <div className={style.text__resume}>
+
+
                                 <p>
                                     Fill out the form on the side and get access to all the features and our support for a 15-day free trial! <br /><br />
                                     We guarantee that your information is secure and that we follow all privacy policies and comply with all applicable regulations and laws. Try our solutions and take advantage of our dedicated support to answer any questions you may have.<br /><br />
@@ -183,13 +191,55 @@ const Validate = () => {
                                                         </a>
                                                     </Link>
                                                 </DialogContent>
-
                                             </Dialog>
+                                            <Dialog
+                                                fullWidth
+                                                open={success}
+                                                onClose={handleClose}
+                                                aria-labelledby="success-alert-dialog"
+                                                aria-describedby="success-alert-dialog"
+                                            >
+                                                <DialogTitle>
+                                                    <IconButton
+                                                        aria-label="close"
+                                                        onClick={handleClose}
+                                                        sx={{
+                                                            position: 'absolute',
+                                                            right: 8,
+                                                            top: 8
+                                                        }}>
+                                                        <CloseIcon />
+
+                                                    </IconButton>
+                                                </DialogTitle>
+                                                <DialogContent className={style.astronault} style={{ textAlignLast: 'center' }}>
+                                                    <img
+                                                        alt="Astronault Helmet"
+                                                        width='50%'
+                                                        src="/assets/validate/astronaut-helmet.png"
+                                                    />
+                                                </DialogContent>
+                                                <DialogTitle style={{ alignSelf: 'center', fontWeight: 'bold' }}><h3>THAT'S IT!</h3></DialogTitle>
+                                                <DialogContent style={{ margin: ".5em 1em 1.5em 1em" }}>
+                                                    {/* <a href="https://storyset.com/science">Science illustrations by Storyset</a> */}
+
+                                                    <DialogContentText>
+                                                        <p style={{ fontSize: '1.5vw' }}>Your data has been successfully saved. Stay tuned, we will <span style={{ color: '#1c8068', fontWeight: 'bold' }}>contact you via email</span> to provide access to our ticket platform.</p>
+                                                    </DialogContentText>
+                                                    <Link href='/' passHref>
+                                                        <a target="_blank">
+                                                            <p style={{ textDecoration: "underline", fontSize: ".9em", textAlignLast: "center", padding: "2em 0 1em 0", color:"#1c8068" }}>Access Home Page</p>
+                                                        </a>
+                                                    </Link>
+                                                </DialogContent>
+                                            </Dialog>
+
                                         </Form>
                                     )}
-
                                 </Formik>
+
                             </div>
+
                         </div>
 
                     </article>
