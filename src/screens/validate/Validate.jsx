@@ -224,24 +224,20 @@ const Validate = () => {
                                                     {/* <a href="https://storyset.com/science">Science illustrations by Storyset</a> */}
 
                                                     <DialogContentText>
-                                                        <p style={{ fontSize: '1.5vw' }}>Your data has been successfully saved. Stay tuned, we will <span style={{ color: '#1c8068', fontWeight: 'bold' }}>contact you via email</span> to provide access to our ticket platform.</p>
+                                                        <p style={{ fontSize: '1.5em', textAlign: "center" }}>Your data has been successfully saved. Stay tuned, we will <span style={{ color: '#1c8068', fontWeight: 'bold' }}>contact you via email</span> to provide access to our ticket platform.</p>
                                                     </DialogContentText>
                                                     <Link href='/' passHref>
                                                         <a target="_blank">
-                                                            <p style={{ textDecoration: "underline", fontSize: ".9em", textAlignLast: "center", padding: "2em 0 1em 0", color:"#1c8068" }}>Access Home Page</p>
+                                                            <p style={{ textDecoration: "underline", fontSize: ".9em", textAlign: "center", padding: "2em 0 1em 0", color: "#1c8068" }}>Access Home Page</p>
                                                         </a>
                                                     </Link>
                                                 </DialogContent>
                                             </Dialog>
-
                                         </Form>
                                     )}
                                 </Formik>
-
                             </div>
-
                         </div>
-
                     </article>
                 </article>
             </section>
