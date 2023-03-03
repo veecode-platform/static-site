@@ -3,13 +3,13 @@ import classNames from 'classnames';
 import Link from 'next/link';
 import style from '../../../styles/Header.module.scss';
 import Button from '../button/Button';
-import { useTranslation } from 'react-i18next';
+// import { useTranslation } from 'react-i18next';
 
 
 const Logo = '/assets/logo/logo.png';
 
 const Header = ({ fixedHeader, showButton }) => {
-  const { t } = useTranslation();
+  // const { t } = useTranslation();
 
   return (
     <header
@@ -50,7 +50,7 @@ const Header = ({ fixedHeader, showButton }) => {
           {showButton && <div className={style.nav__buyButton} >
             <Link href="/compare-plans" passHref>
               <a>
-                <Button headerButton>{t('Buy Now')}</Button>
+                <Button headerButton>Buy Now</Button>
               </a>
             </Link>
           </div>}
