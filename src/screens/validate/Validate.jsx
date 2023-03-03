@@ -91,10 +91,8 @@ const Validate = () => {
                             <div className={style.text__resume}>
                                 <p>
                                     Fill out the form on the side and get access to all the features and our support for a 15-day free trial! <br /><br />
-                                    We guarantee that your information is secure and that we follow all privacy policies and comply with all applicable regulations and laws. <br /><br />
-                                    Try our solutions and take advantage of our dedicated support to answer any questions you may have.<br /><br />
-                                    After submitting the form, you will receive an email with access to our ticketing platform, where you can start asking questions and developing your business right away!<br /><br />
-
+                                    We guarantee that your information is secure and that we follow all privacy policies and comply with all applicable regulations and laws. Try our solutions and take advantage of our dedicated support to answer any questions you may have.<br /><br />
+                                    After submitting the form, we will get in touch with you.<br /><br />
                                 </p>
                             </div>
                         </div>
@@ -175,13 +173,13 @@ const Validate = () => {
                                                             readOnly: true,
                                                         }}
                                                     />
-                                                    <DialogActions className={style.actions} style={{justifyContent:"center", gap:"2.5rem", margin:"1em 0"}} >
+                                                    <DialogActions className={style.actions} style={{ justifyContent: "center", gap: "2.5rem", margin: "1em 0" }} >
                                                         <Button modal handleClick={handleClose}>CANCEL</Button>
                                                         <Button modal handleClick={submitForm}>CONFIRM</Button>
                                                     </DialogActions>
                                                     <Link href='/checkout' passHref>
                                                         <a target="_blank">
-                                                            <p style={{textDecoration:"underline", fontSize:".7em",textAlignLast:"center", padding:"1em 0"}}>Or, go to checkout</p>
+                                                            <p style={{ textDecoration: "underline", fontSize: ".7em", textAlignLast: "center", padding: "1em 0" }}>Or, go to checkout</p>
                                                         </a>
                                                     </Link>
                                                 </DialogContent>
