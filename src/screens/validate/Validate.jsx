@@ -128,9 +128,25 @@ const Validate = () => {
                                             <div className={style.form__buttonWrapper}><Button type="link">Continue</Button></div>
 
                                             <Dialog open={open} onClose={handleClose} fullWidth>
-                                                <DialogTitle>Almost There!</DialogTitle>
-                                                <DialogContent>
-                                                    <DialogContentText>Verify your data and confirm to start your 15 days trial</DialogContentText>
+                                                <DialogTitle style={{ margin: '1em 1em 0 1em' }}>
+                                                    <IconButton
+                                                        aria-label="close"
+                                                        onClick={handleClose}
+                                                        sx={{
+                                                            position: 'absolute',
+                                                            right: 8,
+                                                            top: 8,
+                                                        }}>
+                                                        <CloseIcon />
+                                                    </IconButton>
+                                                    <h3 style={{ fontSize: '1.3em' }}>Almost There!</h3>
+                                                </DialogTitle>
+                                                <DialogContent style={{ margin: '1em 1em 0 1em' }}>
+                                                    <DialogContentText>
+                                                        <p style={{ fontSize: '1.3em', margin: '0 0 .5em 0' }}>
+                                                            Verify your data and confirm to start your <span style={{ color: '#1c8068' }}> <strong>15 days trial</strong></span>
+                                                        </p>
+                                                    </DialogContentText>
 
                                                     <TextField
                                                         margin="dense"
@@ -181,13 +197,13 @@ const Validate = () => {
                                                             readOnly: true,
                                                         }}
                                                     />
-                                                    <DialogActions className={style.actions} style={{ justifyContent: "center", gap: "2.5rem", margin: "1em 0" }} >
+                                                    <DialogActions className={style.actions} style={{ justifyContent: "center", gap: "2.5rem", margin: "1em 0", flexWrap:'wrap-reverse' }} >
                                                         <Button modal handleClick={handleClose}>CANCEL</Button>
                                                         <Button modal handleClick={submitForm}>CONFIRM</Button>
                                                     </DialogActions>
                                                     <Link href='/checkout' passHref>
                                                         <a target="_blank">
-                                                            <p style={{ textDecoration: "underline", fontSize: ".7em", textAlignLast: "center", padding: "1em 0" }}>Or, go to checkout</p>
+                                                            <p style={{ textDecoration: "underline", fontSize: ".9em", textAlign: "center", padding: "1em 0", color: "#1c8068" }}>Or, go to checkout</p>
                                                         </a>
                                                     </Link>
                                                 </DialogContent>

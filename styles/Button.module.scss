@@ -47,7 +47,7 @@
 
 .buttonModal {
     @extend .button;
-    width: small;
+    // width: small;
     font-size: .9vw;
     font-weight: 600;
     color:#FFF;
@@ -62,6 +62,37 @@
         transition: all 0.4s linear;
         -webkit-transform: scale(1.03);
         transform: scale(1.03);
+    }
+
+    //Tablet 
+    @include for-tablet-only {
+        font-size: .75em;
+        height: 5vh;
+        width: 30%;
+    }
+
+    //mobile(M)
+    @include for-phone-only {
+        font-size: .7em;
+        margin: 0.5em;
+        min-width: 100px;
+        height: 5vh;
+        width: 50%;
+        border-radius: 1.1em;
+    }
+
+    //mobile(S)
+    @include for-phoneS-only {
+        margin: 0.8em 0;
+        min-width: 100px;
+        height: 5vh;
+        border-radius: 1.3em;
+    }
+    //mobile(XS)
+    @include for-phoneXS-only {
+        padding: 0.9em 2em;
+        font-size: 6vw;
+        min-width: 100px;
     }
 }
 
