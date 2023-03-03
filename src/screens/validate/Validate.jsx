@@ -139,12 +139,12 @@ const Validate = () => {
                                                         }}>
                                                         <CloseIcon />
                                                     </IconButton>
-                                                    <h3 style={{ fontSize: '1.3em' }}>Almost There!</h3>
+                                                    <h3 style={{ fontSize: '1.3em', color: '#1c8068' }}>Almost There!</h3>
                                                 </DialogTitle>
                                                 <DialogContent style={{ margin: '1em 1em 0 1em' }}>
                                                     <DialogContentText>
                                                         <p style={{ fontSize: '1.3em', margin: '0 0 .5em 0' }}>
-                                                            Verify your data and confirm to start your <span style={{ color: '#1c8068' }}> <strong>15 days trial</strong></span>
+                                                            Verify your data and confirm to start your <span style={{ color: '#0a3b30' }}> <strong>15 days trial</strong></span>
                                                         </p>
                                                     </DialogContentText>
 
