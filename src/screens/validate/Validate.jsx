@@ -19,7 +19,8 @@ import { useTranslation } from 'react-i18next';
 const Validate = () => {
     const router = useRouter()
     const plan = router.query.plan;
-    // const { t } = useTranslation();
+    const { t } = useTranslation();
+    // if using translation, take the file on jira/discord
 
     // Modal  
 
