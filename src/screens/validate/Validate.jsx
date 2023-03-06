@@ -14,10 +14,13 @@ import DialogTitle from '@mui/material/DialogTitle';
 import Link from "next/link";
 import CloseIcon from '@mui/icons-material/Close';
 import IconButton from '@mui/material/IconButton';
+import { useTranslation } from 'react-i18next';
 
 const Validate = () => {
     const router = useRouter()
     const plan = router.query.plan;
+    // const { t } = useTranslation();
+
     // Modal  
 
     const [open, setOpen] = useState(false);
@@ -70,10 +73,7 @@ const Validate = () => {
     };
 
     const submitForm = async () => {
-        console.log('cheguei');
         const response = await UsePostData(values);
-        console.log(values, response);
-        // await handleFormRedirect();
         setOpen(false);
         setSuccess(true);
     };
@@ -92,15 +92,15 @@ const Validate = () => {
                     <article className={style.content}>
                         <div className={style.text}>
                             <div className={style.text__header}>
-                                <h2>15 Days <strong><span>Free Trial</span></strong> of Standard Plan</h2>
+                                <h2>{t('15 Days')} <strong><span>{t('Free Trial')}</span></strong> {t('of Standard Plan')}</h2>
                             </div>
                             <div className={style.text__resume}>
 
 
                                 <p>
-                                    Fill out the form on the side and get access to all the features and our support for a 15-day free trial! <br /><br />
-                                    We guarantee that your information is secure and that we follow all privacy policies and comply with all applicable regulations and laws. Try our solutions and take advantage of our dedicated support to answer any questions you may have.<br /><br />
-                                    After submitting the form, we will get in touch with you.<br /><br />
+                                    {t('Fill out the form on the side and get access to all the features and our support for a 15-day free trial!')} <br /><br />
+                                    {t('We guarantee that your information is secure and that we follow all privacy policies and comply with all applicable regulations and laws. Try our solutions and take advantage of our dedicated support to answer any questions you may have.')}<br /><br />
+                                    {t('After submitting the form, we will get in touch with you.')}<br /><br />
                                 </p>
                             </div>
                         </div>
@@ -125,7 +125,7 @@ const Validate = () => {
                                             <Input name="email" placeholder="you@acme.com" label="Business Email" error={(errors.email && touched.email) && errors.email} />
                                             {/* <Input name="cel" placeholder="number" label="Cel number" error={(errors.cel && touched.cel) && errors.cel }/> */}
                                             <Checkbox name="terms" terms error={(errors.terms && touched.terms) && errors.terms} />
-                                            <div className={style.form__buttonWrapper}><Button type="link">Send</Button></div>
+                                            <div className={style.form__buttonWrapper}><Button type="link">Confirm</Button></div>
 
                                             <Dialog open={open} onClose={handleClose} fullWidth>
                                                 <DialogTitle style={{ margin: '1em 1em 0 1em' }}>
@@ -139,12 +139,12 @@ const Validate = () => {
                                                         }}>
                                                         <CloseIcon />
                                                     </IconButton>
-                                                    <h3 style={{ fontSize: '1.3em', color: '#1c8068' }}>Almost There!</h3>
+                                                    <h3 style={{ fontSize: '1.3em', color: '#1c8068' }}>{t('Almost There!')}</h3>
                                                 </DialogTitle>
                                                 <DialogContent style={{ margin: '1em 1em 0 1em' }}>
                                                     <DialogContentText>
                                                         <p style={{ fontSize: '1.3em', margin: '0 0 .5em 0' }}>
-                                                            Verify your data and confirm to start your <span style={{ color: '#0a3b30' }}> <strong>15 days trial</strong></span>
+                                                            {t('Please confirm the filled out data')} <span style={{ color: '#0a3b30' }}> <strong>{t('before sending')}</strong>.</span>
                                                         </p>
                                                     </DialogContentText>
 
@@ -197,13 +197,13 @@ const Validate = () => {
                                                             readOnly: true,
                                                         }}
                                                     />
-                                                    <DialogActions className={style.actions} style={{ justifyContent: "center", gap: "2.5rem", margin: "1em 0", flexWrap:'wrap-reverse' }} >
-                                                        <Button modal handleClick={handleClose}>CANCEL</Button>
-                                                        <Button modal handleClick={submitForm}>CONFIRM</Button>
+                                                    <DialogActions className={style.actions} style={{ justifyContent: "center", gap: "2.5rem", margin: "1em 0", flexWrap: 'wrap-reverse' }} >
+                                                        <Button modal handleClick={handleClose}>{t('CANCEL')}</Button>
+                                                        <Button modal handleClick={submitForm}>{t('SEND')}</Button>
                                                     </DialogActions>
                                                     <Link href='/checkout' passHref>
                                                         <a target="_blank">
-                                                            <p style={{ textDecoration: "underline", fontSize: ".9em", textAlign: "center", padding: "1em 0", color: "#1c8068" }}>Or, go to checkout</p>
+                                                            <p style={{ textDecoration: "underline", fontSize: ".9em", textAlign: "center", padding: "1em 0", color: "#1c8068" }}>{t('Or, go to checkout')}</p>
                                                         </a>
                                                     </Link>
                                                 </DialogContent>
@@ -235,16 +235,16 @@ const Validate = () => {
                                                         src="/assets/validate/astronaut-helmet.png"
                                                     />
                                                 </DialogContent>
-                                                <DialogTitle style={{ alignSelf: 'center', fontWeight: 'bold' }}><h3>THAT'S IT!</h3></DialogTitle>
+                                                <DialogTitle style={{ alignSelf: 'center', fontWeight: 'bold' }}><h3>{t("THAT'S IT!")}</h3></DialogTitle>
                                                 <DialogContent style={{ margin: ".5em 1em 1.5em 1em" }}>
                                                     {/* <a href="https://storyset.com/science">Science illustrations by Storyset</a> */}
 
                                                     <DialogContentText>
-                                                        <p style={{ fontSize: '1.5em', textAlign: "center" }}>Your data has been successfully saved. Stay tuned, we will <span style={{ color: '#1c8068', fontWeight: 'bold' }}>contact you via email</span> to provide access to our ticket platform.</p>
+                                                        <p style={{ fontSize: '1.5em', textAlign: "center" }}>{t('Your data has been successfully saved. Stay tuned, we will')} <span style={{ color: '#1c8068', fontWeight: 'bold' }}>{t('contact you via email')}</span> {t('to provide access to our ticket platform.')}</p>
                                                     </DialogContentText>
                                                     <Link href='/' passHref>
                                                         <a target="_blank">
-                                                            <p style={{ textDecoration: "underline", fontSize: ".9em", textAlign: "center", padding: "2em 0 1em 0", color: "#1c8068" }}>Access Home Page</p>
+                                                            <p style={{ textDecoration: "underline", fontSize: ".9em", textAlign: "center", padding: "2em 0 1em 0", color: "#1c8068" }}>{t('Access Home Page')}</p>
                                                         </a>
                                                     </Link>
                                                 </DialogContent>
