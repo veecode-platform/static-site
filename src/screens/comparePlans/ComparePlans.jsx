@@ -18,7 +18,7 @@ const ComparePlans = () => {
         {/* STANDARD */}
         <PlansDetails
           title="Standard"
-          subtitle="Solve your company's technological barriers in a practical and objective way."
+          subtitle="Start your free trial right now, with no credit card required to sign up!"
           link="/validate?plan=standard"
           label="Start at"
           emphasis="$ 1990"

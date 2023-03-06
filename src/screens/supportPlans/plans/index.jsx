@@ -39,7 +39,7 @@ const Plans = () => {
                 {/* STANDARD */}
                 <PlansDetails
                     title={t("Standard")}
-                    subtitle={t("Solve your company's technological barriers in a practical and objective way")}
+                    subtitle={t("Start your free trial right now, with no credit card required to sign up!")}
                     link="/validate?plan=standard"
                     label={t("Start at")}
                     emphasis="$ 1990"
