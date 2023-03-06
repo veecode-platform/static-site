@@ -125,7 +125,7 @@ const Validate = () => {
                                             <Input name="email" placeholder="you@acme.com" label="Business Email" error={(errors.email && touched.email) && errors.email} />
                                             {/* <Input name="cel" placeholder="number" label="Cel number" error={(errors.cel && touched.cel) && errors.cel }/> */}
                                             <Checkbox name="terms" terms error={(errors.terms && touched.terms) && errors.terms} />
-                                            <div className={style.form__buttonWrapper}><Button type="link">Continue</Button></div>
+                                            <div className={style.form__buttonWrapper}><Button type="link">Send</Button></div>
 
                                             <Dialog open={open} onClose={handleClose} fullWidth>
                                                 <DialogTitle style={{ margin: '1em 1em 0 1em' }}>

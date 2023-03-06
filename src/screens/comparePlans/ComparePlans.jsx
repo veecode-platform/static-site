@@ -23,7 +23,7 @@ const ComparePlans = () => {
           label="Start at"
           emphasis="$ 1990"
           text="per Month"
-          buttonLabel="Sign the plan"
+          buttonLabel="Free Test"
           banner
         >
           <li><span><FaCheck /></span>8x5 support</li>

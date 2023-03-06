@@ -44,7 +44,7 @@ const Plans = () => {
                     label={t("Start at")}
                     emphasis="$ 1990"
                     text={t("per Month")}
-                    buttonLabel={t("Sign Plan")}
+                    buttonLabel={t("Free Test")}
                     banner
                 >
                     <li><span><FaCheck /></span>{t('8x5 support')}</li>
