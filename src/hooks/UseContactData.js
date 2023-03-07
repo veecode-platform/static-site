@@ -21,7 +21,7 @@ export const UseContactData = async (values) => {
       "contact-type": values.type ?? "TRIAL"
     }
 
-    const { data } = await api.post("/contact", model)
+    const { data } = await api.post("/contacts", model)
 
     return data
   }
