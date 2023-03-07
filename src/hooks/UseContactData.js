@@ -17,8 +17,8 @@ export const UseContactData = async (values) => {
       "e-mail": values.email,
       "interests": interests,
       "question": values.question,
-      "title": values.title,
-      "contact-type": values.type
+      "job-title": values.title,
+      "contact-type": values.type ?? "TRIAL"
     }
 
     const { data } = await api.post("/contact", model)

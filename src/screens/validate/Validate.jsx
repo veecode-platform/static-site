@@ -76,6 +76,7 @@ const Validate = () => {
     };
 
     const submitForm = async () => {
+        console.log(values);
         const response = await UseContactData(values);
         // const response = await UsePostData(values);
         setOpen(false);
@@ -111,16 +112,16 @@ const Validate = () => {
                         <div className={style.content__options}>
                             <div className={style["content__options-formWraper"]}>
                                 <Formik
-                                    initialValues={{ name: "", company: "", email: "", title: "", terms: false, plan: plan }}
+                                    initialValues={{ name: "", company: "", email: "", title: "", terms: false, type: "TRIAL", plan: plan }}
                                     validationSchema={formSchema}
                                     onSubmit={(values) => {
                                         setValues(values);
                                         setOpen(true);
-                                        isSubmitting = false;
+                                        // isSubmitting = false;
                                     }}
 
                                 >
-                                    {({ errors, touched, handleSubmit, isSubmitting }) => (
+                                    {({ errors, touched, handleSubmit }) => (
 
                                         <Form onSubmit={handleSubmit} className={style.form}>
                                             <Input name="name" placeholder="First and last name" label="Your name" error={(errors.name && touched.name) && errors.name} />
@@ -197,6 +198,18 @@ const Validate = () => {
                                                         fullWidth
                                                         variant="standard"
                                                         value={values.email}
+                                                        InputProps={{
+                                                            readOnly: true,
+                                                        }}
+                                                    />
+                                                    <TextField
+                                                        margin="dense"
+                                                        id="content-type"
+                                                        label="Type"
+                                                        type="email"
+                                                        fullWidth
+                                                        variant="standard"
+                                                        value={values.type}
                                                         InputProps={{
                                                             readOnly: true,
                                                         }}
