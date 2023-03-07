@@ -11,6 +11,7 @@ const Docs = () => {
       titleBar='enable'
       title='Get Started For Free'
       subtitle='Learn more about our tools here.'
+      showOptions
     >
       <article className={style.container}>
         <div className={style.container__cards}>

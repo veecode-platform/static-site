@@ -6,12 +6,13 @@ const Faq = () => {
 
   return (
     <DefaultPage
-    titleBar='enable'
-    title="FAQ"
-    subtitle="Frequently Asked Questions"
+      titleBar='enable'
+      title="FAQ"
+      subtitle="Frequently Asked Questions"
+      showOptions
     >
-    <Accordion/>
-    <ContactBar />
+      <Accordion />
+      <ContactBar />
     </DefaultPage>
   )
 }

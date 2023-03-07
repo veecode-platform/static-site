@@ -7,21 +7,24 @@ import { FaCheck, FaCheckCircle, FaMinus } from "react-icons/fa";
 const ComparePlans = () => {
   return (
     <DefaultPage
+      showOptions
       titleBar="enable"
       title="Chose our support for you"
       subtitle="No more stress with the digital transition, choose the support that most fits your need:"
     >
       <Breadcrumb active={1} />
+
       <article className={style.content}>
         {/* STANDARD */}
         <PlansDetails
           title="Standard"
-          subtitle="Solve your company's technological barriers in a practical and objective way."
+          subtitle="Start your free trial right now, with no credit card required to sign up!"
           link="/validate?plan=standard"
           label="Start at"
           emphasis="$ 1990"
           text="per Month"
-          buttonLabel="Sign the plan"
+          buttonLabel="Free Test"
+          banner
         >
           <li><span><FaCheck /></span>8x5 support</li>
           <li><span><FaCheck /></span>One business day SLA</li>
@@ -36,6 +39,7 @@ const ComparePlans = () => {
           link="/contact-enterprise"
           headline="Personalize your experience"
           buttonLabel="Contact Us"
+          banner={false}
         >
           <li><span><FaCheck /></span>24x7 support</li>
           <li><span><FaCheck /></span>SLA on the same business day</li>

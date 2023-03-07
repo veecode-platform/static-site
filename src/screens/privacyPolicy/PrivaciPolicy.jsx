@@ -3,12 +3,13 @@ import style from "../../../styles/PrivacyPolicy.module.scss";
 
 const PrivaciPolicy = () => {
   return (
-    <DefaultPage 
+    <DefaultPage
       title="Privacy Policy"
       titleBar="enable"
       noPrevious
       showButton
-      >
+      showOptions
+    >
       <article className={style.content}>
         <span>
           <p>Date: August 24th, 2022</p>

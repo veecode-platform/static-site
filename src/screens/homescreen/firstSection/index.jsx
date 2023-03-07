@@ -52,7 +52,7 @@ const FirstSection = () => {
           <p>
             Your transition to the cloud doesn&lsquo;t have to be time-consuming, expensive, or lonely. Count on our{" "}
             <strong>professional support</strong> and{" "}
-            <strong>free tools</strong> 
+            <strong>free tools </strong> 
             to overcome your challenges quickly and easily! 
             {/* incorporating: */}
           </p>

@@ -1,37 +1,46 @@
-@import '/abstract/functions','/abstract//responsive','/abstract/variables';
+@import '/abstract/functions', '/abstract//responsive', '/abstract/variables';
 
-.content{ 
-    @include screenSize(75%,auto);
+.content {
+    @include screenSize(75%, auto);
     display: grid;
-    grid-template: 1fr / repeat(2,1fr);
+    grid-template: 1fr / repeat(2, 1fr);
     margin: 2.5em auto;
     gap: .5em;
-            //viewport
-            @include for-viewport-only{
-                @include screenSize(80%,auto);
-            }
-            //tablet
-            @include for-tablet-only{
-                @include screenSize(85%,auto);
-            }
-            //mobile(M)
-            @include for-phone-only{
-                @include screenSize(85%,auto);
-                @include displayFlex(center, center,column);
-                gap: 1.5em;
-            }
-            //mobile(S)
-            @include for-phoneS-only{
-                @include screenSize(100%,auto);
-            }
+    position: relative;
+
+
+    //viewport
+    @include for-viewport-only {
+        @include screenSize(80%, auto);
+    }
+
+    //tablet
+    @include for-tablet-only {
+        @include screenSize(85%, auto);
+    }
+
+    //mobile(M)
+    @include for-phone-only {
+        @include screenSize(85%, auto);
+        @include displayFlex(center, center, column);
+        gap: 1.5em;
+    }
+
+    //mobile(S)
+    @include for-phoneS-only {
+        @include screenSize(100%, auto);
+    }
 }
-.sublist{
+
+.sublist {
     @include resetList();
     margin-top: .3em;
-    li{
+
+    li {
         font-size: 14px;
         line-height: 1em;
-        span{
+
+        span {
             color: $color10;
             font-size: .7vw;
             margin: 0 1em;
@@ -39,23 +48,27 @@
     }
 }
 
-.sectionBar{
-        @include screenSize(75%,auto);
-        @include displayFlex(center, center, column);
-        //viewport
-        @include for-viewport-only{
-            @include screenSize(80%,auto);
-        }
-        //tablet
-        @include for-tablet-only{
-            @include screenSize(85%,auto);
-        }
-        //mobile(M)
-        @include for-phone-only{
-            @include screenSize(85%,auto);
-        }
-        //mobile(S)
-        @include for-phoneS-only{
-            @include screenSize(100%,auto);
-        }
+.sectionBar {
+    @include screenSize(75%, auto);
+    @include displayFlex(center, center, column);
+
+    //viewport
+    @include for-viewport-only {
+        @include screenSize(80%, auto);
+    }
+
+    //tablet
+    @include for-tablet-only {
+        @include screenSize(85%, auto);
+    }
+
+    //mobile(M)
+    @include for-phone-only {
+        @include screenSize(85%, auto);
+    }
+
+    //mobile(S)
+    @include for-phoneS-only {
+        @include screenSize(100%, auto);
+    }
 }

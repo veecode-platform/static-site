@@ -11,6 +11,7 @@ const Success = () => {
     <DefaultPage
      titleBar="disable"
      noBack
+     showOptions
      >
       <article className={style.content}>
         <div className={style.content__image}>

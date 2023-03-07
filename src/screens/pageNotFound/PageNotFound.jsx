@@ -7,20 +7,21 @@ const ImageNotFound = "/assets/notFound/404.png";
 const PageNotFound = () => {
   return (
     <DefaultPage
-        titleBar="disable"
-        noPrevious
-        >
+      titleBar="disable"
+      noPrevious
+      showOptions
+    >
       <article className={style.wrapper}>
         <div className={style.image}>
           <Image
             layout="responsive"
-            src={ImageNotFound} 
+            src={ImageNotFound}
             alt="Page Not Found Image"
             width='100%'
             height='100%'
             unoptimized
             priority={true}
-             />
+          />
         </div>
       </article>
     </DefaultPage>
