@@ -6,7 +6,7 @@ import { object, string } from "yup";
 import { UseContactData } from "../../hooks/UseContactData";
 import { useRouter } from "next/router";
 
-const FormElement = ({ company, checkbox }) => {
+const FormElement = ({ company, checkbox, type }) => {
   const formSchema = object({
     name: string().required("*required"),
     company: company ? string().required("*required") : null,
@@ -28,6 +28,7 @@ const FormElement = ({ company, checkbox }) => {
         company: "",
         email: "",
         question: "",
+        type: type,
         vkpr: false,
         safiracli: false,
         support: false,
@@ -35,7 +36,6 @@ const FormElement = ({ company, checkbox }) => {
       }}
       validationSchema={formSchema}
       onSubmit={async (values) => {
-        //console.log(values);
         const response = await UseContactData(values);
         await handleFormRedirect();
       }}

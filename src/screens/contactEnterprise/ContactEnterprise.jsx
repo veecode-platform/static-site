@@ -51,7 +51,7 @@ const ContactEnterprise = () => {
         </div>
         {/* FORM */}
         <div className={style.form}>
-          <FormElement />
+          <FormElement type="ENTERPRISE"/>
         </div>
       </article>
     </DefaultPage>

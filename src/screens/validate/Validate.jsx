@@ -4,6 +4,7 @@ import style from '../../../styles/Validate.module.scss';
 import { Formik, Form } from 'formik';
 import { object, string, boolean } from 'yup';
 import { UsePostData } from '../../hooks/UsePostData';
+import {UseContactData} from '../../hooks/UseContactData';
 import { useEffect, useState } from 'react';
 import TextField from '@mui/material/TextField';
 import Dialog from '@mui/material/Dialog';
@@ -32,6 +33,7 @@ const Validate = () => {
         email: "",
         title: "",
         terms: false,
+        type:"TRIAL",
         plan: plan
     });
 
@@ -74,7 +76,8 @@ const Validate = () => {
     };
 
     const submitForm = async () => {
-        const response = await UsePostData(values);
+        const response = await UseContactData(values);
+        // const response = await UsePostData(values);
         setOpen(false);
         setSuccess(true);
     };
