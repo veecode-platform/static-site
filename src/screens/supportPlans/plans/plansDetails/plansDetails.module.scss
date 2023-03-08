@@ -16,9 +16,14 @@
         top: -.4rem;
 
         @include for-tablet-only {
-            width: 16vw;
+            width: 13vw;
             left: -.4rem;
             top: -.4rem;
+        }
+
+        @include for-tabletS-only {
+            width: 16vw;
+
         }
 
         @include for-phone-only {
