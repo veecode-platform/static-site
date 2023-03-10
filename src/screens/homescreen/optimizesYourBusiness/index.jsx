@@ -36,11 +36,11 @@ const OptimizeYourBusiness = () => {
                 </a>
               </Link>
               
-              <Link href="/docs" passHref> 
+              {/* <Link href="/docs" passHref> 
                 <a className={style.button}>
                   <Button>Start For Free</Button>
                 </a>
-              </Link>
+              </Link> */}
             </div>
           </div>
         </div>
