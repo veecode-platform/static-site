@@ -29,11 +29,6 @@
     "desc": "They are models of operation of the support, the model 8x5, means that our availability of service is 8 hours a day on 5 days a week, already the 24x7, follows the same logic and it is 24 hours a day the 7 days a week, or full time."
 },
 {
-    "id": 7,
-    "title": "How does the ticket disposition work in the Standard support model?",
-    "desc": "In this model, you have access to use 10 tickets per month, with a maximum of two simultaneous tickets of the 10 available. These are renewed each month and unused tickets will not be added to your account."
-},
-{
     "id": 8,
     "title": "Besides the site, what are other means of communication?",
     "desc": "You can find us on our social networks (instagram, linkedin and facebook), as well as in our community on github where you will find perfect interaction channels to answer your questions and relate to the tech public."

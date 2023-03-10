@@ -30,7 +30,7 @@ const ComparePlans = () => {
         >
           <li><span><FaCheck /></span>8x5 <Link href="/support" passHref><a><span>Support</span></a></Link></li>
           <li><span><FaCheck /></span>One business day SLA</li>
-          <li><span><FaCheck /></span>10 tickets per month</li>
+          {/* <li><span><FaCheck /></span>10 tickets per month</li> */}
           <li><span><FaCheck /></span>2 simultaneous tickets</li>
           <li><span><FaCheck /></span>Direct access to technical professionals</li>
         </PlansDetails>

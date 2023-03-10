@@ -50,7 +50,7 @@ const Plans = () => {
                 >
                     <li><span><FaCheck /></span>{t('8x5')} <Link href="/support" passHref><a><span>{t('Support')}</span></a></Link></li>
                     <li><span><FaCheck /></span>{t('One business day SLA')}</li>
-                    <li><span><FaCheck /></span>{t('10 tickets per month')}</li>
+                    {/* <li><span><FaCheck /></span>{t('10 tickets per month')}</li> */}
                     <li><span><FaCheck /></span>{t('2 simultaneous tickets')}</li>
                     <li><span><FaCheck /></span>{t('Direct access to technical professionals')}</li>
                 </PlansDetails>
