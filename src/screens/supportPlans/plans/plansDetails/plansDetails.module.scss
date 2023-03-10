@@ -1,7 +1,7 @@
 @import "/abstract/functions", "/abstract/responsive", "/abstract/variables";
 
 .planTable {
-    @include screenSize(auto, 100%);
+    @include screenSize(100%, auto);
     @include displayFlex(flex-start, center, column);
     background-color: $color17;
     @include cardShadow();

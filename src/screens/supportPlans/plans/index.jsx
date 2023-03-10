@@ -53,6 +53,23 @@ const Plans = () => {
                     <li><span><FaCheck /></span>{t('2 simultaneous tickets')}</li>
                     <li><span><FaCheck /></span>{t('Direct access to technical professionals')}</li>
                 </PlansDetails>
+
+                <PlansDetails
+                    title={t("Basic")}
+                    subtitle={t("Start your free trial right now, with no credit card required to sign up!")}
+                    link="/validate?plan=standard"
+                    label={t("Start at")}
+                    emphasis="$ 1990"
+                    text={t("per Month")}
+                    buttonLabel={t("Free Test")}
+                >
+                    <li><span><FaCheck /></span>{t('8x5 support')}</li>
+                    <li><span><FaCheck /></span>{t('One business day SLA')}</li>
+                    <li><span><FaCheck /></span>{t('10 tickets per month')}</li>
+                    <li><span><FaCheck /></span>{t('2 simultaneous tickets')}</li>
+                    <li><span><FaCheck /></span>{t('Direct access to technical professionals')}</li>
+                </PlansDetails>
+
                 {/* ENTERPRISE */}
                 <PlansDetails
                     title={t("Enterprise")}
