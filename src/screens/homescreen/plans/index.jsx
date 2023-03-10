@@ -3,6 +3,7 @@ import style from "./Plans.module.scss";
 import PlansDetails from "./plansDetails";
 import { FaCheck } from "react-icons/fa";
 const veeCodeLogo = 'assets/home/black_logo.png';
+import Link from "next/link";
 
 const Plans = () => {
   return (
@@ -38,7 +39,7 @@ const Plans = () => {
           text="per Month"
           buttonLabel="Sign Plan"
         >
-          <li><span><FaCheck /></span>8x5 support</li>
+          <li><span><FaCheck /></span>8x5 <Link href="/support" passHref><a><span>Support</span></a></Link></li>
           <li><span><FaCheck /></span>One business day SLA</li>
           <li><span><FaCheck /></span>10 tickets per month</li>
           <li><span><FaCheck /></span>2 simultaneous tickets</li>
@@ -52,7 +53,7 @@ const Plans = () => {
           headline="Personalize your experience"
           buttonLabel="Contact Us"
         >
-          <li><span><FaCheck /></span>24x7 support</li>
+          <li><span><FaCheck /></span>24x7 <Link href="/support" passHref><a><span>Support</span></a></Link></li>
           <li><span><FaCheck /></span>SLA on the same business day</li>
           <li><span><FaCheck /></span>Prioritized bug fixes</li>
           <li><span><FaCheck /></span> Direct access to technical professionals</li>
