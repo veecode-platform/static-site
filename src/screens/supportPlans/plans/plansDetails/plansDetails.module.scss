@@ -3,13 +3,40 @@
 .planTable {
     @include screenSize(auto, 100%);
     @include displayFlex(flex-start, center, column);
-    // @include glassEffect();
-    background: #f5f5f5;
+    background-color: $color17;
     @include cardShadow();
-    // border: 1px solid $color7;
     border-radius: .8em;
-
     font-family: $font-text;
+    position: relative;
+
+    .image {
+        position: absolute;
+        width: 11.5vw;
+        left: -.4rem;
+        top: -.4rem;
+
+        @include for-tablet-only {
+            width: 13vw;
+            left: -.4rem;
+            top: -.4rem;
+        }
+
+        @include for-tabletS-only {
+            width: 16vw;
+
+        }
+
+        @include for-phone-only {
+            width: 25vw;
+            left: -.5rem;
+            top: -.5rem;
+        }
+
+        @include for-phoneS-only {
+            width: 35vw;
+        }
+    }
+
     //mobile(M)
     @include for-phone-only {
         height: auto;
@@ -19,7 +46,6 @@
     &__title {
         @include screenSize(100%, auto);
         @include displayFlex(center, center, row);
-
         padding-top: 4em;
 
         //viewport
@@ -29,27 +55,47 @@
 
         &-title {
             color: $color5;
-
-            @include typography(2.7vw, center, auto, 700);
+            @include typography(2.2vw, center, auto, 700);
 
             //tablet
             @include for-tablet-only {
-                font-size: 3vw;
+                font-size: 2.6vw;
             }
 
             //mobile(M)
             @include for-phone-only {
-                font-size: 7vw;
+                font-size: 5vw;
+            }
+
+            // mobile(S)
+            @include for-phoneS-only {
+                font-size: 8vw;
             }
         }
     }
 
     &__subtitle {
-        @include screenSize(90%, 200px);
+        // @include screenSize(90%, 200px);          <<<--- Check desktop
+        @include screenSize(90%, auto);
         @include displayFlex(center, center, column);
+        min-height: 80px;
+        // padding: 0 1em;
+        margin: 2.5em 1em;
+
+        // tablet(S)
+        @include for-tabletS-only {
+            min-height: 50px;
+            padding: 0 1em;
+        }
+
+        // mobile
+        @include for-phone-only {
+            min-height: auto;
+            padding: 0 1em;
+        }
 
         &-subtitle {
-            @include typography(1.4vw, center, center, 300px);
+            @include typography(1.1vw, center, center, 300px);
 
             //viewport
             @include for-viewport-only {
@@ -58,13 +104,17 @@
 
             //tablet
             @include for-tablet-only {
-                font-size: 2vw;
+                font-size: 1.5vw;
             }
 
             //mobile(M)
             @include for-phone-only {
-                font-size: 17px;
-                height: auto;
+                font-size: 2.3vw;
+            }
+
+            //mobile(M)
+            @include for-phone-only {
+                font-size: 3.4vw;
             }
         }
     }
@@ -73,7 +123,6 @@
         @include screenSize(80%, auto);
         @include displayFlex(space-around, center, column);
         border-top: 1px solid $color5;
-
         min-height: 16em;
         padding-bottom: 2em;
 
@@ -102,35 +151,67 @@
 
                 //mobile(M)
                 @include for-phone-only {
-                    font-size: 16px;
+                    font-size: 3vw;
+                }
+
+                //mobile(S)
+                @include for-phoneS-only {
+                    font-size: 14px;
                 }
             }
 
             strong {
                 @include typography(2.5vw, center, auto, 800);
 
-                // color: $color7;
                 //mobile(M)
                 @include for-phone-only {
-                    font-size: 42px;
+                    font-size: 8vw;
+                }
+
+                //mobile(S)
+                @include for-phoneS-only {
+                    font-size: 11vw;
+                    font-weight: 700;
                 }
             }
 
             h2 {
                 text-align: center;
+                font-size: 1.6vw;
+                font-weight: 800;
+
+                // tablet
+                @include for-tablet-only {
+                    font-size: 2vw;
+                }
+
+                // mobile
+                @include for-phone-only {
+                    font-size: 4vw;
+                }
+
+                //mobile(S)
+                @include for-phoneS-only {
+                    font-size: 6vw;
+                    font-weight: 700;
+                }
             }
         }
     }
 
     &__list {
         border-top: 1px solid $color7;
-
         @include resetList();
         @include screenSize(80%, auto);
         padding: 3em 0;
 
+        //mobile(S)
+        @include for-phoneS-only {
+            width: 85%;
+        }
+
         li {
-            @include typography(1.4vw, left, auto, 400);
+            @include typography(.95vw, left, auto, 400);
             padding: 0.5em 0;
 
             //viewport
@@ -140,12 +221,22 @@
 
             //tablet
             @include for-tablet-only {
-                font-size: 1.5vw;
+                font-size: 1.04vw;
+            }
+
+            //tablet(S)
+            @include for-tabletS-only {
+                font-size: 1.1vw;
             }
 
             //mobile(M)
             @include for-phone-only {
                 font-size: 16px;
+            }
+
+            // mobile(S)
+            @include for-phoneS-only {
+                font-size: 13px;
             }
 
             span {

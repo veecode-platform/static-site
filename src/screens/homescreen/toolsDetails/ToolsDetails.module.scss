@@ -3,9 +3,7 @@
 .content {
     @include screenSize(100vw, auto);
     padding: 10em 0 12em 0;
-    // background: $color13;
-    // @include backgroundImage('/assets/home/bglight.webp');
-    @include backgroundImage('/assets/default/banner.webp');
+    @include backgroundImage('/assets/home/bglight.webp');
     @include displayFlex(center, center, column);
     position: relative;
     //mobile
@@ -16,7 +14,7 @@
             @include screenSize(100%, auto);
             padding-bottom: 0.5em;
             span{
-                color: $color1;
+                color: $color16;
             }
             //tablet
             @include for-tablet-only {
@@ -33,7 +31,7 @@
             }
             h2 {
                 @include typography(2.8vw, center, 1.3em, 600);
-                color: $color2;
+                color: $color9;
                 //mobile(M)
                 @include for-phone-only {
                     font-size: 7vw;
@@ -48,20 +46,24 @@
         @include screenSize(80%, auto);
         margin: 1em;
         padding-bottom: 3em;
-        color: $color4;
         p {
             @include typography(1.5vw,center,auto,400);
-            color: $color2;
+            color: $color4;
+
+            @include for-phone-only{
+                font-size: 4.5vw;
+            }
         }
 
         span {
             font-weight: 700;
-            color: $color1;
+            color: $color16;
         }
         //mobile
         @include for-phone-only{
             font-size: 3vw;
             padding: 0 1em;
+            padding-bottom: 2em;
         }
         //mobile(S)
         @include for-phoneS-only{

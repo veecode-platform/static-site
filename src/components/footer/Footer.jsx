@@ -3,10 +3,13 @@ import style from "../../../styles/Footer.module.scss";
 import { FaFacebookSquare, FaInstagram, FaLinkedin, FaTwitterSquare } from "react-icons/fa";
 import Link from "next/link";
 import { gtagEvents } from "../../../utils/gtag";
+// import { useTranslation } from 'react-i18next';
 
-const Logo = "/assets/home/logo.png";
+const Logo = "/assets/logo/logo.png";
 
 const Footer = () => {
+  // const { t } = useTranslation();
+
   return (
     <footer className={style.footer}>
       <section className={style.content}>
@@ -55,7 +58,7 @@ const Footer = () => {
               </li>
               <Link href="https://docs.platform.vee.codes/docs/intro" passHref><a target="_blank" onClick={()=>gtagEvents('safiraDocs')}><li>Safira CLI</li></a></Link>
               <Link href="https://docs.vkpr.net/docs/intro/" passHref><a target="_blank" onClick={()=>gtagEvents('vkprDocs')}><li>VKPR</li></a></Link>
-              <Link href="https://docs.platform.vee.codes/docs/tutorials/devportal/" passHref><a target="_blank" onClick={()=>gtagEvents('devportal')} ><li>Devportal</li></a></Link>
+              <Link href="https://docs.platform.vee.codes/docs/tutorials/devportal/" passHref><a target="_blank" onClick={()=>gtagEvents('devportal')}><li>Devportal</li></a></Link>
             </ul>
             <ul>
               <li>
@@ -71,8 +74,7 @@ const Footer = () => {
       </section>
       <section className={style.footer__copy}>
         <p>
-          Copyright &copy; {new Date().getFullYear()} VeeCode Platform. All
-          rights reserved
+          Copyright &copy; {new Date().getFullYear()} VeeCode Platform. All rights reserved
         </p>
       </section>
     </footer>

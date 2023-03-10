@@ -2,198 +2,150 @@
 
 .content {
     @include screenSize(100%, auto);
-    @include backgroundImage('/assets/home/bglight.webp');
+    @include backgroundImage('/assets/home/bglight.svg');
+    background-position-x: 60%;
     @include displayFlex(flex-start, center, column);
-
-    //viewport
-    @include for-viewport-only {
-        @include screenSize(100%, auto);
+    padding: 1em 0;
+    // tablet
+    @include for-tablet-only{
+        padding: 2em 0;
     }
-
-    //tablet
-    @include for-tablet-only {
-        @include screenSize(100%, auto);
-    }
-
     //mobile(M)
     @include for-phone-only {
         @include displayFlex(center, center, column);
-        gap: 1.5em;
         flex-wrap: wrap;
     }
-
-    &__wrapper {
-        @include screenSize(80%, auto);
-        display: grid;
-        grid-template: 1fr/ repeat(4, 1fr);
-        gap: 1%;
-
-        //mobile
-        @include for-phone-only {
-            grid-template: 1fr/1fr;
-            justify-content: center;
-            align-items: center;
-            gap: 0;
-        }
-    }
-
     .header {
         @include screenSize(70%, auto);
         @include displayFlex(center, center, row);
         padding-bottom: 0.5em;
-
         //tablet 
         @include for-tablet-only {
-            @include screenSize(100%, auto);
-            @include displayFlex(center, center, column);
-
-
+            @include screenSize(auto, auto);
         }
-
-        
-        // mobile
-        @include for-phone-only {
-            @include displayFlex(center, center, column);
-        }
-
         &__logo {
-            padding-top: .9em;
-            padding-left: 0em;
-            padding-right: 1em;
-            width: 15vw;
-
-            // tablet
+            margin: .9em 1em 0em 0em;
+            width: 18vw;
+           // tablet
             @include for-tablet-only {
-                display: none;
+                width: 20vw;
             }
-
             // mobile
             @include for-phone-only {
-                display: none;
+                width: 30vw;
+            }
+            // mobile(S)
+            @include for-phoneS-only{
+                width: 40vw;
             }
         }
-
         &__title {
             background-image: linear-gradient(to bottom, $color1, $color7, $color1);
-            color: $color1;
+            // color: $color16;
             background-clip: text;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             padding: 2em 0em;
-
             span {
                 color: $color5;
             }
-
             //tablet
             @include for-tablet-only {
-                @include screenSize(50%, auto);
-                padding-bottom: 1em;
+                padding: 0;
             }
-
-            //mobile(M)
-            @include for-phone-only {
-                @include screenSize(50%, auto);
-                padding-top: 3em;
-                padding-bottom: .5em;
-            }
-
-            //mobile(S)
-            @include for-phoneS-only {
-                @include screenSize(70%, auto);
-            }
-
             h2 {
                 @include typography(2.9vw, center, 1.3em, 700);
                 // color: $color2;
-
-                //mobile(M)
+                // tablet
                 @include for-tablet-only {
-                    // font-size: 7vw;
-                    @include typography(3vw, flex-start, 1.3em, 700);
+                    @include typography(3.8vw, flex-start, 1.3em, 700);
                 }
-
                 //mobile(M)
                 @include for-phone-only {
-                    // font-size: 7vw;
-                    @include typography(8vw, center, 1.3em, 700);
+                    @include typography(7vw, center, 1.3em, 700);
                 }
-
                 //mobile(S)
                 @include for-phoneS-only {
-                    font-size: 11vw;
+                    font-size: 9vw;
                 }
             }
         }
     }
-
-    .subtitle {
+    .body {
         @include screenSize(70%, auto);
-        @include displayFlex(center, center, row);
-        // margin: 1em;
-        padding-bottom: 2em;
-        color: $color4;
-
-        @include for-phone-only {
-            padding: 2em 1em;
+        @include displayFlex(center, center, column);
+        padding-bottom: .5em;
+        // tablet
+        @include for-tablet-only{
+            width: 80%;
         }
-
+        // mobile
+        @include for-phone-only {
+            @include screenSize(90%, auto);
+        }
+    }
+    .subtitle {
+        @include screenSize(80%, auto);
+        @include displayFlex(center, center, row);
+        padding-bottom: .5em;
+        color: $color4;
+        // mobile
+        @include for-phone-only {
+            padding: 0.5em 1em;
+        }
+        // mobile(S)
+        @include for-phoneS-only{
+            width: 100%;
+        }
         p {
             @include typography(1.8vw, center, 1.3em, 500);
             color: $color3;
-
             //tablet
             @include for-tablet-only {
-                @include typography(2.3vw, center, 1.3em, 500);
+                @include typography(2vw, center, 1.3em, 500);
             }
-
             //mobile
             @include for-phone-only {
-                @include typography(4vw, center, 1.3em, 500);
+                font-size: 3vw;
             }
-
             //mobile(S)
             @include for-phoneS-only {
-                font-size: 18px;
+                font-size: 19px;
             }
         }
-
         span {
             font-weight: 700;
-            color: $color5;
+            color: $color16;
         }
-
     }
-
     .plans {
-        @include screenSize(70%, auto);
+        @include screenSize(55%, auto);
         display: grid;
         grid-template: 1fr / repeat(2, 1fr);
-        margin: 2.5em auto;
-        gap: 3em;
+        margin: 1.5em auto;
+        gap: 1.8em;
         padding: 2em 0 10em 0;
-
-        //viewport
+        // viewport
         @include for-viewport-only {
-            @include screenSize(80%, auto);
+            @include screenSize(60%, auto);
         }
-
-        //tablet
-        @include for-tablet-only {
-            @include screenSize(85%, auto);
+        // tablet
+        @include for-tablet-only{
+            @include screenSize(65%, auto);
         }
-
+        // tablet(S)
+        @include for-tabletS-only{
+            @include screenSize(75%, auto);
+        }
         //mobile(M)
         @include for-phone-only {
-            @include screenSize(85%, auto);
+            @include screenSize(60%, auto);
             @include displayFlex(center, center, column);
             gap: 1.5em;
         }
-
         //mobile(S)
         @include for-phoneS-only {
-            @include screenSize(100%, auto);
+            width: 80%;
         }
     }
-
 }

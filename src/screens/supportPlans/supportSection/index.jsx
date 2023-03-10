@@ -4,7 +4,11 @@ import React from 'react';
 import { Button } from '../../../components';
 import SupportCards from './SupportCards';
 import style from './SupportSection.module.scss';
+import { useTranslation } from 'react-i18next';
+
 const SupportSection = ({ title, img, data, buttonLabel, buttonLink }) => {
+  const { t } = useTranslation();
+
     return (
         <section className={style.wrapper}>
             <div className={style.container}>
@@ -15,7 +19,7 @@ const SupportSection = ({ title, img, data, buttonLabel, buttonLink }) => {
                         alt={title}
                     />
                     <h2 className={style.title__text}> 
-                    {title}<span>Support</span>
+                    {title}<span>{t('Support')}</span>
                     </h2>
                 </div>
             </div>
@@ -26,7 +30,7 @@ const SupportSection = ({ title, img, data, buttonLabel, buttonLink }) => {
             <div className={style.content__button}>
                 <Link href={buttonLink} prefetch={false}>
                     <a>
-                        <Button>{buttonLabel}</Button>
+                        <Button>{t(buttonLabel)}</Button>
                     </a>
                 </Link>
             </div>

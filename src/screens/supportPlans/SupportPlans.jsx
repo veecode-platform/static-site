@@ -2,14 +2,15 @@ import React from "react";
 import style from "../../../styles/SupportPlans.module.scss";
 import SupportSection from "./supportSection";
 import data from "./data.json";
-import { Footer, Header } from "../../components";
 import Plans from "./plans";
 import FirstSection from "./firstSection";
+import FooterSection from "./footer";
+import HeaderSection from "./header";
 
 const SupportPlans = () => {
   return (
     <main className={style.wrapper}>
-      <Header />
+      <HeaderSection showButton/>
       <FirstSection />
       <section className={style.stacks}>
       {data.map((item) => {
@@ -26,7 +27,8 @@ const SupportPlans = () => {
       })}
       </section>
       <Plans />
-      <Footer />
+      {/* <Tools bg="#131313"/> */}
+      <FooterSection />
     </main>
   );
 };

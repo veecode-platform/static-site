@@ -3,11 +3,14 @@ import Image from "next/image";
 import Link from "next/link";
 import { Button } from "../../../components";
 import style from "./SupportSection.module.scss";
+// import { useTranslation } from 'react-i18next';
 
-const BgDesktop = "assets/home/bg3.webp";
-const BgMobile = "assets/home/bgmobile2.webp";
+const BgDesktop = "/assets/home/bg3.webp";
+const BgMobile = "/assets/home/bgmobile2.webp";
 
 const SupportSection = () => {
+  // const { t } = useTranslation();
+
   return (
     <section className={style.wrapper}>
       {/* Background */}
@@ -45,7 +48,7 @@ const SupportSection = () => {
           <div className={style["content__text-buttonWrapper"]}>
             <Link href="/compare-plans" prefetch={false}>
               <a>
-                <Button>Buy Now</Button>
+                <Button>Start Trial</Button>
               </a>
             </Link>
             {/* <Link href="/support" prefetch={false}>

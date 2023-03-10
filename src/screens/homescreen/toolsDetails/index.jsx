@@ -2,47 +2,50 @@
 import { DividerBottom } from "../../../components";
 import Card from "./card";
 import style from "./ToolsDetails.module.scss";
+// import { useTranslation } from 'react-i18next';
 
 const Tools = [
   {
     id: 0,
-    image:"assets/home/toolsDetails/image1.png",
-    title:"Devportal",
-    desc:"Is a platform that centralizes your Specs and APIs making it easy to control microservices.",
-    buttonLabel:"Devportal",
-    link:"https://docs.platform.vee.codes/docs/tutorials/devportal/",
-    tag:"devportal"
+    image: "/assets/home/toolsDetails/image1.png",
+    title: "Devportal",
+    desc: "Is a platform that centralizes your Specs and APIs making it easy to control microservices.",
+    buttonLabel: "Devportal",
+    link: "https://docs.platform.vee.codes/docs/tutorials/devportal/",
+    tag: "devportal"
   },
   {
     id: 1,
-    image:"assets/home/toolsDetails/image2.png",
-    title:"Safira-CLI",
-    desc:"Is our command line interface that speeds up the building of APIs from an OpenAPI file.",
-    buttonLabel:"Safira-CLI",
-    link:"https://docs.platform.vee.codes/docs/installation/safira-cli",
-    tag:"safiraDocs"
+    image: "/assets/home/toolsDetails/image2.png",
+    title: "Safira-CLI",
+    desc: "Is our command line interface that speeds up the building of APIs from an OpenAPI file.",
+    buttonLabel: "Safira-CLI",
+    link: "https://docs.platform.vee.codes/docs/installation/safira-cli",
+    tag: "safiraDocs"
   },
   {
-    id:2,
-    image:"assets/home/toolsDetails/image3.png",
-    title:"VKPR",
-    desc:"Builds for you a Cloud Infrastructure with a few lines of code.",
-    buttonLabel:"VKPR",
-    link:"https://docs.vkpr.net/docs/intro/",
-    tag:"vkprDocs"
+    id: 2,
+    image: "/assets/home/toolsDetails/image3.png",
+    title: "VKPR",
+    desc: "Builds for you a Cloud Infrastructure with a few lines of code.",
+    buttonLabel: "VKPR",
+    link: "https://docs.vkpr.net/docs/intro/",
+    tag: "vkprDocs"
   },
   {
-    id:3,
-    image:"assets/home/toolsDetails/image4.png",
-    title:"Join In Comunity",
-    desc:"Increase your productivity also helping the community to grow.",
-    buttonLabel:"Join Us",
-    link:"https://github.com/veecode-platform/safira-support/discussions",
-    tag:"joinUs"
+    id: 3,
+    image: "/assets/home/toolsDetails/image4.png",
+    title: "Join In Comunity",
+    desc: "Increase your productivity also helping the community to grow.",
+    buttonLabel: "Join Us",
+    link: "https://github.com/veecode-platform/safira-support/discussions",
+    tag: "joinUs"
   },
 ]
 
 const ToolsDetails = () => {
+  // const { t } = useTranslation();
+
   return (
     <section className={style.content}>
       <div className={style.content__title}>
@@ -55,10 +58,10 @@ const ToolsDetails = () => {
       </div>
       <article className={style.content__wrapper}>
         {Tools.map(item => (
-          <Card 
+          <Card
             key={item.id}
             {...item}
-            />
+          />
         ))}
       </article>
       <DividerBottom color="#111111"/>

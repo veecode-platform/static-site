@@ -6,9 +6,9 @@ import Cards from "./cards";
 const Details = [
     {
         id: "0",
-        title: "7 Days Guarantee (No Risk)",
-        desc: "We do not charge you until your 7 days of use, you can cancel without any fee.",
-        image: "/assets/pricing/icon4.png"
+        title: "15 Days Guarantee (No Risk)",
+        desc: "We do not charge you until your 15 days of use, you can cancel without any fee.",
+        image: "/assets/pricing/icon3.png"
     },
     {
         id: "1",
