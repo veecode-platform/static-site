@@ -69,6 +69,16 @@
                 p {
                     @include typography(1.3vw, start, 1.2em, 300);
                     color: $color2;
+
+                    @include for-tablet-only {
+                        font-size: 1.7vw;
+                    }
+
+                    @include for-tabletS-only {
+                        font-size: 2vw;
+                    }
+
+                    @include for-phone-only {}
                 }
             }
         }
@@ -81,6 +91,13 @@
             //viewport
             @include for-viewport-only {
                 @include screenSize(50%, auto);
+            }
+
+            @include for-tablet-only {
+                @include screenSize(70%, auto);
+
+                @include displayFlex(center, center, column);
+
             }
 
             //mobile(M)
@@ -139,6 +156,7 @@
                         @include displayFlex(center, center, row);
                         padding: 2.5rem 0;
                     }
+
                     .astronault {
                         text-align-last: center !important;
                     }
