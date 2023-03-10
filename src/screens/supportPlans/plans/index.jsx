@@ -3,12 +3,13 @@ import style from "./Plans.module.scss";
 import PlansDetails from "./plansDetails";
 import { FaCheck } from "react-icons/fa";
 import { useTranslation } from 'react-i18next';
+import Link from "next/link";
 
 const veeCodeLogo = '/assets/logo/black_logo.png';
 const stacks = '/assets/home/stacks_plan.png'
 
 const Plans = () => {
-  const { t } = useTranslation();
+    const { t } = useTranslation();
 
     return (
         <section className={style.content} id="plans">
@@ -44,12 +45,12 @@ const Plans = () => {
                     label={t("Start at")}
                     emphasis="$ 1990"
                     text={t("per Month")}
-                    buttonLabel={t("Free Test")}
+                    buttonLabel={t("Free Trial")}
                     banner
                 >
-                    <li><span><FaCheck /></span>{t('8x5 support')}</li>
+                    <li><span><FaCheck /></span>{t('8x5')} <Link href="/support" passHref><a><span>{t('Support')}</span></a></Link></li>
                     <li><span><FaCheck /></span>{t('One business day SLA')}</li>
-                    <li><span><FaCheck /></span>{t('10 tickets per month')}</li>
+                    {/* <li><span><FaCheck /></span>{t('10 tickets per month')}</li> */}
                     <li><span><FaCheck /></span>{t('2 simultaneous tickets')}</li>
                     <li><span><FaCheck /></span>{t('Direct access to technical professionals')}</li>
                 </PlansDetails>
@@ -79,7 +80,7 @@ const Plans = () => {
                     buttonLabel={t('Contact Us')}
                     banner={false}
                 >
-                    <li><span><FaCheck /></span>{t('24x7 support')}</li>
+                    <li><span><FaCheck /></span>{t('24x7')} <Link href="/support" passHref><a><span>{t('Support')}</span></a></Link></li>
                     <li><span><FaCheck /></span>{t('SLA on the same business day')}</li>
                     <li><span><FaCheck /></span>{t('Prioritized bug fixes')}</li>
                     <li><span><FaCheck /></span> {t('Direct access to technical professionals')}</li>

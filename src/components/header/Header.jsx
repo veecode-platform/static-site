@@ -39,18 +39,18 @@ const Header = ({ fixedHeader, showButton, showOptions }) => {
               </a>
             </Link>
           </div>}
-          {showOptions && <div className={style.nav__options}>
+          {/* {showOptions && <div className={style.nav__options}>
             <Link href='/support-plans'>
               <a>
                 <h2>Plans</h2>
               </a>
             </Link>
-          </div>}
+          </div>} */}
 
           {showButton && <div className={style.nav__buyButton} >
             <Link href="/compare-plans" passHref>
               <a>
-                <Button headerButton>Start Trial</Button>
+                <Button headerButton>Free Trial</Button>
               </a>
             </Link>
           </div>}

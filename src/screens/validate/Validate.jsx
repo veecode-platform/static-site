@@ -97,15 +97,15 @@ const Validate = () => {
                     <article className={style.content}>
                         <div className={style.text}>
                             <div className={style.text__header}>
-                                <h2>{t('15 Days')} <strong><span>{t('Free Trial')}</span></strong> {t('of Standard Plan')}</h2>
+                                <h2>{t('Get')} <strong><span>{t('Free Trial')}</span></strong> {t('to our support platform')}</h2>
                             </div>
                             <div className={style.text__resume}>
 
 
                                 <p>
-                                    {t('Fill out the form on the side and get access to all the features and our support for a 15-day free trial!')} <br /><br />
-                                    {t('We guarantee that your information is secure and that we follow all privacy policies and comply with all applicable regulations and laws. Try our solutions and take advantage of our dedicated support to answer any questions you may have.')}<br /><br />
-                                    {t('After submitting the form, we will get in touch with you.')}<br /><br />
+                                    Fill out the form and get access to our ticketing platform by securing access to our expert support during a<strong> 15-day free trial</strong>! <br /><br />
+                                    With access to our ticketing platform, you can communicate directly with our experts to solve DevOps issues, provisioning automation, API management, IT infrastructure scaling, and more through our developer portal.<br /><br />
+                                    We ensure that your information is secure and that we comply with all applicable privacy policies and regulations.<br /><br />
                                 </p>
                             </div>
                         </div>

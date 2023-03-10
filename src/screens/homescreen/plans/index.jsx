@@ -1,36 +1,47 @@
-import React from "react";
-import { Breadcrumb, ContactBar, DefaultPage, Guarantees } from "../../components";
-import style from "../../../styles/ComparePlans.module.scss";
+/* eslint-disable @next/next/no-img-element */
+import style from "./Plans.module.scss";
 import PlansDetails from "./plansDetails";
-import { FaCheck, FaCheckCircle, FaMinus } from "react-icons/fa";
+import { FaCheck } from "react-icons/fa";
+const veeCodeLogo = 'assets/home/black_logo.png';
 import Link from "next/link";
 
-const ComparePlans = () => {
+const Plans = () => {
   return (
-    <DefaultPage
-      showOptions
-      titleBar="enable"
-      title="Chose our support for you"
-      subtitle="No more stress with the digital transition, choose the support that most fits your need:"
-    >
-      <Breadcrumb active={1} />
+    <section className={style.content} id="plans">
+      <div className={style.header}>
+        <div>
+          <img
+            className={style.header__logo}
+            src={veeCodeLogo}
+            alt="Vee Code Logo - Desktop Version"
+          />
+        </div>
+        <div className={style.header__title}>
+          <h2>
+            <span>Plans</span>
+          </h2>
+        </div>
+      </div>
+      <div className={style.subtitle}>
+        <p>
+          <strong>Lower the barriers</strong> for your development team through our specialized support in the stacks you work in.
+        </p>
+      </div>
 
-      <article className={style.content}>
+      <article className={style.plans}>
         {/* STANDARD */}
         <PlansDetails
           title="Standard"
-          // subtitle="Start your free trial right now, with no credit card required to sign up!"
-          subtitle="Get access to our platform and support ticket, so you can clear all your doubts about our solutions: click here to learn more. Best of all, our trial does not require you to register your credit card."
+          subtitle="Solve your company's technological barriers in a practical and objective way."
           link="/validate?plan=standard"
           label="Start at"
           emphasis="$ 1990"
           text="per Month"
-          buttonLabel="Free Trial"
-          banner
+          buttonLabel="Sign Plan"
         >
           <li><span><FaCheck /></span>8x5 <Link href="/support" passHref><a><span>Support</span></a></Link></li>
           <li><span><FaCheck /></span>One business day SLA</li>
-          {/* <li><span><FaCheck /></span>10 tickets per month</li> */}
+          <li><span><FaCheck /></span>10 tickets per month</li>
           <li><span><FaCheck /></span>2 simultaneous tickets</li>
           <li><span><FaCheck /></span>Direct access to technical professionals</li>
         </PlansDetails>
@@ -41,7 +52,6 @@ const ComparePlans = () => {
           link="/contact-enterprise"
           headline="Personalize your experience"
           buttonLabel="Contact Us"
-          banner={false}
         >
           <li><span><FaCheck /></span>24x7 <Link href="/support" passHref><a><span>Support</span></a></Link></li>
           <li><span><FaCheck /></span>SLA on the same business day</li>
@@ -50,12 +60,8 @@ const ComparePlans = () => {
           <li><span><FaCheck /></span> DevOps training and documentation</li>
         </PlansDetails>
       </article>
-      <article className={style.sectionBar}>
-        <ContactBar />
-        <Guarantees />
-      </article>
-    </DefaultPage>
+    </section>
   );
 };
 
-export default ComparePlans;
+export default Plans;

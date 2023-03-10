@@ -119,7 +119,7 @@
             &__buttonWrapper {
                 width: 100%;
 
-                @include displayFlex(space-between, center, row);
+                @include displayFlex(flex-end, center, row);
                 margin-top: 4em;
                 align-self: flex-end;
                 //viewport

@@ -48,7 +48,7 @@ const SupportSection = () => {
           <div className={style["content__text-buttonWrapper"]}>
             <Link href="/compare-plans" prefetch={false}>
               <a>
-                <Button>Start Trial</Button>
+                <Button>Free Trial</Button>
               </a>
             </Link>
             {/* <Link href="/support" prefetch={false}>
