@@ -45,7 +45,7 @@ const Plans = () => {
                     label={t("Start at")}
                     emphasis="$ 1990"
                     text={t("per Month")}
-                    buttonLabel={t("Free Test")}
+                    buttonLabel={t("Free Trial")}
                     banner
                 >
                     <li><span><FaCheck /></span>{t('8x5')} <Link href="/support" passHref><a><span>{t('Support')}</span></a></Link></li>
