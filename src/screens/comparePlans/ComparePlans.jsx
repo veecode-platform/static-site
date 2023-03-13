@@ -19,8 +19,7 @@ const ComparePlans = () => {
         {/* STANDARD */}
         <PlansDetails
           title="Standard"
-          // subtitle="Start your free trial right now, with no credit card required to sign up!"
-          subtitle={<>Get access to our platform and support ticket, so you can clear all your doubts about our solutions: <a href='/how-it-works' style={{cursor:"pointer", color:"#33FFCE"}}>click here</a> to learn more. Best of all, our trial does not require you to register your credit card.</>}
+          subtitle={<>Get access to our ticket platform and clear all your doubts about <a href='/how-it-works' style={{cursor:"pointer", color:"#33FFCE"}}>our solutions</a>. Our trial does not require you to register your credit card.</>}
           link="/validate?plan=standard"
           label="Start at"
           emphasis="$ 1990"
