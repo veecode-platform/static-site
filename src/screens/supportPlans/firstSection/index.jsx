@@ -12,7 +12,7 @@ const FirstSection = () => {
   const { t } = useTranslation();
 
   return (
-    <section className={style.wrapper}>
+    <section className={style.wrapper} id="firstsec">
       <article className={style.content}>
         <div className={style.info}>
           <div className={style.info__title}>

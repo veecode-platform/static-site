@@ -20,7 +20,7 @@ const HeaderSection = ({ fixedHeader, showButton }) => {
     >
       <section className={style.content}>
         <div>
-          <Link href="/">
+          <Link href="#firstsec">
             <a>
               <img
                 src={Logo}

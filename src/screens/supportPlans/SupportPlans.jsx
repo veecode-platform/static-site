@@ -27,9 +27,8 @@ const SupportPlans = () => {
         );
       })}
       </section>
-      <Plans />
+      {/* <Plans /> */}
       <Trial />
-      {/* <Tools bg="#131313"/> */}
       <FooterSection />
     </main>
   );
