@@ -40,7 +40,7 @@ const Plans = () => {
             {/* BASIC */}
             <PlansDetails
                     title={t("Basic")}
-                    subtitle={<>{t("Get access to our ticket platform and clear all your doubts about")} <a href='/how-it-works' style={{ cursor: "pointer", color: "#33FFCE" }}>{t("our solutions")}</a>. {t("Our trial does not require you to register your credit card")}.</>}
+                    subtitle={<>{t("Get access to our ticket platform and clear all your doubts about")} <Link href='/how-it-works' passHref><a  style={{ cursor: "pointer", color: "#33FFCE" }}>{t("our solutions")}</a></Link>. {t("Our trial does not require you to register your credit card")}.</>}
                     link="/validate?plan=standard"
                     label={t("Start at")}
                     emphasis="$ 1990"
@@ -58,7 +58,7 @@ const Plans = () => {
                 {/* STANDARD */}
                 <PlansDetails
                     title={t("Standard")}
-                    subtitle={<>{t("Get access to our ticket platform and clear all your doubts about")} <a href='/how-it-works' style={{ cursor: "pointer", color: "#33FFCE" }}>{t("our solutions")}</a>. {t("Our trial does not require you to register your credit card")}.</>}
+                    subtitle={<>{t("Get access to our ticket platform and clear all your doubts about")} <Link href='/how-it-works' passHref><a style={{ cursor: "pointer", color: "#33FFCE" }}>{t("our solutions")}</a></Link>. {t("Our trial does not require you to register your credit card")}.</>}
                     link="/validate?plan=standard"
                     label={t("Start at")}
                     emphasis="$ 1990"
