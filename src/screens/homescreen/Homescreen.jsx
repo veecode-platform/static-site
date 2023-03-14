@@ -12,7 +12,7 @@ import '../../i18n';
 const Homescreen = () => {
   return (
     <main className={style.container}>
-      <Header fixedHeader showButton/>
+      <Header fixedHeader showButton showOptions/>
       <FirstSection />
       <OptimizeYourBusiness />
       <ToolsDetails/>

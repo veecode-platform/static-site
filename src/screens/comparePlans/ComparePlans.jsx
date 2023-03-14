@@ -8,7 +8,7 @@ import Link from "next/link";
 const ComparePlans = () => {
   return (
     <DefaultPage
-      showOptions
+      showButton
       titleBar="enable"
       title="Chose our support for you"
       subtitle="No more stress with the digital transition, choose the support that most fits your need:"
@@ -19,7 +19,7 @@ const ComparePlans = () => {
         {/* STANDARD */}
         <PlansDetails
           title="Standard"
-          subtitle={<>Get access to our ticket platform and clear all your doubts about <Link href='/how-it-works' passHref><a style={{cursor:"pointer", color:"#33FFCE"}}>our solutions</a></Link>. Our trial does not require you to register your credit card.</>}
+          subtitle={<>Get access to our ticket platform and clear all your doubts about <Link href='/how-it-works' passHref><a style={{ cursor: "pointer", color: "#33FFCE" }}>our solutions</a></Link>. Our trial does not require you to register your credit card.</>}
           link="/validate?plan=standard"
           label="Start at"
           emphasis="$ 1990"
