@@ -46,7 +46,6 @@ const Plans = () => {
                     emphasis="$ 1990"
                     text={t("per Month")}
                     buttonLabel={t("Free Test")}
-                    banner
                 >
                     <li><span><FaCheck /></span>{t('8x5 support')}</li>
                     <li><span><FaCheck /></span>{t('One business day SLA')}</li>
@@ -64,7 +63,6 @@ const Plans = () => {
                     emphasis="$ 1990"
                     text={t("per Month")}
                     buttonLabel={t("Free Trial")}
-                    banner
                 >
                     <li><span><FaCheck /></span>{t('8x5')} <Link href="/support" passHref><a><span>{t('Support')}</span></a></Link></li>
                     <li><span><FaCheck /></span>{t('One business day SLA')}</li>
@@ -82,7 +80,6 @@ const Plans = () => {
                     link="/contact-enterprise"
                     headline={t('Personalize your experience')}
                     buttonLabel={t('Contact Us')}
-                    banner={false}
                 >
                     <li><span><FaCheck /></span>{t('24x7')} <Link href="/support" passHref><a><span>{t('Support')}</span></a></Link></li>
                     <li><span><FaCheck /></span>{t('SLA on the same business day')}</li>

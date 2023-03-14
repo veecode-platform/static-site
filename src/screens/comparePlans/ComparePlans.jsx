@@ -25,7 +25,6 @@ const ComparePlans = () => {
           emphasis="$ 1990"
           text="per Month"
           buttonLabel="Free Trial"
-          banner
         >
           <li><span><FaCheck /></span>8x5 <Link href="/support" passHref><a><span>Support</span></a></Link></li>
           <li><span><FaCheck /></span>One business day SLA</li>
@@ -40,7 +39,6 @@ const ComparePlans = () => {
           link="/contact-enterprise"
           headline="Personalize your experience"
           buttonLabel="Contact Us"
-          banner={false}
         >
           <li><span><FaCheck /></span>24x7 <Link href="/support" passHref><a><span>Support</span></a></Link></li>
           <li><span><FaCheck /></span>SLA on the same business day</li>
