@@ -4,7 +4,7 @@
         "title": "Kong Gateway",
         "img": "/assets/home/text_slide/kong.png",
         "buttonLabel": "Free Trial",
-        "buttonLink": "#plans",
+        "buttonLink": "#trial",
         "data": [
             {
                 "id": 0,
