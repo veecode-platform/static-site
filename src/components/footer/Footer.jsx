@@ -65,7 +65,7 @@ const Footer = () => {
                 <span>More</span>
               </li>
               <Link href="/terms-of-service"><a><li>Terms of Service</li></a></Link>
-              <Link href="/privacy-policy"><a><li>Policy Privacy</li></a></Link>
+              <Link href="/privacy-policy"><a><li>Privacy Policy</li></a></Link>
               <Link href="/contact-us"><a><li>Contact Us</li></a></Link>
               <Link href="/faq"><a><li>FAQ</li></a></Link>
             </ul>
