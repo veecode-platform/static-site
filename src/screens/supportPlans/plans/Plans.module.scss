@@ -125,10 +125,12 @@
         margin: 1.5em auto;
         gap: .8em;
         padding: 2em 0 10em 0;
+        
         span {
             color:$color11;
             text-decoration-line: underline;
         }
+        
         // viewport
         @include for-viewport-only {
             @include screenSize(60%, auto);
