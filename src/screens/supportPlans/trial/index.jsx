@@ -116,18 +116,16 @@ const Trial = () => {
                                                 <DialogContent className={style.astronault} style={{ textAlignLast: 'center' }}>
                                                     <img
                                                         alt="Astronault Helmet"
-                                                        width='50%'
+                                                        width='30%'
                                                         src="/assets/validate/astronaut-helmet.png"
                                                     />
                                                 </DialogContent>
                                                 <DialogTitle style={{ alignSelf: 'center', fontWeight: 'bold' }}><h3>{t("THAT'S IT!")}</h3></DialogTitle>
                                                 <DialogContent style={{ margin: ".5em 1em 1.5em 1em" }}>
-                                                    {/* <a href="https://storyset.com/science">Science illustrations by Storyset</a> */}
-
                                                     <DialogContentText>
-                                                        <p style={{ fontSize: '1.5em', textAlign: "center" }}>{t('Your data has been successfully saved. Stay tuned, we will')} <span style={{ color: '#1c8068', fontWeight: 'bold' }}>{t('contact you via email')}</span> {t('to provide access to our ticket platform.')}</p>
+                                                        <p style={{ fontSize: '1.5em', textAlign: "center" }}>{t('Your data has been successfully saved. Stay tuned, we will')} <span style={{ color: '#1c8068', fontWeight: 'bold' }}>{t('contact you via email')}</span> {t('to provide access to our ticket platform')}.</p>
                                                     </DialogContentText>
-                                                    <Link href='/' passHref>
+                                                    <Link href='#firstsec' passHref>
                                                         <a target="_blank">
                                                             <p style={{ textDecoration: "underline", fontSize: ".9em", textAlign: "center", padding: "2em 0 1em 0", color: "#1c8068" }}>{t('Access Home Page')}</p>
                                                         </a>
