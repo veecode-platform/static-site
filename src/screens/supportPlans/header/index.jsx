@@ -31,23 +31,16 @@ const HeaderSection = ({ fixedHeader, showButton }) => {
           </Link>
         </div>
         <div className={style.nav}>
-          <div className={style.nav__options}>
+          {/* <div className={style.nav__options}>
             <Link href='/'>
               <a>
                 <h2>{t('Home')}</h2>
               </a>
             </Link>
-          </div>
-          {/* <div className={style.nav__options}>
-            <Link href='/support-plans'>
-              <a>
-                <h2>{t('Plans')}</h2>
-              </a>
-            </Link>
           </div> */}
 
           {showButton && <div className={style.nav__buyButton} >
-            <Link href="/compare-plans" passHref>
+            <Link href="#trial" passHref>
               <a>
                 <Button headerButton>{t('Free Trial')}</Button>
               </a>

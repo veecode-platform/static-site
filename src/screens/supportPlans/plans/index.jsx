@@ -37,6 +37,7 @@ const Plans = () => {
 
 
             <article className={style.plans}>
+                
                 {/* BASIC */}
                 <PlansDetails
                     title={t("Basic")}

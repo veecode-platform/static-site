@@ -6,6 +6,7 @@ import Plans from "./plans";
 import FirstSection from "./firstSection";
 import FooterSection from "./footer";
 import HeaderSection from "./header";
+import Trial from "./trial";
 
 const SupportPlans = () => {
   return (
@@ -27,6 +28,7 @@ const SupportPlans = () => {
       })}
       </section>
       <Plans />
+      <Trial />
       {/* <Tools bg="#131313"/> */}
       <FooterSection />
     </main>
