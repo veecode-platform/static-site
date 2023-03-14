@@ -1,5 +1,5 @@
 export { default as Homescreen } from './homescreen/Homescreen';
-export { default as Pricing } from './pricing/Pricing';
+// export { default as Pricing } from './pricing/Pricing';
 export { default as Support } from './support/support';
 export { default as Validate } from './validate/Validate';
 export { default as Checkout } from './checkout/Checkout';
@@ -15,3 +15,4 @@ export { default as Faq } from './faq/Faq';
 export { default as Docs } from './docs/Docs';
 export { default as ComparePlans } from './comparePlans/ComparePlans';
 export { default as ContactEnterprise } from './contactEnterprise/ContactEnterprise';
+export { default as SupportPlans } from './supportPlans/SupportPlans';

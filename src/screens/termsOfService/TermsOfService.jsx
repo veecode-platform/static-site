@@ -8,6 +8,7 @@ const TermsOfService = () => {
       titleBar="enable"
       noPrevious
       showButton
+      showOptions
       >
       <article className={style.content}>
         {/* Definitions */}
@@ -324,6 +325,9 @@ const TermsOfService = () => {
           will build the technical scope of the solution during the onboarding session with you, and will help your 
           team to execute this scope, besides mentoring sessions, 
           pair programming and auditing the execution of the roadmap of the planned solution;
+        </p>
+        <p>
+          2.9 - Our Standard Support service will operate from <strong>9am to 6pm</strong> in the <strong>GMT-3</strong> time zone.
         </p>
       </article>
       <ScrollTop/>

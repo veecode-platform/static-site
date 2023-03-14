@@ -1,0 +1,13 @@
+@import "../abstract/functions", "../abstract/variables", "../abstract/responsive";
+
+.wrapper {
+    @include screenSize(100%, auto);
+    @include displayFlex(center, center, column);
+    background: #000;
+    font-family: $font-text;
+    .stacks{
+        @include displayFlex(center, center, column);
+        background: linear-gradient($color15,$color15,$color11);
+        padding: 2em 0 4em 0;
+    }
+}

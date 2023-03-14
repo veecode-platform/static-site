@@ -6,11 +6,15 @@ import Image from "next/image";
 import TextSlide from "./textSlide";
 import { gtagSafiraDocs } from "../../../../utils/gtag";
 
-const Logo = "assets/home/logo.png";
-const BgDesktop = "assets/home/bg1.webp"; 
-const BgMobile = "assets/home/bgmobile1.webp";
+const Logo = "/assets/logo/logo.png";
+const BgDesktop = "/assets/home/bg1.webp"; 
+const BgMobile = "/assets/home/bgmobile1.webp";
+// import '../../i18n';
+import { useTranslation } from 'react-i18next';
 
 const FirstSection = () => {
+  const { t } = useTranslation();
+
   return (
     <section className={style.wrapper}>
       {/* Background */}
@@ -27,7 +31,7 @@ const FirstSection = () => {
               />
       </div>
       <article className={style.content}>
-        <div className={style.content__logo}>
+        {/* <div className={style.content__logo}>
             <Image
                 layout="responsive"
                 src={Logo} 
@@ -37,7 +41,7 @@ const FirstSection = () => {
                 unoptimized
                 priority={true}
                 />
-        </div>
+        </div> */}
         <div className={style.content__title}>
           <h1>
           We provide <strong>instant support</strong> on
@@ -46,24 +50,17 @@ const FirstSection = () => {
         </div>
         <div className={style.content__text}>
           <p>
-            Your transition to the cloud doesn&lsquo;t have to be
-            time-consuming, expensive, or lonely. Count on our{" "}
+            Your transition to the cloud doesn&lsquo;t have to be time-consuming, expensive, or lonely. Count on our{" "}
             <strong>professional support</strong> and{" "}
-            <strong>free tools</strong> to overcome your challenges quickly 
-            and easily! 
+            <strong>free tools </strong> 
+            to overcome your challenges quickly and easily! 
             {/* incorporating: */}
           </p>
         </div>
         <div className={style.content__buttons}>      
-          {/*<Link href="/how-it-works" passHref>
+          <Link href="/support" passHref>
             <a>
-              <Button>How it Works</Button>
-            </a>
-          </Link>*/}
-
-          <Link href="/docs" passHref>
-            <a>
-              <Button >Get started for free</Button>
+              <Button>Learn More</Button>
             </a>
           </Link>
         </div>

@@ -11,6 +11,7 @@ const Support = () => {
       subtitle="A team of Experts You Can Count On"
       titleBar="enable"
       showButton
+      showOptions
     >
       {/* Platform Support */}
       <SupportCategories

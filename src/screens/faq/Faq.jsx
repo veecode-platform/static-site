@@ -1,16 +1,18 @@
 import React from 'react'
-import { DefaultPage } from '../../components'
+import { ContactBar, DefaultPage } from '../../components'
 import Accordion from './accordion'
 
 const Faq = () => {
 
   return (
     <DefaultPage
-    titleBar='enable'
-    title="FAQ"
-    subtitle="Frequently Asked Questions"
+      titleBar='enable'
+      title="FAQ"
+      subtitle="Frequently Asked Questions"
+      showOptions
     >
-    <Accordion/>
+      <Accordion />
+      <ContactBar />
     </DefaultPage>
   )
 }

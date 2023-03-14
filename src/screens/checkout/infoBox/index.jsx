@@ -38,7 +38,7 @@ const InfoBox = ({info, billing,formatter,getDateFormatted}) => {
 
                 <div className={style.content__info}>
                   <div>
-                    <p>{info.users} Tickets per month</p>
+                    <p>{info.users} tickets per month</p>
                     <p>Up to 2 tickets simultaneously</p>
                   </div>
                 </div>
@@ -84,7 +84,7 @@ const InfoBox = ({info, billing,formatter,getDateFormatted}) => {
                 <div className={style.content__guarantee}>
                   <div className={style["content__guarantee-item"]}>
                     <FaCheck color="#33FFCE" />
-                    <p>7 day trial</p>
+                    <p>15 days trial</p>
                   </div>
 
                   <div className={style["content__guarantee-item"]}>

@@ -7,11 +7,12 @@ import Banner from './banner';
 import SupportSection from './supportSection';
 import Tools from './tools';
 import ToolsDetails from './toolsDetails';
+import '../../i18n';
 
 const Homescreen = () => {
   return (
     <main className={style.container}>
-      <Header fixedHeader showButton />
+      <Header fixedHeader showButton showOptions/>
       <FirstSection />
       <OptimizeYourBusiness />
       <ToolsDetails/>

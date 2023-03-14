@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import { Pricing } from '../src/screens'
+// import { Pricing } from '../src/screens'
 
 export default function PricingPage() {
   return (
@@ -11,7 +11,7 @@ export default function PricingPage() {
          content="Select an optimal plan to get the best out of the platform."
          />
       </Head>
-      <Pricing />
+      {/* <Pricing /> */}
     </>
   )
 }

@@ -2,10 +2,13 @@ import dynamic from 'next/dynamic'
 import style from './Benefits.module.scss'
 import Data from './benefits.json'
 import Divider from './divider';
+import { useTranslation } from 'react-i18next';
 
 const Card = dynamic(()=> import('./card'));
 
 const Benefits = () => {
+  const { t } = useTranslation();
+
   return (
     <section className={style.wrapper}>
       <Divider/>
@@ -20,5 +23,4 @@ const Benefits = () => {
     </section>
   );
 }
-
 export default Benefits

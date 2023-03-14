@@ -2,10 +2,15 @@ import style from "./OptimizeYourBusiness.module.scss";
 import { Button } from "../../../components";
 import Link from "next/link";
 import Image from "next/image";
+// import { useTranslation } from 'react-i18next';
 
-const Icon = "assets/home/image3.png";
+// const Icon = "/assets/home/image3.avif";
+const Icon = "/assets/support/animation.svg";
+
 
 const OptimizeYourBusiness = () => {
+  // const { t } = useTranslation();
+
   return (
     <section className={style.content}>
       <article className={style.content__contentWrapper}>
@@ -19,9 +24,9 @@ const OptimizeYourBusiness = () => {
           <div className={style.details}>
             <div className={style.details__text}>
               <p>
-                Automate the provisioning and construction of cloud APIs,
-                assisted by our <strong> expert support</strong> and with a
-                <strong> cost that fits in your pocket</strong>.
+                Automate the provisioning and construction of cloud APIs, assisted by our 
+                <strong> expert support</strong> and with a
+                <strong> cost that fits in your pocket.</strong>
               </p>
             </div>
             <div className={style.details__buttonWrapper}>
@@ -30,11 +35,12 @@ const OptimizeYourBusiness = () => {
                   <Button>How it Works</Button>
                 </a>
               </Link>
-              <Link href="/support" passHref>
-                <a>
-                  <Button>Support</Button>
+              
+              {/* <Link href="/docs" passHref> 
+                <a className={style.button}>
+                  <Button>Start For Free</Button>
                 </a>
-              </Link>
+              </Link> */}
             </div>
           </div>
         </div>

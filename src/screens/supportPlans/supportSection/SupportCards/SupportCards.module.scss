@@ -1,0 +1,33 @@
+@import "/abstract/functions","/abstract/responsive","/abstract/variables";
+
+
+.content {
+    @include screenSize(100%, auto);
+    display: grid;
+    grid-template: 1fr/ repeat(3,1fr);
+    margin: 3em 0 5em 0;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 1rem;
+    
+    //tablet
+    @include for-tablet-only {
+        padding: 3em 0 3em 0;
+        margin: 1em 0;
+    }
+    //mobile(M)
+    @include for-phone-only {
+        @include displayFlex(center, center, column);
+        padding: 1em 0 4em 0;
+        flex-wrap: wrap;
+    }
+    //mobile(S)
+    @include for-phoneS-only {
+        padding: 1em 0em;
+        margin-bottom: 1em;
+    }
+
+    &__button {
+        padding: 2em 0;
+    }
+}
