@@ -22,35 +22,35 @@ const ComparePlans = () => {
         {/* BASIC */}
         <PlansDetails
           title="Basic"
-          subtitle={<>"Acelerate your business, secure support for our Developer Portal solution. Solve your problems with API automation, Pipelines, and " <Link href='/how-it-works' passHref><a style={{ cursor: "pointer", color: "#1C8068", fontWeight: "bold" }}>"more"</a></Link>.</>}
+          subtitle={<>Acelerate your business, secure support for our Developer Portal solution. Solve your problems with API automation, Pipelines, and <Link href='/how-it-works' passHref><a style={{ cursor: "pointer", color: "#1C8068", fontWeight: "bold" }}>more</a></Link>.</>}
           link="/validate?plan=basic"
           label="Start at"
           emphasis="$ 690"
           text="per Month"
           buttonLabel="Checkout"
         >
-          <li><span><FaCheck /></span>'8x5' <Link href="/support" passHref><a><span>'Support'</span></a></Link></li>
-          <li><span><FaCheck /></span>'One business day SLA'</li>
-          <li><span><FaCheck /></span>'Support to TechDocs, CI/CD and Pull Request plugins'</li>
-          <li><span><FaCheck /></span>'Support to 2 project templates'</li>
-          <li><span><FaCheck /></span>'Direct access to our experts'</li>
+          <li><span><FaCheck /></span>8x5 <Link href="/support" passHref><a><span>Support</span></a></Link></li>
+          <li><span><FaCheck /></span>One business day SLA</li>
+          <li><span><FaCheck /></span>Support to TechDocs, CI/CD and Pull Request plugins</li>
+          <li><span><FaCheck /></span>Support to 2 project templates</li>
+          <li><span><FaCheck /></span>Direct access to our experts</li>
         </PlansDetails>
 
         {/* STANDARD */}
         <PlansDetails
           title="Standard"
-          subtitle={<>"Get all your questions answered about our solutions. No more problems with DevOps, API Development, Kubernetes, AWS and" <Link href='/how-it-works' passHref><a style={{ cursor: "pointer", color: "#1C8068", fontWeight: "bold" }}>"more"</a></Link>.</>}
+          subtitle={<>Get all your questions answered about our solutions. No more problems with DevOps, API Development, Kubernetes, AWS and <Link href='/how-it-works' passHref><a style={{ cursor: "pointer", color: "#1C8068", fontWeight: "bold" }}>more</a></Link>.</>}
           link="/validate?plan=standard"
           label="Start at"
           emphasis="$ 1990"
           text="per Month"
           buttonLabel="Checkout"
         >
-          <li><span><FaCheck /></span>'8x5' <Link href="/support" passHref><a><span>'Support'</span></a></Link></li>
-          <li><span><FaCheck /></span>'One business day SLA'</li>
-          <li><span><FaCheck /></span>'Support to all plugins'</li>
-          <li><span><FaCheck /></span>'Support to all templates'</li>
-          <li><span><FaCheck /></span>'Direct access to our experts'</li>
+          <li><span><FaCheck /></span>8x5 <Link href="/support" passHref><a><span>Support</span></a></Link></li>
+          <li><span><FaCheck /></span>One business day SLA</li>
+          <li><span><FaCheck /></span>Support to all plugins</li>
+          <li><span><FaCheck /></span>Support to all templates</li>
+          <li><span><FaCheck /></span>Direct access to our experts</li>
         </PlansDetails>
 
 
@@ -63,12 +63,12 @@ const ComparePlans = () => {
           headline='Personalize your experience'
           buttonLabel='Contact Us'
         >
-          <li><span><FaCheck /></span>'24x7' <Link href="/support" passHref><a><span>'Support'</span></a></Link></li>
-          <li><span><FaCheck /></span>'SLA on the same business day'</li>
-          <li><span><FaCheck /></span>'Support to all plugins'</li>
-          <li><span><FaCheck /></span> 'Support to all templates'</li>
-          <li><span><FaCheck /></span> 'Direct access to our experts'</li>
-          <li><span><FaCheck /></span> 'DevOps training and documentation'</li>
+          <li><span><FaCheck /></span>24x7 <Link href="/support" passHref><a><span>Support</span></a></Link></li>
+          <li><span><FaCheck /></span>SLA on the same business day</li>
+          <li><span><FaCheck /></span>Support to all plugins</li>
+          <li><span><FaCheck /></span> Support to all templates</li>
+          <li><span><FaCheck /></span> Direct access to our experts</li>
+          <li><span><FaCheck /></span> DevOps training and documentation</li>
         </PlansDetails>
       </article>
       <article className={style.sectionBar}>
