@@ -126,7 +126,7 @@ const Validate = () => {
                                                         src="/assets/validate/astronaut-helmet.png"
                                                     />
                                                 </DialogContent>
-                                                <DialogTitle style={{ alignSelf: 'center', fontWeight: 'bold' }}><h3>"THAT'S IT!"</h3></DialogTitle>
+                                                <DialogTitle style={{ alignSelf: 'center', fontWeight: 'bold' }}><h3>THAT&aposS IT!</h3></DialogTitle>
                                                 <DialogContent style={{ margin: ".5em 1em 1.5em 1em" }}>
 
                                                     <DialogContentText>

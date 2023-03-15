@@ -9,7 +9,7 @@ import { useEffect } from 'react';
 const Validate = () => {
     const router = useRouter()
     const plan = router.query.plan;
-
+    
     useEffect(() => {
         if (typeof window !== "undefined") {
             if (window.innerWidth > 1300) {
@@ -66,6 +66,7 @@ const Validate = () => {
                                     initialValues={{ name: "", company: "", email: "", title: "", terms: false, plan: plan }}
                                     validationSchema={formSchema}
                                     onSubmit={async(values) => {
+                                        localStorage.setItem("user", JSON.stringify(values));
                                         const response = await UsePostData(values);
                                         await handleFormRedirect();
                                     }}

@@ -91,7 +91,7 @@ const Checkout = () => {
     >
       <section className={style.wrapper}>
         <article className={style.content}>
-          {/* <Breadcrumb active={3} /> */}
+          <Breadcrumb active={3} />
           <div className={style.content__options}>
             <div className={style["content__options-infoBoxWrapper"]}>
               {
