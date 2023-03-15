@@ -87,7 +87,6 @@ const Checkout = () => {
     <DefaultPage
       titleBar="disable"
       noBack
-      showOptions
       noFooter
     >
       <section className={style.wrapper}>
