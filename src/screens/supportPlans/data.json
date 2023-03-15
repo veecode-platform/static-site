@@ -43,7 +43,7 @@
         "title": "API Development",
         "img": "/assets/home/text_slide/api.png",
         "buttonLabel": "Free Trial",
-        "buttonLink": "#plans",
+        "buttonLink": "#trial",
         "data": [
             {
                 "id": 0,
@@ -82,7 +82,7 @@
         "title": "Kubernetes",
         "img": "/assets/home/text_slide/kubernetes.png",
         "buttonLabel": "Free Trial",
-        "buttonLink": "#plans",
+        "buttonLink": "#trial",
         "data": [
             {
                 "id": 0,
@@ -124,7 +124,7 @@
         "title": "Cloud AWS",
         "img": "/assets/home/text_slide/aws.png",
         "buttonLabel": "Free Trial",
-        "buttonLink": "#plans",
+        "buttonLink": "#trial",
         "data": [
             {
                 "id": 0,
