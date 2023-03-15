@@ -36,12 +36,11 @@ const InfoBox = ({info, billing,formatter,getDateFormatted}) => {
                   </div>}
                 </div>
 
-                {/* <div className={style.content__info}>
+                <div className={style.content__info}>
                   <div>
-                    <p>{info.users} tickets per month</p>
                     <p>Up to 2 tickets simultaneously</p>
                   </div>
-                </div> */}
+                </div>
 
                 <div className={style.content__info}>
                   {/* <div className={style["content__info-letterWrapper"]}>
