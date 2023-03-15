@@ -4,7 +4,7 @@ import style from '../../../styles/Validate.module.scss';
 import { Formik, Form } from 'formik';
 import { object, string, boolean } from 'yup';
 import { UsePostData } from '../../hooks/UsePostData';
-import {UseContactData} from '../../hooks/UseContactData';
+import { UseContactData } from '../../hooks/UseContactData';
 import { useEffect, useState } from 'react';
 import TextField from '@mui/material/TextField';
 import Dialog from '@mui/material/Dialog';
@@ -27,19 +27,7 @@ const Validate = () => {
 
     const [open, setOpen] = useState(false);
     const [success, setSuccess] = useState(false);
-    const [values, setValues] = useState({
-        name: "",
-        company: "",
-        email: "",
-        title: "",
-        terms: false,
-        type:"TRIAL",
-        plan: plan
-    });
-
-    useEffect(() => {
-        localStorage.setItem("user", JSON.stringify(values))
-    }, [values]);
+    
 
     useEffect(() => {
         if (typeof window !== "undefined") {
@@ -66,22 +54,22 @@ const Validate = () => {
 
 
 
-    const handleFormRedirect = async () => {
-        await router.push("/checkout")
-    }
+    // const handleFormRedirect = async () => {
+    //     await router.push("/checkout")
+    // }
 
     const handleClose = () => {
-        setOpen(false);
+        // setOpen(false);
         setSuccess(false);
     };
 
-    const submitForm = async () => {
-        console.log(values);
-        const response = await UseContactData(values);
-        // const response = await UsePostData(values);
-        setOpen(false);
-        setSuccess(true);
-    };
+    // const submitForm = async () => {
+    //     console.log(values);
+    //     const response = await UseContactData(values);
+    //     // const response = await UsePostData(values);
+    //     setOpen(false);
+    //     setSuccess(true);
+    // };
 
     return (
         <DefaultPage
@@ -97,15 +85,13 @@ const Validate = () => {
                     <article className={style.content}>
                         <div className={style.text}>
                             <div className={style.text__header}>
-                                <h2>{t('15 Days')} <strong><span>{t('Free Trial')}</span></strong> {t('of Standard Plan')}</h2>
+                                <h2>{t('Get')} <strong><span>{t('Free Trial')}</span></strong> {t('to our support platform')}</h2>
                             </div>
                             <div className={style.text__resume}>
-
-
                                 <p>
-                                    {t('Fill out the form on the side and get access to all the features and our support for a 15-day free trial!')} <br /><br />
-                                    {t('We guarantee that your information is secure and that we follow all privacy policies and comply with all applicable regulations and laws. Try our solutions and take advantage of our dedicated support to answer any questions you may have.')}<br /><br />
-                                    {t('After submitting the form, we will get in touch with you.')}<br /><br />
+                                    {t('Fill out the form and get access to our ticketing platform by securing access to our expert support during a')}<strong> {t('15-day free trial')}</strong>! <br /><br />
+                                    {t('With access to our ticketing platform, you can communicate directly with our experts to solve DevOps issues, provisioning automation, API management, IT infrastructure scaling, and more through our developer portal.')}<br /><br />
+                                    {t('We ensure that your information is secure and that we comply with all applicable privacy policies and regulations')}.<br /><br />
                                 </p>
                             </div>
                         </div>
@@ -114,25 +100,32 @@ const Validate = () => {
                                 <Formik
                                     initialValues={{ name: "", company: "", email: "", title: "", terms: false, type: "TRIAL", plan: plan }}
                                     validationSchema={formSchema}
-                                    onSubmit={(values) => {
-                                        setValues(values);
-                                        setOpen(true);
+                                    onSubmit={async(values) => {
+                                        // setValues(values);
+                                        const response = await UseContactData(values);
+                                        setSuccess(true);
                                         // isSubmitting = false;
                                     }}
 
                                 >
-                                    {({ errors, touched, handleSubmit }) => (
+                                    {({ errors, touched, handleSubmit, isSubmitting }) => (
 
                                         <Form onSubmit={handleSubmit} className={style.form}>
-                                            <Input name="name" placeholder="First and last name" label="Your name" error={(errors.name && touched.name) && errors.name} />
-                                            <Input name="title" placeholder="Sr Engineer" label="Title" error={(errors.title && touched.title) && errors.title} />
-                                            <Input name="company" placeholder="Acme, Inc." label="Company / Organization" error={(errors.company && touched.company) && errors.company} />
-                                            <Input name="email" placeholder="you@acme.com" label="Business Email" error={(errors.email && touched.email) && errors.email} />
+                                            <Input name="name" placeholder={t("First and last name")} label={t("Your name")} error={(errors.name && touched.name) && errors.name} />
+                                            <Input name="title" placeholder={t("Sr Engineer")} label={t("Title")} error={(errors.title && touched.title) && errors.title} />
+                                            <Input name="company" placeholder={t("Acme, Inc.")} label={t("Company / Organization")} error={(errors.company && touched.company) && errors.company} />
+                                            <Input name="email" placeholder={t("you@acme.com")} label={t("Business Email")} error={(errors.email && touched.email) && errors.email} />
                                             {/* <Input name="cel" placeholder="number" label="Cel number" error={(errors.cel && touched.cel) && errors.cel }/> */}
                                             <Checkbox name="terms" terms error={(errors.terms && touched.terms) && errors.terms} />
-                                            <div className={style.form__buttonWrapper}><Button type="link">Confirm</Button></div>
+                                            <div className={style.form__buttonWrapper}><Button type="submit" loading={isSubmitting}>{t("Confirm")}</Button></div>
+{/* 
+                                            <Link href='/checkout' passHref>
+                                                <a target="_blank">
+                                                    <p style={{ textDecoration: "underline", fontSize: ".9em", textAlign: "center", padding: "1em 0", color: "#1c8068" }}>{t('Or, go to checkout')}</p>
+                                                </a>
+                                            </Link> */}
 
-                                            <Dialog open={open} onClose={handleClose} fullWidth>
+                                            {/* <Dialog open={open} onClose={handleClose} fullWidth>
                                                 <DialogTitle style={{ margin: '1em 1em 0 1em' }}>
                                                     <IconButton
                                                         aria-label="close"
@@ -224,7 +217,7 @@ const Validate = () => {
                                                         </a>
                                                     </Link>
                                                 </DialogContent>
-                                            </Dialog>
+                                            </Dialog> */}
                                             <Dialog
                                                 fullWidth
                                                 open={success}

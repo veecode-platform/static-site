@@ -3,8 +3,8 @@
         "id": 0,
         "title": "Kong Gateway",
         "img": "/assets/home/text_slide/kong.png",
-        "buttonLabel": "Check Plans",
-        "buttonLink": "#plans",
+        "buttonLabel": "Free Trial",
+        "buttonLink": "#trial",
         "data": [
             {
                 "id": 0,
@@ -42,8 +42,8 @@
         "id": 1,
         "title": "API Development",
         "img": "/assets/home/text_slide/api.png",
-        "buttonLabel": "Check Plans",
-        "buttonLink": "#plans",
+        "buttonLabel": "Free Trial",
+        "buttonLink": "#trial",
         "data": [
             {
                 "id": 0,
@@ -81,8 +81,8 @@
         "id": 2,
         "title": "Kubernetes",
         "img": "/assets/home/text_slide/kubernetes.png",
-        "buttonLabel": "Check Plans",
-        "buttonLink": "#plans",
+        "buttonLabel": "Free Trial",
+        "buttonLink": "#trial",
         "data": [
             {
                 "id": 0,
@@ -123,8 +123,8 @@
         "id": 3,
         "title": "Cloud AWS",
         "img": "/assets/home/text_slide/aws.png",
-        "buttonLabel": "Check Plans",
-        "buttonLink": "#plans",
+        "buttonLabel": "Free Trial",
+        "buttonLink": "#trial",
         "data": [
             {
                 "id": 0,

@@ -1,6 +1,7 @@
 import { Label, InputField, Wrapper, LabelWraper, Checkboxfield, WrapperCheckbox, CheckboxLabel, TextAreaField, WrapperTextArea} from "./styles";
 import React from 'react'
 import { Field } from "formik";
+import { useTranslation } from 'react-i18next';
 
 export const Input = ({name, placeholder, label, error}) => {
 
@@ -20,8 +21,9 @@ export const Input = ({name, placeholder, label, error}) => {
 }
 
 export const Checkbox = ({name, error, children}) => {
+  const { t } = useTranslation();
 
-  const terms = <>I have read, understood and agree to Veecode Platform&apos;s <a target="_blank" href="/terms-of-service">Terms of service</a> and <a target="_blank" href="/privacy-policy">Privacy policy</a></>
+  const terms = <>{t("I have read, understood and agree to Veecode Platform&apos;s")} <a target="_blank" href="/terms-of-service">{t("Terms of Service")}</a> {t("and")} <a target="_blank" href="/privacy-policy">{t("Privacy Policy")}</a></>
 
   return (
     <Field name={name}>

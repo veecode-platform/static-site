@@ -65,7 +65,7 @@ const FooterSection = () => {
                 <span>{t('More')}</span>
               </li>
               <Link href="/terms-of-service"><a><li>{t('Terms of Service')}</li></a></Link>
-              <Link href="/privacy-policy"><a><li>{t('Policy Privacy')}</li></a></Link>
+              <Link href="/privacy-policy"><a><li>{t('Privacy Policy')}</li></a></Link>
               <Link href="/contact-us"><a><li>{t('Contact Us')}</li></a></Link>
               <Link href="/faq"><a><li>FAQ</li></a></Link>
             </ul>

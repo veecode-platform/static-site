@@ -1,13 +1,18 @@
 @import '/abstract/functions', '/abstract//responsive', '/abstract/variables';
 
 .content {
-    @include screenSize(75%, auto);
+    @include screenSize(80%, auto);
     display: grid;
     grid-template: 1fr / repeat(2, 1fr);
-    margin: 2.5em auto;
-    gap: .5em;
-    position: relative;
+    margin: 1.5em auto;
+    gap: 1.8em;
+    padding: 2em 0 10em 0;
 
+    position: relative;
+    span {
+        color:$color1;
+        text-decoration-line: underline;
+    }
 
     //viewport
     @include for-viewport-only {
