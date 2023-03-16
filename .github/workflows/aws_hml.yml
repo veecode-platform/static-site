@@ -35,11 +35,7 @@ jobs:
            NEXT_PUBLIC_PAYPAL_STANDARD_MONTHLY=${{ secrets.PAYPAL_STANDARD_MONTHLY }}
            NEXT_PUBLIC_PAYPAL_BASIC_ANUAL=${{ secrets.PAYPAL_BASIC_ANUAL }}
            NEXT_PUBLIC_PAYPAL_BASIC_MONTHLY=${{ secrets.PAYPAL_BASIC_MONTHLY }}
-<<<<<<< HEAD
-
-=======
            
->>>>>>> 8767154e10209d9ec23059857094bc30c3c3282f
            EOT
            yarn build
            ls -ltrh out
