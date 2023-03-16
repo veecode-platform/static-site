@@ -33,7 +33,9 @@ jobs:
            NEXT_PUBLIC_PAYPAL_PREMIUM_MONTHLY=${{ secrets.PAYPAL_PREMIUM_MONTHLY }}
            NEXT_PUBLIC_PAYPAL_STANDARD_ANUAL=${{ secrets.PAYPAL_STANDARD_ANUAL }}
            NEXT_PUBLIC_PAYPAL_STANDARD_MONTHLY=${{ secrets.PAYPAL_STANDARD_MONTHLY }}
-
+           NEXT_PUBLIC_PAYPAL_BASIC_ANUAL=${{ secrets.PAYPAL_BASIC_ANUAL }}
+           NEXT_PUBLIC_PAYPAL_BASIC_MONTHLY=${{ secrets.PAYPAL_BASIC_MONTHLY }}
+           
            EOT
            yarn build
            ls -ltrh out
