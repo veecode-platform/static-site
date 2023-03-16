@@ -113,7 +113,7 @@ const Checkout = () => {
                 <Switch label={"subscription"} isOn={billing} handleToggle={handleBilling} />
               </div>
               <div className={style.paypalBox}>
-                <Paypal plan={{ plan: info.plan, billing: info.billing, price: info.priceA }} />
+                <Paypal plan={{ plan: info.plan, billing: info.billing, price: info.price }} />
               </div>
             </div>
           </div>
