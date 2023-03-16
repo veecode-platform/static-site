@@ -9,7 +9,7 @@ import { useEffect } from 'react';
 const Validate = () => {
     const router = useRouter()
     const plan = router.query.plan;
-    
+
     useEffect(() => {
         if (typeof window !== "undefined") {
             if (window.innerWidth > 1300) {
@@ -54,9 +54,9 @@ const Validate = () => {
                             </div>
                             <div className={style.text__resume}>
                                 <p>
-                                    Fill out the form and get access to our ticketing platform by securing access to our expert support during a<strong> 15-day free trial</strong>! <br /><br />
-                                    With access to our ticketing platform, you can communicate directly with our experts to solve DevOps issues, provisioning automation, API management, IT infrastructure scaling, and more through our developer portal.<br /><br />
-                                    We ensure that your information is secure and that we comply with all applicable privacy policies and regulations.<br /><br />
+                                    Fill out the form and complete the payment process to gain access to our ticketing platform and connect with our expert support!<br /><br />
+                                    With access to our ticketing platform, you can communicate directly with our specialists and easily resolve your DevOps issues, provisioning automation, API management, IT infrastructure scaling, and more through our developer portal.<br /><br />
+                                    Rest assured that your information is secure and we comply with all applicable privacy policies and regulations.<br /><br />
                                 </p>
                             </div>
                         </div>
@@ -65,7 +65,7 @@ const Validate = () => {
                                 <Formik
                                     initialValues={{ name: "", company: "", email: "", title: "", terms: false, plan: plan }}
                                     validationSchema={formSchema}
-                                    onSubmit={async(values) => {
+                                    onSubmit={async (values) => {
                                         localStorage.setItem("user", JSON.stringify(values));
                                         const response = await UsePostData(values);
                                         await handleFormRedirect();
