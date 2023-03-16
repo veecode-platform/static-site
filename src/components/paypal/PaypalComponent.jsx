@@ -77,10 +77,10 @@ export const PaypalComponent = ({disabled, plan}) => {
 
     const standardYearly = process.env.NEXT_PUBLIC_PAYPAL_STANDARD_ANUAL;
     const stadardMonthly = process.env.NEXT_PUBLIC_PAYPAL_STANDARD_MONTHLY;
-    const premiumYearly = process.env.NEXT_PUBLIC_PAYPAL_PREMIUM_ANUAL;
-    const premiumMonthly = process.env.NEXT_PUBLIC_PAYPAL_PREMIUM_MONTHLY;
+    const basicYearly = process.env.NEXT_PUBLIC_PAYPAL_BASIC_ANUAL;
+    const basicMonthly = process.env.NEXT_PUBLIC_PAYPAL_BASIC_MONTHLY;
 
-    const supportValue = plan.plan == "premium" ? plan.billing ? premiumYearly : premiumMonthly : plan.billing ? standardYearly : stadardMonthly
+    const supportValue = plan.plan == "basic" ? plan.billing ? basicYearly : basicMonthly : plan.billing ? standardYearly : stadardMonthly
     
     return(
         <Wrapper>          

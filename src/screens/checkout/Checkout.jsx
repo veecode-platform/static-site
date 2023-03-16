@@ -33,12 +33,13 @@ const Checkout = () => {
     setBilling(!billing);
     LoadingAnimation();
   }
+
   const handlePrice = () => {
-    if (userData.plan == "premium") {
-      billing ? setPrice(1134) : setPrice(1260)
+    if (userData.plan == "standard") {
+      billing ? setPrice(1790) : setPrice(1990)
     }
     else {
-      billing ? setPrice(1790) : setPrice(1990)
+      billing ? setPrice(621) : setPrice(690)
     }
   }
 
@@ -67,10 +68,10 @@ const Checkout = () => {
 
   let info = {
     plan: userData.plan,
-    sla: userData.plan == "premium" ? "3 days" : "1 Business day",
+    sla: userData.plan == "1 Business day",
     price: formatter.format(price),
     priceA: formatter.format(price * 12),
-    priceDeleted: price * 12 * (userData.plan == "premium" ? 1.1111 : 1.1112),
+    priceDeleted: price * 12 * (userData.plan == "standard" ? 1.1111 : 1.1112),
     users: "10",
     billing: billing
   }
@@ -86,12 +87,11 @@ const Checkout = () => {
     <DefaultPage
       titleBar="disable"
       noBack
-      showOptions
       noFooter
     >
       <section className={style.wrapper}>
         <article className={style.content}>
-          {/* <Breadcrumb active={3} /> */}
+          <Breadcrumb active={3} />
           <div className={style.content__options}>
             <div className={style["content__options-infoBoxWrapper"]}>
               {

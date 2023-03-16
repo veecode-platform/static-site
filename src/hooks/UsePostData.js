@@ -10,10 +10,12 @@ export const UsePostData = async (values) => {
       "organization": values.company,
       "e-mail": values.email,
       "job-title": values.title,
-      "phone": values.cel
+      "plan": values.plan
     }
 
     const { data } = await api.post("/purchases", model)
+
+    console.log('func',values);
 
     storage.setData("user", JSON.stringify({...values, id: data.id}))
 

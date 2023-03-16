@@ -48,7 +48,7 @@ const Header = ({ fixedHeader, showButton, showOptions }) => {
           </div>} */}
 
           {showButton && <div className={style.nav__buyButton} >
-            <Link href="/compare-plans" passHref>
+            <Link href="/trial" passHref>
               <a>
                 <Button headerButton>Free Trial</Button>
               </a>
