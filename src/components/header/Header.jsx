@@ -32,13 +32,13 @@ const Header = ({ fixedHeader, showButton, showOptions }) => {
           </Link>
         </div>
         <div className={style.nav}>
-          {/* {showOptions && <div className={style.nav__options}>
+          {showOptions && <div className={style.nav__options}>
             <Link href='/compare-plans'>
               <a>
                 <h2>Pricing</h2>
               </a>
             </Link>
-          </div>} */}
+          </div>}
           {/* {showOptions && <div className={style.nav__options}>
             <Link href='/support-plans'>
               <a>

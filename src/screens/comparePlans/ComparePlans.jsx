@@ -19,6 +19,22 @@ const ComparePlans = () => {
       <Breadcrumb active={1} />
 
       <article className={style.content}>
+        {/* BASIC */}
+        <PlansDetails
+          title="Basic"
+          subtitle={<>Acelerate your business, secure support for our Developer Portal solution. Solve your problems with API automation, Pipelines, and <Link href='/how-it-works' passHref><a style={{ cursor: "pointer", color: "#1C8068", fontWeight: "bold" }}>more</a></Link>.</>}
+          link="/validate?plan=basic"
+          label="Start at"
+          emphasis="$ 690"
+          text="per Month"
+          buttonLabel="Checkout"
+        >
+          <li><span><FaCheck /></span>8x5 <Link href="/support" passHref><a><span>Support</span></a></Link></li>
+          <li><span><FaCheck /></span>One business day SLA</li>
+          <li><span><FaCheck /></span>Support to TechDocs, CI/CD and Pull Request plugins</li>
+          <li><span><FaCheck /></span>Support to 2 project templates</li>
+          <li><span><FaCheck /></span>Direct access to our experts</li>
+        </PlansDetails>
 
         {/* STANDARD */}
         <PlansDetails
@@ -28,7 +44,7 @@ const ComparePlans = () => {
           label="Start at"
           emphasis="$ 1990"
           text="per Month"
-          buttonLabel="Free Trial"
+          buttonLabel="Checkout"
         >
           <li><span><FaCheck /></span>8x5 <Link href="/support" passHref><a><span>Support</span></a></Link></li>
           <li><span><FaCheck /></span>One business day SLA</li>
