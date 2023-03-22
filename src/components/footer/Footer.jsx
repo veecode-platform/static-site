@@ -16,7 +16,7 @@ const Footer = () => {
         <div className={style.content__logoAndSocial}>
           <img src={Logo} alt="Veecode Plataform" className={style.logo}/>
             <ul className={style.items}>
-              <li>
+              {/* <li>
                 <Link href="https://web.facebook.com/veecodeplatform/" passHref>
                   <a target="_blank">
                   <FaFacebookSquare/>
@@ -29,7 +29,7 @@ const Footer = () => {
                     <FaInstagram />
                   </a>
                 </Link>
-              </li>
+              </li> */}
               <li>
                 <Link href="https://www.linkedin.com/showcase/veecode-platform/" passHref>
                   <a target="_blank">
@@ -37,9 +37,9 @@ const Footer = () => {
                   </a>
                 </Link>
               </li>
-              {/* <li>
-                <Link href="/support" passHref><a target="_blank"><FaTwitterSquare /></a></Link>
-              </li> */}
+              <li>
+                <Link href="https://twitter.com/veecodeplatform" passHref><a target="_blank"><FaTwitterSquare /></a></Link>
+              </li>
             </ul>
         </div>
         <div className={style.content__details}>
