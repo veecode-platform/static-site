@@ -6,19 +6,30 @@
   position: relative;
   background: linear-gradient(90deg,$color3, $color14, $color14,$color14);
   padding: 2em 0 3.5em 0;
+
+
+  // viewport
+  @include for-viewport-only {
+    padding: 1em 0 2.5em 0;
+    background-color: red;
+  }
+
   // tablet
-  @include for-tablet-only{
+  @include for-tablet-only {
     background: $color14;
     padding: 1em 0 0 0;
-  }
-  //mobile(M)
+  } 
+
+  //mobile(M) 
   @include for-phone-only {
     padding: 5vh 0;
   }
+
   //mobile(S)
   @include for-phoneS-only {
     margin-top: 0;
   }
+
   .content {
     @include screenSize(80%, auto);
     @include displayFlex(center, center, row);
