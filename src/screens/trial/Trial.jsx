@@ -49,17 +49,10 @@ const Validate = () => {
         setOpen(false);
     };
 
-    // const submitForm = async () => {
-    //     console.log(values);
-    //     const response = await UseContactData(values);
-    //     // const response = await UsePostData(values);
-    //     setOpen(false);
-    //     setOpen(true);
-    // };
-
     const handleFormRedirect = async () => {
         await router.push("/contact-success")
     }
+
     return (
         <DefaultPage
             titleBar="disable"
@@ -89,7 +82,7 @@ const Validate = () => {
                                     onSubmit={async(values) => {
                                         const response = await UseContactData(values);
                                         // setOpen(true);
-                                        handleFormRedirect();
+                                        await handleFormRedirect();
                                     }}
 
                                 >
