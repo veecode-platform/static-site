@@ -1,62 +1,109 @@
 @import "../abstract/functions", "../abstract/variables", "../abstract/responsive";
 
 
-.wrapper{
-    @include screenSize(100vw,auto);
+.wrapper {
+    @include screenSize(100vw, auto);
     @include displayFlex(center, center, column);
     background-color: $color9;
-    .content{
+
+    .content {
         @include screenSize(80%, auto);
         @include displayFlex(center, center, column);
         color: $color2;
-        &__options{
-            @include screenSize(100%,auto);
-            @include displayFlex(space-evenly, center, row);
+
+        &__options {
+            @include screenSize(100%, auto);
+            @include displayFlex(space-evenly, flex-start, row);
             padding: 1em 0 1em 0;
+
             //viewport
-            @include for-viewport-only{
-                @include screenSize(90%,auto);
+            @include for-viewport-only {
+                @include screenSize(90%, auto);
             }
+
             //mobile(M)
-            @include for-phone-only{
+            @include for-phone-only {
                 @include displayFlex(center, center, column);
                 padding: 1em 0 6em 0;
             }
+
             //mobile(S)
             @include for-phoneS-only {
-                @include screenSize(95%,auto);
+                @include screenSize(95%, auto);
                 padding: 1em 0;
             }
+
             //mobile(XS)
-            @include for-phoneXS-only{
-                @include screenSize(100%,auto);
+            @include for-phoneXS-only {
+                @include screenSize(100%, auto);
             }
-            
-            &-decoration{
-                @include displayFlex(center, flex-end, column);
+
+            &-decoration {
+                @include displayFlex(center, center, column);
                 max-width: 50%;
-                img{
-                    width: 90%;
+
+                img {
+                    width: 100%;
                     @include pulseAnimation();
                 }
-                @include for-tablet-only{
+
+                @include for-tablet-only {
                     display: none;
                 }
             }
 
-            &-formWraper{
-                    @include screenSize(40%, auto);
-                    @include displayFlex(center, center, row);
-                    //tablet
-                    @include for-tablet-only{
-                        @include screenSize(60%, auto);
-                    }
-                    //mobile
-                    @include for-phone-only{
-                        @include screenSize(80vw, auto);
-                    }
+            &-formWraper {
+                @include screenSize(40%, auto);
+                @include displayFlex(center, center, row);
+
+                //tablet
+                @include for-tablet-only {
+                    @include screenSize(60%, auto);
+                }
+
+                //mobile
+                @include for-phone-only {
+                    @include screenSize(80vw, auto);
+                }
             }
         }
-        
+
+        &__faq {
+            @include screenSize(100%, auto);
+            @include displayFlex(center, center, column);
+            margin: 8em 0 0 0;
+
+            h1 {
+                @include typography(2.4vw, center, 1.3em, 600);
+                margin-bottom: 2vh;
+                color: $color1;
+
+                //tablet
+                @include for-tablet-only {
+                    font-size: 22px;
+                }
+            }
+
+            h2 {
+                @include typography(1.3vw, center, 1.3em, 500);
+                color: $color2;
+
+                //tablet
+                @include for-tablet-only {
+                    font-size: 17px;
+                }
+
+                //tablet
+                @include for-tablet-only {
+                    font-size: 16px;
+                }
+
+                //mobile(S)
+                @include for-phoneS-only {
+                    display: none;
+                }
+            }
+        }
+
     }
 }

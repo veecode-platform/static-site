@@ -3,6 +3,7 @@ import { DefaultPage, FormElement } from '../../components';
 import style from '../../../styles/ContactUs.module.scss';
 import { object, string } from 'yup';
 import { useRouter } from 'next/router'
+import Accordion from './accordion';
 
 const ContactUs = () => {
 
@@ -27,6 +28,13 @@ const ContactUs = () => {
                                 company
                             />
                         </div>
+                    </div>
+                    <div className={style.content__faq}>
+                        <div>
+                            <h1>FAQ</h1>
+                            <h2>Check our Frequently Asked Questions</h2>
+                        </div>
+                        <Accordion />
                     </div>
                 </article>
             </section>

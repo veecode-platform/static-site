@@ -39,13 +39,13 @@ const Header = ({ fixedHeader, showButton, showOptions }) => {
               </a>
             </Link>
           </div>}
-          {/* {showOptions && <div className={style.nav__options}>
-            <Link href='/support-plans'>
+          {showOptions && <div className={style.nav__options}>
+            <Link href='/contact-us'>
               <a>
-                <h2>Plans</h2>
+                <h2>Contact Us</h2>
               </a>
             </Link>
-          </div>} */}
+          </div>}
 
           {showButton && <div className={style.nav__buyButton} >
             <Link href="/trial" passHref>
