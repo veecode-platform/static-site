@@ -57,6 +57,9 @@ const Validate = () => {
     //     setOpen(true);
     // };
 
+    const handleFormRedirect = async () => {
+        await router.push("/contact-success")
+    }
     return (
         <DefaultPage
             titleBar="disable"
@@ -76,7 +79,7 @@ const Validate = () => {
                                     With access to our ticketing platform, you can communicate directly with our experts to solve DevOps issues, provisioning automation, API management, IT infrastructure scaling, and more through our developer portal.<br /><br />
                                     We ensure that your information is secure and that we comply with all applicable privacy policies and regulations.<br /><br />
                                 </p>
-                            </div>
+                            </div> 
                         </div>
                         <div className={style.content__options}>
                             <div className={style["content__options-formWraper"]}>
@@ -85,7 +88,8 @@ const Validate = () => {
                                     validationSchema={formSchema}
                                     onSubmit={async(values) => {
                                         const response = await UseContactData(values);
-                                        setOpen(true);
+                                        // setOpen(true);
+                                        handleFormRedirect();
                                     }}
 
                                 >
