@@ -33,6 +33,13 @@ const Header = ({ fixedHeader, showButton, showOptions }) => {
         </div>
         <div className={style.nav}>
           {showOptions && <div className={style.nav__options}>
+            <Link href='https://docs.platform.vee.codes/'>
+              <a>
+                <h2>Docs</h2>
+              </a>
+            </Link>
+          </div>}
+          {showOptions && <div className={style.nav__options}>
             <Link href='/compare-plans'>
               <a>
                 <h2>Pricing</h2>

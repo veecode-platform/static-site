@@ -31,14 +31,13 @@ const HeaderSection = ({ fixedHeader, showButton }) => {
           </Link>
         </div>
         <div className={style.nav}>
-          {/* <div className={style.nav__options}>
-            <Link href='/'>
+          {showOptions && <div className={style.nav__options}>
+            <Link href='https://docs.platform.vee.codes/'>
               <a>
-                <h2>{t('Home')}</h2>
+                <h2>Docs</h2>
               </a>
             </Link>
-          </div> */}
-
+          </div>}
           {showButton && <div className={style.nav__buyButton} >
             <Link href="#trial" passHref>
               <a>
