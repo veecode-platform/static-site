@@ -31,7 +31,7 @@ const HeaderSection = ({ fixedHeader, showButton }) => {
           </Link>
         </div>
         <div className={style.nav}>
-          {showOptions && <div className={style.nav__options}>
+          {showButton && <div className={style.nav__options}>
             <Link href='https://docs.platform.vee.codes/'>
               <a>
                 <h2>Docs</h2>
