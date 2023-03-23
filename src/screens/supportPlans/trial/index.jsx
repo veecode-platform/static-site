@@ -52,7 +52,11 @@ const Trial = () => {
     const handleClose = () => {
         setSuccess(false);
     };
-
+    
+    const handleFormRedirect = async () => {
+        await router.push("/contact-success")
+    }
+    
     return (
             <section className={style.wrapper} id="trial">
                 <article className={style.container}>
@@ -75,10 +79,9 @@ const Trial = () => {
                                     initialValues={{ name: "", company: "", email: "", title: "", terms: false, type: "TRIAL", plan: plan }}
                                     validationSchema={formSchema}
                                     onSubmit={async (values) => {
-                                        // setValues(values);
                                         const response = await UseContactData(values);
-                                        setSuccess(true);
-                                        // isSubmitting = false;
+                                        // setSuccess(true);
+                                        await handleFormRedirect();
                                     }}
 
                                 >
