@@ -1,7 +1,7 @@
 @import '/abstract/functions', '/abstract//responsive', '/abstract/variables';
 
 .content {
-    @include screenSize(115%, auto);
+    @include screenSize(120%, auto);
     display: grid;
     grid-template: 1fr / repeat(4, 1fr);
     margin: 1.5em 0;
