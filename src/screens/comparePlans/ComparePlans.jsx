@@ -26,7 +26,7 @@ const ComparePlans = () => {
           label="Start now your"
           emphasis="FREE PLAN"
           text="and take your business to the next level!"
-          link="/validate?plan=free"
+          link="/free-plan?plan=free"
           buttonLabel="Start Now"
         >
           <li><span><FaCheck /></span><Link href="https://docs.platform.vee.codes/" passHref><a target={"_blank"}><span>Community Support</span></a></Link></li>

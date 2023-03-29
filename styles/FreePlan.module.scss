@@ -1,0 +1,167 @@
+@import "../abstract/functions", "../abstract/variables", "../abstract/responsive";
+
+
+.wrapper {
+    @include screenSize(100vw, auto);
+    @include displayFlex(center, center, column);
+    background-color: $color9;
+
+    .container {
+        @include screenSize(100%, auto);
+        @include displayFlex(center, center, column);
+        color: $color2;
+    }
+
+    .content {
+        @include screenSize(80%, auto);
+        @include displayFlex(center, center, row);
+        margin-top: 1.5em;
+
+        @include for-phone-only {
+            @include displayFlex(center, center, column);
+
+        }
+
+        .text {
+            @include screenSize(50%, auto);
+            @include displayFlex(flex-start, center, column);
+            padding: 2em 0 4em 0;
+
+            @include for-phone-only {
+                @include screenSize(95%, auto);
+                padding: 2em 0;
+            }
+
+            span {
+                color: $color1;
+            }
+
+            &__header {
+                margin: 2em 0 1.5em;
+
+                @include for-phone-only {
+                    margin: 1em 0 1.5em;
+
+                }
+
+
+                h2 {
+                    @include typography(2.8vw, start, 1.1em, 500);
+                    color: $color2;
+
+                    @include for-phone-only {
+                        @include typography(6vw, center, 1.1em, 500);
+                    }
+
+                    @include for-phoneS-only {
+                        @include typography(8vw, center, 1.1em, 500);
+                    }
+                }
+            }
+
+            &__resume {
+                margin: 1.2em .5em 1.5em 0;
+
+                @include for-phone-only {
+                    display: none;
+                }
+
+                p {
+                    @include typography(1.3vw, start, 1.2em, 300);
+                    color: $color2;
+
+                    @include for-tablet-only {
+                        font-size: 1.7vw;
+                    }
+
+                    @include for-tabletS-only {
+                        font-size: 2vw;
+                    }
+
+                    @include for-phone-only {}
+                }
+            }
+        }
+
+        &__options {
+            @include screenSize(50%, auto);
+            @include displayFlex(center, center, column);
+            padding: 2em 0 4em 0;
+
+            //viewport
+            @include for-viewport-only {
+                @include screenSize(50%, auto);
+            }
+
+            @include for-tablet-only {
+                @include screenSize(70%, auto);
+
+                @include displayFlex(center, center, column);
+
+            }
+
+            //mobile(M)
+            @include for-phone-only {
+                @include displayFlex(center, center, column);
+                padding: 1em 0 6em 0;
+            }
+
+            //mobile(S)
+            @include for-phoneS-only {
+                @include screenSize(95%, auto);
+                padding: 1em 0;
+            }
+
+            //mobile(XS)
+            @include for-phoneXS-only {
+                @include screenSize(100%, auto);
+            }
+
+            &-formWraper {
+                @include displayFlex(center, center, column);
+                @include glassEffect();
+                width: 415px;
+                padding: 1vw 1vw;
+                background-color: $color12;
+                border-radius: 1vh;
+
+                @include for-tablet-only {
+                    width: 390px;
+                }
+
+                @include for-tabletS-only {
+                    width: 300px;
+                }
+
+                @include for-phone-only {
+                    width: 70vw;
+                }
+
+                @include for-phoneS-only {
+                    width: 95vw;
+                    padding: 1.5vh 3vw;
+                }
+
+                .form {
+                    @include displayFlex(center, center, column);
+                    width: 100%;
+                    gap: 1.2vh;
+
+                    &__buttonWrapper {
+                        @include screenSize(100%, auto);
+                        @include displayFlex(center, center, row);
+                    }
+
+                    .actions {
+                        @include displayFlex(center, center, row);
+                        padding: 2.5rem 0;
+                    }
+
+                    .astronault {
+                        text-align-last: center !important;
+                    }
+                }
+            }
+        }
+    }
+}
