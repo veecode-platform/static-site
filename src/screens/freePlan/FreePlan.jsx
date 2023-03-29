@@ -68,7 +68,7 @@ const FreePlan = () => {
                             </div>
                             <div className={style.text__resume}>
                                 <p>
-                                    As a free user, you'll have access to <strong>support from our community forum</strong> on GitHub. Embark on a journey with our powerful <strong>Developer Portal</strong> solution, designed specifically for users on our free plan.<br /><br />
+                                    As a free user, you&apos;ll have access to <strong>support from our community forum</strong> on GitHub. Embark on a journey with our powerful <strong>Developer Portal</strong> solution, designed specifically for users on our free plan.<br /><br />
                                     Our user-friendly platform provides streamlined API automation, Pipelines, and more to help solve your business problems and take your business to the next level.<br /><br />
                                     Fill out the form below to get started and gain access to our documentation to begin your journey right away.<br /><br />
                                 </p>
