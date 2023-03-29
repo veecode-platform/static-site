@@ -23,8 +23,8 @@ const ComparePlans = () => {
         <PlansDetails
           title="FREE"
           subtitle={<>Accelerate your business with our Developer Portal solution. Streamline your API automation, Pipelines, and more to solve your business problems.</>}
-          label="Start your free plan"
-          emphasis="NOW"
+          label="Start now your"
+          emphasis="FREE PLAN"
           text="and take your business to the next level!"
           link="/validate?plan=free"
           buttonLabel="Start Now"
