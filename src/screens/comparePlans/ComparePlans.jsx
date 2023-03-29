@@ -19,6 +19,20 @@ const ComparePlans = () => {
       <Breadcrumb active={1} />
 
       <article className={style.content}>
+        {/* FREE */}
+        <PlansDetails
+          title="FREE"
+          subtitle={<>Accelerate your business with our Developer Portal solution. Streamline your API automation, Pipelines, and more to solve your business problems.</>}
+          label="Start now your"
+          emphasis="FREE PLAN"
+          text="and take your business to the next level!"
+          link="/free-plan?plan=free"
+          buttonLabel="Start Now"
+        >
+          <li><span><FaCheck /></span><Link href="https://docs.platform.vee.codes/" passHref><a target={"_blank"}><span>Community Support</span></a></Link></li>
+          <li><span><FaCheck /></span>Access to documentation</li>
+        </PlansDetails>
+
         {/* BASIC */}
         <PlansDetails
           title="Basic"
