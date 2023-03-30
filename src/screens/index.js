@@ -17,3 +17,4 @@ export { default as ComparePlans } from './comparePlans/ComparePlans';
 export { default as ContactEnterprise } from './contactEnterprise/ContactEnterprise';
 export { default as SupportPlans } from './supportPlans/SupportPlans';
 export { default as Trial } from './trial/Trial';
+export { default as FreePlan } from './freePlan/FreePlan';

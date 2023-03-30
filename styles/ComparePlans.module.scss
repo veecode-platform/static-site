@@ -1,27 +1,34 @@
 @import '/abstract/functions', '/abstract//responsive', '/abstract/variables';
 
 .content {
-    @include screenSize(100%, auto);
+    @include screenSize(120%, auto);
     display: grid;
-    grid-template: 1fr / repeat(3, 1fr);
-    margin: 1.5em auto;
-    gap: 1.8em;
+    grid-template: 1fr / repeat(4, 1fr);
+    margin: 1.5em 0;
+    gap: .6em;
     padding: 2em 0 10em 0;
 
     position: relative;
     span {
-        color:$color1;
+        color: $color1;
         text-decoration-line: underline;
     }
 
     //viewport
     @include for-viewport-only {
-        @include screenSize(80%, auto);
+        @include screenSize(110%, auto);
     }
 
     //tablet
     @include for-tablet-only {
+        @include screenSize(115%, auto);
+    }
+
+    //tablet (SM)
+    @include for-tabletS-only {
         @include screenSize(85%, auto);
+        grid-template: 1fr / repeat(2, 1fr);
+        gap: 1em;
     }
 
     //mobile(M)
