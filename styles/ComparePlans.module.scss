@@ -3,12 +3,18 @@
 .content {
     @include screenSize(120%, auto);
     display: grid;
+<<<<<<< HEAD
     grid-template: 1fr / repeat(4, 1fr);
     margin: 1.5em 0;
     gap: .6em;
+=======
+    grid-template: 1fr / repeat(3, 1fr);
+    margin: 1.5em auto;
+    gap: 1.8em;
+>>>>>>> 9fab5d6370517dae347883063be5d3522d17acc0
     padding: 2em 0 10em 0;
 
-    // position: relative;
+    position: relative;
     span {
         color: $color1;
         text-decoration-line: underline;

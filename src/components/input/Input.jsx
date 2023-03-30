@@ -23,7 +23,7 @@ export const Input = ({name, placeholder, label, error}) => {
 export const Checkbox = ({name, error, children}) => {
   const { t } = useTranslation();
 
-  const terms = <>{t("I have read, understood and agree to Veecode Platform&apos;s")} <a target="_blank" href="/terms-of-service">{t("Terms of Service")}</a> {t("and")} <a target="_blank" href="/privacy-policy">{t("Privacy Policy")}</a></>
+  const terms = <>{t("I have read, understood and agree to Veecode Platform's")} <a target="_blank" href="/terms-of-service">{t("Terms of Service")}</a> {t("and")} <a target="_blank" href="/privacy-policy">{t("Privacy Policy")}</a></>
 
   return (
     <Field name={name}>
