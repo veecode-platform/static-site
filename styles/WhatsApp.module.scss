@@ -1,0 +1,12 @@
+@import "../abstract/functions", "../abstract/variables", "../abstract/responsive";
+
+.wrapper {
+    @include displayFlex(flex-end, center, row);
+    @include screenSize(80%, auto);
+    position: fixed;
+    bottom: 0;
+    margin: 2em 0;
+    .image {
+        width: 4vw;
+    }
+}
