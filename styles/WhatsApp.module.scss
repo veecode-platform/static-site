@@ -6,7 +6,16 @@
     position: fixed;
     bottom: 0;
     margin: 2em 0;
+
     .image {
         width: 4vw;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    .form {
+        @include screenSize(80%, auto);
     }
 }
