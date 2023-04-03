@@ -2,10 +2,12 @@
 
 .wrapper {
     @include displayFlex(flex-end, center, row);
-    @include screenSize(80%, auto);
+    @include screenSize(85%, auto);
+
     position: fixed;
     bottom: 0;
     margin: 2em 0;
+    z-index: 9999999;
 
     .image {
         width: 4vw;

@@ -11,19 +11,24 @@ import DialogTitle from '@mui/material/DialogTitle';
 import CloseIcon from '@mui/icons-material/Close';
 import IconButton from '@mui/material/IconButton';
 import DialogContent from '@mui/material/DialogContent';
+import { useTranslation } from 'react-i18next';
 
 const WhatsApp = () => {
+    const { t } = useTranslation();
+
     const router = useRouter()
 
     const [open, setOpen] = useState(false);
 
     const plan = router.query.plan;
 
+    const requiredText = t("*required");
+
     const formSchema = object({
-        name: string().required("*required"),
-        company: string().required("*required"),
-        email: string().email("*invalid email").required("*required"),
-        title: string().required("*required"),
+        name: string().required(requiredText),
+        company: string().required(requiredText),
+        email: string().email("*invalid email").required(requiredText),
+        title: string().required(requiredText),
         terms: boolean().isTrue()
     });
 
@@ -77,12 +82,12 @@ const WhatsApp = () => {
                         {({ errors, touched, handleSubmit, isSubmitting }) => (
 
                             <Form onSubmit={handleSubmit} className={style.form}>
-                                <Input name="name" placeholder="First and last name" label="Your name" error={(errors.name && touched.name) && errors.name} />
-                                <Input name="title" placeholder="Sr Engineer" label="Title" error={(errors.title && touched.title) && errors.title} />
-                                <Input name="company" placeholder="Acme, Inc." label="Company / Organization" error={(errors.company && touched.company) && errors.company} />
-                                <Input name="email" placeholder="you@acme.com" label="Business Email" error={(errors.email && touched.email) && errors.email} />
+                                <Input name="name" placeholder={t("First and last name")} label={t("Your name")} error={(errors.name && touched.name) && errors.name} />
+                                <Input name="title" placeholder={t("Sr Engineer")} label={t("Title")} error={(errors.title && touched.title) && errors.title} />
+                                <Input name="company" placeholder={t("Acme, Inc.")} label={t("Company / Organization")} error={(errors.company && touched.company) && errors.company} />
+                                <Input name="email" placeholder="you@acme.com" label={t("Business Email")} error={(errors.email && touched.email) && errors.email} />
                                 <Checkbox name="terms" terms error={(errors.terms && touched.terms) && errors.terms} />
-                                <div className={style.form__buttonWrapper}><Button type="submit" loading={isSubmitting}>Confirm</Button></div>
+                                <div className={style.form__buttonWrapper}><Button type="submit" loading={isSubmitting}>{t("Confirm")}</Button></div>
                             </Form>
                         )}
                     </Formik>
