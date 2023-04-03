@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import style from "../../../styles/WhatsApp.module.scss";
 const wppLogo = "/assets/logo/logo-whatsapp-512.png";
-import { Button, Input, Checkbox, DefaultPage } from '../../components';
+import { Button, Input, Checkbox } from '../../components';
 import { Formik, Form } from 'formik';
 import { UseContactData } from '../../hooks/UseContactData';
 import Dialog from '@mui/material/Dialog';
@@ -77,7 +77,6 @@ const WhatsApp = () => {
                             await UseContactData(values);
                             await handleFormRedirect();
                         }}
-
                     >
                         {({ errors, touched, handleSubmit, isSubmitting }) => (
 
