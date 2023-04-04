@@ -13,12 +13,12 @@ const Homescreen = () => {
   return (
     <main className={style.container}>
       <Header fixedHeader showButton showOptions/>
-      <FirstSection />
-      <OptimizeYourBusiness />
-      <ToolsDetails/>
-      <Tools/>
-      <Benefits />
-      <Banner />
+      <OptimizeYourBusiness /> 
+      <ToolsDetails/> 
+      <FirstSection /> 
+      <Tools/> 
+      <Benefits /> 
+      <Banner /> 
       <SupportSection />
       <Footer />
     </main>
