@@ -1,11 +1,11 @@
 @import "../abstract/functions", "../abstract/variables", "../abstract/responsive";
 
 .wrapper {
-    @include screenSize(100%, auto);
+    @include screenSize(100%, 100%);
     @include displayFlex(center, center, row);
     position: relative;
-    margin-top: 5rem;
-    padding: 5em 0 7em 0;
+    // margin-top: 5rem;
+    padding: 5em 0;
 
     //mobile(M)
     @include for-phone-only{

@@ -56,9 +56,9 @@ const Footer = () => {
               <li>
                 <span>Docs</span>
               </li>
-              <Link href="https://docs.platform.vee.codes/docs/intro" passHref><a target="_blank" onClick={()=>gtagEvents('safiraDocs')}><li>Safira CLI</li></a></Link>
-              <Link href="https://docs.vkpr.net/docs/intro/" passHref><a target="_blank" onClick={()=>gtagEvents('vkprDocs')}><li>VKPR</li></a></Link>
-              <Link href="https://docs.platform.vee.codes/docs/tutorials/devportal/" passHref><a target="_blank" onClick={()=>gtagEvents('devportal')}><li>Devportal</li></a></Link>
+              <Link href="https://docs.platform.vee.codes/safira-cli/intro" passHref><a target="_blank" onClick={()=>gtagEvents('safiraDocs')}><li>Safira CLI</li></a></Link>
+              <Link href="https://docs.platform.vee.codes/vkpr/intro" passHref><a target="_blank" onClick={()=>gtagEvents('vkprDocs')}><li>VKPR</li></a></Link>
+              <Link href="https://docs.platform.vee.codes/devportal/intro/" passHref><a target="_blank" onClick={()=>gtagEvents('devportal')}><li>Devportal</li></a></Link>
             </ul>
             <ul>
               <li>

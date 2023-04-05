@@ -17,22 +17,19 @@ const OptimizeYourBusiness = () => {
         <div className={style["content__contentWrapper-text"]}>
           <div className={style.title}>
             <h2>
-              <strong>VeeCode Platform</strong> 
-              {" "} automates your API Infrastructure
+              Maximize <br></br> Your API Potential <br></br> with DevPortal by <strong>VeeCode Platform</strong>
             </h2>
           </div>
           <div className={style.details}>
             <div className={style.details__text}>
               <p>
-                Automate the provisioning and construction of cloud APIs, assisted by our 
-                <strong> expert support</strong> and with a
-                <strong> cost that fits in your pocket.</strong>
+                Unleash the full potential of your APIs with DevPortal. From <strong>streamlined documentation</strong> to effortless <strong>API management</strong>, Try it for <strong>free</strong>
               </p>
             </div>
             <div className={style.details__buttonWrapper}>
-              <Link href="/how-it-works" passHref>
+              <Link href="https://docs.platform.vee.codes/" passHref>
                 <a>
-                  <Button>How it Works</Button>
+                  <Button>Start Now</Button>
                 </a>
               </Link>
               

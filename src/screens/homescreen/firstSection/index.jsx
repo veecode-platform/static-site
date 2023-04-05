@@ -63,6 +63,12 @@ const FirstSection = () => {
               <Button>Learn More</Button>
             </a>
           </Link>
+
+          <Link href="/trial" passHref>
+            <a>
+              <Button>Free Trial</Button>
+            </a>
+          </Link>
         </div>
       </article>
     </section>

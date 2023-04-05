@@ -11,7 +11,7 @@ const Tools = [
     title: "Devportal",
     desc: "Is a platform that centralizes your Specs and APIs making it easy to control microservices.",
     buttonLabel: "Devportal",
-    link: "https://docs.platform.vee.codes/docs/tutorials/devportal/",
+    link: "https://docs.platform.vee.codes/devportal/intro/",
     tag: "devportal"
   },
   {
@@ -20,7 +20,7 @@ const Tools = [
     title: "Safira-CLI",
     desc: "Is our command line interface that speeds up the building of APIs from an OpenAPI file.",
     buttonLabel: "Safira-CLI",
-    link: "https://docs.platform.vee.codes/docs/installation/safira-cli",
+    link: "https://docs.platform.vee.codes/safira-cli/intro",
     tag: "safiraDocs"
   },
   {
@@ -29,7 +29,7 @@ const Tools = [
     title: "VKPR",
     desc: "Builds for you a Cloud Infrastructure with a few lines of code.",
     buttonLabel: "VKPR",
-    link: "https://docs.vkpr.net/docs/intro/",
+    link: "https://docs.platform.vee.codes/vkpr/intro",
     tag: "vkprDocs"
   },
   {
@@ -38,7 +38,7 @@ const Tools = [
     title: "Join In Comunity",
     desc: "Increase your productivity also helping the community to grow.",
     buttonLabel: "Join Us",
-    link: "https://github.com/veecode-platform/safira-support/discussions",
+    link: "https://github.com/orgs/veecode-platform/discussions",
     tag: "joinUs"
   },
 ]
@@ -64,7 +64,7 @@ const ToolsDetails = () => {
           />
         ))}
       </article>
-      <DividerBottom color="#111111"/>
+      {/* <DividerBottom color="#111111"/> */}
     </section>
   );
 };
