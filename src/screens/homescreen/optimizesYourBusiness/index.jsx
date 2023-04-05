@@ -23,8 +23,7 @@ const OptimizeYourBusiness = () => {
           <div className={style.details}>
             <div className={style.details__text}>
               <p>
-                Unleash the full potential of your APIs with DevPortal. From <strong>streamlined documentation</strong> to effortless <strong>API management</strong>, 
-                experience the future of API development today. Try it for <strong>free</strong> and elevate your API world 
+                Unleash the full potential of your APIs with DevPortal. From <strong>streamlined documentation</strong> to effortless <strong>API management</strong>, Try it for <strong>free</strong>
               </p>
             </div>
             <div className={style.details__buttonWrapper}>

@@ -64,7 +64,7 @@ const ToolsDetails = () => {
           />
         ))}
       </article>
-      <DividerBottom color="#111111"/>
+      {/* <DividerBottom color="#111111"/> */}
     </section>
   );
 };
