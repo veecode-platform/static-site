@@ -12,6 +12,7 @@ import CloseIcon from '@mui/icons-material/Close';
 import IconButton from '@mui/material/IconButton';
 import DialogContent from '@mui/material/DialogContent';
 import { useTranslation } from 'react-i18next';
+import { TextField } from "@mui/material";
 
 const WhatsApp = () => {
     const { t } = useTranslation();
@@ -42,7 +43,7 @@ const WhatsApp = () => {
     };
 
     const handleFormRedirect = async () => {
-        await router.push("https://docs.platform.vee.codes/")
+        await router.push("https://wa.me/5511932960697?text=I%20would%20like%20to%20know%20more%20about%20your%20plans!")
     }
 
 
@@ -55,6 +56,7 @@ const WhatsApp = () => {
                 open={open}
                 aria-labelledby="success-alert-dialog"
                 aria-describedby="success-alert-dialog"
+                style={{zIndex:"9999999"}}
             >
                 <DialogTitle>
                     <IconButton
@@ -69,6 +71,7 @@ const WhatsApp = () => {
 
                     </IconButton>
                 </DialogTitle>
+                
                 <DialogContent>
                     <Formik
                         initialValues={{ name: "", company: "", email: "", title: "", terms: false, type: "FREE", plan: plan }}
@@ -81,13 +84,34 @@ const WhatsApp = () => {
                         {({ errors, touched, handleSubmit, isSubmitting }) => (
 
                             <Form onSubmit={handleSubmit} className={style.form}>
-                                <Input name="name" placeholder={t("First and last name")} label={t("Your name")} error={(errors.name && touched.name) && errors.name} />
-                                <Input name="title" placeholder={t("Sr Engineer")} label={t("Title")} error={(errors.title && touched.title) && errors.title} />
-                                <Input name="company" placeholder={t("Acme, Inc.")} label={t("Company / Organization")} error={(errors.company && touched.company) && errors.company} />
-                                <Input name="email" placeholder="you@acme.com" label={t("Business Email")} error={(errors.email && touched.email) && errors.email} />
+                                <Input 
+                                    name="name" 
+                                    placeholder={t("First and last name")} 
+                                    // label={t("Your name")} 
+                                    error={(errors.name && touched.name) && errors.name} 
+                                />
+                                <Input 
+                                    name="title" 
+                                    placeholder={t("Sr Engineer")} 
+                                    // label={t("Title")}
+                                    error={(errors.title && touched.title) && errors.title} 
+                                />
+                                <Input 
+                                    name="company" 
+                                    placeholder={t("Acme, Inc.")} 
+                                    // label={t("Company / Organization")}
+                                    error={(errors.company && touched.company) && errors.company} 
+                                />
+                                <Input 
+                                    name="email" 
+                                    placeholder="you@acme.com" 
+                                    // label={t("Business Email")}
+                                    error={(errors.email && touched.email) && errors.email} 
+                                />
                                 <Checkbox name="terms" terms error={(errors.terms && touched.terms) && errors.terms} />
                                 <div className={style.form__buttonWrapper}><Button type="submit" loading={isSubmitting}>{t("Confirm")}</Button></div>
                             </Form>
+
                         )}
                     </Formik>
                 </DialogContent>
