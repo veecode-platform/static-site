@@ -43,7 +43,7 @@ const WhatsApp = () => {
     };
 
     const handleFormRedirect = async () => {
-        await router.push("https://wa.me/5511932960697?text=I%20would%20like%20to%20know%20more%20about%20your%20plans!")
+        await router.push("https://wa.me/5511932960697?text=Hello!%20I'm%20interested%20in%20learning%20more%20about%20VeeCode%20Platform's%20solutions.%20Can%20you%20please%20provide%20me%20with%20more%20information%20about%20your%20products%20and%20services?%20Thank%20you!")
     }
 
 
