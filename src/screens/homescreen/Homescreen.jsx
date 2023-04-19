@@ -1,5 +1,5 @@
 import style from '../../../styles/Homescreen.module.scss';
-import { Footer, Header } from '../../components';
+import { Footer, Header, WhatsApp } from '../../components';
 import FirstSection from './firstSection';
 import OptimizeYourBusiness from './optimizesYourBusiness';
 import Benefits from './benefits';
@@ -20,6 +20,7 @@ const Homescreen = () => {
       <Benefits /> 
       <Banner /> 
       <SupportSection />
+      <WhatsApp />
       <Footer />
     </main>
   );
