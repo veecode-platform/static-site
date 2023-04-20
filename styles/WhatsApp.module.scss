@@ -6,6 +6,7 @@
 
     position: fixed;
     bottom: 0;
+    right: 2em;
     margin: 2em 0;
     z-index: 9999999;
 
@@ -27,8 +28,13 @@
 
     .form {
         @include screenSize(80%, auto);
-        &__buttonWrapper{
-            background-color: yellow;
-        }
+        @include displayFlex(center, center, row);
+
+
+        
+    }
+    .buttonWrapper{
+        display: flex;
+        justify-content: center;
     }
 }

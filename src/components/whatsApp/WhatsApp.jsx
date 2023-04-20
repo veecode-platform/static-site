@@ -12,7 +12,6 @@ import CloseIcon from '@mui/icons-material/Close';
 import IconButton from '@mui/material/IconButton';
 import DialogContent from '@mui/material/DialogContent';
 import { useTranslation } from 'react-i18next';
-import { TextField } from "@mui/material";
 
 const WhatsApp = () => {
     const { t } = useTranslation();
@@ -109,7 +108,7 @@ const WhatsApp = () => {
                                     error={(errors.email && touched.email) && errors.email} 
                                 />
                                 <Checkbox name="terms" terms error={(errors.terms && touched.terms) && errors.terms} />
-                                <div className={style.form__buttonWrapper}><Button type="submit" loading={isSubmitting}>{t("Confirm")}</Button></div>
+                                <div className={style.buttonWrapper} style={{display:"flex", justifyContent:"center"}}><Button type="submit" loading={isSubmitting}>{t("Confirm")}</Button></div>
                             </Form>
 
                         )}
