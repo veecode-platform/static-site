@@ -7,7 +7,6 @@ import detector from "i18next-browser-languagedetector";
 const resources = {
     'pt': PTLP,
     'en': ENLP,
-    
 }
 
 i18n

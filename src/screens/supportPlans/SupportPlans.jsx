@@ -2,11 +2,11 @@ import React from "react";
 import style from "../../../styles/SupportPlans.module.scss";
 import SupportSection from "./supportSection";
 import data from "./data.json";
-import Plans from "./plans";
 import FirstSection from "./firstSection";
 import FooterSection from "./footer";
 import HeaderSection from "./header";
 import Trial from "./trial";
+import { WhatsApp } from "../../components";
 
 const SupportPlans = () => {
   return (
@@ -27,8 +27,8 @@ const SupportPlans = () => {
         );
       })}
       </section>
-      {/* <Plans /> */}
       <Trial />
+      <WhatsApp />
       <FooterSection />
     </main>
   );

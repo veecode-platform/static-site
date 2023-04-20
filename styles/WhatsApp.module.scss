@@ -1,0 +1,40 @@
+@import "../abstract/functions", "../abstract/variables", "../abstract/responsive";
+
+.wrapper {
+    @include displayFlex(flex-end, center, row);
+    @include screenSize(85%, auto);
+
+    position: fixed;
+    bottom: 0;
+    right: 2em;
+    margin: 2em 0;
+    z-index: 9999999;
+
+    .image {
+        width: 4vw;
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        @include for-tablet-only {
+            width: 6vw;
+        }
+
+        @include for-phone-only{
+            width: 11vw; 
+        }
+    }
+
+    .form {
+        @include screenSize(80%, auto);
+        @include displayFlex(center, center, row);
+
+
+        
+    }
+    .buttonWrapper{
+        display: flex;
+        justify-content: center;
+    }
+}
