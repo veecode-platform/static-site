@@ -41,7 +41,7 @@ const HeaderSection = ({ fixedHeader, showButton }) => {
           {showButton && <div className={style.nav__buyButton} >
             <Link href="#trial" passHref>
               <a>
-                <Button headerButton>{t('Free Trial')}</Button>
+                <Button headerButton>{t('Support Trial')}</Button>
               </a>
             </Link>
           </div>}
