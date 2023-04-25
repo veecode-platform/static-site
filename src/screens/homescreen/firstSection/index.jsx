@@ -66,7 +66,7 @@ const FirstSection = () => {
 
           <Link href="/trial" passHref>
             <a>
-              <Button>Free Trial</Button>
+              <Button>Support Trial</Button>
             </a>
           </Link>
         </div>
