@@ -17,13 +17,13 @@ const OptimizeYourBusiness = () => {
         <div className={style["content__contentWrapper-text"]}>
           <div className={style.title}>
             <h2>
-              Maximize <br></br> Your API Potential <br></br> with DevPortal by <strong>VeeCode Platform</strong>
+              Maximize <br/> Your Team<br></br> Productivity with<br></br> <strong>VeeCode Platform</strong>
             </h2>
           </div>
           <div className={style.details}>
             <div className={style.details__text}>
               <p>
-                Unleash the full potential of your APIs with DevPortal. From <strong>streamlined documentation</strong> to effortless <strong>API management</strong>, Try it for <strong>free</strong>
+                Break barriers and unleash the full potential of going cloud native with our open-source DevPortal. From <strong>software and IaC templates</strong> with streamlined documentation to effortless <strong>API and services management</strong>, try our Platform Engineering solution <strong>for free</strong>.
               </p>
             </div>
             <div className={style.details__buttonWrapper}>
