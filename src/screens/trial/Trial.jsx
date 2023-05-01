@@ -64,7 +64,7 @@ const Validate = () => {
                     <article className={style.content}>
                         <div className={style.text}>
                             <div className={style.text__header}>
-                                <h2>Get <strong><span>Support Trial</span></strong> to our support platform</h2>
+                                <h2>Get <strong><span>Support Trial</span></strong> to our platform</h2>
                             </div>
                             <div className={style.text__resume}>
                                 <p>
