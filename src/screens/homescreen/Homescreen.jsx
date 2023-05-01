@@ -15,8 +15,8 @@ const Homescreen = () => {
       <Header fixedHeader showButton showOptions/>
       <OptimizeYourBusiness /> 
       <ToolsDetails/> 
-      <SupportSection />
       <FirstSection /> 
+      <SupportSection />
       <Tools/> 
 
       {/* <Benefits />  */}

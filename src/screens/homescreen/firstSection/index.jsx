@@ -3,7 +3,7 @@ import style from "./_FirstSection.module.scss";
 import { Button } from "../../../components";
 import Link from "next/link";
 import Image from "next/image";
-import TextSlide from "./textSlide";
+import TextSlide from "../supportSection/textSlide";
 import { gtagSafiraDocs } from "../../../../utils/gtag";
 
 const Logo = "/assets/logo/logo.png";
@@ -43,10 +43,12 @@ const FirstSection = () => {
                 />
         </div> */}
         <div className={style.content__title}>
-          <h1>
-          We provide <strong>instant support</strong> on
-            <TextSlide />
-          </h1>
+          
+          <h2>
+              <span>Unlock</span>
+              <br />
+              your team&apos;s potential
+            </h2>
         </div>
         <div className={style.content__text}>
           <p>
@@ -58,7 +60,7 @@ const FirstSection = () => {
           </p>
         </div>
         <div className={style.content__buttons}>      
-          <Link href="/support" passHref>
+          <Link href="/support-plans" passHref>
             <a>
               <Button>Learn More</Button>
             </a>
