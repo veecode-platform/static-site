@@ -28,7 +28,7 @@ const OptimizeYourBusiness = () => {
             </div>
             <div className={style.details__buttonWrapper}>
               <Link href="https://docs.platform.vee.codes/" passHref>
-                <a>
+                <a target="_blank">
                   <Button>Start Now</Button>
                 </a>
               </Link>
