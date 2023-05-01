@@ -15,11 +15,12 @@ const Homescreen = () => {
       <Header fixedHeader showButton showOptions/>
       <OptimizeYourBusiness /> 
       <ToolsDetails/> 
+      <SupportSection />
       <FirstSection /> 
       <Tools/> 
-      <Benefits /> 
-      <Banner /> 
-      <SupportSection />
+
+      {/* <Benefits />  */}
+      {/* <Banner />  */}
       <WhatsApp />
       <Footer />
     </main>
