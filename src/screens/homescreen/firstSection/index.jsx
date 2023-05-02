@@ -40,7 +40,7 @@ const FirstSection = () => {
           </p>
         </div>
         <div className={style.content__buttons}>      
-          <Link href="/support-plans" passHref>
+          <Link href="/support-plans/?lng=en" passHref>
             <a>
               <Button>Learn More</Button>
             </a>
