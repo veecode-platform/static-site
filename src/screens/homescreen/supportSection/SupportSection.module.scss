@@ -4,73 +4,97 @@
     @include screenSize(100%, auto);
     @include displayFlex(flex-start, center, row);
     position: relative;
+
     //mobile(M)
     @include for-phone-only {
         @include screenSize(100%, auto);
         @include displayFlex(center, flex-start, row);
         padding-bottom: 25em;
     }
-    &__background{
+
+    &__background {
         @include screenSize(100%, 100%);
         position: absolute;
         z-index: 0;
-        &-desktop{
+
+        &-desktop {
             @include screenSize(100%, 100%);
-            object-fit:cover;
+            object-fit: cover;
             position: relative;
+
             //mobile(M)
-            @include for-phone-only{
-                display:none;
+            @include for-phone-only {
+                display: none;
             }
         }
-        &-mobile{
-            display:none;
+
+        &-mobile {
+            display: none;
+
             //mobile(M)
-            @include for-phone-only{
+            @include for-phone-only {
                 display: inline-block;
                 position: relative;
                 @include screenSize(100%, 100%);
-                object-fit:fill;
+                object-fit: fill;
             }
         }
     }
+
     .content {
         @include screenSize(50%, auto);
         @include displayFlex(center, center, column);
         color: $color2;
         z-index: 1;
+
         //mobile(M)
         @include for-phone-only {
             @include screenSize(80%, auto);
             padding-top: 1.5em;
         }
+
         //mobile(S)
         @include for-phoneS-only {
             @include screenSize(85%, auto);
         }
+
         &__text {
             @include screenSize(65%, auto);
             padding: 10em 0;
+
             //mobile(M)
             @include for-phone-only {
                 @include screenSize(85%, auto);
                 padding: 4em 0;
             }
+
             &-title {
                 @include screenSize(100%, auto);
-                padding: 2.2em 0 3.2em 0;
-                span {
-                    color: $color1;
+                margin: 2em 0 1.5em;
+                //tablet
+                @include for-tablet-only{
+                    margin: 1em 0 .5em 0;
+                }
+                //mobile(M)
+                @include for-phone-only {
+                    @include screenSize(80%, auto);
+                    margin: 2em 0 1.5em;
+                    padding-top: 22em;
                 }
                 //mobile(S)
-                @include for-phoneS-only{
-                    padding-bottom: 3.5em;
+                @include for-phoneS-only {
+                    @include screenSize(95%, auto);
                 }
-                h2 {
-                    @include typography(2.8vw, start, 1.2em, 600);
+                //mobile(XS)
+                @include for-phoneXS-only{
+                    margin-top: 5em;
+                }
+                h1 {
+                    @include typography(2.8vw, start, 1.1em, 400);
+                    color: $color2;
                     //mobile(M)
                     @include for-phone-only {
-                        @include typography(7vw, center, 1.2em, 600);
+                        @include typography(7vw, center, 1.3em, 300);
                     }
                     //mobile(S)
                     @include for-phoneS-only {
@@ -78,51 +102,64 @@
                     }
                 }
             }
+
             &-desc {
                 @include screenSize(100%, auto);
+
                 //mobile(M)
-                @include for-phone-only{
+                @include for-phone-only {
                     @include displayFlex(center, center, column);
                 }
+
                 strong {
                     font-size: 1.1vw;
+
                     //tablet
-                    @include for-tablet-only{
+                    @include for-tablet-only {
                         font-size: 1.2vw;
                     }
+
                     //mobile(M)
                     @include for-phone-only {
                         font-size: 3.1vw;
                         text-align: center;
                         margin-bottom: .5em;
                     }
+
                     //mobile(S)
                     @include for-phoneS-only {
                         font-size: 4.5vw;
                     }
                 }
+
                 .list {
                     list-style-position: inside;
                     padding: 0.9em 0;
+
                     //mobile(M)
-                    @include for-phone-only{
-                        @include screenSize(90%,auto);
+                    @include for-phone-only {
+                        @include screenSize(90%, auto);
                     }
+
                     //mobile(S)
-                    @include for-phoneS-only{
-                        @include screenSize(100%,auto);
+                    @include for-phoneS-only {
+                        @include screenSize(100%, auto);
                         margin: 1.1em 0;
                     }
+
                     li {
                         @include typography(1.09vw, start, 1.8em, 300);
+
                         //tablet
-                        @include for-tablet-only{
+                        @include for-tablet-only {
                             font-size: 1.2vw;
                         }
+
                         //mobile(M)
                         @include for-phone-only {
                             @include typography(3vw, center, 1.8em, 300);
                         }
+
                         //mobile(S)
                         @include for-phoneS-only {
                             font-size: 4vw;
@@ -130,9 +167,12 @@
                     }
                 }
             }
+
             &-buttonWrapper {
-                @include screenSize(100%, auto);
-                margin: 1.5em 0;
+                @include screenSize(85%, auto);
+                @include displayFlex(space-between, center, row);
+                padding: 1em 0;
+
                 //Mobile(M)
                 @include for-phone-only {
                     @include screenSize(100%, auto);

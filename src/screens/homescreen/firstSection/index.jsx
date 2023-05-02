@@ -2,18 +2,11 @@
 import style from "./_FirstSection.module.scss";
 import { Button } from "../../../components";
 import Link from "next/link";
-import Image from "next/image";
-import TextSlide from "./textSlide";
-import { gtagSafiraDocs } from "../../../../utils/gtag";
 
-const Logo = "/assets/logo/logo.png";
 const BgDesktop = "/assets/home/bg1.webp"; 
 const BgMobile = "/assets/home/bgmobile1.webp";
-// import '../../i18n';
-import { useTranslation } from 'react-i18next';
 
 const FirstSection = () => {
-  const { t } = useTranslation();
 
   return (
     <section className={style.wrapper}>
@@ -31,22 +24,12 @@ const FirstSection = () => {
               />
       </div>
       <article className={style.content}>
-        {/* <div className={style.content__logo}>
-            <Image
-                layout="responsive"
-                src={Logo} 
-                alt="Settings Image"
-                width='307px'
-                height='96px'
-                unoptimized
-                priority={true}
-                />
-        </div> */}
         <div className={style.content__title}>
-          <h1>
-          We provide <strong>instant support</strong> on
-            <TextSlide />
-          </h1>
+          <h2>
+              <span>Unlock</span>
+              <br />
+              your team&apos;s potential
+            </h2>
         </div>
         <div className={style.content__text}>
           <p>
@@ -54,11 +37,10 @@ const FirstSection = () => {
             <strong>professional support</strong> and{" "}
             <strong>free tools </strong> 
             to overcome your challenges quickly and easily! 
-            {/* incorporating: */}
           </p>
         </div>
         <div className={style.content__buttons}>      
-          <Link href="/support" passHref>
+          <Link href="/support-plans/?lng=en" passHref>
             <a>
               <Button>Learn More</Button>
             </a>
