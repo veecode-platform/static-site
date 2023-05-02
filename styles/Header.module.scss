@@ -59,7 +59,7 @@
     }
 
     .nav {
-        @include screenSize(50%, auto);
+        @include screenSize(100%, auto);
         @include displayFlex(flex-end, center, row);
 
 
