@@ -85,7 +85,7 @@
                 }
 
                 @include for-phone-only {
-                    font-size: 4.5vw;
+                    font-size: 5vw;
                 }
             }
 
@@ -122,7 +122,6 @@
             @include for-tablet-only {
                 @include screenSize(100%, auto);
                 @include displayFlex(center, center, column);
-
             }
         }
 
@@ -142,23 +141,33 @@
         @include for-tablet-only {
             @include displayFlex(space-between, center, row);
             @include screenSize(80%, auto);
+        }
 
+        @include for-phone-only {
+            @include displayFlex(space-between, center, column-reverse);
+            @include screenSize(100%, auto);
 
         }
 
-        @include for-phone-only {}
+        @include for-phoneS-only {}
+
+        @include for-phoneXS-only {}
 
         &__item {
             @include screenSize(30%, auto);
             @include displayFlex(flex-start, center, column);
 
-
+            @include for-phone-only {}
 
             img {
                 width: 4vw;
 
                 @include for-tablet-only {
                     width: 6vw;
+                }
+
+                @include for-phone-only {
+                    display: none;
                 }
             }
 
@@ -193,24 +202,18 @@
 
                 //mobile(M)
                 @include for-phone-only {
-                    font-size: 1.3em;
+                    font-size: 1em;
                     margin: 0.5em;
-                    min-width: 250px;
+                    min-width: 50vw;
                     border-radius: 1.1em;
                 }
 
                 //mobile(S)
                 @include for-phoneS-only {
+                    font-size: .9em;
                     margin: 0.8em 0;
-                    min-width: 250px;
+                    min-width: 60vw;
                     border-radius: 1.3em;
-                }
-
-                //mobile(XS)
-                @include for-phoneXS-only {
-                    padding: 0.9em 2em;
-                    font-size: 6vw;
-                    min-width: 180px;
                 }
             }
 
@@ -219,6 +222,31 @@
         &__desc {
             @include screenSize(65%, auto);
             @include displayFlex(flex-start, center, row);
+
+            @include for-phone-only {
+                @include screenSize(80%, auto);
+            }
+
+            @include for-phoneS-only {
+                @include screenSize(90%, auto);
+            }
+
+            p {
+                @include for-phone-only {
+                    @include screenSize(100%, auto);
+                    @include typography(4vw, center, auto, 400);
+                    padding: 1em 0;
+                }
+
+                @include for-phoneS-only {
+                    font-size: 4.8vw;
+                }
+
+                @include for-phoneXS-only {
+                    font-size: 6vw;
+                }
+            }
+
         }
     }
 }

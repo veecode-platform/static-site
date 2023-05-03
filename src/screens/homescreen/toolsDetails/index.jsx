@@ -72,7 +72,7 @@ const ToolsDetails = () => {
                 </Link>
               </div>
               <div className={style.card__desc}>
-                {item.desc}
+                <p>{item.desc}</p>
               </div>
             </div>
           ))}
