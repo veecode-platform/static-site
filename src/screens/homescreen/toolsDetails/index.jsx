@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
-import { DividerBottom } from "../../../components";
+import Link from "next/link";
+import { Button, DividerBottom } from "../../../components";
 import Card from "./card";
 import style from "./ToolsDetails.module.scss";
 // import { useTranslation } from 'react-i18next';
@@ -14,17 +15,17 @@ const Tools = [
     link: "https://docs.platform.vee.codes/devportal/intro/",
     tag: "devportal"
   },
+  // {
+  //   id: 1,
+  //   image: "/assets/home/toolsDetails/image2.png",
+  //   title: "Safira-CLI",
+  //   desc: "Is our command line interface that speeds up the building of APIs from an OpenAPI file.",
+  //   buttonLabel: "Safira-CLI",
+  //   link: "https://docs.platform.vee.codes/safira-cli/intro",
+  //   tag: "safiraDocs"
+  // },
   {
     id: 1,
-    image: "/assets/home/toolsDetails/image2.png",
-    title: "Safira-CLI",
-    desc: "Is our command line interface that speeds up the building of APIs from an OpenAPI file.",
-    buttonLabel: "Safira-CLI",
-    link: "https://docs.platform.vee.codes/safira-cli/intro",
-    tag: "safiraDocs"
-  },
-  {
-    id: 2,
     image: "/assets/home/toolsDetails/image3.png",
     title: "VKPR",
     desc: "Builds for you a Cloud Infrastructure with a few lines of code.",
@@ -33,9 +34,9 @@ const Tools = [
     tag: "vkprDocs"
   },
   {
-    id: 3,
+    id: 2,
     image: "/assets/home/toolsDetails/image4.png",
-    title: "Join In Comunity",
+    title: "Join Us",
     desc: "Increase your productivity also helping the community to grow.",
     buttonLabel: "Join Us",
     link: "https://github.com/orgs/veecode-platform/discussions",
@@ -53,18 +54,32 @@ const ToolsDetails = () => {
           Discover our <span>Free Tools</span>
         </h2>
       </div>
-      <div className={style.content__subtitle}>
-        <p>With our <span>Support</span> and our <span>Open Source tools</span> your team is free to serve your business areas.</p>
-      </div>
+
       <article className={style.content__wrapper}>
-        {Tools.map(item => (
-          <Card
-            key={item.id}
-            {...item}
-          />
-        ))}
+        <div className={style["content__wrapper-subtitle"]}>
+          <p>With our <span>Support</span> and our <span>Open Source tools</span> your team is free to serve your business areas.</p>
+          <img src="/assets/home/cubes.png"></img>
+        </div>
+
+        <div className={style["content__wrapper-cards"]}>
+          {Tools.map(item => (
+            <div key={item.id} className={style.card}>
+              <div className={style.card__item}>
+                <img src={item.image} />
+                <Link href={item.link} passHref>
+                  <a target="_blank">
+                    <button className={style["card__item-btn"]}>{item.title.toUpperCase()}</button>
+                  </a>
+                </Link>
+              </div>
+              <div className={style.card__desc}>
+                <p>{item.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+
       </article>
-      {/* <DividerBottom color="#111111"/> */}
     </section>
   );
 };

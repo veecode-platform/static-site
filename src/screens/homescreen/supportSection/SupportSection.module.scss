@@ -65,7 +65,7 @@
             //mobile(M)
             @include for-phone-only {
                 @include screenSize(85%, auto);
-                padding: 4em 0;
+                padding: 2em 0;
             }
 
             &-title {
@@ -79,7 +79,6 @@
                 @include for-phone-only {
                     @include screenSize(80%, auto);
                     margin: 2em 0 1.5em;
-                    padding-top: 22em;
                 }
                 //mobile(S)
                 @include for-phoneS-only {
@@ -178,6 +177,7 @@
                     @include screenSize(100%, auto);
                     @include displayFlex(center, center, row);
                     margin: 1.5em 0 0 0;
+                    padding: 0;
                 }
             }
         }
