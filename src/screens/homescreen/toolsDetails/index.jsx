@@ -58,6 +58,7 @@ const ToolsDetails = () => {
       <article className={style.content__wrapper}>
         <div className={style["content__wrapper-subtitle"]}>
           <p>With our <span>Support</span> and our <span>Open Source tools</span> your team is free to serve your business areas.</p>
+          <img src="/assets/home/cubes.png"></img>
         </div>
 
         <div className={style["content__wrapper-cards"]}>
