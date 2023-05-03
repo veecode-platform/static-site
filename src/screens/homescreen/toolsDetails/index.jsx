@@ -60,7 +60,7 @@ const ToolsDetails = () => {
           <p>With our <span>Support</span> and our <span>Open Source tools</span> your team is free to serve your business areas.</p>
         </div>
 
-        <div className={style["content_wrapper-cards"]}>
+        <div className={style["content__wrapper-cards"]}>
           {Tools.map(item => (
             <div key={item.id} className={style.card}>
               <div className={style.card__item}>
