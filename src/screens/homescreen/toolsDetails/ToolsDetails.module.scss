@@ -52,14 +52,17 @@
         }
     }
 
-    
+
 
     &__wrapper {
         @include screenSize(80vw, auto);
-        @include displayFlex(center, center, row);
-        // display: grid;
-        // grid-template: 1fr/ repeat(4,1fr);
-        // gap: 1%;
+        @include displayFlex(center, flex-start, row);
+
+        // tablet
+        @include for-tablet-only {
+            @include displayFlex(center, center, column);
+        }
+
         //mobile
         @include for-phone-only {
             grid-template: 1fr/1fr;
@@ -70,30 +73,53 @@
 
         &-subtitle {
             @include screenSize(50%, auto);
+            @include displayFlex(center, center, column);
             margin: 1em;
             padding-bottom: 3em;
-    
+
             p {
                 @include typography(1.8vw, start, auto, 500);
                 color: $color4;
-    
+
+                @include for-tablet-only {
+                    @include typography(2vw, center, auto, 500);
+                }
+
                 @include for-phone-only {
-                    font-size: 4.5vw;
+                    font-size: 5vw;
                 }
             }
-    
+
             span {
                 font-weight: 700;
                 color: $color16;
             }
-    
+
+            img {
+                width: 30vw;
+
+                @include for-tablet-only {
+                    width: 20vw;
+                    margin-bottom: 2em;
+                }
+            }
+
+            // tablet
+            @include for-tablet-only {
+                @include screenSize(80%, auto);
+                @include displayFlex(center, center, column-reverse);
+
+            }
+
             //mobile
             @include for-phone-only {
+                @include screenSize(100%, auto);
+
                 font-size: 3vw;
                 padding: 0 1em;
                 padding-bottom: 2em;
             }
-    
+
             //mobile(S)
             @include for-phoneS-only {
                 font-size: 18px;
@@ -101,31 +127,59 @@
         }
 
         &-cards {
-            @include displayFlex(flex-end, center, row);
+            @include displayFlex(center, center, column);
             @include screenSize(50%, auto);
+
+            @include for-tablet-only {
+                @include screenSize(100%, auto);
+                @include displayFlex(center, center, column);
+            }
         }
 
     }
-    
+
 
     .card {
         @include displayFlex(space-between, center, row);
         @include screenSize(90%, auto);
-        padding: 1em;
+        padding: 1em .5em;
         margin: 1.5em .8em;
         background: #f5f5f5;
         border-radius: 24px;
         border: 2px solid transparent;
-        filter: drop-shadow(5px 5px 4px #808080);
-        
+        filter: drop-shadow(5px 5px 3px $color1);
+
+        @include for-tablet-only {
+            @include displayFlex(space-between, center, row);
+            @include screenSize(80%, auto);
+        }
+
+        @include for-phone-only {
+            @include displayFlex(space-between, center, column-reverse);
+            @include screenSize(100%, auto);
+
+        }
+
+        @include for-phoneS-only {}
+
+        @include for-phoneXS-only {}
 
         &__item {
-            @include screenSize(30%, auto);
+            @include screenSize(28%, auto);
             @include displayFlex(flex-start, center, column);
 
+            @include for-phone-only {}
 
             img {
                 width: 4vw;
+
+                @include for-tablet-only {
+                    width: 6vw;
+                }
+
+                @include for-phone-only {
+                    display: none;
+                }
             }
 
             &-btn {
@@ -152,26 +206,25 @@
                     transform: scale(0.8);
                 }
 
+                @include for-tablet-only {
+                    margin-top: .8em;
+                    min-width: 10vw;
+                }
+
                 //mobile(M)
                 @include for-phone-only {
-                    font-size: 1.3em;
+                    font-size: 1em;
                     margin: 0.5em;
-                    min-width: 250px;
+                    min-width: 50vw;
                     border-radius: 1.1em;
                 }
 
                 //mobile(S)
                 @include for-phoneS-only {
+                    font-size: .9em;
                     margin: 0.8em 0;
-                    min-width: 250px;
+                    min-width: 60vw;
                     border-radius: 1.3em;
-                }
-
-                //mobile(XS)
-                @include for-phoneXS-only {
-                    padding: 0.9em 2em;
-                    font-size: 6vw;
-                    min-width: 180px;
                 }
             }
 
@@ -180,6 +233,31 @@
         &__desc {
             @include screenSize(65%, auto);
             @include displayFlex(flex-start, center, row);
+
+            @include for-phone-only {
+                @include screenSize(80%, auto);
+            }
+
+            @include for-phoneS-only {
+                @include screenSize(90%, auto);
+            }
+
+            p {
+                @include for-phone-only {
+                    @include screenSize(100%, auto);
+                    @include typography(4vw, center, auto, 400);
+                    padding: 1em 0;
+                }
+
+                @include for-phoneS-only {
+                    font-size: 4.8vw;
+                }
+
+                @include for-phoneXS-only {
+                    font-size: 6vw;
+                }
+            }
+
         }
     }
 }

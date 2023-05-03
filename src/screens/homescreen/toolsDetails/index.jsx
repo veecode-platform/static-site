@@ -58,9 +58,10 @@ const ToolsDetails = () => {
       <article className={style.content__wrapper}>
         <div className={style["content__wrapper-subtitle"]}>
           <p>With our <span>Support</span> and our <span>Open Source tools</span> your team is free to serve your business areas.</p>
+          <img src="/assets/home/cubes.png"></img>
         </div>
 
-        <div className={style["content_wrapper-cards"]}>
+        <div className={style["content__wrapper-cards"]}>
           {Tools.map(item => (
             <div key={item.id} className={style.card}>
               <div className={style.card__item}>
@@ -72,7 +73,7 @@ const ToolsDetails = () => {
                 </Link>
               </div>
               <div className={style.card__desc}>
-                {item.desc}
+                <p>{item.desc}</p>
               </div>
             </div>
           ))}
