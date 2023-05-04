@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import style from "./FooterSection.module.scss";
-import { FaFacebookSquare, FaInstagram, FaLinkedin, FaTwitterSquare } from "react-icons/fa";
+import { FaDiscord, FaFacebookSquare, FaInstagram, FaLinkedin, FaTwitterSquare } from "react-icons/fa";
 import Link from "next/link";
 import { gtagEvents } from "../../../../utils/gtag";
 import { useTranslation } from 'react-i18next';
@@ -36,6 +36,9 @@ const FooterSection = () => {
                     <FaLinkedin />
                   </a>
                 </Link>
+              </li>
+              <li>
+                <Link href="https://discord.gg/pREwxeVzAD" passHref><a target="_blank"><FaDiscord /></a></Link>
               </li>
               {/* <li>
                 <Link href="/support" passHref><a target="_blank"><FaTwitterSquare /></a></Link>
