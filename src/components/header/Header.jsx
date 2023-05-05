@@ -40,7 +40,7 @@ const Header = ({ fixedHeader, showButton, showOptions }) => {
             </Link>
           </div>}
           {showOptions && <div className={style.nav__options}>
-            <Link href='/compare-plans'>
+            <Link href='/compare-plans#plans'>
               <a>
                 <h2>Pricing</h2>
               </a>
