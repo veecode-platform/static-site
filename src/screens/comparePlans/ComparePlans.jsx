@@ -18,7 +18,7 @@ const ComparePlans = () => {
     >
       <Breadcrumb active={1} />
 
-      <article className={style.content}>
+      <article className={style.content} id="plans">
         {/* FREE */}
         <PlansDetails
           title="FREE"
