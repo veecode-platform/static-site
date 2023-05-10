@@ -3,17 +3,16 @@
 .wrapper {
     @include screenSize(100%, auto);
     @include displayFlex(flex-start, center, row);
-    position: relative;
 
     //mobile(M)
     @include for-phone-only {
         @include screenSize(100%, auto);
         @include displayFlex(center, flex-start, row);
-        padding-bottom: 25em;
+        padding-bottom: 10em;
     }
 
     &__background {
-        @include screenSize(100%, 100%);
+        @include screenSize(100%, auto);
         position: absolute;
         z-index: 0;
 
@@ -33,10 +32,10 @@
 
             //mobile(M)
             @include for-phone-only {
-                display: inline-block;
-                position: relative;
-                @include screenSize(100%, 100%);
-                object-fit: fill;
+                display: none;
+                // position: relative;
+                // @include screenSize(100%, 100%);
+                // object-fit: fill;
             }
         }
     }
