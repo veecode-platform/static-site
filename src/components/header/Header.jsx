@@ -3,14 +3,34 @@ import classNames from 'classnames';
 import Link from 'next/link';
 import style from '../../../styles/Header.module.scss';
 import Button from '../button/Button';
+import React, { useState } from "react";
 // import { useTranslation } from 'react-i18next';
+import IconButton from '@mui/material/IconButton';
+import AppBar from '@mui/material/AppBar';
 
-
+import MenuRoundedIcon from '@mui/icons-material/MenuRounded';
+import Toolbar from '@mui/material/Toolbar';
+import List from '@mui/material/List';
+import ListItemText from '@mui/material/ListItemText';
+import SwipeableDrawer from '@mui/material/SwipeableDrawer';
 const Logo = '/assets/logo/logo.png';
 
 const Header = ({ fixedHeader, showButton, showOptions }) => {
   // const { t } = useTranslation();
+  const [open, setOpen] = useState(false);
 
+
+  const toggleDrawer = (open) => (event) => {
+    if (
+      event &&
+      event.type === 'keydown' &&
+      (event.key === 'Tab' || event.key === 'Shift')
+    ) {
+      return;
+    }
+
+    setOpen(!open);
+  }
   return (
     <header
       className={
@@ -19,6 +39,67 @@ const Header = ({ fixedHeader, showButton, showOptions }) => {
           [style.wrapper__fixedHeader]: fixedHeader
         })}
     >
+
+      <section className={style.mobileContent}>
+        <AppBar sx={{ backgroundColor: 'black' }}>
+          <Toolbar sx={{ display: 'flex', justifyContent: 'space-between', alignContent:'center' }}>
+            <div className={style.mobileContent__logo}>
+              <Link href="/">
+                <img
+                  src={Logo}
+                  alt="VeeCode Plataform Logo"
+                />
+              </Link>
+            </div>
+
+            <IconButton
+              size="large"
+              edge="center"
+              aria-label="menu"
+              onClick={toggleDrawer(open)}
+            >
+              <MenuRoundedIcon sx={{ color: "white" }} />
+            </IconButton>
+
+            <SwipeableDrawer
+              onOpen={toggleDrawer(open)}
+              onClose={toggleDrawer(open)}
+              anchor='left'
+              open={open}
+              sx={{ zIndex: 999999999 }}
+            >
+              <div style={{ width: 250 }} className={style.drawer} onClick={toggleDrawer(open)}
+              >
+
+                <List sx={{ margin: '1em', padding: '1em' }}>
+
+                  <Link href="/" passHref>
+                    <ListItemText disableTypography sx={{ fontFamily: "Poppins, sans-serif", fontWeight: 400, margin: "0.8em 0" }}>
+                      {'Home'.toUpperCase()}
+                    </ListItemText>
+                  </Link>
+
+                  <Link href="#form" passHref >
+                    <ListItemText disableTypography sx={{ fontFamily: "Poppins, sans-serif", fontWeight: 400, margin: "0.8em 0" }}>
+                      {'label'.toUpperCase()}
+                    </ListItemText>
+                  </Link>
+
+                  <Link href="/company" passHref>
+                    <ListItemText disableTypography sx={{ fontFamily: "Poppins, sans-serif", fontWeight: 400, margin: "0.8em 0" }}>
+                      {'Hey'.toUpperCase()}
+                    </ListItemText>
+                  </Link>
+
+                </List>
+              </div>
+            </SwipeableDrawer>
+          </Toolbar>
+        </AppBar>
+
+      </section>
+
+
       <section className={style.content}>
         <div>
           <Link href="/">
