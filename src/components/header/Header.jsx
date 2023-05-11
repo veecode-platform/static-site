@@ -42,7 +42,7 @@ const Header = ({ fixedHeader, showButton, showOptions }) => {
 
       <section className={style.mobileContent}>
         <AppBar sx={{ backgroundColor: 'black' }}>
-          <Toolbar sx={{ display: 'flex', justifyContent: 'space-between', alignContent:'center' }}>
+          <Toolbar sx={{ display: 'flex', justifyContent: 'space-between', alignContent: 'center' }}>
             <div className={style.mobileContent__logo}>
               <Link href="/">
                 <img
@@ -79,15 +79,23 @@ const Header = ({ fixedHeader, showButton, showOptions }) => {
                     </ListItemText>
                   </Link>
 
-                  <Link href="#form" passHref >
+                  <Link href="https://docs.platform.vee.codes/" passHref>
+                    <a target='_blank'>
+                      <ListItemText disableTypography sx={{ fontFamily: "Poppins, sans-serif", fontWeight: 400, margin: "0.8em 0" }}>
+                        {'Docs'.toUpperCase()}
+                      </ListItemText>
+                    </a>
+                  </Link>
+
+                  <Link href="/compare-plans/#plans" passHref>
                     <ListItemText disableTypography sx={{ fontFamily: "Poppins, sans-serif", fontWeight: 400, margin: "0.8em 0" }}>
-                      {'label'.toUpperCase()}
+                      {'Pricing'.toUpperCase()}
                     </ListItemText>
                   </Link>
 
-                  <Link href="/company" passHref>
+                  <Link href="/trial" passHref>
                     <ListItemText disableTypography sx={{ fontFamily: "Poppins, sans-serif", fontWeight: 400, margin: "0.8em 0" }}>
-                      {'Hey'.toUpperCase()}
+                      {'Support Trial'.toUpperCase()}
                     </ListItemText>
                   </Link>
 
