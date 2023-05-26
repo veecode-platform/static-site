@@ -12,6 +12,8 @@ import DialogTitle from '@mui/material/DialogTitle';
 import Link from "next/link";
 import CloseIcon from '@mui/icons-material/Close';
 import IconButton from '@mui/material/IconButton';
+import { generate_lead } from '../../../utils/generateLead';
+import TagManager from "react-gtm-module";
 
 const Validate = () => {
     const router = useRouter()
@@ -19,7 +21,7 @@ const Validate = () => {
 
     // Modal  
     const [open, setOpen] = useState(false);
-    
+
 
     useEffect(() => {
         if (typeof window !== "undefined") {
@@ -53,6 +55,16 @@ const Validate = () => {
         await router.push("/contact-success")
     }
 
+    const tagManagerArgs = {
+        gtmId: 'GTM-56RG967',
+        events: {
+            generateLead: {
+                currency: "USD",
+                value: 1,
+            }
+        }
+    }
+
     return (
         <DefaultPage
             titleBar="disable"
@@ -72,16 +84,17 @@ const Validate = () => {
                                     With access to our ticketing platform, you can communicate directly with our experts to solve DevOps issues, provisioning automation, API management, IT infrastructure scaling, and more through our developer portal.<br /><br />
                                     We ensure that your information is secure and that we comply with all applicable privacy policies and regulations.<br /><br />
                                 </p>
-                            </div> 
+                            </div>
                         </div>
                         <div className={style.content__options}>
                             <div className={style["content__options-formWraper"]}>
                                 <Formik
                                     initialValues={{ name: "", company: "", email: "", title: "", terms: false, type: "TRIAL", plan: plan }}
                                     validationSchema={formSchema}
-                                    onSubmit={async(values) => {
+                                    onSubmit={async (values) => {
                                         const response = await UseContactData(values);
                                         // setOpen(true);
+                                        TagManager.initialize(tagManagerArgs);
                                         await handleFormRedirect();
                                     }}
 
