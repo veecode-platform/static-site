@@ -12,6 +12,7 @@ import DialogTitle from '@mui/material/DialogTitle';
 import Link from "next/link";
 import CloseIcon from '@mui/icons-material/Close';
 import IconButton from '@mui/material/IconButton';
+import { generate_lead } from '../../../utils/generateLead';
 
 const Validate = () => {
     const router = useRouter()
@@ -82,6 +83,7 @@ const Validate = () => {
                                     onSubmit={async(values) => {
                                         const response = await UseContactData(values);
                                         // setOpen(true);
+                                        generate_lead();
                                         await handleFormRedirect();
                                     }}
 
