@@ -3,5 +3,5 @@ export const generate_lead = () => {
         currency: "USD",
         value: 1,
     };
-    window.gtag("event", "generate_lead", params, {'debug_mode':true});
+    gtag("event", "generate_lead", params, {'debug_mode':true});
 };
