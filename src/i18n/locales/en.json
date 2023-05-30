@@ -1,0 +1,79 @@
+{
+    "translation": {
+        "header-options-docs":"Docs",
+        "header-options-pricing":"Pricing",
+
+        "support-trial":"Support Trial",
+        "terms-of-service":"Terms of Service",
+        "privacy-policy":"Privacy Policy",
+        "contact-us":"Contact Us",
+        "support":"Support",
+
+        "footer-topic1":"About",
+        "footer-topic2":"Docs",
+        "footer-topic3":"More",
+        "footer-option1":"How it Works",
+        "footer-option2":"Join our Comunity",
+        "footer-copyright":"Copyright © 2023 VeeCode Platform. All rights reserved",
+
+        "home-optimize-title1":"Maximize Your Team Productivity with",
+        "home-optimize-title2":"VeeCode Platform",
+        "home-optimize-subtitle1":"Break barriers and unleash the full potential of going cloud native with our open-source DevPortal. From ",
+        "home-optimize-subtitle2":"software and IaC templates ",
+        "home-optimize-subtitle3":"with streamlined documentation to effortless",
+        "home-optimize-subtitle4":"API and services management",
+        "home-optimize-subtitle5":", try our Platform Engineering solution",
+        "home-optimize-subtitle6":"for free",
+        "home-optimize-button-label":"Start Now",
+
+        "home-tools-details-title1":"Discover our",
+        "home-tools-details-title2":"Free Tools",
+        "home-tools-details-subtitle1":"With our ",
+        "home-tools-details-subtitle2":"Support ",
+        "home-tools-details-subtitle3":"and our ",
+        "home-tools-details-subtitle4":"Open Source tools ",
+        "home-tools-details-subtitle5":"your team is free to serve your business areas",
+        
+        "home-tools-details-item1-button-label":"Devportal",
+        "home-tools-details-item1-button-description":"Is a platform that centralizes your Specs and APIs making it easy to control microservices.",
+
+        "home-tools-details-item2-button-label":"VKPR",
+        "home-tools-details-item2-button-description":"Builds for you a Cloud Infrastructure with a few lines of code.",
+
+        "home-tools-details-item3-button-label":"Join Us",
+        "home-tools-details-item3-button-description":"Increase your productivity also helping the community to grow.",
+        
+        "home-first-title1":"Unlock",
+        "home-first-title2":"your team's potential",
+        "home-first-subtitle1":"Your transition to the cloud doesn‘t have to be time-consuming, expensive, or lonely. Count on our ",
+        "home-first-subtitle2":"professional support ",
+        "home-first-subtitle3":"and ",
+        "home-first-subtitle4":"free tools ",
+        "home-first-subtitle5":"to overcome your challenges quickly and easily!",
+        "home-first-button-label1":"Learn More",
+
+        "home-support-title1":"We provide ",
+        "home-support-title2":"instant support ",
+        "home-support-title3":"on",
+        "home-support-subtitle1":"Benefits of VeeCode Platform support",
+        "home-support-option1":"Direct assistance to your technical team",
+        "home-support-option2":"Get the best technology support on hand",
+        "home-support-option3":"Service with established SLA",
+        "home-support-option4":"Most affordable price on the market",
+        "home-support-option5":"Solve all of your problems with Devops, IaC, Cloud, Microsservices and more",
+
+        "home-tools-title":"Our support also includes",
+
+        "":"",
+        "":"",
+        "":"",
+        "":"",
+        "":"",
+        "":"",
+        "":"",
+        "":"",
+        "":"",
+        "":"",
+        "":""
+    }
+}

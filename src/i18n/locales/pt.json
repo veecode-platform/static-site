@@ -1,0 +1,80 @@
+{
+    "translation": {
+        "header-options-docs":"Docs",
+        "header-options-pricing":"Preços",
+
+        "support-trial":"Support Trial",
+        "terms-of-service":"Terms of Service",
+        "privacy-policy":"Privacy Policy",
+        "contact-us":"Contact Us",
+        "support":"Support",
+
+        "footer-topic1":"Sobre",
+        "footer-topic2":"Docs",
+        "footer-topic3":"Mais",
+        "footer-option1":"Como Funciona",
+        "footer-option2":"Junte-se à nossa comunidade",
+        "footer-copyright":"Copyright © 2023 VeeCode Platform. Todos os direitos são reservados.",
+
+        "home-optimize-title1":"Maximize a produtividade da sua equipe com a",
+        "home-optimize-title2":"VeeCode Platform",
+        "home-optimize-subtitle1":"Quebre barreiras e liberte todo o potencial de se tornar nativo da nuvem com o nosso DevPortal de código aberto. De",
+        "home-optimize-subtitle2":"modelos de software e IaC",
+        "home-optimize-subtitle3":"com documentação simplificada até",
+        "home-optimize-subtitle4":"à gestão de API e serviços sem esforço,",
+        "home-optimize-subtitle5":"experimente a nossa solução de Engenharia de Plataformas",
+        "home-optimize-subtitle6":"gratuitamente",
+        "home-optimize-button-label":"Comece Agora",
+
+        "home-tools-details-title1":"Descubra nossas",
+        "home-tools-details-title2":"ferramentas gratuitas",
+        "home-tools-details-subtitle1":"Com nosso",
+        "home-tools-details-subtitle2":"Suporte",
+        "home-tools-details-subtitle3":"e as nossas ferramentas de",
+        "home-tools-details-subtitle4":"Open Source",
+        "home-tools-details-subtitle5":"sua equipe é livre para servir as suas áreas de negócio",
+        
+        "home-tools-details-item1-button-label":"Devportal",
+        "home-tools-details-item1-button-description":"Uma plataforma que centraliza os seus Specs e APIs, facilitando o controlo dos microsserviços.",
+
+        "home-tools-details-item2-button-label":"VKPR",
+        "home-tools-details-item2-button-description":"Constrói para si uma infra-estrutura de nuvem com algumas linhas de código.",
+
+        "home-tools-details-item3-button-label":"Junte-se a nós",
+        "home-tools-details-item3-button-description":"Aumente a sua produtividade e ajude a comunidade a crescer.",
+        
+        "home-first-title1":"Liberte",
+        "home-first-title2":"o potencial da sua equipe",
+        "home-first-subtitle1":"A sua transição para a nuvem não tem de ser demorada, dispendiosa ou solitária. Conte com o nosso",
+        "home-first-subtitle2":"suporte profissional",
+        "home-first-subtitle3":"e",
+        "home-first-subtitle4":"ferramentas gratuitas",
+        "home-first-subtitle5":"para ultrapassar os seus desafios de forma rápida e fácil!",
+        "home-first-button-label1":"Saber Mais",
+
+        "home-support-title1":"Fornecemos",
+        "home-support-title2":"suporte instantâneo",
+        "home-support-title3":"em",
+        "home-support-subtitle1":"Benefícios do suporte da plataforma VeeCode",
+        "home-support-option1":"Assistência direta à sua equipe técnica.",
+        "home-support-option2":"Obtenha o melhor suporte tecnológico disponível.",
+        "home-support-option3":"Serviço com SLA estabelecido.",
+        "home-support-option4":"O preço mais acessível do mercado.",
+        "home-support-option5":"Resolva todos os seus problemas com Devops, IaC, Cloud, Microsserviços e muito mais.",
+
+        "home-tools-title":"O nosso suporte também inclui",
+
+        
+        "":"",
+        "":"",
+        "":"",
+        "":"",
+        "":"",
+        "":"",
+        "":"",
+        "":"",
+        "":"",
+        "":"",
+        "":""
+    }
+}
