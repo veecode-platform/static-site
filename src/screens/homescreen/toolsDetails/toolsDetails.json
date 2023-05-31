@@ -1,0 +1,60 @@
+{
+    "en": [
+      {
+        "id": 0,
+        "image": "/assets/home/toolsDetails/image1.png",
+        "title": "Devportal",
+        "desc": "Is a platform that centralizes your Specs and APIs making it easy to control microservices.",
+        "buttonLabel": "Devportal",
+        "link": "https://docs.platform.vee.codes/devportal/intro/",
+        "tag": "devportal"
+      },
+      {
+        "id": 1,
+        "image": "/assets/home/toolsDetails/image3.png",
+        "title": "VKPR",
+        "desc": "Builds for you a Cloud Infrastructure with a few lines of code.",
+        "buttonLabel": "VKPR",
+        "link": "https://docs.platform.vee.codes/vkpr/intro",
+        "tag": "vkprDocs"
+      },
+      {
+        "id": 2,
+        "image": "/assets/home/toolsDetails/image4.png",
+        "title": "Join Us",
+        "desc": "Increase your productivity also helping the community to grow.",
+        "buttonLabel": "Join Us",
+        "link": "https://github.com/orgs/veecode-platform/discussions",
+        "tag": "joinUs"
+      }
+    ],
+    "pt": [
+      {
+        "id": 0,
+        "image": "/assets/home/toolsDetails/image1.png",
+        "title": "Devportal",
+        "desc": "Uma plataforma que centraliza os seus Specs e APIs, facilitando o controlo dos microsserviços.",
+        "buttonLabel": "Devportal",
+        "link": "https://docs.platform.vee.codes/devportal/intro/",
+        "tag": "devportal"
+      },
+      {
+        "id": 1,
+        "image": "/assets/home/toolsDetails/image3.png",
+        "title": "VKPR",
+        "desc": "Constrói para si uma infra-estrutura de nuvem com algumas linhas de código.",
+        "buttonLabel": "VKPR",
+        "link": "https://docs.platform.vee.codes/vkpr/intro",
+        "tag": "vkprDocs"
+      },
+      {
+        "id": 2,
+        "image": "/assets/home/toolsDetails/image4.png",
+        "title": "Join Us",
+        "desc": "Aumente a sua produtividade e ajude a comunidade a crescer.",
+        "buttonLabel": "Join Us",
+        "link": "https://github.com/orgs/veecode-platform/discussions",
+        "tag": "joinUs"
+      }
+    ]
+  }

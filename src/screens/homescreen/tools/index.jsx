@@ -1,8 +1,12 @@
 /* eslint-disable @next/next/no-img-element */
 import React from 'react'
 import style from './Tools.module.scss';
+import { useTranslation } from 'react-i18next';
 
 const Tools = () => {
+
+  const { t } = useTranslation();
+
   const images = [
     { 
       src:"/assets/home/tools/ARGO.png",
@@ -40,7 +44,7 @@ const Tools = () => {
   return (
     <div className={style.tools}>
         <div className={style.tools__title}>
-          <h2>Our support also includes</h2>
+          <h2>{t("home-tools-title")}</h2>
         </div>
         <div className={style.tools__wrapper}>
           {

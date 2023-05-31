@@ -37,9 +37,9 @@ const FirstSection = () => {
         <div className={style.content__text}>
           <p>
             {t("home-first-subtitle1")}{" "}
-            <strong>{t("home-first-subtitle2")}</strong> {t("home-first-subtitle3")}{" "}
-            <strong>{t("home-first-subtitle4")}</strong>
-            {t("home-first-subtitle5")}
+            <strong> {t("home-first-subtitle2")}</strong> {t("home-first-subtitle3")}{" "}
+            <strong> {t("home-first-subtitle4")} </strong>
+             {t("home-first-subtitle5")}
           </p>
         </div>
         <div className={style.content__buttons}>

@@ -31,7 +31,7 @@ const SupportSection = () => {
         <div className={style.content__text}>
           <div className={style["content__text-title"]}>
             <h1>
-              {t("home-support-title1")} <strong>{t("home-support-title2")}</strong> {t("home-support-title3")}
+              {t("home-support-title1")} <strong> {t("home-support-title2")}</strong> {t("home-support-title3")}
               <TextSlide />
             </h1>
           </div>

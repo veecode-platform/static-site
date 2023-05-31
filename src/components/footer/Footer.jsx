@@ -3,12 +3,12 @@ import style from "../../../styles/Footer.module.scss";
 import { FaDiscord, FaFacebookSquare, FaGooglePlusSquare, FaInstagram, FaLinkedin, FaTwitterSquare } from "react-icons/fa";
 import Link from "next/link";
 import { gtagEvents } from "../../../utils/gtag";
-// import { useTranslation } from 'react-i18next';
+import { useTranslation } from 'react-i18next';
 
 const Logo = "/assets/logo/logo.png";
 
 const Footer = () => {
-  // const { t } = useTranslation();
+  const { t } = useTranslation();
 
   return (
     <footer className={style.footer}>
@@ -49,15 +49,15 @@ const Footer = () => {
           <div className={style["content__details-lists"]}>
             <ul>
               <li>
-                <span>About</span>
+                <span>{t("footer-topic1")}</span>
               </li>
-              <Link href="/how-it-works"><a><li>How it Works</li></a></Link>
-              <Link href="/support"><a><li>Support</li></a></Link>
-              <Link href="https://github.com/vfipaas/safira-support/discussions" passHref><a target="_blank" onClick={()=>gtagEvents('joinUs')}><li>Join our Comunity</li></a></Link>
+              <Link href="/how-it-works"><a><li>{t("footer-option1")}</li></a></Link>
+              <Link href="/support"><a><li>{t("support")}</li></a></Link>
+              <Link href="https://github.com/vfipaas/safira-support/discussions" passHref><a target="_blank" onClick={()=>gtagEvents('joinUs')}><li>{t("footer-option2")}</li></a></Link>
             </ul>
             <ul>
               <li>
-                <span>Docs</span>
+                <span>{t("footer-topic2")}</span>
               </li>
               <Link href="https://docs.platform.vee.codes/safira-cli/intro" passHref><a target="_blank" onClick={()=>gtagEvents('safiraDocs')}><li>Safira CLI</li></a></Link>
               <Link href="https://docs.platform.vee.codes/vkpr/intro" passHref><a target="_blank" onClick={()=>gtagEvents('vkprDocs')}><li>VKPR</li></a></Link>
@@ -65,11 +65,11 @@ const Footer = () => {
             </ul>
             <ul>
               <li>
-                <span>More</span>
+                <span>{t("footer-topic3")}</span>
               </li>
-              <Link href="/terms-of-service"><a><li>Terms of Service</li></a></Link>
-              <Link href="/privacy-policy"><a><li>Privacy Policy</li></a></Link>
-              <Link href="/contact-us"><a><li>Contact Us</li></a></Link>
+              <Link href="/terms-of-service"><a><li>{t("terms-of-service")}</li></a></Link>
+              <Link href="/privacy-policy"><a><li>{t("privacy-policy")}</li></a></Link>
+              <Link href="/contact-us"><a><li>{t("contact-us")}</li></a></Link>
               <Link href="/faq"><a><li>FAQ</li></a></Link>
             </ul>
           </div>
@@ -77,7 +77,7 @@ const Footer = () => {
       </section>
       <section className={style.footer__copy}>
         <p>
-          Copyright &copy; {new Date().getFullYear()} VeeCode Platform. All rights reserved
+          Copyright &copy; {new Date().getFullYear()} {t("footer-copyright")}
         </p>
       </section>
     </footer>
