@@ -10,7 +10,7 @@ const animation = "/assets/support/animation.gif";
 
 const FirstSection = () => {
   const { t } = useTranslation();
-
+ 
   return (
     <section className={style.wrapper} id="firstsec">
       <article className={style.content}>

@@ -4,7 +4,7 @@ import Link from 'next/link';
 import style from '../../../styles/Header.module.scss';
 import Button from '../button/Button';
 import React, { useState } from "react";
-// import { useTranslation } from 'react-i18next';
+import { useTranslation } from 'react-i18next';
 import IconButton from '@mui/material/IconButton';
 import AppBar from '@mui/material/AppBar';
 
@@ -16,8 +16,10 @@ import SwipeableDrawer from '@mui/material/SwipeableDrawer';
 const Logo = '/assets/logo/logo.png';
 
 const Header = ({ fixedHeader, showButton, showOptions }) => {
-  // const { t } = useTranslation();
+
   const [open, setOpen] = useState(false);
+
+  const { t, i18n } = useTranslation();
 
 
   const toggleDrawer = (open) => (event) => {
@@ -31,6 +33,7 @@ const Header = ({ fixedHeader, showButton, showOptions }) => {
 
     setOpen(!open);
   }
+
   return (
     <header
       className={
@@ -50,6 +53,21 @@ const Header = ({ fixedHeader, showButton, showOptions }) => {
                   alt="VeeCode Plataform Logo"
                 />
               </Link>
+            </div>
+
+            <div className={style.select}>
+              <select
+                defaultValue={i18n.language}
+                onChange={() => {
+                  i18n.language == 'pt' ?
+                    i18n.changeLanguage('en') :
+                    i18n.changeLanguage('pt')
+                }
+                }
+              >
+                <option value="en">EN</option>
+                <option value="pt">PT</option>
+              </select>
             </div>
 
             <IconButton
@@ -124,21 +142,21 @@ const Header = ({ fixedHeader, showButton, showOptions }) => {
           {showOptions && <div className={style.nav__options}>
             <Link href='https://docs.platform.vee.codes/'>
               <a>
-                <h2>Docs</h2>
+                <h2>{t("header-options-docs")}</h2>
               </a>
             </Link>
           </div>}
           {showOptions && <div className={style.nav__options}>
             <Link href='/compare-plans#plans'>
               <a>
-                <h2>Pricing</h2>
+                <h2>{t("header-options-pricing")}</h2>
               </a>
             </Link>
           </div>}
           {showOptions && <div className={style.nav__options}>
             <Link href='/contact-us'>
               <a>
-                <h2>Contact Us</h2>
+                <h2>{t("contact-us")}</h2>
               </a>
             </Link>
           </div>}
@@ -146,10 +164,25 @@ const Header = ({ fixedHeader, showButton, showOptions }) => {
           {showButton && <div className={style.nav__buyButton} >
             <Link href="/trial" passHref>
               <a>
-                <Button headerButton>Support Trial</Button>
+                <Button headerButton>{t("support-trial")}</Button>
               </a>
             </Link>
           </div>}
+          <div className={style.select}>
+            <select
+              style={{color:"white"}}
+              defaultValue={i18n.language}
+              onChange={() => {
+                i18n.language == 'pt' ?
+                  i18n.changeLanguage('en') :
+                  i18n.changeLanguage('pt')
+              }
+              }
+            >
+              <option value="en" style={{ color:"grey" }}>EN</option>
+              <option value="pt" style={{ color:"grey" }}>PT</option>
+            </select>
+          </div>
         </div>
       </section>
     </header>

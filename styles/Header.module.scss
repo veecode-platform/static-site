@@ -45,6 +45,7 @@
 
         &__logo {
             padding: .5em 0;
+
             img {
                 margin: .5em;
                 width: 25vw;
@@ -104,6 +105,41 @@
 
             @include for-phone-only {
                 display: none;
+            }
+        }
+
+        .select {
+            margin: 1em;
+            border: 1px solid #777;
+            border-radius: 0.25em;
+            padding: 0.25em 0.5em;
+            font-size: 1rem;
+            color: #777;
+
+            select {
+                // appearance: none;
+                background: transparent;
+                border: none;
+                font-family: "Poppins", sans-serif;
+                font-size: inherit;
+                cursor: pointer;
+                outline: none;
+
+                &::-ms-expand {
+                    display: none;
+                }
+
+                option {
+                    background: transparent;
+                    appearance: none;
+                    position: relative;
+                    font-family: "Poppins", sans-serif;
+                    border: none;
+
+                    &:hover {
+                        background: red;
+                    }
+                }
             }
         }
 
