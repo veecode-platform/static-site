@@ -5,6 +5,7 @@ import { Formik, Form } from "formik";
 import { object, string } from "yup";
 import { UseContactData } from "../../hooks/UseContactData";
 import { useRouter } from "next/router";
+import TagManager from "react-gtm-module";
 
 const FormElement = ({ company, checkbox, type }) => {
   const formSchema = object({
@@ -19,6 +20,16 @@ const FormElement = ({ company, checkbox, type }) => {
   const handleFormRedirect = async () => {
     await router.push("/contact-success");
   };
+
+  const tagManagerArgs = {
+    gtmId: 'GTM-56RG967',
+    events: {
+        generateLead: {
+            currency: "USD",
+            value: 1,
+        }
+    }
+}
 
   return (
    <div className={style.formWrapper}>
@@ -37,6 +48,7 @@ const FormElement = ({ company, checkbox, type }) => {
       validationSchema={formSchema}
       onSubmit={async (values) => {
         const response = await UseContactData(values);
+        TagManager.initialize(tagManagerArgs);
         await handleFormRedirect();
       }}
     >

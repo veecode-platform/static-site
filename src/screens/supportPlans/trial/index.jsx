@@ -11,6 +11,7 @@ import DialogContent from '@mui/material/DialogContent';
 import DialogTitle from '@mui/material/DialogTitle';
 import CloseIcon from '@mui/icons-material/Close';
 import IconButton from '@mui/material/IconButton';
+import TagManager from "react-gtm-module";
 import Dialog from '@mui/material/Dialog';
 import style from './Trial.module.scss';
 import Link from "next/link";
@@ -57,6 +58,16 @@ const Trial = () => {
         await router.push("/contact-success")
     }
     
+    const tagManagerArgs = {
+        gtmId: 'GTM-56RG967',
+        events: {
+            generateLead: {
+                currency: "USD",
+                value: 1,
+            }
+        }
+    }
+    
     return (
             <section className={style.wrapper} id="trial">
                 <article className={style.container}>
@@ -81,6 +92,7 @@ const Trial = () => {
                                     onSubmit={async (values) => {
                                         const response = await UseContactData(values);
                                         // setSuccess(true);
+                                        TagManager.initialize(tagManagerArgs);
                                         await handleFormRedirect();
                                     }}
 
