@@ -14,8 +14,7 @@ const SupportPlans = () => {
 
   let items = [];
 
-  i18n.language == 'pt' ? items = data.pt : items = data.en;
-  console.log(data.pt);
+   i18n.language == 'pt' ? items = data.pt : items = data.en;
 
   return (
     <main className={style.wrapper}>
