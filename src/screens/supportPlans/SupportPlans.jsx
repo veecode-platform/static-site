@@ -6,12 +6,14 @@ import FirstSection from "./firstSection";
 import FooterSection from "./footer";
 import HeaderSection from "./header";
 import Trial from "./trial";
-import { WhatsApp } from "../../components";
+import { Footer, Header, WhatsApp } from "../../components";
+import '../../i18n';
 
 const SupportPlans = () => {
   return (
     <main className={style.wrapper}>
-      <HeaderSection showButton/>
+      {/* <HeaderSection showButton/> */}
+      <Header showOptions fixedHeader></Header>
       <FirstSection />
       <section className={style.stacks}>
       {data.map((item) => {
@@ -29,7 +31,7 @@ const SupportPlans = () => {
       </section>
       <Trial />
       <WhatsApp />
-      <FooterSection />
+      <Footer />
     </main>
   );
 };

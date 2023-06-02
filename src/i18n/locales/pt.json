@@ -8,6 +8,8 @@
         "privacy-policy":"Política de Privacidade",
         "contact-us":"Fale Conosco",
         "support":"Suporte",
+        "learn-more":"Saiba Mais",
+        "confirm":"Confirmar",
 
         "footer-topic1":"Sobre",
         "footer-topic2":"Docs",
@@ -64,6 +66,93 @@
 
         "home-tools-title":"O nosso suporte também inclui",
 
+        "sup-plans-first-title1":"Obtenha",
+        "sup-plans-first-title2":"suporte especializado",
+        "sup-plans-first-title3":"das",
+        "sup-plans-first-title4":"melhores soluções",
+        "sup-plans-first-title5":"do mercado em apenas alguns cliques a um",
+        "sup-plans-first-title6":"preço acessível",
+
+        "sup-plans-title1":"Como Ajudamos",
+        "sup-plans-kong-how1.1":"Configuração para cenários de alta disponibilidade",
+        "sup-plans-kong-how1.2":"Automação de provisionamento",
+        "sup-plans-kong-how1.3":"Instalação e suporte do Kong Gateway",
+        "sup-plans-kong-how1.4":"Serviço de manutenção",
+
+        "sup-plans-title2":"Você alcança",
+        "sup-plans-kong-what2.1":"Automação de ponta a ponta para API's (APIOps)",
+        "sup-plans-kong-what2.2":"Observabilidade de APIs",
+        "sup-plans-kong-what2.3":"Segurança de APIs",
+        "sup-plans-kong-what2.4":"Organização de APIs na arquitetura de Microsserviços",
+
+        "sup-plans-title3":"Para Quem",
+        "sup-plans-kong-whom3.1":"Procurando um gerente de API",
+        "sup-plans-kong-whom3.2":"Procurando um API Gateway moderno, priorizando o Kong",
+        "sup-plans-kong-whom3.3":"Usando a Comunidade Kong",
+        "sup-plans-kong-whom3.4":"Precisa de suporte profissional para sua escolha de código aberto",
+
+        "sup-plans-api-how1.1":"Automações prontas para criar, testar e entregar APIs",
+        "sup-plans-api-how1.2":"Modelos de projeto e pipelines",
+        "sup-plans-api-how1.3":"Desenvolvimento Spec-First com OpenAPI",
+        "sup-plans-api-how1.4":"Padronização para APIOps",
+        
+        "sup-plans-api-what2.1":"Velocidade no desenvolvimento de APIs",
+        "sup-plans-api-what2.2":"Otimização de pipelines de entrega de API",
+        "sup-plans-api-what2.3":"Desenvolvedores lidando com menos complexidade",
+        "sup-plans-api-what2.4":"Ambiente de teste",
+        
+        "sup-plans-api-whom3.1":"Estratégia de especificação inicial no desenvolvimento de API",
+        "sup-plans-api-whom3.2":"Desejo de adotar microsserviços, mas evitando complexidade para as equipes",
+        "sup-plans-api-whom3.3":"Em busca de modernização e crescimento",
+        "sup-plans-api-whom3.4":"Ter um arquivo OpenAPI",
+
+        "sup-plans-kubernetes-how1.1":"Automações de provisionamento de cluster",
+        "sup-plans-kubernetes-how1.2":"Clusters “prontos para produção” em minutos",
+        "sup-plans-kubernetes-how1.3":"Monitorando a integridade do aplicativo, mitigando riscos",
+        "sup-plans-kubernetes-how1.4":"Observabilidade, desempenho e integração",
+        
+        "sup-plans-kubernetes-what2.1":"Jornadas de autoatendimento para equipes",
+        "sup-plans-kubernetes-what2.2":"Modernização da operação de TI",
+        "sup-plans-kubernetes-what2.3":"Redução de custos e riscos operacionais",
+        "sup-plans-kubernetes-what2.4":"Gerenciamento de escala do aplicativo",
+        
+        "sup-plans-kubernetes-whom3.1":"Buscando escalabilidade no negócio",
+        "sup-plans-kubernetes-whom3.2":"Aplique a cultura DevOps de forma rápida e econômica",
+        "sup-plans-kubernetes-whom3.3":"Gestão comprometida com a excelência operacional",
+        "sup-plans-kubernetes-whom3.4":"Deseja monitorar o desempenho do aplicativo",
+
+        "sup-plans-aws-how1.1":"Automações de provisionamento de recursos",
+        "sup-plans-aws-how1.2":"Facilitando a adoção da AWS",
+        "sup-plans-aws-how1.3":"Migrando seus serviços para a nuvem",
+        "sup-plans-aws-how1.4":"Observabilidade para o desempenho da rede",
+        
+        "sup-plans-aws-what2.1":"Jornadas de autoatendimento para equipes",
+        "sup-plans-aws-what2.2":"Maturidade nativa da nuvem com baixo investimento",
+        "sup-plans-aws-what2.3":"Modernização da operação de TI",
+        "sup-plans-aws-what2.4":"Redução de custos e riscos operacionais",
+        
+        "sup-plans-aws-whom3.1":"Busca de transição digital e escalabilidade na empresa",
+        "sup-plans-aws-whom3.2":"Gestão comprometida com a excelência operacional",
+        "sup-plans-aws-whom3.3":"Buscando cultura e prática DevOps para a equipe",
+        "sup-plans-aws-whom3.4":"Buscando diminuir a carga cognitiva",
+        
+        "sup-plans-trial-title1":"Obtenha",
+        "sup-plans-trial-title2":"para nossa plataforma de suporte",
+
+        "sup-plans-trial-subtitle1":"Preencha o formulário e tenha acesso à nossa plataforma de tickets, garantindo o acesso ao nosso suporte especializado durante um período de",
+        "sup-plans-trial-subtitle2":"teste gratuito de 15 dias!",
+        "sup-plans-trial-subtitle3":"Com acesso à nossa plataforma, você pode se comunicar diretamente com nossos especialistas para resolver problemas DevOps, automação de provisionamento, gerenciamento de API, potencialização da infra-estrutura de TI, e muito mais através de nosso portal para desenvolvedores. Garantimos que suas informações estejam seguras e que cumprimos com todas as políticas e regulamentos de privacidade aplicáveis.",
+        
+        "sup-plans-form-label1":"Seu nome",
+        "sup-plans-form-label2":"Cargo",
+        "sup-plans-form-label3":"Empresa / Organização",
+        "sup-plans-form-label4":"Email Coorporativo",
+        "sup-plans-form-placeholder1":"Primeiro e último nome",
+        "sup-plans-form-placeholder2":"Engenheiro",
+        "sup-plans-form-placeholder3":"Acme, Inc.",
+        "sup-plans-form-placeholder4":"voce@acme.com",
+        "sup-plans-checkbox1":"Eu li, entendi e estou de acordo com VeeCode Platform",
+        "sup-plans-checkbox2":"e",
         
         "":"",
         "":"",
