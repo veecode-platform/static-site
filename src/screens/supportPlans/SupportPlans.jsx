@@ -8,15 +8,22 @@ import HeaderSection from "./header";
 import Trial from "./trial";
 import { Footer, Header, WhatsApp } from "../../components";
 import '../../i18n';
+import i18n from 'i18next';
 
 const SupportPlans = () => {
+
+  let items = [];
+
+  i18n.language == 'pt' ? items = data.pt : items = data.en;
+  console.log(data.pt);
+
   return (
     <main className={style.wrapper}>
       {/* <HeaderSection showButton/> */}
       <Header showOptions fixedHeader></Header>
       <FirstSection />
       <section className={style.stacks}>
-      {data.map((item) => {
+      {items.map((item) => {
         return (
           <SupportSection
             key={item.title}

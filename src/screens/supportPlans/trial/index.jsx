@@ -66,7 +66,7 @@ const Trial = () => {
                 value: 1,
             }
         }
-    }
+    } 
     
     return (
             <section className={style.wrapper} id="trial">
@@ -74,13 +74,13 @@ const Trial = () => {
                     <article className={style.content}>
                         <div className={style.text}>
                             <div className={style.text__header}>
-                                <h2>{t('Get')} <strong><span>{t('Support Trial')}</span></strong> {t('to our support platform')}</h2>
+                                <h2>{t("sup-plans-trial-title1")} <strong><span>{t('support-trial')}</span></strong> {t("sup-plans-trial-title2")}</h2>
                             </div>
                             <div className={style.text__resume}>
                                 <p>
-                                    {t('Fill out the form and get access to our ticketing platform by securing access to our expert support during a')}<strong> {t('15-day Support Trial')}</strong>! <br /><br />
-                                    {t('With access to our ticketing platform, you can communicate directly with our experts to solve DevOps issues, provisioning automation, API management, IT infrastructure scaling, and more through our developer portal.')}<br /><br />
-                                    {t('We ensure that your information is secure and that we comply with all applicable privacy policies and regulations')}.<br /><br />
+                                    {t("sup-plans-trial-subtitle1")}<strong> {t("sup-plans-trial-subtitle2")}</strong>! <br /><br />
+                                    {t("sup-plans-trial-subtitle3")}<br /><br />
+                                    {t("sup-plans-trial-subtitle4")}.<br /><br />
                                 </p>
                             </div>
                         </div>
@@ -100,13 +100,13 @@ const Trial = () => {
                                     {({ errors, touched, handleSubmit, isSubmitting }) => (
 
                                         <Form onSubmit={handleSubmit} className={style.form}>
-                                            <Input name="name" placeholder={t("First and last name")} label={t("Your name")} error={(errors.name && touched.name) && errors.name} />
-                                            <Input name="title" placeholder={t("Sr Engineer")} label={t("Title")} error={(errors.title && touched.title) && errors.title} />
-                                            <Input name="company" placeholder={t("Acme, Inc.")} label={t("Company / Organization")} error={(errors.company && touched.company) && errors.company} />
-                                            <Input name="email" placeholder={t("you@acme.com")} label={t("Business Email")} error={(errors.email && touched.email) && errors.email} />
+                                            <Input name="name" placeholder={t("sup-plans-form-placeholder1")} label={t("sup-plans-form-label1")} error={(errors.name && touched.name) && errors.name} />
+                                            <Input name="title" placeholder={t("sup-plans-form-placeholder2")} label={t("sup-plans-form-label2")} error={(errors.title && touched.title) && errors.title} />
+                                            <Input name="company" placeholder={t("sup-plans-form-placeholder3")} label={t("sup-plans-form-label3")} error={(errors.company && touched.company) && errors.company} />
+                                            <Input name="email" placeholder={t("sup-plans-form-placeholder4")} label={t("sup-plans-form-label4")} error={(errors.email && touched.email) && errors.email} />
                                             <Checkbox name="terms" terms error={(errors.terms && touched.terms) && errors.terms} />
                                             
-                                            <div className={style.form__buttonWrapper}><Button type="submit" loading={isSubmitting}>{t("Confirm")}</Button></div>
+                                            <div className={style.form__buttonWrapper}><Button type="submit" loading={isSubmitting}>{t("confirm")}</Button></div>
                                             
                                             <Dialog
                                                 fullWidth
