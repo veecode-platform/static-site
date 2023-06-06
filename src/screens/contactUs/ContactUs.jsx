@@ -1,19 +1,22 @@
 /* eslint-disable @next/next/no-img-element */
 import { DefaultPage, FormElement } from '../../components';
 import style from '../../../styles/ContactUs.module.scss';
+import { useTranslation } from 'react-i18next';
 import { object, string } from 'yup';
 import { useRouter } from 'next/router'
 import Accordion from './accordion';
 
 const ContactUs = () => {
 
+    const { t } = useTranslation();
+
     const flowImage = "/assets/icons/contact_form_img.png";
 
     return (
-        <DefaultPage showButton titleBar="enable" title="Find out how we can help your business"
+        <DefaultPage showButton titleBar="enable" title={t("contact-us-title")}
             noBack
             showOptions
-            subtitle={<>Talk to our sales specialist. Use the form below or send an email to <a href='mailto: platform-sales@vee.codes' style={{ cursor: "pointer", color: '#33FFCE' }}> platform-sales@vee.codes</a></>}>
+            subtitle={<>{t("contact-us-subtitle")} <a href='mailto: platform-sales@vee.codes' style={{ cursor: "pointer", color: '#33FFCE' }}> platform-sales@vee.codes</a></>}>
             <section className={style.wrapper}>
                 <article className={style.content}>
                     <div className={style.content__options}>
@@ -32,7 +35,7 @@ const ContactUs = () => {
                     <div className={style.content__faq}>
                         <div>
                             <h1>FAQ</h1>
-                            <h2>Check our Frequently Asked Questions</h2>
+                            <h2>{t("faq-subtitle")}</h2>
                         </div>
                         <Accordion />
                     </div>
