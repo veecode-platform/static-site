@@ -14,10 +14,12 @@ import CloseIcon from '@mui/icons-material/Close';
 import IconButton from '@mui/material/IconButton';
 import { generate_lead } from '../../../utils/generateLead';
 import TagManager from "react-gtm-module";
+import { useTranslation } from 'react-i18next';
 
 const Validate = () => {
     const router = useRouter()
     const plan = router.query.plan;
+    const { t } = useTranslation();
 
     // Modal  
     const [open, setOpen] = useState(false);
@@ -76,13 +78,13 @@ const Validate = () => {
                     <article className={style.content}>
                         <div className={style.text}>
                             <div className={style.text__header}>
-                                <h2>Get <strong><span>Support Trial</span></strong> to our platform</h2>
+                                <h2>{t("trial-title1")} <strong><span>{t("trial-title2")}</span></strong> {t("trial-title3")}</h2>
                             </div>
                             <div className={style.text__resume}>
                                 <p>
-                                    Fill out the form and get access to our ticketing platform by securing access to our expert support during a<strong> 15-day Support Trial</strong>! <br /><br />
-                                    With access to our ticketing platform, you can communicate directly with our experts to solve DevOps issues, provisioning automation, API management, IT infrastructure scaling, and more through our developer portal.<br /><br />
-                                    We ensure that your information is secure and that we comply with all applicable privacy policies and regulations.<br /><br />
+                                    {t("trial-desc1")}<strong> {t("trial-desc2")}</strong>! <br /><br />
+                                    {t("trial-desc3")}<br /><br />
+                                    {t("trial-desc4")}<br /><br />
                                 </p>
                             </div>
                         </div>
@@ -102,12 +104,12 @@ const Validate = () => {
                                     {({ errors, touched, handleSubmit, isSubmitting }) => (
 
                                         <Form onSubmit={handleSubmit} className={style.form}>
-                                            <Input name="name" placeholder="First and last name" label="Your name" error={(errors.name && touched.name) && errors.name} />
-                                            <Input name="title" placeholder="Sr Engineer" label="Title" error={(errors.title && touched.title) && errors.title} />
-                                            <Input name="company" placeholder="Acme, Inc." label="Company / Organization" error={(errors.company && touched.company) && errors.company} />
-                                            <Input name="email" placeholder="you@acme.com" label="Business Email" error={(errors.email && touched.email) && errors.email} />
+                                            <Input name="name" placeholder={t("sup-plans-form-placeholder1")} label={t("sup-plans-form-label1")} error={(errors.name && touched.name) && errors.name} />
+                                            <Input name="title" placeholder={t("sup-plans-form-placeholder2")} label={t("sup-plans-form-label2")} error={(errors.title && touched.title) && errors.title} />
+                                            <Input name="company" placeholder={t("sup-plans-form-placeholder3")} label={t("sup-plans-form-label3")} error={(errors.company && touched.company) && errors.company} />
+                                            <Input name="email" placeholder={t("sup-plans-form-placeholder4")} label="Business Email" error={(errors.email && touched.email) && errors.email} />
                                             <Checkbox name="terms" terms error={(errors.terms && touched.terms) && errors.terms} />
-                                            <div className={style.form__buttonWrapper}><Button type="submit" loading={isSubmitting}>Confirm</Button></div>
+                                            <div className={style.form__buttonWrapper}><Button type="submit" loading={isSubmitting}>{t("confirm")}</Button></div>
 
                                             <Dialog
                                                 fullWidth
@@ -136,15 +138,15 @@ const Validate = () => {
                                                         src="/assets/validate/astronaut-helmet.png"
                                                     />
                                                 </DialogContent>
-                                                <DialogTitle style={{ alignSelf: 'center', fontWeight: 'bold' }}><h3>THAT&aposS IT!</h3></DialogTitle>
+                                                <DialogTitle style={{ alignSelf: 'center', fontWeight: 'bold' }}><h3>{t("trial-dialog-title")}</h3></DialogTitle>
                                                 <DialogContent style={{ margin: ".5em 1em 1.5em 1em" }}>
 
                                                     <DialogContentText>
-                                                        <p style={{ fontSize: '1.5em', textAlign: "center" }}>Your data has been successfully saved. Stay tuned, we will <span style={{ color: '#1c8068', fontWeight: 'bold' }}>contact you via email</span> to provide access to our ticket platform.</p>
+                                                        <p style={{ fontSize: '1.5em', textAlign: "center" }}>{t("trial-dialog-desc1")} <span style={{ color: '#1c8068', fontWeight: 'bold' }}>{t("trial-dialog-desc2")}</span> {t("trial-dialog-desc3")}</p>
                                                     </DialogContentText>
                                                     <Link href='/' passHref>
                                                         <a target="_blank">
-                                                            <p style={{ textDecoration: "underline", fontSize: ".9em", textAlign: "center", padding: "2em 0 1em 0", color: "#1c8068" }}>Access Home Page</p>
+                                                            <p style={{ textDecoration: "underline", fontSize: ".9em", textAlign: "center", padding: "2em 0 1em 0", color: "#1c8068" }}>{t("trial-dialog-label")}</p>
                                                         </a>
                                                     </Link>
                                                 </DialogContent>
