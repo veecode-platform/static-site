@@ -6,8 +6,12 @@ import { object, string } from "yup";
 import { UseContactData } from "../../hooks/UseContactData";
 import { useRouter } from "next/router";
 import TagManager from "react-gtm-module";
+import { useTranslation } from "react-i18next";
 
 const FormElement = ({ company, checkbox, type }) => {
+
+  const { t } = useTranslation();
+
   const formSchema = object({
     name: string().required("*required"),
     company: company ? string().required("*required") : null,
@@ -56,21 +60,21 @@ const FormElement = ({ company, checkbox, type }) => {
         <Form onSubmit={handleSubmit} className={style.form}>
           <Input
             name="name"
-            placeholder="Your name"
-            label="Full name"
+            placeholder={t("sup-plans-form-placeholder1")}
+            label={t("sup-plans-form-label1")}
             error={errors.name && touched.name && errors.name}
           />
           <Input
             name="email"
-            placeholder="you@acme.com"
+            placeholder={t("sup-plans-form-placeholder4")}
             label="Email"
             error={errors.email && touched.email && errors.email}
           />
           {company && (
                       <Input
                       name="company"
-                      placeholder="Acme, Inc."
-                      label="Company / Organization"
+                      placeholder={t("sup-plans-form-placeholder3")}
+                      label={t("sup-plans-form-label3")}
                       error={errors.company && touched.company && errors.company}
                     />
           )}
@@ -85,14 +89,14 @@ const FormElement = ({ company, checkbox, type }) => {
           )}
           <TextArea
             name="question"
-            placeholder="Your message"
-            label="How can we help?"
+            placeholder={t("contact-us-form-desc-placeholder")}
+            label={t("contact-us-form-desc-label")}
             error={errors.question && touched.question && errors.question}
           ></TextArea>
 
           <div className={style.form__buttonWrapper}>
             <Button type="submit" loading={isSubmitting} alt>
-              Submit
+              {t("submit")}
             </Button>
           </div>
         </Form>
