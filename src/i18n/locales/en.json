@@ -291,7 +291,10 @@
         
         "pricing-guaranteed1":"Discounted pricing is available for non-profits, educational institutions, and startups with fewer than 10 employees.",
         "pricing-guaranteed2":"to get the discounted pricing.",
-        "":"",
+        
+        "breadcrumb1":"Select Plan",
+        "breadcrumb2":"Validate",
+        "breadcrumb3":"Checkout",
         "":""
     }
 }
