@@ -40,10 +40,10 @@ const Validate = () => {
     }, []);
 
     const formSchema = object({
-        name: string().required("*required"),
-        company: string().required("*required"),
-        email: string().email("*invalid email").required("*required"),
-        title: string().required("*required"),
+        name: string().required(t("required")),
+        company: string().required(t("required")),
+        email: string().email(t("invalid-email")).required(t("required")),
+        title: string().required(t("required")),
         terms: boolean().isTrue()
     });
 

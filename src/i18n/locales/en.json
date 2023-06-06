@@ -10,6 +10,8 @@
         "support":"Support",
         "learn-more":"Learn More",
         "confirm":"Confirm",
+        "required":"*Required",
+        "invalid-email":"*Invalid email",
 
         "footer-topic1":"About",
         "footer-topic2":"Docs",
