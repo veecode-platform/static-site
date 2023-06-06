@@ -297,6 +297,45 @@
         "breadcrumb2":"Validação",
         "breadcrumb3":"Checkout",
         
+        "how-works-title":"Como Funciona",
+        "how-works-subtitle":"A Plataforma VeeCode pode ajudá-lo a obter a infra-estrutura da sua API em minutos. Veja como funciona.",
+
+        "how-works-topic1-title":"Está a optar pela nuvem nativa mas não sabe como",
+        "how-works-topic1-desc1":"É necessário fornecer soluções e não apenas aplicações. Terá de aprender a lidar e a gerir a nuvem, e espera-se que o faça gastando menos dinheiro. Mas há uma infinidade de opções para cada recurso disponível: clusters, bases de dados, equilibradores de carga, chaves, a lista é interminável.",
+        "how-works-topic1-desc2":"Automatizamos a maior parte disto no VKPR - pode saltar a maior parte da curva de aprendizagem e manter o seu foco nas partes divertidas. Nossas ferramentas o levarão até lá através de automação, IaC e GitOps.",
+
+        "how-works-topic2-title":"Tem que fazer esta coisa de API",
+        "how-works-topic2-desc1":"Então, vai construir (e gerir) microsserviços e API, mas há tantas partes móveis e continua a ter dificuldades. Só precisa de construir, não de vasculhar centenas de serviços na nuvem com centenas de definições, onde um pequeno erro pode custar-lhe uma factura inesperada.",
+        "how-works-topic2-desc2":"Podemos ajudá-lo desde a especificação até à produção. As nossas ferramentas são opinativas e reduzirão as suas escolhas a um número razoável. Experimente o safira-cli para criar os seus modelos de código e gerar pipelines prontos a usar, para que possa fazer o commit desde o desenvolvimento até à produção sem complexidade adicional. O nosso fluxo de trabalho proposto elimina muitos problemas - e estamos sempre a melhorá-lo para si",
+
+        "how-works-topic3-title":"Tem que aprender a infra-estrutura como código",
+        "how-works-topic3-desc1":"Você está sempre a ouvir falar das maravilhas da IaC, mas cada ferramenta é uma nova toca de coelho. Terraform, Docker, Kubernetes e muitas outras, para não falar de tantos scripts para as unir - e demasiadas escolhas também.",
+        "how-works-topic3-desc2":"Estamos criando bibliotecas IaC para você, publicando-as como pipelines automatizados para que qualquer membro da equipe possa criar e reciclar recursos, mantendo-os em sincronia com uma configuração desejada.",
+
+        "how-works-topic4-title":"Um cluster Kubernetes não é suficiente",
+        "how-works-topic4-desc1":"Levar as coisas para a produção numa mentalidade nativa da nuvem requer muito mais do que apenas um cluster gerido. Podemos ajudá-lo a definir a sua arquitectura, trazendo para o seu cluster os componentes necessários que o tornarão pronto para a produção. Sim, precisará de componentes para observabilidade, um gateway de API, balanceadores de carga, bases de dados e segurança. E nós daremos suporte a todos eles, fornecendo uma experiência de autoatendimento para que os clusters não sejam um grande problema.",
+        "how-works-topic4-desc2":"O que nós queremos é que não demore meses a decidir a sua arquitectura de TI. Pode fazê-lo hoje mesmo!",
+
+        "how-works-topic5-title":"Você não está sozinho",
+        "how-works-topic5-desc1":"Fornecemos suporte para o nosso código e ferramentas - e podem ser utilizados para sempre, mesmo que já não seja cliente. Também fornecemos o melhor suporte possível aos produtos que o ajudamos a instalar, para que possa tirar partido das suas funcionalidades combinadas e decidir melhor quando ou porquê licenciá-los (se alguma vez o fizerem - também são todos de código aberto).",
+        "how-works-topic5-desc2":"Pode melhorar. Se as nossas ferramentas o deixaram aquém de qualquer coisa, pode pedir-nos para as melhorarmos gratuitamente. Sim, estamos a melhorar continuamente o nosso conjunto de ferramentas e precisamos muito da sua opinião.",
+
+        "how-works-topic6-title":"Acelerar o aprovisionamento da nuvem",
+        "how-works-topic6-desc1":"Atualmente os serviços mais bem sucedidos do mercado já passaram pela transição digital, e a maioria deles teve dificuldades com esse processo, precisando contratar consultores e serviços caros para lidar com esse desafio. Agora com o",
+        "how-works-topic6-desc2":"sua transição e uso de ferramentas cloud-native se torna mais simples. Construímos uma interface de linha de comando dedicada a construir clusters kubernetes de forma rápida, simples e automatizada através de pipelines IaC seguindo a metodologia GitOps. Junto com uma ferramenta auxiliar que facilita a instalação e o gerenciamento de aplicativos que estão no mundo cloud-native, sem ter nenhum lock-in de uso",
+
+        "how-works-topic7-title":"Automatize a criação da sua API",
+        "how-works-topic7-desc1":"Sabemos como é dispendioso e demorado construir uma API. Para resolver este problema, criámos uma interface de linha de comandos,",
+        "how-works-topic7-desc2":"Utilizando um ficheiro API aberto, juntamente com um simples comando, o nosso CLI constrói um modelo API completo nas estruturas Java mais utilizadas no mercado: SpringBoot e Quarkus. Tudo isso de forma rápida e automatizada. Além disso, nossa solução permite customizações que trazem robustez ao projeto, como o uso de Mockserver, configurações de pipelining e containerização por Docker e Kubernetes, além de um alto nível de segurança com API gateway como Kong e autenticador como Okta.",
+
+        "how-works-topic8-title":"Centralize a gestão dos seus microsserviços",
+        "how-works-topic8-desc":"A arquitetura de microserviços revolucionou a internet, e aproveitando essa inovação criamos o DevPortal. Esta ferramenta é a nossa plataforma que centraliza todas as suas Specs e APIs, ajudando o utilizador a visualizar mais de perto os serviços dispostos nas APIs. Graças à sua facilitação visual, os testes de API são mais rápidos e de melhor visualização tendo um conjunto de possibilidades para actuar na nossa plataforma. Acelere a gestão dos seus microserviços e aproxime-se do cliente com um feedback mais rápido com o DevPortal.",
+        
+        "how-works-topic9-title":"Obtenha apoio especializado",
+        "how-works-topic9-desc1":"Aqui está a cereja do bolo. Com a evolução da tecnologia, a cada dia surge uma nova e mais poderosa forma de realizar seu serviço, a todo momento surgem novas atualizações que mudam todo o formato do processo, e tudo isso é cada vez mais complexo de acompanhar e principalmente de implementar. Aí vem a nossa proposta: conte com o nosso suporte! De forma simples e rápida, podemos sanar suas dúvidas e ajudá-lo a trazer as melhores opções para o seu negócio. Conheça mais sobre nossos planos.",
+        
+        "how-works-label":"Ver Planos",
+
         "":"",
         "":"",
         "":"",
