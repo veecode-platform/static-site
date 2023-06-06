@@ -3,25 +3,25 @@ import ListDetails from "./listDetails";
 import PricingSection from "./pricingSection";
 import SupportBenefits from "./SupportBenefits";
 import SupportCategories from "./supportCategories";
-
+import { useTranslation } from 'react-i18next';
+import '../../i18n';
+ 
 const Support = () => {
+
+  const { t } = useTranslation();
+
   return (
     <DefaultPage
-      title="Support Options"
-      subtitle="A team of Experts You Can Count On"
+      title={t("support-title")}
+      subtitle={t("support-subtitle")}
       titleBar="enable"
       showButton
       showOptions
     >
       {/* Platform Support */}
       <SupportCategories
-        title="Platform Support"
-        desc="Count on our team of qualified and experienced
-         professionals who will help you to get the most out of our products and tools.
-          Considering the details of your IT deparment. 
-          In addition, we can help with doubts that come up while using our
-          products and components that are embedded in our solution. Our plan is to support at
-           a much lower cost than having a full-time specialist professional on your team."
+        title={t("support-categories-title")}
+        desc={t("support-categories-desc")}
       />
       {/* List Details */}
       <ListDetails/>

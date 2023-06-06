@@ -1,17 +1,21 @@
 import Link from 'next/link'
 import style from './PricingSection.module.scss'
+import { useTranslation } from 'react-i18next';
 
 const PricingSection = () => {
+
+  const { t } = useTranslation();
+
   return (
     <article className={style.wrapper}>
         <div className={style.content}>
-            <h2 className={style.content__title}>Pricing</h2>
+            <h2 className={style.content__title}>{t("support-pricing-title")}</h2>
             <p className={style.content__desc}>
-                To get access to Support, you must be a Platform subscriber. Check out the 
+                {t("support-pricing-desc1")} 
                 <Link href="/compare-plans" prefetch={false}>
-                    <a> pricing page </a>
+                    <a> {t("support-pricing-desc2")} </a>
                 </Link>
-                for details.
+                {t("support-pricing-desc3")}
             </p>
         </div>
     </article>
