@@ -12,6 +12,7 @@ import DialogTitle from '@mui/material/DialogTitle';
 import Link from "next/link";
 import CloseIcon from '@mui/icons-material/Close';
 import IconButton from '@mui/material/IconButton';
+import TagManager from "react-gtm-module";
 
 const FreePlan = () => {
     const router = useRouter()
@@ -53,6 +54,16 @@ const FreePlan = () => {
         await router.push("https://docs.platform.vee.codes/")
     }
 
+    const tagManagerArgs = {
+        gtmId: 'GTM-56RG967',
+        events: {
+            generateLead: {
+                currency: "USD",
+                value: 1,
+            }
+        }
+    }
+
     return (
         <DefaultPage
             titleBar="disable"
@@ -73,7 +84,7 @@ const FreePlan = () => {
                                     Fill out the form below to get started and gain access to our documentation to begin your journey right away.<br /><br />
                                 </p>
                             </div> 
-                        </div>
+                        </div> 
                         <div className={style.content__options}>
                             <div className={style["content__options-formWraper"]}>
                                 <Formik
@@ -82,6 +93,7 @@ const FreePlan = () => {
                                     onSubmit={async(values) => {
                                         const response = await UseContactData(values);
                                         // setOpen(true);
+                                        TagManager.initialize(tagManagerArgs);
                                         await handleFormRedirect();
                                     }}
 

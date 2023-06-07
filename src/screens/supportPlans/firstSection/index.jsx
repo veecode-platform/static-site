@@ -10,23 +10,23 @@ const animation = "/assets/support/animation.gif";
 
 const FirstSection = () => {
   const { t } = useTranslation();
-
+ 
   return (
     <section className={style.wrapper} id="firstsec">
       <article className={style.content}>
         <div className={style.info}>
           <div className={style.info__title}>
             <h1>
-              {t('Get')} <span>{t('expert support')}</span>{" "} 
-              {t('from the')} <strong>{t('best solutions')}</strong>{" "}
-               {t('on the market in just a few clicks at an')} 
-               {" "}<strong>{t('affordable price')}</strong>
+              {t('sup-plans-first-title1')} <span>{t('sup-plans-first-title2')}</span>{" "} 
+              {t('sup-plans-first-title3')} <strong>{t('sup-plans-first-title4')}</strong>{" "}
+               {t('sup-plans-first-title5')} 
+               {" "}<strong>{t('sup-plans-first-title6')}</strong>
             </h1>
           </div>
           <div className={style.info__buttons}>
             <Link href="/support" passHref>
               <a>
-                <Button>{t('Learn More')}</Button>
+                <Button>{t('learn-more')}</Button>
               </a>
             </Link>
           </div>

@@ -5,6 +5,7 @@ import { Formik, Form } from 'formik';
 import { object, string, boolean } from 'yup';
 import { UsePostData } from '../../hooks/UsePostData';
 import { useEffect } from 'react';
+import TagManager from "react-gtm-module";
 
 const Validate = () => {
     const router = useRouter()
@@ -34,6 +35,16 @@ const Validate = () => {
 
     const handleFormRedirect = async () => {
         await router.push("/checkout")
+    }
+
+    const tagManagerArgs = {
+        gtmId: 'GTM-56RG967',
+        events: {
+            generateLead: {
+                currency: "USD",
+                value: 1,
+            }
+        }
     }
 
     return (
@@ -68,6 +79,7 @@ const Validate = () => {
                                     onSubmit={async (values) => {
                                         localStorage.setItem("user", JSON.stringify(values));
                                         const response = await UsePostData(values);
+                                        TagManager.initialize(tagManagerArgs);
                                         await handleFormRedirect();
                                     }}
 

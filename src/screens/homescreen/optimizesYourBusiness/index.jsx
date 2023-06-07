@@ -2,14 +2,13 @@ import style from "./OptimizeYourBusiness.module.scss";
 import { Button } from "../../../components";
 import Link from "next/link";
 import Image from "next/image";
-// import { useTranslation } from 'react-i18next';
+import { useTranslation } from 'react-i18next';
 
 // const Icon = "/assets/home/image3.avif";
 const Icon = "/assets/support/animation.svg";
 
-
 const OptimizeYourBusiness = () => {
-  // const { t } = useTranslation();
+  const { t } = useTranslation();
 
   return (
     <section className={style.content}>
@@ -17,19 +16,19 @@ const OptimizeYourBusiness = () => {
         <div className={style["content__contentWrapper-text"]}>
           <div className={style.title}>
             <h2>
-              Maximize <br/> Your Team<br></br> Productivity with<br></br> <strong>VeeCode Platform</strong>
+              {t("home-optimize-title1")} <strong>{t("home-optimize-title2")}</strong>
             </h2>
           </div>
           <div className={style.details}>
             <div className={style.details__text}>
               <p>
-                Break barriers and unleash the full potential of going cloud native with our open-source DevPortal. From <strong>software and IaC templates</strong> with streamlined documentation to effortless <strong>API and services management</strong>, try our Platform Engineering solution <strong>for free</strong>.
+                {t("home-optimize-subtitle1")} <strong> {t("home-optimize-subtitle2")}</strong> {t("home-optimize-subtitle3")} <strong>{t("home-optimize-subtitle4")}</strong> {t("home-optimize-subtitle5")} <strong>{t("home-optimize-subtitle6")}</strong>.
               </p>
             </div>
             <div className={style.details__buttonWrapper}>
               <Link href="https://docs.platform.vee.codes/" passHref>
                 <a target="_blank">
-                  <Button>Start Now</Button>
+                  <Button>{t("home-optimize-button-label")}</Button>
                 </a>
               </Link>
               

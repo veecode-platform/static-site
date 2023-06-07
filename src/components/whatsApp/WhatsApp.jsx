@@ -12,6 +12,7 @@ import CloseIcon from '@mui/icons-material/Close';
 import IconButton from '@mui/material/IconButton';
 import DialogContent from '@mui/material/DialogContent';
 import { useTranslation } from 'react-i18next';
+import TagManager from "react-gtm-module";
 
 const WhatsApp = () => {
     const { t } = useTranslation();
@@ -45,7 +46,16 @@ const WhatsApp = () => {
         await router.push("https://wa.me/5511932960697?text=Hello!%20I'm%20interested%20in%20learning%20more%20about%20VeeCode%20Platform's%20solutions.%20Can%20you%20please%20provide%20me%20with%20more%20information%20about%20your%20products%20and%20services?%20Thank%20you!")
     }
 
-
+    const tagManagerArgs = {
+        gtmId: 'GTM-56RG967',
+        events: {
+            generateLead: {
+                currency: "USD",
+                value: 1,
+            }
+        }
+    }
+ 
     return (
         <div className={style.wrapper}>
             <img src={wppLogo} alt="ContactUs WhatsApp Logo" className={style.image} onClick={handleClick} />
@@ -77,6 +87,7 @@ const WhatsApp = () => {
                         validationSchema={formSchema}
                         onSubmit={async (values) => {
                             await UseContactData(values);
+                            TagManager.initialize(tagManagerArgs);
                             await handleFormRedirect();
                         }}
                     >

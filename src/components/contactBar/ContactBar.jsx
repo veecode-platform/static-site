@@ -1,12 +1,16 @@
 import Link from "next/link";
 import style from "../../../styles/ContactBar.module.scss";
 import Button from "../button/Button";
+import { useTranslation } from 'react-i18next';
 
 const ContactBar = () => {
+
+  const { t } = useTranslation();
+
   return (
     <div className={style.content}>
       <div className={style.content__title}>
-        <h4>Need help deciding?</h4>
+        <h4>{t("contact-bar-title")}</h4>
       </div>
       <div className={style.content__button}>
       <Link
@@ -16,7 +20,7 @@ const ContactBar = () => {
         >
         <a target="_blank">
           <Button>
-            Contact Sales
+            {t("contact-bar-label")}
           </Button>
         </a>
       </Link>
