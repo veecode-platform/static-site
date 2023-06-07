@@ -336,11 +336,42 @@
         
         "how-works-label":"Check Plans",
 
-        "":"",
-        "":"",
-        "":"",
-        "":"",
-        "":"",
+        "validate-title1":"Go to",
+        "validate-desc1":"Fill out the form and complete the payment process to gain access to our ticketing platform and connect with our expert support!",
+        "validate-desc2":"With access to our ticketing platform, you can communicate directly with our specialists and easily resolve your DevOps issues, provisioning automation, API management, IT infrastructure scaling, and more through our developer portal.",
+        "validate-desc3":"Rest assured that your information is secure and we comply with all applicable privacy policies and regulations.",
+        
+        "checkout-summary":"Order summary",
+        "checkout-sup-plan":"Support plan:",
+        "checkout-mo":"mo",
+        "checkout-monthly":"Monthly",
+        "checkout-year":"Yearly:",
+        "checkout-tickets":"Up to 2 tickets simultaneously",
+        "checkout-due-year":"Due yearly:",
+        "checkout-due-monthly":"Due monthly:",
+        "checkout-billed1":"Billed yearly on the",
+        "checkout-billed2":"22th of June.",
+        "checkout-contract":"Annual contract",
+        "checkout-cards":"Debit or Credit Card",
+
+        "checkout":"Checkout",
+
+        "contact-enterprise-title":"Our Support Enterprise",
+        "contact-enterprise-subtitle":"We do it with you and for you. Use the form below or send an email to",
+        "contact-enterprise-desc1":"Use our main strength to your advantage.",
+        "contact-enterprise-desc2":"With enterprise support, you have immediate access to expert professionals dedicated to your challenges. In this plan, all our expertise is at your disposal, and we really mean it when we say we'll do it with and for you. Go further in your digital transition and count on us to make it easy.",
+        "contact-enterprise-desc3":"Problems with Devops, IaC, Kong, Kubernetes and much more will be solved with specialized professionals in each stack, don't let technology problems affect your business, count on us to use technology to scale and stand out from the market competition.",
+        "contact-enterprise-desc4":"Contact us, we are excited to welcome you on our team!",
+        
+        "free-plan-title1":"Start your journey with our",
+        "free-plan-title2":"Free Solution",
+        "free-plan-desc1":"As a free user, you'll have access to",
+        "free-plan-desc2":"support from our community forum",
+        "free-plan-desc3":"on GitHub. Embark on a journey with our powerful",
+        "free-plan-desc4":"solution, designed specifically for users on our free plan.",
+        "free-plan-desc5":"Our user-friendly platform provides streamlined API automation, Pipelines, and more to help solve your business problems and take your business to the next level.",
+        "free-plan-desc6":"Fill out the form below to get started and gain access to our documentation to begin your journey right away.",
+        "developer-portal":"Developer Portal",
         "":""
     }
 }
