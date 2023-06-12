@@ -81,6 +81,7 @@ export const Checkboxfield = styled.input.attrs({type:"checkbox"})`
 `;
 
 export const CheckboxLabel = styled(Label)`
+    max-width: 100%;
     font-size: small;
     color: ${props => props.altColor ? "grey": "inherit"};
     a{
