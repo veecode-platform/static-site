@@ -40,20 +40,20 @@
         "home-tools-details-subtitle5":"sua equipe é livre para servir as suas áreas de negócio",
         
         "home-tools-details-item1-button-label":"Devportal",
-        "home-tools-details-item1-button-description":"Uma plataforma que centraliza os seus Specs e APIs, facilitando o controlo dos microsserviços.",
+        "home-tools-details-item1-button-description":"Uma plataforma que centraliza os suas Specs e APIs, facilitando o controle dos microsserviços.",
 
         "home-tools-details-item2-button-label":"VKPR",
         "home-tools-details-item2-button-description":"Constrói para si uma infra-estrutura de nuvem com algumas linhas de código.",
 
         "home-tools-details-item3-button-label":"Junte-se a nós",
-        "home-tools-details-item3-button-description":"Aumente a sua produtividade e ajude a comunidade a crescer.",
+        "home-tools-details-item3-button-description":"Aumente a sua produtividade e ajude a comunidade crescer.",
         
         "home-first-title1":"Liberte",
         "home-first-title2":"o potencial da sua equipe",
         "home-first-subtitle1":"A sua transição para a nuvem não tem de ser demorada, dispendiosa ou solitária. Conte com o nosso",
         "home-first-subtitle2":"suporte profissional",
         "home-first-subtitle3":"e",
-        "home-first-subtitle4":"ferramentas gratuitas",
+        "home-first-subtitle4":"ferramentas gratuitas ",
         "home-first-subtitle5":"para ultrapassar os seus desafios de forma rápida e fácil!",
         "home-first-button-label1":"Saber Mais",
 
@@ -144,8 +144,8 @@
 
         "sup-plans-trial-subtitle1":"Preencha o formulário e tenha acesso à nossa plataforma de tickets, garantindo o acesso ao nosso suporte especializado durante um período de",
         "sup-plans-trial-subtitle2":"teste gratuito de 15 dias!",
-        "sup-plans-trial-subtitle3":"Com acesso à nossa plataforma, você pode se comunicar diretamente com nossos especialistas para resolver problemas DevOps, automação de provisionamento, gerenciamento de API, potencialização da infra-estrutura de TI, e muito mais através de nosso portal para desenvolvedores. Garantimos que suas informações estejam seguras e que cumprimos com todas as políticas e regulamentos de privacidade aplicáveis.",
-        "sup-plans-trial-subtitle4":"Garantimos que suas informações estejam seguras e que cumprimos com todas as políticas e regulamentos de privacidade aplicáveis.",
+        "sup-plans-trial-subtitle3":"Com acesso à nossa plataforma, você pode se comunicar diretamente com nossos especialistas para resolver problemas DevOps, automação de provisionamento, gerenciamento de API, potencialização da infra-estrutura de TI, e muito mais através de nosso DevPortal. Garantimos que suas informações estejam seguras e que cumprimos com todas as políticas e regulamentos de privacidade aplicáveis",
+        "sup-plans-trial-subtitle4":"Garantimos que suas informações estejam seguras e que cumprimos com todas as políticas e regulamentos de privacidade aplicáveis",
         
         "sup-plans-form-label1":"Seu nome",
         "sup-plans-form-label2":"Cargo",
@@ -195,14 +195,14 @@
         "trial-title1":"Obtenha",
         "trial-title2":"Teste Grátis",
         "trial-title3":"para nossa plataforma de suporte",
-        "trial-desc1":"Preencha o formulário e obtenha acesso à nossa plataforma de emissão de bilhetes, garantindo o acesso ao nosso apoio especializado durante",
+        "trial-desc1":"Preencha o formulário e obtenha acesso à nossa plataforma de emissão de tickets, garantindo o acesso ao nosso apoio especializado durante",
         "trial-desc2":"teste de suporte de 15 dias",
-        "trial-desc3":"Com acesso à nossa plataforma de emissão de bilhetes, pode comunicar directamente com os nossos especialistas para resolver problemas de DevOps, automatização de aprovisionamento, gestão de API, dimensionamento de infra-estruturas de TI e muito mais através do nosso portal para programadores.",
-        "trial-desc4":"Garantimos que as suas informações estão seguras e que cumprimos todas as políticas e regulamentos de privacidade aplicáveis.",
+        "trial-desc3":"Com acesso à nossa plataforma de emissão de tickets, pode comunicar directamente com os nossos especialistas para resolver problemas de DevOps, automatização de aprovisionamento, gestão de API, dimensionamento de infra-estruturas de TI e muito mais através do nosso portal para programadores.",
+        "trial-desc4":"Garantimos que as suas informações estão seguras e que cumprimos todas as políticas e regulamentos de privacidade aplicáveis",
         "trial-dialog-title":"É ISSO!",
         "trial-dialog-desc1":"Os seus dados foram guardados com sucesso. Fique atento, nós iremos",
         "trial-dialog-desc2":"contactá-lo por e-mail",
-        "trial-dialog-desc3":"para lhe dar acesso à nossa plataforma de bilhetes.",
+        "trial-dialog-desc3":"para lhe dar acesso à nossa plataforma de tickets.",
         "trial-dialog-label":"Acesse a Página Inicial",
         
         "contact-us-title":"Descubra como podemos ajudar a sua empresa",
@@ -233,10 +233,10 @@
         "faq-answ5":"Oferecemos-lhe um teste de suporte de 15 dias, durante o qual o seu cartão não será debitado, e o valor do pacote escolhido só será cobrado após este período de teste.",
         "faq-answ6":"São modelos de funcionamento do suporte, o modelo 8x5, significa que a nossa disponibilidade de serviço é de 8 horas por dia nos 5 dias da semana, já o 24x7, segue a mesma lógica e é de 24 horas por dia nos 7 dias da semana, ou seja, o tempo inteiro.",
         "faq-answ7":"Pode encontrar-nos nas nossas redes sociais (instagram, linkedin e facebook), bem como na nossa comunidade no github, onde encontrará canais de interacção perfeitos para responder às suas perguntas e relacionar-se com o público tecnológico.",
-        "faq-answ8":"O nosso principal canal de contacto é a Discussão no Github, onde encontrará um canal dedicado ao feedback onde as suas críticas são genuinamente ouvidas. Pode também contactar-nos através de qualquer um dos nossos meios de comunicação, e ficaremos muito satisfeitos com a sua contribuição.",
+        "faq-answ8":"O nosso principal canal de contacto é a Discussão no Github, onde encontrará um canal dedicado ao feedback onde as suas críticas são genuinamente ouvidas. Pode também nos contatar através de qualquer um dos nossos meios de comunicação, e ficaremos muito satisfeitos com a sua contribuição.",
         "faq-answ9":"O Safira-CLI acelera a construção de APIs a partir de um arquivo OpenAPI. Seu objetivo é facilitar a rotina do desenvolvedor que tem uma longa curva de aprendizado para a construção de APIs customizadas de acordo com a demanda do mercado por robustez e tecnologia, que está embutida nas configurações do nosso produto ao gerar o modelo de projeto de API após alguns comandos no Safira CLI.",
         "faq-answ10":"A VKPR constrói para si uma infra-estrutura de nuvem com algumas linhas de código. Entendemos que há um mistério em torno do mundo do Devops e que há grandes desafios no provisionamento da nuvem. A VKPR abstrai as dificuldades do aprovisionamento e dá-lhe liberdade para criar a infra-estrutura quer em teste quer em produção.",
-        "faq-answ11":"DevPortal é uma plataforma que centraliza as suas Specs e APIs, facilitando o controlo dos microsserviços. Hoje entendemos que a arquitectura de microserviços é necessária para entregar valor aos nossos utilizadores. Devportal funciona como uma vitrine de especificações e APIs que facilitam o controlo e teste de serviços.",
+        "faq-answ11":"DevPortal é uma plataforma que centraliza as suas Specs e APIs, facilitando o controle dos microsserviços. Hoje entendemos que a arquitectura de microserviços é necessária para entregar valor aos nossos utilizadores. Devportal funciona como uma vitrine de especificações e APIs que facilitam o controle e teste de serviços.",
 
         "pricing-title":"Escolha o nosso suporte para você",
         "pricing-subtitle":"Não há mais stress com a transição digital, escolha o apoio que mais se adequa às suas necessidades:",
@@ -337,9 +337,9 @@
         "how-works-label":"Ver Planos",
 
         "validate-title1":"Ir para o",
-        "validate-desc1":"Preencha o formulário e conclua o processo de pagamento para obter acesso à nossa plataforma de emissão de bilhetes e contactar o nosso apoio especializado!",
+        "validate-desc1":"Preencha o formulário e conclua o processo de pagamento para obter acesso à nossa plataforma de emissão de tickets e contatar o nosso apoio especializado!",
         "validate-desc2":"Com acesso à nossa plataforma de emissão de tickets, pode comunicar diretamente com os nossos especialistas e resolver facilmente os seus problemas de DevOps, automatização de aprovisionamento, gestão de API, dimensionamento de infraestruturas de TI e muito mais através do nosso portal para programadores.",
-        "validate-desc3":"Tenha a certeza de que as suas informações estão seguras e que cumprimos todas as políticas e regulamentos de privacidade aplicáveis.",
+        "validate-desc3":"Tenha a certeza de que as suas informações estão seguras e que cumprimos todas as políticas e regulamentos de privacidade aplicáveis",
         
         "checkout-summary":"Resumo da compra",
         "checkout-sup-plan":"Plano de suporte:",

@@ -38,7 +38,7 @@
         {
             "id": 8,
             "title": "Tenho um feedback sobre um produto da Plataforma VeeCode, onde posso publicá-lo?",
-            "desc": "O nosso principal canal de contacto é a Discussão no Github, onde encontrará um canal dedicado ao feedback onde as suas críticas são genuinamente ouvidas. Pode também contactar-nos através de qualquer um dos nossos meios de comunicação, e ficaremos muito satisfeitos com a sua contribuição."
+            "desc": "O nosso principal canal de contacto é a Discussão no Github, onde encontrará um canal dedicado ao feedback onde as suas críticas são genuinamente ouvidas. Pode também contatar-nos através de qualquer um dos nossos meios de comunicação, e ficaremos muito satisfeitos com a sua contribuição."
         },
         {
             "id": 9,
@@ -53,7 +53,7 @@
         {
             "id": 11,
             "title": "O que é o DevPortal? Para que serve?",
-            "desc": "DevPortal é uma plataforma que centraliza as suas Specs e APIs, facilitando o controlo dos microsserviços. Hoje entendemos que a arquitectura de microserviços é necessária para entregar valor aos nossos utilizadores. Devportal funciona como uma vitrine de especificações e APIs que facilitam o controlo e teste de serviços."
+            "desc": "DevPortal é uma plataforma que centraliza as suas Specs e APIs, facilitando o controle dos microsserviços. Hoje entendemos que a arquitectura de microserviços é necessária para entregar valor aos nossos utilizadores. Devportal funciona como uma vitrine de especificações e APIs que facilitam o controle e teste de serviços."
         }
     ],
     "en": [

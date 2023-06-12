@@ -33,7 +33,7 @@
         "id": 0,
         "image": "/assets/home/toolsDetails/image1.png",
         "title": "Devportal",
-        "desc": "Uma plataforma que centraliza os seus Specs e APIs, facilitando o controlo dos microsserviços.",
+        "desc": "Uma plataforma que centraliza os suas Specs e APIs, facilitando o controle dos microsserviços.",
         "buttonLabel": "Devportal",
         "link": "https://docs.platform.vee.codes/devportal/intro/",
         "tag": "devportal"
@@ -51,7 +51,7 @@
         "id": 2,
         "image": "/assets/home/toolsDetails/image4.png",
         "title": "Join Us",
-        "desc": "Aumente a sua produtividade e ajude a comunidade a crescer.",
+        "desc": "Aumente a sua produtividade e ajude a comunidade crescer.",
         "buttonLabel": "Join Us",
         "link": "https://github.com/orgs/veecode-platform/discussions",
         "tag": "joinUs"
