@@ -23,7 +23,7 @@ const WraperButton = ({plan, disabled, planName, price}) =>{
 
     if(isRejected){
         return(
-            <div>erro</div>
+            <div style={{color:"white"}}>erro</div>
         )
     }
 

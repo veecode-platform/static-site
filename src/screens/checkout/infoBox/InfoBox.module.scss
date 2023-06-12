@@ -60,6 +60,7 @@
         &-item{
             @include displayFlex(flex-start, center, row);
             gap: 0.5vw;
+            color: $color2;
         }
     }
 }
