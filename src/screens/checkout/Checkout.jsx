@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import style from "../../../styles/Checkout.module.scss";
-import { Breadcrumb, DefaultPage, Switch, Loading, Paypal } from "../../components";
+import { Breadcrumb, DefaultPage, Switch, Loading, Paypal, Footer, Header } from "../../components";
 import storage from "../../../utils/storage";
 import InfoBox from "./infoBox";
 
@@ -84,12 +84,9 @@ const Checkout = () => {
   }
 
   return (
-    <DefaultPage
-      titleBar="disable"
-      noBack
-      noFooter
-    >
+    
       <section className={style.wrapper}>
+        <Header/>
         <article className={style.content}>
           <Breadcrumb active={3} />
           <div className={style.content__options}>
@@ -118,8 +115,9 @@ const Checkout = () => {
             </div>
           </div>
         </article>
+      <Footer />
+
       </section>
-    </DefaultPage>
   );
 };
 

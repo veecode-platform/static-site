@@ -1,7 +1,7 @@
 @import "../abstract/functions", "../abstract/variables", "../abstract/responsive";
 
 .wrapper {
-    @include screenSize(100vw, 100vh);
+    @include screenSize(100vw, auto);
     @include displayFlex(flex-start, center, column);
     background-color: $color9;
 
@@ -12,7 +12,7 @@
     .content {
         @include screenSize(80%, auto);
         @include displayFlex(center, center, column);
-
+        margin: 3em 0;
         // color: $color2; 
         //viewport
         @include for-viewport-only {
