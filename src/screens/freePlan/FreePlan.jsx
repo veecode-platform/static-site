@@ -12,8 +12,11 @@ import DialogTitle from '@mui/material/DialogTitle';
 import Link from "next/link";
 import CloseIcon from '@mui/icons-material/Close';
 import IconButton from '@mui/material/IconButton';
+import TagManager from "react-gtm-module";
+import { useTranslation } from 'react-i18next';
 
 const FreePlan = () => {
+    const { t }= useTranslation();
     const router = useRouter()
     const plan = router.query.plan;
 
@@ -36,10 +39,10 @@ const FreePlan = () => {
     }, []);
 
     const formSchema = object({
-        name: string().required("*required"),
-        company: string().required("*required"),
-        email: string().email("*invalid email").required("*required"),
-        title: string().required("*required"),
+        name: string().required(t("required")),
+        company: string().required(t("required")),
+        email: string().email(t("invalid-email")).required(t("required")),
+        title: string().required(t("required")),
         terms: boolean().isTrue()
     });
 
@@ -53,6 +56,16 @@ const FreePlan = () => {
         await router.push("https://docs.platform.vee.codes/")
     }
 
+    const tagManagerArgs = {
+        gtmId: 'GTM-56RG967',
+        events: {
+            generateLead: {
+                currency: "USD",
+                value: 1,
+            }
+        }
+    }
+
     return (
         <DefaultPage
             titleBar="disable"
@@ -64,16 +77,16 @@ const FreePlan = () => {
                     <article className={style.content}>
                         <div className={style.text}>
                             <div className={style.text__header}>
-                                <h2>Start your journey with our <strong><span>Free Solution</span></strong></h2>
+                                <h2>{t("free-plan-title1")} <strong><span>{t("free-plan-title2")}</span></strong></h2>
                             </div>
                             <div className={style.text__resume}>
                                 <p>
-                                    As a free user, you&apos;ll have access to <strong>support from our community forum</strong> on GitHub. Embark on a journey with our powerful <strong>Developer Portal</strong> solution, designed specifically for users on our free plan.<br /><br />
-                                    Our user-friendly platform provides streamlined API automation, Pipelines, and more to help solve your business problems and take your business to the next level.<br /><br />
-                                    Fill out the form below to get started and gain access to our documentation to begin your journey right away.<br /><br />
+                                    {t("free-plan-desc1")} <strong>{t("free-plan-desc2")}</strong> {t("free-plan-desc3")} <strong>{t("developer-portal")}</strong> {t("free-plan-desc4")}<br /><br />
+                                    {t("free-plan-desc5")}<br /><br />
+                                    {t("free-plan-desc6")}<br /><br />
                                 </p>
                             </div> 
-                        </div>
+                        </div> 
                         <div className={style.content__options}>
                             <div className={style["content__options-formWraper"]}>
                                 <Formik
@@ -82,6 +95,7 @@ const FreePlan = () => {
                                     onSubmit={async(values) => {
                                         const response = await UseContactData(values);
                                         // setOpen(true);
+                                        TagManager.initialize(tagManagerArgs);
                                         await handleFormRedirect();
                                     }}
 
@@ -89,12 +103,12 @@ const FreePlan = () => {
                                     {({ errors, touched, handleSubmit, isSubmitting }) => (
 
                                         <Form onSubmit={handleSubmit} className={style.form}>
-                                            <Input name="name" placeholder="First and last name" label="Your name" error={(errors.name && touched.name) && errors.name} />
-                                            <Input name="title" placeholder="Sr Engineer" label="Title" error={(errors.title && touched.title) && errors.title} />
-                                            <Input name="company" placeholder="Acme, Inc." label="Company / Organization" error={(errors.company && touched.company) && errors.company} />
-                                            <Input name="email" placeholder="you@acme.com" label="Business Email" error={(errors.email && touched.email) && errors.email} />
+                                            <Input name="name" placeholder={t("sup-plans-form-placeholder1")} label={t("sup-plans-form-label1")} error={(errors.name && touched.name) && errors.name} />
+                                            <Input name="title" placeholder={t("sup-plans-form-placeholder2")} label={t("sup-plans-form-label2")} error={(errors.title && touched.title) && errors.title} />
+                                            <Input name="company" placeholder={t("sup-plans-form-placeholder3")} label={t("sup-plans-form-label3")} error={(errors.company && touched.company) && errors.company} />
+                                            <Input name="email" placeholder={t("sup-plans-form-placeholder4")} label={t("sup-plans-form-label4")} error={(errors.email && touched.email) && errors.email} />
                                             <Checkbox name="terms" terms error={(errors.terms && touched.terms) && errors.terms} />
-                                            <div className={style.form__buttonWrapper}><Button type="submit" loading={isSubmitting}>Confirm</Button></div>
+                                            <div className={style.form__buttonWrapper}><Button type="submit" loading={isSubmitting}>{t("confirm")}</Button></div>
 
                                             <Dialog
                                                 fullWidth

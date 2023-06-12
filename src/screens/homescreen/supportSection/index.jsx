@@ -3,14 +3,14 @@ import Image from "next/image";
 import Link from "next/link";
 import { Button } from "../../../components";
 import style from "./SupportSection.module.scss";
-// import { useTranslation } from 'react-i18next';
+import { useTranslation } from 'react-i18next';
 import TextSlide from "./textSlide";
 
 const BgDesktop = "/assets/home/bg3.webp";
 const BgMobile = "/assets/home/bgmobile2.webp";
 
 const SupportSection = () => {
-  // const { t } = useTranslation();
+  const { t } = useTranslation();
 
   return (
     <section className={style.wrapper}>
@@ -31,18 +31,18 @@ const SupportSection = () => {
         <div className={style.content__text}>
           <div className={style["content__text-title"]}>
             <h1>
-              We provide <strong>instant support</strong> on
+              {t("home-support-title1")} <strong> {t("home-support-title2")}</strong> {t("home-support-title3")}
               <TextSlide />
             </h1>
           </div>
           <div className={style["content__text-desc"]}>
-            <strong>Benefits of VeeCode Platform support</strong>
+            <strong>{t("home-support-subtitle1")}</strong>
             <ul className={style.list}>
-              <li>Direct assistance to your technical team.</li>
-              <li>Get the best technology support on hand.</li>
-              <li>Service with established SLA.</li>
-              <li>Most affordable price on the market.</li>
-              <li>Solve all of your problems with Devops, IaC, Cloud, Microsservices and more.</li>
+              <li>{t("home-support-option1")}</li>
+              <li>{t("home-support-option2")}</li>
+              <li>{t("home-support-option3")}</li>
+              <li>{t("home-support-option4")}</li>
+              <li>{t("home-support-option5")}</li>
             </ul>
           </div>
           <div className={style["content__text-buttonWrapper"]}>
@@ -54,7 +54,7 @@ const SupportSection = () => {
             </Link> */}
             <Link href="/trial" prefetch={false}>
               <a>
-                <Button>Support Trial</Button>
+                <Button>{t("support-trial")}</Button>
               </a>
             </Link>
           </div>

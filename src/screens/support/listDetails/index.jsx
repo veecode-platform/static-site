@@ -1,10 +1,14 @@
+import { useTranslation } from 'react-i18next';
 import { FaCheck } from 'react-icons/fa';
 import style from './ListDetails.module.scss';
 
 const ListDetails = () => {
+
+  const { t } = useTranslation();
+
   return (
     <article className={style.wrapper} >
-        <h3 className={style.title}>Our experts are ready to help you with</h3>
+        <h3 className={style.title}>{t("support-list-details-title")}</h3>
         <div className={style.details}>
             <ul className={style.details__list}>
                 <li className={style["details__list-item"]}> 

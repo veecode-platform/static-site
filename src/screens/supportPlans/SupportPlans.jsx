@@ -3,18 +3,24 @@ import style from "../../../styles/SupportPlans.module.scss";
 import SupportSection from "./supportSection";
 import data from "./data.json";
 import FirstSection from "./firstSection";
-import FooterSection from "./footer";
-import HeaderSection from "./header";
 import Trial from "./trial";
-import { WhatsApp } from "../../components";
+import { Footer, Header, WhatsApp } from "../../components";
+import i18n from 'i18next';
 
 const SupportPlans = () => {
+
+  let items = [];
+
+  i18n.language == 'pt' ? items = data.pt : items = data.en;
+  console.log('lng', i18n.language)
+
+  console.log('items:', items)
   return (
     <main className={style.wrapper}>
-      <HeaderSection showButton/>
+      <Header showOptions fixedHeader></Header>
       <FirstSection />
       <section className={style.stacks}>
-      {data.map((item) => {
+      {items.map((item) => {
         return (
           <SupportSection
             key={item.title}
@@ -29,7 +35,7 @@ const SupportPlans = () => {
       </section>
       <Trial />
       <WhatsApp />
-      <FooterSection />
+      <Footer />
     </main>
   );
 };

@@ -1,7 +1,9 @@
 import { DefaultPage, ScrollTop } from "../../components";
 import style from '../../../styles/TermsOfService.module.scss';
+import { useTranslation } from "react-i18next";
 
 const TermsOfService = () => {
+  const { t } = useTranslation();
   return (
     <DefaultPage 
       title="Terms Of Service" 

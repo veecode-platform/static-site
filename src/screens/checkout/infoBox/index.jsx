@@ -1,22 +1,25 @@
 import React from 'react';
 import { FaCheck } from 'react-icons/fa';
 import style from './InfoBox.module.scss';
+import { useTranslation } from 'react-i18next';
 
 const InfoBox = ({info, billing,formatter,getDateFormatted}) => {
+
+  const { t } = useTranslation(); 
 
   return (
    <div className={style.content}>
         <div className={style.content__title}>
-                  <h2>Order summary</h2>
+                  <h2>{t("checkout-summary")}</h2>
                 </div>
 
                 <div className={style.content__info}>
                   <div className={style["content__info-letterWrapper"]}>
                     <div className={style.left}>
-                      <p>Support plan: <strong>{info.plan} </strong></p>
+                      <p>{t("checkout-sup-plan")} <strong>{info.plan} </strong></p>
                     </div>
                     <div className={style.right}>
-                      <p>{info.price}/mo</p>
+                      <p>{info.price}/{t("checkout-mo")}</p>
                     </div>
                   </div>
 
@@ -38,7 +41,7 @@ const InfoBox = ({info, billing,formatter,getDateFormatted}) => {
 
                 <div className={style.content__info}>
                   <div>
-                    <p>Up to 2 tickets simultaneously</p>
+                    <p>{t("checkout-tickets")}</p>
                   </div>
                 </div>
 
@@ -54,7 +57,7 @@ const InfoBox = ({info, billing,formatter,getDateFormatted}) => {
 
                   <div className={style["content__info-letterWrapper"]}>
                     <div className={style.left}>
-                      <p>Due {billing ? "yearly" : "monthly"}:</p>
+                      <p>{t("checkout-due")} {billing ? t("checkout-year") : t("checkout-monthly") }:</p>
                     </div>
                     <div className={style.right}>
                       <p>
@@ -65,7 +68,7 @@ const InfoBox = ({info, billing,formatter,getDateFormatted}) => {
 
                   {!billing && <div className={style["content__info-letterWrapper"]}>
                     <div className={style.left}>
-                      <p >Yearly: </p>   
+                      <p>{t("checkout-year")}: </p>   
                     </div>
                     <div className={style.right}>
                       <p style={{color:"red"}}><strong>{info.priceA}</strong></p>
@@ -75,7 +78,7 @@ const InfoBox = ({info, billing,formatter,getDateFormatted}) => {
 
                   <div className={style["content__info-letterWrapper"]} style={{marginTop: "1em"}}>
                     <div className={style.center}>
-                      <p>Billed {billing ? "yearly" : "monthly" } on the <strong>{getDateFormatted(billing)}</strong></p>
+                      <p>{t("checkout-billed1")} {billing ? t("checkout-year") : t("checkout-monthly") } {t("checkout-billed2")} <strong>{getDateFormatted(billing)}</strong></p>
                     </div>                
                   </div>
                 </div>
@@ -88,7 +91,7 @@ const InfoBox = ({info, billing,formatter,getDateFormatted}) => {
 
                   <div className={style["content__guarantee-item"]}>
                     <FaCheck color="#33FFCE" />
-                    <p>Annual contract</p>
+                    <p>{t("checkout-contract")}</p>
                   </div>
                 </div>         
    </div>
