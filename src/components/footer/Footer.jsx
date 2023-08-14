@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import style from "../../../styles/Footer.module.scss";
-import { FaDiscord, FaFacebookSquare, FaGooglePlusSquare, FaInstagram, FaLinkedin, FaTwitterSquare } from "react-icons/fa";
+import { FaDiscord, FaFacebookSquare, FaGooglePlusSquare, FaInstagram, FaLinkedin, FaTwitterSquare, FaYoutube } from "react-icons/fa";
 import Link from "next/link";
 import { gtagEvents } from "../../../utils/gtag";
 import { useTranslation } from 'react-i18next';
@@ -42,6 +42,13 @@ const Footer = () => {
               </li>
               <li>
                 <Link href="https://discord.gg/pREwxeVzAD" passHref><a target="_blank"><FaDiscord /></a></Link>
+              </li>
+              <li>
+                <Link href="https://www.youtube.com/@veecodeplatform-br" passHref>
+                  <a target="_blank">
+                    <FaYoutube />
+                  </a>
+                </Link>
               </li>
             </ul>
         </div>
