@@ -4,162 +4,199 @@
     @include screenSize(100%, auto);
     @include displayFlex(center, center, row);
     @include backgroundImage("/assets/home/bg2.webp");
+    margin-top: 108px;
 
     padding: 1.5em 0 5em 0;
+
     //tablet
-    @include for-tablet-only{
-     padding: 3em 0 4em 0;
-     }
+    @include for-tablet-only {
+        padding: 3em 0 4em 0;
+    }
+
     //tablet
-    @include for-tablet-only{
+    @include for-tablet-only {
         margin-top: -2.5em;
     }
-    &__contentWrapper {
+
+    &_contentWrapper {
         @include screenSize(80%, auto);
         @include displayFlex(space-between, center, row-reverse);
+        padding: 4rem 0;
 
         //mobile
-        @include for-phone-only{
+        @include for-phone-only {
             @include displayFlex(center, center, column-reverse);
         }
-        
-       &-text{
-        @include screenSize(40%, auto);
-        @include displayFlex(center, flex-end, column);
-        padding-top: 2em;
 
-        //mobile(M)
-        @include for-phone-only{
-            @include displayFlex(center, center, column);
-            @include screenSize(80%, auto);
-            padding: 0em;
-        }
-        //mobile(S)
-        @include for-phoneS-only{
-            @include screenSize(90%, auto);
-        }
+        &-text {
+            @include screenSize(40%, auto);
+            @include displayFlex(center, flex-end, column);
+            padding-top: 2em;
 
-        .title {
-            @include screenSize(100%, auto);
-            margin: auto;
-
-            //tablet
-            @include for-tablet-only {
-                padding: 6em 0 0 0;
-            }
             //mobile(M)
             @include for-phone-only {
-                @include screenSize(100%, auto);
-                padding: 2em 0;
-            }
-
-            h2 {
-
-                @include typography(2.8vw, end, 1.3em, 400);
-                color: $color2;
-                //mobile(M)
-                @include for-phone-only {
-                    font-size: 7vw;
-                    text-align: center;
-                }
-                //mobile(S)
-                @include for-phoneS-only {
-                    font-size: 11vw;
-                    strong{
-                        font-size: 11vw;
-                    }
-                }
-            }
-        }
-
-        .details {
-            @include screenSize(90%, auto);
-            @include displayFlex(center, flex-start, column);
-            padding-top: 3em;
-            //tablet
-            @include for-tablet-only{
-                padding: 1.8em 0;
-                }
-            //mobile(M)
-            @include for-phone-only {
-                @include screenSize(100%, auto);
                 @include displayFlex(center, center, column);
-                padding: 1em 0;
+                @include screenSize(80%, auto);
+                padding: 0em;
             }
+
             //mobile(S)
             @include for-phoneS-only {
-                @include screenSize(95%, auto);
-                padding: .5em 0;
+                @include screenSize(90%, auto);
             }
-            &__text {
-                @include screenSize(100%,auto);
-                @include displayFlex(flex-start,center,row);
-                //viewport
-                @include for-viewport-only{
-                    @include displayFlex(flex-end,center,row);
+
+            .title {
+                @include screenSize(100%, auto);
+                margin: auto;
+
+                //tablet
+                @include for-tablet-only {
+                    padding: 6em 0 0 0;
                 }
-                p {
-                    @include typography(1.07vw, end, 1.5em, 300);
+
+                //mobile(M)
+                @include for-phone-only {
+                    @include screenSize(100%, auto);
+                    padding: 2em 0;
+                }
+
+                h2 {
+
+                    @include typography(3.9rem, end, 1.3em, 400);
                     color: $color2;
-                    //viewport
-                    @include for-viewport-only{
-                        @include screenSize(90%, auto);
-                        font-size: 1.3vw;
+
+                    strong{
+                        display: block;
                     }
+
                     //mobile(M)
                     @include for-phone-only {
-                        @include typography(2.6vw, center, 1.4em, 300);
+                        font-size: 7vw;
+                        text-align: center;
                     }
+
                     //mobile(S)
                     @include for-phoneS-only {
-                        font-size: 4vw;
-                    }
-                }
-            }
-            &__buttonWrapper {
-                width: 100%;
+                        font-size: 11vw;
 
-                @include displayFlex(flex-end, center, row);
-                margin-top: 4em;
-                align-self: flex-end;
-                //viewport
-                @include for-viewport-only{
-                    margin-top: 2em;
-                }
-                //tablet
-                @include for-tablet-only{
-                    width: 92%;
-                    align-self: end;
-                    .button {
-                        padding: 0.5em;
+                        strong {
+                            font-size: 11vw;
+                        }
                     }
                 }
+            }
+
+            .details {
+                @include screenSize(90%, auto);
+                @include displayFlex(center, flex-start, column);
+                padding-top: 3em;
+
+                //tablet
+                @include for-tablet-only {
+                    padding: 1.8em 0;
+                }
+
                 //mobile(M)
-                @include for-phone-only{
-                    width: 100%;
+                @include for-phone-only {
+                    @include screenSize(100%, auto);
                     @include displayFlex(center, center, column);
+                    padding: 1em 0;
+                }
+
+                //mobile(S)
+                @include for-phoneS-only {
+                    @include screenSize(95%, auto);
+                    padding: .5em 0;
+                }
+
+                &_text {
+                    @include screenSize(100%, auto);
+                    @include displayFlex(flex-start, center, row);
+
+                    //viewport
+                    @include for-viewport-only {
+                        @include displayFlex(flex-end, center, row);
+                    }
+
+                    p {
+                        @include typography(1.4rem, end, 1.5em, 300);
+                        color: $color2;
+
+                        strong{
+                            color: $color1;
+                        }
+
+                        //viewport
+                        @include for-viewport-only {
+                            @include screenSize(90%, auto);
+                            font-size: 1.3vw;
+                        }
+
+                        //mobile(M)
+                        @include for-phone-only {
+                            @include typography(2.6vw, center, 1.4em, 300);
+                        }
+
+                        //mobile(S)
+                        @include for-phoneS-only {
+                            font-size: 4vw;
+                        }
+                    }
+                }
+
+                &_buttonWrapper {
+                    width: 100%;
+
+                    @include displayFlex(flex-end, center, row);
+                    margin-top: 4em;
+                    align-self: flex-end;
+
+                    //viewport
+                    @include for-viewport-only {
+                        margin-top: 2em;
+                    }
+
+                    //tablet
+                    @include for-tablet-only {
+                        width: 92%;
+                        align-self: end;
+
+                        .button {
+                            padding: 0.5em;
+                        }
+                    }
+
+                    //mobile(M)
+                    @include for-phone-only {
+                        width: 100%;
+                        @include displayFlex(center, center, column);
+                    }
                 }
             }
         }
-    }
-    
-    &-image {
-        @include screenSize(65%, 50%);
-        @include displayFlex(center, center, row);
-        padding: 1em 0 1em 0;
-        //mobile(M)
-        @include for-phone-only{
-            @include screenSize(90%, auto);
-            padding: 2em 0 1em 0;
-        }
-        .image {
-            @include screenSize(100%, auto);
-            
+
+        &-image {
+            @include screenSize(60%, 100%);
+            @include displayFlex(center, center, row);
+            padding: 1em 0 1em 0;
+
             //mobile(M)
-            @include for-phone-only{
-                width: 90%;
+            @include for-phone-only {
+                @include screenSize(90%, auto);
+                padding: 2em 0 1em 0;
+            }
+
+            .image {
+                @include screenSize(100%, 600px);
+                // object-fit: cover;
+                border-radius: 8px;
+                @include shadowSpecial();
+
+                //mobile(M)
+                @include for-phone-only {
+                    width: 90%;
+                }
             }
         }
-       }
     }
 }
