@@ -63,7 +63,7 @@
 
                 h2 {
 
-                    @include typography(3.9rem, end, 1.3em, 400);
+                    @include typography($titleMain, end, 1.3em, 400);
                     color: $color2;
 
                     strong {
@@ -126,7 +126,7 @@
                     }
 
                     p {
-                        @include typography(1.4rem, end, 1.5em, 300);
+                        @include typography($text, end, 1.5em, 300);
                         color: $color2;
 
                         strong {
