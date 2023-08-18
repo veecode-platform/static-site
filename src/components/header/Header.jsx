@@ -72,7 +72,7 @@ const Header = ({ fixedHeader, showButton, showOptions }) => {
 
             <IconButton
               size="large"
-              edge="center"
+              edge={false}
               aria-label="menu"
               onClick={toggleDrawer(open)}
             >
