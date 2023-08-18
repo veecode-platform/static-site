@@ -111,9 +111,9 @@ const Header = ({ fixedHeader, showButton, showOptions }) => {
                     </ListItemText>
                   </Link>
 
-                  <Link href="/trial" passHref>
+                  <Link href="https://docs.platform.vee.codes/devportal/self-service-demo/prerequisites" passHref>
                     <ListItemText disableTypography sx={{ fontFamily: "Poppins, sans-serif", fontWeight: 400, margin: "0.8em 0" }}>
-                      {'Support Trial'.toUpperCase()}
+                      {'Get a Demo'.toUpperCase()}
                     </ListItemText>
                   </Link>
 
@@ -162,9 +162,9 @@ const Header = ({ fixedHeader, showButton, showOptions }) => {
           </div>}
 
           {showButton && <div className={style.nav__buyButton} >
-            <Link href="/trial" passHref>
+            <Link href="https://docs.platform.vee.codes/devportal/self-service-demo/prerequisites" passHref>
               <a>
-                <Button headerButton>{t("support-trial")}</Button>
+                <Button headerButton>{t("get-a-demo")}</Button>
               </a>
             </Link>
           </div>}
