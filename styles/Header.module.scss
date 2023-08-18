@@ -67,7 +67,7 @@
         }
 
         &__logo {
-            @include screenSize(12vw, auto);
+            @include screenSize(11.5vw, auto);
             min-width: 100px;
 
             //tablet
