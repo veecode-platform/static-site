@@ -30,14 +30,12 @@
         "home-optimize-subtitle5":"quickly deployed as your own Developer Portal in minutes.",
         "home-optimize-button-label":"Start Now",
 
-        "home-tools-details-title1":"Discover our",
-        "home-tools-details-title2":"Free Tools",
-        "home-tools-details-subtitle1":"With our ",
-        "home-tools-details-subtitle2":"Support ",
-        "home-tools-details-subtitle3":"and our ",
-        "home-tools-details-subtitle4":"Open Source tools ",
-        "home-tools-details-subtitle5":"your team is free to serve your business areas",
-        
+        "home-tools-details-title1":"",
+        "home-tools-details-title2":"Backstage ",
+        "home-tools-details-title3":"adoption is challenging, since it requires coding and non-trivial configuration to make it work even on simple setups.",
+        "home-tools-details-subtitle1":"Try it yourself, right now and for free",
+        "home-tools-details-button-label":"Download Devportal",
+
         "home-tools-details-item1-button-label":"Devportal",
         "home-tools-details-item1-button-description":"Is a platform that centralizes your Specs and APIs making it easy to control microservices.",
 

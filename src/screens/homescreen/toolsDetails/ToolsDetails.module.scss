@@ -7,86 +7,160 @@
     @include displayFlex(center, center, column);
     position: relative;
 
+    //viewport
+    @include for-viewport-only{
+        padding: 8rem 0 8rem 0
+    }
+
     //mobile
     @include for-phone-only {
         padding: 8em 0;
     }
 
-    &__title {
-        @include screenSize(100%, auto);
-        padding-bottom: 2.5em;
+    &_title {
+        @include screenSize(60%, auto);
+        padding-bottom: 4rem;
+        margin-right: 10%;
+        align-self: flex-end;
 
         span {
             color: $color16;
         }
 
+        //viewport
+        @include for-viewport-only{
+            width: 70%;
+        }
+
         //tablet
         @include for-tablet-only {
-            @include screenSize(80%, auto);
+            @include screenSize(75%, auto);
             padding-bottom: 1em;
+        }
+
+        //tabletS
+        @include for-tabletS-only{
+            width: 80%;
         }
 
         //mobile(M)
         @include for-phone-only {
-            @include screenSize(50%, auto);
+            @include screenSize(70%, auto);
+            margin: auto;
         }
 
         //mobile(S)
         @include for-phoneS-only {
-            @include screenSize(70%, auto);
+            @include screenSize(80%, auto);
         }
 
         h2 {
-            @include typography(2.8vw, center, 1.3em, 600);
+            @include typography(2.5rem, right, 1.3em, 500);
             color: $color9;
 
-            //mobile(M)
-            @include for-phone-only {
-                font-size: 7vw;
+            //viewport
+            @include for-viewport-only{
+                font-size: 2rem;
             }
 
-            //mobile(S)
-            @include for-phoneS-only {
-                font-size: 11vw;
+            //tablet
+            @include for-tablet-only{
+                font-size: 2rem;
+                text-align: center;
             }
+
+            //mobile
+            @include for-phone-only{
+                font-size: 1.8rem;
+            }
+
         }
     }
 
+    &_iconCubes {
+        position: absolute;
+        width: 700px;
+        left: -2%;
+        bottom: 35%;
 
+        //viewport
+        @include for-viewport-only{
+          width: 600px;
+          bottom: 40%;
+        }
 
-    &__wrapper {
-        @include screenSize(80vw, auto);
-        @include displayFlex(center, flex-start, row);
+        //tablet
+        @include for-tablet-only{
+          width: 700px;
+          left: -5%;
+          bottom: 30%;
+        }
+
+        //mobile
+        @include for-phone-only{
+          width: 500px;
+        }
+    }
+
+    &_wrapper {
+        @include screenSize(65%, auto);
+        @include displayFlex(flex-start, flex-start, row);
+        align-self: flex-end;
 
         // tablet
         @include for-tablet-only {
-            @include displayFlex(center, center, column);
+            @include displayFlex(center, flex-start, column);
+            width: 60%;
         }
 
         //mobile
         @include for-phone-only {
-            grid-template: 1fr/1fr;
+            width: 80%;
             justify-content: center;
             align-items: center;
+            align-self: center;
             gap: 0;
         }
 
+        &-cards {
+            @include screenSize(85%, auto);
+            padding: 2rem 0;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            align-items: flex-start;
+            gap: 2rem;
+            justify-content: flex-end;
+
+            // tablet
+            @include for-tablet-only {
+                @include screenSize(85%, auto);
+                @include displayFlex(center, center, column);
+            }
+
+            //mobileS
+            @include for-phoneS-only{
+                width: 100%;
+            }
+        }
+
         &-subtitle {
-            @include screenSize(50%, auto);
-            @include displayFlex(center, center, column);
-            margin: 1em;
+            @include screenSize(85%, auto);
+            @include displayFlex(center, flex-start, column);
+            margin-top: -8em;
             padding-bottom: 3em;
+            gap: 1.5rem;
 
             p {
-                @include typography(1.8vw, start, auto, 500);
-                color: $color4;
-
+                @include typography(1.7rem, start, auto, 500);
+                color: $color3;
+                
+                //tablet
                 @include for-tablet-only {
-                    @include typography(2vw, center, auto, 500);
+                    @include typography(1.5rem, center, auto, 500);
                 }
-
-                @include for-phone-only {
-                    font-size: 5vw;
+                //mobileS
+                @include for-phoneS-only{
+                    font-size: 1.3rem;
                 }
             }
 
@@ -106,52 +180,45 @@
 
             // tablet
             @include for-tablet-only {
+                margin-top: 3rem;
+                align-items: center;
                 @include screenSize(80%, auto);
-                @include displayFlex(center, center, column-reverse);
-
+                padding-bottom: 0;
             }
 
             //mobile
             @include for-phone-only {
                 @include screenSize(100%, auto);
-
-                font-size: 3vw;
                 padding: 0 1em;
-                padding-bottom: 2em;
             }
 
-            //mobile(S)
-            @include for-phoneS-only {
-                font-size: 18px;
-            }
-        }
-
-        &-cards {
-            @include displayFlex(center, center, column);
-            @include screenSize(50%, auto);
-
-            @include for-tablet-only {
-                @include screenSize(100%, auto);
-                @include displayFlex(center, center, column);
-            }
         }
 
     }
 
 
     .card {
-        @include displayFlex(space-between, center, row);
-        @include screenSize(90%, auto);
-        padding: 1em .5em;
-        margin: 1.5em .8em;
+        @include displayFlex(center, center, row);
+        @include screenSize(100%, 200px);
+        padding: 3em;
         background: #f5f5f5;
         border-radius: 24px;
         border: 2px solid transparent;
         filter: drop-shadow(5px 5px 3px $color1);
 
+        &:last-child {
+            grid-column: 2;
+        }
+
+        //viewport
+        @include for-viewport-only{
+            height: 250px;
+        }
+
+        // tablet
         @include for-tablet-only {
-            @include displayFlex(space-between, center, row);
-            @include screenSize(80%, auto);
+            @include displayFlex(center, center, row);
+            @include screenSize(100%, auto);
         }
 
         @include for-phone-only {
@@ -160,104 +227,31 @@
 
         }
 
-        @include for-phoneS-only {}
+        p {
+            text-align: center;
+            font-size: 1.15rem;
 
-        @include for-phoneXS-only {}
-
-        &__item {
-            @include screenSize(28%, auto);
-            @include displayFlex(flex-start, center, column);
-
-            @include for-phone-only {}
-
-            img {
-                width: 4vw;
-
-                @include for-tablet-only {
-                    width: 6vw;
-                }
-
-                @include for-phone-only {
-                    display: none;
-                }
-            }
-
-            &-btn {
-                @include displayFlex(center, center, row);
-                outline: none;
-                margin-top: 0.3em;
-                padding: 0.9em 1em;
-                font-size: 1vw;
-                border-radius: 1.5em;
-                border: 2px solid $color1;
-                color: $color3;
-                cursor: pointer;
-                font-weight: 600;
-                background: $color1;
-                transition: all 0.5s linear;
-                min-width: 8vw;
-
-                &:hover:not([disabled]) {
-                    background: transparent;
-                    color: $color1;
-                    transition: all 0.4s linear;
-                    font-weight: 800;
-                    -webkit-transform: scale(0.8);
-                    transform: scale(0.8);
-                }
-
-                @include for-tablet-only {
-                    margin-top: .8em;
-                    min-width: 10vw;
-                }
-
-                //mobile(M)
-                @include for-phone-only {
-                    font-size: 1em;
-                    margin: 0.5em;
-                    min-width: 50vw;
-                    border-radius: 1.1em;
-                }
-
-                //mobile(S)
-                @include for-phoneS-only {
-                    font-size: .9em;
-                    margin: 0.8em 0;
-                    min-width: 60vw;
-                    border-radius: 1.3em;
-                }
-            }
-
+           //viewport
+           @include for-viewport-only{
+            font-size: 1rem;
+          }
         }
+    }
 
-        &__desc {
-            @include screenSize(65%, auto);
-            @include displayFlex(flex-start, center, row);
+    .button{
+        background: $color1;
+        border: none;
+        padding: 1.5rem 4rem;
+        font-size: 1.2rem;
+        font-weight: 600;
+        border-radius: 14px;
+        @include boxShadow2();
+        cursor: pointer;
+        transition: all .5s ease-in-out;
 
-            @include for-phone-only {
-                @include screenSize(80%, auto);
-            }
-
-            @include for-phoneS-only {
-                @include screenSize(90%, auto);
-            }
-
-            p {
-                @include for-phone-only {
-                    @include screenSize(100%, auto);
-                    @include typography(4vw, center, auto, 400);
-                    padding: 1em 0;
-                }
-
-                @include for-phoneS-only {
-                    font-size: 4.8vw;
-                }
-
-                @include for-phoneXS-only {
-                    font-size: 6vw;
-                }
-            }
-
+        &:hover{
+            transition: all .5s ease-in;
+            transform: scale(1.05);
         }
     }
 }
