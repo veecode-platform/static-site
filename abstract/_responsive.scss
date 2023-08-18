@@ -14,7 +14,7 @@
 
 //Phone (S)
 @mixin for-phoneS-only {
-    @media (max-width: 420px) {
+    @media (max-width: 500px) {
         @content;
     }
 }
@@ -42,7 +42,7 @@
 
 //viewport(XL)
 @mixin for-viewport-only {
-    @media (max-width: 1300px) {
+    @media (max-width: 1500px) {
         @content;
     }
 }
