@@ -40,9 +40,14 @@ const ToolsDetails = () => {
 
       <div className={style["content_wrapper-subtitle"]}>
           <p>{t("home-tools-details-subtitle1")} </p>
-          <button
-           className={style.button} 
-           >{t("home-tools-details-button-label")}</button>      
+          <Link href="https://docs.platform.vee.codes/devportal/self-service-demo/prerequisites/" prefetch={false}>
+            <a target="_blank">
+              <button
+                className={style.button}
+              >{t("home-tools-details-button-label")}
+              </button>
+            </a>
+          </Link>   
         </div>
     </section>
   );
