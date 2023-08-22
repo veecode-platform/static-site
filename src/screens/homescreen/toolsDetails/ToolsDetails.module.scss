@@ -55,7 +55,7 @@
         }
 
         h2 {
-            @include typography(2.3rem, right, 1.3em, 500);
+            @include typography($title, right, 1.3em, 500);
             color: $color9;
 
             //viewport
@@ -65,13 +65,12 @@
 
             //tablet
             @include for-tablet-only{
-                font-size: 2rem;
                 text-align: center;
             }
 
-            //mobile
-            @include for-phone-only{
-                font-size: 1.8rem;
+            //tabletS
+            @include for-tabletS-only{
+                font-size: 1.75rem;
             }
 
         }
@@ -99,6 +98,11 @@
         //mobile
         @include for-phone-only{
           width: 500px;
+        }
+
+        //mobile(S)
+        @include for-phoneS-only{
+            display: none;
         }
     }
 
@@ -220,21 +224,15 @@
             @include displayFlex(center, center, row);
             @include screenSize(100%, auto);
         }
-
-        @include for-phone-only {
+        // mobileS
+        @include for-phoneS-only {
             @include displayFlex(space-between, center, column-reverse);
-            @include screenSize(100%, auto);
-
+            min-width: 90vw;
         }
 
         p {
             text-align: center;
-            font-size: 1.1rem;
-
-           //viewport
-           @include for-viewport-only{
-            font-size: 1rem;
-          }
+            font-size: $card;
         }
     }
 
@@ -242,7 +240,7 @@
         background: $color1;
         border: none;
         padding: 1.5rem 4rem;
-        font-size: 1.2rem;
+        font-size: $button;
         font-weight: 600;
         border-radius: 14px;
         @include boxShadow2();

@@ -1,28 +1,23 @@
 @import "../abstract/functions", "../abstract/variables", "../abstract/responsive";
 
 .wrapper {
-    @include screenSize(100%, auto);
-    @include displayFlex(flex-start, center, row);
+    @include screenSize(100vw, auto);
+    @include displayFlex(center, center, row);
+    background: url('/assets/home/bg3.webp');
+    position: relative;
+    overflow-y: hidden;
 
-    //mobile(M)
-    @include for-phone-only {
-        @include screenSize(100%, auto);
-        @include displayFlex(center, flex-start, row);
-        padding-bottom: 10em;
-    }
-
-    &__background {
+    &_background {
         @include screenSize(100%, auto);
         position: absolute;
         z-index: 0;
 
         &-desktop {
             @include screenSize(100%, 100%);
-            object-fit: cover;
-            position: relative;
+            object-position: top;
 
-            //mobile(M)
-            @include for-phone-only {
+            //tablet
+            @include for-tablet-only {
                 display: none;
             }
         }
@@ -30,73 +25,72 @@
         &-mobile {
             display: none;
 
-            //mobile(M)
-            @include for-phone-only {
+            //tablet
+            @include for-tablet-only {
+                display: flex;
+                @include screenSize(100vw, auto);
+                object-position: cover;
+            }
+
+            //mobile
+            @include for-phone-only{
                 display: none;
-                // position: relative;
-                // @include screenSize(100%, 100%);
-                // object-fit: fill;
             }
         }
     }
 
     .content {
-        @include screenSize(50%, auto);
-        @include displayFlex(center, center, column);
+        @include screenSize(85%, auto);
+        @include displayFlex(center, flex-start, column);
         color: $color2;
         z-index: 1;
 
-        //mobile(M)
-        @include for-phone-only {
-            @include screenSize(80%, auto);
-            padding-top: 1.5em;
-        }
-
-        //mobile(S)
-        @include for-phoneS-only {
-            @include screenSize(85%, auto);
-        }
-
-        &__text {
-            @include screenSize(65%, auto);
+        &_text {
+            @include screenSize(50%, auto);
             padding: 10em 0;
 
-            //mobile(M)
-            @include for-phone-only {
-                @include screenSize(85%, auto);
-                padding: 2em 0;
+            // tablet(S)
+            @include for-tabletS-only{
+                width: 70%;
+            }
+
+            //mobile
+            @include for-phone-only{
+                width: 100%;
+                @include displayFlex(center, center, column);
             }
 
             &-title {
                 @include screenSize(100%, auto);
                 margin: 2em 0 1.5em;
-                //tablet
-                @include for-tablet-only{
-                    margin: 1em 0 .5em 0;
+
+                //mobile
+                @include for-phone-only{
+                    @include displayFlex(center, center, column);
                 }
-                //mobile(M)
-                @include for-phone-only {
-                    @include screenSize(80%, auto);
-                    margin: 2em 0 1.5em;
-                }
-                //mobile(S)
-                @include for-phoneS-only {
-                    @include screenSize(95%, auto);
-                }
-                //mobile(XS)
-                @include for-phoneXS-only{
-                    margin-top: 5em;
-                }
-                h1 {
-                    @include typography(2.8vw, start, 1.1em, 400);
+
+                h2 {
+                    @include typography($titleMain, start, 1.2em, 400);
                     color: $color2;
-                    //mobile(M)
-                    @include for-phone-only {
-                        @include typography(7vw, center, 1.3em, 300);
+                    margin-bottom: 3rem;
+
+                    strong {
+                        color: $color1;
                     }
+
+                    //tablet
+                    @include for-tablet-only {
+                        font-size: 3rem;
+                    }
+
+                    //mobile
+                    @include for-phone-only{
+                        text-align: center;
+                    }
+
                     //mobile(S)
                     @include for-phoneS-only {
-                        font-size: 11vw;
+                        font-size: 2.8rem;
                     }
                 }
             }
@@ -104,64 +98,17 @@
             &-desc {
                 @include screenSize(100%, auto);
 
-                //mobile(M)
-                @include for-phone-only {
-                    @include displayFlex(center, center, column);
-                }
-
                 strong {
                     font-size: 1.1vw;
-
-                    //tablet
-                    @include for-tablet-only {
-                        font-size: 1.2vw;
-                    }
-
-                    //mobile(M)
-                    @include for-phone-only {
-                        font-size: 3.1vw;
-                        text-align: center;
-                        margin-bottom: .5em;
-                    }
-
-                    //mobile(S)
-                    @include for-phoneS-only {
-                        font-size: 4.5vw;
-                    }
                 }
 
                 .list {
                     list-style-position: inside;
                     padding: 0.9em 0;
 
-                    //mobile(M)
-                    @include for-phone-only {
-                        @include screenSize(90%, auto);
-                    }
-
-                    //mobile(S)
-                    @include for-phoneS-only {
-                        @include screenSize(100%, auto);
-                        margin: 1.1em 0;
-                    }
-
                     li {
                         @include typography(1.09vw, start, 1.8em, 300);
 
-                        //tablet
-                        @include for-tablet-only {
-                            font-size: 1.2vw;
-                        }
-
-                        //mobile(M)
-                        @include for-phone-only {
-                            @include typography(3vw, center, 1.8em, 300);
-                        }
-
-                        //mobile(S)
-                        @include for-phoneS-only {
-                            font-size: 4vw;
-                        }
                     }
                 }
             }
@@ -170,15 +117,74 @@
                 @include screenSize(85%, auto);
                 @include displayFlex(space-between, center, row);
                 padding: 1em 0;
+            }
+        }
 
-                //Mobile(M)
-                @include for-phone-only {
+        &_cardsSection {
+            @include screenSize(85vw, auto);
+            @include displayFlex(center, flex-start, column);
+
+            &-cards {
+                @include screenSize(100%, auto);
+                margin: 6rem 0 0 0;
+                @include displayFlex(center, flex-start, column);
+                gap: 3rem;
+
+                .card {
                     @include screenSize(100%, auto);
-                    @include displayFlex(center, center, row);
-                    margin: 1.5em 0 0 0;
-                    padding: 0;
+                    @include displayFlex(flex-start, center, row);
+                    gap: 3rem;
+
+                    //mobileS
+                    @include for-phoneS-only{
+                        @include displayFlex(center, center, column);
+                        border: 1px solid $color8;
+                        padding: 1.5rem;
+                        border-radius: 14px;
+                    }
+
+                    &_icon {
+                        @include screenSize(8rem, auto);
+                        //mobileS
+                        @include for-phoneS-only{
+                            width: 85px;
+                        }
+                    }
+
+                    &_desc {
+                        width: 60%;
+                        font-size: $text;
+
+                        //tablet
+                        @include for-tablet-only{
+                            width: 100%;
+                        }
+
+                        //mobileS
+                        @include for-phoneS-only{
+                            font-size: 1.25rem;
+                            text-align: center;
+                        }
+
+                        p {
+                            strong {
+                                margin-right: .4rem;
+                            }
+
+                            //viewport
+                            @include for-viewport-only {
+                                @include screenSize(90%, auto);
+                            }
+
+                            //mobile
+                            @include for-phone-only{
+                                width: 100%;
+                            }
+                        }
+                    }
                 }
             }
         }
+
     }
 }

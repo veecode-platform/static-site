@@ -30,8 +30,9 @@
 
             //tablet
             @include for-tablet-only {
-                @include displayFlex(center, center, column);
-                padding: 0em;
+                @include screenSize(48%, auto);
+                @include displayFlex(center, flex-end, column);
+                padding-top: 0;
             }
 
             //tablet(S)
@@ -70,25 +71,19 @@
                         display: block;
                     }
 
-                    //viewPort
-                    @include for-viewport-only {
+                    //tablet
+                    @include for-tablet-only {
                         font-size: 3rem;
                     }
 
-                    //tablet
-                    @include for-tablet-only {
-                        font-size: 2.5rem;
-                    }
-
                     //tablet(S)
-                    @include for-tabletS-only {
-                        font-size: 2.5rem;
+                    @include for-tabletS-only { 
                         text-align: center;
                     }
 
                     //mobile(S)
                     @include for-phoneS-only {
-                        font-size: 2.3rem;
+                        font-size: 2.8rem;
                     }
                 }
             }
@@ -136,17 +131,17 @@
                         //viewport
                         @include for-viewport-only {
                             @include screenSize(90%, auto);
-                            font-size: 1.3vw;
                         }
 
                         //tablet(S)
                         @include for-tabletS-only {
-                            @include typography(1.4rem, center, 1.4em, 300);
+                            width: 100%;
+                            text-align: center;
                         }
 
                         //mobile(S)
                         @include for-phoneS-only {
-                            font-size: 1.25rem;
+                            font-size: 1.35rem;
                         }
                     }
                 }

@@ -176,12 +176,11 @@
                        opacity: .9;
                        //tablet
                        @include for-tablet-only{
-                        font-size: 1.1vw;
+                        font-size: 1rem;
                        }
                        //mobile(M)
                        @include for-phone-only{
                         text-align: center;
-                        font-size: 2vw;
                        }
                       //mobile(S)
                        @include for-phoneS-only{

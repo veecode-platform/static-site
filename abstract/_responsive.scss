@@ -21,7 +21,7 @@
 
 //Phone (M)
 @mixin for-phone-only {
-    @media (max-width: 767px) {
+    @media (max-width: 800px) {
         @content;
     }
 }
@@ -35,7 +35,7 @@
 
 //Tablet(S)
 @mixin for-tabletS-only {
-    @media (max-width: 940px) {
+    @media (max-width: 980px) {
         @content;
     }
 }

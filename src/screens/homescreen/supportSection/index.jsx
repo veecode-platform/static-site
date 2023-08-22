@@ -5,60 +5,56 @@ import { Button } from "../../../components";
 import style from "./SupportSection.module.scss";
 import { useTranslation } from 'react-i18next';
 import TextSlide from "./textSlide";
+import i18n from 'i18next';
+import data from './SupportDetails.json';
 
 const BgDesktop = "/assets/home/bg3.webp";
 const BgMobile = "/assets/home/bgmobile2.webp";
 
 const SupportSection = () => {
+
   const { t } = useTranslation();
+  let items = [];
+  i18n.language == 'pt' ? items = data.pt : items = data.en;
 
   return (
     <section className={style.wrapper}>
-      {/* Background */}
-      <div className={style.wrapper__background}>
-        <img
-          src={BgDesktop}
-          alt="background header - Desktop version"
-          className={style["wrapper__background-desktop"]}
-        />
-        <img
-          src={BgMobile}
-          alt="background header - Mobile version"
-          className={style["wrapper__background-mobile"]}
-        />
-      </div>
+     <div className={style.wrapper_background}>
+      <img src={BgDesktop} alt="" className={style["wrapper_background-desktop"]} />
+      <img src={BgMobile} alt="" className={style["wrapper_background-mobile"]} />
+     </div>
       <article className={style.content}>
-        <div className={style.content__text}>
-          <div className={style["content__text-title"]}>
-            <h1>
-              {t("home-support-title1")} <strong> {t("home-support-title2")}</strong> {t("home-support-title3")}
-              <TextSlide />
-            </h1>
-          </div>
-          <div className={style["content__text-desc"]}>
-            <strong>{t("home-support-subtitle1")}</strong>
-            <ul className={style.list}>
-              <li>{t("home-support-option1")}</li>
-              <li>{t("home-support-option2")}</li>
-              <li>{t("home-support-option3")}</li>
-              <li>{t("home-support-option4")}</li>
-              <li>{t("home-support-option5")}</li>
-            </ul>
-          </div>
-          <div className={style["content__text-buttonWrapper"]}>
-
-            {/* <Link href="/support-plans" prefetch={false}>
-              <a>
-                <Button>Learn More</Button>
-              </a>
-            </Link> */}
+        <div className={style.content_text}>
+          <div className={style["content_text-title"]}>
+            <h2>
+              {t("home-support-title1")} <strong> {t("home-support-title2")}</strong> {t("home-support-title3")} <strong> {t("home-support-title4")}</strong>
+            </h2>
             <Link href="/trial" prefetch={false}>
               <a>
-                <Button>{t("support-trial")}</Button>
+                <Button>{t("home-support-buttonLabel")}</Button>
               </a>
             </Link>
           </div>
-        </div>
+
+          <div className={style.content_cardsSection}>
+            <div className={style["content_cardsSection-cards"]}>
+              {items.map(item => (
+                <div key={item.id} className={style.card}>
+                    <img 
+                     src={item.icon} 
+                     alt={item.title}
+                     className={style.card_icon}
+                     />
+                    <div className={style.card_desc}>
+                      <p> <strong>{item.title} :</strong>
+                      {item.desc}</p>
+                    </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+        </div> 
       </article>
     </section>
   );

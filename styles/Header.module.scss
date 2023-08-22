@@ -60,9 +60,13 @@
         z-index: 99;
         justify-content: space-between;
 
+        //tablet
+        @include for-tablet-only{
+            width: 90vw;
+        }
+
         //mobile(M)
         @include for-phone-only {
-            //@include displayFlex(center, center, row);
             display: none;
         }
 
@@ -83,12 +87,15 @@
 
             &__options {
                 margin: 0 2em;
+                 // tablet(S)
+                 @include for-tabletS-only{
+                    margin: 0 1em;
+                 }
 
                 h2 {
                     cursor: pointer;
                     opacity: 1;
                     @include typography(1.1875rem, center, 1.9em, 400);
-                    // text-decoration: underline;
                 }
 
             }
