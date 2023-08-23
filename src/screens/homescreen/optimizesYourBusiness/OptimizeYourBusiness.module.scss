@@ -173,9 +173,10 @@
             }
 
             .image {
-                @include screenSize(90%, auto);
+                @include screenSize(100%, auto);
                 border-radius: 8px;
                 @include shadowSpecial();
+                min-height: 381px;
 
                 //tablet
                 @include for-tablet-only {
