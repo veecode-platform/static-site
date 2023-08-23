@@ -156,17 +156,8 @@
             gap: 1.5rem;
 
             p {
-                @include typography($title, start, auto, 500);
+                @include titleDefault(left);
                 color: $color3;
-                
-                //tablet
-                @include for-tablet-only {
-                    @include typography(1.5rem, center, auto, 500);
-                }
-                //mobileS
-                @include for-phoneS-only{
-                    font-size: 1.3rem;
-                }
             }
 
             span {
