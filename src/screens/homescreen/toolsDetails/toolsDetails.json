@@ -2,45 +2,45 @@
     "en": [
       {
         "id": 0,
-        "desc": "We speed up onboarding of developers by helping them install it (although they can do it on their own);"
+        "desc": "<strong>We speed up onboarding of developers</strong> by helping them install it (although they can do it on their own);"
       },
       {
         "id": 1,
-        "desc": "We help you configure it to your needs - like creating your template library for IaC, software and APIs Catalogs, enabling your cloud-native transformation in a short time and budget;"
+        "desc": "<strong>We help you configure it to your needs</strong> - like creating your template library for IaC, software and APIs Catalogs, enabling your cloud-native transformation in a short time and budget;"
       },
       {
         "id": 2,
-        "desc": "Observability by design - templates will generate dashboards for each project;"
+        "desc": "<strong>Observability by design</strong> - templates will generate dashboards for each project;"
       },
       {
         "id": 3,
-        "desc": "We even support it, whether you run your own instance in the cloud or inside your datacenter;"
+        "desc": "<strong>We even support it</strong>, whether you run your own instance in the cloud or inside your datacenter;"
       },
       {
         "id": 4,
-        "desc": "We are there for Day 0, Day 1 and Day 2 operations."
+        "desc": "We are there for <strong>Day 0, Day 1 and Day 2</strong> operations."
       }
     ],
     "pt": [
       {
         "id": 0,
-        "desc": "O DevPortal rapidamente se torna um acelerador no onboarding de desenvolvedores;"
+        "desc": "O DevPortal rapidamente se torna um acelerador no <strong>onboarding de desenvolvedores</strong>;"
       },
       {
         "id": 1,
-        "desc": "Nós podemos ajudar a configurar a plataforma de acordo com suas necessidades (embora possam fazê-lo sozinhos) - como criar sua biblioteca de templates para IaC, software e catálogos de APIs;"
+        "desc": "Nós podemos ajudar a <strong>configurar a plataforma de acordo com suas necessidades</strong> (embora possam fazê-lo sozinhos) - como criar sua biblioteca de templates para IaC, software e catálogos de APIs;"
       },
       {
         "id": 2,
-        "desc": "Observabilidade por design - os templates geram painéis para cada projeto;"
+        "desc": "<strong>Observabilidade por design</strong> - os templates geram painéis para cada projeto;"
       },
       {
         "id": 3,
-        "desc": "Nós até te fornecemos suporte a isso, esteja você executando na sua própria instância na nuvem ou dentro do seu datacenter; "
+        "desc": "<strong>Nós até te fornecemos suporte a isso</strong>, esteja você executando na sua própria instância na nuvem ou dentro do seu datacenter; "
       },
       {
         "id": 4,
-        "desc": "Te acompanhamos nas operações do Day 0, Day 1 e Day 2."
+        "desc": "Te acompanhamos nas operações do <strong>Dia 0, Dia 1 e Dia 2</strong>."
       }
     ]
   }

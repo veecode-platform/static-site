@@ -32,7 +32,7 @@ const ToolsDetails = () => {
         <div className={style["content_wrapper-cards"]}>
           {items.map(item => (
             <div key={item.id} className={style.card}>
-                <p>{item.desc}</p>
+                <p dangerouslySetInnerHTML={{ __html: item.desc }} />
             </div>
           ))}
         </div>
