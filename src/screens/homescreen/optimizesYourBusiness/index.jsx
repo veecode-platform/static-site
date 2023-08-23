@@ -13,10 +13,7 @@ const OptimizeYourBusiness = () => {
         <div className={style["content_contentWrapper-text"]}>
           {/* Title */}
           <div className={style.title}>
-            <h2>
-              {t("home-optimize-title1")}
-              <strong>{t("home-optimize-title2")}</strong>
-            </h2>
+            <h2 dangerouslySetInnerHTML={{ __html: t("home-optimize-title1") }} />
           </div>
           {/* Details */}
           <div className={style.details}>

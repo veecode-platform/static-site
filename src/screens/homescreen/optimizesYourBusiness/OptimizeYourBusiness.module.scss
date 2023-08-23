@@ -74,10 +74,6 @@
                     @include titleMain(end);
                     color: $color2;
 
-                    strong {
-                        display: block;
-                    }
-
                     // //tablet
                     // @include for-tablet-only {
                     //     font-size: 3rem;
