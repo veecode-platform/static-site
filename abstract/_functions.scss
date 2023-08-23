@@ -92,7 +92,7 @@
 
 //font
 @mixin typography($fontSize, $align, $lineHeight, $weight) {
-    width: 100%;
+    width: auto;
     font-size: $fontSize;
     text-align: $align;
     line-height: $lineHeight;
@@ -173,4 +173,68 @@ EFFECTS
             transform: scale(1);
         }
     }
+}
+
+
+// text
+
+@mixin titleMain($align) {
+    @include typography($titleMain, $align, 3.5rem, 400);  // 56px
+    //tablet
+     @include for-tablet-only {
+     font-size: 3rem;
+     text-align: center;
+     }
+    //mobile(S)
+    @include for-phoneS-only {
+        font-size: 2.8rem;
+    }
+}
+
+@mixin titleDefault($align) {
+    @include typography($title, $align, 2.8rem, 500);  // 48px
+    //viewport
+    @include for-viewport-only{
+        font-size: 2rem;
+    }
+
+    //tablet
+    @include for-tablet-only{
+        text-align: center;
+    }
+
+    //tabletS
+    @include for-tabletS-only{
+        font-size: 1.75rem;
+    }
+}
+
+@mixin textDefault($align){
+    @include typography($text, $align, 2.06rem, 300);
+    //tablet
+    @include for-tablet-only {
+        text-align: center;
+    }
+   //mobile(S)
+    @include for-phoneS-only {
+        font-size: 1.35rem;
+    }
+}
+
+@mixin textCard($align){
+    @include typography($card, $align, 2.06rem, 300);
+}
+
+@mixin textButton(){
+    @include typography($button, center, 1.75rem, 400);
+    font-family: $font-text !important;
+}
+
+@mixin textButtonSM(){
+    @include typography($buttonSm, center, 1.75rem, 400);
+    font-family: $font-text !important;
+}
+
+@mixin textNavbar(){
+    @include typography($navbar, center, 1.625rem, 400);
 }

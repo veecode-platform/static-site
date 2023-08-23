@@ -4,7 +4,7 @@
     @include displayFlex(center, center, row);
     outline: none;
     padding: 0.9em 2.5em;
-    font-size: $button;
+    @include textButton();
     border-radius: 1.5em;
     border: 2px solid $color1;
     color: $color1;
@@ -45,8 +45,7 @@
 .buttonModal {
     @extend .button;
     // width: small;
-    font-size: .9vw;
-    font-weight: 600;
+    @include textButton();  font-weight: 600;
     color:#FFF;
     border: none;
     min-width: 9vw;
@@ -63,15 +62,13 @@
 
     //Tablet 
     @include for-tablet-only {
-        font-size: .75em;
-        height: 5vh;
+        @include textButton();       height: 5vh;
         width: 30%;
     }
 
     //mobile(M)
     @include for-phone-only {
-        font-size: .7em;
-        margin: 0.5em;
+        @include textButton();      margin: 0.5em;
         min-width: 100px;
         height: 5vh;
         width: 50%;
@@ -88,8 +85,7 @@
     //mobile(XS)
     @include for-phoneXS-only {
         padding: 0.9em 2em;
-        font-size: 6vw;
-        min-width: 100px;
+        @include textButton();     min-width: 100px;
     }
 }
 

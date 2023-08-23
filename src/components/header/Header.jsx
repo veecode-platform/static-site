@@ -162,7 +162,7 @@ const Header = ({ fixedHeader, showButton, showOptions }) => {
           </div>}
 
           {showButton && <div className={style.nav__buyButton} >
-            <Link href="https://docs.platform.vee.codes/devportal/self-service-demo/prerequisites" passHref>
+            <Link href="https://devportal.demo.vee.codes/" passHref>
               <a>
                 <Button headerButton>{t("get-a-demo")}</Button>
               </a>

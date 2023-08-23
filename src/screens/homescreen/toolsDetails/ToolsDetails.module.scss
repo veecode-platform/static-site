@@ -55,23 +55,24 @@
         }
 
         h2 {
-            @include typography($title, right, 1.3em, 500);
+            // @include typography($title, right, 1.3em, 500);
+            @include titleDefault(right);
             color: $color9;
 
-            //viewport
-            @include for-viewport-only{
-                font-size: 2rem;
-            }
+            // //viewport
+            // @include for-viewport-only{
+            //     font-size: 2rem;
+            // }
 
-            //tablet
-            @include for-tablet-only{
-                text-align: center;
-            }
+            // //tablet
+            // @include for-tablet-only{
+            //     text-align: center;
+            // }
 
-            //tabletS
-            @include for-tabletS-only{
-                font-size: 1.75rem;
-            }
+            // //tabletS
+            // @include for-tabletS-only{
+            //     font-size: 1.75rem;
+            // }
 
         }
     }
@@ -239,8 +240,8 @@
     .button{
         background: $color1;
         border: none;
-        padding: 1.5rem 4rem;
-        font-size: $button;
+        padding: 0.9em 2.5em;
+        @include textButton();
         font-weight: 600;
         border-radius: 14px;
         @include boxShadow2();

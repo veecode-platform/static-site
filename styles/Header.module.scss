@@ -59,6 +59,7 @@
         padding: 1.5vh 0;
         z-index: 99;
         justify-content: space-between;
+        max-width: $wrapperDesktop;
 
         //tablet
         @include for-tablet-only{
@@ -71,8 +72,9 @@
         }
 
         &__logo {
-            @include screenSize(11.5vw, auto);
+            @include screenSize(13.875rem, auto);
             min-width: 100px;
+            max-width: 350px;
 
             //tablet
             @include for-tablet-only {

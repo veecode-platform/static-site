@@ -40,10 +40,11 @@
     }
 
     .content {
-        @include screenSize(85%, auto);
+        @include screenSize(80%, auto);
         @include displayFlex(center, flex-start, column);
         color: $color2;
         z-index: 1;
+        max-width: $wrapperDesktop;
 
         &_text {
             @include screenSize(50%, auto);
@@ -70,27 +71,12 @@
                 }
 
                 h2 {
-                    @include typography($titleMain, start, 1.2em, 400);
+                    @include titleMain(start);
                     color: $color2;
                     margin-bottom: 3rem;
 
                     strong {
                         color: $color1;
-                    }
-
-                    //tablet
-                    @include for-tablet-only {
-                        font-size: 3rem;
-                    }
-
-                    //mobile
-                    @include for-phone-only{
-                        text-align: center;
-                    }
-
-                    //mobile(S)
-                    @include for-phoneS-only {
-                        font-size: 2.8rem;
                     }
                 }
             }
@@ -144,7 +130,7 @@
                     }
 
                     &_icon {
-                        @include screenSize(8rem, auto);
+                        @include screenSize(5rem, auto);
                         //mobileS
                         @include for-phoneS-only{
                             width: 85px;
