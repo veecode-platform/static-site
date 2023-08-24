@@ -64,6 +64,17 @@
         //     width: 0%;
         // }
 
+        //viewport
+         @include for-viewport-only{
+            width: 95vw;
+            align-self: center;
+         }
+
+        //tablet
+        @include for-tablet-only{
+            width: 90%;
+        }
+        
         //mobile
         @include for-phone-only {
             width: 80%;
@@ -79,6 +90,11 @@
             @include displayFlex(center, center, row);
             gap: 2rem;
             flex-wrap: wrap;
+
+            //viewport
+            @include for-viewport-only{
+               gap: 1rem;
+            }
 
             // tablet
             // @include for-tablet-only {
