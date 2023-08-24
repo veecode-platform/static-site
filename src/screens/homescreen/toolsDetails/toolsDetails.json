@@ -6,7 +6,7 @@
       },
       {
         "id": 1,
-        "desc": "<strong>We help you configure it to your needs</strong> - like creating your template library for IaC, software and APIs Catalogs, enabling your cloud-native transformation in a short time and budget;"
+        "desc": "<strong>We help you configure it to your needs</strong> - enabling your cloud-native transformation in a short time and budget;"
       },
       {
         "id": 2,
@@ -28,7 +28,7 @@
       },
       {
         "id": 1,
-        "desc": "Nós podemos ajudar a <strong>configurar a plataforma de acordo com suas necessidades</strong> (embora possam fazê-lo sozinhos) - como criar sua biblioteca de templates para IaC, software e catálogos de APIs;"
+        "desc": "Nós podemos ajudar a <strong>configurar a plataforma de acordo com suas necessidades</strong> (embora possam fazê-lo sozinhos);"
       },
       {
         "id": 2,
@@ -36,11 +36,11 @@
       },
       {
         "id": 3,
-        "desc": "<strong>Nós até te fornecemos suporte a isso</strong>, esteja você executando na sua própria instância na nuvem ou dentro do seu datacenter; "
+        "desc": "<strong>Nós até te fornecemos suporte a isso</strong>, esteja você executando na sua própria instância na nuvem ou dentro do seu datacenter;"
       },
       {
         "id": 4,
-        "desc": "Te acompanhamos nas operações do <strong>Dia 0, Dia 1 e Dia 2</strong>."
+        "desc": "Te acompanhamos nas operações do <strong>Day 0, Day 1 e Day 2</strong>."
       }
     ]
   }
