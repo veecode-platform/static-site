@@ -6,7 +6,6 @@
     @include backgroundImage('/assets/home/bglight.webp');
     @include displayFlex(center, center, row);
 
-
     //mobile
     @include for-phone-only {
         padding: 8em 0;
@@ -15,6 +14,7 @@
         @include screenSize(80%, auto);
         @include displayFlex(center, center, column); 
         gap: 6rem;   
+        max-width: $wrapperDesktop;
 
         //viewport
         @include for-viewport-only{
