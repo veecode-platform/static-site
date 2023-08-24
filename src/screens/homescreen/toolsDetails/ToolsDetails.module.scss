@@ -5,6 +5,8 @@
     padding: 8rem 0;
     @include backgroundImage('/assets/home/bglight.webp');
     @include displayFlex(center, center, row);
+
+
     //mobile
     @include for-phone-only {
         padding: 8em 0;
@@ -12,7 +14,13 @@
     .wrapper{
         @include screenSize(80%, auto);
         @include displayFlex(center, center, column); 
-        gap: 6rem;       
+        gap: 6rem;   
+
+        //viewport
+        @include for-viewport-only{
+           gap: 3rem;
+        }        
+        
     &_title {
         @include screenSize(100%, auto);
         align-self: center;
@@ -22,25 +30,21 @@
         }
         //viewport
         @include for-viewport-only{
-            width: 70%;
+            width: 100%;
         }
         //tablet
         @include for-tablet-only {
-            @include screenSize(75%, auto);
-            padding-bottom: 1em;
-        }
-        //tabletS
-        @include for-tabletS-only{
             width: 80%;
+            padding-bottom: 1em;
         }
         //mobile(M)
         @include for-phone-only {
-            @include screenSize(70%, auto);
+            @include screenSize(85%, auto);
             margin: auto;
         }
         //mobile(S)
         @include for-phoneS-only {
-            @include screenSize(80%, auto);
+            @include screenSize(95%, auto);
         }
 
         h2 {
