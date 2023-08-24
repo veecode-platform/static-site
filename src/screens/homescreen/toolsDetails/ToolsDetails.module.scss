@@ -28,10 +28,6 @@
         span {
             color: $color16;
         }
-        //viewport
-        @include for-viewport-only{
-            width: 100%;
-        }
         //tablet
         @include for-tablet-only {
             width: 80%;
@@ -54,9 +50,9 @@
     }
 
     &_cardsWrapper {
-        @include screenSize(100%, auto);
+        @include screenSize(95vw, auto);
         @include displayFlex(center, center, row);
-        align-self: flex-end;
+        align-self: center;
 
         // // tablet
         // @include for-tablet-only {
@@ -64,11 +60,11 @@
         //     width: 0%;
         // }
 
-        //viewport
-         @include for-viewport-only{
-            width: 95vw;
-            align-self: center;
-         }
+        // //viewport
+        //  @include for-viewport-only{
+        //     width: 95vw;
+        //     align-self: center;
+        //  }
 
         //tablet
         @include for-tablet-only{
