@@ -182,6 +182,7 @@
                 //tabletS
                 @include for-tabletS-only {
                     max-width: auto;
+                    min-height: auto;
                 }
 
                 //mobile(S)

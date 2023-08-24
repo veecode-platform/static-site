@@ -2,121 +2,63 @@
 
 .content {
     @include screenSize(100vw, auto);
-    padding: 8em 0 12em 0;
+    padding: 8rem 0;
     @include backgroundImage('/assets/home/bglight.webp');
-    @include displayFlex(center, center, column);
-    position: relative;
-
-    //viewport
-    @include for-viewport-only{
-        padding: 8rem 0 8rem 0
-    }
-
+    @include displayFlex(center, center, row);
     //mobile
     @include for-phone-only {
         padding: 8em 0;
     }
-
+    .wrapper{
+        @include screenSize(80%, auto);
+        @include displayFlex(center, center, column); 
+        gap: 6rem;       
     &_title {
-        @include screenSize(50%, auto);
-        padding-bottom: 4rem;
-        margin-right: 10%;
-        align-self: flex-end;
+        @include screenSize(100%, auto);
+        align-self: center;
 
         span {
             color: $color16;
         }
-
         //viewport
         @include for-viewport-only{
             width: 70%;
         }
-
         //tablet
         @include for-tablet-only {
             @include screenSize(75%, auto);
             padding-bottom: 1em;
         }
-
         //tabletS
         @include for-tabletS-only{
             width: 80%;
         }
-
         //mobile(M)
         @include for-phone-only {
             @include screenSize(70%, auto);
             margin: auto;
         }
-
         //mobile(S)
         @include for-phoneS-only {
             @include screenSize(80%, auto);
         }
 
         h2 {
-            // @include typography($title, right, 1.3em, 500);
-            @include titleDefault(right);
+            @include titleDefault(center);
             color: $color9;
-
-            // //viewport
-            // @include for-viewport-only{
-            //     font-size: 2rem;
-            // }
-
-            // //tablet
-            // @include for-tablet-only{
-            //     text-align: center;
-            // }
-
-            // //tabletS
-            // @include for-tabletS-only{
-            //     font-size: 1.75rem;
-            // }
-
         }
     }
 
-    &_iconCubes {
-        position: absolute;
-        width: 700px;
-        left: -2%;
-        bottom: 35%;
-
-        //viewport
-        @include for-viewport-only{
-          width: 600px;
-          bottom: 40%;
-        }
-
-        //tablet
-        @include for-tablet-only{
-          width: 700px;
-          left: -5%;
-          bottom: 30%;
-        }
-
-        //mobile
-        @include for-phone-only{
-          width: 500px;
-        }
-
-        //mobile(S)
-        @include for-phoneS-only{
-            display: none;
-        }
-    }
-
-    &_wrapper {
-        @include screenSize(65%, auto);
-        @include displayFlex(flex-start, flex-start, row);
+    &_cardsWrapper {
+        @include screenSize(100%, auto);
+        @include displayFlex(center, center, row);
         align-self: flex-end;
 
-        // tablet
-        @include for-tablet-only {
-            @include displayFlex(center, flex-start, column);
-            width: 60%;
-        }
+        // // tablet
+        // @include for-tablet-only {
+        //     @include displayFlex(center, flex-start, column);
+        //     width: 0%;
+        // }
 
         //mobile
         @include for-phone-only {
@@ -128,50 +70,88 @@
         }
 
         &-cards {
-            @include screenSize(85%, auto);
+            @include screenSize(100%, auto);
             padding: 2rem 0;
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            align-items: flex-start;
+            @include displayFlex(center, center, row);
             gap: 2rem;
-            justify-content: flex-end;
+            flex-wrap: wrap;
 
             // tablet
-            @include for-tablet-only {
-                @include screenSize(85%, auto);
-                @include displayFlex(center, center, column);
-            }
+            // @include for-tablet-only {
+            //     @include screenSize(100%, auto);
+            //     @include displayFlex(center, center, column);
+            // }
 
             //mobileS
             @include for-phoneS-only{
                 width: 100%;
             }
+
+            .card {
+                @include displayFlex(center, center, row);
+                @include screenSize(450px, 200px);
+                padding: 3rem;
+                background: #f5f5f5;
+                border-radius: 24px;
+                border: 2px solid transparent;
+                filter: drop-shadow(5px 5px 3px $color1);
+
+                // &:nth-child(4) {
+                //     margin-left: 175px; 
+                // }
+
+                // &:nth-child(5) {
+                //     margin-right: 175px; 
+                // }
+      
+                //viewport
+                @include for-viewport-only{
+                    height: 250px;
+                }
+        
+                // tablet
+                @include for-tablet-only {
+                    @include displayFlex(center, center, row);
+                    @include screenSize(45%, 220px);
+                }
+
+                // tabletS
+                @include for-tablet-only {
+                    @include screenSize(80%, 220px);
+                }
+
+                // mobile
+                @include for-phone-only {
+                    @include screenSize(100%, 220px);
+                }
+
+                // mobileS
+                @include for-phoneS-only {
+                    @include displayFlex(space-between, center, column-reverse);
+                    min-width: 90vw;
+                }
+        
+                p {
+                    text-align: center;
+                    font-size: $card;
+                }
+            }
         }
 
         &-subtitle {
             @include screenSize(85%, auto);
-            @include displayFlex(center, flex-start, column);
-            margin-top: -8em;
+            @include displayFlex(center, center, column);
             padding-bottom: 3em;
             gap: 1.5rem;
 
             p {
-                @include titleDefault(left);
+                @include titleDefault(center);
                 color: $color3;
             }
 
             span {
                 font-weight: 700;
                 color: $color16;
-            }
-
-            img {
-                width: 30vw;
-
-                @include for-tablet-only {
-                    width: 20vw;
-                    margin-bottom: 2em;
-                }
             }
 
             // tablet
@@ -192,42 +172,6 @@
 
     }
 
-
-    .card {
-        @include displayFlex(center, center, row);
-        @include screenSize(100%, 200px);
-        padding: 3rem;
-        background: #f5f5f5;
-        border-radius: 24px;
-        border: 2px solid transparent;
-        filter: drop-shadow(5px 5px 3px $color1);
-
-        &:last-child {
-            grid-column: 2;
-        }
-
-        //viewport
-        @include for-viewport-only{
-            height: 250px;
-        }
-
-        // tablet
-        @include for-tablet-only {
-            @include displayFlex(center, center, row);
-            @include screenSize(100%, auto);
-        }
-        // mobileS
-        @include for-phoneS-only {
-            @include displayFlex(space-between, center, column-reverse);
-            min-width: 90vw;
-        }
-
-        p {
-            text-align: center;
-            font-size: $card;
-        }
-    }
-
     .button{
         background: $color1;
         border: none;
@@ -244,4 +188,5 @@
             transform: scale(1.05);
         }
     }
+}
 }
