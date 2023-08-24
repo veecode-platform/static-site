@@ -50,7 +50,7 @@
     }
 
     &_cardsWrapper {
-        @include screenSize(95vw, auto);
+        @include screenSize(90vw, auto);
         @include displayFlex(center, center, row);
         align-self: center;
 
