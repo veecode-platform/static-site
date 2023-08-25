@@ -26,7 +26,7 @@
         align-self: center;
 
         span {
-            color: $color16;
+            color: $color1;
         }
         //tablet
         @include for-tablet-only {
@@ -45,7 +45,7 @@
 
         h2 {
             @include titleDefault(center);
-            color: $color1;
+            color: $color8;
         }
     }
 
@@ -87,6 +87,7 @@
             @include for-tabletS-only{
               grid-template-columns: repeat(2,1fr);
               min-width: auto;
+              gap: 3rem;
             }
 
             //mobile
@@ -125,7 +126,8 @@
                 }
         
                 p {
-                    @include textCard(center)
+                    @include textCard(center);
+                    color: $color8;
                 }
             }
         }
@@ -138,7 +140,7 @@
 
             p {
                 @include titleDefault(center);
-                color: $color3;
+                color: $color8;
             }
 
             span {
