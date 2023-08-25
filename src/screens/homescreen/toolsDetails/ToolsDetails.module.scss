@@ -76,6 +76,11 @@
             grid-template-columns: repeat(4,1fr);
             gap: 1rem;
             flex-direction: column;
+
+            //vieport
+            @include for-viewport-only{
+                min-width: 85vw;
+            }
             
             //tablet
             @include for-tablet-only{
