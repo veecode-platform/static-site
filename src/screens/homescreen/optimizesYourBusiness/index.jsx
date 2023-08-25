@@ -2,7 +2,7 @@ import style from "./OptimizeYourBusiness.module.scss";
 import { useTranslation } from 'react-i18next';
 
 // const Icon = "/assets/support/animation.svg";
-const DevportalImage = "/assets/home/printdevportal.webp";
+const DevportalImage = "/assets/home/printdevportal.png";
 
 const OptimizeYourBusiness = () => {
   const { t } = useTranslation();

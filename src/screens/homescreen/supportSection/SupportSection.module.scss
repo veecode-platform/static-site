@@ -81,24 +81,6 @@
                 }
             }
 
-            // &-desc {
-            //     @include screenSize(100%, auto);
-
-            //     strong {
-            //         font-size: 1.1vw;
-            //     }
-
-            //     .list {
-            //         list-style-position: inside;
-            //         padding: 0.9em 0;
-
-            //         li {
-            //             @include typography(1.09vw, start, 1.8em, 300);
-
-            //         }
-            //     }
-            // }
-
             &-buttonWrapper {
                 @include screenSize(85%, auto);
                 @include displayFlex(space-between, center, row);
@@ -138,7 +120,7 @@
                     }
 
                     &_desc {
-                        width: 60%;
+                        width: 75%;
                         font-size: $text;
 
                         //viewport

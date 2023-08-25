@@ -50,7 +50,7 @@
     }
 
     &_cardsWrapper {
-        @include screenSize(90vw, auto);
+        @include screenSize(100%, auto);
         @include displayFlex(center, center, row);
         align-self: center;
 
@@ -84,7 +84,7 @@
             @include screenSize(100%, auto);
             padding: 2rem 0;
             @include displayFlex(center, center, row);
-            gap: 2rem;
+            gap: 1rem;
             flex-wrap: wrap;
 
             //viewport
@@ -105,7 +105,7 @@
 
             .card {
                 @include displayFlex(center, center, row);
-                @include screenSize(450px, 200px);
+                @include screenSize(380px, 200px);
                 padding: 3rem;
                 background: #f5f5f5;
                 border-radius: 24px;
