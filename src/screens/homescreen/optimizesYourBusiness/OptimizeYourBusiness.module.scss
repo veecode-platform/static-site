@@ -6,7 +6,7 @@
     @include backgroundImage("/assets/home/bg2.webp");
     margin-top: 108px;
 
-    padding: 1.5em 0 5em 0;
+    padding: 2rem 0 5rem 0;
 
     //tablet
     @include for-tablet-only {
@@ -88,10 +88,10 @@
             }
 
             .details {
-                @include screenSize(90%, auto);
+                @include screenSize(98%, auto);
                 @include displayFlex(center, flex-start, column);
                 padding-top: 3em;
-
+                
                 //tablet
                 @include for-tablet-only {
                     @include screenSize(70%, auto);

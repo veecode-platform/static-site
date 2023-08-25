@@ -26,6 +26,7 @@ const ToolsDetails = () => {
           <div className={style["wrapper_cardsWrapper-cards"]}>
             {items.map(item => (
               <div key={item.id} className={style.card}>
+                  <img src={item.icon} alt="" className={style.card_icon}/>
                   <p dangerouslySetInnerHTML={{ __html: item.desc }} />
               </div>
             ))}

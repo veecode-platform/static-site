@@ -54,23 +54,11 @@
         @include displayFlex(center, center, row);
         align-self: center;
 
-        // // tablet
-        // @include for-tablet-only {
-        //     @include displayFlex(center, flex-start, column);
-        //     width: 0%;
-        // }
-
-        // //viewport
-        //  @include for-viewport-only{
-        //     width: 95vw;
-        //     align-self: center;
-        //  }
-
         //tablet
         @include for-tablet-only{
             width: 90%;
         }
-        
+
         //mobile
         @include for-phone-only {
             width: 80%;
@@ -81,62 +69,58 @@
         }
 
         &-cards {
-            @include screenSize(100%, auto);
+            @include screenSize(90%, auto);
             padding: 2rem 0;
-            @include displayFlex(center, center, row);
-            gap: 1rem;
-            flex-wrap: wrap;
 
-            //viewport
-            @include for-viewport-only{
-               gap: 1rem;
+            display:  grid;
+            grid-template-columns: repeat(4,1fr);
+            gap: 1rem;
+            flex-direction: column;
+            
+            //tablet
+            @include for-tablet-only{
+                min-width: 90vw;
             }
 
-            // tablet
-            // @include for-tablet-only {
-            //     @include screenSize(100%, auto);
-            //     @include displayFlex(center, center, column);
-            // }
+            //tabletS
+            @include for-tabletS-only{
+              grid-template-columns: repeat(2,1fr);
+              min-width: auto;
+            }
+
+            //mobile
+            @include for-phone-only{
+                grid-template-columns: repeat(1,1fr);
+            }
 
             //mobileS
             @include for-phoneS-only{
-                width: 100%;
+                @include displayFlex(center, center, column);
+                @include screenSize(85vw, 100%);
             }
 
             .card {
-                @include displayFlex(center, center, row);
-                @include screenSize(380px, 200px);
-                padding: 3rem;
+                @include displayFlex(center, center, column);
+                @include screenSize(100%, 100%);
+                padding: 2rem;
                 background: #f5f5f5;
                 border-radius: 24px;
                 border: 2px solid $color1;
                 @include boxShadow2();
-      
-                //viewport
-                @include for-viewport-only{
-                    height: 220px;
-                }
-        
-                // tablet
-                @include for-tablet-only {
-                    @include displayFlex(center, center, row);
-                    @include screenSize(45%, auto);
-                }
-
-                // tabletS
-                @include for-tablet-only {
-                    @include screenSize(80%, 220px);
-                }
+                gap: 2rem;
 
                 // mobile
                 @include for-phone-only {
-                    @include screenSize(100%, auto);
+                    @include screenSize(90%, 350px);
+                    margin: auto;
                 }
 
                 // mobileS
                 @include for-phoneS-only {
-                    @include displayFlex(space-between, center, column-reverse);
-                    min-width: 90vw;
+                   width: 85vw;
+                }
+                &_icon{
+                    width: 100px;
                 }
         
                 p {
