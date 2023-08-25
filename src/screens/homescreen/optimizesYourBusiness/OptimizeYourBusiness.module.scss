@@ -73,17 +73,6 @@
 
                     @include titleMain(end);
                     color: $color2;
-
-                    // //tablet
-                    // @include for-tablet-only {
-                    //     font-size: 3rem;
-                    //     text-align: center;
-                    // }
-
-                    // //mobile(S)
-                    // @include for-phoneS-only {
-                    //     font-size: 2.8rem;
-                    // }
                 }
             }
 
@@ -142,11 +131,6 @@
                             width: 100%;
                             // text-align: center;
                         }
-
-                        // //mobile(S)
-                        // @include for-phoneS-only {
-                        //     font-size: 1.35rem;
-                        // }
                     }
                 }
             }
@@ -172,7 +156,9 @@
                 @include screenSize(100%, auto);
                 border-radius: 8px;
                 @include shadowSpecial();
-                min-height: 381px;
+                min-height: 350px;
+                object-fit: cover;
+                object-position: 0%;
 
                 //tablet
                 @include for-tablet-only {
