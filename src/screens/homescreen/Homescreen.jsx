@@ -17,11 +17,11 @@ const Homescreen = () => {
       <OptimizeYourBusiness /> 
       <ToolsDetails/> 
       <SupportSection />
-      {/* <Tools/>  */}
       {/* <FirstSection />  */}
       {/* <Benefits />  */}
       {/* <Banner />  */}
       <WhatsApp />
+       {/* <Tools/> */}
       <Footer />
     </main>
   );

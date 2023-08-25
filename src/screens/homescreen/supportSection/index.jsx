@@ -1,10 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
-import Image from "next/image";
 import Link from "next/link";
 import { Button } from "../../../components";
 import style from "./SupportSection.module.scss";
 import { useTranslation } from 'react-i18next';
-import TextSlide from "./textSlide";
 import i18n from 'i18next';
 import data from './SupportDetails.json';
 
