@@ -80,6 +80,7 @@
             //tablet
             @include for-tablet-only{
                 min-width: 90vw;
+                gap: .5rem;
             }
 
             //tabletS
