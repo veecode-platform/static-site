@@ -222,7 +222,13 @@ EFFECTS
 }
 
 @mixin textCard($align){
-    @include typography($card, $align, 2.06rem, 300);
+    font-size: $card;
+    text-align: $align;
+    font-weight: 300;
+    //tablet
+    @include for-tablet-only {
+     font-size: 1.125rem;
+    }
 }
 
 @mixin textButton(){
