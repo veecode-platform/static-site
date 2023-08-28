@@ -175,35 +175,20 @@
                     }
                     li{
                        cursor: pointer;
-                       @include typography(1vw,left,1.4em,300);
+                       @include typography($footer,left,1.4em,300);
                        opacity: .9;
-                       //tablet
-                       @include for-tablet-only{
-                        font-size: 1rem;
-                       }
                        //mobile(M)
                        @include for-phone-only{
                         text-align: center;
                        }
-                      //mobile(S)
-                       @include for-phoneS-only{
-                        font-size: 15px;
-                       }
+
                        span{
                         opacity: 1;
-                        @include typography(1.1vw,center,1.9em,600);
-                        //tablet
-                        @include for-tablet-only{
-                            font-size: 1.2vw;
-                        }
+                        @include typography($footer,center,1.9em,600);
+
                         //mobile(M)
                         @include for-phone-only{
                             text-align: center;
-                            font-size: 2.1vw;
-                        }
-                        //mobile(S)
-                        @include for-phoneS-only{
-                            font-size: 17px;
                         }
                        }
                     }

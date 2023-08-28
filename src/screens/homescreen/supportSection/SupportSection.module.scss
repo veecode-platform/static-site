@@ -6,38 +6,60 @@
     background: url('/assets/home/bg3.webp');
     position: relative;
     overflow-y: hidden;
+    background-size: cover;
+    background-position-y: 40%;
 
-    &_background {
-        @include screenSize(100%, auto);
-        position: absolute;
-        z-index: 0;
-
-        &-desktop {
-            @include screenSize(100%, 100%);
-            object-position: top;
-
-            //tablet
-            @include for-tablet-only {
-                display: none;
-            }
-        }
-
-        &-mobile {
-            display: none;
-
-            //tablet
-            @include for-tablet-only {
-                display: flex;
-                @include screenSize(100vw, auto);
-                object-position: cover;
-            }
-
-            //mobile
-            @include for-phone-only{
-                display: none;
-            }
-        }
+    //viewport
+    @include for-viewport-only{
+        background: url('/assets/home/bgmobile2.webp');
+        background-size: cover;
+        background-position-y: -10%;
     }
+
+    //tablet
+    @include for-tablet-only{
+        // background-position-y: 150%;
+        background-size: auto;
+    }
+
+    //tabletS
+    @include for-tabletS-only{
+        background: linear-gradient(to bottom, $color19, $color3, $color3);
+    }
+    
+    // &_background {
+    //     @include screenSize(100%, auto);
+    //     position: absolute;
+    //     z-index: 0;
+
+    //     &-desktop {
+    //         @include screenSize(100%, 100%);
+    //         object-fit: cover;
+    //         object-position: 500000% -50000%;
+
+    //         //tablet
+    //         @include for-tablet-only {
+    //             display: none;
+    //         }
+    //     }
+
+    //     &-mobile {
+    //         display: none;
+
+    //         //tablet
+    //         @include for-tablet-only {
+    //             display: flex;
+    //             @include screenSize(100vw, auto);
+    //             object-fit: contain;
+    //             object-position: 50% 50%;
+    //         }
+
+    //         //tabletS
+    //         @include for-tabletS-only{
+    //             display: none;
+    //         }
+    //     }
+    // }
 
     .content {
         @include screenSize(80%, auto);
@@ -50,13 +72,18 @@
             @include screenSize(50%, auto);
             padding: 10em 0;
 
-            // tablet(S)
-            @include for-tabletS-only{
-                width: 70%;
+            //viewport
+            @include for-viewport-only{
+                padding-top: 8rem
             }
 
-            //mobile
-            @include for-phone-only{
+            //tablet
+            @include for-tablet-only{
+                padding-top: 5rem;
+            }
+
+            //tabletS
+            @include for-tabletS-only{
                 width: 100%;
                 @include displayFlex(center, center, column);
             }
@@ -71,12 +98,21 @@
                 }
 
                 h2 {
-                    @include titleMain(start);
+                    @include titleMain(left);
                     color: $color2;
                     margin-bottom: 3rem;
 
                     strong {
                         color: $color1;
+                    }
+
+                    //tablet
+                    @include for-tablet-only{
+                        text-align: left;
+                    }
+                    //tabletS
+                    @include for-tabletS-only{
+                        text-align: center;
                     }
                 }
             }
@@ -85,12 +121,19 @@
                 @include screenSize(85%, auto);
                 @include displayFlex(space-between, center, row);
                 padding: 1em 0;
+
+                //tabletS
+                @include for-tabletS-only{
+                    @include screenSize(100%, auto);
+                    @include displayFlex(center, center, row);
+                }
             }
         }
 
         &_cardsSection {
             @include screenSize(85vw, auto);
             @include displayFlex(center, flex-start, column);
+            max-width: $wrapperDesktop;
 
             //tablet
             @include for-tablet-only{

@@ -17,21 +17,23 @@ const SupportSection = () => {
 
   return (
     <section className={style.wrapper}>
-     <div className={style.wrapper_background}>
+     {/* <div className={style.wrapper_background}>
       <img src={BgDesktop} alt="" className={style["wrapper_background-desktop"]} />
       <img src={BgMobile} alt="" className={style["wrapper_background-mobile"]} />
-     </div>
+     </div> */}
       <article className={style.content}>
         <div className={style.content_text}>
           <div className={style["content_text-title"]}>
             <h2>
               {t("home-support-title1")} <strong> {t("home-support-title2")}</strong> {t("home-support-title3")} <strong> {t("home-support-title4")}</strong>
             </h2>
-            <Link href="/support-plans" prefetch={false}>
-              <a>
-                <Button>{t("home-support-buttonLabel")}</Button>
-              </a>
-            </Link>
+            <div className={style["content_text-buttonWrapper"]}>
+              <Link href="/support-plans" prefetch={false}>
+                <a>
+                  <Button>{t("home-support-buttonLabel")}</Button>
+                </a>
+              </Link>
+            </div>
           </div>
 
           <div className={style.content_cardsSection}>
