@@ -28,7 +28,7 @@ const SupportSection = () => {
               {t("home-support-title1")} <strong> {t("home-support-title2")}</strong> {t("home-support-title3")} <strong> {t("home-support-title4")}</strong>
             </h2>
             <div className={style["content_text-buttonWrapper"]}>
-              <Link href="/support-plans" prefetch={false}>
+              <Link href="/compare-plans/#plans" prefetch={false}>
                 <a>
                   <Button>{t("home-support-buttonLabel")}</Button>
                 </a>
