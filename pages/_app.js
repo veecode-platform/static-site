@@ -60,7 +60,8 @@ function MyApp({ Component, pageProps }) {
         />
         <meta
           property="og:image"
-          content="https://platform.vee.codes/thumbnail-1200x627.png"
+          // content="https://platform.vee.codes/thumbnail-1200x627.png"
+          content="/assets/thumbnail.png"
         />
 
         <meta property="twitter:card" content="summary_large_image" />
@@ -78,7 +79,8 @@ function MyApp({ Component, pageProps }) {
         />
         <meta
           property="twitter:image"
-          content="https://platform.vee.codes/thumbnail-1200x627.png"
+          // content="https://platform.vee.codes/thumbnail-1200x627.png"
+          content="/assets/thumbnail.png"
         />
 
         <meta name="viewport" content="width=device-width, initial-scale=1" />
