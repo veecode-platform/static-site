@@ -6,7 +6,6 @@ import "../styles/theme.scss";
 import TagManager from 'react-gtm-module';
 import { useEffect } from 'react';
 
-const thumbnailImageUrl = `${router.basePath}/thumbnail.png`
 
 function MyApp({ Component, pageProps }) {
   useEffect(() => {
@@ -62,7 +61,7 @@ function MyApp({ Component, pageProps }) {
         />
         <meta
           property="og:image"
-          content={thumbnailImageUrl}
+          content="https://platform.vee.codes/thumbnail.png"
         />
 
         <meta property="twitter:card" content="summary_large_image" />
@@ -80,7 +79,7 @@ function MyApp({ Component, pageProps }) {
         />
         <meta
           property="twitter:image"
-          content={thumbnailImageUrl}
+          content="https://platform.vee.codes/thumbnail.png"
         />
 
         <meta name="viewport" content="width=device-width, initial-scale=1" />
