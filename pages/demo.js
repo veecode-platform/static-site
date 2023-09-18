@@ -16,7 +16,7 @@ export default function DemoPage() {
 
   return (
     <>
-      <Script strategy="beforeInteractive">
+      <Script id="chatbot-script-function">
         {`
             (function(n, r, l, d) {
               try {
@@ -36,7 +36,7 @@ export default function DemoPage() {
         <meta name="description"
           content="Enjoy a devportal demo with some basic functionalities."
         />
-        <style jsx>{`
+        <style>{`
           body, html {
             margin: 0;
             padding: 0;
