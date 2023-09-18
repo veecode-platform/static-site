@@ -1,19 +1,40 @@
 import Head from 'next/head';
 import Script from 'next/script';
+import { useEffect, useState } from 'react';
+
+const URL_DEMO="http://devportal.demo.vee.codes";
 
 export default function DemoPage() {
 
-  let height = window ? `${window.innerHeight}px` : '100%';
+  const [height, setHeight] = useState('100%');
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      setHeight(`${window.innerHeight}px`);
+    }
+  }, []);
 
   return (
     <>
       <Head>
         <title>Devportal Demo</title>
         <meta name="description"
-          content="Enjoy a devportal demo with some basic functionalities." 
-          />
-        <Script>
-          {`(function(n,r,l,d){try{var h=r.head||r.getElementsByTagName("head")[0],s=r.createElement("script");s.defer=true;s.setAttribute("type","text/javascript");s.setAttribute("src",l);n.neuroleadId=d;h.appendChild(s);}catch(e){}})(window,document,"https://cdn.leadster.com.br/neurolead/neurolead.min.js", "0sZSqQ97JALqVniW4NtoeFhKu");`}
+          content="Enjoy a devportal demo with some basic functionalities."
+        />
+        <Script strategy="beforeInteractive">
+          {`
+            (function(n, r, l, d) {
+              try {
+                var h = r.head || r.getElementsByTagName("head")[0];
+                var s = r.createElement("script");
+                s.defer = true;
+                s.setAttribute("type", "text/javascript");
+                s.setAttribute("src", l);
+                n.neuroleadId = d;
+                h.appendChild(s);
+              } catch (e) {}
+            })(window, document, "https://cdn.leadster.com.br/neurolead/neurolead.min.js", "0sZSqQ97JALqVniW4NtoeFhKu");
+          `}
         </Script>
         <style jsx>{`
           body, html {
@@ -24,15 +45,15 @@ export default function DemoPage() {
           }
         `}</style>
       </Head>
-      <iframe 
-        src="http://devportal.demo.vee.codes"
-        frameborder="0"
+      <iframe
+        src={URL_DEMO}
+        border="0"
         style={{
-          width:'100%',
+          width: '100%',
           height: height,
           border: 'none'
         }}
-        ></iframe>
+      ></iframe>
     </>
   )
 }
