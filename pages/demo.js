@@ -2,7 +2,7 @@ import Head from 'next/head';
 import Script from 'next/script';
 import { useEffect, useState } from 'react';
 
-const URL_DEMO="http://devportal.demo.vee.codes";
+const URL_DEMO = "http://devportal.demo.vee.codes";
 
 export default function DemoPage() {
 
@@ -16,13 +16,8 @@ export default function DemoPage() {
 
   return (
     <>
-      <Head>
-        <title>Devportal Demo</title>
-        <meta name="description"
-          content="Enjoy a devportal demo with some basic functionalities."
-        />
-        <Script strategy="beforeInteractive">
-          {`
+      <Script strategy="beforeInteractive">
+        {`
             (function(n, r, l, d) {
               try {
                 var h = r.head || r.getElementsByTagName("head")[0];
@@ -35,7 +30,12 @@ export default function DemoPage() {
               } catch (e) {}
             })(window, document, "https://cdn.leadster.com.br/neurolead/neurolead.min.js", "0sZSqQ97JALqVniW4NtoeFhKu");
           `}
-        </Script>
+      </Script>
+      <Head>
+        <title>Devportal Demo</title>
+        <meta name="description"
+          content="Enjoy a devportal demo with some basic functionalities."
+        />
         <style jsx>{`
           body, html {
             margin: 0;
