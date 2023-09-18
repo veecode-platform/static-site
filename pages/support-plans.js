@@ -6,7 +6,6 @@ export default function SupportPage() {
   return (
     <>
       <Head>
-        {/* TO DO */}
         <title>Platform | Support Plans</title>  
         <meta
          name="description"
