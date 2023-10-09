@@ -80,9 +80,7 @@ const TermsOfService = () => {
         <h3>2. SERVICES OFFERED AND TERMS</h3>
         <p>
           2.1 - <strong>VeeCode Platform Subscription:</strong> access to 10 monthly support calls, 
-          with a maximum of 2 simultaneous, with the possibility of not using the total number of 
-          support tickets and exchanging them for synchronous meeting sessions to solve specific problems 
-          (with a maximum of two hours duration), access to our community and support channels, 
+          with a maximum of 2 simultaneous, access to our community and support channels, 
           asset library (under construction) and includes your choice for 
           <strong>Standard Support</strong> (no extra charge) or 
           <strong>Enterprise Support</strong> (for an extra cost dealing directly with us).
