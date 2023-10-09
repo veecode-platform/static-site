@@ -6,18 +6,20 @@
         padding: 3em;
         border-radius: .5em;
         margin: 5vh 0;
+        gap: 5rem;
         @include glassEffect();
         //Mobile(M)
         @include for-phone-only{
             flex-direction: column;
             padding: 2.5em 2.5em 2em 2.5em;
+            gap: 1rem;
         }
         &__title{
-            @include screenSize(50%, auto);
+            @include screenSize(auto, auto);
             @include typography(1.7vw, center , 1.3em, 500 );
             //tablet
             @include for-tablet-only{
-               font-size: 1.7vw;
+               font-size: 1.3rem;
             }
             //Mobile(M)
             @include for-phone-only{
@@ -28,7 +30,8 @@
             }
         }
         &__button{
-            @include screenSize(50%, auto);
+            @include screenSize(auto, auto);
+            @include displayFlex(center, center, center);
             //Mobile(M)
             @include for-phone-only{
                 @include screenSize(100%, auto);
