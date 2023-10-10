@@ -371,7 +371,9 @@
         "free-plan-desc5":"Our user-friendly platform provides streamlined API automation, Pipelines, and more to help solve your business problems and take your business to the next level.",
         "free-plan-desc6":"Fill out the form below to get started and gain access to our documentation to begin your journey right away.",
         "developer-portal":"Developer Portal",
-        "":""
         
+        "plugin-page-title":"Plugins",
+        "plugin-page-subtitle": "Descriptions, guides and installation instructions for Backstage plugins.",
+        "plugin-page-buttonLabel": "Explore"
     }
 }

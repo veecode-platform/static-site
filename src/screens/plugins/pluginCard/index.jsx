@@ -2,7 +2,7 @@ import React from 'react';
 import { Button } from '../../../components';
 import style from './PluginCard.module.scss';
 
-const PluginCard = ({id,image,title, tags, desc}) => {
+const PluginCard = ({id,image,title, tags, desc, buttonLabel}) => {
   return (
       <div className={style.card}>
           <div className={style.card__content}>
@@ -22,7 +22,9 @@ const PluginCard = ({id,image,title, tags, desc}) => {
               </div>
           </div>
           <div className={style.card__button}>
-              <Button>Explore</Button>
+              <Button>
+                {buttonLabel}
+              </Button>
           </div>
       </div>
   )

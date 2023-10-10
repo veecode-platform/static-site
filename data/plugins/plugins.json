@@ -1,0 +1,35 @@
+{
+    "pt":[
+        {
+            "id": 0,
+            "image": "/assets/plugins/github.png",
+            "title": "Github workflows",
+            "tags": ["CI-CD", "Github"],
+            "desc": "O plugin Github Workflows fornece uma alternativa para acionar manualmente fluxos de trabalho do GitHub de dentro do seu componente Backstage."
+          },
+          {
+            "id": 1,
+            "image": "/assets/plugins/gitlab.png",
+            "title": "Gitlab Pipelines",
+            "tags": ["CI-CD", "GitlabCi"],
+            "desc": "O plugin de pipelines do Gitlab integra o GitlabCi com seu componente backstage de forma simples."
+          }
+
+    ],
+    "en":[
+        {
+            "id": 0,
+            "image": "/assets/plugins/github.png",
+            "title": "Github workflows",
+            "tags": ["CI-CD", "Github"],
+            "desc": "The Github Workflows plugin provides an alternative for manually triggering GitHub workflows from within your Backstage component."
+          },
+          {
+            "id": 1,
+            "image": "/assets/plugins/gitlab.png",
+            "title": "Gitlab Pipelines",
+            "tags": ["CI-CD", "GitlabCi"],
+            "desc": "The Gitlab pipelines plugin integrates GitlabCi with its backstage component in a simple way."
+          }
+    ]
+}
