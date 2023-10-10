@@ -18,3 +18,4 @@ export { default as ContactEnterprise } from './contactEnterprise/ContactEnterpr
 export { default as SupportPlans } from './supportPlans/SupportPlans';
 export { default as Trial } from './trial/Trial';
 export { default as FreePlan } from './freePlan/FreePlan';
+export { default as Plugins } from './plugins/Plugins'

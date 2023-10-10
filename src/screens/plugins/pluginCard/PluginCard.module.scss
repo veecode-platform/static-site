@@ -1,0 +1,73 @@
+@import "../abstract/functions", "../abstract/variables", "../abstract/responsive";
+
+.card {
+    width: 100%;
+    padding: 3rem 2rem 2rem 2rem;
+    @include glassEffect();
+    border-radius: .8em;
+    @include displayFlex(space-between, center, column);
+    gap: 2rem;
+
+    &__content {
+        @include screenSize(100%, auto);
+        @include displayFlex(center, center, column);
+        gap: 2rem;
+
+        &-header {
+            @include screenSize(80%, auto);
+            @include displayFlex(center, center, row);
+            gap: 2rem;
+            //viewPort
+            @include for-viewport-only{
+                width: 90%;
+            }
+            //mobile
+            @include for-phone-only{
+              @include displayFlex(center, center, column);
+            }
+            .icon {
+                width: 7rem;
+            }
+
+            .titlebar {
+                width: auto;
+                @include displayFlex(center, center, column);
+
+                &__title {
+                    font-size: 1.8rem;
+                    font-weight: 600;
+                    text-align: center;
+                }
+
+                &__tags {
+                    width: 100%;
+                    @include displayFlex(center, center, row);
+                    gap: 1rem;
+                    padding: 1rem 0;
+
+                    &-chips {
+                        background: $color4;
+                        border-radius: 8px;
+                        padding: .2rem .7rem;
+                    }
+                }
+            }
+
+        }
+
+        &-text {
+            width: 80%;
+            min-height: 100px;
+            @include displayFlex(center, center, row);
+            .desc {
+                @include textCard(center);
+                vertical-align: middle;
+            }
+        }
+    }
+
+    &__button {
+        width: 100%;
+        @include displayFlex(center, center, row);
+    }
+}

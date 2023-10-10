@@ -37,6 +37,10 @@
             @include for-tablet-only{
               font-size: 22px;
             }
+            //mobile
+            @include for-phone-only{
+              margin-top: 4rem;
+            }
           }
           &-subtitle{
             @include typography(1.3vw,start,1.3em,500);

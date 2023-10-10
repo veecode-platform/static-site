@@ -1,0 +1,27 @@
+@import "../abstract/functions", "../abstract/variables", "../abstract/responsive";
+
+
+.wrapper{
+    @include screenSize(100%,auto);
+    display: grid;
+    grid-template: auto / repeat(2, 1fr);
+    gap: 2rem;
+    margin-bottom: 10rem;
+
+    //viewport 
+    @include for-viewport-only{
+        gap: 1.5rem;
+        width: 85vw;
+    }
+
+    //tablet
+    @include for-tablet-only{
+        grid-template: auto / 90%;
+        justify-content: center;
+    }
+
+    //mobile
+    @include for-phone-only{
+        grid-template: auto / 100%;
+    }
+}
