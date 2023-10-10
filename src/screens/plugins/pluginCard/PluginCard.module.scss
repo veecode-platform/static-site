@@ -15,7 +15,7 @@
 
         &-header {
             @include screenSize(80%, auto);
-            @include displayFlex(center, center, row);
+            @include displayFlex(center, flex-end, row);
             gap: 2rem;
             //viewPort
             @include for-viewport-only{
@@ -43,7 +43,12 @@
                     width: 100%;
                     @include displayFlex(center, center, row);
                     gap: 1rem;
-                    padding: 1rem 0;
+                    padding: 1rem 0 .2rem 0;
+
+                    //tabletS
+                    @include for-tabletS-only{
+                        padding: 1rem 0; 
+                    }
 
                     &-chips {
                         background: $color4;
