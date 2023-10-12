@@ -7,6 +7,7 @@ import style from "../../../styles/PluginPage.module.scss"
 import { DefaultPage, ScrollTop } from '../../components';
 import convertUrlToRaw from '../../../utils/convertUrlToRaw';
 import PluginsData from '../../../data/plugins/plugins.json';
+import Link from 'next/link';
 
 const PluginPage = ({ title }) => {
 
@@ -51,16 +52,34 @@ const PluginPage = ({ title }) => {
         return null; 
       };
 
+      const LinkTag = ({href, children}) => {
+
+        const label = children.join(' ');
+
+        return(
+            <Link 
+              href={href}
+              >
+                <a 
+                  target='_blank'
+                  className={style.link}>
+                    {label}
+                </a>
+            </Link>
+        )
+      }
+
     return (
         <DefaultPage notTranslate>
           <section className={style.wrapper}>
               <Remark
                   remarkPlugins={[remarkGemoji]}
                   remarkToRehypeOptions={{ allowDangerousHtml: true }}
-                  rehypePlugins={[rehypeSlug, rehypeAutoLinkHeadings]}
+                  rehypePlugins={[rehypeSlug]}
                   rehypeReactOptions={{
                       components: {
                           code: (props) => <CodeBlock {...props} />,
+                          a: (props) => <LinkTag {...props}/>
                       },
                   }}
                >
