@@ -2,6 +2,7 @@
 
 .wrapper{
     @include screenSize(100%,auto);
+    min-height: 50vh;
     margin: auto;   
 
     h1{

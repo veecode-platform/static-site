@@ -53,21 +53,21 @@ const PluginPage = ({ title }) => {
 
     return (
         <DefaultPage notTranslate>
-            <section className={style.wrapper}>
-                <Remark
-                    remarkPlugins={[remarkGemoji]}
-                    remarkToRehypeOptions={{ allowDangerousHtml: true }}
-                    rehypePlugins={[rehypeSlug, rehypeAutoLinkHeadings]}
-                    rehypeReactOptions={{
-                        components: {
-                            code: (props) => <CodeBlock {...props} />,
-                        },
-                    }}
-                >
-                    {content}
-                </Remark>
-            </section>
-            <ScrollTop />
+          <section className={style.wrapper}>
+              <Remark
+                  remarkPlugins={[remarkGemoji]}
+                  remarkToRehypeOptions={{ allowDangerousHtml: true }}
+                  rehypePlugins={[rehypeSlug, rehypeAutoLinkHeadings]}
+                  rehypeReactOptions={{
+                      components: {
+                          code: (props) => <CodeBlock {...props} />,
+                      },
+                  }}
+               >
+                  {content}
+              </Remark>
+          </section>
+          <ScrollTop />
         </DefaultPage>
     )
 }
