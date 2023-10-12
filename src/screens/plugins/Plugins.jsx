@@ -6,6 +6,7 @@ import { useTranslation } from 'react-i18next';
 import i18n from 'i18next';
 import PluginsData from "../../../data/plugins/plugins.json";
 
+
 const Plugins = () => {
 
   let items = [];

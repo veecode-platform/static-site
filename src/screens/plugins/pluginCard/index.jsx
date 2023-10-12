@@ -1,8 +1,9 @@
 import React from 'react';
 import { Button } from '../../../components';
 import style from './PluginCard.module.scss';
+import Link from 'next/link';
 
-const PluginCard = ({id,image,title, tags, desc, buttonLabel}) => {
+const PluginCard = ({image,title, tags, desc, buttonLabel}) => {
   return (
       <div className={style.card}>
           <div className={style.card__content}>
@@ -22,9 +23,13 @@ const PluginCard = ({id,image,title, tags, desc, buttonLabel}) => {
               </div>
           </div>
           <div className={style.card__button}>
-              <Button>
-                {buttonLabel}
-              </Button>
+              <Link href={`/plugin/${title}`}>
+                <a>
+                  <Button>
+                    {buttonLabel}
+                  </Button>
+                </a>
+              </Link>
           </div>
       </div>
   )

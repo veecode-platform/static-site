@@ -7,7 +7,6 @@ import React, { useState } from "react";
 import { useTranslation } from 'react-i18next';
 import IconButton from '@mui/material/IconButton';
 import AppBar from '@mui/material/AppBar';
-
 import MenuRoundedIcon from '@mui/icons-material/MenuRounded';
 import Toolbar from '@mui/material/Toolbar';
 import List from '@mui/material/List';
@@ -15,7 +14,7 @@ import ListItemText from '@mui/material/ListItemText';
 import SwipeableDrawer from '@mui/material/SwipeableDrawer';
 const Logo = '/assets/logo/logo.png';
 
-const Header = ({ fixedHeader, showButton, showOptions }) => {
+const Header = ({ fixedHeader, showButton, showOptions, notTranslate }) => {
 
   const [open, setOpen] = useState(false);
 
@@ -55,7 +54,8 @@ const Header = ({ fixedHeader, showButton, showOptions }) => {
               </Link>
             </div>
 
-            <div className={style.select}>
+            {!notTranslate && (
+              <div className={style.select}>
               <select
                 defaultValue={i18n.language}
                 onChange={() => {
@@ -69,6 +69,7 @@ const Header = ({ fixedHeader, showButton, showOptions }) => {
                 <option value="pt">PT</option>
               </select>
             </div>
+            )}
 
             <IconButton
               size="large"
@@ -169,7 +170,8 @@ const Header = ({ fixedHeader, showButton, showOptions }) => {
               </a>
             </Link>
           </div>}
-          <div className={style.select}>
+          
+          {!notTranslate && (<div className={style.select}>
             <select
               style={{color:"white"}}
               defaultValue={i18n.language}
@@ -183,7 +185,7 @@ const Header = ({ fixedHeader, showButton, showOptions }) => {
               <option value="en" style={{ color:"grey" }}>EN</option>
               <option value="pt" style={{ color:"grey" }}>PT</option>
             </select>
-          </div>
+          </div>)}
         </div>
       </section>
     </header>

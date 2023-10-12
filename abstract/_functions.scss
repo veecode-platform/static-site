@@ -209,8 +209,39 @@ EFFECTS
     }
 }
 
+@mixin titleSm($align) {
+    @include typography(1.7rem, $align, 2.8rem, 500);  // 48px
+    //viewport
+    @include for-viewport-only{
+        font-size: 2rem;
+    }
+
+    //tablet
+    @include for-tablet-only{
+        text-align: center;
+    }
+
+    //tabletS
+    @include for-tabletS-only{
+        font-size: 1.75rem;
+    }
+}
+
+
 @mixin textDefault($align){
     @include typography($text, $align, 2.06rem, 300);
+    //tablet
+    @include for-tablet-only {
+        text-align: center;
+    }
+   //mobile(S)
+    @include for-phoneS-only {
+        font-size: 1.35rem;
+    }
+}
+
+@mixin textSm($align){
+    @include typography(1.3rem, $align, 2rem, 300);
     //tablet
     @include for-tablet-only {
         text-align: center;
