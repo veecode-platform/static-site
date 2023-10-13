@@ -1,3 +1,5 @@
+'use client'
+
 import { useEffect, useState } from 'react';
 import { Remark } from 'react-remark';
 import remarkGemoji from 'remark-gemoji';
