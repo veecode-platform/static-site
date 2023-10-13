@@ -25,7 +25,6 @@
     "next-i18next": "^14.0.3",
     "react": "18.2.0",
     "react-burger-menu": "^3.0.9",
-    "react-code-blocks": "^0.1.4",
     "react-dom": "18.2.0",
     "react-error-decoder": "^2.0.1",
     "react-gtm-module": "^2.0.11",

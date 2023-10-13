@@ -7,7 +7,6 @@ import { DefaultPage, ScrollTop } from '../../components';
 import convertUrlToRaw from '../../../utils/convertUrlToRaw';
 import PluginsData from '../../../data/plugins/plugins.json';
 import Link from 'next/link';
-// import { CodeBlock, vs2015 } from "react-code-blocks";
 import { Light as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { vs2015 } from 'react-syntax-highlighter/dist/cjs/styles/hljs';
 
