@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react';
 import { Remark } from 'react-remark';
 import remarkGemoji from 'remark-gemoji';
 import rehypeSlug from 'rehype-slug';
-import rehypeAutoLinkHeadings from 'rehype-autolink-headings';
 import style from "../../../styles/PluginPage.module.scss"
 import { DefaultPage, ScrollTop } from '../../components';
 import convertUrlToRaw from '../../../utils/convertUrlToRaw';
