@@ -7,8 +7,6 @@ import { DefaultPage, ScrollTop } from '../../components';
 import convertUrlToRaw from '../../../utils/convertUrlToRaw';
 import PluginsData from '../../../data/plugins/plugins.json';
 import Link from 'next/link';
-import { Light as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { vs2015 } from 'react-syntax-highlighter/dist/cjs/styles/hljs';
 import rehypeHighlight from "rehype-highlight";
 import "highlight.js/styles/vs2015.css";
 
@@ -48,27 +46,6 @@ const PluginPage = ({ title }) => {
     })
   }, [title]);
 
-
-  // const CodeComponent = ({ className, children }) => {
-
-    // if (!language) return <code className={style.marked}>{children}</code>;
-
-    // if (typeof window !== 'undefined') {
-
-    //   return (
-    //     <SyntaxHighlighter
-    //       language={language}
-    //       style={vs2015}
-    //       className={style.codebox}
-    //     >
-    //       {children}
-    //     </SyntaxHighlighter>
-    //   );
-    // }
-
-    // return null;
-  // };
-
   const LinkTag = ({ href, children }) => {
 
     const label = children.join(' ');
@@ -95,7 +72,6 @@ const PluginPage = ({ title }) => {
           rehypePlugins={[rehypeSlug, rehypeHighlight]}
           rehypeReactOptions={{
             components: {
-              // code: (props) => <CodeComponent {...props} />,
               a: (props) => <LinkTag {...props} />
             },
           }}

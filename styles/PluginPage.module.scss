@@ -71,7 +71,7 @@
         }
     }
 
-    .marked{
+    code:not([class]){
         background: #FFFFFF65;
         padding: .2rem;
         border-radius: 5px;
