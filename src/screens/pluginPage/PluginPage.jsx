@@ -7,6 +7,7 @@ import { DefaultPage, ScrollTop } from '../../components';
 import convertUrlToRaw from '../../../utils/convertUrlToRaw';
 import PluginsData from '../../../data/plugins/plugins.json';
 import Link from 'next/link';
+import { CodeBlock, vs2015 } from "react-code-blocks";
 
 const PluginPage = ({ title }) => {
 
@@ -44,20 +45,21 @@ const PluginPage = ({ title }) => {
     }, [title]);
 
     
-    const CodeBlock = ({ className, children }) => {
+    const CodeComponent = ({ className, children }) => {
         let language = className ? className.replace(/^language-/, '') : null;
     
         if (!language) return <code className={style.marked}>{children}</code>;
     
         if (typeof window !== 'undefined') {
-
-          const { Light } = require('react-syntax-highlighter');
-          const { vs2015 } = require('react-syntax-highlighter/dist/esm/styles/hljs');
           
           return (
-            <Light language={language} style={vs2015} className={style.codebox}>
-              {children}
-            </Light>
+            <CodeBlock 
+              text={children} 
+              language={language} 
+              showLineNumbers={false} 
+              theme={vs2015} 
+              className={style.codebox}
+              />
           );
         }
     
@@ -90,7 +92,7 @@ const PluginPage = ({ title }) => {
                   rehypePlugins={[rehypeSlug]}
                   rehypeReactOptions={{
                       components: {
-                          code: (props) => <CodeBlock {...props} />,
+                          code: (props) => <CodeComponent {...props} />,
                           a: (props) => <LinkTag {...props}/>
                       },
                   }}
