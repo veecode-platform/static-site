@@ -1,5 +1,3 @@
-'use client'
-
 import { useEffect, useState } from 'react';
 import { Remark } from 'react-remark';
 import remarkGemoji from 'remark-gemoji';
@@ -11,6 +9,8 @@ import PluginsData from '../../../data/plugins/plugins.json';
 import Link from 'next/link';
 import { Light as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { vs2015 } from 'react-syntax-highlighter/dist/cjs/styles/hljs';
+import rehypeHighlight from "rehype-highlight";
+import "highlight.js/styles/vs2015.css";
 
 
 const PluginPage = ({ title }) => {
@@ -49,26 +49,25 @@ const PluginPage = ({ title }) => {
   }, [title]);
 
 
-  const CodeComponent = ({ className, children }) => {
-    let language = className ? className.replace(/^language-/, '') : null;
+  // const CodeComponent = ({ className, children }) => {
 
-    if (!language) return <code className={style.marked}>{children}</code>;
+    // if (!language) return <code className={style.marked}>{children}</code>;
 
-    if (typeof window !== 'undefined') {
+    // if (typeof window !== 'undefined') {
 
-      return (
-        <SyntaxHighlighter
-          language={language}
-          style={vs2015}
-          className={style.codebox}
-        >
-          {children}
-        </SyntaxHighlighter>
-      );
-    }
+    //   return (
+    //     <SyntaxHighlighter
+    //       language={language}
+    //       style={vs2015}
+    //       className={style.codebox}
+    //     >
+    //       {children}
+    //     </SyntaxHighlighter>
+    //   );
+    // }
 
-    return null;
-  };
+    // return null;
+  // };
 
   const LinkTag = ({ href, children }) => {
 
@@ -93,10 +92,10 @@ const PluginPage = ({ title }) => {
         <Remark
           remarkPlugins={[remarkGemoji]}
           remarkToRehypeOptions={{ allowDangerousHtml: true }}
-          rehypePlugins={[rehypeSlug]}
+          rehypePlugins={[rehypeSlug, rehypeHighlight]}
           rehypeReactOptions={{
             components: {
-              code: (props) => <CodeComponent {...props} />,
+              // code: (props) => <CodeComponent {...props} />,
               a: (props) => <LinkTag {...props} />
             },
           }}
