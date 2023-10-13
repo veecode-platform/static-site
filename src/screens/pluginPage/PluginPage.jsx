@@ -53,9 +53,11 @@ const PluginPage = ({ title }) => {
 
           const { Light } = require('react-syntax-highlighter');
           const { vs2015 } = require('react-syntax-highlighter/dist/esm/styles/hljs');
-    
+          
+          console.log(language)
+
           return (
-            <Light language={language} style={vs2015} className={style.codebox}>
+            <Light language={'diff'} style={vs2015} className={style.codebox}>
               {children}
             </Light>
           );
