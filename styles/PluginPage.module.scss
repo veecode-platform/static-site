@@ -70,6 +70,10 @@
         }
     }
 
+    code{
+        margin: 1rem auto;
+    }
+
     code:not([class]){
         background: #FFFFFF65;
         padding: .2rem;
@@ -82,10 +86,6 @@
             font-size: 13px;
             padding: .5rem .2rem;
         }
-    }
-
-    .codebox{
-        margin: 1rem 0!important;
     }
 
     .link{
