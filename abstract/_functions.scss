@@ -210,7 +210,7 @@ EFFECTS
 }
 
 @mixin titleSm($align) {
-    @include typography(1.7rem, $align, 2.8rem, 500);  // 48px
+    @include typography(1.55rem, $align, 2.8rem, 500);  // 48px
     //viewport
     @include for-viewport-only{
         font-size: 2rem;
@@ -241,7 +241,7 @@ EFFECTS
 }
 
 @mixin textSm($align){
-    @include typography(1.3rem, $align, 2rem, 300);
+    @include typography(1.1rem, $align, 1.5rem, 300);
     //tablet
     @include for-tablet-only {
         text-align: center;
