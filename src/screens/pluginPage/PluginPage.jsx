@@ -10,27 +10,40 @@ import Link from 'next/link';
 
 const PluginPage = ({ title }) => {
 
+    const [titleData, setTitleData] = useState(title);
     const [content, setContent] = useState('');
     const plugins = PluginsData.en;
 
     useEffect(() => {
-        plugins.filter(p => {
-            if (p.title == title) {
-             const rawUrl = convertUrlToRaw(p.url);
-                if (rawUrl) {
-                    fetch(rawUrl)
-                        .then((response) => response.text())
-                        .then((data) => {
-                            setContent(data);
-                        })
-                        .catch((error) => {
-                            console.error('Error:', error);
-                         });
-                }
-            }
-        })
-    }, []);
+      if(title){
+        localStorage.setItem('pageTitle', title);
+        setTitleData(title)
+      }
+      else{
+        const storedTitle = localStorage.getItem('pageTitle');
+        if(storedTitle){
+          setTitleData(storedTitle)
+        }
+      }
+  
+      plugins.filter(p => {
+        if (p.title == titleData) {
+          const rawUrl = convertUrlToRaw(p.url);
+          if (rawUrl) {
+            fetch(rawUrl)
+              .then((response) => response.text())
+              .then((data) => {
+                setContent(data);
+              })
+              .catch((error) => {
+                console.error('Error:', error);
+              });
+          }
+        }
+      })
+    }, [title]);
 
+    
     const CodeBlock = ({ className, children }) => {
         let language = className ? className.replace(/^language-/, '') : null;
     
