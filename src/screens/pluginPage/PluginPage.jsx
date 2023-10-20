@@ -64,7 +64,10 @@ const PluginPage = ({ title }) => {
   }
 
   return (
-    <DefaultPage notTranslate>
+    <DefaultPage 
+      notTranslate
+      backToUrl="/plugins"
+      >
       <section className={style.wrapper}>
         <Remark
           remarkPlugins={[remarkGemoji]}

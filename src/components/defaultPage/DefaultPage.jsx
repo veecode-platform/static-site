@@ -3,10 +3,14 @@ import style from "../../../styles/DefaultPage.module.scss";
 import { Header, Footer } from "../../components";
 import { useRouter } from 'next/router'
 
-const DefaultPage = ({titleBar,title, subtitle, children, noPrevious, noBack, noFooter, showButton, showOptions, notTranslate}) => {
+const DefaultPage = ({titleBar,title, subtitle, children, noPrevious, noBack, noFooter, showButton, showOptions, notTranslate, backToUrl}) => {
   const router = useRouter();
   const HandlerBack = () => {
-       noPrevious ? router.push("/") : router.back();
+       if(backToUrl){
+        router.push(backToUrl)
+       }else{
+        noPrevious ? router.push("/") : router.back();
+       }
   }
   return (
     <main className={style.wrapper}>
