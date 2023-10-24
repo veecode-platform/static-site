@@ -106,6 +106,14 @@ const Header = ({ fixedHeader, showButton, showOptions, notTranslate }) => {
                     </a>
                   </Link>
 
+                  <Link href="/plugins" passHref>
+                    <a>
+                      <ListItemText disableTypography sx={{ fontFamily: "Poppins, sans-serif", fontWeight: 400, margin: "0.8em 0" }}>
+                        {'Plugins'.toUpperCase()}
+                      </ListItemText>
+                    </a>
+                  </Link>
+
                   <Link href="/compare-plans/#plans" passHref>
                     <ListItemText disableTypography sx={{ fontFamily: "Poppins, sans-serif", fontWeight: 400, margin: "0.8em 0" }}>
                       {'Pricing'.toUpperCase()}
@@ -140,27 +148,40 @@ const Header = ({ fixedHeader, showButton, showOptions, notTranslate }) => {
           </Link>
         </div>
         <div className={style.nav}>
-          {showOptions && <div className={style.nav__options}>
-            <Link href='https://docs.platform.vee.codes/'>
-              <a>
-                <h2>{t("header-options-docs")}</h2>
-              </a>
-            </Link>
-          </div>}
-          {showOptions && <div className={style.nav__options}>
-            <Link href='/compare-plans#plans'>
-              <a>
-                <h2>{t("header-options-pricing")}</h2>
-              </a>
-            </Link>
-          </div>}
-          {showOptions && <div className={style.nav__options}>
-            <Link href='/contact-us'>
-              <a>
-                <h2>{t("contact-us")}</h2>
-              </a>
-            </Link>
-          </div>}
+          {showOptions  && (
+            <>
+              <div className={style.nav__options}>
+                <Link href='https://docs.platform.vee.codes/'>
+                  <a>
+                    <h2>{t("header-options-docs")}</h2>
+                  </a>
+                </Link>
+              </div>
+
+              <div className={style.nav__options}>
+                <Link href='plugins'>
+                  <a>
+                    <h2>{t("header-options-plugins")}</h2>
+                  </a>
+                </Link>
+              </div>
+
+              <div className={style.nav__options}>
+                <Link href='/compare-plans#plans'>
+                  <a>
+                    <h2>{t("header-options-pricing")}</h2>
+                  </a>
+                </Link>
+              </div>
+              <div className={style.nav__options}>
+                <Link href='/contact-us'>
+                  <a>
+                    <h2>{t("contact-us")}</h2>
+                  </a>
+                </Link>
+              </div>
+            </>
+          )}
 
           {showButton && <div className={style.nav__buyButton} >
             {/* <Link href="https://devportal.demo.vee.codes/" passHref> */}

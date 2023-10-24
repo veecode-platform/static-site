@@ -32,7 +32,7 @@
     .mobileContent {
         display: none;
 
-        @include for-phone-only {
+        @include for-tabletS-only {
             @include displayFlex(center, center, row);
 
             h2 {
@@ -63,11 +63,11 @@
 
         //tablet
         @include for-tablet-only{
-            width: 90vw;
+            width: 95vw;
         }
 
-        //mobile(M)
-        @include for-phone-only {
+        //tablet(S)
+        @include for-tabletS-only {
             display: none;
         }
 
@@ -97,7 +97,12 @@
                 h2 {
                     cursor: pointer;
                     opacity: 1;
-                    @include typography(1.1875rem, center, 1.9em, 400);
+                    @include typography($navbar, center, 1.9em, 400);
+
+                    //tablet
+                    @include for-tablet-only{
+                        font-size: 1rem;
+                    }
                 }
 
             }
@@ -145,9 +150,9 @@
                     font-family: "Poppins", sans-serif;
                     border: none;
 
-                    &:hover {
-                        background: red;
-                    }
+                    // &:hover {
+                    //     background: red;
+                    // }
                 }
             }
         }
