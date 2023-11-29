@@ -184,8 +184,7 @@ const Header = ({ fixedHeader, showButton, showOptions, notTranslate }) => {
           )}
 
           {showButton && <div className={style.nav__buyButton} >
-            {/* <Link href="https://devportal.demo.vee.codes/" passHref> */}
-            <Link href="/demo" passHref>
+            <Link href="https://devportal.demo.vee.codes/" passHref>
               <a target='_blank'>
                 <Button headerButton>{t("get-a-demo")}</Button>
               </a>
