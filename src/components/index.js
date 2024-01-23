@@ -17,3 +17,4 @@ export { default as FormElement} from "./formElement/FormElement";
 export { default as DividerBottom } from "./dividerBottom/DividerBottom";
 export { default as Tools } from "./tools/Tools";
 export { default as WhatsApp } from "./whatsApp/WhatsApp";
+export { default as ChatBot } from "./chatBot/ChatBot";
