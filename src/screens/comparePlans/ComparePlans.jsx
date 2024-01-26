@@ -34,7 +34,7 @@ const ComparePlans = () => {
         </PlansDetails>
 
         {/* BASIC */}
-        <PlansDetails
+        {/* <PlansDetails
           title={t("pricing-plan2-title")}
           subtitle={<>{t("pricing-plan2-subtitle1")} <Link href='/how-it-works' passHref><a style={{ cursor: "pointer", color: "#1C8068", fontWeight: "bold" }}>{t("pricing-plan2-subtitle2")}</a></Link>.</>}
           link="/validate?plan=basic"
@@ -48,7 +48,7 @@ const ComparePlans = () => {
           <li><span><FaCheck /></span>{t("pricing-plan2-topic3")}</li>
           <li><span><FaCheck /></span>{t("pricing-plan2-topic4")}</li>
           <li><span><FaCheck /></span>{t("pricing-plan2-topic5")}</li>
-        </PlansDetails>
+        </PlansDetails> */}
 
         {/* STANDARD */}
         <PlansDetails
