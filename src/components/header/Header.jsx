@@ -55,9 +55,10 @@ const Header = ({ fixedHeader, showButton, showOptions, notTranslate }) => {
             </div>
 
             {!notTranslate && (
-              <div className={style.select}>
+              <div>
               <select
                 defaultValue={i18n.language}
+                className={style.select}
                 onChange={() => {
                   i18n.language == 'pt' ?
                     i18n.changeLanguage('en') :
@@ -191,10 +192,10 @@ const Header = ({ fixedHeader, showButton, showOptions, notTranslate }) => {
             </Link>
           </div>}
           
-          {!notTranslate && (<div className={style.select}>
+          {!notTranslate && (<div>
             <select
-              style={{color:"white"}}
               defaultValue={i18n.language}
+              className={style.select}
               onChange={() => {
                 i18n.language == 'pt' ?
                   i18n.changeLanguage('en') :
@@ -202,8 +203,8 @@ const Header = ({ fixedHeader, showButton, showOptions, notTranslate }) => {
               }
               }
             >
-              <option value="en" style={{ color:"grey" }}>EN</option>
-              <option value="pt" style={{ color:"grey" }}>PT</option>
+              <option value="en">EN</option>
+              <option value="pt">PT</option>
             </select>
           </div>)}
         </div>
