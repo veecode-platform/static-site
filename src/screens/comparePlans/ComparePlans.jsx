@@ -1,10 +1,11 @@
 import React from "react";
-import { Breadcrumb, ContactBar, DefaultPage, Guarantees } from "../../components";
+import { Breadcrumb, Button, ContactBar, DefaultPage, Guarantees } from "../../components";
 import style from "../../../styles/ComparePlans.module.scss";
 import PlansDetails from "./plansDetails";
 import { FaCheck, FaCheckCircle, FaMinus } from "react-icons/fa";
 import { useTranslation } from 'react-i18next';
 import Link from "next/link";
+import AwsCustomerComponent from "./awsCustomerComponent";
 
 const ComparePlans = () => {
   const { t } = useTranslation();
@@ -12,10 +13,18 @@ const ComparePlans = () => {
   return (
     <DefaultPage
       showButton
-      titleBar="enable"
+      titleBar="disabled"
       title={t("pricing-title")}
       subtitle={t("pricing-subtitle")}
     >
+
+      <AwsCustomerComponent/>
+
+      <div className={style.supportTitle}>
+        <h2>{t("pricing-title")}</h2>
+        <h4>{t("pricing-subtitle")}</h4>
+      </div>
+
       <Breadcrumb active={1} />
 
       <article className={style.content} id="plans">
@@ -29,8 +38,22 @@ const ComparePlans = () => {
           link="/free-plan?plan=free"
           buttonLabel={t("pricing-plan1-label")}
         >
-          <li><span><FaCheck /></span><Link href="https://docs.platform.vee.codes/" passHref><a target={"_blank"}><span>{t("pricing-plan1-topic1")}</span></a></Link></li>
-          <li><span><FaCheck /></span>{t("pricing-plan1-topic2")}</li>
+          <li>
+            <span>
+              <FaCheck />
+            </span>
+            <Link href="https://docs.platform.vee.codes/" passHref>
+              <a target={"_blank"}>
+                <span>{t("pricing-plan1-topic1")}</span>
+              </a>
+            </Link>
+          </li>
+          <li>
+            <span>
+              <FaCheck />
+            </span>
+            {t("pricing-plan1-topic2")}
+          </li>
         </PlansDetails>
 
         {/* BASIC */}
@@ -53,21 +76,65 @@ const ComparePlans = () => {
         {/* STANDARD */}
         <PlansDetails
           title={t("pricing-plan3-title")}
-          subtitle={<>{t("pricing-plan3-subtitle1")} <Link href='/how-it-works' passHref><a style={{ cursor: "pointer", color: "#1C8068", fontWeight: "bold" }}>{t("pricing-plan3-subtitle2")}</a></Link>.</>}
+          subtitle={
+            <>
+              {t("pricing-plan3-subtitle1")}{" "}
+              <Link href="/how-it-works" passHref>
+                <a
+                  style={{
+                    cursor: "pointer",
+                    color: "#1C8068",
+                    fontWeight: "bold",
+                  }}
+                >
+                  {t("pricing-plan3-subtitle2")}
+                </a>
+              </Link>
+              .
+            </>
+          }
           link="/validate?plan=standard"
           label={t("pricing-plan3-desc1")}
           emphasis="$ 1990"
           text={t("pricing-plan3-desc3")}
           buttonLabel={t("pricing-plan3-label")}
         >
-          <li><span><FaCheck /></span>{t("pricing-plan3-topic1")} <Link href="/support" passHref><a><span>{t("pricing-plan3-topic1.1")}</span></a></Link></li>
-          <li><span><FaCheck /></span>{t("pricing-plan3-topic2")}</li>
-          <li><span><FaCheck /></span>{t("pricing-plan3-topic3")}</li>
-          <li><span><FaCheck /></span>{t("pricing-plan3-topic4")}</li>
-          <li><span><FaCheck /></span>{t("pricing-plan3-topic5")}</li>
+          <li>
+            <span>
+              <FaCheck />
+            </span>
+            {t("pricing-plan3-topic1")}{" "}
+            <Link href="/support" passHref>
+              <a>
+                <span>{t("pricing-plan3-topic1.1")}</span>
+              </a>
+            </Link>
+          </li>
+          <li>
+            <span>
+              <FaCheck />
+            </span>
+            {t("pricing-plan3-topic2")}
+          </li>
+          <li>
+            <span>
+              <FaCheck />
+            </span>
+            {t("pricing-plan3-topic3")}
+          </li>
+          <li>
+            <span>
+              <FaCheck />
+            </span>
+            {t("pricing-plan3-topic4")}
+          </li>
+          <li>
+            <span>
+              <FaCheck />
+            </span>
+            {t("pricing-plan3-topic5")}
+          </li>
         </PlansDetails>
-
-
 
         {/* ENTERPRISE */}
         <PlansDetails
@@ -77,12 +144,47 @@ const ComparePlans = () => {
           headline={t("pricing-plan4-desc")}
           buttonLabel={t("contact-us")}
         >
-          <li><span><FaCheck /></span>{t("pricing-plan4-topic1")} <Link href="/support" passHref><a><span>{t("pricing-plan4-topic1.1")}</span></a></Link></li>
-          <li><span><FaCheck /></span>{t("pricing-plan4-topic2")}</li>
-          <li><span><FaCheck /></span>{t("pricing-plan4-topic3")}</li>
-          <li><span><FaCheck /></span>{t("pricing-plan4-topic4")}</li>
-          <li><span><FaCheck /></span>{t("pricing-plan4-topic5")}</li>
-          <li><span><FaCheck /></span>{t("pricing-plan4-topic6")}</li>
+          <li>
+            <span>
+              <FaCheck />
+            </span>
+            {t("pricing-plan4-topic1")}{" "}
+            <Link href="/support" passHref>
+              <a>
+                <span>{t("pricing-plan4-topic1.1")}</span>
+              </a>
+            </Link>
+          </li>
+          <li>
+            <span>
+              <FaCheck />
+            </span>
+            {t("pricing-plan4-topic2")}
+          </li>
+          <li>
+            <span>
+              <FaCheck />
+            </span>
+            {t("pricing-plan4-topic3")}
+          </li>
+          <li>
+            <span>
+              <FaCheck />
+            </span>
+            {t("pricing-plan4-topic4")}
+          </li>
+          <li>
+            <span>
+              <FaCheck />
+            </span>
+            {t("pricing-plan4-topic5")}
+          </li>
+          <li>
+            <span>
+              <FaCheck />
+            </span>
+            {t("pricing-plan4-topic6")}
+          </li>
         </PlansDetails>
       </article>
       <article className={style.sectionBar}>

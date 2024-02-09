@@ -1,0 +1,38 @@
+@import "/abstract/functions", "/abstract/responsive", "/abstract/variables";
+
+.card{
+    @include screenSize(100%,auto);
+    padding: 2.5rem;
+    // border: 2px solid $color1;
+    @include glassEffect();
+    border-radius: 15px;
+    @include displayFlex(space-between, center, row);
+
+    &__image{
+        width: 20%;
+        height: 245px;
+        @include boxShadow2();
+        border-radius: 5px;
+        overflow: hidden;
+    }
+
+    &__body{
+        width: 78%;
+        height: 100%;
+        // min-height: 220px;
+        @include displayFlex(space-between,flex-start,column);
+        .bodyText{
+            @include textDefault(start);
+            @include typography(1.3rem,start,1.3em,400);
+            
+        }
+        .footer{
+            margin-top:2rem;
+            @include screenSize(100%,auto);
+            gap: 2rem;
+            @include displayFlex(flex-start,center,row);
+            @include textDefault(start);
+            color: $color1;
+        }
+    }
+}

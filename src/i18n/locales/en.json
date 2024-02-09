@@ -237,6 +237,15 @@
         "faq-answ10":"VKPR builds for you a cloud infrastructure with a few lines of code. We understand that there is a mystery that surrounds the world of Devops, and there are great challenges in cloud provisioning. VKPR abstracts away the difficulties of provisioning and gives you freedom in creating the infrastructure either in test or in production.",
         "faq-answ11":"DevPortal is a platform that centralizes your Specs and APIs making it easy to control microservices. Today we understand that the microservices architecture is necessary to deliver value to our users. Devportal works as a showcase of specifications and APIs that facilitate the control and testing of services.",
         
+        "aws-customer-title":"Are you an AWS customer?",
+        "aws-customer-subtitle": "Explore the advantages of the products available on the AWS Marketplace and reach new heights of efficiency.",
+        "aws-customer-card1": "Platform Engineering facilitates migration to the cloud by providing information, knowledge and a strategic plan. The workshop explores the principles, benefits and role of platform engineering, allowing participants to create a personalized strategic roadmap. By the end, they will have the knowledge to launch their Internal Developer Portal with confidence.",
+        "aws-customer-card2": "VeeCode Fast Track offers a specialized IDP solution to enhance developer experience quickly. Through a time-boxed effort, a dedicated team swiftly sets up a DevPortal instance and provides initial templates and automations for immediate productivity gains.",
+        "aws-customer-footer": "Are you an AWS customer?",
+        "aws-customer-buy-btn": "Buy Here",
+        "aws-customer-alternative-btn":"or",
+        "aws-customer-contact-btn": "Contact us",
+
         "pricing-title":"Chose our support for you",
         "pricing-subtitle":"No more stress with the digital transition, choose the support that most fits your need:",
 

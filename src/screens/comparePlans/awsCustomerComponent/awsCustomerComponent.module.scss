@@ -1,0 +1,59 @@
+@import "/abstract/functions", "/abstract/responsive", "/abstract/variables";
+
+.content{
+    @include screenSize(100%,auto);
+    @include displayFlex(center,center,column);
+    gap: 3rem;
+    margin-top: 2rem;
+
+    &__titleWrapper {
+      @include screenSize(100%,auto);
+      @include displayFlex(flex-start, center,row);
+      gap: 2rem;
+      .awsMarketplaceLogo{
+        width: 20rem;
+        @include glassEffect();
+        padding: 1.5rem;
+      }
+      .awsTitle{
+        @include typography(2.5rem,start,1.3em,600);
+            color: $color1;
+            //tablet
+            @include for-tablet-only{
+              font-size: 22px;
+            }
+            //mobile
+            @include for-phone-only{
+              margin-top: 4rem;
+            }
+      }
+    }
+
+    &__awsSubtitle{
+        width: 100%;
+        margin: 1.5rem 0;
+        p{
+          @include typography(1.5rem,start,1.3em,400);
+          color: $color2;
+          //tablet
+          @include for-tablet-only{
+            font-size: 17px;
+          }
+          //tablet
+          @include for-tablet-only{
+            font-size: 16px;
+          }
+          //mobile(S)
+          @include for-phoneS-only{
+            display: none;
+          }
+        }
+      }
+
+    &__awsCards{
+        @include screenSize(100%,auto);
+        @include displayFlex(center,center,column);
+        gap: 2rem;
+    }
+
+}
