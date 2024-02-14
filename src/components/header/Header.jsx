@@ -66,8 +66,8 @@ const Header = ({ fixedHeader, showButton, showOptions, notTranslate }) => {
                 }
                 }
               >
-                <option value="en">EN</option>
-                <option value="pt">PT</option>
+                <option className={style.select__option} value="en">EN</option>
+                <option className={style.select__option} value="pt">PT</option>
               </select>
             </div>
             )}
@@ -203,8 +203,8 @@ const Header = ({ fixedHeader, showButton, showOptions, notTranslate }) => {
               }
               }
             >
-              <option value="en">EN</option>
-              <option value="pt">PT</option>
+              <option className={style.select__option} value="en">EN</option>
+              <option className={style.select__option} value="pt">PT</option>
             </select>
           </div>)}
         </div>

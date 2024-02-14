@@ -1,5 +1,4 @@
-@import "../abstract/functions", "../abstract/variables",
-  "../abstract/responsive";
+@import "../abstract/functions", "../abstract/variables", "../abstract/responsive";
 
 .wrapper {
   @include screenSize(100vw, auto);
@@ -126,33 +125,41 @@
         display: none;
       }
     }
-
   }
 }
 
 .select {
-    margin: 1em;
-    border: 1px solid #777;
-    border-radius: 0.25em;
-    padding: 0.25em 0.5em;
-    font-size: 1rem;
+  appearance: none;
+  color: #333;
+  margin: 1em;
+  color: $color2;
+  background: transparent;
+  border: 1px solid #777;
+  border-radius: 0.25em;
+  padding: 0.5rem 0.8rem;
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+  font-size: inherit;
+  cursor: pointer;
+  outline: none;
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+
+  &::-ms-expand {
+    display: none;
+  }
+
+  &__option {
+    background-color: $color18;
     color: $color2;
-    background: transparent;
-    font-family: "Poppins", sans-serif;
-    font-size: inherit;
-    cursor: pointer;
-    outline: none;
 
-    &::-ms-expand {
-        display: none;
+    &:hover {
+      background-color: $color1;
+      color: $color18;
     }
 
-    option {
-        background-color: $color18;
-        color: $color2; 
-        &:hover {
-            background-color: $color1;
-            color: $color18;
-        }
-    }
+  }
 }
