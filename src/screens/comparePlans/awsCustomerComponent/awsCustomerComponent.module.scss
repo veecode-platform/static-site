@@ -10,6 +10,14 @@
       @include screenSize(100%,auto);
       @include displayFlex(flex-start, center,row);
       gap: 2rem;
+      // tabletS
+      @include for-tabletS-only{
+        @include displayFlex(center, flex-start,column);
+      }
+      // mobileS
+      @include for-phoneS-only{
+        @include displayFlex(center, center,column);
+      }
       .awsMarketplaceLogo{
         width: 20rem;
         @include glassEffect();
@@ -18,11 +26,11 @@
       .awsTitle{
         @include typography(2.5rem,start,1.3em,600);
             color: $color1;
-            //tablet
+            // tablet
             @include for-tablet-only{
               font-size: 22px;
             }
-            //mobile
+            // mobile
             @include for-phone-only{
               margin-top: 4rem;
             }
@@ -32,6 +40,14 @@
     &__awsSubtitle{
         width: 100%;
         margin: 1.5rem 0;
+        // tabletS
+        @include for-tabletS-only{
+          margin: .5rem 0 1.5rem 0;
+        }
+        // Mobile
+        @include for-phone-only{
+          margin: .5rem 0;
+        }
         p{
           @include typography(1.5rem,start,1.3em,400);
           color: $color2;
@@ -39,8 +55,8 @@
           @include for-tablet-only{
             font-size: 17px;
           }
-          //tablet
-          @include for-tablet-only{
+          //tabletS
+          @include for-tabletS-only{
             font-size: 16px;
           }
           //mobile(S)
@@ -54,6 +70,17 @@
         @include screenSize(100%,auto);
         @include displayFlex(center,center,column);
         gap: 2rem;
+       //tabletS
+        @include for-tabletS-only{
+          display: grid;
+          grid-template: 100% / repeat(2,50%);
+          gap: 1rem;
+        }
+        // mobile
+        @include for-phone-only{
+          @include displayFlex(center,center,column);
+          gap: 2rem;
+        }
     }
 
 }
