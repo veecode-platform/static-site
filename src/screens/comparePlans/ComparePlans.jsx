@@ -55,24 +55,7 @@ const ComparePlans = () => {
             {t("pricing-plan1-topic2")}
           </li>
         </PlansDetails>
-
-        {/* BASIC */}
-        {/* <PlansDetails
-          title={t("pricing-plan2-title")}
-          subtitle={<>{t("pricing-plan2-subtitle1")} <Link href='/how-it-works' passHref><a style={{ cursor: "pointer", color: "#1C8068", fontWeight: "bold" }}>{t("pricing-plan2-subtitle2")}</a></Link>.</>}
-          link="/validate?plan=basic"
-          label={t("pricing-plan2-desc1")}
-          emphasis="$ 690"
-          text={t("pricing-plan2-desc3")}
-          buttonLabel={t("pricing-plan2-label")}
-        >
-          <li><span><FaCheck /></span>{t("pricing-plan2-topic1")} <Link href="/support" passHref><a><span>{t("pricing-plan2-topic1.1")}</span></a></Link></li>
-          <li><span><FaCheck /></span>{t("pricing-plan2-topic2")}</li>
-          <li><span><FaCheck /></span>{t("pricing-plan2-topic3")}</li>
-          <li><span><FaCheck /></span>{t("pricing-plan2-topic4")}</li>
-          <li><span><FaCheck /></span>{t("pricing-plan2-topic5")}</li>
-        </PlansDetails> */}
-
+        
         {/* STANDARD */}
         <PlansDetails
           title={t("pricing-plan3-title")}
