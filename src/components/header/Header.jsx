@@ -115,7 +115,7 @@ const Header = ({ fixedHeader, showButton, showOptions, notTranslate }) => {
                     </a>
                   </Link>
 
-                  <Link href="/compare-plans/#plans" passHref>
+                  <Link href="/compare-plans" passHref>
                     <ListItemText disableTypography sx={{ fontFamily: "Poppins, sans-serif", fontWeight: 400, margin: "0.8em 0" }}>
                       {'Pricing'.toUpperCase()}
                     </ListItemText>
@@ -168,7 +168,7 @@ const Header = ({ fixedHeader, showButton, showOptions, notTranslate }) => {
               </div>
 
               <div className={style.nav__options}>
-                <Link href='/compare-plans#plans'>
+                <Link href='/compare-plans'>
                   <a>
                     <h2>{t("header-options-pricing")}</h2>
                   </a>
