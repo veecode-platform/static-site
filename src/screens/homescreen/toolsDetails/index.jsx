@@ -35,7 +35,7 @@ const ToolsDetails = () => {
 
         <div className={style["wrapper_cardsWrapper-subtitle"]}>
             <p>{t("home-tools-details-subtitle1")} </p>
-            <Link href="https://docs.platform.vee.codes/devportal/self-service-demo/prerequisites/" prefetch={false}>
+            <Link href="https://docs.platform.vee.codes/devportal/intro" prefetch={false}>
               <a target="_blank">
                 <button
                   className={style.button}
