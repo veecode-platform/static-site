@@ -30,13 +30,13 @@ const AwsCustomerComponent = () => {
         <CardAwsContent
           image={LauchWorkshopImg}
           bodyText={t("aws-customer-card1")}
-          link="globo.com"
+          link="/"
         />
 
         <CardAwsContent
           image={FastTrackImg}
           bodyText={t("aws-customer-card2")}
-          link="globo.com"
+          link="/"
         />
       </article>
     </div>
