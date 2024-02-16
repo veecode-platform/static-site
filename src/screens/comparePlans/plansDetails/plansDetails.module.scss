@@ -131,6 +131,15 @@
         @include typography(2.2vw, center, auto, 800);
         color: $color2;
 
+        sup{
+          font-size: 1rem;
+        }
+
+        // tablet
+        @include for-tabletS-only{
+        font-size: 2.6vw;
+        }
+
         // mobile(M)
         @include for-phone-only {
           font-size: 42px;

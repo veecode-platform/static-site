@@ -78,7 +78,7 @@ const ComparePlans = () => {
           }
           link="/validate?plan=standard"
           label={t("pricing-plan3-desc1")}
-          emphasis="$ 1990"
+          emphasis={<><sup>USD</sup> 1990</>}
           text={t("pricing-plan3-desc3")}
           buttonLabel={t("pricing-plan3-label")}
         >
