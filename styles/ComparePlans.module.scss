@@ -59,7 +59,8 @@
 
     //viewport
     @include for-viewport-only {
-        @include screenSize(110%, auto);
+        @include screenSize(85vw, auto);
+        gap: .5em;
     }
 
     //tablet

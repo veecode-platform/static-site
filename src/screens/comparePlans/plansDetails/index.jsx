@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
 import React from "react";
 import { Button } from "../../../components";
@@ -19,7 +20,7 @@ const PlansDetails = ({
 }) => {
   return (
     <div className={style.planTable}>
-      { banner === true && <img src={offer} className={style.image}/>} 
+      { banner === true && <img src={offer} className={style.image} alt=""/>} 
       <div className={style.planTable__title}>
         <h2 className={style["planTable__title-title"]}>{title}</h2>
       </div>
