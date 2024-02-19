@@ -10,11 +10,8 @@ import i18n from 'i18next';
 const SupportPlans = () => {
 
   let items = [];
-
   i18n.language == 'pt' ? items = data.pt : items = data.en;
-  console.log('lng', i18n.language)
-
-  console.log('items:', items)
+  
   return (
     <main className={style.wrapper}>
       <Header showOptions fixedHeader></Header>
