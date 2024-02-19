@@ -15,7 +15,7 @@ function MyApp({ Component, pageProps }) {
   const thumbnailImageUrl = `${router.basePath}/thumbnail.png`;
 
   useEffect(() => {
-    TagManager.initialize({ gtmId: 'GTM-56RG967' });
+    TagManager.initialize({ gtmId: process.env.NEXT_PUBLIC_GOOGLE_TAG_MANAGER });
   }, []);
   return (
     <>
