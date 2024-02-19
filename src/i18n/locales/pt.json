@@ -237,6 +237,15 @@
         "faq-answ10":"A VKPR constrói para si uma infra-estrutura de nuvem com algumas linhas de código. Entendemos que há um mistério em torno do mundo do Devops e que há grandes desafios no provisionamento da nuvem. A VKPR abstrai as dificuldades do aprovisionamento e dá-lhe liberdade para criar a infra-estrutura quer em teste quer em produção.",
         "faq-answ11":"DevPortal é uma plataforma que centraliza as suas Specs e APIs, facilitando o controle dos microsserviços. Hoje entendemos que a arquitectura de microserviços é necessária para entregar valor aos nossos utilizadores. Devportal funciona como uma vitrine de especificações e APIs que facilitam o controle e teste de serviços.",
 
+        "aws-customer-title":"É um cliente AWS?",
+        "aws-customer-subtitle": "Explore as vantagens dos produtos disponíveis no AWS Marketplace e alcance novos patamares de eficiência.",
+        "aws-customer-card1": "A engenharia de plataformas facilita a migração para a nuvem, fornecendo informações, conhecimentos e um plano estratégico. O workshop explora os princípios, os benefícios e o papel da engenharia de plataformas, permitindo que os participantes criem um roteiro estratégico personalizado. No final, terão os conhecimentos necessários para lançar o seu Portal de Programador Interno com confiança.",
+        "aws-customer-card2": "O VeeCode Fast Track oferece uma solução especializada de IDP para melhorar rapidamente a experiência do desenvolvedor. Através de um esforço de tempo limitado, uma equipe dedicada configura rapidamente uma instância do DevPortal e fornece modelos iniciais e automatizações para ganhos imediatos de produtividade.",
+        "aws-customer-footer": "É um cliente AWS?",
+        "aws-customer-buy-btn": "Compre Aqui",
+        "aws-customer-alternative-btn":"ou",
+        "aws-customer-contact-btn": "Fale Conosco",
+
         "pricing-title":"Escolha o nosso suporte para você",
         "pricing-subtitle":"Não há mais stress com a transição digital, escolha o apoio que mais se adequa às suas necessidades:",
 

@@ -2,8 +2,6 @@
 import { DefaultPage, FormElement } from '../../components';
 import style from '../../../styles/ContactUs.module.scss';
 import { useTranslation } from 'react-i18next';
-import { object, string } from 'yup';
-import { useRouter } from 'next/router'
 import Accordion from './accordion';
 
 const ContactUs = () => {
@@ -27,7 +25,6 @@ const ContactUs = () => {
                         <div className={style["content__options-formWraper"]}>
                             <FormElement
                                 type="CONTACT-US"
-                                checkbox
                                 company
                             />
                         </div>

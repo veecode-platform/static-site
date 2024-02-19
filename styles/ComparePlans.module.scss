@@ -1,5 +1,46 @@
 @import '/abstract/functions', '/abstract//responsive', '/abstract/variables';
 
+.supportTitle{
+    @include screenSize(100%,auto);
+    margin: 10rem 0 8rem 0;
+    color: $color1;
+
+    //Tablet S
+    @include for-tabletS-only{
+        margin: 5rem 0;
+    }
+
+    h2{
+        @include typography(2.5rem,start,1.3em,600);
+            margin-bottom: 2vh;
+            color: $color1;
+            //tablet
+            @include for-tablet-only{
+              font-size: 22px;
+            }
+            //mobile
+            @include for-phone-only{
+              margin-top: 4rem;
+            }
+    }
+    h4{
+        @include typography(1.5rem,start,1.3em,500);
+            color: $color2;
+            //tablet
+            @include for-tablet-only{
+              font-size: 17px;
+            }
+            //tablet
+            @include for-tablet-only{
+              font-size: 16px;
+            }
+            //mobile(S)
+            @include for-phoneS-only{
+              display: none;
+            }
+    }
+}
+
 .content {
     @include screenSize(125%, auto);
     max-width: 1344px;
@@ -10,6 +51,7 @@
     padding: 2em 0 2em 0;
 
     position: relative;
+
     span {
         color: $color1;
         text-decoration-line: underline;
@@ -17,7 +59,8 @@
 
     //viewport
     @include for-viewport-only {
-        @include screenSize(110%, auto);
+        @include screenSize(85vw, auto);
+        gap: .5em;
     }
 
     //tablet
@@ -25,7 +68,7 @@
         @include screenSize(115%, auto);
     }
 
-    //tablet (SM)
+    //tablet (S)
     @include for-tabletS-only {
         @include screenSize(85%, auto);
         grid-template: 1fr / repeat(2, 1fr);
@@ -41,7 +84,7 @@
 
     //mobile(S)
     @include for-phoneS-only {
-        @include screenSize(100%, auto);
+        @include screenSize(90vw, auto);
     }
 }
 
