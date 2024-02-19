@@ -4,7 +4,7 @@ import SupportSection from "./supportSection";
 import data from "./data.json";
 import FirstSection from "./firstSection";
 import Trial from "./trial";
-import { Footer, Header, WhatsApp } from "../../components";
+import { ChatBot, Footer, Header } from "../../components";
 import i18n from 'i18next';
 
 const SupportPlans = () => {
@@ -34,7 +34,7 @@ const SupportPlans = () => {
       })}
       </section>
       <Trial />
-      <WhatsApp />
+      <ChatBot/>
       <Footer />
     </main>
   );
