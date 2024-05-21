@@ -171,7 +171,7 @@ const Header = ({ fixedHeader, showButton, showOptions, notTranslate }) => {
               <Link href="https://blog.platform.vee.codes/" passHref>
                     <a target='_blank'>
                       <ListItemText disableTypography sx={{ fontFamily: "Poppins, sans-serif", fontWeight: 400, margin: "0.8em 0" }}>
-                       {t("header-options-blog")}
+                       <h2>{t("header-options-blog")}</h2>
                       </ListItemText>
                     </a>
                   </Link>
