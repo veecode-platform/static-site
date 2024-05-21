@@ -32,7 +32,7 @@
   .mobileContent {
     display: none;
 
-    @include for-tablet-only {
+    @include for-tabletS-only {
       @include displayFlex(center, center, row);
 
       margin-bottom: 5rem;
@@ -55,6 +55,11 @@
       img {
         margin: 0.5em;
         width: 25vw;
+
+        // tabletS
+        @include for-tabletS-only{
+          max-width: 160px
+        }
       }
     }
   }
@@ -73,7 +78,7 @@
     }
 
     //tablet
-    @include for-tablet-only {
+    @include for-tabletS-only {
       display: none;
     }
 
@@ -86,6 +91,7 @@
       @include for-tablet-only {
         @include screenSize(150px, auto);
       }
+
     }
 
     .nav {
@@ -93,7 +99,7 @@
       @include displayFlex(flex-end, center, row);
 
       &__options {
-        margin: 0 2em;
+        margin: 0 1em;
         // tablet(S)
         @include for-tabletS-only {
           margin: 0 1em;
