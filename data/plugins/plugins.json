@@ -20,7 +20,7 @@
             "id": 3,
             "image": "https://veecode-platform.github.io/support/imgs/logo_3.svg",
             "title": "Kong Service Manager",
-            "tags": ["kong", "api-gateway","services"],
+            "tags": ["kong", "Api gateway","services"],
             "desc": "O plugin Kong Service Manager disponibiliza informações sobre service do kong, a lista das rotas que ela possui e oferece também a possibilidade de manipular plugins sem sair do backstage.",
             "url": "https://github.com/veecode-platform/platform-backstage-plugins/tree/master/plugins/kong-service-manager"
           }
@@ -47,7 +47,7 @@
             "id": 3,
             "image": "https://veecode-platform.github.io/support/imgs/logo_3.svg",
             "title": "Kong Service Manager",
-            "tags": ["kong", "api-gateway","services"],
+            "tags": ["kong", "Api gateway","services"],
             "desc": "The Kong Service Manager plugin provides information about the kong service, a list of the routes it has and also offers the possibility of manipulating plugins without leaving the backstage.",
             "url": "https://github.com/veecode-platform/platform-backstage-plugins/tree/master/plugins/kong-service-manager"
           }
