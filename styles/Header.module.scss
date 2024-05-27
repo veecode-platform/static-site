@@ -55,24 +55,29 @@
       img {
         margin: 0.5em;
         width: 25vw;
+
+        // tabletS
+        @include for-tabletS-only{
+          max-width: 160px
+        }
       }
     }
   }
 
   .content {
-    @include screenSize(80%, auto);
+    @include screenSize(90%, auto);
     @include displayFlex(flex-start, center, row);
     padding: 1.5vh 0;
     z-index: 99;
     justify-content: space-between;
     max-width: $wrapperDesktop;
 
-    //tablet
-    @include for-tablet-only {
-      width: 95vw;
+    //viewPort
+    @include for-viewport-only{
+      width: 95vw
     }
 
-    //tablet(S)
+    //tablet
     @include for-tabletS-only {
       display: none;
     }
@@ -80,12 +85,13 @@
     &__logo {
       @include screenSize(13.875rem, auto);
       min-width: 100px;
-      max-width: 350px;
+      max-width: 200px;
 
       //tablet
       @include for-tablet-only {
         @include screenSize(150px, auto);
       }
+
     }
 
     .nav {
@@ -93,7 +99,7 @@
       @include displayFlex(flex-end, center, row);
 
       &__options {
-        margin: 0 2em;
+        margin: 0 1em;
         // tablet(S)
         @include for-tabletS-only {
           margin: 0 1em;

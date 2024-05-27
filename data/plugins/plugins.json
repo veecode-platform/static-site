@@ -2,7 +2,7 @@
     "pt":[
         {
             "id": 0,
-            "image": "/assets/plugins/github.png",
+            "image": "https://veecode-platform.github.io/support/imgs/logo_2.svg",
             "title": "Github workflows",
             "tags": ["CI-CD", "Github"],
             "desc": "O plugin Github Workflows fornece uma alternativa para acionar manualmente fluxos de trabalho do GitHub de dentro do seu componente Backstage.",
@@ -10,18 +10,26 @@
           },
           {
             "id": 1,
-            "image": "/assets/plugins/gitlab.png",
+            "image": "https://veecode-platform.github.io/support/imgs/logo_1.svg",
             "title": "Gitlab Pipelines",
             "tags": ["CI-CD", "GitlabCi"],
             "desc": "O plugin de pipelines do Gitlab integra o GitlabCi com seu componente backstage de forma simples.",
             "url": "https://github.com/veecode-platform/platform-backstage-plugins/tree/master/plugins/gitlab-pipelines"
+          },
+          {
+            "id": 3,
+            "image": "https://veecode-platform.github.io/support/imgs/logo_3.svg",
+            "title": "Kong Service Manager",
+            "tags": ["kong", "routes","plugins"],
+            "desc": "O plugin Kong Service Manager disponibiliza informações sobre service do kong, a lista das rotas que ela possui e oferece também a possibilidade de manipular plugins sem sair do backstage.",
+            "url": "https://github.com/veecode-platform/platform-backstage-plugins/tree/master/plugins/kong-service-manager"
           }
 
     ],
     "en":[
         {
             "id": 0,
-            "image": "/assets/plugins/github.png",
+            "image": "https://veecode-platform.github.io/support/imgs/logo_2.svg",
             "title": "Github workflows",
             "tags": ["CI-CD", "Github"],
             "desc": "The Github Workflows plugin provides an alternative for manually triggering GitHub workflows from within your Backstage component.",
@@ -29,11 +37,19 @@
           },
           {
             "id": 1,
-            "image": "/assets/plugins/gitlab.png",
+            "image": "https://veecode-platform.github.io/support/imgs/logo_1.svg",
             "title": "Gitlab Pipelines",
             "tags": ["CI-CD", "GitlabCi"],
             "desc": "The Gitlab pipelines plugin integrates GitlabCi with its backstage component in a simple way.",
             "url": "https://github.com/veecode-platform/platform-backstage-plugins/tree/master/plugins/gitlab-pipelines"
+          },
+          {
+            "id": 3,
+            "image": "https://veecode-platform.github.io/support/imgs/logo_3.svg",
+            "title": "Kong Service Manager",
+            "tags": ["kong", "routes","plugins"],
+            "desc": "The Kong Service Manager plugin provides information about the kong service, a list of the routes it has and also offers the possibility of manipulating plugins without leaving the backstage.",
+            "url": "https://github.com/veecode-platform/platform-backstage-plugins/tree/master/plugins/kong-service-manager"
           }
     ]
 }

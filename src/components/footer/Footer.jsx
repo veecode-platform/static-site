@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import style from "../../../styles/Footer.module.scss";
-import { FaDiscord, FaFacebookSquare, FaGooglePlusSquare, FaInstagram, FaLinkedin, FaTwitterSquare, FaYoutube } from "react-icons/fa";
+import { FaDiscord, FaLinkedin, FaTwitterSquare, FaYoutube } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 import Link from "next/link";
 import { gtagEvents } from "../../../utils/gtag";
 import { useTranslation } from 'react-i18next';
@@ -38,7 +39,7 @@ const Footer = () => {
               </Link>
             </li>
             <li>
-              <Link href="https://twitter.com/veecodeplatform" passHref><a target="_blank"><FaTwitterSquare /></a></Link>
+              <Link href="https://twitter.com/veecodeplatform" passHref><a target="_blank"><FaXTwitter/></a></Link>
             </li>
             <li>
               <Link href="https://discord.gg/pREwxeVzAD" passHref><a target="_blank"><FaDiscord /></a></Link>
@@ -74,11 +75,16 @@ const Footer = () => {
               <li>
                 <span>{t("footer-topic3")}</span>
               </li>
+              <Link href="https://blog.platform.vee.codes/" passHref>
+                <a target='_blank'>
+                  <li>Blog</li>
+                </a>
+              </Link>
               <Link href="/terms-of-service"><a><li>{t("terms-of-service")}</li></a></Link>
               <Link href="/privacy-policy"><a><li>{t("privacy-policy")}</li></a></Link>
               <Link href="/contact-us"><a><li>{t("contact-us")}</li></a></Link>
               <Link href="/faq"><a><li>FAQ</li></a></Link>
-              <Link href="/plugins"><a><li>Plugins</li></a></Link>
+              <Link href="/plugins"><a><li>Plugins</li></a></Link>    
             </ul>
           </div>
         </div>

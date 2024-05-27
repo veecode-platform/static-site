@@ -107,6 +107,14 @@ const Header = ({ fixedHeader, showButton, showOptions, notTranslate }) => {
                     </a>
                   </Link>
 
+                  <Link href="https://docs.platform.vee.codes/" passHref>
+                    <a target='_blank'>
+                      <ListItemText disableTypography sx={{ fontFamily: "Poppins, sans-serif", fontWeight: 400, margin: "0.8em 0" }}>
+                        {'Blog'.toUpperCase()}
+                      </ListItemText>
+                    </a>
+                  </Link>
+
                   <Link href="/plugins" passHref>
                     <a>
                       <ListItemText disableTypography sx={{ fontFamily: "Poppins, sans-serif", fontWeight: 400, margin: "0.8em 0" }}>
@@ -158,6 +166,16 @@ const Header = ({ fixedHeader, showButton, showOptions, notTranslate }) => {
                   </a>
                 </Link>
               </div>
+
+              <div className={style.nav__options}>
+              <Link href="https://blog.platform.vee.codes/" passHref>
+                    <a target='_blank'>
+                      <ListItemText disableTypography sx={{ fontFamily: "Poppins, sans-serif", fontWeight: 400, margin: "0.8em 0" }}>
+                       <h2>{t("header-options-blog")}</h2>
+                      </ListItemText>
+                    </a>
+                  </Link>
+                  </div>
 
               <div className={style.nav__options}>
                 <Link href='plugins'>
