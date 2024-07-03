@@ -23,6 +23,14 @@
             "tags": ["kong", "Api gateway","services"],
             "desc": "O plugin Kong Service Manager disponibiliza informações sobre service do kong, a lista das rotas que ela possui e oferece também a possibilidade de manipular plugins sem sair do backstage.",
             "url": "https://github.com/veecode-platform/platform-backstage-plugins/tree/master/plugins/kong-service-manager"
+          },
+          {
+            "id": 4,
+            "image": "https://veecode-platform.github.io/support/imgs/logo_4.svg",
+            "title": "Kubernetes GPT Analyzer",
+            "tags": ["kubernetes", "AI","monitoring"],
+            "desc": "O plug-in Kubernetes GPT Analyzer usa inteligência artificial com a ajuda do k8s-operator para analisar e otimizar suas entidades do Kubernetes, melhorando o gerenciamento e o desempenho do seu cluster. Ele facilita a detecção de anomalias e sugere práticas recomendadas.",
+            "url": "https://github.com/veecode-platform/platform-backstage-plugins/blob/master/plugins/kubernetes-gpt-analyzer/README.md"
           }
 
     ],
@@ -50,6 +58,14 @@
             "tags": ["kong", "Api gateway","services"],
             "desc": "The Kong Service Manager plugin provides information about the kong service, a list of the routes it has and also offers the possibility of manipulating plugins without leaving the backstage.",
             "url": "https://github.com/veecode-platform/platform-backstage-plugins/tree/master/plugins/kong-service-manager"
+          },
+          {
+            "id": 4,
+            "image": "https://veecode-platform.github.io/support/imgs/logo_4.svg",
+            "title": "Kubernetes GPT Analyzer",
+            "tags": ["kubernetes", "AI","monitoring"],
+            "desc": "The Kubernetes GPT Analyzer plug-in uses artificial intelligence with the help of k8s-operator to analyze and optimize your Kubernetes entities, improving the management and performance of your cluster. It makes it easier to detect anomalies and suggest best practices.",
+            "url": "https://github.com/veecode-platform/platform-backstage-plugins/blob/master/plugins/kubernetes-gpt-analyzer/README.md"
           }
     ]
 }
