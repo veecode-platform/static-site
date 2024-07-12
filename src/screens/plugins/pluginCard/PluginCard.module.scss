@@ -31,12 +31,17 @@
 
             .titlebar {
                 width: auto;
-                @include displayFlex(center, center, column);
+                @include displayFlex(center, flex-start, column);
+
+                //mobile
+                @include for-phone-only{
+                    @include displayFlex(center, center, column);
+                }
 
                 &__title {
                     font-size: 1.5rem;
                     font-weight: 600;
-                    text-align: center;
+                    text-align: start;
                 }
 
                 &__tags {
