@@ -129,7 +129,7 @@ const Header = ({ fixedHeader, showButton, showOptions, notTranslate }) => {
                     </ListItemText>
                   </Link>
 
-                  <Link href="https://docs.platform.vee.codes/devportal/self-service-demo/prerequisites" passHref>
+                  <Link href="https://docs.platform.vee.codes/devportal/installation-guide/AWS/AWS%20Installation" passHref>
                     <ListItemText disableTypography sx={{ fontFamily: "Poppins, sans-serif", fontWeight: 400, margin: "0.8em 0" }}>
                       {'Get a Demo'.toUpperCase()}
                     </ListItemText>
