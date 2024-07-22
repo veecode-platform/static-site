@@ -107,7 +107,7 @@ const Header = ({ fixedHeader, showButton, showOptions, notTranslate }) => {
                     </a>
                   </Link>
 
-                  <Link href="https://docs.platform.vee.codes/" passHref>
+                  <Link href="https://blog.platform.vee.codes/" passHref>
                     <a target='_blank'>
                       <ListItemText disableTypography sx={{ fontFamily: "Poppins, sans-serif", fontWeight: 400, margin: "0.8em 0" }}>
                         {'Blog'.toUpperCase()}
@@ -129,7 +129,7 @@ const Header = ({ fixedHeader, showButton, showOptions, notTranslate }) => {
                     </ListItemText>
                   </Link>
 
-                  <Link href="https://docs.platform.vee.codes/devportal/installation-guide/AWS/AWSInstallation" passHref>
+                  <Link href="https://devportal.demo.vee.codes/" passHref>
                     <ListItemText disableTypography sx={{ fontFamily: "Poppins, sans-serif", fontWeight: 400, margin: "0.8em 0" }}>
                       {'Get a Demo'.toUpperCase()}
                     </ListItemText>
