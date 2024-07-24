@@ -2,7 +2,7 @@ name: Upload to S3 Homolog
 
 on:
   push:
-    branches: [ homolog ]
+    branches: [homolog]
 #  pull_request:
 #    branches: [ homolog ]
 
@@ -17,29 +17,29 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: 16.x
-      
+          node-version: 16.9
+
       - name: Build Project
-        run: | 
-           yarn version
-           yarn
-           cat > '.env.local' <<EOT
-           NEXT_PUBLIC_ANALYTICS_ID=${{ secrets.ANALYTICS_ID }}
-           NEXT_PUBLIC_LAMBDA_BASE_URL=${{ secrets.LAMBDA_BASE_URL_HOMOLOG }}
-           NEXT_PUBLIC_LAMBDA_API_KEY=${{ secrets.LAMBDA_API_KEY_HOMOLOG }}
-           NEXT_PUBLIC_PAYPAL_CLIENT_ID=${{ secrets.PAYPAL_CLIENT_ID }}
-           NEXT_PUBLIC_PAYPAL_PREMIUM_ANUAL=${{ secrets.PAYPAL_PREMIUM_ANUAL }}
-           NEXT_PUBLIC_PAYPAL_PREMIUM_MONTHLY=${{ secrets.PAYPAL_PREMIUM_MONTHLY }}
-           NEXT_PUBLIC_PAYPAL_STANDARD_ANUAL=${{ secrets.PAYPAL_STANDARD_ANUAL }}
-           NEXT_PUBLIC_PAYPAL_STANDARD_MONTHLY=${{ secrets.PAYPAL_STANDARD_MONTHLY }}
-           NEXT_PUBLIC_PAYPAL_BASIC_ANUAL=${{ secrets.PAYPAL_BASIC_ANUAL }}
-           NEXT_PUBLIC_PAYPAL_BASIC_MONTHLY=${{ secrets.PAYPAL_BASIC_MONTHLY }}
-           NEXT_PUBLIC_GOOGLE_TAG_MANAGER=${{ secrets.GOOGLE_TAG_MANAGER}}
-           NEXT_PUBLIC_NEUROLEAD_ID=${{ secrets.NEUROLEAD_ID}}
-           
-           EOT
-           yarn build
-           ls -ltrh out
+        run: |
+          yarn version
+          yarn
+          cat > '.env.local' <<EOT
+          NEXT_PUBLIC_ANALYTICS_ID=${{ secrets.ANALYTICS_ID }}
+          NEXT_PUBLIC_LAMBDA_BASE_URL=${{ secrets.LAMBDA_BASE_URL_HOMOLOG }}
+          NEXT_PUBLIC_LAMBDA_API_KEY=${{ secrets.LAMBDA_API_KEY_HOMOLOG }}
+          NEXT_PUBLIC_PAYPAL_CLIENT_ID=${{ secrets.PAYPAL_CLIENT_ID }}
+          NEXT_PUBLIC_PAYPAL_PREMIUM_ANUAL=${{ secrets.PAYPAL_PREMIUM_ANUAL }}
+          NEXT_PUBLIC_PAYPAL_PREMIUM_MONTHLY=${{ secrets.PAYPAL_PREMIUM_MONTHLY }}
+          NEXT_PUBLIC_PAYPAL_STANDARD_ANUAL=${{ secrets.PAYPAL_STANDARD_ANUAL }}
+          NEXT_PUBLIC_PAYPAL_STANDARD_MONTHLY=${{ secrets.PAYPAL_STANDARD_MONTHLY }}
+          NEXT_PUBLIC_PAYPAL_BASIC_ANUAL=${{ secrets.PAYPAL_BASIC_ANUAL }}
+          NEXT_PUBLIC_PAYPAL_BASIC_MONTHLY=${{ secrets.PAYPAL_BASIC_MONTHLY }}
+          NEXT_PUBLIC_GOOGLE_TAG_MANAGER=${{ secrets.GOOGLE_TAG_MANAGER}}
+          NEXT_PUBLIC_NEUROLEAD_ID=${{ secrets.NEUROLEAD_ID}}
+
+          EOT
+          yarn build
+          ls -ltrh out
 
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v4
@@ -49,7 +49,8 @@ jobs:
 
       - name: Deploy static site to S3 bucket
         run: |
-           aws s3 sync out s3://${{ secrets.AWS_BUCKET_HML }} --acl public-read
+          aws s3 rm s3://${{ secrets.AWS_BUCKET_HML }} --recursive
+          aws s3 sync out s3://${{ secrets.AWS_BUCKET_HML }} --acl public-read
       - name: Homolog docs URL
         run: |
           echo "http://homolog.platform.vee.codes.s3-website-us-east-1.amazonaws.com/"
