@@ -36,6 +36,11 @@
         width: 50%;
         @include displayFlex(center, flex-start, column);
 
+        // viewport
+        @include for-viewport-only{
+          width: 55%
+        }
+
         //tablet
         @include for-tablet-only {
             @include screenSize(60%, auto);
@@ -88,6 +93,12 @@
         width: 50%;
         @include displayFlex(center, center, row);
 
+
+          // viewport
+          @include for-viewport-only{
+            width: 40%;
+          }
+
         // tablet
         @include for-tablet-only{
             width: 70%;
@@ -110,6 +121,11 @@
 
         .image{
           width: 45vw;
+
+          // viewport
+          @include for-viewport-only{
+            width: 40vw
+          }
 
           // tablet
           @include for-tablet-only{
