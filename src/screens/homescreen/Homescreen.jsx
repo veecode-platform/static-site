@@ -4,6 +4,7 @@ import OptimizeYourBusiness from './optimizesYourBusiness';
 import SupportSection from './supportSection';
 import ToolsDetails from './toolsDetails';
 import '../../i18n';
+import { TransformTeamSection } from './transformTeamSection';
 
 const Homescreen = () => {
   return (
@@ -15,6 +16,7 @@ const Homescreen = () => {
           showButton
           showOptions
         />
+        <TransformTeamSection/>
         <OptimizeYourBusiness />
         <ToolsDetails />
         <SupportSection />
