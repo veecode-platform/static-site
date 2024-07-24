@@ -67,7 +67,7 @@
   .content {
     @include screenSize(90%, auto);
     @include displayFlex(flex-start, center, row);
-    padding: 1.5vh 0;
+    padding: .5rem 0;
     z-index: 99;
     justify-content: space-between;
     max-width: $wrapperDesktop;

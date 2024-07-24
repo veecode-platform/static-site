@@ -4,9 +4,8 @@
     @include screenSize(100%, auto);
     @include displayFlex(center, center, row);
     @include backgroundImage("/assets/home/bg2.webp");
-    margin-top: 108px;
 
-    padding: 2rem 0 5rem 0;
+    padding: 3rem 0 5rem 0;
 
     //tablet
     @include for-tablet-only {

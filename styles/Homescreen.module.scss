@@ -7,14 +7,14 @@
   position: relative;
   .left{
       @include screenSize(2px,100%);
-      // background: red;
+      background: red;
       position: absolute;
       left:10%;
       z-index: 99999999999999999999999999999;
   }
   .right{
     @include screenSize(2px,100%);
-    // background: red;
+    background: red;
     position: absolute;
     right:10%;
     z-index: 99999999999999999999999999999;
