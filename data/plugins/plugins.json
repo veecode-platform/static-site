@@ -37,7 +37,7 @@
             "image": "https://veecode-platform.github.io/support/imgs/logo_5.svg",
             "title": "Infracost",
             "tags": ["finops", "infracost","estimate"],
-            "desc": "O plug-in Infracost fornece uma representação gráfica e dados da estimativa de custo de sua entidade em seu respectivo provedor.",
+            "desc": "O plug-in Infracost atua em conjunto com o terraform e fornece uma representação gráfica e dados de estimativa de custo para sua entidade em seu respectivo provedor.",
             "url": "https://github.com/veecode-platform/platform-backstage-plugins/tree/master/plugins/infracost"
           }
 
@@ -80,7 +80,7 @@
             "image": "https://veecode-platform.github.io/support/imgs/logo_5.svg",
             "title": "Infracost",
             "tags": ["finops", "infracost","estimate"],
-            "desc": "The Infracost plug-in provides a graphical representation and cost estimate data for your entity at your respective provider.",
+            "desc": "The Infracost plug-in works in conjunction with terraform and provides a graphical representation and cost estimate data for your entity at your respective provider.",
             "url": "https://github.com/veecode-platform/platform-backstage-plugins/tree/master/plugins/infracost"
           }
     ]
