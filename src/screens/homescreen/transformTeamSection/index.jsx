@@ -28,16 +28,16 @@ export const TransformTeamSection = () => {
             />
           </div>
           <div className={style.textContent__buttonGroup}>
-            <Link href="https://docs.platform.vee.codes/" passHref>
+            <Link href="http://docs.platform.vee.codes/devportal/installation-guide/VKDR/Intro" passHref>
               <a target="_blank">
                 <Button>{t("home-first-section-label1")}</Button>
               </a>
             </Link>
-            <Link href="/compare-plans">
+            {/*<Link href="/compare-plans">
               <a>
                 <Button>{t("home-first-section-label2")}</Button>
               </a>
-            </Link>
+            </Link>*/}
           </div>
         </div>
         <div className={style.imageWrapper}>
