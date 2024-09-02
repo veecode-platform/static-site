@@ -15,7 +15,7 @@ const nextConfig = {
   compiler: {
     styledComponents: true
   },
-  async redirects() {
+  /*async redirects() {
     return [
       {
         source: '/plugin/Github%20Workflows/',
@@ -38,7 +38,7 @@ const nextConfig = {
         permanent: true,
       },
     ]
-  }
+  }*/
 }
 
 module.exports = nextConfig;
