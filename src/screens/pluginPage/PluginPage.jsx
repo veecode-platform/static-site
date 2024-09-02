@@ -5,46 +5,33 @@ import rehypeSlug from 'rehype-slug';
 import style from "../../../styles/PluginPage.module.scss"
 import { DefaultPage, ScrollTop } from '../../components';
 import convertUrlToRaw from '../../../utils/convertUrlToRaw';
-import PluginsData from '../../../data/plugins/plugins.json';
 import Link from 'next/link';
 import rehypeHighlight from "rehype-highlight";
 import "highlight.js/styles/vs2015.css";
+import { getPluginByPath } from '../../../lib'
 
 
 const PluginPage = ({ path }) => {
 
-  //const [patchData, setPatchData] = useState(patch);
   const [content, setContent] = useState('');
-  const plugins = PluginsData.en;
-
 
   useEffect(() => {
-    /*if (patch) {
-      localStorage.setItem('pagePatch', patch);
-      setPatchData(patch)
-    }
-    else {
-      const storedPatch = localStorage.getItem('pagePatch');
-      if (storedPatch) {
-        setPatchData(storedPatch)
-      }
-    }*/
 
-    plugins.filter(p => {
-      if (p.path == path) {
-        const rawUrl = convertUrlToRaw(p.url);
-        if (rawUrl) {
-          fetch(rawUrl)
-            .then((response) => response.text())
-            .then((data) => {
-              setContent(data);
-            })
-            .catch((error) => {
-              console.error('Error:', error);
-            });
-        }
+    //temporario para redirecionar corretamente os plugins com url quebrados
+    const plugin = getPluginByPath(path.toLowerCase().replace(" ", "-"))
+
+    const rawUrl = convertUrlToRaw(plugin.url);
+    if (rawUrl) {
+      fetch(rawUrl)
+        .then((response) => response.text())
+        .then((data) => {
+          setContent(data);
+        })
+        .catch((error) => {
+          console.error('Error:', error);
+        });
       }
-    })
+
   }, [path]);
 
   const LinkTag = ({ href, children }) => {

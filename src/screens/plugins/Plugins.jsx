@@ -21,12 +21,15 @@ const Plugins = () => {
       subtitle={t("plugin-page-subtitle")}
     >
       <section className={style.wrapper}>
-        {items.map(p => 
-          <PluginCard 
-            key={p.id} 
-            {...p} 
-            buttonLabel={t("plugin-page-buttonLabel")}
-            />
+        {items.flatMap(p => {
+          if(p.id === undefined) return []
+          return <PluginCard 
+          key={p.id} 
+          {...p} 
+          buttonLabel={t("plugin-page-buttonLabel")}
+          />
+        }
+
           )}
       </section>
       <ContactBar />

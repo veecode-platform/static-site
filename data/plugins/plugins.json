@@ -92,6 +92,12 @@
           "tags": ["finops", "infracost","estimate"],
           "desc": "The Infracost plug-in works in conjunction with terraform and provides a graphical representation and cost estimate data for your entity at your respective provider.",
           "url": "https://github.com/veecode-platform/platform-backstage-plugins/tree/master/plugins/infracost"
-        }
+        },
+
+        {"path": "Github Workflows"},
+        {"path": "Gitlab Pipelines"},
+        {"path": "Kong Service Manager"},
+        {"path": "Kubernetes GPT Analyzer"}
+
   ]
 }

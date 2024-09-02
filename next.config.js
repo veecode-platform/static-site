@@ -15,30 +15,6 @@ const nextConfig = {
   compiler: {
     styledComponents: true
   },
-  /*async redirects() {
-    return [
-      {
-        source: '/plugin/Github%20Workflows/',
-        destination: '/plugin/github-workflows',
-        permanent: true,
-      },
-      {
-        source: '/plugin/Gitlab%20Pipelines/',
-        destination: '/plugin/gitlab-pipelines',
-        permanent: true,
-      },
-      {
-        source: '/plugin/Kong%20Service%20Manager/',
-        destination: '/plugin/kong-service-manager',
-        permanent: true,
-      },
-      {
-        source: '/plugin/Kubernetes%20GPT%20Analyzer/',
-        destination: '/plugin/kubernetes-gpt-analyzer',
-        permanent: true,
-      },
-    ]
-  }*/
 }
 
 module.exports = nextConfig;
