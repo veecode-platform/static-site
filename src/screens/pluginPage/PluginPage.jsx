@@ -11,14 +11,15 @@ import rehypeHighlight from "rehype-highlight";
 import "highlight.js/styles/vs2015.css";
 
 
-const PluginPage = ({ patch }) => {
+const PluginPage = ({ path }) => {
 
-  const [patchData, setPatchData] = useState(patch);
+  //const [patchData, setPatchData] = useState(patch);
   const [content, setContent] = useState('');
   const plugins = PluginsData.en;
 
+
   useEffect(() => {
-    if (patch) {
+    /*if (patch) {
       localStorage.setItem('pagePatch', patch);
       setPatchData(patch)
     }
@@ -27,10 +28,10 @@ const PluginPage = ({ patch }) => {
       if (storedPatch) {
         setPatchData(storedPatch)
       }
-    }
+    }*/
 
     plugins.filter(p => {
-      if (p.patch == patchData) {
+      if (p.path == path) {
         const rawUrl = convertUrlToRaw(p.url);
         if (rawUrl) {
           fetch(rawUrl)
@@ -44,7 +45,7 @@ const PluginPage = ({ patch }) => {
         }
       }
     })
-  }, [patch]);
+  }, [path]);
 
   const LinkTag = ({ href, children }) => {
 

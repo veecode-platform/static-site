@@ -3,7 +3,7 @@ import { Button } from '../../../components';
 import style from './PluginCard.module.scss';
 import Link from 'next/link';
 
-const PluginCard = ({image, title, patch, tags, desc, buttonLabel}) => {
+const PluginCard = ({image, title, path, tags, desc, buttonLabel}) => {
   return (
       <div className={style.card}>
           <div className={style.card__content}>
@@ -23,7 +23,7 @@ const PluginCard = ({image, title, patch, tags, desc, buttonLabel}) => {
               </div>
           </div>
           <div className={style.card__button}>
-              <Link href={`/plugin/${patch}`}>
+              <Link href={`/plugin/${path}`}>
                 <a>
                   <Button>
                     {buttonLabel}

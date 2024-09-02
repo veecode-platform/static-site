@@ -1,11 +1,11 @@
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 import { PluginPage } from '../../src/screens';
-import { getAllPlugins, getPluginByPatch } from '../../lib';
+import { getAllPlugins, getPluginByPath } from '../../lib';
 
 export default function PluginDocPage({ pluginData }) {
   const router = useRouter();
-  const { patch } = router.query;
+  const { path } = router.query;
 
   return (
     <>
@@ -16,7 +16,7 @@ export default function PluginDocPage({ pluginData }) {
           content="Choose the technology that is most compatible with your business."
         />
       </Head>
-      <PluginPage patch={patch} pluginData={pluginData} />
+      <PluginPage path={path} pluginData={pluginData} />
     </>
   );
 }
@@ -24,8 +24,9 @@ export default function PluginDocPage({ pluginData }) {
 export async function getStaticPaths() {
   const plugins = getAllPlugins();
   const paths = plugins.map((plugin) => ({
-    params: { patch: plugin.patch },
+    params: { path: plugin.path },
   }));
+
 
   return {
     paths,
@@ -34,7 +35,7 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  const pluginData = getPluginByPatch(params.patch);
+  const pluginData = getPluginByPath(params.path);
 
   return {
     props: {
