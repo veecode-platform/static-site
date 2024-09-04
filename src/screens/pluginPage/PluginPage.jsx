@@ -18,7 +18,7 @@ const PluginPage = ({ path }) => {
   useEffect(() => {
 
     //temporario para redirecionar corretamente os plugins com url quebrados
-    const plugin = getPluginByPath(path.toLowerCase().replace(" ", "-"))
+    const plugin = getPluginByPath(path.toLowerCase().replaceAll(" ", "-"))
 
     const rawUrl = convertUrlToRaw(plugin.url);
     if (rawUrl) {

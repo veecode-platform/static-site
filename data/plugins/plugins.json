@@ -3,7 +3,7 @@
       {
           "id": 0,
           "image": "https://veecode-platform.github.io/support/imgs/logo_2.svg",
-          "title": "Github workflows",
+          "title": "Github Workflows",
           "path": "github-workflows",
           "tags": ["CI-CD", "Github"],
           "desc": "O plugin Github Workflows fornece uma alternativa para acionar manualmente fluxos de trabalho do GitHub de dentro do seu componente Backstage.",
@@ -46,7 +46,7 @@
           "url": "https://github.com/veecode-platform/platform-backstage-plugins/tree/master/plugins/infracost"
         },
 
-        {"path": "Github Workflows"},
+        {"path": "Github workflows"},
         {"path": "Gitlab Pipelines"},
         {"path": "Kong Service Manager"},
         {"path": "Kubernetes GPT Analyzer"}
@@ -56,7 +56,7 @@
       {
           "id": 0,
           "image": "https://veecode-platform.github.io/support/imgs/logo_2.svg",
-          "title": "Github workflows",
+          "title": "Github Workflows",
           "path": "github-workflows",
           "tags": ["CI-CD", "Github"],
           "desc": "The Github Workflows plugin provides an alternative for manually triggering GitHub workflows from within your Backstage component.",
@@ -99,7 +99,7 @@
           "url": "https://github.com/veecode-platform/platform-backstage-plugins/tree/master/plugins/infracost"
         },
 
-        {"path": "Github Workflows"},
+        {"path": "Github workflows"},
         {"path": "Gitlab Pipelines"},
         {"path": "Kong Service Manager"},
         {"path": "Kubernetes GPT Analyzer"}
