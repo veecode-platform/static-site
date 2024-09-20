@@ -15,6 +15,11 @@ import CloseIcon from '@mui/icons-material/Close';
 import IconButton from '@mui/material/IconButton';
 import TagManager from "react-gtm-module";
 import { useTranslation } from 'react-i18next';
+import { DotLottieReact } from '@lottiefiles/dotlottie-react';
+
+
+const SuccessAnimation = '/assets/animations/success.json'
+
 
 const FreePlan = () => {
     const { t }= useTranslation();
@@ -52,9 +57,9 @@ const FreePlan = () => {
         setOpen(false);
     };
 
-    // const handleFormRedirect = async () => {
-    //     await router.push("https://docs.platform.vee.codes/")
-    // }
+    const handleFormRedirect = async () => {
+        await router.push("https://docs.platform.vee.codes/vkdr/intro/")
+    }
 
     const tagManagerArgs = {
         gtmId: 'GTM-56RG967',
@@ -95,8 +100,8 @@ const FreePlan = () => {
                                     validationSchema={formSchema}
                                     onSubmit={async(values) => {
                                         const response = await UseContactData(values);
-                                        // setOpen(true);
                                         TagManager.initialize(tagManagerArgs);
+                                        setOpen(true);
                                         await handleFormRedirect();
                                     }}
 
@@ -131,22 +136,23 @@ const FreePlan = () => {
 
                                                     </IconButton>
                                                 </DialogTitle>
-                                                <DialogContent className={style.astronault} style={{ textAlignLast: 'center' }}>
-                                                    <img
-                                                        alt="Astronault Helmet"
-                                                        width='50%'
-                                                        src="/assets/validate/astronaut-helmet.png"
-                                                    />
+                                                <DialogContent className={style.animation} style={{ textAlignLast: 'center' }}>
+                                                    <DotLottieReact
+                                                      src={SuccessAnimation}
+                                                      autoplay
+                                                      />
                                                 </DialogContent>
-                                                <DialogTitle style={{ alignSelf: 'center', fontWeight: 'bold' }}><h3>THAT&apos;S IT!</h3></DialogTitle>
+                                                <DialogTitle style={{ alignSelf: 'center', fontWeight: 'bold' }}><h3>{t("free-plan-feedback-title")}</h3></DialogTitle>
                                                 <DialogContent style={{ margin: ".5em 1em 1.5em 1em" }}>
 
                                                     <DialogContentText>
-                                                        <p style={{ fontSize: '1.5em', textAlign: "center" }}>Your data has been successfully saved. Stay tuned, we will <span style={{ color: '#1c8068', fontWeight: 'bold' }}>contact you via email</span> to provide access to our ticket platform.</p>
+                                                    <p style={{ fontSize: '1.5em', textAlign: "center" }} dangerouslySetInnerHTML={{ __html: t("free-plan-feedback-body") }} />
                                                     </DialogContentText>
                                                     <Link href='/' passHref>
                                                         <a target="_blank">
-                                                            <p style={{ textDecoration: "underline", fontSize: ".9em", textAlign: "center", padding: "2em 0 1em 0", color: "#1c8068" }}>Access Home Page</p>
+                                                            <p style={{ textDecoration: "underline", fontSize: ".9em", textAlign: "center", padding: "2em 0 1em 0", color: "#1c8068" }}>
+                                                             {t("free-plan-feedback-footer-link")}
+                                                            </p>
                                                         </a>
                                                     </Link>
                                                 </DialogContent>

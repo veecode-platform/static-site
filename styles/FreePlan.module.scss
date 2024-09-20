@@ -6,12 +6,6 @@
     @include displayFlex(center, center, column);
     background-color: $color9;
 
-    // .container {
-    //     @include screenSize(100%, auto);
-    //     @include displayFlex(center, center, column);
-    //     color: $color2;
-    // }
-
     .content {
         @include screenSize(80%, auto);
         @include displayFlex(space-between, flex-start, row);
@@ -148,7 +142,7 @@
                         padding: 2.5rem 0;
                     }
 
-                    .astronault {
+                    .animation {
                         text-align-last: center !important;
                     }
                 }

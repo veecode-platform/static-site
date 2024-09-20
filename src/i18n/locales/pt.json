@@ -391,6 +391,10 @@
         "free-plan-desc6":"Preencha o formulário abaixo para começar e obter acesso à nossa documentação para iniciar a sua jornada imediatamente.",
         "developer-portal":"Portal do Desenvolvedor",
 
+        "free-plan-feedback-title": "Tudo Certo!",
+        "free-plan-feedback-body":"Seus dados foram salvos com sucesso. Fique atento, entraremos em <strong>contato com você por e-mail</strong> para fornecer acesso à nossa plataforma de suporte.",
+        "free-plan-feedback-footer-link": "Acessar a Página Principal",
+
         "plugin-page-title":"Plugins",
         "plugin-page-subtitle": "Descrições, guias e instruções de instalação para plug-ins do Backstage.",
         "plugin-page-buttonLabel": "Explorar"
