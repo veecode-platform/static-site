@@ -1,0 +1,50 @@
+@import "../abstract/functions", "../abstract/variables", "../abstract/responsive";
+
+ .content{
+        @include screenSize(70vw, auto);
+        @include displayFlex(center, center, row);
+        padding: 3em;
+        border-radius: .5em;
+        margin: 5vh 0;
+        gap: 5rem;
+        @include glassEffect();
+        //viewport
+        @include for-viewport-only{
+            width: 80vw;
+        }
+        //tablet
+        @include for-tablet-only{
+            width: 90vw;
+        }
+        //Mobile(M)
+        @include for-phone-only{
+            width: 80vw;
+            flex-direction: column;
+            padding: 2.5em 2.5em 2em 2.5em;
+            gap: 1rem;
+        }
+        &__title{
+            @include screenSize(auto, auto);
+            @include typography(1.4rem, center , 1.3em, 500 );
+            //tablet
+            @include for-tablet-only{
+               font-size: 1.3rem;
+            }
+            //Mobile(M)
+            @include for-phone-only{
+                @include screenSize(100%, auto);
+                @include displayFlex(center, center, center);
+                font-size: 20px;
+                margin-bottom: .5em;
+            }
+        }
+        &__button{
+            @include screenSize(auto, auto);
+            @include displayFlex(center, center, center);
+            //Mobile(M)
+            @include for-phone-only{
+                @include screenSize(100%, auto);
+                @include displayFlex(center, center, center);
+            }
+        }
+    }
