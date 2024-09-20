@@ -197,6 +197,9 @@
         "contact-bar-title":"Precisa de ajuda para decidir?",
         "contact-bar-label":"Contato de Vendas",
 
+        "docs-bar-title": "Descubra o poder da produtividade com Devportal",
+        "docs-bar-label": "Comece Agora",
+
         "trial-title1":"Obtenha",
         "trial-title2":"Teste Grátis",
         "trial-title3":"para nossa plataforma de suporte",
@@ -245,10 +248,12 @@
 
         "aws-customer-title":"É um cliente AWS?",
         "aws-customer-subtitle": "Explore as vantagens dos produtos disponíveis no AWS Marketplace e alcance novos patamares de eficiência.",
-        "aws-customer-card1": "A engenharia de plataformas facilita a migração para a nuvem, fornecendo informações, conhecimentos e um plano estratégico. O workshop explora os princípios, os benefícios e o papel da engenharia de plataformas, permitindo que os participantes criem um roteiro estratégico personalizado. No final, terão os conhecimentos necessários para lançar o seu Portal de Programador Interno com confiança.",
-        "aws-customer-card2": "O VeeCode Fast Track oferece uma solução especializada de IDP para melhorar rapidamente a experiência do desenvolvedor. Através de um esforço de tempo limitado, uma equipe dedicada configura rapidamente uma instância do DevPortal e fornece modelos iniciais e automatizações para ganhos imediatos de produtividade.",
+        "aws-customer-card1":"Confie na nossa equipe de profissionais qualificados para ajudar você a maximizar o uso dos nossos produtos e ferramentas. Estamos aqui para esclarecer dúvidas sobre instalação, configuração e uso, considerando seu fluxo de trabalho. Comunique os erros que encontrar e seu impacto, para que possamos corrigi-los e prevenir problemas futuros.",
+        "aws-customer-card2": "A engenharia de plataformas facilita a migração para a nuvem, fornecendo informações, conhecimentos e um plano estratégico. O workshop explora os princípios, os benefícios e o papel da engenharia de plataformas, permitindo que os participantes criem um roteiro estratégico personalizado. No final, terão os conhecimentos necessários para lançar o seu Portal de Programador Interno com confiança.",
+        "aws-customer-card3": "O VeeCode Fast Track oferece uma solução especializada de IDP para melhorar rapidamente a experiência do desenvolvedor. Através de um esforço de tempo limitado, uma equipe dedicada configura rapidamente uma instância do DevPortal e fornece modelos iniciais e automatizações para ganhos imediatos de produtividade.",
         "aws-customer-footer": "É um cliente AWS?",
         "aws-customer-buy-btn": "Compre Aqui",
+        "aws-customer-start-now": "Comece Agora",
         "aws-customer-alternative-btn":"ou",
         "aws-customer-contact-btn": "Fale Conosco",
 
@@ -278,13 +283,11 @@
         "pricing-plan2-topic4":"Suporte para 2 modelos de projetos",
         "pricing-plan2-topic5":"Acesso direto aos nossos especialistas",
 
-        "pricing-plan3-title":"Padrão",
+        "pricing-plan3-title":"Suporte",
         "pricing-plan3-subtitle1":"Obtenha respostas a todas as suas perguntas sobre as nossas soluções. Não há mais problemas com DevOps, desenvolvimento de API, Kubernetes, AWS e",
         "pricing-plan3-subtitle2":"mais",
-        "pricing-plan3-desc1":"Comece com",
-        "pricing-plan3-desc2":"$ 1990",
-        "pricing-plan3-desc3":"por mês",
-        "pricing-plan3-label":"Comprar",
+        "pricing-plan3-desc":"Preço baseado no número de utilizadores e no nível de serviço pretendido",
+        "pricing-plan3-label":"Fale Conosco",
         "pricing-plan3-topic1":"Suporte",
         "pricing-plan3-topic1.1":"8x5",
         "pricing-plan3-topic2":"SLA de um dia útil",

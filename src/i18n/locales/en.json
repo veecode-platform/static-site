@@ -195,7 +195,10 @@
         "support-pricing-desc3":"for details.",
         
         "contact-bar-title":"Need help deciding?",
-        "contact-bar-label":"Contact Sales",
+        "contact-bar-label":"Get Started",
+
+        "docs-bar-title": "Discover the power of productivity with Devportal",
+        "docs-bar-label": "Get started",
         
         "trial-title1":"Get",
         "trial-title2":"Support Trial",
@@ -245,10 +248,12 @@
         
         "aws-customer-title":"Are you an AWS customer?",
         "aws-customer-subtitle": "Explore the advantages of the products available on the AWS Marketplace and reach new heights of efficiency.",
-        "aws-customer-card1": "Platform Engineering facilitates migration to the cloud by providing information, knowledge and a strategic plan. The workshop explores the principles, benefits and role of platform engineering, allowing participants to create a personalized strategic roadmap. By the end, they will have the knowledge to launch their Internal Developer Portal with confidence.",
-        "aws-customer-card2": "VeeCode Fast Track offers a specialized IDP solution to enhance developer experience quickly. Through a time-boxed effort, a dedicated team swiftly sets up a DevPortal instance and provides initial templates and automations for immediate productivity gains.",
+        "aws-customer-card1":"Rely on our team of qualified professionals to help you maximize the use of our products and tools. We are here to answer questions about installation, configuration and use, taking your workflow into account. Report any errors you encounter and their impact, so that we can correct them and prevent future problems.",
+        "aws-customer-card2": "Platform Engineering facilitates migration to the cloud by providing information, knowledge and a strategic plan. The workshop explores the principles, benefits and role of platform engineering, allowing participants to create a personalized strategic roadmap. By the end, they will have the knowledge to launch their Internal Developer Portal with confidence.",
+        "aws-customer-card3": "VeeCode Fast Track offers a specialized IDP solution to enhance developer experience quickly. Through a time-boxed effort, a dedicated team swiftly sets up a DevPortal instance and provides initial templates and automations for immediate productivity gains.",
         "aws-customer-footer": "Are you an AWS customer?",
         "aws-customer-buy-btn": "Buy Here",
+        "aws-customer-start-now": "Start Now",
         "aws-customer-alternative-btn":"or",
         "aws-customer-contact-btn": "Contact us",
 
@@ -278,13 +283,11 @@
         "pricing-plan2-topic4":"Support to 2 project templates",
         "pricing-plan2-topic5":"Direct access to our experts",
 
-        "pricing-plan3-title":"Standard",
+        "pricing-plan3-title":"Support",
         "pricing-plan3-subtitle1":"Get all your questions answered about our solutions. No more problems with DevOps, API Development, Kubernetes, AWS and",
         "pricing-plan3-subtitle2":"more",
-        "pricing-plan3-desc1":"Start at",
-        "pricing-plan3-desc2":"$ 1990",
-        "pricing-plan3-desc3":"per month",
-        "pricing-plan3-label":"Checkout",
+        "pricing-plan3-desc":"Priced based on the number of users and desired level of service",
+        "pricing-plan3-label":"Contact Us",
         "pricing-plan3-topic1":"8x5",
         "pricing-plan3-topic1.1":"Support",
         "pricing-plan3-topic2":"One business day SLA",
