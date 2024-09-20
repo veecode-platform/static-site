@@ -101,8 +101,10 @@ const FreePlan = () => {
                                     onSubmit={async(values) => {
                                         const response = await UseContactData(values);
                                         TagManager.initialize(tagManagerArgs);
-                                        setOpen(true);
-                                        await handleFormRedirect();
+                                        if(response){
+                                          setOpen(true);
+                                          await handleFormRedirect();
+                                        }
                                     }}
 
                                 >
