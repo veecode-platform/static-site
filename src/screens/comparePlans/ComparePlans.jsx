@@ -42,7 +42,7 @@ const ComparePlans = () => {
             <span>
               <FaCheck />
             </span>
-            <Link href="https://docs.platform.vee.codes/" passHref>
+            <Link href="https://discord.gg/arCYZK3hM6" passHref>
               <a target={"_blank"}>
                 <span>{t("pricing-plan1-topic1")}</span>
               </a>
@@ -77,9 +77,9 @@ const ComparePlans = () => {
             </>
           }
           link="/validate?plan=standard"
-          label={t("pricing-plan3-desc1")}
-          emphasis={<><sup>USD</sup> 1990</>}
-          text={t("pricing-plan3-desc3")}
+          // label={t("pricing-plan3-desc1")}
+          emphasis={<span>{t("pricing-plan3-desc")}</span>}
+         // text={t("pricing-plan3-desc3")}
           buttonLabel={t("pricing-plan3-label")}
         >
           <li>
@@ -120,7 +120,7 @@ const ComparePlans = () => {
         </PlansDetails>
 
         {/* ENTERPRISE */}
-        <PlansDetails
+        {/* <PlansDetails
           title={t("pricing-plan4-title")}
           subtitle={t("pricing-plan4-subtitle")}
           link="/contact-enterprise"
@@ -168,7 +168,7 @@ const ComparePlans = () => {
             </span>
             {t("pricing-plan4-topic6")}
           </li>
-        </PlansDetails>
+        </PlansDetails> */}
       </article>
       <article className={style.sectionBar}>
         <ContactBar />

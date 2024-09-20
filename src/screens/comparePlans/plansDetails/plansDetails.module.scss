@@ -58,6 +58,11 @@
         font-size: 2.5vw;
       }
 
+      // tabletS
+      @include for-tabletS-only {
+        font-size: 2.8rem
+      }
+
       // mobile(M)
       @include for-phone-only {
         font-size: 23px;
@@ -94,7 +99,7 @@
     @include screenSize(80%, auto);
     @include displayFlex(space-around, center, column);
     border-top: 1px solid $color7;
-    min-height: 16em;
+    min-height: 18em;
     padding-bottom: 2em;
 
     // viewport
@@ -128,11 +133,18 @@
       }
 
       strong {
-        @include typography(2.2vw, center, auto, 800);
+        @include typography(2.2rem, center, auto, 600);
         color: $color2;
 
-        sup{
-          font-size: 1rem;
+        span{
+          font-size: 1.5rem;
+          font-weight: 600;
+          text-decoration: none;
+          color: $color17;
+          // mobile
+          @include for-phone-only{
+            font-size: 1.4rem;
+          }
         }
 
         // tablet

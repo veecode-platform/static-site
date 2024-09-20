@@ -45,7 +45,7 @@
     @include screenSize(125%, auto);
     max-width: 1344px;
     display: grid;
-    grid-template: 1fr / repeat(3, 1fr);
+    grid-template: 1fr / repeat(2, 1fr);
     margin: 1.5em 0;
     gap: .8em;
     padding: 2em 0 2em 0;
@@ -70,11 +70,10 @@
 
     //tablet (S)
     @include for-tabletS-only {
-        @include screenSize(85%, auto);
-        grid-template: 1fr / repeat(2, 1fr);
-        gap: 1em;
+        @include screenSize(70%, auto);
+        @include displayFlex(center, center, column);
+        gap: 1.5em;
     }
-
     //mobile(M)
     @include for-phone-only {
         @include screenSize(85%, auto);

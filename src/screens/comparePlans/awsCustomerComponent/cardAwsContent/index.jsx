@@ -4,7 +4,7 @@ import { Button } from "../../../../components";
 import style from './cardAwsContent.module.scss';
 import { useTranslation } from "react-i18next";
 
-const CardAwsContent = ({image,bodyText, link}) => {
+const CardAwsContent = ({title,image,bodyText, trial,link,noTargetBlank}) => {
 
     const { t } = useTranslation();
   
@@ -22,6 +22,7 @@ const CardAwsContent = ({image,bodyText, link}) => {
           />
         </div>
         <div className={style.card__body}>
+        <h6 className={style.title}>{title}</h6>
           <div className={style.bodyText}>
             <p>{bodyText}</p>
           </div>
@@ -31,8 +32,8 @@ const CardAwsContent = ({image,bodyText, link}) => {
               href={link}
               passHref
             >
-              <a target="_blank">
-                <Button alt>{t("aws-customer-buy-btn")}</Button>
+              <a target={noTargetBlank ? null : "_blank"}>
+                <Button alt>{trial ? t("aws-customer-start-now") : t("aws-customer-buy-btn")}</Button>
               </a>
             </Link>
             {" "}

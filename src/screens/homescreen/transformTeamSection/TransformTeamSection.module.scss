@@ -83,6 +83,11 @@
             @include displayFlex(flex-start, center, row);
             gap: 1rem;
 
+            // tablet
+            @include for-tablet-only{
+              @include displayFlex(center, center, row);
+            }
+
             // mobile
             @include for-phone-only{
                 flex-direction: column;

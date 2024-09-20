@@ -1,5 +1,6 @@
+/* eslint-disable @next/next/no-img-element */
 import { useRouter } from 'next/router'
-import { Breadcrumb, Button, Input, Checkbox, DefaultPage } from '../../components';
+import { Breadcrumb, Button, Input, Checkbox, DefaultPage, DocsBar } from '../../components';
 import style from '../../../styles/FreePlan.module.scss';
 import { Formik, Form } from 'formik';
 import { object, string, boolean } from 'yup';
@@ -48,13 +49,12 @@ const FreePlan = () => {
 
 
     const handleClose = () => {
-        // setOpen(false);
         setOpen(false);
     };
 
-    const handleFormRedirect = async () => {
-        await router.push("https://docs.platform.vee.codes/")
-    }
+    // const handleFormRedirect = async () => {
+    //     await router.push("https://docs.platform.vee.codes/")
+    // }
 
     const tagManagerArgs = {
         gtmId: 'GTM-56RG967',
@@ -72,8 +72,9 @@ const FreePlan = () => {
             noFooter
             showButton={false}
         >
+           <DocsBar/>
             <section className={style.wrapper}>
-                <article className={style.container}>
+                {/* <article className={style.container}> */}
                     <article className={style.content}>
                         <div className={style.text}>
                             <div className={style.text__header}>
@@ -156,7 +157,7 @@ const FreePlan = () => {
                             </div>
                         </div>
                     </article>
-                </article>
+                {/* </article> */}
             </section>
         </DefaultPage >
     );

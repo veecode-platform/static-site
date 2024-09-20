@@ -4,6 +4,7 @@ import style from './awsCustomerComponent.module.scss';
 import CardAwsContent from './cardAwsContent';
 
 const AwsMarketPlaceLogo = "/assets/pricing/aws-consumer/aws-marketplace.png";
+const AwsAmi = "/assets/pricing/aws-consumer/ami.png"
 const LauchWorkshopImg = "/assets/pricing/aws-consumer/lauch-workshop.png";
 const FastTrackImg = "/assets/pricing/aws-consumer/fast-track.png"
 
@@ -27,15 +28,27 @@ const AwsCustomerComponent = () => {
       </div>
 
       <article className={style.content__awsCards}>
-        <CardAwsContent
-          image={LauchWorkshopImg}
+       {/* AMI */}
+       <CardAwsContent
+          title="Unlimited Trial"
+          image={AwsAmi}
           bodyText={t("aws-customer-card1")}
+          trial
+          noTargetBlank
+          link="free-plan/?plan=free"
+        />
+       {/* LAUCH WORKSHOP */}
+        <CardAwsContent
+          title="Lauch Workshop"
+          image={LauchWorkshopImg}
+          bodyText={t("aws-customer-card2")}
           link="https://aws.amazon.com/marketplace/pp/prodview-7pqhop2z4kkx2?sr=0-4&ref_=beagle&applicationId=AWSMPContessa"
         />
-
+        {/* FAST TRACK */}
         <CardAwsContent
+          title="Fast Track"
           image={FastTrackImg}
-          bodyText={t("aws-customer-card2")}
+          bodyText={t("aws-customer-card3")}
           link="https://aws.amazon.com/marketplace/pp/prodview-bckwzbve7ftgw?sr=0-3&ref_=beagle&applicationId=AWSMPContessa"
         />
       </article>

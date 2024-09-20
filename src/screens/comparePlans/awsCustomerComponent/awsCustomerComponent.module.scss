@@ -72,12 +72,6 @@
         gap: 2rem;
        //tabletS
         @include for-tabletS-only{
-          display: grid;
-          grid-template: 100% / repeat(2,50%);
-          gap: 1rem;
-        }
-        // mobile
-        @include for-phone-only{
           @include displayFlex(center,center,column);
           gap: 2rem;
         }
