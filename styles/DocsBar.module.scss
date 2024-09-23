@@ -23,6 +23,10 @@
             padding: 2.5em 2.5em 2em 2.5em;
             gap: 1rem;
         }
+        //mobile(S)
+        @include for-phoneS-only{
+            width: 95vw
+        }
         &__title{
             @include screenSize(auto, auto);
             @include typography(1.4rem, center , 1.3em, 500 );
