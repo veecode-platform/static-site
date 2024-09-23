@@ -70,11 +70,11 @@
         @include screenSize(100%,auto);
         @include displayFlex(center,center,column);
         gap: 2rem;
-       //tabletS
-        @include for-tabletS-only{
-          @include displayFlex(center,center,column);
-          gap: 2rem;
-        }
+      //  //tabletS
+      //   @include for-tabletS-only{
+      //     @include displayFlex(center,center,column);
+      //     gap: 2rem;
+      //   }
     }
 
 }

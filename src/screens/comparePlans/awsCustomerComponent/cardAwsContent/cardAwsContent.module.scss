@@ -43,7 +43,8 @@
     }
     // mobileS
     @include for-phoneS-only{
-        width: 90vw;
+        @include displayFlex(center,center,column);
+        width: 95vw;
     }
 
     &__image{
