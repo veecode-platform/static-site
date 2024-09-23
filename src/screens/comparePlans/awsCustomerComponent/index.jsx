@@ -35,11 +35,11 @@ const AwsCustomerComponent = () => {
           bodyText={t("aws-customer-card1")}
           trial
           noTargetBlank
-          link="free-plan/?plan=free"
+          link="https://aws.amazon.com/marketplace/pp/prodview-aybwnwq4fx2ts?sr=0-1&ref_=beagle&applicationId=AWSMPContessa"
         />
        {/* LAUCH WORKSHOP */}
         <CardAwsContent
-          title="Lauch Workshop"
+          title="Launch Workshop"
           image={LauchWorkshopImg}
           bodyText={t("aws-customer-card2")}
           link="https://aws.amazon.com/marketplace/pp/prodview-7pqhop2z4kkx2?sr=0-4&ref_=beagle&applicationId=AWSMPContessa"
