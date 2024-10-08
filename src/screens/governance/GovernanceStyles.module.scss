@@ -108,6 +108,11 @@
     color: $color3;
     padding: 4rem 0;
 
+    //2xl
+    @include for-2xl-only{
+        padding: 6rem 0;
+    }
+
     .gridCards {
         display: none;
         
@@ -133,7 +138,6 @@
         //2xl
         @include for-2xl-only{
             margin-left: .8rem;
-            margin-top: 4rem;
         }
 
         .cardGreen {
