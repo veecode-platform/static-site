@@ -55,7 +55,7 @@
             //xl
             @include for-xl-only {
                 @include titleMain(left);
-                max-width: 60%;
+                max-width: 55%;
             }
         }
         &-subtitle {

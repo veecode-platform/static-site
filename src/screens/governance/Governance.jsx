@@ -1,15 +1,12 @@
 "use  client";
 
 /* eslint-disable @next/next/no-img-element */
-import Image from "next/image";
-import { Button, Container, DefaultPage } from "../../components";
+import { Button, DefaultPage } from "../../components";
 import style from "./GovernanceStyles.module.scss";
 import React from 'react';
 import { useTranslation } from "react-i18next";
 
 
-const Image1 = "/assets/governance/banner1.png";
-const Banner = "/assets/governance/banner2.png";
 const NotebookImg = "/assets/governance/notebook.svg";
 const Icon1 = "/assets/governance/icon1.svg";
 const Icon2 = "/assets/governance/icon2.svg";
