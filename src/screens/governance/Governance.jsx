@@ -77,7 +77,6 @@ export const Governance = () => {
           <div className={style.content__text}>
             <p dangerouslySetInnerHTML={{ __html:t("governance-text1")}}/>
             <p>{t("governance-text2")}</p>
-            <p>{t("governance-text3")}</p>
             <Button>{t("governance-button-label")}</Button>
           </div>
           </article>

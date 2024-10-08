@@ -25,7 +25,12 @@
     // xl
     @include for-xl-only {
         @include displayFlex(flex-start, center, row);
-        min-height: 95vh; //todo check
+        min-height: 95vh; 
+    }
+
+    //2xl
+    @include for-2xl-only{
+        min-height: 85vh;
     }
 
     &__content {
@@ -40,6 +45,10 @@
         //xl
         @include for-xl-only {
             margin: auto;
+        }
+        //2xl
+        @include for-2xl-only{
+            max-width: $maxWidthDefault;
         }
 
         &-title {
@@ -56,6 +65,11 @@
             @include for-xl-only {
                 @include titleMain(left);
                 max-width: 55%;
+            }
+
+            //2xl
+            @include for-2xl-only{
+                max-width: 45%;
             }
         }
         &-subtitle {
@@ -74,6 +88,11 @@
             @include for-xl-only {
                 @include titleSm(left);
                 max-width: 60%;
+            }
+
+            //2xl
+            @include for-2xl-only{
+                max-width: 50%;
             }
         }
     }
@@ -112,7 +131,8 @@
         }
 
         //2xl
-        @include for-xl-only{
+        @include for-2xl-only{
+            margin-left: .8rem;
             margin-top: 4rem;
         }
 
@@ -124,7 +144,7 @@
             }
             //2xl
             @include for-2xl-only{
-                @include hexagonFactory(467px, 527px, $color1);
+                @include hexagonFactory(447px, 507px, $color1);
             }
         }
         .cardBlack {
@@ -135,7 +155,7 @@
             }
             //2xl
             @include for-2xl-only{
-                @include hexagonFactory(467px, 527px, $color3);
+                @include hexagonFactory(447px, 507px, $color3);
             }
         }
         .cardGrey {
@@ -146,7 +166,7 @@
             }
             //2xl
             @include for-2xl-only{
-                @include hexagonFactory(467px, 527px, $color4);
+                @include hexagonFactory(447px, 507px, $color4);
             }
         }
         .cardIcon {
@@ -159,10 +179,6 @@
             @include for-xl-only{
                 width: 65%;
             }
-            //2xl
-            @include for-2xl-only{
-                @include titleSm(center);
-            } 
         }
     }
     .gridCardsContinuos {
@@ -180,7 +196,7 @@
 
         //2xl
         @include for-2xl-only{
-          margin-left: -23rem;
+          margin-left: -14.2rem;
           margin-top: 5.5rem;
           padding-bottom: 6.5rem;
         }
@@ -232,7 +248,7 @@
 
     // xl
     @include for-xl-only {
-        min-height: 100vh; //todo check
+        min-height: 100vh; 
     }
 
     .content {
@@ -244,6 +260,11 @@
         @include for-lg-only {
             @include displayFlex(space-between, center, row);
             margin: auto;
+        }
+
+        //2xl
+        @include for-2xl-only{
+            max-width: $maxWidthDefault
         }
 
         &__image {
