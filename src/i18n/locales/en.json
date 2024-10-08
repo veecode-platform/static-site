@@ -397,6 +397,16 @@
 
         "plugin-page-title":"Plugins",
         "plugin-page-subtitle": "Descriptions, guides and installation instructions for Backstage plugins.",
-        "plugin-page-buttonLabel": "Explore"
+        "plugin-page-buttonLabel": "Explore",
+
+        "governance-title": "Is your team struggling to gain visibility over service dependencies and API management?",
+        "governance-subtitle": "<strong>VeeCode Platform</strong> is the solution that centralizes all information about services, APIs, and interdependencies, making governance and control easier. With our <strong>Internal Developer Portal (IDP)</strong>, you'll have a unified hub to manage your infrastructure in an agile and efficient way.",
+        "governance-card-1": "Gain full visibility into service and API interdependencies, improving communication between teams.",
+        "governance-card-2": "Facilitate strategic decision-making with accurate data on technologies and dependencies.",
+        "governance-card-3": "Reduce infrastructure overhead and avoid duplication of efforts, speeding up development.",
+        "governance-text1": "Our <strong>API Catalog</strong> centralizes and documents all services in one place, making consultation and management easier.",
+        "governance-text2": "It provides a clear view of the technologies in use, helping leaders optimize infrastructure.",
+        "governance-text3": "Gain full control over interdependencies, enabling agile and precise management of teams and resources.",
+        "governance-button-label": "Contact Us"
     }
 }

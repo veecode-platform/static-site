@@ -1,0 +1,299 @@
+@import "../../../abstract/abstract";
+
+/*
+*  Fist Section
+*/
+
+.firstSection {
+    @include screenSize(100vw, auto);
+    @include displayFlex(center, center, row);
+    @include backgroundImage("/assets/governance/banner1-mobile.png");
+    background-position-x: 100%;
+    padding: 10rem 0;
+    min-height: 70vh;
+
+    //md
+    @include for-md-only {
+        margin-top: -1rem;
+    }
+
+    // lg
+    @include for-lg-only {
+        @include backgroundImage("/assets/governance/banner1.png");
+    }
+
+    // xl
+    @include for-xl-only {
+        @include displayFlex(flex-start, center, row);
+        min-height: 95vh; //todo check
+    }
+
+    &__content {
+        @include containerLayout();
+        @include displayFlex(center, center, column);
+        gap: 2rem;
+
+        //lg
+        @include for-lg-only {
+            @include displayFlex(center, flex-start, column);
+        }
+        //xl
+        @include for-xl-only {
+            margin: auto;
+        }
+
+        &-title {
+            @include titleMain(center);
+            color: $color1;
+
+            //lg
+            @include for-lg-only {
+                max-width: 60%;
+                @include titleMd(left);
+            }
+
+            //xl
+            @include for-xl-only {
+                @include titleMain(left);
+                max-width: 60%;
+            }
+        }
+        &-subtitle {
+            @include titleSm(center);
+            strong {
+                color: $color1;
+            }
+
+            //lg
+            @include for-lg-only {
+                max-width: 65%;
+                @include text(left);
+            }
+
+            //xl
+            @include for-xl-only {
+                @include titleSm(left);
+                max-width: 60%;
+            }
+        }
+    }
+}
+
+/*
+*  Second Section
+*/
+
+.cards {
+    background-color: $color2;
+    width: 100vw;
+    color: $color3;
+    padding: 4rem 0;
+
+    .gridCards {
+        display: none;
+        
+        // lg
+        @include for-lg-only{
+            width: 100vw;
+            padding: 2rem 0;
+            margin-top: 2rem;
+            position: relative;
+            display: grid;
+            grid-template: auto / repeat(7, 1fr);
+            gap: 1rem;
+            color: $color2;
+            margin-left: 0;
+        }
+
+        //xl
+        @include for-xl-only{
+            margin-top: 4rem;
+            margin-left: -8rem;
+        }
+
+        //2xl
+        @include for-xl-only{
+            margin-top: 4rem;
+        }
+
+        .cardGreen {
+            @include hexagonFactory(267px, 327px, $color1);
+            //xl
+            @include for-xl-only{
+                @include hexagonFactory(367px, 427px, $color1);
+            }
+            //2xl
+            @include for-2xl-only{
+                @include hexagonFactory(467px, 527px, $color1);
+            }
+        }
+        .cardBlack {
+            @include hexagonFactory(267px, 327px, $color3);
+            //xl
+            @include for-xl-only{
+                @include hexagonFactory(367px, 427px, $color3);
+            }
+            //2xl
+            @include for-2xl-only{
+                @include hexagonFactory(467px, 527px, $color3);
+            }
+        }
+        .cardGrey {
+            @include hexagonFactory(267px, 327px, $color4);
+            //xl
+            @include for-xl-only{
+                @include hexagonFactory(367px, 427px, $color4);
+            }
+            //2xl
+            @include for-2xl-only{
+                @include hexagonFactory(467px, 527px, $color4);
+            }
+        }
+        .cardIcon {
+            width: 55%;
+        }
+        .cardText {
+            width: 100%;
+            @include text(center);
+            //xl
+            @include for-xl-only{
+                width: 65%;
+            }
+            //2xl
+            @include for-2xl-only{
+                @include titleSm(center);
+            } 
+        }
+    }
+    .gridCardsContinuos {
+        @extend .gridCards;
+        margin-left: -9rem;
+        margin-top: 2rem;
+        padding-bottom: 4rem;
+
+        //xl
+        @include for-xl-only{
+          margin-left: -20rem;
+          margin-top: 3.5rem;
+          padding-bottom: 5rem;
+        }
+
+        //2xl
+        @include for-2xl-only{
+          margin-left: -23rem;
+          margin-top: 5.5rem;
+          padding-bottom: 6.5rem;
+        }
+    }
+
+    .cardsMobile {
+        @include containerLayout();
+        @include displayFlex(center, center, column);
+        margin: auto;
+        gap: 2rem;
+        
+        //lg
+        @include for-lg-only{
+            display: none;
+        }
+
+        .card{
+            @include screenSize(100%,auto);
+            @include displayFlex(center, center, column);
+            gap: 1rem;
+            color: $color2;
+            &__icon{
+                width: 50%;
+                max-width: 120px;
+            }
+            &__label{
+                background-color: $color3;
+                padding: 2rem;
+                border-radius: 10px;
+
+                p{
+                    @include titleCard(center)
+                }
+            }
+        }
+    }
+}
+
+/*
+*  Third Section
+*/
+.contactSection {
+    @include screenSize(100vw, auto);
+    @include displayFlex(center, center, row);
+    @include backgroundImage("/assets/governance/banner2.png");
+    background-position-x: 100%;
+    padding: 6rem 0;
+    min-height: 70vh;
+
+    // xl
+    @include for-xl-only {
+        min-height: 100vh; //todo check
+    }
+
+    .content {
+        @include containerLayout();
+        @include displayFlex(center, center, column);
+        gap: 3rem;
+
+        // lg
+        @include for-lg-only {
+            @include displayFlex(space-between, center, row);
+            margin: auto;
+        }
+
+        &__image {
+            width: 95vw;
+
+            //sm
+            @include for-sm-only{
+                width: 100%;
+                max-width: 600px;
+            }
+
+            // lg
+            @include for-lg-only {
+                width: 50%;
+            }
+
+            // xl
+            @include for-xl-only{
+                width: 100%;
+            }
+        }
+        &__text {
+            @include displayFlex(center, center, column);
+            @include containerLayout();
+            gap: 1.5rem;
+
+            // lg
+            @include for-lg-only {
+                @include displayFlex(center, flex-end, column);
+            }
+            //xl
+            @include for-xl-only{
+                max-width: 800px;
+            }
+            p {
+                @include titleSm(center);
+                strong {
+                    color: $color1;
+                }
+
+                // lg
+                @include for-lg-only {
+                    @include text(right);
+                }
+
+                //xl
+                @include for-xl-only {
+                    @include titleSm(right);
+                }
+            }
+        }
+    }
+}

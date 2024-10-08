@@ -20,3 +20,4 @@ export { default as Trial } from './trial/Trial';
 export { default as FreePlan } from './freePlan/FreePlan';
 export { default as Plugins } from './plugins/Plugins'
 export { default as PluginPage } from './pluginPage/PluginPage';
+export * from './governance/Governance';

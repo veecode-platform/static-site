@@ -1,0 +1,301 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import './functions', './responsive', './variables';
+
+//fonts
+$font-text: 'Poppins', sans-serif;
+$font-body: 16px;
+
+//font
+@mixin typography($fontSize, $align, $lineHeight, $weight) {
+ // width: auto;
+  font-size: $fontSize;
+  text-align: $align;
+  line-height: $lineHeight;
+  font-weight: $weight;
+}
+
+// text
+
+@mixin textNavbar() {
+  @include typography(1.12rem, left, 1.625rem, 400);
+
+  /* sm */
+  @include for-sm-only {
+    font-size: 1rem;
+  }
+
+  /* md */
+  @include for-md-only {
+    font-size: 1.125rem;
+  }
+
+  /* large */
+  @include for-lg-only {
+    font-size: 1.25rem;
+  }
+
+  /* XL */
+  @include for-xl-only {
+    font-size: 20px;
+    text-align: center;
+  }
+}
+
+/*
+*
+*  Titles
+*
+*/
+
+@mixin titleMain($align) {
+  @include typography(1.8rem, $align, 2rem, 700);
+  letter-spacing: 0.5px;
+
+  /* sm */
+  @include for-sm-only {
+    @include typography(1.75rem, $align, 2.25rem, 700);
+  }
+
+  /* md */
+  @include for-md-only {
+    @include typography(2rem, $align, 2.5rem, 700);
+  }
+
+  /* lg */
+  @include for-lg-only {
+    @include typography(2.25rem, $align, 2.75rem, 700);
+  }
+}
+
+@mixin titleMd($align) {
+  @include typography(1.25rem, $align, 1.75rem, 600);
+  letter-spacing: 0.5px;
+
+  /* tablets */
+  @include for-sm-only {
+    @include typography(1.375rem, $align, 1.875rem, 600);
+  }
+
+  /* laptops */
+  @include for-md-only {
+    @include typography(1.5rem, $align, 2, 600);
+  }
+
+  /* large */
+  @include for-lg-only {
+    @include typography(1.625rem, $align, 2.125rem, 600);
+  }
+}
+
+@mixin titleSm($align) {
+  @include typography(1.125rem, $align, 1.75rem, 600);
+  letter-spacing: 0.5px;
+
+  /* sm */
+  @include for-sm-only {
+    @include typography(1.25rem, $align, 1.75rem, 600);
+  }
+
+  /* md */
+  @include for-md-only {
+    @include typography(1.375rem, $align, 1.875rem, 600);
+  }
+
+  /* lg */
+  @include for-lg-only {
+    @include typography(1.5rem, $align, 2rem, 600);
+  }
+}
+
+/*
+*
+*  Text
+*
+*/
+
+@mixin text($align) {
+  @include typography(0.875rem, $align, 1.25rem, 400);
+
+  /* sm */
+  @include for-sm-only {
+    @include typography(1rem, $align, 1.5rem, 400);
+  }
+
+  /* md */
+  @include for-md-only {
+    @include typography(1.125rem, $align, 1.625rem, 400);
+  }
+
+  /* large */
+  @include for-lg-only {
+    @include typography(1.25rem, $align, 1.75rem, 400);
+  }
+}
+
+@mixin label() {
+  @include typography(0.875rem, 'center', 1.25rem, 500);
+
+  /* tablets */
+  @include for-md-only {
+    @include typography(1rem, 'center', 1.5rem, 500);
+  }
+
+  /* laptops */
+  @include for-lg-only {
+    @include typography(1.125rem, 'center', 1.625rem, 500);
+  }
+
+  /* xl */
+  @include for-xl-only {
+    @include typography(.875rem, 'center', 1.75rem, 500);
+  }
+}
+
+/*
+*
+*  Cards
+*
+*/
+
+@mixin titleCard($align) {
+  @include typography(1.125rem, $align, 1.5rem, 600);
+
+  /* sm */
+  @include for-sm-only {
+    @include typography(1.25rem, $align, 1.625rem, 600);
+  }
+
+  /* md */
+  @include for-md-only {
+    @include typography(1.375rem, $align, 1.75rem, 600);
+  }
+
+  /* lg */
+  @include for-lg-only {
+    @include typography(1.5rem, $align, 1.875rem, 600);
+  }
+}
+
+@mixin bodyCard($align) {
+  @include typography(0.875rem, $align, 1.25rem, 400);
+
+  /* sm */
+  @include for-sm-only {
+    @include typography(1rem, $align, 1.5rem, 400);
+  }
+
+  /* md */
+  @include for-md-only {
+    @include typography(1.125rem, $align, 1.625rem, 400);
+  }
+
+  /* lg */
+  @include for-lg-only {
+    @include typography(1.25rem, $align, 1.75rem, 400);
+  }
+}
+
+/*
+*
+* Footer
+*
+*/
+
+@mixin footerText($align) {
+  @include typography(0.75rem, $align, 1.125rem, 400);
+
+  /* SM */
+  @include for-sm-only {
+    @include typography(0.875rem, $align, 1.25rem, 400);
+  }
+
+  /* MD */
+  @include for-md-only {
+    @include typography(1rem, $align, 1.375rem, 400);
+  }
+
+  /* LG */
+  @include for-lg-only {
+    @include typography(1.125rem, $align, 1.5rem, 400);
+  }
+
+  /* XL */
+  @include for-xl-only {
+    @include typography(1rem, $align, 1.5rem, 400);
+  }
+}
+
+/*
+* Button
+*/
+
+@mixin buttonText() {
+  @include typography(0.875rem, 'center', 1.125rem, 400);
+
+  /* sm */
+  @include for-sm-only {
+    @include typography(1rem, 'center', 1.25rem, 400);
+  }
+
+  /* md */
+  @include for-md-only {
+    @include typography(1.125rem, 'center', 1.35rem, 400);
+  }
+
+  /* lg */
+  @include for-lg-only {
+    @include typography(1.25rem, 'center', 1.5rem, 400);
+  }
+}
+
+/*
+* FAQ
+*/
+
+@mixin faqTitle() {
+  @include typography(0.93rem, 'left', 1.5rem, 500);
+
+  //sm
+  @include for-sm-only {
+    font-size: 0.812rem;
+  }
+
+  // md
+  @include for-sm-only {
+    font-size: 1rem;
+  }
+
+  //lg
+  @include for-lg-only {
+    font-size: 0.812rem;
+  }
+
+  //xl
+  @include for-xl-only {
+    font-size: 18px;
+  }
+}
+
+@mixin faqBody() {
+  @include typography(0.93rem, 'left', 1.5rem, 300);
+
+  //sm
+  @include for-sm-only {
+    font-size: 0.812rem;
+  }
+
+  // md
+  @include for-sm-only {
+    font-size: 1rem;
+  }
+
+  //lg
+  @include for-lg-only {
+    font-size: 0.812rem;
+  }
+
+  //xl
+  @include for-xl-only {
+    font-size: 15px;
+  }
+}

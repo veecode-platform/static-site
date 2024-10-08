@@ -278,3 +278,38 @@ EFFECTS
 @mixin textNavbar(){
     @include typography($navbar, center, 1.625rem, 400);
 }
+
+// HEXAGON
+@mixin hexagonFactory($width, $height, $backgroundColor) {
+    $halfWidth: $width / 2; // Metade da largura do hexágono
+    $triangleHeight: $halfWidth * tan(30deg); // Altura dos triângulos superior e inferior
+  
+    width: $width;
+    height: $height - (2 * $triangleHeight); // Subtrai as áreas dos triângulos para o corpo do hexágono
+    background-color: $backgroundColor;
+    position: relative;
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    text-align: center;
+  
+    &::before, &::after {
+      content: "";
+      position: absolute;
+      width: 0;
+      border-left: $halfWidth solid transparent;
+      border-right: $halfWidth solid transparent;
+    }
+  
+    &::before {
+      bottom: 100%;
+      border-bottom: $triangleHeight solid $backgroundColor; 
+    }
+  
+    &::after {
+      top: 100%;
+      border-top: $triangleHeight solid $backgroundColor; 
+    }
+  }
+  
+  

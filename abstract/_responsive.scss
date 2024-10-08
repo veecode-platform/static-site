@@ -47,3 +47,39 @@
     }
 }
 
+/*** others *** /
+
+/* SM */
+@mixin for-sm-only {
+    @media (min-width: 640px) {
+      @content;
+    }
+  }
+  
+  /* MD */
+  @mixin for-md-only {
+    @media (min-width: 768px) {
+      @content;
+    }
+  }
+  
+  /* LG */
+  @mixin for-lg-only {
+    @media (min-width: 1024px) {
+      @content;
+    }
+  }
+  
+  /* XL */
+  @mixin for-xl-only {
+    @media (min-width: 1280px) {
+      @content;
+    }
+  }
+  
+  /* 2XL */
+  @mixin for-2xl-only {
+    @media (min-width: 1536px) {
+      @content;
+    }
+  }

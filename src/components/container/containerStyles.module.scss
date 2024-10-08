@@ -1,0 +1,18 @@
+@import '../../../abstract/abstract';
+
+.root {
+  width: 90%;
+  min-width: 350px;
+  margin: auto;
+
+  // md
+  @include for-md-only {
+    width: 80%;
+  }
+
+  //lg
+  @include for-lg-only {
+    width: 85%;
+    max-width: $maxWidthDefault;
+  }
+}

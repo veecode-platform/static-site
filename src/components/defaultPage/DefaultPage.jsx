@@ -2,8 +2,9 @@ import { FaLongArrowAltLeft } from "react-icons/fa";
 import style from "../../../styles/DefaultPage.module.scss";
 import { Header, Footer } from "../../components";
 import { useRouter } from 'next/router'
+import classNames from "classnames";
 
-const DefaultPage = ({titleBar,title, subtitle, children, noPrevious, noBack, noFooter, showButton, showOptions, notTranslate, backToUrl}) => {
+const DefaultPage = ({titleBar,title, subtitle, children, noPrevious, noBack, noFooter, showButton, showOptions, notTranslate, backToUrl,noSpace}) => {
   const router = useRouter();
   const HandlerBack = () => {
        if(backToUrl){
@@ -38,7 +39,12 @@ const DefaultPage = ({titleBar,title, subtitle, children, noPrevious, noBack, no
             </article>) 
            : ""
         }
-        <article className={style.contentWrapper}>
+        <article className={
+          classNames({
+            [style.contentWrapper]: true,
+            [style.contentWrapper__spaces] : !noSpace
+          })
+        }>
             { children }
         </article>
       </section>
