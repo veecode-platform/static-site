@@ -28,7 +28,7 @@ export const TransformTeamSection = () => {
             />
           </div>
           <div className={style.textContent__buttonGroup}>
-            <Link href="http://docs.platform.vee.codes/devportal/installation-guide/VKDR/Intro" passHref>
+            <Link href="https://docs.platform.vee.codes/devportal/installation-guide/VKDR/" passHref>
               <a target="_blank">
                 <Button>{t("home-first-section-label1")}</Button>
               </a>
