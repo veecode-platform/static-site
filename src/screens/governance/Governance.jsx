@@ -1,5 +1,6 @@
 "use  client";
 
+import Link from "next/link";
 /* eslint-disable @next/next/no-img-element */
 import { Button, DefaultPage } from "../../components";
 import style from "./GovernanceStyles.module.scss";
@@ -77,7 +78,11 @@ export const Governance = () => {
           <div className={style.content__text}>
             <p dangerouslySetInnerHTML={{ __html:t("governance-text1")}}/>
             <p>{t("governance-text2")}</p>
+            <Link href="/contact-us">
+            <a target="_blank">
             <Button>{t("governance-button-label")}</Button>
+            </a>
+            </Link>
           </div>
           </article>
         </section>
@@ -85,27 +90,3 @@ export const Governance = () => {
     </DefaultPage>
   )
 }
-
-
-{/* <section>
-
-</section>
-
-<section>
-<div>
-  <img
-   src={NotebookImg}
-   alt=""
-  />
-</div>
-<div>
-  <div>
-    <p dangerouslySetInnerHTML={{ __html:t("governance-text1")}}/>
-    <p dangerouslySetInnerHTML={{ __html:t("governance-text2")}}/>
-    <p dangerouslySetInnerHTML={{ __html:t("governance-text3") ?? ""}}/>
-  </div>
-  <Button>
-    {t("governance-button-label")}
-  </Button>
-</div>
-</section> */}
