@@ -528,6 +528,12 @@
           "buttonLabel": "Entre em Contato"
         }
       }
+    },
+    "action": {
+      "contact": {
+        "title": "Ainda com dúvidas?",
+        "buttonLabel": "Fale Conosco"
+      }
     }
   },
   "feedback": {
