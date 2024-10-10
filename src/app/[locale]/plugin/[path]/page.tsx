@@ -21,7 +21,7 @@ export async function generateMetadata({ params: { path, locale } }: Props) {
   const plugin = getPluginByPath(locale, path);
 
   return {
-    title: `VeeCode Platform | ${plugin.title}`,
+    title: `VeeCode Platform | ${plugin.title ?? path}`,
     description:
       plugin.desc ||
       "Choose the technology that is most compatible with your business.",
