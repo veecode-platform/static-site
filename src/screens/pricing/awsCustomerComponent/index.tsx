@@ -30,7 +30,6 @@ const AwsCustomerComponent = () => {
           title={t("cards.card-01.title")}
           image={AwsAmi}
           bodyText={t("cards.card-01.description")}
-          noTargetBlank
           footerText={t("cards.card-01.footer")}
           link="https://aws.amazon.com/marketplace/pp/prodview-aybwnwq4fx2ts?sr=0-1&ref_=beagle&applicationId=AWSMPContessa"
           buttonLabel1={t("cards.card-01.buttonLabel1")}
