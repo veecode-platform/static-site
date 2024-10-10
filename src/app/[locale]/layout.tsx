@@ -5,7 +5,7 @@ import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
 import { routing } from "@/i18n/routing";
 import { LANGUAGES } from "@/utils/constants/languages";
 
-const thumbnailImageUrl = "/thumbnail.png";
+// const thumbnailImageUrl = "/thumbnail.png";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -30,7 +30,7 @@ export async function generateMetadata({
     keywords: ["backstage", "idp", "platform", "veecode"],
     openGraph: {
       title: t("home.title"),
-      images: thumbnailImageUrl,
+      //     images: thumbnailImageUrl,
     },
     robots: {
       index: true,

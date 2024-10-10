@@ -1,17 +1,48 @@
 {
   "extends": [
-    "next/core-web-vitals", 
+    "next/core-web-vitals",
     "next/typescript"
   ],
   "rules": {
-    "indent": ["error", 2, { "SwitchCase": 1 }],
-    "max-len": ["error", { "code": 80 }],
-    "quotes": ["error", "single"],
-    "semi": ["error", "never"],
-    "arrow-parens": ["error", "as-needed"],
-    "jsx-quotes": ["error", "prefer-double"],
-    "comma-dangle": ["error", "es5"],
-
+    "indent": [
+      "error",
+      2,
+      {
+        "SwitchCase": 1
+      }
+    ],
+    "max-len": [
+      "error",
+      {
+        "code": 80
+      }
+    ],
+    "quotes": [
+      "error",
+      "single"
+    ],
+    "semi": [
+      "error",
+      "never"
+    ],
+    "arrow-parens": [
+      "error",
+      "as-needed"
+    ],
+    "jsx-quotes": [
+      "error",
+      "prefer-double"
+    ],
+    "comma-dangle": [
+      "error",
+      {
+        "arrays": "always-multiline",
+        "objects": "always-multiline",
+        "imports": "always-multiline",
+        "exports": "always-multiline",
+        "functions": "never"
+      }
+    ],
     "no-unused-vars": "warn",
     "no-console": "warn"
   },
