@@ -1,4 +1,4 @@
-@import "../abstract/functions", "../abstract/variables", "../abstract/responsive";
+@import "../../../abstract/abstract";
 
 .content{
     @include screenSize(100%,auto);
@@ -11,18 +11,18 @@
             @include typography(1.2vw,left,1.3em,500);
             margin-bottom: .5em;
             color: $color10;
-            //viewport
-            @include for-viewport-only{
-               font-size: 1.6vw;
-            }
-            //tablet(S)
-            @include for-tabletS-only{
-               font-size: 2.4vw;
-            }
-            //Mobile(M)
-            @include for-phone-only{
-               font-size: 18px;
-            }
+            // //viewport
+            // @include for-viewport-only{
+            //    font-size: 1.6vw;
+            // }
+            // //tablet(S)
+            // @include for-tabletS-only{
+            //    font-size: 2.4vw;
+            // }
+            // //Mobile(M)
+            // @include for-phone-only{
+            //    font-size: 18px;
+            // }
         }
     }
     &__info{

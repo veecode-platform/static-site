@@ -1,0 +1,28 @@
+@import "../../abstract/abstract";
+
+.content {
+    @include screenSize(100%, auto);
+    @include displayFlex(center, center, column);
+    padding: 2.5em 2.5em 2em 2.5em;
+    border-radius: .5em;
+    margin: 1rem 0 2rem 0;
+    gap: 1rem;
+    @include glassEffect();
+
+    // lg
+    @include for-lg-only {
+        @include displayFlex(center, center, row);
+        padding: 3em;
+        gap: 5rem;
+    }
+
+    &__title {
+        @include screenSize(auto, auto);
+        @include titleCard(center)
+    }
+
+    &__button {
+        @include screenSize(auto, auto);
+        @include displayFlex(center, center, center);
+    }
+}

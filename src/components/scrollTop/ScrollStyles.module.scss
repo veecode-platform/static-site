@@ -1,0 +1,43 @@
+@import "../../abstract/abstract";
+
+.top {
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    left: 85%;
+    top: 80%;
+    font-size: 2rem;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    border-radius: 50%;
+    opacity: .2;
+    padding: 5px;
+    z-index: 99999;
+    @include displayFlex(center, center, row);
+    transition: all 0.3s ease;
+
+    //md
+    @include for-md-only {
+        font-size: 2.5rem;
+        left: 90%;
+    }
+
+    //lg
+    @include for-lg-only {
+        left: 95%;
+    }
+
+    //xl
+    @include for-xl-only {
+        width: 60px;
+        height: 60px;
+        left: 90%;
+        font-size: 3rem;
+    }
+
+    &:hover {
+        opacity: .4;
+        transition: all 0.3s ease;
+    }
+}

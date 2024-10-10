@@ -1,4 +1,4 @@
-@import "../abstract/functions", "../abstract/variables", "../abstract/responsive";
+@import "../../../abstract/abstract";
 
 .card {
     width: 100%;
@@ -14,34 +14,36 @@
         gap: 2rem;
 
         &-header {
-            @include screenSize(80%, auto);
-            @include displayFlex(center, flex-end, row);
+            @include screenSize(90%, auto);
+            @include displayFlex(center, center, column);
             gap: 2rem;
-            //viewPort
-            @include for-viewport-only{
-                width: 90%;
+
+            // xl
+            @include for-xl-only {
+                @include screenSize(95%, auto);
+                @include displayFlex(center, flex-end, row);
             }
-            //mobile
-            @include for-phone-only{
-              @include displayFlex(center, center, column);
-            }
+
             .icon {
                 width: 7rem;
             }
 
             .titlebar {
                 width: auto;
-                @include displayFlex(center, flex-start, column);
+                @include displayFlex(center, center, column);
 
-                //mobile
-                @include for-phone-only{
-                    @include displayFlex(center, center, column);
+                // xl
+                @include for-xl-only {
+                    @include displayFlex(center, flex-start, column);
                 }
 
                 &__title {
-                    font-size: 1.5rem;
-                    font-weight: 600;
-                    text-align: start;
+                    @include titleCard(center);
+
+                    // xl
+                    @include for-xl-only {
+                        @include titleCard(left)
+                    }
                 }
 
                 &__tags {
@@ -50,15 +52,11 @@
                     gap: 1rem;
                     padding: 1rem 0 .2rem 0;
 
-                    //tabletS
-                    @include for-tabletS-only{
-                        padding: 1rem 0; 
-                    }
-
                     &-chips {
                         background: $color4;
                         border-radius: 8px;
                         padding: .2rem .7rem;
+                        @include label();
                     }
                 }
             }
@@ -69,8 +67,9 @@
             width: 80%;
             min-height: 100px;
             @include displayFlex(center, center, row);
+
             .desc {
-                @include textCard(center);
+                @include bodyCard(center);
                 vertical-align: middle;
             }
         }

@@ -1,0 +1,129 @@
+@import "../../../abstract/abstract";
+
+.content {
+    @include screenSize(100vw, auto);
+    padding: 4rem 0;
+    @include backgroundImage('/assets/home/bglight.webp');
+    @include displayFlex(center, center, row);
+
+    //lg
+    @include for-lg-only {
+        padding: 8rem 0;
+    }
+
+    .wrapper {
+        @include screenSize(100%, auto);
+        @include displayFlex(center, center, column);
+        gap: 3rem;
+        max-width: $maxWidthDefault;
+
+        // lg
+        @include for-lg-only {
+            gap: 6rem;
+        }
+
+        &_title {
+            @include screenSize(100%, auto);
+            align-self: center;
+
+            span {
+                background-image: linear-gradient(to bottom, $color7, $color7, $color1);
+                color: $color7;
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+
+            h2 {
+                @include titleMd(center);
+                color: $color8;
+            }
+        }
+
+        &_cardsWrapper {
+            @include screenSize(100%, auto);
+            @include displayFlex(center, center, row);
+            align-self: center;
+
+            &-cards {
+                @include screenSize(100%, auto);
+                padding: 2rem 0;
+                display: grid;
+                grid-template-columns: repeat(1, 1fr);
+                gap: 2rem;
+
+                // sm
+                @include for-sm-only {
+                    grid-template-columns: repeat(2, 1fr);
+                    min-width: auto;
+                    gap: 1rem;
+                }
+
+                // xl
+                @include for-xl-only {
+                    width: 90vw;
+                    grid-template-columns: repeat(4, 1fr);
+                    gap: 1rem;
+                    flex-direction: column;
+                    max-width: $maxWidthDefault;
+                }
+
+                .card {
+                    @include displayFlex(center, center, column);
+                    @include screenSize(100%, 100%);
+                    padding: 3rem 2rem;
+                    background: #f5f5f5;
+                    border-radius: 24px;
+                    border: 2px solid $color1;
+                    @include boxShadow2();
+                    gap: 2rem;
+
+
+                    &_icon {
+                        width: 90px;
+                    }
+
+                    p {
+                        @include bodyCard(center);
+                        color: $color8;
+                    }
+                }
+            }
+
+            &-subtitle {
+                @include screenSize(85%, auto);
+                @include displayFlex(center, center, column);
+                padding-bottom: 3em;
+                gap: 1.5rem;
+
+                p {
+                    @include titleMd(center);
+                    color: $color8;
+                }
+
+                span {
+                    font-weight: 700;
+                    color: $color16;
+                }
+
+            }
+
+        }
+
+        .button {
+            @include buttonLayout();
+            @include buttonText();
+            background: $color1;
+            @include boxShadow2();
+            transition: all .5s ease-in-out;
+            border: none;
+            outline: none;
+            border-radius: 10px;
+
+            &:hover {
+                transition: all .5s ease-in;
+                transform: scale(1.05);
+            }
+        }
+    }
+}

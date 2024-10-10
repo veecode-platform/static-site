@@ -1,0 +1,62 @@
+@import "../../abstract/abstract";
+
+.root {
+    position: relative;
+    @include displayFlex(center, center, row);
+
+    .button {
+        @include screenSize(50px, 50px);
+        @include displayFlex(center, center, row);
+        border-radius: 1px;
+        @include glassEffectDark();
+        color: $color2;
+        font-size: 25px;
+        cursor: pointer;
+        outline: none;
+        transition: all .5s ease-in;
+
+        &:hover {
+            opacity: 0.9;
+            color: $color1;
+            transition: all .5s ease-in-out;
+        }
+    }
+
+    .dropdown {
+        @include screenSize(90px, auto);
+        background: #070707;
+        border-radius: 10px;
+        border: 1px solid #ffffff2e;
+        border-radius: 0 5px 5px 5px;
+        padding: .3rem;
+        transition: all .5s linear;
+        position: absolute;
+        top: 101%;
+        left: 55%;
+
+
+        &__list {
+            width: 100%;
+            @include displayFlex(center, flex-start, column);
+            gap: .5rem;
+
+            &-item {
+                @include screenSize(100%, 32px);
+                @include displayFlex(center, center, row);
+                background-color: $color3;
+                padding: 0 .2rem;
+                gap: .8rem;
+                cursor: pointer;
+                font-size: 18px;
+                color: $color2;
+                transition: all .5s ease-in-out;
+                border-radius: 3px;
+
+                &:hover {
+                    background-color: $color4;
+                    transition: all .5s ease-in;
+                }
+            }
+        }
+    }
+}

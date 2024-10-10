@@ -1,0 +1,119 @@
+@import"../../abstract/abstract";
+
+.wrapper {
+    @include screenSize(100vw, auto);
+    @include displayFlex(flex-start, center, column);
+    background-color: $color9;
+
+    @include for-phone-only {
+        @include screenSize(100vw, auto);
+    }
+
+    .content {
+        @include screenSize(80%, auto);
+        @include displayFlex(center, center, column);
+        margin: 3em 0;
+
+        // //viewport
+        // @include for-viewport-only {
+        //     @include screenSize(100%, auto);
+        // }
+
+        &__options {
+            @include screenSize(100%, auto);
+            @include displayFlex(center, center, row);
+            padding: 2em 0;
+
+            // //viewport
+            // @include for-viewport-only {
+            //     @include screenSize(100%, auto);
+            // }
+
+            // //tablet
+            // @include for-tabletS-only {
+            //     @include displayFlex(center, center, column);
+            //     padding: 2em 0 6em 0;
+            // }
+
+            // //mobile(M)
+            // @include for-phone-only {
+            //     @include screenSize(100%, auto);
+            // }
+
+            // //mobile(S)
+            // @include for-phoneS-only {
+            //     padding: 1em 0;
+            // }
+
+            &-infoBoxWrapper {
+                @include screenSize(40%, 574px);
+                @include displayFlex(center, center, column);
+                padding: 2vh 1vw;
+                background-color: $color12;
+                border-radius: 1vh;
+                gap: 1.5vh;
+                border: 1px double $color4;
+                @include glassEffect();
+
+                // //tablet(S)
+                // @include for-tabletS-only {
+                //     width: 70%;
+                // }
+
+                // //mobile(M)
+                // @include for-phone-only {
+                //     width: 95%;
+                // }
+            }
+
+            &-payment {
+                @include screenSize(35%, auto);
+                @include displayFlex(center, center, column);
+
+                // //tablet(S)
+                // @include for-tabletS-only {
+                //     width: 90%;
+                //     padding: 5vh 0;
+                // }
+
+                .image {
+                    width: 70%;
+                    @include displayFlex(flex-start, center, row);
+
+                    // //tablet(S)
+                    // @include for-tabletS-only {
+                    //     display: none;
+                    // }
+
+                    img {
+                        width: 100%;
+                        @include pulseAnimation();
+                    }
+                }
+
+                .switchButton {
+                    @include screenSize(70%, auto);
+                    padding-bottom: .5em;
+
+                    //tablet(S)
+                    // @include for-tabletS-only {
+                    //     @include screenSize(100%, auto);
+                    //     @include displayFlex(center, center, row);
+                    //     margin-bottom: 2vh;
+                    // }
+                }
+
+                .paypalBox {
+                    @include screenSize(75%, 160px);
+
+                    // //tablet(S)
+                    // @include for-tabletS-only {
+                    //     @include screenSize(100%, auto);
+                    //     @include displayFlex(center, center, row);
+                    // }
+                }
+            }
+        }
+
+    }
+}

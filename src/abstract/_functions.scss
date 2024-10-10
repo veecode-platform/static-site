@@ -1,0 +1,102 @@
+//mixins and functions **
+
+@mixin resetAll {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scrollbar-width: none;
+  /*firefox*/
+}
+
+//reset list
+@mixin resetList {
+  list-style: none;
+}
+
+//reset <a>
+@mixin resetLink($color) {
+  text-decoration: none;
+  color: $color;
+}
+
+// screen
+@mixin screenSize($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+//display flex
+@mixin displayFlex($jty-cnt, $align-itm, $direction) {
+  display: flex;
+  justify-content: #{$jty-cnt};
+  align-items: #{$align-itm};
+  flex-direction: #{$direction};
+}
+
+//fontSize
+@function calculateRem($size) {
+  @return calc($size/16px) * 1rem;
+}
+
+@mixin fontSize($size) {
+  font-size: calculateRem($size);
+}
+
+//placeholder selector
+%invisible {
+  display: none;
+}
+
+%visible {
+  display: flex;
+}
+
+//Background Image - Cover
+@mixin backgroundImage($url) {
+  background-image: url($url);
+  background-size: cover;
+}
+
+//wrapper
+@mixin wrapperCenter($size, $direction) {
+  width: $size;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: $direction;
+  margin: auto;
+}
+
+// HEXAGON
+@mixin hexagonFactory($width, $height, $backgroundColor) {
+  $halfWidth: $width / 2; // Half the width of the hexagon
+  $triangleHeight: $halfWidth * tan(30deg); // Height of upper and lower triangles
+
+  width: $width;
+  height: $height - (2 * $triangleHeight);
+  background-color: $backgroundColor;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    border-left: $halfWidth solid transparent;
+    border-right: $halfWidth solid transparent;
+  }
+
+  &::before {
+    bottom: 100%;
+    border-bottom: $triangleHeight solid $backgroundColor;
+  }
+
+  &::after {
+    top: 100%;
+    border-top: $triangleHeight solid $backgroundColor;
+  }
+}

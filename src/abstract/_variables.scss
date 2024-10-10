@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+//Variables
+$color1: #33ffce;
+$color2: #fafafa;
+$color3: #000000;
+$color4: #555555;
+$color5: #1c8068;
+$color6: #1c806971;
+$color7: #28cca4;
+$color8: #302c2c;
+$color9: #111111;
+$color10: #cdcdcd;
+$color11: #0a3b30;
+$color12: #55555520;
+$color13: #f3f3f3;
+$color14: #131313;
+$color15: #010201;
+$color16: #24d9ad;
+$color17: #f5f5f5;
+$color18: #2f2b2b;
+$color19: #082c24;
+$color20: #161616c7;
+
+//fonts
+$font-text: 'Poppins', sans-serif;
+$titleMain: 3.1rem;
+$title: 2.25rem;
+$text: 1.25rem;
+$card: 1rem;
+$button: 1.1875rem;
+$buttonSm: 0.875rem;
+$navbar: 1.18rem;
+$footer: 1rem;
+
+// width
+$maxWidthDefault: 1280px;
+
+:export {
+  color1: $color1;
+  color2: $color2;
+  color3: $color3;
+  color4: $color4;
+  color5: $color4;
+  color6: $color4;
+  color7: $color4;
+  color8: $color4;
+  color9: $color4;
+  color10: $color4;
+  color11: $color4;
+}

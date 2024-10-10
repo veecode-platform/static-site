@@ -1,43 +1,16 @@
-@import "../abstract/functions", "../abstract/variables", "../abstract/responsive";
+@import "../../../abstract/abstract";
 
-.card{
-    @include screenSize(100%,auto);
+.card {
+    @include screenSize(100%, auto);
     margin-bottom: 2em;
-    //mobile(M)
-    @include for-phone-only{
-        margin-bottom: 1.2em;
-    }
-    &__title{
-        @include typography(1.4vw, start, 1.3em, 400);
+
+    &__title {
+        @include titleSm(left);
         margin: .7em 0;
         cursor: pointer;
-        //tablet
-        @include for-tablet-only{
-            font-size: 2vw;
-            margin: .5em 0;
-        }
-        //mobile(M)
-        @include for-phone-only{
-            font-size: 2.5vw;
-        }
-        //mobile(S)
-        @include for-phoneS-only{
-            font-size: 4vw;
-        }
     }
-    &__desc{
-        @include typography(1vw, start, 1.4em, 300);
-        //tablet
-        @include for-tablet-only{
-            font-size: 1.6vw;
-        }
-        //mobile(M)
-        @include for-phone-only{
-            font-size: 2vw;
-        }
-        //mobile(S)
-        @include for-phoneS-only{
-            font-size: 3.2vw;
-        }
+
+    &__desc {
+        @include text(left)
     }
 }

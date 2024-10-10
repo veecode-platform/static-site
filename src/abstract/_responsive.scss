@@ -1,0 +1,83 @@
+@import 'functions', 'variables';
+
+/*
+  * 
+  * @Breakpoints
+  *
+  * Mobile: 320px - 480px
+  * Tablets: 481px - 768px
+  * Laptops: 769px - 1024px
+  * Large 1025px - 1200px
+  *
+  *  ----------------
+  *  sm - @media(min-width 640px){...}
+  *  md - @media(min-width 768px){...}
+  *  lg - @media(min-width 1024px){...}
+  *  xl - @media(min-width 1280px){...}
+  *  2xl - @media(min-width 1536px){...}
+  *
+  *
+*/
+
+/* Mobile */
+@mixin for-mobile-only {
+  @media (min-width: 320px) {
+    @content;
+  }
+}
+
+/* Tablets */
+@mixin for-tablet-only {
+  @media (min-width: 481px) {
+    @content;
+  }
+}
+
+/* Laptops */
+@mixin for-laptop-only {
+  @media (min-width: 769px) {
+    @content;
+  }
+}
+
+/* Large */
+@mixin for-laptop-only {
+  @media (min-width: 1025px) {
+    @content;
+  }
+}
+
+/* SM */
+@mixin for-sm-only {
+  @media (min-width: 640px) {
+    @content;
+  }
+}
+
+/* MD */
+@mixin for-md-only {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+/* LG */
+@mixin for-lg-only {
+  @media (min-width: 1024px) {
+    @content;
+  }
+}
+
+/* XL */
+@mixin for-xl-only {
+  @media (min-width: 1280px) {
+    @content;
+  }
+}
+
+/* 2XL */
+@mixin for-2xl-only {
+  @media (min-width: 1536px) {
+    @content;
+  }
+}

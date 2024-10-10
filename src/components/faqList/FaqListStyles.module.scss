@@ -1,0 +1,31 @@
+@import "../../abstract/abstract";
+
+.wrapper {
+    @include screenSize(100vw, auto);
+    @include displayFlex(center, center, row);
+
+    .content {
+        @include screenSize(100%, auto);
+        color: $color2;
+
+        //md
+        @include for-md-only {
+            padding: 2em 0;
+        }
+
+        //lg
+        @include for-lg-only {
+            @include displayFlex(center, center, column);
+        }
+
+        &__faqList {
+            @include screenSize(100%, auto);
+            padding: 2rem 0;
+
+            //lg
+            @include for-lg-only {
+                width: 90%;
+            }
+        }
+    }
+}

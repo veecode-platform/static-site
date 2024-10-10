@@ -1,0 +1,108 @@
+@import '../../abstract/abstract';
+
+.breadcrumb {
+  @include screenSize(100%, auto);
+  @include displayFlex(center, center, row);
+  border-radius: 1.3em;
+  color: $color2;
+  padding-bottom: 2rem;
+
+  //md
+  @include for-md-only {
+    min-width: 500px;
+  }
+
+  //lg
+  @include for-lg-only {
+    @include screenSize(45%, auto);
+  }
+
+  &__item {
+    @include screenSize(40%, auto);
+    @include displayFlex(center, center, row);
+
+    span {
+      @include screenSize(30px, 30px);
+      @include displayFlex(center, center, row);
+      padding: .5rem .6rem;
+      border-radius: 100px;
+      background: transparent;
+      border: 2px solid $color1;
+      margin-right: 0.5em;
+      @include label();
+      transition: all 0.3s linear;
+      cursor: pointer;
+
+      //lg
+      @include for-lg-only {
+        @include screenSize(40px, 40px);
+      }
+
+      // //tablet
+      // @include for-tablet-only{
+      //     font-size: 1.2vw;
+      // }
+      // //mobile(M)
+      // @include for-phone-only{
+      //     font-size: 2.4vw;
+      // }
+      // //mobile(S)
+      // @include for-phone-only{
+      //     @include screenSize(30px,30px);
+      //     padding: .3em;
+      //     font-size: 2.3vw;
+      // }
+      // //mobile(XS)
+      // @include for-phoneXS-only{
+      //     @include screenSize(15px,15px);
+      //     padding: .2em;
+      //     font-size: 2.4vw;
+      // }
+      &:hover {
+        background: $color1;
+        color: $color3;
+        transition: all 0.3s linear;
+      }
+    }
+
+    p {
+      font-size: 12px;
+      margin-left: 0.8em;
+      // //tablet
+      // @include for-tablet-only{
+      //     font-size: 1.3vw;
+      // }
+      // //mobile(M)
+      // @include for-phone-only{
+      //     margin-left: .2em;
+      //     font-size: 3vw;
+      // }
+      // //mobile(S)
+      // @include for-phone-only{
+      //     margin-left: 0;
+      //     font-size: 2.8vw;
+      // }
+      // //mobile(XS)
+      // @include for-phoneXS-only{
+      //     font-size: 3vw;
+      // }
+    }
+
+    .selected {
+      background: $color1;
+      color: $color3;
+    }
+  }
+
+  &__divider {
+    @include screenSize(2%, auto);
+    @include displayFlex(center, center, row);
+    margin: .2em;
+    font-size: 30px;
+    // @include displayFlex(center, center, row);
+    //     //mobile(S)
+    //     @include for-phoneS-only{
+    //         margin: .2em;
+    //     }
+  }
+}

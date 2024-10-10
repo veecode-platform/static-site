@@ -1,0 +1,92 @@
+@import "../../../abstract/abstract";
+
+.item {
+    @include displayFlex(space-between, center, column);
+    padding: 1.5vh 2vw;
+    margin-bottom: 2vh;
+    transition: all .5s ease-in-out;
+    @include glassEffectDark();
+    color: $color2;
+    border-radius: .8em;
+    cursor: pointer;
+
+    // lg
+    @include for-lg-only {
+        border-radius: 1.5rem;
+    }
+
+
+    &__title {
+        width: 100%;
+        @include displayFlex(space-between, center, row);
+    }
+
+    &__active {
+        opacity: 1.1;
+    }
+
+    p {
+        width: 90%;
+        @include faqTitle();
+    }
+
+
+    button {
+        @include screenSize(10%, 60px);
+        @include displayFlex(center, center, row);
+        outline: none;
+        background-color: $color9;
+        border: none;
+        color: $color1;
+        font-size: 7vw;
+        cursor: pointer;
+
+        // lg
+        @include for-lg-only {
+            @include screenSize(40px, 40px);
+        }
+
+        // XL
+        @include for-xl-only {
+            font-size: 4rem;
+        }
+    }
+
+    .cardAnswer {
+        @include screenSize(80%, 100px);
+        @include faqBody();
+        color: $color10;
+        transition: all .2s ease-in-out;
+        opacity: 1;
+
+        &__reset {
+            opacity: 0;
+            transition: all .2s ease-in-out;
+        }
+
+
+        //xl
+        @include for-xl-only {
+            @include screenSize(100%, 120px);
+        }
+
+    }
+
+    .hide {
+        height: 0;
+        overflow: hidden;
+        transition: all .5s ease-in;
+    }
+
+    .show {
+        @include screenSize(100%, 100%);
+        @include displayFlex(flex-start, center, row);
+        transition: all .5s ease-in-out;
+        padding: 1em 0;
+
+        //xl
+        @include for-xl-only {
+            height: auto;
+        }
+    }
+}

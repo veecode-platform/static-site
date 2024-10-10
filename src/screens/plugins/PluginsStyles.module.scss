@@ -1,0 +1,23 @@
+@import "../../abstract/abstract";
+
+
+.wrapper {
+    @include screenSize(100%, auto);
+    display: grid;
+    grid-template: auto / 100%;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 10rem;
+
+    //lg 
+    @include for-lg-only {
+        grid-template: auto / repeat(2, 50%);
+        gap: 1.5rem;
+    }
+
+    //xl
+    @include for-xl-only {
+        max-width: $maxWidthDefault;
+    }
+
+}

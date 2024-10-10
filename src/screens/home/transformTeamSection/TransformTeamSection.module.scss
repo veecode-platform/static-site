@@ -1,0 +1,199 @@
+@import "../../../abstract/abstract";
+
+.root {
+    @include screenSize(100%, auto);
+    padding: 5rem 0;
+    @include backgroundImage('/assets/home/banner-mobile.png');
+    background-position-x: 10%;
+
+    // xl
+    @include for-xl-only {
+        @include screenSize(100%, auto);
+        @include backgroundImage('/assets/home/banner.svg');
+        @include displayFlex(center, center, row);
+        padding: 10rem 0 6rem 0;
+        margin-bottom: -.5rem;
+    }
+
+    .content {
+        @include screenSize(100%, auto);
+        @include displayFlex(space-between, center, column-reverse);
+        padding: 6rem 0 3rem 0;
+        gap: 3.5rem;
+
+        //lg
+        @include for-lg-only {
+            @include displayFlex(space-between, flex-start, row);
+            padding: 6rem 0;
+        }
+
+        //xl
+        @include for-xl-only {
+            @include displayFlex(space-between, center, row);
+            gap: 2rem;
+            max-width: $maxWidthDefault;
+        }
+
+        // // tablet
+        // @include for-tablet-only{
+        //     @include displayFlex(space-between, center, column-reverse);
+        //     gap: 3.5rem;
+        // }
+
+        // mobile (S)
+        // @include for-phoneS-only{
+        //     padding: 6rem 0 3rem 0;
+        // }
+
+        .textContent {
+            width: 100%;
+            @include displayFlex(center, center, column);
+
+            //lg
+            @include for-lg-only {
+                @include displayFlex(center, flex-start, column);
+                width: 50%;
+            }
+
+            // // viewport
+            // @include for-viewport-only{
+            //   width: 55%
+            // }
+
+            // //tablet
+            // @include for-tablet-only {
+            //     @include screenSize(60%, auto);
+            //     @include displayFlex(center, center, column);
+            //     padding-top: 0;
+            // }
+
+            // // tablet(S)
+            // @include for-tabletS-only {
+            //     width: 70%
+            // }
+
+            // // mobile
+            // @include for-phone-only {
+            //     width: 80%
+            // }
+
+            &__title {
+                @include screenSize(100%, auto);
+                max-width: 1028px;
+
+                h2 {
+                    @include titleMain(center);
+                    color: $color2;
+
+                    //lg
+                    @include for-lg-only {
+                        @include titleMain(start);
+                    }
+
+                    span {
+                        color: $color1
+                    }
+                }
+            }
+
+            ;
+
+            &__description {
+                @include screenSize(100%, auto);
+                @include displayFlex(center, flex-start, column);
+                padding: 2em .5rem;
+
+                p {
+                    @include text(center);
+                    color: $color2;
+
+                    //lg
+                    @include for-lg-only {
+                        @include text(left)
+                    }
+                }
+            }
+
+            ;
+
+            &__buttonGroup {
+                @include screenSize(100%, auto);
+                @include displayFlex(center, center, column);
+                gap: 1rem;
+
+                //lg
+                @include for-lg-only {
+                    @include displayFlex(flex-start, center, row);
+                }
+
+                // // tablet
+                // @include for-tablet-only{
+                //   @include displayFlex(center, center, row);
+                // }
+
+            }
+        }
+
+        ;
+
+        .imageWrapper {
+            width: 100%;
+            @include displayFlex(center, center, row);
+
+            // lg
+            @include for-lg-only {
+                width: 50%;
+            }
+
+
+            //   // viewport
+            //   @include for-viewport-only{
+            //     width: 40%;
+            //   }
+
+            // // tablet
+            // @include for-tablet-only{
+            //     width: 70%;
+            // }
+
+            // // tablet(S)
+            // @include for-tabletS-only {
+            //     width: 80%
+            // }
+
+            // // mobile
+            // @include for-phone-only {
+            //     width: 90%
+            // }
+
+            // // mobile (S)
+            // @include for-phoneS-only {
+            //     width: 100%
+            // }
+
+            .image {
+                width: 90%;
+
+                //lg
+                @include for-lg-only {
+                    width: 50vw;
+                }
+
+                //   // viewport
+                //   @include for-viewport-only{
+                //     width: 40vw
+                //   }
+
+                //   // tablet
+                //   @include for-tablet-only{
+                //     width: 100%;
+                //    }
+
+                //    // mobile(S)
+                //   @include for-phoneS-only{
+                //     width: 90vw;
+                //   }
+            }
+        }
+    }
+}

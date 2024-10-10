@@ -1,0 +1,40 @@
+@import"../../abstract/abstract";
+
+.content {
+    @include screenSize(100%, auto);
+    color: $color10;
+
+    span {
+        p {
+            color: $color4;
+            font-weight: 500;
+            margin-bottom: 1.5em;
+        }
+    }
+
+    h2 {
+        @include titleMd(left);
+        margin: 0.7em 0;
+    }
+
+    h3 {
+        margin-top: 0.7em;
+        color: $color2;
+        @include titleSm(left);
+    }
+
+    p {
+        @include text(start);
+    }
+
+    a {
+        color: $color7;
+        transition: all 0.4s linear;
+        cursor: pointer;
+
+        &:hover {
+            transition: all 0.4s linear;
+            color: $color1;
+        }
+    }
+}

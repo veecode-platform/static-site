@@ -1,0 +1,71 @@
+@import "../../abstract/abstract";
+
+.button {
+    @include buttonLayout();
+    @include buttonText();
+    border-radius: 1.5em;
+    border: 2px solid $color1;
+    color: $color1;
+    background: transparent;
+    transition: all 0.5s linear;
+
+    &:hover:not([disabled]) {
+        background: linear-gradient(45deg, $color1, $color7);
+        color: $color3;
+        transition: all 0.4s linear;
+        -webkit-transform: scale(1.03);
+        transform: scale(1.03);
+    }
+
+    a {
+        text-decoration: none;
+        color: $color1 !important;
+
+        &:visited {
+            color: $color3;
+        }
+
+        &:hover {
+            color: $color3 !important;
+        }
+    }
+}
+
+.buttonModal {
+    @extend .button;
+    color: #FFF;
+    border: none;
+    // min-width: 9vw;
+    // padding: 1em;
+    background-color: $color7;
+
+    &:hover:not([disabled]) {
+        background: linear-gradient(45deg, $color1);
+        color: #FFF;
+        transition: all 0.4s linear;
+        -webkit-transform: scale(1.03);
+        transform: scale(1.03);
+    }
+}
+
+.loader {
+    width: 1.1vw;
+    height: 1.1vw;
+    border: 3px solid $color1;
+    margin-right: 0.5vw;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

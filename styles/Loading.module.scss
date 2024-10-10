@@ -1,9 +1,0 @@
-@import "../abstract/functions", "../abstract/variables", "../abstract/responsive";
-
-.loading{
-    @include screenSize(100%,100%);
-    @include displayFlex(center,center,row);
-    &__animation{
-        @include screenSize(60%,auto);
-    }
-}

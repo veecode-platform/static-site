@@ -1,0 +1,117 @@
+@import "../../../abstract/abstract";
+
+.planTable {
+  @include screenSize(100%, auto);
+  @include displayFlex(center, center, column);
+  @include glassEffect();
+  position: relative;
+
+  //lg
+  @include for-lg-only {
+    @include screenSize(100%, 100%);
+    @include displayFlex(flex-start, center, column);
+  }
+
+  &__title {
+    @include screenSize(100%, auto);
+    @include displayFlex(center, center, row);
+    padding-top: 4em;
+
+    &-title {
+      @include titleMd(center);
+
+      //sm
+      @include for-sm-only {
+        @include titleMain(center)
+      }
+    }
+  }
+
+  &__subtitle {
+    @include screenSize(90%, 200px);
+    @include displayFlex(center, center, column);
+
+    &-subtitle {
+      @include text(center);
+
+      strong {
+        color: $color1;
+      }
+    }
+  }
+
+  &__button {
+    @include screenSize(80%, auto);
+    @include displayFlex(space-around, center, column);
+    border-top: 1px solid $color7;
+    min-height: auto;
+    padding-bottom: 2em;
+
+    //md
+    @include for-md-only {
+      height: 15rem;
+    }
+
+    //lg
+    @include for-lg-only {
+      min-height: 18em;
+    }
+
+    &-label {
+      @include screenSize(100%, auto);
+      @include displayFlex(center, center, column);
+      padding: 2em 0;
+
+      // lg
+      @include for-lg-only {
+        padding: 2em 0;
+      }
+
+      p {
+        @include text(center);
+      }
+
+      span {
+        @include titleSm(center);
+        color: $color2;
+        text-decoration: none;
+
+        p {
+          @include text(center);
+          text-decoration: none;
+          color: $color17;
+        }
+      }
+
+      h2 {
+        text-align: center;
+      }
+    }
+  }
+
+  &__list {
+    border-top: 1px solid $color7;
+    @include resetList();
+    @include screenSize(80%, auto);
+    padding: 3em 0;
+
+    li {
+      @include text(left);
+      padding: 0.5em 0;
+
+      span {
+        font-size: 1rem;
+        color: $color5;
+        margin-right: 0.4em;
+      }
+
+      strong {
+        color: $color1
+      }
+
+      .sublist {
+        @include resetList();
+      }
+    }
+  }
+}

@@ -1,0 +1,158 @@
+@import "../../abstract/abstract";
+
+.wrapper {
+  @include screenSize(100vw, auto);
+  @include displayFlex(center, center, row);
+  background-color: $color3;
+  z-index: 99;
+  position: relative;
+
+  a {
+    color: $color2;
+    transition: all 0.5s linear;
+
+    &:visited {
+      color: $color2;
+    }
+
+    &:hover {
+      transition: all 0.5s ease-in-out;
+      color: $color1;
+    }
+
+    &:active {
+      color: $color1;
+    }
+  }
+
+  &__fixedHeader {
+    position: fixed;
+    top: 0;
+  }
+
+  .content {
+    @include screenSize(100%, 80px);
+    @include displayFlex(space-between, center, row);
+    padding: .5rem 0;
+    z-index: 999;
+    transition: all .5s ease-in;
+
+    &__logo {
+      display: none;
+
+      //md
+      @include for-md-only {
+        display: flex;
+        @include navbarLogo();
+      }
+    }
+
+    &__logoMobile {
+      @include navbarLogo();
+
+      //md
+      @include for-md-only {
+        display: none
+      }
+    }
+
+    .nav {
+      display: none;
+
+      //xl
+      @include for-xl-only {
+        @include screenSize(100%, auto);
+        @include displayFlex(flex-end, center, row);
+
+        &__options {
+          margin: 0 1em;
+
+          // md
+          @include for-md-only {
+            margin: 0 1em;
+          }
+
+          h2 {
+            cursor: pointer;
+            opacity: 1;
+            @include textNavbar();
+          }
+        }
+
+        // &__buyButton {
+        // margin-left: 1em;
+        // position: absolute;
+        // right: 4vw;
+
+        // @include for-phone-only {
+        //   display: none;
+        // }
+      }
+    }
+
+    .mobileButton {
+      display: flex;
+      background: transparent;
+      ;
+      border: none;
+      outline: none;
+      color: $color2;
+      font-size: 2rem;
+      padding: .5rem;
+      cursor: pointer;
+
+      //xl
+      @include for-xl-only {
+        display: none
+      }
+    }
+  }
+
+}
+
+
+.menuMobile {
+  @include screenSize(100vw, 100vh);
+  margin-left: 0;
+  margin-top: 80px;
+  transition: all .5s ease-in;
+  background-color: $color9;
+  color: $color2;
+  position: absolute;
+  top: 0;
+  z-index: 9999999999;
+
+  //md
+  @include for-md-only {
+    @include screenSize(80vw, 100vh);
+    max-width: 600px;
+  }
+
+  //xl
+  @include for-xl-only {
+    display: none;
+  }
+
+  &__item {
+    @include screenSize(95%, 56px);
+    @include displayFlex(flex-start, center, row);
+    border-radius: 10px;
+    cursor: pointer;
+    margin: .5rem auto;
+    background: $color20;
+
+    a {
+      @include screenSize(100%, 100%);
+      border-radius: 10px;
+      padding: 0 .8rem;
+      @include displayFlex(flex-start, center, row);
+      @include textNavbar();
+    }
+  }
+}
+
+.menuMobileHide {
+  @extend .menuMobile;
+  margin-left: -1100vw;
+  transition: all .5s ease-in-out;
+}

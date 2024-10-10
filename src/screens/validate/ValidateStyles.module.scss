@@ -1,0 +1,135 @@
+@import"../../abstract/abstract";
+
+
+
+.container {
+    @include screenSize(100%, auto);
+    @include displayFlex(center, center, column);
+    color: $color2;
+}
+
+.content {
+    @include screenSize(100%, auto);
+    @include displayFlex(center, center, column);
+    margin-top: 1.5em;
+
+    //lg
+    @include for-lg-only {
+        @include displayFlex(space-between, flex-start, row);
+        gap: 1rem;
+    }
+
+    .text {
+        @include screenSize(100%, auto);
+        @include displayFlex(flex-start, center, column);
+        padding: 2rem 0;
+
+        //lg
+        @include for-lg-only {
+            @include screenSize(50%, auto);
+            @include displayFlex(center, flex-start, column);
+            padding: 0rem 0 2rem 0;
+        }
+
+        strong {
+            color: $color1;
+        }
+
+        &__header {
+            margin: 1rem 0 1.5rem 0;
+
+            //sm
+            @include for-sm-only {
+                margin: 2rem 0 1.5rem 0;
+            }
+
+
+            h2 {
+                @include titleMain(center);
+                color: $color2;
+
+                //lg 
+                @include for-lg-only {
+                    @include titleMain(left);
+                }
+            }
+        }
+
+        &__resume {
+            display: none;
+
+            //lg
+            @include for-lg-only {
+                @include displayFlex(center, center, column);
+                margin: 1.2em .5em 1.5em 0;
+            }
+
+            p {
+                @include text(left);
+                color: $color2;
+                margin-bottom: 1rem;
+            }
+        }
+    }
+
+    &__options {
+        @include screenSize(100%, auto);
+        @include displayFlex(center, center, column);
+        padding: 1em 0 6em 0;
+
+        //md
+        @include for-md-only {
+            width: 70%;
+            padding: 2em 0 4em 0;
+        }
+
+        //lg
+        @include for-lg-only {
+            @include screenSize(50%, auto);
+        }
+
+        &-formWraper {
+            @include screenSize(100%, auto);
+            @include displayFlex(center, center, column);
+            @include glassEffect();
+            background-color: $color12;
+            padding: 1rem;
+
+            //sm
+            @include for-sm-only {
+                max-width: 500px;
+            }
+
+            //xl
+            @include for-lg-only {
+                width: 100%;
+                padding: 1rem;
+                border-radius: 15px;
+            }
+
+
+
+
+
+            .form {
+                @include displayFlex(center, center, column);
+                width: 100%;
+                gap: 1.2vh;
+
+                &__buttonWrapper {
+                    @include screenSize(100%, auto);
+                    @include displayFlex(center, center, row);
+                }
+
+                .actions {
+                    @include displayFlex(center, center, row);
+                    padding: 2.5rem 0;
+                }
+
+                .astronault {
+                    text-align-last: center !important;
+                }
+            }
+        }
+    }
+}

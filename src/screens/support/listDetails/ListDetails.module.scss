@@ -1,74 +1,54 @@
-@import "../abstract/functions", "../abstract/variables", "../abstract/responsive";
+@import "../../../abstract/abstract";
 
-.wrapper{
+.wrapper {
     @include screenSize(100%, auto);
-    @include displayFlex(column,flex-start, column);
-    .title{
-            @include typography(1.4vw, start, 1.3em, 400);
-            cursor: pointer;
-            margin: 1.2em 0 .8em 0;
-            //tablet
-            @include for-tablet-only{
-                font-size: 2vw;
-            }
-            //mobile(M)
-            @include for-phone-only{
-                font-size: 2.5vw;
-            }
-            //mobile(S)
-            @include for-phoneS-only{
-                font-size: 4vw;
-            }
-        }
-    .details{
+    @include displayFlex(column, flex-start, column);
+
+    .title {
+        @include titleSm(left);
+        cursor: pointer;
+        margin: 1.2em 0 .8em 0;
+    }
+
+    .details {
         @include screenSize(100%, auto);
-        @include displayFlex(center,center, row);
-        margin-top: 1.2em;
-        padding: 2em 0.5em;
-        border: 2px solid $color4;
-        border-radius: .8em;
-        //mobile(M)
-        @include for-phone-only{
-            border: none;
-            padding: 1em 0;
-            margin-top: 0;
+        @include displayFlex(center, center, row);
+        padding: 1rem 0;
+
+        //lg
+        @include for-lg-only {
+            margin-top: 1.2em;
+            padding: 2em 0.5em;
+            border: 2px solid $color4;
+            border-radius: .8em;
         }
-        &__list{
-            @include screenSize(97%, auto);
-            @include displayFlex(center,center, row);
-            @include resetList();
-            flex-wrap: wrap;
-            //mobile(M)
-            @include for-phone-only{
-                @include screenSize(100%, auto);
-                @include displayFlex(center,flex-start, column);
-                flex-wrap: nowrap;
+
+        &__list {
+            @include screenSize(100%, auto);
+            @include displayFlex(center, flex-start, column);
+            flex-wrap: nowrap;
+            margin: auto;
+
+            //lg
+            @include for-lg-only {
+                @include screenSize(97%, auto);
+                @include displayFlex(center, center, row);
+                flex-wrap: wrap;
             }
-            &-item{
-                width: 50%;
-                font-size: 1vw;
-                text-align: start;
-                font-weight: 300;
-            //Mobile(M)
-            @include for-phone-only{
+
+            &-item {
                 width: 90%;
-                padding: .2em 1em;
-            }
-                span{
+                @include text(left);
+
+                //lg
+                @include for-lg-only {
+                    width: 50%;
+                    padding: .2em 1em;
+                }
+
+                span {
                     color: $color1;
                     margin-right: .2em;
-                }
-                //tablet
-                @include for-tablet-only{
-                    font-size: 1.6vw;
-                }
-                //mobile(M)
-                @include for-phone-only{
-                    font-size: 2.1vw;
-                }
-                //mobile(S)
-                @include for-phoneS-only{
-                    font-size: 3.3vw;
                 }
             }
         }

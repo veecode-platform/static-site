@@ -1,0 +1,57 @@
+@import"../../../../abstract/abstract";
+
+.card {
+    @include screenSize(100%, auto);
+    @include displayFlex(center, center, column);
+    padding: 1.5em 0;
+    border: 1px solid $color4;
+    border-radius: .9em;
+    margin: .5em;
+
+    //lg
+    @include for-lg-only {
+        flex-direction: row;
+        padding: 2em 0;
+        border: none
+    }
+
+    &__icon {
+        @include screenSize(100%, 100%);
+        align-self: flex-start;
+        @include displayFlex(center, center, row);
+        font-size: 10vw;
+        color: $color1;
+        padding: 0.2em;
+
+        // lg
+        @include for-lg-only {
+            width: 10%;
+            font-size: 60px;
+            ;
+        }
+    }
+
+    &__details {
+        @include screenSize(90%, auto);
+        padding: 1em 1.2em;
+
+        &-title {
+            @include titleCard(center);
+            margin-bottom: 0.7em;
+
+            //lg
+            @include for-lg-only {
+                @include titleCard(left);
+            }
+        }
+
+        &-desc {
+            @include bodyCard(center);
+
+            //lg
+            @include for-lg-only {
+                @include bodyCard(left);
+            }
+        }
+    }
+}
