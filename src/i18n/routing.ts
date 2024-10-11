@@ -25,6 +25,7 @@ export const routing = defineRouting({
     "/validate?plan=standard": "/validate?plan=standard",
     "/governance": "/governance",
   },
+  localePrefix: "always",
 });
 
 export type Pathnames = keyof typeof routing.pathnames;
