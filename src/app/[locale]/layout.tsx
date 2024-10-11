@@ -71,7 +71,7 @@ export default async function LocaleLayout({
   const messages = await getMessages(locale);
 
   return (
-    <html lang={locale} suppressHydrationWarning>
+    <html lang={locale}>
       <body className={`${poppins.variable}`}>
         <NextIntlClientProvider locale={locale} messages={messages}>
           {children}
