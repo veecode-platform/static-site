@@ -1,9 +1,9 @@
 import { Poppins } from "next/font/google";
-import { notFound } from "next/navigation";
 import { NextIntlClientProvider } from "next-intl";
 import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
 import { routing } from "@/i18n/routing";
 import { LANGUAGES } from "@/utils/constants/languages";
+import { notFound } from "next/navigation";
 
 // const thumbnailImageUrl = "/thumbnail.png";
 

@@ -6,7 +6,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [
     getEntry("/"),
     getEntry("/plugins"),
-    getEntry("/plugin/[pluginPath]" as any),
     getEntry("/pricing"),
     getEntry("/pricing/#plans"),
     getEntry("/free-plan?plan=free"),
