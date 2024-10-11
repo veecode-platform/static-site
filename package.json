@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "static": "npx serve@latest out"
   },
   "dependencies": {
     "@emotion/react": "^11.13.3",

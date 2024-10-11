@@ -1,5 +1,5 @@
 import { Home } from "@/screens";
-import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
+import { unstable_setRequestLocale } from "next-intl/server";
 
 type Props = {
   params: { locale: string };
