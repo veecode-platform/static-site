@@ -7,11 +7,18 @@
     overflow-y: hidden;
 
     .content {
-        @include screenSize(50%, auto);
+        @include screenSize(100%, auto);
         @include displayFlex(center, center, column);
+        gap: 2rem;
 
         img {
-            width: 80%
+            width: 100%;
+            max-width: 380px;
+
+            //xl
+            @include for-xl-only {
+                max-width: 580px;
+            }
         }
 
         &__goBack {
