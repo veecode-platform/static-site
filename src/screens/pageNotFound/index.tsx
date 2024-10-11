@@ -1,24 +1,20 @@
-import { DefaultPage } from "@/components";
 import style from "./PageNotFoundStyles.module.scss";
-import Image from "next/image";
+import Link from "next/link";
+import { GoHome } from "react-icons/go";
 
 const ImageNotFound = "/assets/notFound/404.png";
 
 export const PageNotFound = () => {
   return (
-    <DefaultPage noPrevious showOptions>
-      <article className={style.root}>
-        <div className={style.image}>
-          <Image
-            src={ImageNotFound}
-            alt="Page Not Found Image"
-            width={100}
-            height={100}
-            unoptimized
-            priority={true}
-          />
+    <article className={style.root}>
+      <div className={style.content}>
+        <img src={ImageNotFound} alt="Page Not Found Image" />
+        <div className={style.content__goBack}>
+          <Link href="/en/">
+            <GoHome title="Home" />
+          </Link>
         </div>
-      </article>
-    </DefaultPage>
+      </div>
+    </article>
   );
 };
