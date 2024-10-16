@@ -183,7 +183,7 @@
       "breadcrumb": {
         "option1": "Selecionar Plano",
         "option2": "Validar",
-        "option3": "Finalizar Compra"
+        "option3": "Finalizar"
       },
       "plans": {
         "free": {
@@ -542,17 +542,11 @@
       "error": "<p>Houve um problema ao enviar sua mensagem.</p><p>Por favor, verifique seus dados e tente novamente. Se o problema persistir, entre em contato diretamente por telefone ou e-mail.</p>"
     },
     "payment": {
-      "success": "<p>Confirmação de pagamento em andamento</p><p>Enviaremos um e-mail quando tudo estiver certo.</p>",
-      "error": "<p>Operação falhou</p><p>Houve um erro na transação, por favor, verifique seus dados e tente novamente.</p>"
+      "success": "<p>Confirmação de contato recebido</p><p>Enviaremos um e-mail com mais detalhes sobre os próximos passos.</p>",
+      "error": "<p>Ocorreu algum erro</p><p>Por favor, verifique os dados informados e tente novamente.</p>"
     },
     "buttonLabelSuccess": "Voltar",
     "buttonLabelError": "Tente Novamente"
-  },
-  "checkout": {
-    "switch": {
-      "annual": "Anual",
-      "monthly": "Mensal"
-    }
   },
   "freePlan": {
     "action": {
@@ -589,8 +583,8 @@
     }
   },
   "validate": {
-    "title": "Ir para o <strong>Checkout</strong>",
-    "description": "<p>Preencha o formulário e conclua o processo de pagamento para obter acesso à nossa plataforma de emissão de tickets e contatar o nosso apoio especializado!</p><p>Com acesso à nossa plataforma de emissão de tickets, pode comunicar diretamente com os nossos especialistas e resolver facilmente os seus problemas de DevOps, automatização de aprovisionamento, gestão de API, dimensionamento de infraestruturas de TI e muito mais através do nosso portal para programadores.</p><p>Tenha a certeza de que as suas informações estão seguras e que cumprimos todas as políticas e regulamentos de privacidade aplicáveis.</p>",
+    "title": "Um plano ideal para <strong>sua equipe</strong>",
+    "description": "<p>Preencha o formulário para obter acesso à nossa plataforma de emissão de tíquetes e se conectar com nosso suporte especializado!</p><p>Com acesso à nossa plataforma de emissão de tíquetes, você pode se comunicar diretamente com nossos especialistas e resolver facilmente seus problemas de DevOps, automação de provisionamento, gerenciamento de API, dimensionamento de infraestrutura de TI e muito mais por meio de nosso portal do desenvolvedor.</p><p>Tenha certeza de que suas informações estão seguras e que cumprimos todas as políticas e regulamentos de privacidade aplicáveis.</p>",
     "form": {
       "name": {
         "label": "Seu nome",
