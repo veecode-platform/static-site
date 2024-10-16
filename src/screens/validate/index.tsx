@@ -29,7 +29,7 @@ export const Validate = () => {
   });
 
   const handleFormRedirect = () => {
-    router.push("/checkout");
+    router.push("/success");
   };
 
   const tagManagerArgs = {
@@ -89,9 +89,9 @@ export const Validate = () => {
                 validationSchema={formSchema}
                 onSubmit={async (values) => {
                   localStorage.setItem("user", JSON.stringify(values));
-                  const response = await UsePostData(values);
+                  await UsePostData(values);
                   TagManager.initialize(tagManagerArgs);
-                  await handleFormRedirect();
+                  handleFormRedirect();
                 }}
               >
                 {({ errors, touched, handleSubmit, isSubmitting }) => (
