@@ -11,7 +11,7 @@
         @include screenSize(100%, auto);
         @include backgroundImage('/assets/home/banner.svg');
         @include displayFlex(center, center, row);
-        padding: 10rem 0 6rem 0;
+        // padding: 10rem 0 6rem 0;
         margin-bottom: -.5rem;
     }
 
@@ -34,17 +34,6 @@
             max-width: $maxWidthDefault;
         }
 
-        // // tablet
-        // @include for-tablet-only{
-        //     @include displayFlex(space-between, center, column-reverse);
-        //     gap: 3.5rem;
-        // }
-
-        // mobile (S)
-        // @include for-phoneS-only{
-        //     padding: 6rem 0 3rem 0;
-        // }
-
         .textContent {
             width: 100%;
             @include displayFlex(center, center, column);
@@ -54,28 +43,6 @@
                 @include displayFlex(center, flex-start, column);
                 width: 50%;
             }
-
-            // // viewport
-            // @include for-viewport-only{
-            //   width: 55%
-            // }
-
-            // //tablet
-            // @include for-tablet-only {
-            //     @include screenSize(60%, auto);
-            //     @include displayFlex(center, center, column);
-            //     padding-top: 0;
-            // }
-
-            // // tablet(S)
-            // @include for-tabletS-only {
-            //     width: 70%
-            // }
-
-            // // mobile
-            // @include for-phone-only {
-            //     width: 80%
-            // }
 
             &__title {
                 @include screenSize(100%, auto);
@@ -126,10 +93,6 @@
                     @include displayFlex(flex-start, center, row);
                 }
 
-                // // tablet
-                // @include for-tablet-only{
-                //   @include displayFlex(center, center, row);
-                // }
 
             }
         }
@@ -146,31 +109,6 @@
             }
 
 
-            //   // viewport
-            //   @include for-viewport-only{
-            //     width: 40%;
-            //   }
-
-            // // tablet
-            // @include for-tablet-only{
-            //     width: 70%;
-            // }
-
-            // // tablet(S)
-            // @include for-tabletS-only {
-            //     width: 80%
-            // }
-
-            // // mobile
-            // @include for-phone-only {
-            //     width: 90%
-            // }
-
-            // // mobile (S)
-            // @include for-phoneS-only {
-            //     width: 100%
-            // }
-
             .image {
                 width: 90%;
 
@@ -179,20 +117,11 @@
                     width: 50vw;
                 }
 
-                //   // viewport
-                //   @include for-viewport-only{
-                //     width: 40vw
-                //   }
+                //xl
+                @include for-xl-only {
+                    max-width: 750px;
+                }
 
-                //   // tablet
-                //   @include for-tablet-only{
-                //     width: 100%;
-                //    }
-
-                //    // mobile(S)
-                //   @include for-phoneS-only{
-                //     width: 90vw;
-                //   }
             }
         }
     }
