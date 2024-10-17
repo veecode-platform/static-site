@@ -8,24 +8,67 @@ export const routing = defineRouting({
     "/": "/",
     "/plugins": "/plugins",
     "/plugin/[path]": "/plugin/[path]",
-    "/pricing": "/pricing",
-    "/pricing/#plans": "/pricing/#plans",
-    "/free-plan?plan=free": "/free-plan?plan=free",
-    "/contact-us": "/contact-us",
-    "/contact-success": "/contact-success",
-    "/how-it-works": "/how-it-works",
-    "/support": "/support",
-    "/terms-of-service": "/terms-of-service",
-    "/privacy-policy": "/privacy-policy",
-    "/faq": "/faq",
-    "/checkout": "/checkout",
-    "/success": "/success",
-    "/failed": "/failed",
-    "/validate": "/validate",
-    "/validate?plan=standard": "/validate?plan=standard",
-    "/governance": "/governance",
+    "/pricing": {
+      pt: "/planos",
+      en: "/pricing",
+    },
+    "/pricing/#plans": {
+      pt: "/planos/#escolher_plano",
+      en: "/pricing/#plans",
+    },
+    "/free-plan?plan=free": {
+      pt: "/plano-gratis?plano=free",
+      en: "/free-plan?plan=free",
+    },
+    "/contact-us": {
+      pt: "/fale-conosco",
+      en: "/contact-us",
+    },
+    "/contact-success": {
+      pt: "/contato-recebido",
+      en: "/contact-success",
+    },
+    "/how-it-works": {
+      pt: "/como-funciona",
+      en: "/how-it-works",
+    },
+    "/support": {
+      pt: "/suporte",
+      en: "/support",
+    },
+    "/terms-of-service": {
+      pt: "/termos-de-servico",
+      en: "/terms-of-service",
+    },
+    "/privacy-policy": {
+      pt: "/politica-de-privacidade",
+      en: "/privacy-policy",
+    },
+    "/faq": {
+      pt: "/perguntas-frequentes",
+      en: "/faq",
+    },
+    "/success": {
+      pt: "/tudo-certo",
+      en: "/success",
+    },
+    "/failed": {
+      pt: "/houve-um-erro",
+      en: "/failed",
+    },
+    "/validate": {
+      pt: "/validação",
+      en: "/validate",
+    },
+    "/validate?plan=standard": {
+      pt: "/validacao?plano=standard",
+      en: "/validate?plan=standard",
+    },
+    "/governance": {
+      pt: "/governancia",
+      en: "/governance",
+    },
   },
-  localePrefix: "always",
 });
 
 export type Pathnames = keyof typeof routing.pathnames;
