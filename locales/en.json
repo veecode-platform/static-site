@@ -13,67 +13,63 @@
   },
   "metadata": {
     "home": {
-      "title": "VeeCode Platform | Your API infrastructure in minutes Cloud On-premises With Support",
+      "title": "Homepage | Your API infrastructure in minutes Cloud On-premises With Support",
       "description": "Count on our professional support and free tools to overcome DevOps challenges quickly."
     },
-    "checkout": {
-      "title": "VeeCode Platform | Checkout",
-      "description": "Get the best out of our tool with a specialized support service."
-    },
     "contact-success": {
-      "title": "VeeCode Platform | Contact success",
+      "title": "Contact success | VeeCode Platform",
       "description": "If you have reached this page, congratulations on the initiative! we will get in touch with you soon."
     },
     "contact-us": {
-      "title": "VeeCode Platform | Contact Us",
+      "title": "Contact Us | VeeCode Platform",
       "description": "Get in touch with our team, ask your questions and get more detailed information."
     },
     "failed": {
-      "title": "VeeCode Platform | Failed Operation",
+      "title": "Failed Operation | VeeCode Platform",
       "description": "Failed page, you need to make the request again."
     },
     "faq": {
-      "title": "VeeCode Platform | FAQ",
+      "title": "FAQ | VeeCode Platform",
       "description": "Session with frequently asked questions and their respective answers, enjoy and stay on top of everything!"
     },
     "free-plan": {
-      "title": "VeeCode Platform | Free Plan",
+      "title": "Free Plan | VeeCode Platform",
       "description": "In this step we will validate your data to access free content."
     },
     "governance": {
-      "title": "VeeCode Platform | Governance",
+      "title": "Governance | VeeCode Platform",
       "description": "Facilitate strategic decision-making with accurate data on technologies and dependencies.Reduce infrastructure overhead and avoid duplication of efforts, speeding up development."
     },
     "how-it-works": {
-      "title": "VeeCode Platform | How It Works",
+      "title": "How It Works | VeeCode Platform",
       "description": "Get to know how this powerful tools works."
     },
     "plugins": {
-      "title": "VeeCode Platform | Backstage Plugins",
+      "title": "Backstage Plugins | VeeCode Platform",
       "description": "Descriptions, guides and installation instructions for Backstage plugins."
     },
     "pricing": {
-      "title": "VeeCode Platform | Pricing",
+      "title": "Pricing | VeeCode Platform",
       "description": "Select an optimal plan to get the best out of the platform."
     },
     "privacy-policy": {
-      "title": "VeeCode Platform | Privacy Policy",
+      "title": "Privacy Policy | VeeCode Platform",
       "description": "We do everything thought out to the smallest detail, feel free to review our privacy policy."
     },
     "success": {
-      "title": "VeeCode Platform | Waiting Confirmation",
+      "title": "Waiting Confirmation | VeeCode Platform",
       "description": "This session is for those who know where they want to go! Congratulations for being part of the platform!"
     },
     "support": {
-      "title": "VeeCode Platform | Support",
+      "title": "Support | VeeCode Platform",
       "description": "We have a team of experts ready to help you."
     },
     "terms-of-service": {
-      "title": "VeeCode Platform | Terms of Service",
+      "title": "Terms of Service | VeeCode Platform",
       "description": "Please feel free to review our terms of service."
     },
     "validate": {
-      "title": "VeeCode Platform | Validate",
+      "title": "Validate | VeeCode Platform",
       "description": "In this step we will validate your data."
     }
   },
@@ -117,11 +113,11 @@
     "buttonLabel-section3": "Install Now",
     "title-section4": "Take your coding to a new level of <span>efficiency</span> with <span>VeeCode Platform</span>",
     "buttonLabel-section4": "Support Plans",
-    "option-1": "<strong>APIs Catalog</strong> : The catalog of APIs offered by VeeCode Platform allows developers to access a wide range of resources to create innovative applications.",
-    "option-2": "<strong>Software Templates</strong> : Our variety of software templates streamlines the creation process and accelerates application development.",
-    "option-3": "<strong>Observability Dashboards</strong> : Our advanced observability dashboards allow developers to monitor and analyze the performance of their applications.",
-    "option-4": "<strong>Platform Engineering</strong> : Our Platform Engineering approach provides a robust environment for application development and deployment, empowering engineering teams to create high-quality products collaboratively.",
-    "option-5": "<strong>API Management</strong> : With advanced API Management capabilities built-in, it offers ideal tools to efficiently manage, monitor and optimize your APIs."
+    "option-1": "<strong>APIs Catalog</strong>: The catalog of APIs offered by VeeCode Platform allows developers to access a wide range of resources to create innovative applications.",
+    "option-2": "<strong>Software Templates</strong>: Our variety of software templates streamlines the creation process and accelerates application development.",
+    "option-3": "<strong>Observability Dashboards</strong>: Our advanced observability dashboards allow developers to monitor and analyze the performance of their applications.",
+    "option-4": "<strong>Platform Engineering</strong>: Our Platform Engineering approach provides a robust environment for application development and deployment, empowering engineering teams to create high-quality products collaboratively.",
+    "option-5": "<strong>API Management</strong>: With advanced API Management capabilities built-in, it offers ideal tools to efficiently manage, monitor and optimize your APIs."
   },
   "plugins": {
     "title": "Plugins",

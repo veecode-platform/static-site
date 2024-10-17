@@ -13,67 +13,63 @@
   },
   "metadata": {
     "home": {
-      "title": "VeeCode Platform | Sua infraestrutura de API em minutos Nuvem On-premises Com Suporte",
+      "title": "Página Inicial | VeeCode Platform: Sua infraestrutura de API em minutos Nuvem On-premises com Suporte",
       "description": "Conte com nosso suporte profissional e ferramentas gratuitas para superar desafios de DevOps rapidamente."
     },
-    "checkout": {
-      "title": "VeeCode Platform | Finalizar Compra",
-      "description": "Aproveite ao máximo nossa ferramenta com um serviço de suporte especializado."
-    },
     "contact-success": {
-      "title": "VeeCode Platform | Sucesso no Contato",
+      "title": "Sucesso no Contato | VeeCode Platform ",
       "description": "Se você chegou a esta página, parabéns pela iniciativa! Entraremos em contato com você em breve."
     },
     "contact-us": {
-      "title": "VeeCode Platform | Fale Conosco",
+      "title": "Fale Conosco | VeeCode Platform  ",
       "description": "Entre em contato com nossa equipe, tire suas dúvidas e obtenha informações mais detalhadas."
     },
     "failed": {
-      "title": "VeeCode Platform | Operação Falhou",
+      "title": "Operação Falhou | VeeCode Platform",
       "description": "Página de falha, você precisa fazer a solicitação novamente."
     },
     "faq": {
-      "title": "VeeCode Platform | FAQ",
+      "title": "Perguntas Frequentes | VeeCode Platform",
       "description": "Sessão com perguntas frequentes e suas respectivas respostas, aproveite e fique por dentro de tudo!"
     },
     "free-plan": {
-      "title": "VeeCode Platform | Plano Gratuito",
+      "title": "Plano Gratuito | VeeCode Platform",
       "description": "Nesta etapa, validaremos seus dados para acessar o conteúdo gratuito."
     },
     "governance": {
-      "title": "VeeCode Platform | Governança",
+      "title": "Governança | VeeCode Platform",
       "description": "Facilite a tomada de decisões estratégicas com dados precisos sobre tecnologias e dependências. Reduza o overhead de infraestrutura e evite a duplicação de esforços, acelerando o desenvolvimento."
     },
     "how-it-works": {
-      "title": "VeeCode Platform | Como Funciona",
+      "title": "Como Funciona | VeeCode Platform",
       "description": "Saiba como essa poderosa ferramenta funciona."
     },
     "plugins": {
-      "title": "VeeCode Platform | Plugins Backstage",
+      "title": "Backstage Plugins | VeeCode Platform",
       "description": "Descrições, guias e instruções de instalação para plugins do Backstage."
     },
     "pricing": {
-      "title": "VeeCode Platform | Preços",
+      "title": "Planos | VeeCode Platform",
       "description": "Selecione um plano ideal para aproveitar ao máximo a plataforma."
     },
     "privacy-policy": {
-      "title": "VeeCode Platform | Política de Privacidade",
+      "title": "Política de Privacidade | VeeCode Platform",
       "description": "Fazemos tudo pensado nos mínimos detalhes, sinta-se à vontade para revisar nossa política de privacidade."
     },
     "success": {
-      "title": "VeeCode Platform | Aguardando Confirmação",
+      "title": "Aguardando Confirmação | VeeCode Platform",
       "description": "Esta sessão é para quem sabe onde quer chegar! Parabéns por fazer parte da plataforma!"
     },
     "support": {
-      "title": "VeeCode Platform | Suporte",
+      "title": "Suporte | VeeCode Platform",
       "description": "Temos uma equipe de especialistas pronta para te ajudar."
     },
     "terms-of-service": {
-      "title": "VeeCode Platform | Termos de Serviço",
+      "title": "Termos de Serviço | VeeCode Platform",
       "description": "Sinta-se à vontade para revisar nossos termos de serviço."
     },
     "validate": {
-      "title": "VeeCode Platform | Validar",
+      "title": "Validar | VeeCode Platform",
       "description": "Nesta etapa, validaremos seus dados."
     }
   },
@@ -117,11 +113,11 @@
     "buttonLabel-section3": "Instale Agora",
     "title-section4": "Leve o seu código a um novo nível de <span>eficiência</span> com <span>VeeCode Platform</span>",
     "buttonLabel-section4": "Planos de Suporte",
-    "option-1": "<strong>Catálogos de API</strong> : O catálogo de APIs desenvolvido pela VeeCode Platform permite que os desenvolvedores acessem uma extensa possibilidade de recursos e criem aplicações inovadoras.",
-    "option-2": "<strong>Templates de Softwares</strong> : Nossos templates de softwares simplificam o processo de criação e aceleram o desenvolvimento de aplicações.",
-    "option-3": "<strong>Painéis de Observabilidade</strong> : Nossos painéis de observabilidade avançados permitem os desenvolvedores monitorarem e analisarem a performance de suas aplicações.",
-    "option-4": "<strong>Engenharia de Plataformas</strong> : Nossa abordagem em Engenharia de Plataformas proporciona um ambiente robusto para o desenvolvimento e implementação de aplicações, permitindo que as equipes de engenharia criem produtos de alta qualidade de forma eficiente e colaborativa.",
-    "option-5": "<strong>Gerenciamento de API</strong> : Com capacidade avançada em gerenciamento de API, oferecemos as ferramentas ideais para gerir, monitorizar e otimizar de forma eficaz as suas APIs."
+    "option-1": "<strong>Catálogos de API</strong>: O catálogo de APIs desenvolvido pela VeeCode Platform permite que os desenvolvedores acessem uma extensa possibilidade de recursos e criem aplicações inovadoras.",
+    "option-2": "<strong>Templates de Softwares</strong>: Nossos templates de softwares simplificam o processo de criação e aceleram o desenvolvimento de aplicações.",
+    "option-3": "<strong>Painéis de Observabilidade</strong>: Nossos painéis de observabilidade avançados permitem os desenvolvedores monitorarem e analisarem a performance de suas aplicações.",
+    "option-4": "<strong>Engenharia de Plataformas</strong>: Nossa abordagem em Engenharia de Plataformas proporciona um ambiente robusto para o desenvolvimento e implementação de aplicações, permitindo que as equipes de engenharia criem produtos de alta qualidade de forma eficiente e colaborativa.",
+    "option-5": "<strong>Gerenciamento de API</strong>: Com capacidade avançada em gerenciamento de API, oferecemos as ferramentas ideais para gerir, monitorizar e otimizar de forma eficaz as suas APIs."
   },
   "plugins": {
     "title": "Plugins",
