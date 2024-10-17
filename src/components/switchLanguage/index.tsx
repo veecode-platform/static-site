@@ -16,6 +16,7 @@ export const SwitchLanguage = () => {
   const handleToggleDropdown = () => setDropdownShow(!dropdownShow);
 
   const handleChooseLanguage = (lgn: string) => {
+    handleToggleDropdown();
     router.push(pathName as any, { locale: lgn });
   };
 

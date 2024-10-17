@@ -12,7 +12,12 @@
         @include backgroundImage('/assets/home/banner.svg');
         @include displayFlex(center, center, row);
         margin-bottom: -.5rem;
-        padding: 3rem 0 1rem 0;
+        padding: 5rem 0 1rem 0;
+    }
+
+    // 2xl
+    @include for-2xl-only {
+        padding: 5rem 0 3rem 0;
     }
 
     .content {
@@ -115,7 +120,7 @@
 
 
             .image {
-                width: 90%;
+                width: 100%;
 
                 //lg
                 @include for-lg-only {
@@ -124,7 +129,7 @@
 
                 //xl
                 @include for-xl-only {
-                    max-width: 750px;
+                    max-width: 600px;
                 }
 
             }
