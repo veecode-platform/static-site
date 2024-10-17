@@ -7,6 +7,7 @@ export const routing = defineRouting({
   pathnames: {
     "/": "/",
     "/plugins": "/plugins",
+    "/plugin": "/plugin",
     "/plugin/[path]": "/plugin/[path]",
     "/pricing": {
       pt: "/planos",
