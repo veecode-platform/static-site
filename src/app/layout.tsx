@@ -1,3 +1,5 @@
+import "./global.scss";
+
 type Props = {
   children: React.ReactNode;
 };
