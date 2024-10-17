@@ -1,8 +1,5 @@
-import { ReactNode } from "react";
-import "./global.scss";
-
 type Props = {
-  children: ReactNode;
+  children: React.ReactNode;
 };
 
 // Since we have a `not-found.tsx` page on the root, a layout file

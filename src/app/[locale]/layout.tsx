@@ -4,6 +4,7 @@ import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
 import { routing } from "@/i18n/routing";
 import { LANGUAGES } from "@/utils/constants/languages";
 import { notFound } from "next/navigation";
+import "./global.scss";
 
 // const thumbnailImageUrl = "/thumbnail.png";
 

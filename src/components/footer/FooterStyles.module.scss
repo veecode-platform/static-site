@@ -1,137 +1,159 @@
 @import "../../abstract/abstract";
 
-.footer{
+.footer {
     @include screenSize(100vw, auto);
-    @include displayFlex(center, center, column);  
+    @include displayFlex(center, center, column);
     background-color: $color3;
-    padding-top: 15vh;  
-    a{
+    padding-top: 15vh;
+
+    a {
         color: $color2;
         transition: all .5s linear;
-        &:visited{
+
+        &:visited {
             color: $color2;
         }
-        &:hover{
+
+        &:hover {
             transition: all .5s ease-in-out;
             color: $color1;
         }
-        &:active{
+
+        &:active {
             color: $color1;
         }
     }
-    .content{
+
+    .content {
         @include screenSize(100%, auto);
-        @include displayFlex(center, center, column); 
+        @include displayFlex(center, center, column);
         color: $color2;
         padding-bottom: 5vh;
 
         // XL
-        @include for-xl-only{
-          @include displayFlex(space-between, center, row); 
+        @include for-xl-only {
+            @include displayFlex(space-between, center, row);
         }
 
         //2XL
-        @include for-2xl-only{
-            @include displayFlex(space-between, center, row); 
+        @include for-2xl-only {
+            @include displayFlex(space-between, center, row);
         }
 
-        &__logoAndSocial{
-          @include screenSize(100%, 100%);
-          @include displayFlex(center, center, column);
+        &__logoAndSocial {
+            @include screenSize(100%, 100%);
+            @include displayFlex(center, center, column);
 
-         // XL
-          @include for-xl-only{
-           @include screenSize(40%, 100%);
-          }
-            .logo{
+            // XL
+            @include for-xl-only {
+                @include screenSize(40%, 100%);
+            }
+
+            .logo {
                 @include footerLogo();
             }
-            .items{
-                    @include screenSize(35vw,auto);
-                    @include displayFlex(center,center,row);
-                    max-width: 200px;
-                    // SM
-                    @include for-sm-only{
-                       width: 30vw;
-                    }
-                    // MD
-                    @include for-md-only{
-                     width: 16vw;
-                    }
-                    // xl
-                    @include for-xl-only{
-                      width: 12vw;
-                    }
 
-                    li{
-                        @include displayFlex(center,center,row);
-                        @include screenSize(100%,auto);
-                        cursor: pointer;
-                        @include footerIcons();
-                        a{
-                            color:$color1;
+            .items {
+                @include screenSize(35vw, auto);
+                @include displayFlex(center, center, row);
+                max-width: 200px;
+
+                // SM
+                @include for-sm-only {
+                    width: 30vw;
+                }
+
+                // MD
+                @include for-md-only {
+                    width: 16vw;
+                }
+
+                // xl
+                @include for-xl-only {
+                    width: 12vw;
+                }
+
+                li {
+                    @include displayFlex(center, center, row);
+                    @include screenSize(100%, auto);
+                    cursor: pointer;
+                    @include footerIcons();
+
+                    a {
+                        color: $color1;
+                        transition: all .5s linear;
+
+                        &:hover {
                             transition: all .5s linear;
-                            &:hover{
-                                transition: all .5s linear;
-                                color: $color10;
-                            }
+                            color: $color10;
                         }
                     }
                 }
+            }
         }
-        &__details{
+
+        &__details {
             @include screenSize(100%, auto);
             @include displayFlex(center, center, column);
 
             //XL
-            @include for-xl-only{
-              @include screenSize(60%, auto); 
+            @include for-xl-only {
+                @include screenSize(60%, auto);
             }
 
-            &-lists{
+            &-lists {
                 @include screenSize(100%, auto);
                 @include displayFlex(center, center, column);
                 margin-top: 4rem;
 
                 //xl
-                @include for-xl-only{
-                 @include displayFlex(space-between, flex-start, row);
-                 margin-top: 2rem;
+                @include for-xl-only {
+                    @include displayFlex(space-between, flex-start, row);
+                    margin-top: 2rem;
                 }
-                ul{
+
+                ul {
                     @include screenSize(100%, auto);
                     @include displayFlex(center, center, column);
                     margin: .6em 0;
-                    
-                    //xl
-                    @include for-xl-only{
-                      @include screenSize(33.3%, auto);
-                      @include displayFlex(center, flex-start, column);
-                      margin: 1em 0;
-                    }
-                    li{
-                       cursor: pointer;
-                       @include footerText('center');
-                       opacity: .9;
 
-                       span{
-                        opacity: 1;
+                    //xl
+                    @include for-xl-only {
+                        @include screenSize(33.3%, auto);
+                        @include displayFlex(center, flex-start, column);
+                        margin: 1em 0;
+                    }
+
+                    li {
+                        cursor: pointer;
+                        @include footerText('center');
+                        opacity: .9;
                         color: $color4;
-                       }
+                        transition: all .5s ease-in-out;
+
+                        &:hover {
+                            color: $color1;
+                            transition: all .5s ease-in;
+                        }
+
+                        span {
+                            opacity: 1;
+                            color: $color2;
+                        }
                     }
                 }
             }
         }
     }
 
-    &__copy{
+    &__copy {
         @include screenSize(100%, auto);
-        @include displayFlex(center,center,column);
+        @include displayFlex(center, center, column);
         padding: 3vh 0;
         color: $color2;
         border-top: 1px solid $color8;
 
-        p{
+        p {
             @include footerText("center");
         }
     }

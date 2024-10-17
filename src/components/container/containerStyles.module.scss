@@ -13,6 +13,11 @@
   //lg
   @include for-lg-only {
     width: 85%;
-    max-width: $maxWidthDefault;
+  }
+
+
+  //2xl
+  @include for-2xl-only {
+    width: $maxWidthDefault
   }
 }

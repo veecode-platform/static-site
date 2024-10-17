@@ -19,7 +19,7 @@
 
         // lg
         @include for-lg-only {
-            gap: 6rem;
+            gap: 3rem;
         }
 
         &_title {
@@ -63,7 +63,7 @@
                 @include for-xl-only {
                     width: 90vw;
                     grid-template-columns: repeat(4, 1fr);
-                    gap: 1rem;
+                    gap: .5rem;
                     flex-direction: column;
                     max-width: $maxWidthDefault;
                 }

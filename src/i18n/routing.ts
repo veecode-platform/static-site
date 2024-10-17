@@ -13,11 +13,15 @@ export const routing = defineRouting({
       en: "/pricing",
     },
     "/pricing/#plans": {
-      pt: "/planos/#escolher_plano",
+      pt: "/planos/#plans",
       en: "/pricing/#plans",
     },
+    "/free-plan": {
+      pt: "/plano-gratis",
+      en: "/free-plan",
+    },
     "/free-plan?plan=free": {
-      pt: "/plano-gratis?plano=free",
+      pt: "/plano-gratis?plan=free",
       en: "/free-plan?plan=free",
     },
     "/contact-us": {

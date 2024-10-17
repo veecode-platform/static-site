@@ -94,6 +94,12 @@
                     margin: 6rem 0 0 0;
                 }
 
+                //xl
+                @include for-xl-only {
+                    gap: .5rem;
+                }
+
+
                 .card {
                     @include displayFlex(center, center, column);
                     border: 1px solid $color8;
@@ -119,6 +125,11 @@
                         // lg
                         @include for-lg-only {
                             width: 5rem;
+                        }
+
+                        //xl
+                        @include for-xl-only {
+                            width: 60px
                         }
                     }
 
