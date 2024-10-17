@@ -9,7 +9,7 @@ export const Chatbot = () => {
   const pathname = usePathname();
 
   React.useEffect(() => {
-    if (pathname === "/" /*|| pathname === "/support-plans"*/) {
+    if (pathname === "/" || pathname === "/governance") {
       const script = document.createElement("script");
       script.defer = true;
       script.type = "text/javascript";
