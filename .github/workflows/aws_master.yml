@@ -2,60 +2,40 @@ name: Upload to S3 Production
 
 on:
   push:
-    branches: [ master ]
-#  pull_request:
-#    branches: [ master ]
+    branches: [ homolog ]
 
 jobs:
   upload:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 20.x
-      
-      - name: Build Project
-        run: | 
-           yarn version
-           yarn
-           cat > '.env.local' <<EOT
-           NEXT_PUBLIC_ANALYTICS_ID=${{ secrets.ANALYTICS_ID }}
-           NEXT_PUBLIC_ANALYTICS_ID_ADS=${{ secrets.ANALYTICS_ID_ADS }}
-           NEXT_PUBLIC_LAMBDA_BASE_URL=${{ secrets.LAMBDA_BASE_URL }}
-           NEXT_PUBLIC_LAMBDA_API_KEY=${{ secrets.LAMBDA_API_KEY }}
-           NEXT_PUBLIC_PAYPAL_CLIENT_ID=${{ secrets.PAYPAL_CLIENT_ID }}
-           NEXT_PUBLIC_PAYPAL_PREMIUM_ANUAL=${{ secrets.PAYPAL_PREMIUM_ANUAL }}
-           NEXT_PUBLIC_PAYPAL_PREMIUM_MONTHLY=${{ secrets.PAYPAL_PREMIUM_MONTHLY }}
-           NEXT_PUBLIC_PAYPAL_STANDARD_ANUAL=${{ secrets.PAYPAL_STANDARD_ANUAL }}
-           NEXT_PUBLIC_PAYPAL_STANDARD_MONTHLY=${{ secrets.PAYPAL_STANDARD_MONTHLY }}
-           NEXT_PUBLIC_PAYPAL_BASIC_ANUAL=${{ secrets.PAYPAL_BASIC_ANUAL }}
-           NEXT_PUBLIC_PAYPAL_BASIC_MONTHLY=${{ secrets.PAYPAL_BASIC_MONTHLY }}
-           NEXT_PUBLIC_GOOGLE_TAG_MANAGER=${{ secrets.GOOGLE_TAG_MANAGER}}
-           NEXT_PUBLIC_NEUROLEAD_ID=${{ secrets.NEUROLEAD_ID}}
-  
-           EOT
-           yarn build
-           ls -ltrh out
+      - name: Checkout code
+        uses: actions/checkout@v4
 
+      - name: Getting versions
+        run: |
+          echo "app_version=$(jq -r '.version' package.json)" >> $GITHUB_ENV
+      
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v4
         with:
-          aws-access-key-id: ${{ secrets.AWS_KEY_ID}}
-          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          role-to-assume: arn:aws:iam::844606521248:role/landing_page_actions_role
           aws-region: us-east-1
 
-      - name: Deploy static site to S3 bucket
+      - name: Login to Amazon ECR
+        id: login-ecr
+        uses: aws-actions/amazon-ecr-login@v2
+
+      - name: Build, tag, and push docker image to Amazon ECR
+        env:
+          REGISTRY: ${{ steps.login-ecr.outputs.registry }}
+          REPOSITORY: 'veecode-platform/landing-page'
+          IMAGE_TAG: ${{ env.app_version }}
         run: |
-          aws s3 rm s3://${{ secrets.AWS_BUCKET }} --recursive
-          aws s3 sync out s3://${{ secrets.AWS_BUCKET }} --acl public-read
-          aws cloudfront create-invalidation --distribution-id E10554892ALDF9 --paths "/*"
-              
-#     - uses: shallwefootball/s3-upload-action@master
-#       name: Upload S3
-#       id: S3
-#       with:
-#         aws_key_id: ${{ secrets.AWS_KEY_ID }}
-#         aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY}}
-#         aws_bucket: ${{ secrets.AWS_BUCKET }}
-#         source_dir: 'out'
+          docker build -t $REGISTRY/$REPOSITORY:$IMAGE_TAG .
+          docker push $REGISTRY/$REPOSITORY:$IMAGE_TAG
+
+      # - name: Deploy static site to S3 bucket
+      #   run: |
+      #     aws s3 rm s3://${{ secrets.AWS_BUCKET }} --recursive
+      #     aws s3 sync out s3://${{ secrets.AWS_BUCKET }} --acl public-read
+      #     aws cloudfront create-invalidation --distribution-id E10554892ALDF9 --paths "/*"

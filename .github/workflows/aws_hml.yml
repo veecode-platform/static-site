@@ -2,7 +2,7 @@ name: Upload to S3 Homolog
 
 on:
   push:
-    branches: [homolog]
+    branches: [homologs]
 #  pull_request:
 #    branches: [ homolog ]
 
