@@ -1,0 +1,31 @@
+# Ignore node_modules and other dependencies
+node_modules
+.yarn/cache/
+.yarn/install-state.gz
+
+# Ignore build directories
+# .next
+dist
+build
+out
+
+# Ignore configuration files
+.env
+.nvmrc
+
+# Ignore local development files
+.vscode
+.DS_Store
+next-env.d.ts
+
+# Ignore Git files
+.git
+.gitignore
+.github
+
+# Ignore Docker files
+Dockerfile*
+
+# Ignore logs and temporary files
+*.log
+*.tmp
