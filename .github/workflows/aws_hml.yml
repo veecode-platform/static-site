@@ -60,7 +60,7 @@ jobs:
           token: ${{ secrets.DO_TOKEN }}
 
       - name: Getting k8s credentials
-        run: 
+        run: doctl kubernetes cluster kubeconfig save ${{ secrets.CLUSTER_NAME }}
 
       - name: Update landing-page deployment
         shell: bash
