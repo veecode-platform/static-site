@@ -60,13 +60,11 @@ jobs:
           token: ${{ secrets.DO_TOKEN }}
 
       - name: Getting k8s credentials
-        run: doctl kubernetes cluster kubeconfig save ${{ secrets.CLUSTER_NAME }}
+        run: 
 
       - name: Update landing-page deployment
         shell: bash
         run: |
-          echo "${{ secrets.KUBECONFIG }}" > ./config
-          export KUBECONFIG=./config
           yq e ".spec.template.spec.containers[0].image = \"veecode/landing-page:homolog\"" -i ./k8s/deployment.yaml
           yq e '.spec.template.spec.containers[0].imagePullPolicy="Always"' -i ./k8s/deployment.yaml
           yq e '.spec.rules[0].host = "landing-page.apr.vee.codes"' -i ./k8s/ingress.yaml
