@@ -1,4 +1,4 @@
-name: Upload to S3 Production
+name: Build Deploy to Production
 
 on:
   push:
@@ -9,7 +9,7 @@ permissions:
   contents: read
 
 jobs:
-  upload:
+  deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -18,23 +18,63 @@ jobs:
       - name: Getting versions
         run: |
           echo "app_version=$(jq -r '.version' package.json)" >> $GITHUB_ENV
-
-      - name: Configure AWS Credentials
-        uses: aws-actions/configure-aws-credentials@v4
+          - name: Set up Docker Buildx
+          uses: docker/setup-buildx-action@v3
+  
+      - name: Login to DockerHub
+        uses: docker/login-action@v3
         with:
-          role-to-assume: arn:aws:iam::844606521248:role/landing_page_actions_role
-          aws-region: us-east-1
-
-      - name: Login to Amazon ECR
-        id: login-ecr
-        uses: aws-actions/amazon-ecr-login@v2
-
-      - name: Build, tag, and push docker image to Amazon ECR
-        uses: docker/build-push-action@v6
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+  
+      - name: Build and push
+        uses: docker/build-push-action@v5
         with:
           context: .
           push: true
-          tags: ${{ steps.login-ecr.outputs.registry }}/landing-page:${{ env.app_version }},${{ steps.login-ecr.outputs.registry }}/landing-page:latest
+          tags: veecode/landing-page:${{ env.app_version }},veecode/landing-page:latest
+  
+      - name: Setting up kubectl client
+        uses: azure/setup-kubectl@v3
+        id: install
+  
+      # - name: Update blog deployment
+      #   shell: bash
+      #   run: |
+      #     echo "${{ secrets.KUBECONFIG }}" > ./config
+      #     export KUBECONFIG=./config
+
+      #     yq e ".spec.template.spec.containers[0].image = \"veecode/blog:${{ env.app_version }}\"" -i ./k8s/deployment.yaml
+      #     NAMESPACE=$((kubectl get pod -A | grep veecode-blog || echo "vkpr") | awk -F' ' '{print $1}')
+
+      #     # Check the difference
+      #     OUTPUT_FILE="diff_output.txt"
+
+      #     # kubectl diff -f ./k8s/ > "$OUTPUT_FILE" 2>&1
+
+      #     # if [ -s "$OUTPUT_FILE" ]; then
+      #     #   echo "No difference found, restarting the deployment"
+      #     #   kubectl rollout restart deployment/veecode-blog -n $NAMESPACE
+      #     # else
+      #       echo "Difference found, applying the configuration"
+      #       kubectl apply -f ./k8s/ -n $NAMESPACE
+      #     # fi
+      # - name: Configure AWS Credentials
+      #   uses: aws-actions/configure-aws-credentials@v4
+      #   with:
+      #     role-to-assume: arn:aws:iam::844606521248:role/landing_page_actions_role
+      #     aws-region: us-east-1
+
+      # - name: Login to Amazon ECR
+      #   id: login-ecr
+      #   uses: aws-actions/amazon-ecr-login@v2
+
+      # - name: Build, tag, and push docker image to Amazon ECR
+      #   uses: docker/build-push-action@v6
+      #   with:
+      #     context: .
+      #     push: true
+      #     tags: ${{ steps.login-ecr.outputs.registry }}/landing-page:${{ env.app_version }},${{ steps.login-ecr.outputs.registry }}/landing-page:latest
   
       # - name: Deploy static site to S3 bucket
       #   run: |
