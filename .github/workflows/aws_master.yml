@@ -2,7 +2,7 @@ name: Build Deploy to Production
 
 on:
   push:
-    branches: [ homolog ]
+    branches: [ master ]
 
 permissions:
   id-token: write
@@ -33,8 +33,7 @@ jobs:
           tags: veecode/landing-page:${{ env.app_version }},veecode/landing-page:latest
   
       - name: Setting up kubectl client
-        uses: azure/setup-kubectl@v3
-        id: install
+        uses: azure/setup-kubectl@v4
   
       # - name: Update blog deployment
       #   shell: bash
@@ -57,6 +56,7 @@ jobs:
       #       echo "Difference found, applying the configuration"
       #       kubectl apply -f ./k8s/ -n $NAMESPACE
       #     # fi
+
       # - name: Configure AWS Credentials
       #   uses: aws-actions/configure-aws-credentials@v4
       #   with:

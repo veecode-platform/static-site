@@ -2,56 +2,81 @@ name: Upload to S3 Homolog
 
 on:
   push:
-    branches: [homologs]
+    branches: [homolog]
 #  pull_request:
 #    branches: [ homolog ]
 
 permissions:
   id-token: write
   contents: read
+env:
+  HOST: landing-page.apr.vee.codes
+  NAMESPACE: veecode-homolog
 
 jobs:
   upload:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Getting versions
+        run: |
+          echo "app_version=$(jq -r '.version' package.json)" >> $GITHUB_ENV
+
+      - name: Login to DockerHub
+        uses: docker/login-action@v3
         with:
-          node-version: 20.x
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
 
-      - name: Build Project
-        run: |
-          yarn version
-          yarn
-          cat > '.env.local' <<EOT
-          NEXT_PUBLIC_ANALYTICS_ID=${{ secrets.ANALYTICS_ID }}
-          NEXT_PUBLIC_LAMBDA_BASE_URL=${{ secrets.LAMBDA_BASE_URL_HOMOLOG }}
-          NEXT_PUBLIC_LAMBDA_API_KEY=${{ secrets.LAMBDA_API_KEY_HOMOLOG }}
-          NEXT_PUBLIC_PAYPAL_CLIENT_ID=${{ secrets.PAYPAL_CLIENT_ID }}
-          NEXT_PUBLIC_PAYPAL_PREMIUM_ANUAL=${{ secrets.PAYPAL_PREMIUM_ANUAL }}
-          NEXT_PUBLIC_PAYPAL_PREMIUM_MONTHLY=${{ secrets.PAYPAL_PREMIUM_MONTHLY }}
-          NEXT_PUBLIC_PAYPAL_STANDARD_ANUAL=${{ secrets.PAYPAL_STANDARD_ANUAL }}
-          NEXT_PUBLIC_PAYPAL_STANDARD_MONTHLY=${{ secrets.PAYPAL_STANDARD_MONTHLY }}
-          NEXT_PUBLIC_PAYPAL_BASIC_ANUAL=${{ secrets.PAYPAL_BASIC_ANUAL }}
-          NEXT_PUBLIC_PAYPAL_BASIC_MONTHLY=${{ secrets.PAYPAL_BASIC_MONTHLY }}
-          NEXT_PUBLIC_GOOGLE_TAG_MANAGER=${{ secrets.GOOGLE_TAG_MANAGER}}
-          NEXT_PUBLIC_NEUROLEAD_ID=${{ secrets.NEUROLEAD_ID}}
-          NEXT_PUBLIC_HOST_URL="https://homolog.platform.vee.codes"
-
-          EOT
-          yarn build
-          ls -ltrh out
-
-      - name: Configure AWS credentials
-        uses: aws-actions/configure-aws-credentials@v4
+      - name: Build and push
+        uses: docker/build-push-action@v5
+        env:
+          NEXT_PUBLIC_ANALYTICS_ID: ${{ secrets.ANALYTICS_ID }}
+          NEXT_PUBLIC_LAMBDA_BASE_URL: ${{ secrets.LAMBDA_BASE_URL_HOMOLOG }}
+          NEXT_PUBLIC_LAMBDA_API_KEY: ${{ secrets.LAMBDA_API_KEY_HOMOLOG }}
+          NEXT_PUBLIC_GOOGLE_TAG_MANAGER: ${{ secrets.GOOGLE_TAG_MANAGER}}
+          NEXT_PUBLIC_NEUROLEAD_ID: ${{ secrets.NEUROLEAD_ID}}
+          # NEXT_PUBLIC_PAYPAL_CLIENT_ID: ${{ secrets.PAYPAL_CLIENT_ID }}
+          # NEXT_PUBLIC_PAYPAL_PREMIUM_ANUAL: ${{ secrets.PAYPAL_PREMIUM_ANUAL }}
+          # NEXT_PUBLIC_PAYPAL_PREMIUM_MONTHLY: ${{ secrets.PAYPAL_PREMIUM_MONTHLY }}
+          # NEXT_PUBLIC_PAYPAL_STANDARD_ANUAL: ${{ secrets.PAYPAL_STANDARD_ANUAL }}
+          # NEXT_PUBLIC_PAYPAL_STANDARD_MONTHLY: ${{ secrets.PAYPAL_STANDARD_MONTHLY }}
+          # NEXT_PUBLIC_PAYPAL_BASIC_ANUAL: ${{ secrets.PAYPAL_BASIC_ANUAL }}
+          # NEXT_PUBLIC_PAYPAL_BASIC_MONTHLY: ${{ secrets.PAYPAL_BASIC_MONTHLY }}
+          # NEXT_PUBLIC_HOST_URL: "https://homolog.platform.vee.codes"
         with:
-          role-to-assume: arn:aws:iam::559803878497:role/landing_page_actions_role
-          aws-region: us-east-1
+          context: .
+          push: true
+          tags: veecode/landing-page:homolog
 
-      - name: Deploy static site to S3 bucket
+      - name: Setting up kubectl client
+        uses: azure/setup-kubectl@v4
+
+      - name: GitHub Action for DigitalOcean - doctl
+        uses: digitalocean/action-doctl@v2
+        with:
+          token: ${{ secrets.DO_TOKEN }}
+
+      - name: Getting k8s credentials
+        run: doctl kubernetes cluster kubeconfig save ${{ secrets.CLUSTER_NAME }}
+
+      - name: Update landing-page deployment
+        shell: bash
         run: |
-          aws s3 rm s3://${{ secrets.AWS_BUCKET_HML }} --recursive
-          aws s3 sync out s3://${{ secrets.AWS_BUCKET_HML }} --acl public-read
-      - name: Homolog docs URL
-        run: |
-          echo "http://homolog.platform.vee.codes.s3-website-us-east-1.amazonaws.com/"
+          echo "${{ secrets.KUBECONFIG }}" > ./config
+          export KUBECONFIG=./config
+          yq e ".spec.template.spec.containers[0].image = \"veecode/landing-page:homolog\"" -i ./k8s/deployment.yaml
+          yq e '.spec.template.spec.containers[0].imagePullPolicy="Always"' -i ./k8s/deployment.yaml
+          yq e '.spec.rules[0].host = "landing-page.apr.vee.codes"' -i ./k8s/ingress.yaml
+          
+          kubectl apply -f ./k8s/ -n ${{ env.NAMESPACE }}
+
+      # - name: Deploy static site to S3 bucket
+      #   run: |
+      #     aws s3 rm s3://${{ secrets.AWS_BUCKET_HML }} --recursive
+      #     aws s3 sync out s3://${{ secrets.AWS_BUCKET_HML }} --acl public-read
+      # - name: Homolog docs URL
+      #   run: |
+      #     echo "http://homolog.platform.vee.codes.s3-website-us-east-1.amazonaws.com/"
