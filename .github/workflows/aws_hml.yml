@@ -83,12 +83,8 @@ jobs:
           yq e '.spec.rules[0].host = "landing-page.apr.vee.codes"' -i ./k8s/ingress.yaml
 
           kubectl create secret generic landing-page-secret --from-env-file=.env -n ${{ env.NAMESPACE }} --dry-run=client -o yaml | kubectl apply -f -
-          
-            
           kubectl apply -f ./k8s/ -n ${{ env.NAMESPACE }}
-
-      - name: Restart landing-page deployment
-        run: kubectl rollout restart deployment/landing-page -n ${{ env.NAMESPACE }}
+          kubectl rollout restart deployment/landing-page -n ${{ env.NAMESPACE }}
 
       # - name: Deploy static site to S3 bucket
       #   run: |
