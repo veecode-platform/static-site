@@ -10,7 +10,6 @@ build
 out
 
 # Ignore configuration files
-.env
 .nvmrc
 
 # Ignore local development files

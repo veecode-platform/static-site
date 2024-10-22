@@ -30,15 +30,26 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
+      - name: Load environment variables
+        run: |
+          cat > '.env' <<EOT
+          NEXT_PUBLIC_ANALYTICS_ID=${{ secrets.ANALYTICS_ID }}
+          NEXT_PUBLIC_LAMBDA_BASE_URL=${{ secrets.LAMBDA_BASE_URL_HOMOLOG }}
+          NEXT_PUBLIC_LAMBDA_API_KEY=${{ secrets.LAMBDA_API_KEY_HOMOLOG }}
+          NEXT_PUBLIC_GOOGLE_TAG_MANAGER=${{ secrets.GOOGLE_TAG_MANAGER}}
+          NEXT_PUBLIC_NEUROLEAD_ID=${{ secrets.NEUROLEAD_ID}}
+          NEXT_PUBLIC_HOST_URL="https://${{ env.HOST }}"
+          EOT
+  
       - name: Build and push
         uses: docker/build-push-action@v5
-        env:
-          NEXT_PUBLIC_ANALYTICS_ID: ${{ secrets.ANALYTICS_ID }}
-          NEXT_PUBLIC_LAMBDA_BASE_URL: ${{ secrets.LAMBDA_BASE_URL_HOMOLOG }}
-          NEXT_PUBLIC_LAMBDA_API_KEY: ${{ secrets.LAMBDA_API_KEY_HOMOLOG }}
-          NEXT_PUBLIC_GOOGLE_TAG_MANAGER: ${{ secrets.GOOGLE_TAG_MANAGER}}
-          NEXT_PUBLIC_NEUROLEAD_ID: ${{ secrets.NEUROLEAD_ID}}
-          NEXT_PUBLIC_HOST_URL: "https://${{ env.HOST }}"
+        # env:
+          # NEXT_PUBLIC_ANALYTICS_ID: ${{ secrets.ANALYTICS_ID }}
+          # NEXT_PUBLIC_LAMBDA_BASE_URL: ${{ secrets.LAMBDA_BASE_URL_HOMOLOG }}
+          # NEXT_PUBLIC_LAMBDA_API_KEY: ${{ secrets.LAMBDA_API_KEY_HOMOLOG }}
+          # NEXT_PUBLIC_GOOGLE_TAG_MANAGER: ${{ secrets.GOOGLE_TAG_MANAGER}}
+          # NEXT_PUBLIC_NEUROLEAD_ID: ${{ secrets.NEUROLEAD_ID}}
+          # NEXT_PUBLIC_HOST_URL: "https://${{ env.HOST }}"
 
           # NEXT_PUBLIC_PAYPAL_CLIENT_ID: ${{ secrets.PAYPAL_CLIENT_ID }}
           # NEXT_PUBLIC_PAYPAL_PREMIUM_ANUAL: ${{ secrets.PAYPAL_PREMIUM_ANUAL }}
