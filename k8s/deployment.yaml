@@ -22,9 +22,9 @@ spec:
             limits:
               cpu: "1"
               memory: "512Mi"
-          env:
-            - name: ORIGIN_URI
-              value: https://blog.platform.vee.codes/api/keystatic/github/oauth/callback
+          envFrom:
+            - secretRef:
+                name: landing-page-secret
           livenessProbe:
             httpGet:
               path: /

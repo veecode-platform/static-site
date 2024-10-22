@@ -40,6 +40,7 @@ jobs:
           NEXT_PUBLIC_NEUROLEAD_ID=${{ secrets.NEUROLEAD_ID}}
           NEXT_PUBLIC_HOST_URL="https://${{ env.HOST }}"
           EOT
+          sed -i 's/[[:space:]]//g' .env
   
       - name: Build and push
         uses: docker/build-push-action@v5
@@ -80,7 +81,9 @@ jobs:
           yq e ".spec.template.spec.containers[0].image = \"veecode/landing-page:homolog\"" -i ./k8s/deployment.yaml
           yq e '.spec.template.spec.containers[0].imagePullPolicy="Always"' -i ./k8s/deployment.yaml
           yq e '.spec.rules[0].host = "landing-page.apr.vee.codes"' -i ./k8s/ingress.yaml
-          
+
+          kubectl create secret generic landing-page-secret --from-env-file=.env -n ${{ env.NAMESPACE }} --dry-run=client -o yaml | kubectl apply -f -
+
           kubectl apply -f ./k8s/ -n ${{ env.NAMESPACE }}
 
       # - name: Deploy static site to S3 bucket
