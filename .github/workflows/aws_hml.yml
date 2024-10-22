@@ -1,4 +1,4 @@
-name: Upload to S3 Homolog
+name: Build Deploy to Homolog
 
 on:
   push:
@@ -14,7 +14,7 @@ env:
   NAMESPACE: veecode-homolog
 
 jobs:
-  upload:
+  deploy-hml:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -38,6 +38,8 @@ jobs:
           NEXT_PUBLIC_LAMBDA_API_KEY: ${{ secrets.LAMBDA_API_KEY_HOMOLOG }}
           NEXT_PUBLIC_GOOGLE_TAG_MANAGER: ${{ secrets.GOOGLE_TAG_MANAGER}}
           NEXT_PUBLIC_NEUROLEAD_ID: ${{ secrets.NEUROLEAD_ID}}
+          NEXT_PUBLIC_HOST_URL: "https://${{ env.HOST }}"
+
           # NEXT_PUBLIC_PAYPAL_CLIENT_ID: ${{ secrets.PAYPAL_CLIENT_ID }}
           # NEXT_PUBLIC_PAYPAL_PREMIUM_ANUAL: ${{ secrets.PAYPAL_PREMIUM_ANUAL }}
           # NEXT_PUBLIC_PAYPAL_PREMIUM_MONTHLY: ${{ secrets.PAYPAL_PREMIUM_MONTHLY }}
@@ -45,7 +47,6 @@ jobs:
           # NEXT_PUBLIC_PAYPAL_STANDARD_MONTHLY: ${{ secrets.PAYPAL_STANDARD_MONTHLY }}
           # NEXT_PUBLIC_PAYPAL_BASIC_ANUAL: ${{ secrets.PAYPAL_BASIC_ANUAL }}
           # NEXT_PUBLIC_PAYPAL_BASIC_MONTHLY: ${{ secrets.PAYPAL_BASIC_MONTHLY }}
-          # NEXT_PUBLIC_HOST_URL: "https://homolog.platform.vee.codes"
         with:
           context: .
           push: true
