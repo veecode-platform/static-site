@@ -1,11 +1,8 @@
-"use client";
-
-import { FaLongArrowAltLeft } from "react-icons/fa";
 import style from "./DefaultPageStyles.module.scss";
 import { Header, Footer, Container } from "../../components";
 import { DefaultPageProps } from "./types";
 import classNames from "classnames";
-import { useRouter } from "@/i18n/routing";
+import { BackButton } from "./Client/BackButton";
 
 export const DefaultPage: React.FC<DefaultPageProps> = ({
   titleBar,
@@ -21,16 +18,6 @@ export const DefaultPage: React.FC<DefaultPageProps> = ({
   backToUrl,
   noSpace,
 }) => {
-  const router = useRouter();
-
-  const HandlerBack = () => {
-    if (backToUrl) {
-      router.push(backToUrl as any);
-    } else {
-      noPrevious ? router.push("/") : router.back();
-    }
-  };
-
   return (
     <>
       <Header
@@ -74,11 +61,7 @@ export const DefaultPage: React.FC<DefaultPageProps> = ({
           </Container>
         </section>
         {!noBack && (
-          <section className={style.back}>
-            <span onClick={HandlerBack}>
-              <FaLongArrowAltLeft />
-            </span>
-          </section>
+          <BackButton backToUrl={backToUrl} noPrevious={noPrevious} />
         )}
       </main>
       {!noFooter && <Footer />}

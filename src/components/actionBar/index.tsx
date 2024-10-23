@@ -1,5 +1,3 @@
-"use client";
-
 import style from "./ActionBarStyles.module.scss";
 import { ActionBarProps } from "./types";
 import { Button } from "../button";
@@ -22,12 +20,9 @@ export const ActionBar: React.FC<ActionBarProps> = ({
           </NavigationLink>
         )}
         {variant === "docs" && (
-          <Button>
-            <ExternalLink
-              href="https://docs.platform.vee.codes/"
-              title={buttonLabel}
-            />
-          </Button>
+          <ExternalLink href="https://docs.platform.vee.codes/">
+            <Button>{buttonLabel}</Button>
+          </ExternalLink>
         )}
       </div>
     </div>

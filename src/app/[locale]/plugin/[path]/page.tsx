@@ -1,7 +1,8 @@
+import { DefaultPage } from "@/components";
 import { routing } from "@/i18n/routing";
 import { getAllPlugins, getPluginByPath } from "@/lib";
-import { PluginPage } from "@/screens";
 import { unstable_setRequestLocale } from "next-intl/server";
+import { PluginContent } from "./pluginContent";
 
 type Props = {
   params: { locale: string; path: string };
@@ -35,8 +36,8 @@ export default function PluginDocPage({ params: { locale, path } }: Props) {
   const pluginData = getPluginByPath(locale, path);
 
   return (
-    <main>
-      <PluginPage pluginData={pluginData} />
-    </main>
+    <DefaultPage notTranslate backToUrl="/plugins">
+      <PluginContent pluginData={pluginData} />
+    </DefaultPage>
   );
 }

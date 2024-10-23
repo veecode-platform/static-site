@@ -22,6 +22,7 @@ export const UseContactData = async (values: any) => {
 
     return data;
   } catch (error) {
+    console.error("ERROR IN CONTACT US >>", error);
     return error;
   }
 };

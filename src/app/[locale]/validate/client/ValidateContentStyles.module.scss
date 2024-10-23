@@ -1,0 +1,46 @@
+@import"../../../../abstract/abstract";
+
+
+.formWraper {
+    @include screenSize(100%, auto);
+    @include displayFlex(center, center, column);
+    @include glassEffect();
+    background-color: $color12;
+    padding: 1rem;
+
+    //sm
+    @include for-sm-only {
+        max-width: 500px;
+    }
+
+    //xl
+    @include for-lg-only {
+        width: 100%;
+        padding: 1rem;
+        border-radius: 15px;
+    }
+
+
+
+
+
+    .form {
+        @include displayFlex(center, center, column);
+        width: 100%;
+        gap: 1.2vh;
+
+        &__buttonWrapper {
+            @include screenSize(100%, auto);
+            @include displayFlex(center, center, row);
+        }
+
+        .actions {
+            @include displayFlex(center, center, row);
+            padding: 2.5rem 0;
+        }
+
+        .astronault {
+            text-align-last: center !important;
+        }
+    }
+}

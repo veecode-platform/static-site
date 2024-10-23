@@ -1,9 +1,9 @@
 import { routing } from "@/i18n/routing";
-import { Plugins } from "@/screens";
 import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
-import PluginsData from "../../../data/plugins/plugins.json";
 import { getAllPlugins } from "@/lib";
-import { IPlugin } from "@/utils/types/plugin";
+import { ActionBar, DefaultPage } from "@/components";
+import style from "./PluginsStyles.module.scss";
+import { PluginCard } from "./pluginCard";
 
 type Props = {
   params: { locale: string };
@@ -29,11 +29,31 @@ export default async function PluginsPage({ params: { locale } }: Props) {
   // Enable static rendering
   unstable_setRequestLocale(locale);
 
-  const items = getAllPlugins(locale);
+  const t = await getTranslations({ locale, namespace: "plugins" });
+  const plugins = getAllPlugins(locale);
 
   return (
     <main>
-      <Plugins pluginList={items as IPlugin[]} />
+      <DefaultPage titleBar title={t("title")} subtitle={t("description")}>
+        <section className={style.wrapper}>
+          {plugins.map((p) => (
+            <PluginCard
+              key={p.id}
+              image={p.image}
+              title={p.title}
+              path={p.path}
+              tags={p.tags}
+              desc={p.desc}
+              buttonLabel={t("buttonLabel")}
+            />
+          ))}
+        </section>
+        <ActionBar
+          title={t("action.contact.title")}
+          buttonLabel={t("action.contact.buttonLabel")}
+          variant="contact"
+        />
+      </DefaultPage>
     </main>
   );
 }

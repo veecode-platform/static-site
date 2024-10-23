@@ -1,0 +1,32 @@
+@import "../../../../abstract/abstract";
+
+
+.formWraper {
+    @include displayFlex(center, center, column);
+    @include glassEffect();
+    width: 100%;
+    padding: 1vw 1vw;
+    background-color: $color12;
+    border-radius: 15px;
+    padding: 1rem;
+
+    .form {
+        @include displayFlex(center, center, column);
+        width: 100%;
+        gap: 1.2vh;
+
+        &__buttonWrapper {
+            @include screenSize(100%, auto);
+            @include displayFlex(center, center, row);
+        }
+
+        .actions {
+            @include displayFlex(center, center, row);
+            padding: 2.5rem 0;
+        }
+
+        .animation {
+            text-align-last: center !important;
+        }
+    }
+}

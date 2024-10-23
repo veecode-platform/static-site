@@ -1,16 +1,14 @@
-"use client";
-
-import { ReactNode } from "react";
+import type { ReactNode } from "react";
 
 type Props = {
-  title: string | ReactNode;
+  children: string | ReactNode;
   href: string;
 };
 
-export function ExternalLink({ href, title }: Props) {
+export function ExternalLink({ href, children }: Props) {
   return (
     <a href={href} rel="noreferrer" target="_blank">
-      {title}
+      {children}
     </a>
   );
 }

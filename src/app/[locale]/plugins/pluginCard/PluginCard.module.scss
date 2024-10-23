@@ -1,0 +1,82 @@
+@import "../../../../abstract/abstract";
+
+.card {
+    width: 100%;
+    padding: 3rem 2rem 2rem 2rem;
+    @include glassEffect();
+    border-radius: .8em;
+    @include displayFlex(space-between, center, column);
+    gap: 2rem;
+
+    &__content {
+        @include screenSize(100%, auto);
+        @include displayFlex(center, center, column);
+        gap: 2rem;
+
+        &-header {
+            @include screenSize(90%, auto);
+            @include displayFlex(center, center, column);
+            gap: 2rem;
+
+            // xl
+            @include for-xl-only {
+                @include screenSize(95%, auto);
+                @include displayFlex(center, flex-end, row);
+            }
+
+            .icon {
+                width: 7rem;
+            }
+
+            .titlebar {
+                width: auto;
+                @include displayFlex(center, center, column);
+
+                // xl
+                @include for-xl-only {
+                    @include displayFlex(center, flex-start, column);
+                }
+
+                &__title {
+                    @include titleCard(center);
+
+                    // xl
+                    @include for-xl-only {
+                        @include titleCard(left)
+                    }
+                }
+
+                &__tags {
+                    width: 100%;
+                    @include displayFlex(center, center, row);
+                    gap: 1rem;
+                    padding: 1rem 0 .2rem 0;
+
+                    &-chips {
+                        background: $color4;
+                        border-radius: 8px;
+                        padding: .2rem .7rem;
+                        @include label();
+                    }
+                }
+            }
+
+        }
+
+        &-text {
+            width: 80%;
+            min-height: 100px;
+            @include displayFlex(center, center, row);
+
+            .desc {
+                @include bodyCard(center);
+                vertical-align: middle;
+            }
+        }
+    }
+
+    &__button {
+        width: 100%;
+        @include displayFlex(center, center, row);
+    }
+}

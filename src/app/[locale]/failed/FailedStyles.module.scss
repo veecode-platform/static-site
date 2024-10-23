@@ -1,0 +1,33 @@
+@import"../../../abstract/abstract";
+
+.content {
+    @include screenSize(100%, auto);
+    @include displayFlex(center, center, column);
+    background-color: $color9;
+    padding: 1em 0 10em 0;
+
+    &__image {
+        @include screenSize(25%, auto);
+        @include displayFlex(center, center, row);
+
+        img {
+            @include screenSize(100%, auto);
+            @include pulseAnimation();
+        }
+    }
+
+    &__details {
+        margin-top: 4em;
+
+        p {
+            @include typography(1.2vw, center, 1.5em, 400);
+            color: $color2;
+        }
+    }
+
+    &__buttonWrapper {
+        margin-top: 3em;
+        @include screenSize(50%, auto);
+        @include displayFlex(space-around, center, row);
+    }
+}

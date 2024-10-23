@@ -5,12 +5,12 @@ import { Button } from "..";
 import style from "./FormElementStyles.module.scss";
 import { Formik, Form } from "formik";
 import { object, string } from "yup";
-import { useRouter } from "next/navigation";
 import TagManager from "react-gtm-module";
 import { useTranslations } from "next-intl";
 import { UseContactData } from "@/hooks/useContactData";
 import { Checkbox, Input, TextArea } from "../patterns/input";
 import { FormElementProps } from "./types";
+import { useRouter } from "@/i18n/routing";
 
 export const FormElement: React.FC<FormElementProps> = ({
   company,

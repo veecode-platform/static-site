@@ -1,5 +1,5 @@
+import { ActionBar, DefaultPage, FaqList } from "@/components";
 import { routing } from "@/i18n/routing";
-import { Faq } from "@/screens";
 import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
 
 type Props = {
@@ -25,9 +25,21 @@ export default async function FaqPage({ params: { locale } }: Props) {
   // Enable static rendering
   unstable_setRequestLocale(locale);
 
+  const t = await getTranslations({ locale, namespace: "faq" });
+
   return (
-    <main>
-      <Faq />
-    </main>
+    <DefaultPage
+      titleBar
+      title={t("title")}
+      subtitle={t("subtitle")}
+      showOptions
+    >
+      <FaqList />
+      <ActionBar
+        title={t("action.contact.title")}
+        buttonLabel={t("action.contact.buttonLabel")}
+        variant="contact"
+      />
+    </DefaultPage>
   );
 }

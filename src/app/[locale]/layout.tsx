@@ -6,7 +6,7 @@ import { LANGUAGES } from "@/utils/constants/languages";
 import { notFound } from "next/navigation";
 import "./global.scss";
 
-// const thumbnailImageUrl = "/thumbnail.png";
+const thumbnailImageUrl = "/thumbnail.png";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -31,7 +31,7 @@ export async function generateMetadata({
     keywords: ["backstage", "idp", "platform", "veecode"],
     openGraph: {
       title: t("home.title"),
-      //     images: thumbnailImageUrl,
+      images: thumbnailImageUrl,
     },
     robots: {
       index: true,

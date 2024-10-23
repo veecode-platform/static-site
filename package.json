@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "static": "npx serve@latest out"
+    "static": "npx serve@latest out",
+    "standalone": "node .next/standalone/server.js"
   },
   "dependencies": {
     "@emotion/react": "^11.13.3",
