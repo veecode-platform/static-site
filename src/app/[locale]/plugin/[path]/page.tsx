@@ -2,7 +2,7 @@ import { DefaultPage } from "@/components";
 import { routing } from "@/i18n/routing";
 import { getAllPlugins, getPluginByPath } from "@/lib";
 import { unstable_setRequestLocale } from "next-intl/server";
-import { PluginContent } from "./pluginContent";
+import { PluginContent } from "./client/PluginContent";
 
 type Props = {
   params: { locale: string; path: string };
