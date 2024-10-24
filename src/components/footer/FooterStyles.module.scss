@@ -120,13 +120,12 @@
                     //xl
                     @include for-xl-only {
                         @include screenSize(33.3%, auto);
-                        @include displayFlex(center, flex-start, column);
                         margin: 1em 0;
                     }
 
                     li {
                         cursor: pointer;
-                        @include footerText('center');
+                        @include footerText('flex-end');
                         opacity: .9;
                         color: $color4;
                         transition: all .5s ease-in-out;
