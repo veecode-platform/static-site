@@ -28,10 +28,6 @@ export const FormElement: React.FC<FormElementProps> = ({
 
   const router = useRouter();
 
-  const handleFormRedirect = () => {
-    router.push("/contact-success");
-  };
-
   const tagManagerArgs = {
     gtmId: "GTM-56RG967",
     events: {
@@ -58,9 +54,13 @@ export const FormElement: React.FC<FormElementProps> = ({
         }}
         validationSchema={formSchema}
         onSubmit={async (values) => {
-          await UseContactData(values);
+          const response = await UseContactData(values);
           TagManager.initialize(tagManagerArgs);
-          handleFormRedirect();
+          if (!response.ok) {
+            return console.log("ERROR >>>>", response);
+          }
+          console.log("Contact Success");
+          return; /* router.push("/contact-success"); */
         }}
       >
         {({ errors, touched, handleSubmit, isSubmitting }) => (
