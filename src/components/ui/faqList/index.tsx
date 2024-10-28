@@ -5,7 +5,7 @@ import { useTranslations } from "next-intl";
 import style from "./FaqListStyles.module.scss";
 import { IFaq } from "./types";
 import { AccordionItem } from "./accordionItem";
-import { Container } from "../container";
+import { Container } from "../../container";
 
 export const FaqList = () => {
   const t = useTranslations("faq.items");

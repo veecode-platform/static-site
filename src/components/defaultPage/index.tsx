@@ -2,7 +2,7 @@ import style from "./DefaultPageStyles.module.scss";
 import { Header, Footer, Container } from "../../components";
 import { DefaultPageProps } from "./types";
 import classNames from "classnames";
-import { BackButton } from "./Client/BackButton";
+import { BackButton } from "./ui/BackButton";
 
 export const DefaultPage: React.FC<DefaultPageProps> = ({
   titleBar,

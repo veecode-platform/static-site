@@ -11,8 +11,7 @@ import {
 import { FaXTwitter } from "react-icons/fa6";
 import { gtagEvents } from "@/utils/helpers/gtag";
 import { useTranslations } from "next-intl";
-import { ExternalLink, NavigationLink } from "../patterns";
-import { Container } from "../container";
+import { ExternalLink, NavigationLink, Container } from "@/components";
 
 const Logo = "/assets/logo/logo.png";
 

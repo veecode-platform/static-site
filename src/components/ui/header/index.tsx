@@ -4,12 +4,15 @@ import React from "react";
 import classNames from "classnames";
 import style from "./HeaderStyles.module.scss";
 import { HeaderProps } from "./types";
-import { Button } from "../button";
 import { useTranslations } from "next-intl";
-import { ExternalLink, NavigationLink } from "../patterns";
-import { Container } from "../container";
 import { FaBars } from "react-icons/fa";
-import { SwitchLanguage } from "../switchLanguage";
+import {
+  SwitchLanguage,
+  Container,
+  ExternalLink,
+  NavigationLink,
+  Button,
+} from "@/components";
 
 const Logo = "../../assets/logo/logo.png";
 const LogoMobile = "../../assets/logo/logo-mobile.png";

@@ -1,14 +1,14 @@
 "use client";
 
 /* eslint-disable @next/next/no-img-element */
-import { Button } from "..";
+import { Button } from "../..";
 import style from "./FormElementStyles.module.scss";
 import { Formik, Form } from "formik";
 import { object, string } from "yup";
 import TagManager from "react-gtm-module";
 import { useTranslations } from "next-intl";
 import { UseContactData } from "@/hooks/useContactData";
-import { Checkbox, Input, TextArea } from "../patterns/input";
+import { Checkbox, Input, TextArea } from "../../patterns/input";
 import { FormElementProps } from "./types";
 import { useRouter } from "@/i18n/routing";
 

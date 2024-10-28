@@ -1,2 +1,2 @@
 export { ExternalLink } from "./ExternalLink";
-export { NavigationLink } from "./NavigationLink";
+export { NavigationLink } from "./ui/NavigationLink";

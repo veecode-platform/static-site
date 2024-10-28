@@ -1,4 +1,4 @@
-@import"../../abstract/abstract";
+@import"../../../abstract/abstract";
 
 .formWrapper {
     @include screenSize(100%, auto);
@@ -11,16 +11,17 @@
     //     width: 85vw;
     // }
 
-    .form{
+    .form {
         @include displayFlex(center, center, column);
-        width: 100%;                  
+        width: 100%;
         gap: 1.2vh;
-        &__buttonWrapper{
-            @include screenSize(100%,auto);
+
+        &__buttonWrapper {
+            @include screenSize(100%, auto);
             @include displayFlex(center, center, row);
         }
 
-        &__checkboxWrapper{
+        &__checkboxWrapper {
             display: flex;
             flex-direction: row;
             justify-content: flex-start;
@@ -30,10 +31,11 @@
             margin: 1vh;
             flex-basis: 100%;
             flex-wrap: wrap;
-            h1{
+
+            h1 {
                 width: 100%;
             }
         }
     }
 
-      }
+}

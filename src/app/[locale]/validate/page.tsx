@@ -2,7 +2,7 @@ import { Breadcrumb, DefaultPage } from "@/components";
 import { routing } from "@/i18n/routing";
 import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
 import style from "./ValidateStyles.module.scss";
-import { ValidateContent } from "./client/validateContent";
+import { ValidateContent } from "./ui/validateContent";
 
 type Props = {
   params: { locale: string };

@@ -2,7 +2,7 @@ import { DefaultPage, FaqList } from "@/components";
 import { routing } from "@/i18n/routing";
 import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
 import style from "./ContactUsStyles.module.scss";
-import { FormElement } from "@/components/formElement/FormElement";
+import { FormElement } from "@/components/ui/formElement/FormElement";
 
 const flowImage = "/assets/icons/contact_form_img.png";
 
