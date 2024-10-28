@@ -76,6 +76,25 @@
   "manifest": {
     "name": "VeeCode Platform Website"
   },
+  "accessibility": {
+    "external-links": {
+      "discord": "Link to join the VeeCode community on Discord",
+      "docs": "Link to VeeCode documentation",
+      "instagram": "Link to VeeCode on Instagram",
+      "linkedin": "Link to VeeCode on LinkedIn",
+      "youtube": "Link to VeeCode on YouTube",
+      "x": "Link to VeeCode on X, formerly Twitter",
+      "blog": "Link to the VeeCode blog",
+      "vkdr": "See more about the VKDR tool",
+      "github": "Link to VeeCode on GitHub",
+      "demo": "Link to VeeCode DevPortal demo experience",
+      "aws": {
+        "ami": "Link to VeeCode Developer Portal AMI for API and DevOps management",
+        "lauch-workshop": "Link to VeeCode Launch Workshop for platform integration on AWS",
+        "fast-track": "Link to VeeCode Fast Track for custom Internal Developer Portal on AWS"
+      }
+    }
+  },
   "footer": {
     "about-title": "About",
     "about-option1": "How it Works",
@@ -83,7 +102,7 @@
     "about-option3": "Join our Comunity",
     "docs-title": "Docs",
     "docs-option1": "Safira CLI",
-    "docs-option2": "VKPR",
+    "docs-option2": "VKDR",
     "docs-option3": "Devportal",
     "more-title": "More",
     "more-option1": "Blog",

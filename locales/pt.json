@@ -76,6 +76,25 @@
   "manifest": {
     "name": "VeeCode Platform Website"
   },
+  "accessibility": {
+    "external-links": {
+      "discord": "Link para participar da comunidade VeeCode no Discord",
+      "docs": "Link para a documentação da VeeCode",
+      "instagram": "Link para a VeeCode no Instagram",
+      "linkedin": "Link para a VeeCode no LinkedIn",
+      "youtube": "Link para a VeeCode no YouTube",
+      "x": "Link para a VeeCode no X, anteriormente Twitter",
+      "blog": "Link para o blog da VeeCode",
+      "vkdr": "Veja mais sobre a ferramenta VKDR",
+      "github": "Link para a VeeCode no GitHub",
+      "demo": "Link para a experiência de demo do DevPortal da VeeCode",
+      "aws": {
+        "ami": "Link para a AMI do VeeCode Developer Portal para gestão de APIs e DevOps",
+        "lauch-workshop": "Link para o VeeCode Launch Workshop para integração de plataforma na AWS",
+        "fast-track": "Link para o VeeCode Fast Track para portal interno de desenvolvedores personalizado na AWS"
+      }
+    }
+  },
   "footer": {
     "about-title": "Sobre",
     "about-option1": "Como Funciona",
