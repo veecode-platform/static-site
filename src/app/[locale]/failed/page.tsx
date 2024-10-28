@@ -42,7 +42,7 @@ export default async function FailedPage({ params: { locale } }: Props) {
           })}
         </div>
         <div className={style.content__buttonWrapper}>
-          <NavigationLink /* href="/checkout" */ href="/">
+          <NavigationLink href="/validate?plan=standard">
             <Button>{t("buttonLabelError")}</Button>
           </NavigationLink>
         </div>

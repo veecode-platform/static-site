@@ -54,12 +54,13 @@ export const FormElement: React.FC<FormElementProps> = ({
         }}
         validationSchema={formSchema}
         onSubmit={async (values) => {
-          const response = await UseContactData(values);
-          TagManager.initialize(tagManagerArgs);
-          if (response.ResponseMetadata.HTTPStatusCode !== 200) {
+          try {
+            const response = await UseContactData(values);
+            TagManager.initialize(tagManagerArgs);
+            router.push("/contact-success");
+          } catch (error) {
             router.push("/contact-failed");
           }
-          router.push("/contact-success");
         }}
       >
         {({ errors, touched, handleSubmit, isSubmitting }) => (

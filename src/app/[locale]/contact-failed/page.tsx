@@ -44,8 +44,8 @@ export default async function ContactSuccessPage({
           })}
         </div>
         <div className={style.content__buttonWrapper}>
-          <NavigationLink href="/">
-            <Button>{t("buttonLabelSuccess")}</Button>
+          <NavigationLink href="/contact-us">
+            <Button>{t("buttonLabelError")}</Button>
           </NavigationLink>
         </div>
       </article>
