@@ -81,7 +81,9 @@ jobs:
           yq e ".spec.template.spec.containers[0].image = \"veecode/landing-page:homolog\"" -i ./k8s/deployment.yaml
           yq e '.spec.template.spec.containers[0].imagePullPolicy="Always"' -i ./k8s/deployment.yaml
           yq e '.spec.rules[0].host = "landing-page.apr.vee.codes"' -i ./k8s/ingress.yaml
-
+          yq e '.spec.tls[0].hosts+="landing-page.apr.vee.codes",.spec.tls[0].secretName="landing-page-secret"' -i ./k8s/ingress.yaml
+          yq e '.metadata.annotations."kubernetes.io/tls-acme"="true"' -i ./k8s/ingress.yaml
+    
           kubectl create secret generic landing-page-secret --from-env-file=.env -n ${{ env.NAMESPACE }} --dry-run=client -o yaml | kubectl apply -f -
           kubectl apply -f ./k8s/ -n ${{ env.NAMESPACE }}
           kubectl rollout restart deployment/landing-page -n ${{ env.NAMESPACE }}
