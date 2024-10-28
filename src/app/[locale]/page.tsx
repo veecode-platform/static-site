@@ -16,6 +16,7 @@ export default async function Homepage({ params: { locale } }: Props) {
   unstable_setRequestLocale(locale);
 
   const t = await getTranslations({ locale, namespace: "home" });
+  const a = await getTranslations({ locale, namespace: "accessibility" });
 
   const tools = [
     {
@@ -96,6 +97,7 @@ export default async function Homepage({ params: { locale } }: Props) {
         description={t.rich("description-section1", {
           strong: (chunks: any) => <strong>{chunks}</strong>,
         })}
+        linkLabel={a("external-links.vkdr")}
         buttonLabel={t("buttonLabel-section1")}
       />
       <OptimizeYourBusiness

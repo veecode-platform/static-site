@@ -32,6 +32,7 @@ const AwsCustomerComponent: React.FC<cardAwsContentProps> = ({
             bodyText={card.desc}
             footerText={card.info}
             link={card.link}
+            linkLabel={card.linkLabel}
             buttonLabel1={card.buttonLabel1}
             buttonLabel2={card.buttonLabel2}
           />

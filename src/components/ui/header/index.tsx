@@ -26,6 +26,7 @@ export const Header: React.FC<HeaderProps> = ({
   const [open, setOpen] = React.useState(false);
 
   const t = useTranslations("header");
+  const a = useTranslations("accessibility");
 
   return (
     <>
@@ -56,13 +57,19 @@ export const Header: React.FC<HeaderProps> = ({
               {showOptions && (
                 <>
                   <div className={style.nav__options}>
-                    <ExternalLink href="https://docs.platform.vee.codes/">
+                    <ExternalLink
+                      description={a("external-links.docs")}
+                      href="https://docs.platform.vee.codes/"
+                    >
                       <h2>{t("docs")} </h2>
                     </ExternalLink>
                   </div>
 
                   <div className={style.nav__options}>
-                    <ExternalLink href="https://blog.platform.vee.codes/">
+                    <ExternalLink
+                      description={a("external-links.blog")}
+                      href="https://blog.platform.vee.codes/"
+                    >
                       <h2>{t("blog")}</h2>
                     </ExternalLink>
                   </div>
@@ -88,7 +95,10 @@ export const Header: React.FC<HeaderProps> = ({
 
               {showButton && (
                 <div className={style.nav__options}>
-                  <ExternalLink href="https://devportal.demo.vee.codes/">
+                  <ExternalLink
+                    description={a("external-links.demo")}
+                    href="https://devportal.demo.vee.codes/"
+                  >
                     <Button arial-label={t("demo")} headerButton>
                       {t("demo")}
                     </Button>
@@ -121,12 +131,18 @@ export const Header: React.FC<HeaderProps> = ({
           <NavigationLink href="/">Home</NavigationLink>
         </li>
         <li className={style.menuMobile__item}>
-          <ExternalLink href="https://docs.platform.vee.codes/">
+          <ExternalLink
+            description={a("external-links.docs")}
+            href="https://docs.platform.vee.codes/"
+          >
             {t("docs")}
           </ExternalLink>
         </li>
         <li className={style.menuMobile__item}>
-          <ExternalLink href="https://blog.platform.vee.codes/">
+          <ExternalLink
+            description={a("external-links.blog")}
+            href="https://blog.platform.vee.codes/"
+          >
             {t("blog")}
           </ExternalLink>
         </li>
@@ -137,7 +153,10 @@ export const Header: React.FC<HeaderProps> = ({
           <NavigationLink href="/pricing">{t("pricing")}</NavigationLink>
         </li>
         <li className={style.menuMobile__item}>
-          <ExternalLink href="https://devportal.demo.vee.codes/">
+          <ExternalLink
+            description={a("external-links.demo")}
+            href="https://devportal.demo.vee.codes/"
+          >
             {t("demo")}
           </ExternalLink>
         </li>

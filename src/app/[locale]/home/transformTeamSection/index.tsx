@@ -7,6 +7,7 @@ const ComputerImg = "/assets/home/notebook2.png";
 export const TransformTeamSection: React.FC<TransformTeamSectionProps> = ({
   title,
   description,
+  linkLabel,
   buttonLabel,
 }) => {
   return (
@@ -21,7 +22,10 @@ export const TransformTeamSection: React.FC<TransformTeamSectionProps> = ({
               <p>{description}</p>
             </div>
             <div className={style.textContent__buttonGroup}>
-              <ExternalLink href="https://docs.platform.vee.codes/devportal/installation-guide/VKDR/">
+              <ExternalLink
+                description={linkLabel}
+                href="https://docs.platform.vee.codes/devportal/installation-guide/VKDR/"
+              >
                 <Button arial-label={buttonLabel}>{buttonLabel}</Button>
               </ExternalLink>
             </div>

@@ -1,11 +1,12 @@
 import style from "./ActionBarStyles.module.scss";
 import { ActionBarProps } from "./types";
 import { Button } from "../button";
-import { ExternalLink, NavigationLink } from "../patterns";
+import { ExternalLink, NavigationLink } from "../ui/links";
 
 export const ActionBar: React.FC<ActionBarProps> = ({
   title,
   variant,
+  linkLabel,
   buttonLabel,
 }) => {
   return (
@@ -20,7 +21,10 @@ export const ActionBar: React.FC<ActionBarProps> = ({
           </NavigationLink>
         )}
         {variant === "docs" && (
-          <ExternalLink href="https://docs.platform.vee.codes/">
+          <ExternalLink
+            description={linkLabel ?? ""}
+            href="https://docs.platform.vee.codes/"
+          >
             <Button arial-label={buttonLabel}>{buttonLabel}</Button>
           </ExternalLink>
         )}

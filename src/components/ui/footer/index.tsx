@@ -12,6 +12,7 @@ const Logo = "/assets/logo/logo.png";
 
 export const Footer = () => {
   const t = useTranslations("footer");
+  const a = useTranslations("accessibility");
 
   return (
     <footer className={style.footer}>
@@ -26,36 +27,44 @@ export const Footer = () => {
                   <FaFacebookSquare/>
 
                 </Link>
-              </li>
+              </li>*/}
               <li>
-                <Link href="https://www.instagram.com/veecodeplatform/" passHref>
-
-                    <FaInstagram />
-
-                </Link>
-              </li> */}
-              <li>
-                <ExternalLink href="https://www.instagram.com/veecodeplatform/">
+                <ExternalLink
+                  description={a("external-links.instagram")}
+                  href="https://www.instagram.com/veecodeplatform/"
+                >
                   <FaInstagram />
                 </ExternalLink>
               </li>
               <li>
-                <ExternalLink href="https://www.linkedin.com/showcase/veecode-platform/">
+                <ExternalLink
+                  description={a("external-links.linkedin")}
+                  href="https://www.linkedin.com/showcase/veecode-platform/"
+                >
                   <FaLinkedin />
                 </ExternalLink>
               </li>
               <li>
-                <ExternalLink href="https://twitter.com/veecodeplatform">
+                <ExternalLink
+                  description={a("external-links.x")}
+                  href="https://twitter.com/veecodeplatform"
+                >
                   <FaXTwitter />
                 </ExternalLink>
               </li>
               <li>
-                <ExternalLink href="https://discord.gg/pREwxeVzAD">
+                <ExternalLink
+                  description={a("external-links.discord")}
+                  href="https://discord.gg/pREwxeVzAD"
+                >
                   <FaDiscord />
                 </ExternalLink>
               </li>
               <li>
-                <ExternalLink href="https://www.youtube.com/@veecodeplatform-br">
+                <ExternalLink
+                  description={a("external-links.youtube")}
+                  href="https://www.youtube.com/@veecodeplatform-br"
+                >
                   <FaYoutube />
                 </ExternalLink>
               </li>
@@ -74,7 +83,10 @@ export const Footer = () => {
                   <li>{t("about-option2")}</li>
                 </NavigationLink>
 
-                <ExternalLink href="https://github.com/vfipaas/safira-support/discussions">
+                <ExternalLink
+                  description={a("external-links.github")}
+                  href="https://github.com/vfipaas/safira-support/discussions"
+                >
                   <li onClick={() => gtagEvents("joinUs")}>
                     {t("about-option3")}
                   </li>
@@ -84,17 +96,23 @@ export const Footer = () => {
                 <li>
                   <span>{t("docs-title")}</span>
                 </li>
-                <ExternalLink href="https://docs.platform.vee.codes/safira-cli/intro">
+                {/* <ExternalLink href="https://docs.platform.vee.codes/safira-cli/intro">
                   <li onClick={() => gtagEvents("safiraDocs")}>
                     {t("docs-option1")}
                   </li>
-                </ExternalLink>
-                <ExternalLink href="https://docs.platform.vee.codes/vkpr/intro">
-                  <li onClick={() => gtagEvents("vkprDocs")}>
+                </ExternalLink> */}
+                <ExternalLink
+                  description={a("external-links.vkdr")}
+                  href="https://docs.platform.vee.codes/vkdr/intro/"
+                >
+                  <li onClick={() => gtagEvents("vkdrDocs")}>
                     {t("docs-option2")}
                   </li>
                 </ExternalLink>
-                <ExternalLink href="https://docs.platform.vee.codes/devportal/intro/">
+                <ExternalLink
+                  description={a("external-links.docs")}
+                  href="https://docs.platform.vee.codes/devportal/intro/"
+                >
                   <li onClick={() => gtagEvents("devportal")}>
                     {t("docs-option3")}
                   </li>
@@ -104,7 +122,10 @@ export const Footer = () => {
                 <li>
                   <span>{t("more-title")}</span>
                 </li>
-                <ExternalLink href="https://blog.platform.vee.codes/">
+                <ExternalLink
+                  description={a("external-links.blog")}
+                  href="https://blog.platform.vee.codes/"
+                >
                   <li>{t("more-option1")}</li>
                 </ExternalLink>
                 <NavigationLink href="/terms-of-service">

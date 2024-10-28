@@ -28,6 +28,7 @@ export default async function FreePlanPage({ params: { locale } }: Props) {
   unstable_setRequestLocale(locale);
 
   const t = await getTranslations({ locale, namespace: "freePlan" });
+  const a = await getTranslations({ locale, namespace: "accessibility" });
 
   return (
     <DefaultPage noFooter showButton={false}>
@@ -35,6 +36,7 @@ export default async function FreePlanPage({ params: { locale } }: Props) {
         title={t("action.docs.title")}
         buttonLabel={t("action.docs.buttonLabel")}
         variant="docs"
+        linkLabel={a("external-links.docs")}
       />
 
       {/* <article className={style.container}> */}

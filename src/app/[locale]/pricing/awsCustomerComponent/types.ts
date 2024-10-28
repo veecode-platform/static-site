@@ -11,6 +11,7 @@ export interface IAwsCard {
   desc: string;
   info: string;
   link: string;
+  linkLabel: string;
   buttonLabel1: string;
   buttonLabel2: string;
 }

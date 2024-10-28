@@ -45,6 +45,7 @@ export default async function PricingPage({ params: { locale } }: Props) {
   unstable_setRequestLocale(locale);
 
   const t = await getTranslations({ locale, namespace: "pricing" });
+  const a = await getTranslations({ locale, namespace: "accessibility" });
 
   const guaranteesCards = [
     {
@@ -75,6 +76,7 @@ export default async function PricingPage({ params: { locale } }: Props) {
       desc: t("awsCostumer.cards.card-01.description"),
       info: t("awsCostumer.cards.card-01.footer"),
       link: "https://aws.amazon.com/marketplace/pp/prodview-aybwnwq4fx2ts?sr=0-1&ref_=beagle&applicationId=AWSMPContessa",
+      linkLabel: a("external-links.aws.ami"),
       buttonLabel1: t("awsCostumer.cards.card-01.buttonLabel1"),
       buttonLabel2: t("awsCostumer.cards.card-01.buttonLabel2"),
     },
@@ -85,6 +87,7 @@ export default async function PricingPage({ params: { locale } }: Props) {
       desc: t("awsCostumer.cards.card-02.description"),
       info: t("awsCostumer.cards.card-02.footer"),
       link: "https://aws.amazon.com/marketplace/pp/prodview-7pqhop2z4kkx2?sr=0-4&ref_=beagle&applicationId=AWSMPContessa",
+      linkLabel: a("external-links.aws.lauch-workshop"),
       buttonLabel1: t("awsCostumer.cards.card-02.buttonLabel1"),
       buttonLabel2: t("awsCostumer.cards.card-02.buttonLabel2"),
     },
@@ -95,6 +98,7 @@ export default async function PricingPage({ params: { locale } }: Props) {
       desc: t("awsCostumer.cards.card-03.description"),
       info: t("awsCostumer.cards.card-03.footer"),
       link: "https://aws.amazon.com/marketplace/pp/prodview-bckwzbve7ftgw?sr=0-3&ref_=beagle&applicationId=AWSMPContessa",
+      linkLabel: a("external-links.aws.fast-track"),
       buttonLabel1: t("awsCostumer.cards.card-03.buttonLabel1"),
       buttonLabel2: t("awsCostumer.cards.card-03.buttonLabel2"),
     },
@@ -130,7 +134,10 @@ export default async function PricingPage({ params: { locale } }: Props) {
             <span>
               <FaCheck />
             </span>
-            <ExternalLink href="https://discord.gg/arCYZK3hM6">
+            <ExternalLink
+              description={a("external-links.discord")}
+              href="https://discord.gg/arCYZK3hM6"
+            >
               <span>{t("comparePlans.plans.free.benefits1")}</span>
             </ExternalLink>
           </li>
