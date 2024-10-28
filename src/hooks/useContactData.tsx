@@ -18,11 +18,10 @@ export const UseContactData = async (values: any) => {
       "contact-type": values.type ?? "TRIAL",
     };
 
-    const { data } = await api.post("/contacts", model);
+    const { data } = await api.post("/contactsxx", model);
 
     return data;
-  } catch (error) {
-    console.error("ERROR IN CONTACT US >>", error);
-    return error;
+  } catch (error: any) {
+    throw new Error(`[Error in Contact Us]: ${error}`);
   }
 };
