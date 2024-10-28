@@ -121,7 +121,6 @@ export const Header: React.FC<HeaderProps> = ({
       </header>
 
       <ul
-        role="nav"
         className={classNames({
           [style["menuMobile"]]: open,
           [style["menuMobileHide"]]: !open,
