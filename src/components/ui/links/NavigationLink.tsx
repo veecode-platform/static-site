@@ -13,6 +13,11 @@ export function NavigationLink<Pathname extends Pathnames>({
   const isActive = pathname === href;
 
   return (
-    <Link aria-current={isActive ? "page" : undefined} href={href} {...rest} />
+    <Link
+      aria-current={isActive ? "page" : undefined}
+      href={href}
+      aria-label={pathname}
+      {...rest}
+    />
   );
 }
