@@ -2,7 +2,7 @@ import { routing } from "@/i18n/routing";
 import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
 import style from "./FreePlanStyles.module.scss";
 import { ActionBar, DefaultPage } from "@/components";
-import { FreePlanContent } from "./client/freePlanContent";
+import { FreePlanContent } from "./ui/freePlanContent";
 
 type Props = {
   params: { locale: string };
