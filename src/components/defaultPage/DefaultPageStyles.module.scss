@@ -20,7 +20,7 @@
       }
 
       &__content {
-        @include screenSize(80%, auto);
+        @include containerLayout();
         max-width: $maxWidthDefault;
 
         &-title {

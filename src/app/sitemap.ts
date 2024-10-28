@@ -12,6 +12,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     getEntry("/free-plan?plan=free"),
     getEntry("/contact-us"),
     getEntry("/contact-success"),
+    getEntry("/contact-failed"),
     getEntry("/how-it-works"),
     getEntry("/support"),
     getEntry("/terms-of-service"),
@@ -20,6 +21,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     getEntry("/success"),
     getEntry("/failed"),
     getEntry("/validate"),
+    getEntry("/validate?plan=standard"),
     getEntry("/governance"),
   ];
 }

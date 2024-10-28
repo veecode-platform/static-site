@@ -33,6 +33,10 @@ export const routing = defineRouting({
       pt: "/contato-recebido",
       en: "/contact-success",
     },
+    "/contact-failed": {
+      pt: "/contato-falhado",
+      en: "/contact-failed",
+    },
     "/how-it-works": {
       pt: "/como-funciona",
       en: "/how-it-works",
@@ -62,11 +66,11 @@ export const routing = defineRouting({
       en: "/failed",
     },
     "/validate": {
-      pt: "/validação",
+      pt: "/validacao",
       en: "/validate",
     },
     "/validate?plan=standard": {
-      pt: "/validacao?plano=standard",
+      pt: "/validacao?plan=standard",
       en: "/validate?plan=standard",
     },
     "/governance": {

@@ -2,7 +2,7 @@ import { routing } from "@/i18n/routing";
 import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
 import style from "./FreePlanStyles.module.scss";
 import { ActionBar, DefaultPage } from "@/components";
-import { FreePlanContent } from "./ui/freePlanContent";
+import { FreePlanFormContent } from "./ui/freePlanFormContent";
 
 type Props = {
   params: { locale: string };
@@ -55,7 +55,7 @@ export default async function FreePlanPage({ params: { locale } }: Props) {
           </div>
         </div>
         <div className={style.content__options}>
-          <FreePlanContent />
+          <FreePlanFormContent />
         </div>
       </article>
       {/* </article> */}

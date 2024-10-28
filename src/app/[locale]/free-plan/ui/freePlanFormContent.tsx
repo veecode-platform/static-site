@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import style from "./FreePlanContentStyles.module.scss";
+import style from "./FreePlanFormContentStyles.module.scss";
 import { Formik, Form } from "formik";
 import { object, string, boolean } from "yup";
 import CloseIcon from "@mui/icons-material/Close";
@@ -22,7 +22,7 @@ import {
 
 const SuccessAnimation = "/assets/animations/success.json";
 
-export const FreePlanContent = () => {
+export const FreePlanFormContent = () => {
   const [open, setOpen] = React.useState<boolean>(false);
   const t = useTranslations("freePlan");
   const router = useRouter();

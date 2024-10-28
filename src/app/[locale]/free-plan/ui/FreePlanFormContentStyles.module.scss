@@ -1,12 +1,12 @@
 @import "../../../../abstract/abstract";
 
 
-.formWraper {
+.formWrapper {
     @include displayFlex(center, center, column);
     @include glassEffect();
+    background-color: $color12;
     width: 100%;
     padding: 1vw 1vw;
-    background-color: $color12;
     border-radius: 15px;
     padding: 1rem;
 

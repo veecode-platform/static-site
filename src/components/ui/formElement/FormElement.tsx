@@ -57,10 +57,9 @@ export const FormElement: React.FC<FormElementProps> = ({
           const response = await UseContactData(values);
           TagManager.initialize(tagManagerArgs);
           if (response.ResponseMetadata.HTTPStatusCode !== 200) {
-            return console.log("ERROR >>>>", response);
+            router.push("/contact-failed");
           }
-          console.log("Success >>> ", response);
-          return; /* router.push("/contact-success"); */
+          router.push("/contact-success");
         }}
       >
         {({ errors, touched, handleSubmit, isSubmitting }) => (
