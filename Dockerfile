@@ -34,13 +34,16 @@ RUN yarn build
 FROM node:20-alpine AS runner
 WORKDIR /app
 
-# Update system and clean up package manager cache to reduce image size
-RUN apk update && apk upgrade && rm -rf /var/cache/apk/*
+# Update system, clean up package manager cache, and create necessary directories in one layer
+RUN apk update && apk upgrade && rm -rf /var/cache/apk/* && mkdir -p .next/static public
 
 # Copy the built application from the builder stage
 COPY --from=builder --chown=node:node /app/.next/standalone/ .
 COPY --from=builder --chown=node:node /app/.next/static/ ./.next/static
 COPY --from=builder --chown=node:node /app/public ./public
+COPY --from=builder --chown=node:node /app/package.json .
+COPY --from=builder --chown=node:node /app/yarn.lock .
+COPY --from=builder --chown=node:node /app/next.config.mjs ./
 
 # Use a non-root user for security
 USER node
