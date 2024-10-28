@@ -18,7 +18,7 @@ export const UseContactData = async (values: any) => {
       "contact-type": values.type ?? "TRIAL",
     };
 
-    const { data } = await api.post("/contactsxx", model);
+    const { data } = await api.post("/contacts", model);
 
     return data;
   } catch (error: any) {
