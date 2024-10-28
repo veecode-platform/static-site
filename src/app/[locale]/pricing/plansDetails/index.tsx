@@ -26,7 +26,7 @@ export const PlansDetails: React.FC<PlansDetailsProps> = ({
         <NavigationLink
           href={freePlan ? "/free-plan?plan=free" : "/validate?plan=standard"}
         >
-          <Button arial-label={buttonLabel} alt>
+          <Button aria-label={buttonLabel} alt>
             {buttonLabel}
           </Button>
         </NavigationLink>

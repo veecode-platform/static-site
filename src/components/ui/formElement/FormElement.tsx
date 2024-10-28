@@ -103,7 +103,7 @@ export const FormElement: React.FC<FormElementProps> = ({
 
             <div className={style.form__buttonWrapper}>
               <Button
-                arial-label={t("buttonLabel")}
+                aria-label={t("buttonLabel")}
                 type="submit"
                 loading={isSubmitting}
                 alt

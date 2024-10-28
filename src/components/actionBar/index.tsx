@@ -17,7 +17,7 @@ export const ActionBar: React.FC<ActionBarProps> = ({
       <div className={style.content__button}>
         {variant === "contact" && (
           <NavigationLink href="/contact-us">
-            <Button arial-label={buttonLabel}>{buttonLabel}</Button>
+            <Button aria-label={buttonLabel}>{buttonLabel}</Button>
           </NavigationLink>
         )}
         {variant === "docs" && (
@@ -25,7 +25,7 @@ export const ActionBar: React.FC<ActionBarProps> = ({
             description={linkLabel ?? ""}
             href="https://docs.platform.vee.codes/"
           >
-            <Button arial-label={buttonLabel}>{buttonLabel}</Button>
+            <Button aria-label={buttonLabel}>{buttonLabel}</Button>
           </ExternalLink>
         )}
       </div>

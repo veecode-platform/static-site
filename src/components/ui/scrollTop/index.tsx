@@ -29,7 +29,7 @@ export const ScrollTop = () => {
         onClick={scrollToTop}
         style={{ display: visible ? "inline" : "none" }}
         className={style.top}
-        arial-label="scroll-up"
+        aria-label="scroll-up"
       >
         <FaAngleUp />
       </button>

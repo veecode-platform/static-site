@@ -45,7 +45,7 @@ export default async function ContactSuccessPage({
         </div>
         <div className={style.content__buttonWrapper}>
           <NavigationLink href="/">
-            <Button arial-label={t("buttonLabelSuccess")}>
+            <Button aria-label={t("buttonLabelSuccess")}>
               {t("buttonLabelSuccess")}
             </Button>
           </NavigationLink>

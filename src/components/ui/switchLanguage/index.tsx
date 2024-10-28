@@ -23,7 +23,7 @@ export const SwitchLanguage = () => {
   return (
     <div className={style.root}>
       <button
-        arial-label="menu-language"
+        aria-label="menu-language"
         className={style.button}
         onClick={handleToggleDropdown}
       >

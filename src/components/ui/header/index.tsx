@@ -99,7 +99,7 @@ export const Header: React.FC<HeaderProps> = ({
                     description={a("external-links.demo")}
                     href="https://devportal.demo.vee.codes/"
                   >
-                    <Button arial-label={t("demo")} headerButton>
+                    <Button aria-label={t("demo")} headerButton>
                       {t("demo")}
                     </Button>
                   </ExternalLink>
@@ -110,7 +110,7 @@ export const Header: React.FC<HeaderProps> = ({
             {!notTranslate && <SwitchLanguage />}
 
             <button
-              arial-label="menu"
+              aria-label="menu"
               className={style.mobileButton}
               onClick={() => setOpen(!open)}
             >

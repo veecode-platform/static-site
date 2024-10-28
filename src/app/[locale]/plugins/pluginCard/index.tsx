@@ -33,7 +33,7 @@ export const PluginCard: React.FC<PluginsCardProps> = ({
       </div>
       <div className={style.card__button}>
         <NavigationLink href={`/plugin/${path}` as any}>
-          <Button arial-label={buttonLabel}>{buttonLabel}</Button>
+          <Button aria-label={buttonLabel}>{buttonLabel}</Button>
         </NavigationLink>
       </div>
     </div>
