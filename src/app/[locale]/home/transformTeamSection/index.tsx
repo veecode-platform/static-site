@@ -2,7 +2,7 @@ import style from "./TransformTeamSection.module.scss";
 import { Button, Container, ExternalLink } from "@/components";
 import type { TransformTeamSectionProps } from "./type";
 
-const ComputerImg = "/assets/home/notebook.png";
+const ComputerImg = "/assets/home/notebook2.png";
 
 export const TransformTeamSection: React.FC<TransformTeamSectionProps> = ({
   title,
