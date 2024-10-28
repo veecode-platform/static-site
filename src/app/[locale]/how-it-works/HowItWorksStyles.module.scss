@@ -1,0 +1,13 @@
+@import"../../../abstract/abstract";
+
+.root {
+    @include screenSize(100%, auto);
+    @include displayFlex(center, center, column);
+    gap: 1rem;
+    margin-bottom: 2rem;
+
+    //lg
+    @include for-lg-only {
+        gap: 6rem;
+    }
+}

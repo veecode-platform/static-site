@@ -1,0 +1,33 @@
+@import "../../../abstract/abstract";
+
+.back {
+    @include screenSize(100%, auto);
+    @include displayFlex(center, center, row);
+    font-size: 3rem;
+    color: $color7;
+    padding-bottom: 2em;
+    cursor: pointer;
+    transition: all .5s linear;
+
+    &:hover {
+        transition: all .5s linear;
+        color: $color1;
+        -webkit-transform: scale(1.05);
+        transform: scale(1.05);
+    }
+
+    a {
+        &:link {
+            color: $color1;
+        }
+
+        &:active {
+            color: $color1;
+        }
+
+        &:visited {
+            color: $color1;
+        }
+    }
+
+}

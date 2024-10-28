@@ -5,12 +5,12 @@ import { Button } from "..";
 import style from "./FormElementStyles.module.scss";
 import { Formik, Form } from "formik";
 import { object, string } from "yup";
-import { useRouter } from "next/navigation";
 import TagManager from "react-gtm-module";
 import { useTranslations } from "next-intl";
 import { UseContactData } from "@/hooks/useContactData";
 import { Checkbox, Input, TextArea } from "../patterns/input";
 import { FormElementProps } from "./types";
+import { useRouter } from "@/i18n/routing";
 
 export const FormElement: React.FC<FormElementProps> = ({
   company,
@@ -27,10 +27,6 @@ export const FormElement: React.FC<FormElementProps> = ({
   });
 
   const router = useRouter();
-
-  const handleFormRedirect = () => {
-    router.push("/contact-success");
-  };
 
   const tagManagerArgs = {
     gtmId: "GTM-56RG967",
@@ -58,9 +54,13 @@ export const FormElement: React.FC<FormElementProps> = ({
         }}
         validationSchema={formSchema}
         onSubmit={async (values) => {
-          await UseContactData(values);
+          const response = await UseContactData(values);
           TagManager.initialize(tagManagerArgs);
-          handleFormRedirect();
+          if (!response.ok) {
+            return console.log("ERROR >>>>", response);
+          }
+          console.log("Contact Success");
+          return; /* router.push("/contact-success"); */
         }}
       >
         {({ errors, touched, handleSubmit, isSubmitting }) => (

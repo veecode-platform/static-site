@@ -1,0 +1,230 @@
+@import "../../../../abstract/abstract";
+
+.root {
+    @include screenSize(100%, auto);
+    @include displayFlex(center, center, row);
+    @include backgroundImage("/assets/home/bg2.webp");
+    padding: 2rem 0;
+
+    // lg
+    @include for-lg-only {
+        padding: 3rem 0 5rem 0;
+    }
+
+
+    .content {
+        @include screenSize(100%, auto);
+        @include displayFlex(center, center, column-reverse);
+        padding: 2rem 0;
+        gap: .5rem;
+
+        //md
+        @include for-md-only {
+            padding: 4rem 0;
+        }
+
+        //lg
+        @include for-lg-only {
+            @include displayFlex(space-between, center, row-reverse);
+            gap: 1.8rem;
+        }
+
+        //xl
+        @include for-xl-only {
+            max-width: $maxWidthDefault;
+        }
+
+        &__text {
+            @include screenSize(100%, auto);
+            @include displayFlex(center, center, column);
+            padding: 0em;
+
+            //lg
+            @include for-lg-only {
+                @include screenSize(45%, auto);
+                @include displayFlex(center, flex-end, column);
+            }
+
+            // //viewport
+            // @include for-viewport-only {
+            //     @include screenSize(50%, 100%);
+            // }
+
+            // //tablet
+            // @include for-tablet-only {
+            //     @include screenSize(100%, auto);
+            //     @include displayFlex(center, center, column);
+            //     padding-top: 0;
+            // }
+
+            // //tablet(S)
+            // @include for-tabletS-only {
+            //     @include screenSize(80%, auto);
+            //     padding: 0em;
+            // }
+
+            // //mobile(S)
+            // @include for-phoneS-only {
+            //     @include screenSize(90%, auto);
+            // }
+
+            .title {
+                @include screenSize(100%, auto);
+                margin: auto;
+
+                // //tablet
+                // @include for-tablet-only {
+                //     @include screenSize(100%, auto);
+                //     padding: 3em 0;
+                // }
+
+                // //tablet(S)
+                // @include for-tabletS-only {
+                //     @include screenSize(100%, auto);
+                //     padding: 2em 0;
+                // }
+
+                h2 {
+                    @include titleMain(center);
+                    color: $color2;
+
+                    //lg
+                    @include for-lg-only {
+                        @include titleMain(end);
+                    }
+                }
+            }
+
+            .details {
+                @include screenSize(100%, auto);
+                @include displayFlex(center, center, column);
+                padding: 1em 0;
+
+                // lg
+                @include for-lg-only {
+                    @include screenSize(98%, auto);
+                    @include displayFlex(center, flex-start, column);
+                    padding-top: 3em;
+                }
+
+                // //tablet
+                // @include for-tablet-only {
+                //     @include screenSize(70%, auto);
+                //     @include displayFlex(center, center, column);
+                //     padding: 1em 0;
+                // }
+
+                // //tablet(S)
+                // @include for-tabletS-only {
+                //     @include screenSize(90%, auto);
+                // }
+
+                // //mobile(S)
+                // @include for-phoneS-only {
+                //     @include screenSize(100%, auto);
+                //     padding: .5em 0;
+                // }
+
+                &_text {
+                    @include screenSize(100%, auto);
+                    @include displayFlex(center, center, row);
+
+                    //lg
+                    @include for-lg-only {
+                        @include displayFlex(flex-start, center, row);
+                    }
+
+                    // //viewport
+                    // @include for-viewport-only {
+                    //     @include displayFlex(flex-end, center, row);
+                    // }
+
+                    // //tablet
+                    // @include for-tablet-only {
+                    //     @include displayFlex(center, center, row);
+                    // }
+
+                    p {
+                        @include text(center);
+                        color: $color2;
+
+                        // lg
+                        @include for-lg-only {
+                            @include text(end);
+                        }
+
+                        strong {
+                            color: $color1;
+                        }
+
+                        // //viewport
+                        // @include for-viewport-only {
+                        //     @include screenSize(90%, auto);
+                        // }
+
+                        // //tablet
+                        // @include for-tablet-only {
+                        //     width: 100%;
+                        //     // text-align: center;
+                        // }
+                    }
+                }
+            }
+        }
+
+        &__image {
+            @include screenSize(100%, auto);
+            @include displayFlex(center, center, row);
+            padding: 2em 0 1em 0;
+
+            // lg
+            @include for-lg-only {
+                @include screenSize(60%, 100%);
+                @include displayFlex(center, center, row);
+                padding: 1em 0 1em 0;
+            }
+
+            // //viewport
+            // @include for-viewport-only {
+            //     @include screenSize(50%, 100%);
+            // }
+
+            // //tablet
+            // @include for-tablet-only {
+            //     @include screenSize(90%, auto);
+            //     padding: 2em 0 1em 0;
+            // }
+
+            .image {
+                @include screenSize(90%, auto);
+                border-radius: 8px;
+                @include shadowSpecial();
+                max-width: 45rem;
+                object-fit: cover;
+                object-position: 0%;
+
+                // lg
+                @include for-lg-only {
+                    @include screenSize(100%, auto);
+                    min-height: 350px;
+                }
+
+                // //tablet
+                // @include for-tablet-only {
+                //     max-width: 45rem;
+                // }
+
+                // //tabletS
+                // @include for-tabletS-only {
+                //     max-width: auto;
+                //     min-height: auto;
+                // }
+
+                // //mobile(S)
+                // @include for-phoneS-only {
+                //     width: 90vw;
+                // }
+            }
+        }
+    }
+}

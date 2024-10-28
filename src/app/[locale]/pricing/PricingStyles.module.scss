@@ -1,0 +1,89 @@
+@import "../../../abstract/abstract";
+
+.supportTitle {
+    @include screenSize(100%, auto);
+    margin: 5rem 0;
+    color: $color1;
+
+    // md
+    @include for-md-only {
+        margin: 10rem 0 8rem 0;
+    }
+
+    h2 {
+        @include titleMain(center);
+        margin-bottom: 2vh;
+        color: $color1;
+
+        //lg
+        @include for-lg-only {
+            @include titleMain(left);
+        }
+
+    }
+
+    h4 {
+        display: none;
+
+        //sm
+        @include for-sm-only {
+            display: flex;
+            @include titleSm(center);
+            color: $color2;
+        }
+
+        //lg
+        @include for-lg-only {
+            @include titleSm(left);
+        }
+
+    }
+}
+
+.content {
+
+    @include screenSize(100%, auto);
+    @include displayFlex(center, center, column);
+    gap: 1.5em;
+    position: relative;
+
+    // lg
+    @include for-lg-only {
+        @include screenSize(100%, auto);
+        display: grid;
+        grid-template: 1fr / repeat(2, 1fr);
+        margin: 1.5em 0;
+        gap: .8em;
+        padding: 2em 0 2em 0;
+    }
+
+
+
+    span {
+        color: $color1;
+        text-decoration-line: underline;
+    }
+
+}
+
+.sublist {
+    @include resetList();
+    margin-top: .3em;
+
+    li {
+        font-size: 14px;
+        line-height: 1em;
+
+        span {
+            color: $color10;
+            font-size: .7vw;
+            margin: 0 1em;
+        }
+    }
+}
+
+.sectionBar {
+    @include screenSize(100%, auto);
+    @include displayFlex(center, center, column);
+
+}

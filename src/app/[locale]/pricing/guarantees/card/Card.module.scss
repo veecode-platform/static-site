@@ -1,0 +1,32 @@
+@import "../../../../../abstract/abstract";
+
+.card {
+  @include screenSize(auto, auto);
+  @include displayFlex(flex-start, center, column);
+  margin: 1em;
+
+  &__image {
+    @include screenSize(30vw, auto);
+    max-width: 160px;
+    opacity: 0.8;
+
+    //md
+    @include for-md-only {
+      width: 12vw
+    }
+
+    // lg
+    @include for-lg-only {
+      width: 10vw;
+    }
+  }
+
+  &__title {
+    @include titleSm(center);
+    margin: 1.5em auto;
+  }
+
+  &__desc {
+    @include text(center);
+  }
+}

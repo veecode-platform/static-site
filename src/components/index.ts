@@ -11,3 +11,4 @@ export { ScrollTop } from "./scrollTop";
 export * from "./patterns";
 export { Loading } from "./loading";
 export { SwitchLanguage } from "./switchLanguage";
+export { PageNotFound } from "./pageNotFound";

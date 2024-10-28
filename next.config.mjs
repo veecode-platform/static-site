@@ -6,6 +6,11 @@ const withNextIntl = createNextIntlPlugin();
 const nextConfig = {
   // dynamic
   output: "standalone",
+  logging: {
+    fetches: {
+      hmrRefreshes: true,
+    },
+  },
 };
 
 export default withNextIntl(nextConfig);
