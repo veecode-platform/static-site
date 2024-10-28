@@ -22,7 +22,7 @@ export const TransformTeamSection: React.FC<TransformTeamSectionProps> = ({
             </div>
             <div className={style.textContent__buttonGroup}>
               <ExternalLink href="https://docs.platform.vee.codes/devportal/installation-guide/VKDR/">
-                <Button>{buttonLabel}</Button>
+                <Button arial-label={buttonLabel}>{buttonLabel}</Button>
               </ExternalLink>
             </div>
           </div>

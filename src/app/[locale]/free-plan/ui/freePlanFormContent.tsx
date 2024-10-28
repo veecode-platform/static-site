@@ -125,7 +125,11 @@ export const FreePlanFormContent = () => {
               error={errors.terms && touched.terms && errors.terms}
             />
             <div className={style.form__buttonWrapper}>
-              <Button type="submit" loading={isSubmitting}>
+              <Button
+                arial-label={t("buttonLabel")}
+                type="submit"
+                loading={isSubmitting}
+              >
                 {t("buttonLabel")}
               </Button>
             </div>

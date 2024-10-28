@@ -32,10 +32,14 @@ const CardAwsContent: React.FC<CardAwsContentProps> = ({
         <footer className={style.footer}>
           <p>{footerText}</p>
           <ExternalLink href={link}>
-            <Button alt>{buttonLabel1}</Button>
+            <Button arial-label={buttonLabel1} alt>
+              {buttonLabel1}
+            </Button>
           </ExternalLink>
           <NavigationLink href="/contact-us">
-            <Button alt>{buttonLabel2}</Button>
+            <Button arial-label={buttonLabel2} alt>
+              {buttonLabel2}
+            </Button>
           </NavigationLink>
         </footer>
       </div>

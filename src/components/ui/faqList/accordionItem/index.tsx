@@ -22,7 +22,7 @@ export const AccordionItem: React.FC<AcordionItemProps> = ({
     >
       <span className={style.item__title}>
         <p>{title}</p>
-        <button onClick={() => onToggle(item.id)}>
+        <button arial-label="toggle-button" onClick={() => onToggle(item.id)}>
           {active ? <BsDash /> : <BsPlus />}
         </button>
       </span>

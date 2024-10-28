@@ -35,7 +35,9 @@ export const ToolsDetails: React.FC<toolsDetailsProps> = ({
               target="_blank"
               prefetch={false}
             >
-              <button className={style.button}>{buttonLabel}</button>
+              <button aria-label={buttonLabel} className={style.button}>
+                {buttonLabel}
+              </button>
             </Link>
           </div>
         </article>

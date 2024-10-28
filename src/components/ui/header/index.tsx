@@ -89,7 +89,9 @@ export const Header: React.FC<HeaderProps> = ({
               {showButton && (
                 <div className={style.nav__options}>
                   <ExternalLink href="https://devportal.demo.vee.codes/">
-                    <Button headerButton>{t("demo")}</Button>
+                    <Button arial-label={t("demo")} headerButton>
+                      {t("demo")}
+                    </Button>
                   </ExternalLink>
                 </div>
               )}
@@ -98,6 +100,7 @@ export const Header: React.FC<HeaderProps> = ({
             {!notTranslate && <SwitchLanguage />}
 
             <button
+              arial-label="menu"
               className={style.mobileButton}
               onClick={() => setOpen(!open)}
             >

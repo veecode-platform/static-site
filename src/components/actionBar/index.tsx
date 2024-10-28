@@ -16,12 +16,12 @@ export const ActionBar: React.FC<ActionBarProps> = ({
       <div className={style.content__button}>
         {variant === "contact" && (
           <NavigationLink href="/contact-us">
-            <Button>{buttonLabel}</Button>
+            <Button arial-label={buttonLabel}>{buttonLabel}</Button>
           </NavigationLink>
         )}
         {variant === "docs" && (
           <ExternalLink href="https://docs.platform.vee.codes/">
-            <Button>{buttonLabel}</Button>
+            <Button arial-label={buttonLabel}>{buttonLabel}</Button>
           </ExternalLink>
         )}
       </div>

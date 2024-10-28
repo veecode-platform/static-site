@@ -15,7 +15,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
         <div className={style.content__text}>
           {description}
           <NavigationLink href="/contact-us">
-            <Button>{buttonLabel}</Button>
+            <Button aria-label={buttonLabel}>{buttonLabel}</Button>
           </NavigationLink>
         </div>
       </article>

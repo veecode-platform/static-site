@@ -43,7 +43,9 @@ export default async function SuccessPage({ params: { locale } }: Props) {
         </div>
         <div className={style.content__buttonWrapper}>
           <NavigationLink href="/">
-            <Button>{t("buttonLabelSuccess")}</Button>
+            <Button arial-label={t("buttonLabelSuccess")}>
+              {t("buttonLabelSuccess")}
+            </Button>
           </NavigationLink>
         </div>
       </article>

@@ -22,7 +22,11 @@ export const SwitchLanguage = () => {
 
   return (
     <div className={style.root}>
-      <button className={style.button} onClick={handleToggleDropdown}>
+      <button
+        arial-label="menu-language"
+        className={style.button}
+        onClick={handleToggleDropdown}
+      >
         <IoLanguageOutline />
       </button>
 

@@ -20,7 +20,7 @@ export const SupportSection: React.FC<SupportSectionProps> = ({
               <h2>{title}</h2>
               <div className={style["content_text-buttonWrapper"]}>
                 <NavigationLink href="/pricing/#plans" prefetch={false}>
-                  <Button>{buttonLabel}</Button>
+                  <Button aria-label={buttonLabel}>{buttonLabel}</Button>
                 </NavigationLink>
               </div>
             </div>

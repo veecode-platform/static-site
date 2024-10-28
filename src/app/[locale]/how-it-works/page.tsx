@@ -98,7 +98,7 @@ export default async function HowItWorksPage({ params: { locale } }: Props) {
         </CardItem>
       </article>
       <NavigationLink href="/pricing">
-        <Button>{t("buttonLabel")}</Button>
+        <Button aria-label={t("buttonLabel")}>{t("buttonLabel")}</Button>
       </NavigationLink>
       <ScrollTop />
     </DefaultPage>
