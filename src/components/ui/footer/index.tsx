@@ -2,13 +2,8 @@
 
 /* eslint-disable @next/next/no-img-element */
 import style from "./FooterStyles.module.scss";
-import {
-  FaDiscord,
-  FaLinkedin,
-  /* FaTwitterSquare, */
-  FaYoutube,
-} from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
+import { FaDiscord, FaLinkedin, FaYoutube } from "react-icons/fa";
+import { FaInstagram, FaXTwitter } from "react-icons/fa6";
 import { gtagEvents } from "@/utils/helpers/gtag";
 import { useTranslations } from "next-intl";
 import { ExternalLink, NavigationLink, Container } from "@/components";
@@ -39,6 +34,11 @@ export const Footer = () => {
 
                 </Link>
               </li> */}
+              <li>
+                <ExternalLink href="https://www.instagram.com/veecodeplatform/">
+                  <FaInstagram />
+                </ExternalLink>
+              </li>
               <li>
                 <ExternalLink href="https://www.linkedin.com/showcase/veecode-platform/">
                   <FaLinkedin />
