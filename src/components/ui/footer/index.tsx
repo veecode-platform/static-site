@@ -76,21 +76,26 @@ export const Footer = () => {
                 <li>
                   <span>{t("about-title")}</span>
                 </li>
-                <NavigationLink href="/how-it-works">
-                  <li>{t("about-option1")}</li>
-                </NavigationLink>
-                <NavigationLink href="/support">
-                  <li>{t("about-option2")}</li>
-                </NavigationLink>
+                <li>
+                  <NavigationLink href="/how-it-works">
+                    {t("about-option1")}
+                  </NavigationLink>
+                </li>
 
-                <ExternalLink
-                  description={a("external-links.github")}
-                  href="https://github.com/vfipaas/safira-support/discussions"
-                >
-                  <li onClick={() => gtagEvents("joinUs")}>
+                <li>
+                  <NavigationLink href="/support">
+                    {t("about-option2")}
+                  </NavigationLink>
+                </li>
+
+                <li onClick={() => gtagEvents("joinUs")}>
+                  <ExternalLink
+                    description={a("external-links.github")}
+                    href="https://github.com/vfipaas/safira-support/discussions"
+                  >
                     {t("about-option3")}
-                  </li>
-                </ExternalLink>
+                  </ExternalLink>{" "}
+                </li>
               </ul>
               <ul>
                 <li>
@@ -101,48 +106,70 @@ export const Footer = () => {
                     {t("docs-option1")}
                   </li>
                 </ExternalLink> */}
-                <ExternalLink
-                  description={a("external-links.vkdr")}
-                  href="https://docs.platform.vee.codes/vkdr/intro/"
-                >
-                  <li onClick={() => gtagEvents("vkdrDocs")}>
+
+                <li onClick={() => gtagEvents("vkdrDocs")}>
+                  <ExternalLink
+                    description={a("external-links.vkdr")}
+                    href="https://docs.platform.vee.codes/vkdr/intro/"
+                  >
                     {t("docs-option2")}
-                  </li>
-                </ExternalLink>
-                <ExternalLink
-                  description={a("external-links.docs")}
-                  href="https://docs.platform.vee.codes/devportal/intro/"
-                >
-                  <li onClick={() => gtagEvents("devportal")}>
+                  </ExternalLink>
+                </li>
+
+                <li onClick={() => gtagEvents("devportal")}>
+                  <ExternalLink
+                    description={a("external-links.docs")}
+                    href="https://docs.platform.vee.codes/devportal/intro/"
+                  >
                     {t("docs-option3")}
-                  </li>
-                </ExternalLink>
+                  </ExternalLink>
+                </li>
               </ul>
               <ul>
                 <li>
                   <span>{t("more-title")}</span>
                 </li>
-                <ExternalLink
-                  description={a("external-links.blog")}
-                  href="https://blog.platform.vee.codes/"
-                >
-                  <li>{t("more-option1")}</li>
-                </ExternalLink>
-                <NavigationLink href="/terms-of-service">
-                  <li>{t("more-option2")}</li>
-                </NavigationLink>
-                <NavigationLink href="/privacy-policy">
-                  <li>{t("more-option3")}</li>
-                </NavigationLink>
-                <NavigationLink href="/contact-us">
-                  <li>{t("more-option4")}</li>
-                </NavigationLink>
-                <NavigationLink href="/faq">
-                  <li>{t("more-option5")}</li>
-                </NavigationLink>
-                <NavigationLink href="/plugins">
-                  <li>{t("more-option6")}</li>
-                </NavigationLink>
+
+                <li>
+                  <ExternalLink
+                    description={a("external-links.blog")}
+                    href="https://blog.platform.vee.codes/"
+                  >
+                    {t("more-option1")}
+                  </ExternalLink>
+                </li>
+
+                <li>
+                  <NavigationLink href="/terms-of-service">
+                    {t("more-option2")}{" "}
+                  </NavigationLink>
+                </li>
+
+                <li>
+                  <NavigationLink href="/privacy-policy">
+                    {t("more-option3")}
+                  </NavigationLink>
+                </li>
+
+                <li>
+                  <NavigationLink href="/contact-us">
+                    {t("more-option4")}
+                  </NavigationLink>
+                </li>
+
+                <li>
+                  {" "}
+                  <NavigationLink href="/faq">
+                    {t("more-option5")}
+                  </NavigationLink>
+                </li>
+
+                <li>
+                  {" "}
+                  <NavigationLink href="/plugins">
+                    {t("more-option6")}{" "}
+                  </NavigationLink>
+                </li>
               </ul>
             </div>
           </div>
