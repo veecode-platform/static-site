@@ -2,7 +2,6 @@
 # robots.txt
 #
 
-# Block all 
 User-agent: *
 Disallow: /checkout
 Disallow: /contact-success
@@ -10,9 +9,11 @@ Disallow: /failed
 Disallow: /success
 Disallow: /validate
 Disallow: /404
-Disallow: /assets/default
-Disallow: /assets/home
-Disallow: /assets/howitworks
-Disallow: /assets/icons
-Disallow: /assets/notFound
 Disallow: /pricing
+
+# assets
+Disallow: /assets/default/
+Disallow: /assets/home/
+Disallow: /assets/howitworks/
+Disallow: /assets/icons/
+Disallow: /assets/notFound/

@@ -62,7 +62,6 @@ export const TransformTeamSection: React.FC<TransformTeamSectionProps> = ({
               height={500}
               priority
               className={style.image}
-              sizes="(max-width: 768px) 100vw, (max-width:1200px) 45vw"
             />
           </div>
         </section>
