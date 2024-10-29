@@ -42,12 +42,12 @@ jobs:
           EOT
           sed -i 's/[[:space:]]//g' .env
   
-      - name: Build and push
-        uses: docker/build-push-action@v5
-        with:
-          context: .
-          push: true
-          tags: veecode/landing-page:homolog
+      # - name: Build and push
+      #   uses: docker/build-push-action@v5
+      #   with:
+      #     context: .
+      #     push: true
+      #     tags: veecode/landing-page:homolog
 
       - name: Setting up kubectl client
         uses: azure/setup-kubectl@v4
