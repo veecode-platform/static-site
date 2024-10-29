@@ -58,7 +58,9 @@ export const FreePlanFormContent = () => {
   };
 
   const handleFormRedirect = () => {
-    router.push("https://docs.platform.vee.codes/vkdr/intro/");
+    setTimeout(() => {
+      router.push("https://docs.platform.vee.codes/vkdr/intro/");
+    }, 1500);
   };
 
   const tagManagerArgs = {
