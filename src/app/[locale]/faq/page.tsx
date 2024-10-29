@@ -1,6 +1,6 @@
 import { ActionBar, DefaultPage, FaqList } from "@/components";
 import { routing } from "@/i18n/routing";
-import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 
 type Props = {
   params: { locale: string };
@@ -23,7 +23,7 @@ export function generateStaticParams() {
 
 export default async function FaqPage({ params: { locale } }: Props) {
   // Enable static rendering
-  unstable_setRequestLocale(locale);
+  setRequestLocale(locale);
 
   const t = await getTranslations({ locale, namespace: "faq" });
 

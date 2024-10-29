@@ -1,5 +1,5 @@
 import { Footer, Header } from "@/components";
-import { unstable_setRequestLocale } from "next-intl/server";
+import { setRequestLocale } from "next-intl/server";
 import { TransformTeamSection } from "./home/transformTeamSection";
 import { OptimizeYourBusiness } from "./home/optimizesYourBusiness";
 import { ToolsDetails } from "./home/toolsDetails";
@@ -13,7 +13,7 @@ type Props = {
 
 export default async function Homepage({ params: { locale } }: Props) {
   // Enable static rendering
-  unstable_setRequestLocale(locale);
+  setRequestLocale(locale);
 
   const t = await getTranslations({ locale, namespace: "home" });
   const a = await getTranslations({ locale, namespace: "accessibility" });

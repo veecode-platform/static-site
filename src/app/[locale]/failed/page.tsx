@@ -1,6 +1,6 @@
 import { Button, DefaultPage, NavigationLink } from "@/components";
 import { routing } from "@/i18n/routing";
-import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import style from "./FailedStyles.module.scss";
 
 const FailedImage = "/assets/icons/failed.png";
@@ -26,7 +26,7 @@ export function generateStaticParams() {
 
 export default async function FailedPage({ params: { locale } }: Props) {
   // Enable static rendering
-  unstable_setRequestLocale(locale);
+  setRequestLocale(locale);
 
   const t = await getTranslations({ locale, namespace: "feedback" });
 

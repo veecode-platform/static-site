@@ -1,5 +1,5 @@
 import { routing } from "@/i18n/routing";
-import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import style from "./PrivacyPolicyStyles.module.scss";
 import { DefaultPage } from "@/components";
 
@@ -24,7 +24,7 @@ export function generateStaticParams() {
 
 export default async function PrivacyPolicyPage({ params: { locale } }: Props) {
   // Enable static rendering
-  unstable_setRequestLocale(locale);
+  setRequestLocale(locale);
 
   const t = await getTranslations({ locale, namespace: "privacyPolicy" });
 

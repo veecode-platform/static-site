@@ -1,6 +1,6 @@
 import { Button, DefaultPage, NavigationLink } from "@/components";
 import { routing } from "@/i18n/routing";
-import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import style from "./SuccessStyles.module.scss";
 
 const SuccessImage = "/assets/icons/success.png";
@@ -28,7 +28,7 @@ export default async function ContactSuccessPage({
   params: { locale },
 }: Props) {
   // Enable static rendering
-  unstable_setRequestLocale(locale);
+  setRequestLocale(locale);
 
   const t = await getTranslations({ locale, namespace: "feedback" });
 

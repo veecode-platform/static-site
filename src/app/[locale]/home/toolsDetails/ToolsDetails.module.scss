@@ -3,12 +3,24 @@
 .content {
     @include screenSize(100vw, auto);
     padding: 4rem 0;
-    @include backgroundImage('/assets/home/bglight.webp');
+    background: $color2;
     @include displayFlex(center, center, row);
+    position: relative;
 
     //lg
     @include for-lg-only {
         padding: 8rem 0;
+    }
+
+    .banner {
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 100vw;
+        height: 100%;
+        z-index: 0;
     }
 
     .wrapper {
@@ -25,6 +37,7 @@
         &_title {
             @include screenSize(100%, auto);
             align-self: center;
+            z-index: 2;
 
             span {
                 background-image: linear-gradient(to bottom, $color7, $color7, $color1);
@@ -44,6 +57,7 @@
             @include screenSize(100%, auto);
             @include displayFlex(center, center, row);
             align-self: center;
+            z-index: 2;
 
             &-cards {
                 @include screenSize(100%, auto);
@@ -95,6 +109,7 @@
                 @include displayFlex(center, center, column);
                 padding-bottom: 3em;
                 gap: 1.5rem;
+                z-index: 2;
 
                 p {
                     @include titleMd(center);
@@ -119,6 +134,7 @@
             border: none;
             outline: none;
             border-radius: 10px;
+            z-index: 2;
 
             &:hover {
                 transition: all .5s ease-in;

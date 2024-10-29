@@ -1,8 +1,10 @@
 import style from "./OptimizeYourBusiness.module.scss";
 import { Container } from "@/components";
 import { OptimizesyourBusinessProps } from "./type";
+import Image from "next/image";
 
 const DevportalImage = "/assets/home/printdevportal.png";
+const Banner = "/assets/home/bg2.webp";
 
 export const OptimizeYourBusiness: React.FC<OptimizesyourBusinessProps> = ({
   title,
@@ -10,6 +12,15 @@ export const OptimizeYourBusiness: React.FC<OptimizesyourBusinessProps> = ({
 }) => {
   return (
     <section className={style.root}>
+      <Image
+        alt=""
+        src={Banner}
+        width={500}
+        height={500}
+        sizes="100vw"
+        priority
+        className={style.banner}
+      />
       <Container>
         <article className={style.content}>
           <div className={style["content__text"]}>
@@ -25,10 +36,14 @@ export const OptimizeYourBusiness: React.FC<OptimizesyourBusinessProps> = ({
             </div>
           </div>
           <div className={style["content__image"]}>
-            <img
+            <Image
               src={DevportalImage}
               alt="Settings Image"
+              width={500}
+              height={500}
+              priority
               className={style.image}
+              sizes="(max-width: 768px) 100vw, (max-width:1200px) 45vw"
             />
           </div>
         </article>

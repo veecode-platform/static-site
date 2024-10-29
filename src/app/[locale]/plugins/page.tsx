@@ -1,5 +1,5 @@
 import { routing } from "@/i18n/routing";
-import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { getAllPlugins } from "@/lib";
 import { ActionBar, DefaultPage } from "@/components";
 import style from "./PluginsStyles.module.scss";
@@ -27,7 +27,7 @@ export function generateStaticParams() {
 
 export default async function PluginsPage({ params: { locale } }: Props) {
   // Enable static rendering
-  unstable_setRequestLocale(locale);
+  setRequestLocale(locale);
 
   const t = await getTranslations({ locale, namespace: "plugins" });
   const plugins = getAllPlugins(locale);

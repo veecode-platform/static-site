@@ -1,8 +1,11 @@
 import style from "./TransformTeamSection.module.scss";
 import { Button, Container, ExternalLink } from "@/components";
 import type { TransformTeamSectionProps } from "./type";
+import Image from "next/image";
 
 const ComputerImg = "/assets/home/notebook2.png";
+const BannerMobile = "/assets/home/banner-mobile.png";
+const BannerDesktop = "/assets/home/banner.webp";
 
 export const TransformTeamSection: React.FC<TransformTeamSectionProps> = ({
   title,
@@ -12,6 +15,27 @@ export const TransformTeamSection: React.FC<TransformTeamSectionProps> = ({
 }) => {
   return (
     <section className={style.root}>
+      {/* Banner Mobile */}
+      <Image
+        alt=""
+        src={BannerMobile}
+        width={500}
+        height={500}
+        sizes="100vw"
+        priority
+        className={style.bannerMobile}
+      />
+      {/* Banner Desktop */}
+      <Image
+        alt=""
+        src={BannerDesktop}
+        width={500}
+        height={500}
+        sizes="100vw"
+        priority
+        className={style.bannerDesktop}
+      />
+
       <Container>
         <section className={style.content}>
           <div className={style.textContent}>
@@ -31,10 +55,14 @@ export const TransformTeamSection: React.FC<TransformTeamSectionProps> = ({
             </div>
           </div>
           <div className={style.imageWrapper}>
-            <img
+            <Image
               src={ComputerImg}
               alt="Computer Logo"
+              width={500}
+              height={500}
+              priority
               className={style.image}
+              sizes="(max-width: 768px) 100vw, (max-width:1200px) 45vw"
             />
           </div>
         </section>

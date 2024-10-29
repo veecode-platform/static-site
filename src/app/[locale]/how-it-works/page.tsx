@@ -1,6 +1,6 @@
 import { Button, DefaultPage, NavigationLink, ScrollTop } from "@/components";
 import { routing } from "@/i18n/routing";
-import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import style from "./HowItWorksStyles.module.scss";
 import { CardItem } from "./cardItem";
 
@@ -36,7 +36,7 @@ export function generateStaticParams() {
 
 export default async function HowItWorksPage({ params: { locale } }: Props) {
   // Enable static rendering
-  unstable_setRequestLocale(locale);
+  setRequestLocale(locale);
 
   const t = await getTranslations({ locale, namespace: "howItWorks" });
 

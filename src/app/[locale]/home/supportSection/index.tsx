@@ -2,9 +2,9 @@
 import { Button, Container, NavigationLink } from "@/components";
 import style from "./SupportSection.module.scss";
 import { SupportSectionProps } from "./types";
+import Image from "next/image";
 
-const BgDesktop = "@/assets/home/bg3.webp";
-const BgMobile = "@/assets/home/bgmobile2.webp";
+const BannerDesktop = "/assets/home/bg3.webp";
 
 export const SupportSection: React.FC<SupportSectionProps> = ({
   title,
@@ -13,6 +13,16 @@ export const SupportSection: React.FC<SupportSectionProps> = ({
 }) => {
   return (
     <section className={style.root}>
+      {/* Banner Desktop */}
+      <Image
+        alt=""
+        src={BannerDesktop}
+        width={500}
+        height={500}
+        sizes="100vw"
+        priority
+        className={style.bannerDesktop}
+      />
       <Container>
         <article className={style.content}>
           <div className={style.content_text}>

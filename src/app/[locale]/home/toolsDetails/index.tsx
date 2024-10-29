@@ -2,6 +2,9 @@ import Link from "next/link";
 import style from "./ToolsDetails.module.scss";
 import { Container } from "@/components";
 import { toolsDetailsProps } from "./types";
+import Image from "next/image";
+
+const Banner = "/assets/home/bglight.webp";
 
 export const ToolsDetails: React.FC<toolsDetailsProps> = ({
   title,
@@ -11,6 +14,15 @@ export const ToolsDetails: React.FC<toolsDetailsProps> = ({
 }) => {
   return (
     <section className={style.content}>
+      <Image
+        alt=""
+        src={Banner}
+        width={500}
+        height={500}
+        sizes="100vw"
+        priority
+        className={style.banner}
+      />
       <Container>
         <article className={style.wrapper}>
           <div className={style.wrapper_title}>

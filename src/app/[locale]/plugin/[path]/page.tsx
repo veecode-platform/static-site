@@ -1,7 +1,7 @@
 import { DefaultPage } from "@/components";
 import { routing } from "@/i18n/routing";
 import { getAllPlugins, getPluginByPath } from "@/lib";
-import { unstable_setRequestLocale } from "next-intl/server";
+import { setRequestLocale } from "next-intl/server";
 import { PluginContent } from "./ui/PluginContent";
 
 type Props = {
@@ -31,7 +31,7 @@ export async function generateMetadata({ params: { path, locale } }: Props) {
 
 export default function PluginDocPage({ params: { locale, path } }: Props) {
   // Enable static rendering
-  unstable_setRequestLocale(locale);
+  setRequestLocale(locale);
 
   const pluginData = getPluginByPath(locale, path);
 

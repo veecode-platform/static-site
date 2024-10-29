@@ -1,5 +1,5 @@
 import { routing } from "@/i18n/routing";
-import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import style from "./FreePlanStyles.module.scss";
 import { ActionBar, DefaultPage } from "@/components";
 import { FreePlanFormContent } from "./ui/freePlanFormContent";
@@ -25,7 +25,7 @@ export function generateStaticParams() {
 
 export default async function FreePlanPage({ params: { locale } }: Props) {
   // Enable static rendering
-  unstable_setRequestLocale(locale);
+  setRequestLocale(locale);
 
   const t = await getTranslations({ locale, namespace: "freePlan" });
   const a = await getTranslations({ locale, namespace: "accessibility" });

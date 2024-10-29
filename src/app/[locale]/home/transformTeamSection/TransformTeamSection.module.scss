@@ -3,13 +3,11 @@
 .root {
     @include screenSize(100%, auto);
     padding: 5rem 0;
-    @include backgroundImage('/assets/home/banner-mobile.png');
-    background-position-x: 10%;
+    position: relative;
 
     // xl
     @include for-xl-only {
         @include screenSize(100%, auto);
-        @include backgroundImage('/assets/home/banner.svg');
         @include displayFlex(center, center, row);
         margin-bottom: -.5rem;
         padding: 5rem 0 1rem 0;
@@ -19,6 +17,35 @@
     @include for-2xl-only {
         padding: 5rem 0 3rem 0;
     }
+
+
+    .bannerMobile {
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 100vw;
+        height: 100%;
+        z-index: 0;
+
+        //lg
+        @include for-lg-only {
+            display: none;
+        }
+    }
+
+    .bannerDesktop {
+        @extend .bannerMobile;
+        display: none;
+
+        //xl
+        @include for-lg-only {
+            display: block;
+        }
+    }
+
+
 
     .content {
         @include screenSize(100%, auto);
@@ -47,6 +74,7 @@
         .textContent {
             width: 100%;
             @include displayFlex(center, center, column);
+            z-index: 1;
 
             //lg
             @include for-lg-only {
@@ -112,6 +140,7 @@
         .imageWrapper {
             width: 100%;
             @include displayFlex(center, center, row);
+            position: relative;
 
             // lg
             @include for-lg-only {

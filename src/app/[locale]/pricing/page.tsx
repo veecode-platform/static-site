@@ -7,7 +7,7 @@ import {
 } from "@/components";
 import { routing } from "@/i18n/routing";
 import style from "./PricingStyles.module.scss";
-import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import AwsCustomerComponent from "./awsCustomerComponent";
 import { PlansDetails } from "./plansDetails";
 import { FaCheck } from "react-icons/fa";
@@ -42,7 +42,7 @@ export function generateStaticParams() {
 
 export default async function PricingPage({ params: { locale } }: Props) {
   // Enable static rendering
-  unstable_setRequestLocale(locale);
+  setRequestLocale(locale);
 
   const t = await getTranslations({ locale, namespace: "pricing" });
   const a = await getTranslations({ locale, namespace: "accessibility" });

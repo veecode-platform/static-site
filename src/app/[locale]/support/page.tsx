@@ -1,6 +1,6 @@
 import { ActionBar, DefaultPage, NavigationLink } from "@/components";
 import { routing } from "@/i18n/routing";
-import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { SupportCategories } from "./supportCategories";
 import { ListDetails } from "./listDetails";
 import { SupportBenefits } from "./supportBenefits";
@@ -29,7 +29,7 @@ export function generateStaticParams() {
 
 export default async function SupportPage({ params: { locale } }: Props) {
   // Enable static rendering
-  unstable_setRequestLocale(locale);
+  setRequestLocale(locale);
 
   const t = await getTranslations({ locale, namespace: "supportOptions" });
 

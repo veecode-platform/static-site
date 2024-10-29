@@ -1,12 +1,13 @@
 import { Poppins } from "next/font/google";
 import { NextIntlClientProvider } from "next-intl";
-import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { routing } from "@/i18n/routing";
 import { LANGUAGES } from "@/utils/constants/languages";
 import { notFound } from "next/navigation";
 import "./global.scss";
 
-const thumbnailImageUrl = "/thumbnail.png";
+const thumbnailImageUrl =
+  "https://cdn.platform.vee.codes/landing-page/thumbnail.png";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -65,7 +66,7 @@ export default async function LocaleLayout({
   params: { locale },
 }: Readonly<Props>) {
   // Enable static rendering
-  unstable_setRequestLocale(locale);
+  setRequestLocale(locale);
 
   if (!LANGUAGES.includes(locale)) notFound();
 

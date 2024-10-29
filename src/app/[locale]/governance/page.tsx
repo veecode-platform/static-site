@@ -1,6 +1,6 @@
 import { DefaultPage } from "@/components";
 import { routing } from "@/i18n/routing";
-import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { FirstSection } from "./fistSection";
 import { CardsSection } from "./cardsSection";
 import { ContactSection } from "./contactSection";
@@ -26,7 +26,7 @@ export function generateStaticParams() {
 
 export default async function GovernancePage({ params: { locale } }: Props) {
   // Enable static rendering
-  unstable_setRequestLocale(locale);
+  setRequestLocale(locale);
 
   const t = await getTranslations({ locale, namespace: "governance" });
 
