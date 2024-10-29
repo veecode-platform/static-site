@@ -5,6 +5,7 @@ import { routing } from "@/i18n/routing";
 import { LANGUAGES } from "@/utils/constants/languages";
 import { notFound } from "next/navigation";
 import "./global.scss";
+import { Chatbot } from "@/components";
 
 const thumbnailImageUrl =
   "https://cdn.platform.vee.codes/landing-page/thumbnail.png";
@@ -77,6 +78,7 @@ export default async function LocaleLayout({
       <body className={`${poppins.variable}`}>
         <NextIntlClientProvider locale={locale} messages={messages}>
           {children}
+          <Chatbot />
         </NextIntlClientProvider>
       </body>
     </html>

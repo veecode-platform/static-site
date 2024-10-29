@@ -1,6 +1,7 @@
 import { Button, NavigationLink } from "@/components";
 import style from "./PluginCard.module.scss";
 import { PluginsCardProps } from "./types";
+import Image from "next/image";
 
 export const PluginCard: React.FC<PluginsCardProps> = ({
   image,
@@ -14,7 +15,14 @@ export const PluginCard: React.FC<PluginsCardProps> = ({
     <div className={style.card}>
       <div className={style.card__content}>
         <header className={style["card__content-header"]}>
-          <img src={image} alt="" className={style.icon} />
+          <Image
+            src={image}
+            alt=""
+            width={112}
+            height={112}
+            className={style.icon}
+            priority
+          />
           <div className={style.titlebar}>
             <h2 className={style.titlebar__title}>{title}</h2>
             <div className={style.titlebar__tags}>
