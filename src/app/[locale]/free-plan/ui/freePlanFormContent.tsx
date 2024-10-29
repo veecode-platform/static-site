@@ -50,7 +50,7 @@ export const FreePlanFormContent = () => {
       .email(t("form.validate.invalid-email"))
       .required(t("form.validate.required")),
     title: string().required(t("form.validate.required")),
-    terms: boolean().isTrue(),
+    terms: boolean().isTrue().default(true).required("*Required"),
   });
 
   const handleClose = () => {
@@ -80,7 +80,7 @@ export const FreePlanFormContent = () => {
           email: "",
           title: "",
           terms: false,
-          type: "FREE",
+          type: "FREE-PLAN",
           plan: plan,
         }}
         validationSchema={formSchema}

@@ -8,17 +8,16 @@ export const UsePostData = async (values: any) => {
       organization: values.company,
       "e-mail": values.email,
       "job-title": values.title,
+      "contact-type": values.type,
       plan: values.plan,
     };
 
     const { data } = await api.post("/purchases", model);
 
-    console.log("func", values);
-
     storage.setData("user", JSON.stringify({ ...values, id: data.id }));
 
     return data;
-  } catch (error) {
-    return error;
+  } catch (error: any) {
+    throw new Error(`[Error in Validate Form]: ${error}`);
   }
 };

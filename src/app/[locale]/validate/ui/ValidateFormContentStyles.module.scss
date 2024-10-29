@@ -1,7 +1,7 @@
 @import"../../../../abstract/abstract";
 
 
-.formWraper {
+.formWrapper {
     @include screenSize(100%, auto);
     @include displayFlex(center, center, column);
     @include glassEffect();

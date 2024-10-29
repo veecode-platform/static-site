@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import style from "./ValidateContentStyles.module.scss";
+import style from "./ValidateFormContentStyles.module.scss";
 import { Form, Formik } from "formik";
 import { object, string, boolean } from "yup";
 import { useRouter } from "@/i18n/routing";
@@ -12,7 +12,7 @@ import { Checkbox, Input } from "@/components/patterns/input";
 import { Button } from "@/components";
 import { useTranslations } from "next-intl";
 
-export const ValidateContent = () => {
+export const ValidateFormContent = () => {
   const router = useRouter();
   const searchParams = useSearchParams();
   const plan = searchParams.get("plan");
@@ -25,12 +25,8 @@ export const ValidateContent = () => {
       .email(t("form.validate.invalid-email"))
       .required(t("form.validate.required")),
     title: string().required(t("form.validate.required")),
-    terms: boolean().isTrue(),
+    terms: boolean().isTrue().default(true).required("*required"),
   });
-
-  const handleFormRedirect = () => {
-    router.push("/success");
-  };
 
   const tagManagerArgs = {
     gtmId: "GTM-56RG967", //todo check ID
@@ -57,22 +53,27 @@ export const ValidateContent = () => {
   }, []);
 
   return (
-    <div className={style.formWraper}>
+    <div className={style.formWrapper}>
       <Formik
         initialValues={{
           name: "",
           company: "",
           email: "",
           title: "",
+          type: "PLAN-STANDARD",
           terms: false,
           plan: plan,
         }}
         validationSchema={formSchema}
         onSubmit={async (values) => {
-          localStorage.setItem("user", JSON.stringify(values));
-          await UsePostData(values);
-          TagManager.initialize(tagManagerArgs);
-          handleFormRedirect();
+          try {
+            localStorage.setItem("user", JSON.stringify(values));
+            await UsePostData(values);
+            TagManager.initialize(tagManagerArgs);
+            router.push("/success");
+          } catch (error) {
+            router.push("/failed");
+          }
         }}
       >
         {({ errors, touched, handleSubmit, isSubmitting }) => (

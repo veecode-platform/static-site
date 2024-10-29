@@ -2,7 +2,7 @@ import { Breadcrumb, DefaultPage } from "@/components";
 import { routing } from "@/i18n/routing";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import style from "./ValidateStyles.module.scss";
-import { ValidateContent } from "./ui/validateContent";
+import { ValidateFormContent } from "./ui/validateFormContent";
 
 type Props = {
   params: { locale: string };
@@ -49,7 +49,7 @@ export default async function ValidatePage({ params: { locale } }: Props) {
             </div>
           </div>
           <div className={style.content__options}>
-            <ValidateContent />
+            <ValidateFormContent />
           </div>
         </article>
       </article>

@@ -55,7 +55,7 @@ export const FormElement: React.FC<FormElementProps> = ({
         validationSchema={formSchema}
         onSubmit={async (values) => {
           try {
-            const response = await UseContactData(values);
+            await UseContactData(values);
             TagManager.initialize(tagManagerArgs);
             router.push("/contact-success");
           } catch (error) {
