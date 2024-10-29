@@ -42,12 +42,12 @@ jobs:
           EOT
           sed -i 's/[[:space:]]//g' .env
   
-      # - name: Build and push
-      #   uses: docker/build-push-action@v5
-      #   with:
-      #     context: .
-      #     push: true
-      #     tags: veecode/landing-page:homolog
+      - name: Build and push
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          push: true
+          tags: veecode/landing-page:homolog
 
       - name: Setting up kubectl client
         uses: azure/setup-kubectl@v4
@@ -73,13 +73,10 @@ jobs:
           .metadata.annotations."kubernetes.io/tls-acme"="true"
           ''' -i ./k8s/ingress.yaml
     
-          # kubectl create secret generic landing-page-secret --from-env-file=.env -n ${{ env.NAMESPACE }} --dry-run=client -o yaml | kubectl apply -f -
-          # kubectl apply -f ./k8s/ -n ${{ env.NAMESPACE }}
-          # kubectl rollout restart deployment/landing-page -n ${{ env.NAMESPACE }}
-          echo "--------- ingress ---------"
-          cat ./k8s/ingress.yaml
-          echo "--------- deployment ---------"
-          cat ./k8s/deployment.yaml
+          kubectl create secret generic landing-page-secret --from-env-file=.env -n ${{ env.NAMESPACE }} --dry-run=client -o yaml | kubectl apply -f -
+          kubectl apply -f ./k8s/ -n ${{ env.NAMESPACE }}
+          kubectl rollout restart deployment/landing-page -n ${{ env.NAMESPACE }}
+
       # - name: Deploy static site to S3 bucket
       #   run: |
       #     aws s3 rm s3://${{ secrets.AWS_BUCKET_HML }} --recursive

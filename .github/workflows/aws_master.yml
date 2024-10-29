@@ -8,8 +8,12 @@ permissions:
   id-token: write
   contents: read
 
+env:
+  HOST: platform.vee.codes
+  NAMESPACE: vkpr
+
 jobs:
-  deploy:
+  deploy-prod:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -19,6 +23,18 @@ jobs:
         run: |
           echo "app_version=$(jq -r '.version' package.json)" >> $GITHUB_ENV
 
+      - name: Load environment variables
+        run: |
+          cat > '.env' <<EOT
+          NEXT_PUBLIC_ANALYTICS_ID=${{ secrets.ANALYTICS_ID }}
+          NEXT_PUBLIC_LAMBDA_BASE_URL=${{ secrets.LAMBDA_BASE_URL }}
+          NEXT_PUBLIC_LAMBDA_API_KEY=${{ secrets.LAMBDA_API_KEY }}
+          NEXT_PUBLIC_GOOGLE_TAG_MANAGER=${{ secrets.GOOGLE_TAG_MANAGER}}
+          NEXT_PUBLIC_NEUROLEAD_ID=${{ secrets.NEUROLEAD_ID}}
+          NEXT_PUBLIC_HOST_URL="https://${{ env.HOST }}"
+          EOT
+          sed -i 's/[[:space:]]//g' .env
+         
       - name: Login to DockerHub
         uses: docker/login-action@v3
         with:
@@ -35,47 +51,17 @@ jobs:
       - name: Setting up kubectl client
         uses: azure/setup-kubectl@v4
   
-      # - name: Update blog deployment
-      #   shell: bash
-      #   run: |
-      #     echo "${{ secrets.KUBECONFIG }}" > ./config
-      #     export KUBECONFIG=./config
+      - name: Update landing-page deployment
+        shell: bash
+        run: |
+          echo "${{ secrets.KUBECONFIG }}" > ./config
+          export KUBECONFIG=./config
 
-      #     yq e ".spec.template.spec.containers[0].image = \"veecode/blog:${{ env.app_version }}\"" -i ./k8s/deployment.yaml
-      #     NAMESPACE=$((kubectl get pod -A | grep veecode-blog || echo "vkpr") | awk -F' ' '{print $1}')
-
-      #     # Check the difference
-      #     OUTPUT_FILE="diff_output.txt"
-
-      #     # kubectl diff -f ./k8s/ > "$OUTPUT_FILE" 2>&1
-
-      #     # if [ -s "$OUTPUT_FILE" ]; then
-      #     #   echo "No difference found, restarting the deployment"
-      #     #   kubectl rollout restart deployment/veecode-blog -n $NAMESPACE
-      #     # else
-      #       echo "Difference found, applying the configuration"
-      #       kubectl apply -f ./k8s/ -n $NAMESPACE
-      #     # fi
-
-      # - name: Configure AWS Credentials
-      #   uses: aws-actions/configure-aws-credentials@v4
-      #   with:
-      #     role-to-assume: arn:aws:iam::844606521248:role/landing_page_actions_role
-      #     aws-region: us-east-1
-
-      # - name: Login to Amazon ECR
-      #   id: login-ecr
-      #   uses: aws-actions/amazon-ecr-login@v2
-
-      # - name: Build, tag, and push docker image to Amazon ECR
-      #   uses: docker/build-push-action@v6
-      #   with:
-      #     context: .
-      #     push: true
-      #     tags: ${{ steps.login-ecr.outputs.registry }}/landing-page:${{ env.app_version }},${{ steps.login-ecr.outputs.registry }}/landing-page:latest
-  
-      # - name: Deploy static site to S3 bucket
-      #   run: |
-      #     aws s3 rm s3://${{ secrets.AWS_BUCKET }} --recursive
-      #     aws s3 sync out s3://${{ secrets.AWS_BUCKET }} --acl public-read
-      #     aws cloudfront create-invalidation --distribution-id E10554892ALDF9 --paths "/*"
+          yq e ".spec.template.spec.containers[0].image = \"veecode/landing-page:${{ env.app_version }}\"" -i ./k8s/deployment.yaml
+          yq e '''
+          .spec.rules[0].host=strenv(HOST)
+          ''' -i ./k8s/ingress.yaml
+          
+          kubectl create secret generic landing-page-secret --from-env-file=.env -n ${{ env.NAMESPACE }} --dry-run=client -o yaml | kubectl apply -f -
+          kubectl apply -f ./k8s/ -n ${{ env.NAMESPACE }}
+          kubectl rollout restart deployment/landing-page -n ${{ env.NAMESPACE }}
