@@ -1,12 +1,17 @@
 "use client";
 
-/* eslint-disable @next/next/no-img-element */
 import style from "./FooterStyles.module.scss";
-import { FaDiscord, FaLinkedin, FaYoutube } from "react-icons/fa";
-import { FaInstagram, FaXTwitter } from "react-icons/fa6";
 import { gtagEvents } from "@/utils/helpers/gtag";
 import { useTranslations } from "next-intl";
 import { ExternalLink, NavigationLink, Container } from "@/components";
+import {
+  RiTwitterXFill,
+  RiInstagramLine,
+  RiLinkedinBoxFill,
+  RiYoutubeFill,
+  RiDiscordFill,
+} from "react-icons/ri";
+import Image from "next/image";
 
 const Logo = "/assets/logo/logo.png";
 
@@ -19,7 +24,13 @@ export const Footer = () => {
       <Container>
         <section className={style.content}>
           <div className={style.content__logoAndSocial}>
-            <img src={Logo} alt="Veecode Plataform" className={style.logo} />
+            <Image
+              src={Logo}
+              width={228}
+              height={71}
+              alt="Veecode Plataform"
+              className={style.logo}
+            />
             <ul className={style.items}>
               {/* <li>
                 <Link href="https://web.facebook.com/veecodeplatform/" passHref target="_blank">
@@ -33,7 +44,7 @@ export const Footer = () => {
                   description={a("external-links.instagram")}
                   href="https://www.instagram.com/veecodeplatform/"
                 >
-                  <FaInstagram />
+                  <RiInstagramLine />
                 </ExternalLink>
               </li>
               <li>
@@ -41,7 +52,7 @@ export const Footer = () => {
                   description={a("external-links.linkedin")}
                   href="https://www.linkedin.com/showcase/veecode-platform/"
                 >
-                  <FaLinkedin />
+                  <RiLinkedinBoxFill />
                 </ExternalLink>
               </li>
               <li>
@@ -49,7 +60,7 @@ export const Footer = () => {
                   description={a("external-links.x")}
                   href="https://twitter.com/veecodeplatform"
                 >
-                  <FaXTwitter />
+                  <RiTwitterXFill />
                 </ExternalLink>
               </li>
               <li>
@@ -57,7 +68,7 @@ export const Footer = () => {
                   description={a("external-links.discord")}
                   href="https://discord.gg/pREwxeVzAD"
                 >
-                  <FaDiscord />
+                  <RiDiscordFill />
                 </ExternalLink>
               </li>
               <li>
@@ -65,7 +76,7 @@ export const Footer = () => {
                   description={a("external-links.youtube")}
                   href="https://www.youtube.com/@veecodeplatform-br"
                 >
-                  <FaYoutube />
+                  <RiYoutubeFill />
                 </ExternalLink>
               </li>
             </ul>

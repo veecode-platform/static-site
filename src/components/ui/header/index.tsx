@@ -13,9 +13,10 @@ import {
   NavigationLink,
   Button,
 } from "@/components";
+import Image from "next/image";
 
-const Logo = "../../assets/logo/logo.png";
-const LogoMobile = "../../assets/logo/logo-mobile.png";
+const Logo = "/assets/logo/logo.png";
+const LogoMobile = "/assets/logo/logo-mobile.png";
 
 export const Header: React.FC<HeaderProps> = ({
   fixedHeader,
@@ -38,17 +39,23 @@ export const Header: React.FC<HeaderProps> = ({
       >
         <Container>
           <section className={style.content}>
-            <div>
+            <div className={style.content__logo}>
               <NavigationLink href="/">
-                <img
+                <Image
                   src={Logo}
+                  priority
                   alt="VeeCode Plataform Logo"
-                  className={style.content__logo}
+                  width={200}
+                  height={62}
+                  className={style.logo}
                 />
-                <img
+                <Image
                   src={LogoMobile}
+                  priority
                   alt="VeeCode Plataform Logo"
-                  className={style.content__logoMobile}
+                  width={34}
+                  height={48}
+                  className={style.logoMobile}
                 />
               </NavigationLink>
             </div>

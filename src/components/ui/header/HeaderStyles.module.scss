@@ -38,21 +38,25 @@
     transition: all .5s ease-in;
 
     &__logo {
-      display: none;
+      position: relative;
 
-      //md
-      @include for-md-only {
-        display: flex;
-        @include navbarLogo();
+      .logo {
+        display: none;
+
+        //md
+        @include for-md-only {
+          display: flex;
+          @include navbarLogo();
+        }
       }
-    }
 
-    &__logoMobile {
-      @include navbarLogo();
+      .logoMobile {
+        @include navbarLogo();
 
-      //md
-      @include for-md-only {
-        display: none
+        //md
+        @include for-md-only {
+          display: none
+        }
       }
     }
 

@@ -43,6 +43,7 @@
         &__logoAndSocial {
             @include screenSize(100%, 100%);
             @include displayFlex(center, center, column);
+            position: relative;
 
             // XL
             @include for-xl-only {
@@ -82,6 +83,7 @@
                     a {
                         color: $color1;
                         transition: all .5s linear;
+                        vertical-align: middle;
 
                         &:hover {
                             transition: all .5s linear;
@@ -127,7 +129,7 @@
                         cursor: pointer;
                         @include footerText('flex-end');
                         opacity: .9;
-                        color: $color4;
+
                         transition: all .5s ease-in-out;
 
                         &:hover {
@@ -137,7 +139,11 @@
 
                         span {
                             opacity: 1;
-                            color: $color2;
+                            color: #FFFFFF;
+                        }
+
+                        a {
+                            color: $color10;
                         }
                     }
                 }
