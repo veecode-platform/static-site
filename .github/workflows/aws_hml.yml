@@ -69,7 +69,7 @@ jobs:
           ''' -i ./k8s/deployment.yaml
           yq e '''
           .spec.rules[0].host=strenv(HOST)
-          .spec.tls[0].hosts=[strenv(HOST)],.spec.tls[0].secretName="landing-page-secret"
+          .spec.tls[0].hosts=["landing-page.apr.vee.codes"],.spec.tls[0].secretName="landing-page-secret"
           .metadata.annotations."kubernetes.io/tls-acme"="true"
           ''' -i ./k8s/ingress.yaml
     
