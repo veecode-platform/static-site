@@ -3,7 +3,6 @@ kind: Ingress
 metadata:
   name: landing-page
   annotations:
-    kubernetes.io/tls-acme: "true"
     konghq.com/preserve-host: "true"
     konghq.com/strip-path: "true"
 spec:
