@@ -12,7 +12,7 @@ body {
   overflow-y: auto;
   scroll-behavior: smooth;
   scroll-snap-type: y mandatory;
-  font-family: $font-text;
+  font-family: var(--font-inter);
   box-sizing: border-box;
   font-size: $font-body;
 
@@ -40,7 +40,7 @@ body {
 
 a {
   text-decoration: none;
-  color: $color2;
+  // color: $color2;
 
   &:visited {
     color: inherit;
@@ -49,4 +49,5 @@ a {
 
 img {
   object-fit: cover !important;
+  height: auto
 }

@@ -12,7 +12,7 @@ body {
   overflow-y: auto;
   scroll-behavior: smooth;
   scroll-snap-type: y mandatory;
-  font-family: $font-text;
+  font-family: var(--font-poppins);
   box-sizing: border-box;
   font-size: $font-body;
 

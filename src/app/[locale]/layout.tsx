@@ -14,7 +14,7 @@ const poppins = Poppins({
   subsets: ["latin"],
   display: "swap",
   variable: "--font-poppins",
-  weight: ["300", "400", "600", "700"],
+  weight: ["300", "400", "600", "500", "600", "700", "800", "900"],
 });
 
 type Props = {
