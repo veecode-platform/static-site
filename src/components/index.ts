@@ -4,7 +4,7 @@ export { DefaultPage } from "./defaultPage";
 export { ActionBar } from "./actionBar";
 export { PageNotFound } from "./pageNotFound";
 export * from "./ui/links";
-export * from "./patterns/input";
+export * from "./ui/patterns/input";
 export { Loading } from "./loading";
 export { Header } from "./ui/header";
 export { Footer } from "./ui/footer";

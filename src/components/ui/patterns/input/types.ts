@@ -26,8 +26,8 @@ export interface TextAreaProps {
  */
 
 export interface LabelProps {
-  error?: boolean;
-  errorLabel?: boolean;
+  $error?: boolean;
+  $errorLabel?: boolean;
 }
 
 export interface InputFieldProps {

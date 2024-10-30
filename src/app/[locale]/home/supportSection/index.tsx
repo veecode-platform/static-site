@@ -25,22 +25,34 @@ export const SupportSection: React.FC<SupportSectionProps> = ({
       />
       <Container>
         <article className={style.content}>
-          <div className={style.content_text}>
-            <div className={style["content_text-title"]}>
+          <div className={style.content__text}>
+            <div className={style["content__text-title"]}>
               <h2>{title}</h2>
-              <div className={style["content_text-buttonWrapper"]}>
+              <div className={style["content__text-buttonWrapper"]}>
                 <NavigationLink href="/pricing/#plans" prefetch={false}>
                   <Button aria-label={buttonLabel}>{buttonLabel}</Button>
                 </NavigationLink>
               </div>
             </div>
 
-            <div className={style.content_cardsSection}>
-              <div className={style["content_cardsSection-cards"]}>
+            <div className={style.content__cardsSection}>
+              <div className={style["content__cardsSection-cards"]}>
                 {supportItems.map((item) => (
                   <div key={item.id} className={style.card}>
-                    <img src={item.icon} alt="" className={style.card_icon} />
-                    <div className={style.card_desc}>
+                    <div className={style.card__icon}>
+                      <Image
+                        src={item.icon}
+                        alt=""
+                        width={80}
+                        height={80}
+                        priority
+                        style={{
+                          width: "100%",
+                          height: "auto",
+                        }}
+                      />
+                    </div>
+                    <div className={style.card__desc}>
                       <p>{item.desc}</p>
                     </div>
                   </div>

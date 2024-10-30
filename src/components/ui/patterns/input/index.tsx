@@ -27,10 +27,10 @@ export const Input: React.FC<InputProps> = ({
       {({ field }: { field: any }) => (
         <Wrapper>
           <LabelWraper>
-            <Label htmlFor={name} error={error ? true : false}>
+            <Label htmlFor={name} $error={error as boolean}>
               {label}
             </Label>
-            <Label errorLabel htmlFor={name} error={error ? true : false}>
+            <Label $errorLabel htmlFor={name} $error={error as boolean}>
               {error}
             </Label>
           </LabelWraper>
@@ -75,7 +75,7 @@ export const Checkbox: React.FC<CheckboxProps> = ({
           <Checkboxfield {...field} id={name} name={name}></Checkboxfield>
           <CheckboxLabel
             altColor={children ? true : false}
-            error={error ? true : false}
+            $error={error as boolean}
           >
             {children && <strong>{children}</strong>}
             {terms && termsData}
@@ -97,10 +97,10 @@ export const TextArea: React.FC<TextAreaProps> = ({
       {({ field }: { field: any }) => (
         <WrapperTextArea>
           <LabelWraper>
-            <Label htmlFor={name} error={error ? true : false}>
+            <Label htmlFor={name} $error={error as boolean}>
               {label}
             </Label>
-            <Label errorLabel htmlFor={name} error={error ? true : false}>
+            <Label $errorLabel htmlFor={name} $error={error as boolean}>
               {error}
             </Label>
           </LabelWraper>

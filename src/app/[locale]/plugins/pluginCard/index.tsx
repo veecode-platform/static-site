@@ -15,14 +15,19 @@ export const PluginCard: React.FC<PluginsCardProps> = ({
     <div className={style.card}>
       <div className={style.card__content}>
         <header className={style["card__content-header"]}>
-          <Image
-            src={image}
-            alt=""
-            width={112}
-            height={112}
-            className={style.icon}
-            priority
-          />
+          <div className={style.icon}>
+            <Image
+              src={image}
+              alt=""
+              width={112}
+              height={112}
+              style={{
+                width: "100%",
+                height: "auto",
+              }}
+              priority
+            />
+          </div>
           <div className={style.titlebar}>
             <h2 className={style.titlebar__title}>{title}</h2>
             <div className={style.titlebar__tags}>

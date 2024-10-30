@@ -55,14 +55,19 @@ export const TransformTeamSection: React.FC<TransformTeamSectionProps> = ({
             </div>
           </div>
           <div className={style.imageWrapper}>
-            <Image
-              src={ComputerImg}
-              alt="Computer Logo"
-              width={500}
-              height={500}
-              priority
-              className={style.image}
-            />
+            <div className={style.image}>
+              <Image
+                src={ComputerImg}
+                alt="Computer Logo"
+                width={500}
+                height={500}
+                priority
+                style={{
+                  width: "100%",
+                  height: "auto",
+                }}
+              />
+            </div>
           </div>
         </section>
       </Container>

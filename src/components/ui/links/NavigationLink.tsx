@@ -16,7 +16,7 @@ export function NavigationLink<Pathname extends Pathnames>({
     <Link
       aria-current={isActive ? "page" : undefined}
       href={href}
-      aria-label={pathname}
+      aria-label={`Link: ${pathname}`}
       {...rest}
     />
   );

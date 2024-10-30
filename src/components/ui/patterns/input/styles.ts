@@ -21,11 +21,11 @@ export const LabelWraper = styled.div`
 `;
 
 export const Label = styled.label<LabelProps>`
-  color: ${(props) => (props.error ? "#DB0000" : "#f3f3f3")};
+  color: ${(props) => (props.$error ? "#DB0000" : "#f3f3f3")};
   font-size: 12px;
   font-weight: 500;
   min-width: 50%;
-  text-align: ${(props) => (props.errorLabel ? "right" : "left")};
+  text-align: ${(props) => (props.$errorLabel ? "right" : "left")};
 `;
 
 export const InputField = styled.input<InputFieldProps>`

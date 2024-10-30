@@ -22,11 +22,15 @@ const CardAwsContent: React.FC<CardAwsContentProps> = ({
           width={200}
           height={200}
           unoptimized
-          priority={true}
+          style={{
+            width: "100%",
+            height: "auto",
+          }}
+          priority
         />
       </div>
       <div className={style.card__body}>
-        <h6 className={style.title}>{title}</h6>
+        <h3 className={style.title}>{title}</h3>
         <div className={style.bodyText}>
           <p>{bodyText}</p>
         </div>

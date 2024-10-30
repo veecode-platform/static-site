@@ -1025,7 +1025,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/hoist-non-react-statics@npm:^3.3.1, @types/hoist-non-react-statics@npm:^3.3.4":
+"@types/hoist-non-react-statics@npm:*, @types/hoist-non-react-statics@npm:^3.3.1, @types/hoist-non-react-statics@npm:^3.3.4":
   version: 3.3.5
   resolution: "@types/hoist-non-react-statics@npm:3.3.5"
   dependencies:
@@ -1122,6 +1122,17 @@ __metadata:
     "@types/prop-types": "npm:*"
     csstype: "npm:^3.0.2"
   checksum: 10/a36f0707fdfe9fe19cbe5892bcdab0f042ecadb501ea4e1c39519943f3e74cffbd31e892d3860f5c87cf33f5f223552b246a552bed0087b95954f2cb39d5cf65
+  languageName: node
+  linkType: hard
+
+"@types/styled-components@npm:^5.1.34":
+  version: 5.1.34
+  resolution: "@types/styled-components@npm:5.1.34"
+  dependencies:
+    "@types/hoist-non-react-statics": "npm:*"
+    "@types/react": "npm:*"
+    csstype: "npm:^3.0.2"
+  checksum: 10/3da291b46f03d378a0176c9d034deee7ee0684c5d62e1c5ce82f3be0972918eaa806f45c62e9a4f1c8d24c5ba6571c260caba2493fc7e82b528ac7d15903e2c1
   languageName: node
   linkType: hard
 
@@ -3675,6 +3686,7 @@ __metadata:
     "@types/react": "npm:^18.3.11"
     "@types/react-dom": "npm:^18"
     "@types/react-gtm-module": "npm:^2.0.3"
+    "@types/styled-components": "npm:^5.1.34"
     accept-language: "npm:^3.0.20"
     axios: "npm:^1.7.7"
     classnames: "npm:^2.5.1"

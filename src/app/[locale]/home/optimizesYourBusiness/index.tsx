@@ -36,15 +36,19 @@ export const OptimizeYourBusiness: React.FC<OptimizesyourBusinessProps> = ({
             </div>
           </div>
           <div className={style["content__image"]}>
-            <Image
-              src={DevportalImage}
-              alt="Settings Image"
-              width={500}
-              height={500}
-              priority
-              className={style.image}
-              sizes="(max-width: 768px) 100vw, (max-width:1200px) 45vw"
-            />
+            <div className={style.image}>
+              <Image
+                src={DevportalImage}
+                alt="Settings Image"
+                width={500}
+                height={500}
+                priority
+                style={{
+                  width: "100%",
+                  height: "auto",
+                }}
+              />
+            </div>
           </div>
         </article>
       </Container>

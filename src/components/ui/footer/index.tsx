@@ -29,6 +29,9 @@ export const Footer = () => {
               width={228}
               height={71}
               alt="Veecode Plataform"
+              style={{
+                height: "auto",
+              }}
               className={style.logo}
             />
             <ul className={style.items}>

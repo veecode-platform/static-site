@@ -2,7 +2,8 @@ import { DefaultPage, FaqList } from "@/components";
 import { routing } from "@/i18n/routing";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import style from "./ContactUsStyles.module.scss";
-import { FormElement } from "@/components/ui/formElement/FormElement";
+import { FormElement } from "./ui/FormElement";
+import Image from "next/image";
 
 const flowImage = "/assets/icons/contact_form_img.png";
 
@@ -53,7 +54,17 @@ export default async function ContactUsPage({ params: { locale } }: Props) {
       <section className={style.content}>
         <div className={style.content__options}>
           <div className={style["content__options-decoration"]}>
-            <img src={flowImage} alt="contact us image" />
+            <Image
+              src={flowImage}
+              alt="contact us image"
+              width={653}
+              height={653}
+              style={{
+                width: "100%",
+                height: "auto",
+              }}
+              priority
+            />
           </div>
 
           <div className={style["content__options-formWraper"]}>
