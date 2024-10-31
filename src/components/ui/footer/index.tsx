@@ -10,6 +10,7 @@ import {
   RiLinkedinBoxFill,
   RiYoutubeFill,
   RiDiscordFill,
+  // RiFacebookBoxFill,
 } from "react-icons/ri";
 import Image from "next/image";
 
@@ -36,12 +37,13 @@ export const Footer = () => {
             />
             <ul className={style.items}>
               {/* <li>
-                <Link href="https://web.facebook.com/veecodeplatform/" passHref target="_blank">
-
-                  <FaFacebookSquare/>
-
-                </Link>
-              </li>*/}
+                <ExternalLink
+                  description={a("external-links.instagram")}
+                  href="https://web.facebook.com/veecodeplatform/"
+                >
+                  <RiFacebookBoxFill />
+                </ExternalLink>
+              </li> */}
               <li>
                 <ExternalLink
                   description={a("external-links.instagram")}

@@ -35,11 +35,6 @@
             @include displayFlex(space-between, center, row);
         }
 
-        //2XL
-        @include for-2xl-only {
-            @include displayFlex(space-between, center, row);
-        }
-
         &__logoAndSocial {
             @include screenSize(100%, 100%);
             @include displayFlex(center, center, column);
@@ -47,7 +42,8 @@
 
             // XL
             @include for-xl-only {
-                @include screenSize(40%, 100%);
+                @include screenSize(auto, 100%);
+                @include displayFlex(center, flex-start, column);
             }
 
             .logo {
@@ -71,7 +67,8 @@
 
                 // xl
                 @include for-xl-only {
-                    width: 12vw;
+                    width: auto;
+                    margin: auto;
                 }
 
                 li {
@@ -111,7 +108,6 @@
                 //xl
                 @include for-xl-only {
                     @include displayFlex(space-between, flex-start, row);
-                    margin-top: 2rem;
                 }
 
                 ul {
