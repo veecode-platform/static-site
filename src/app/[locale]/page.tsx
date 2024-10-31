@@ -1,4 +1,4 @@
-import { Footer, Header } from "@/components";
+import { Chatbot, Footer, Header } from "@/components";
 import { setRequestLocale } from "next-intl/server";
 import { TransformTeamSection } from "./home/transformTeamSection";
 import { OptimizeYourBusiness } from "./home/optimizesYourBusiness";
@@ -122,6 +122,7 @@ export default async function Homepage({ params: { locale } }: Props) {
         supportItems={supportItems}
       />
       <Footer />
+      <Chatbot />
     </main>
   );
 }

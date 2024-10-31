@@ -38,7 +38,7 @@
             @include displayFlex(center, flex-start, column);
         }
 
-        &_text {
+        &__text {
             @include screenSize(100%, auto);
             @include displayFlex(center, center, column);
             padding: 5rem 0;
@@ -89,7 +89,7 @@
             }
         }
 
-        &_cardsSection {
+        &__cardsSection {
             @include screenSize(100%, auto);
             @include displayFlex(center, flex-start, column);
 
@@ -131,7 +131,7 @@
                         gap: 3rem;
                     }
 
-                    &_icon {
+                    &__icon {
                         width: 85px;
 
                         // lg
@@ -145,7 +145,7 @@
                         }
                     }
 
-                    &_desc {
+                    &__desc {
                         width: 100%;
                         @include bodyCard(center);
 

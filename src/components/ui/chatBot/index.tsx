@@ -9,14 +9,20 @@ export const Chatbot = () => {
   const pathname = usePathname();
 
   React.useEffect(() => {
-    if (pathname === "/") {
+    if (pathname === "/" && typeof window !== "undefined") {
       const script = document.createElement("script");
-      script.defer = true;
-      script.type = "text/javascript";
       script.src = "https://cdn.leadster.com.br/neurolead/neurolead.min.js";
+      script.async = true;
+      script.onload = () => {
+        if (window) {
+          window.neuroleadId = NEUROLEAD_ID;
+        }
+      };
       document.head.appendChild(script);
 
-      window.neuroleadId = NEUROLEAD_ID;
+      return () => {
+        document.head.removeChild(script);
+      };
     }
   }, [pathname]);
 

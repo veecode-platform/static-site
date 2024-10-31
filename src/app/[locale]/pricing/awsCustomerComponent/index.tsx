@@ -1,3 +1,4 @@
+import Image from "next/image";
 import style from "./awsCustomerComponent.module.scss";
 import CardAwsContent from "./cardAwsContent";
 import { cardAwsContentProps } from "./types";
@@ -12,11 +13,19 @@ const AwsCustomerComponent: React.FC<cardAwsContentProps> = ({
   return (
     <div className={style.content}>
       <div className={style.content__titleWrapper}>
-        <img
-          src={AwsMarketPlaceLogo}
-          alt=""
-          className={style.awsMarketplaceLogo}
-        />
+        <div className={style.awsMarketplaceLogo}>
+          <Image
+            src={AwsMarketPlaceLogo}
+            alt=""
+            width={320}
+            height={111}
+            priority
+            style={{
+              width: "100%",
+              height: "auto",
+            }}
+          />
+        </div>
         <h3 className={style.awsTitle}>{title}</h3>
       </div>
       <div className={style.content__awsSubtitle}>

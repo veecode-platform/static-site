@@ -8,7 +8,7 @@ import { useRouter } from "@/i18n/routing";
 import { useSearchParams } from "next/navigation";
 import { UsePostData } from "@/hooks/usePostData";
 import TagManager from "react-gtm-module";
-import { Checkbox, Input } from "@/components/patterns/input";
+import { Checkbox, Input } from "@/components/ui/patterns/input";
 import { Button } from "@/components";
 import { useTranslations } from "next-intl";
 

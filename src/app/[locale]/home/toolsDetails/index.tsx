@@ -33,14 +33,19 @@ export const ToolsDetails: React.FC<toolsDetailsProps> = ({
             <div className={style["wrapper_cardsWrapper-cards"]}>
               {tools.map((item) => (
                 <div key={item.id} className={style.card}>
-                  <Image
-                    src={item.icon}
-                    alt=""
-                    width={80}
-                    height={80}
-                    priority
-                    className={style.card__icon}
-                  />
+                  <div className={style.card__icon}>
+                    <Image
+                      src={item.icon}
+                      alt=""
+                      width={80}
+                      height={80}
+                      priority
+                      style={{
+                        width: "100%",
+                        height: "auto",
+                      }}
+                    />
+                  </div>
                   <div className={style.card__text}>
                     <p>{item.desc}</p>
                   </div>

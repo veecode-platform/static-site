@@ -47,6 +47,10 @@ export const Header: React.FC<HeaderProps> = ({
                   alt="VeeCode Plataform Logo"
                   width={200}
                   height={62}
+                  style={{
+                    width: "100%",
+                    height: "auto",
+                  }}
                   className={style.logo}
                 />
                 <Image
@@ -55,6 +59,10 @@ export const Header: React.FC<HeaderProps> = ({
                   alt="VeeCode Plataform Logo"
                   width={34}
                   height={48}
+                  style={{
+                    width: "100%",
+                    height: "auto",
+                  }}
                   className={style.logoMobile}
                 />
               </NavigationLink>

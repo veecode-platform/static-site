@@ -12,7 +12,7 @@ import { useTranslations } from "next-intl";
 import { useRouter, useSearchParams } from "next/navigation";
 import { Button, NavigationLink } from "@/components";
 import { UseContactData } from "@/hooks/useContactData";
-import { Checkbox, Input } from "@/components/patterns/input";
+import { Checkbox, Input } from "@/components/ui/patterns/input";
 import {
   Dialog,
   DialogContent,
