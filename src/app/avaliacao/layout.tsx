@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import "../global.scss";
 import { Poppins } from "next/font/google";
 
+const thumbnailImageUrl =
+  "https://cdn.platform.vee.codes/landing-page/thumbnail.png";
+
 const poppins = Poppins({
   subsets: ["latin"],
   display: "swap",
@@ -26,7 +29,7 @@ export const metadata: Metadata = {
   description: "Nível de adoção de práticas de Platform Engineering",
   keywords: ["Avaliacao", "VeeCode", "Devportal", "Backstage"],
   openGraph: {
-    images: [`${process.env.HOST_URL}/thumbnail.png`],
+    images: thumbnailImageUrl,
   },
   robots: {
     index: true,
