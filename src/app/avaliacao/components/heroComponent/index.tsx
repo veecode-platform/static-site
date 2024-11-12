@@ -1,6 +1,7 @@
 import { Container } from "@/components";
 import style from "./HeroComponentStyles.module.scss";
 import Image from "next/image";
+import Link from "next/link";
 
 const VeeCodeImg = "/assets/avaliacao/logo-rotate.png";
 
@@ -21,11 +22,14 @@ export const HeroComponent = () => {
               Preencha nosso formulário e receba insights sobre como fortalecer
               o potencial do seu time de TI.
             </p>
+
             <button
               className={style["content__text-button"]}
               aria-label="Fazer avaliação"
             >
-              Avaliação
+              <Link href="https://docs.google.com/forms/d/e/1FAIpQLSc_afWLVhssuQCBh9XlGIJcqlT4ignKL9gKN3xYSGDtRoyDog/viewform">
+                Avaliação
+              </Link>
             </button>
           </div>
         </div>

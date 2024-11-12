@@ -3,23 +3,44 @@
 .wrapper {
     @include screenSize(100vw, calc(100vh - $headerHeight));
     @include displayFlex(center, center, column);
+    overflow-y: hidden;
     position: relative;
 
     .content {
-        @include screenSize(60%, 100%);
+        @include screenSize(100%, 100%);
+
+        // lg
+        @include for-xl-only {
+            @include screenSize(60%, 100%);
+        }
 
         &__text {
-            width: 80%;
-            // padding: 10rem 0;
-            @include displayFlex(center, flex-start, column);
+            @include screenSize(100%, 100%);
+            @include displayFlex(center, center, column);
             gap: 2rem;
 
+            // md
+            @include for-md-only {
+                width: 80%;
+                @include displayFlex(center, flex-start, column);
+            }
+
             &-title {
-                @include titleXL(left);
+                @include titleXL(center);
+
+                //md
+                @include for-md-only {
+                    text-align: left
+                }
             }
 
             &-details {
-                @include text(left);
+                @include text(center);
+
+                //md
+                @include for-md-only {
+                    text-align: left
+                }
             }
 
             &-button {
@@ -40,10 +61,23 @@
         position: absolute;
         top: -25rem;
         right: -2rem;
+        opacity: 0.1;
+        z-index: -1;
+
+        // md
+        @include for-md-only {
+            opacity: 0.3;
+        }
+
+        // xl
+        @include for-xl-only {
+            opacity: 1;
+            z-index: 0;
+        }
     }
 
     .secondLogo {
-        position: absolute;
+        @extend .firstLogo;
         top: 21rem;
         right: 5rem;
     }
