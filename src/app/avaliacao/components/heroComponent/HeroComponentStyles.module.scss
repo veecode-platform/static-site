@@ -53,6 +53,9 @@
                 font-weight: bold;
                 cursor: pointer;
 
+                a {
+                    color: $color3 !important;
+                }
             }
         }
     }
