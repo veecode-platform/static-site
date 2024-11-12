@@ -47,6 +47,26 @@ $font-body: 16px;
 *
 */
 
+@mixin titleXL($align) {
+  @include typography(2.5rem, $align, 3rem, 600);
+  letter-spacing: 0.5px;
+
+  /* sm */
+  @include for-sm-only {
+    @include typography(2.75rem, $align, 3.25rem, 600);
+  }
+
+  /* md */
+  @include for-md-only {
+    @include typography(3rem, $align, 3.5rem, 600);
+  }
+
+  /* lg */
+  @include for-lg-only {
+    @include typography(3.25rem, $align, 3.75rem, 600);
+  }
+}
+
 @mixin titleMain($align) {
   @include typography(1.5rem, $align, 2rem, 700);
   letter-spacing: 0.5px;
