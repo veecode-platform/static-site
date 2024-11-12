@@ -22,7 +22,7 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "VeeCode Platform | Persona",
+  title: "VeeCode Platform | Avaliacao",
   description: "Nível de adoção de práticas de Platform Engineering",
   keywords: ["persona", "VeeCode", "Devportal", "Backstage"],
   openGraph: {
