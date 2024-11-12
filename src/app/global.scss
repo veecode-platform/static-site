@@ -1,4 +1,5 @@
 @import '../abstract/abstract';
+@import 'highlight.js/styles/github-dark.css';
 
 html,
 * {
@@ -40,14 +41,9 @@ body {
 
 a {
   text-decoration: none;
-  // color: $color2;
+  color: $color2;
 
   &:visited {
     color: inherit;
   }
-}
-
-img {
-  object-fit: cover !important;
-  height: auto
 }
