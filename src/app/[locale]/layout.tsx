@@ -4,6 +4,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { routing } from "@/i18n/routing";
 import { LANGUAGES } from "@/utils/constants/languages";
 import { notFound } from "next/navigation";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import "./global.scss";
 
 const thumbnailImageUrl =
@@ -87,6 +88,7 @@ export default async function LocaleLayout({
   return (
     <html lang={locale}>
       <body className={`${poppins.variable}`}>
+        <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_ANALYTICS_ID!} />
         <NextIntlClientProvider locale={locale} messages={messages}>
           {children}
         </NextIntlClientProvider>
