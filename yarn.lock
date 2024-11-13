@@ -912,6 +912,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@next/third-parties@npm:^15.0.3":
+  version: 15.0.3
+  resolution: "@next/third-parties@npm:15.0.3"
+  dependencies:
+    third-party-capital: "npm:1.0.20"
+  peerDependencies:
+    next: ^13.0.0 || ^14.0.0 || ^15.0.0
+    react: ^18.2.0 || 19.0.0-rc-66855b96-20241106
+  checksum: 10/9f64a448ac500bb506905dcec964dafd0380701e15b9f95d8f0a0fdcdbb7f535faace659a1f9d8e0dc2afdaaa08b873681bf220d2767554ac9edcb178d0fc23a
+  languageName: node
+  linkType: hard
+
 "@nodelib/fs.scandir@npm:2.1.5":
   version: 2.1.5
   resolution: "@nodelib/fs.scandir@npm:2.1.5"
@@ -3682,6 +3694,7 @@ __metadata:
     "@lottiefiles/dotlottie-react": "npm:^0.9.0"
     "@mui/icons-material": "npm:^6.1.2"
     "@mui/material": "npm:^6.1.2"
+    "@next/third-parties": "npm:^15.0.3"
     "@types/node": "npm:^22.7.4"
     "@types/react": "npm:^18.3.11"
     "@types/react-dom": "npm:^18"
@@ -5597,6 +5610,13 @@ __metadata:
   version: 0.2.0
   resolution: "text-table@npm:0.2.0"
   checksum: 10/4383b5baaeffa9bb4cda2ac33a4aa2e6d1f8aaf811848bf73513a9b88fd76372dc461f6fd6d2e9cb5100f48b473be32c6f95bd983509b7d92bb4d92c10747452
+  languageName: node
+  linkType: hard
+
+"third-party-capital@npm:1.0.20":
+  version: 1.0.20
+  resolution: "third-party-capital@npm:1.0.20"
+  checksum: 10/40e2531b428a21f05531fc62ef82859c0071211eff09588baf75d4b525096bbdb4f93e17e2d538849db8d4fc3cceb074933d7be59fddc26f86718fbbe852a97f
   languageName: node
   linkType: hard
 
