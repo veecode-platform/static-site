@@ -1,28 +1,9 @@
 import type { Metadata } from "next";
 import "../global.scss";
-import { Poppins } from "next/font/google";
+import { poppins } from "@/font";
 
 const thumbnailImageUrl =
   "https://cdn.platform.vee.codes/landing-page/thumbnail.png";
-
-const poppins = Poppins({
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-poppins",
-  weight: [
-    "100",
-    "200",
-    "300",
-    "400",
-    "500",
-    "600",
-    "500",
-    "600",
-    "700",
-    "800",
-    "900",
-  ],
-});
 
 export const metadata: Metadata = {
   title: "VeeCode Platform | Avaliacao",
@@ -43,14 +24,14 @@ export const metadata: Metadata = {
   },
 };
 
-export default function PersonaLayout({
+export default function AvaliacaoLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
     <html lang="pt">
-      <body className={`${poppins.variable}`}>{children}</body>
+      <body className={poppins.className}>{children}</body>
     </html>
   );
 }

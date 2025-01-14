@@ -1,4 +1,3 @@
-import { Poppins } from "next/font/google";
 import { NextIntlClientProvider } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { routing } from "@/i18n/routing";
@@ -6,28 +5,10 @@ import { LANGUAGES } from "@/utils/constants/languages";
 import { notFound } from "next/navigation";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import "./global.scss";
+import { poppins } from "@/font";
 
 const thumbnailImageUrl =
   "https://cdn.platform.vee.codes/landing-page/thumbnail.png";
-
-const poppins = Poppins({
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-poppins",
-  weight: [
-    "100",
-    "200",
-    "300",
-    "400",
-    "500",
-    "600",
-    "500",
-    "600",
-    "700",
-    "800",
-    "900",
-  ],
-});
 
 type Props = {
   children: React.ReactNode;
@@ -87,7 +68,7 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale}>
-      <body className={`${poppins.variable}`}>
+      <body className={poppins.className}>
         <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_ANALYTICS_ID!} />
         <NextIntlClientProvider locale={locale} messages={messages}>
           {children}
