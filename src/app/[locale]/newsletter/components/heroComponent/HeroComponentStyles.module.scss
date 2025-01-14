@@ -56,6 +56,11 @@
                 @include for-xl-only {
                     text-align: left;
                 }
+
+                // 2xl
+                @include for-2xl-only {
+                    width: 85%
+                }
             }
 
             &-button {
