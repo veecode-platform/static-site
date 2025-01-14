@@ -6,4 +6,5 @@ export interface ButtonProps
   alt?: boolean;
   headerButton?: boolean;
   handleClick?: () => void;
+  size?: 'sm' | 'md' | 'lg';
 }

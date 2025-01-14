@@ -10,6 +10,7 @@ export const Button: React.FC<ButtonProps> = ({
   alt,
   headerButton,
   handleClick,
+  size = 'md',
 }) => {
   return (
     <button
@@ -18,6 +19,9 @@ export const Button: React.FC<ButtonProps> = ({
       className={classNames({
         [style.button]: !modal,
         [style.buttonModal]: modal,
+        [style.buttonMd] : size === 'md',
+        [style.buttonSm] : size === 'sm',
+        [style.buttonLg] : size === 'lg',
       })}
       style={
         alt

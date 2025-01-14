@@ -10,7 +10,7 @@ export const EmailInput = () => {
       </span>
       <div className={style.field__actions}>
         <input type="email" className={style.input} />
-        <Button>
+        <Button size="sm">
           <span className={style.buttonLabel}>
             <RiMailSendLine /> Assinar
           </span>

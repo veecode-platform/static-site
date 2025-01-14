@@ -54,6 +54,7 @@
 
                 //xl
                 @include for-xl-only {
+                    width: 80%;
                     text-align: left;
                 }
 
@@ -88,6 +89,8 @@
         @include for-xl-only {
             opacity: 1;
             z-index: 0;
+            min-width: auto;
+            width: 45vw;
         }
     }
 }

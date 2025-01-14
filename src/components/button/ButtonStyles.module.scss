@@ -32,6 +32,20 @@
     }
 }
 
+.buttonLg {
+    @extend .button;
+}
+
+.buttonMd {
+    @extend .button;
+}
+
+.buttonSm {
+    font-weight: 500;
+    padding: 0.9em 1.2em;
+    min-width: auto;
+}
+
 .buttonModal {
     @extend .button;
     color: #FFF;
