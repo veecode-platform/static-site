@@ -1,0 +1,78 @@
+@import "../../../../../abstract/abstract";
+
+.wrapper {
+    @include screenSize(100vw, auto);
+    @include displayFlex(flex-start, center, column-reverse);
+    position: relative;
+    padding: 2rem .6rem;
+
+    .content {
+        @include screenSize(100%, auto);
+
+        // lg
+        @include for-xl-only {
+            @include screenSize(60%, 100%);
+        }
+
+        &__text {
+            @include screenSize(100%, 100%);
+            @include displayFlex(center, center, column);
+            gap: 2rem;
+
+            // md
+            @include for-md-only {
+                width: 80%;
+                @include displayFlex(center, flex-start, column);
+            }
+
+            &-title {
+                @include titleXL(center);
+
+                //md
+                @include for-md-only {
+                    text-align: left
+                }
+            }
+
+            &-details {
+                @include text(center);
+
+                //md
+                @include for-md-only {
+                    text-align: left
+                }
+            }
+
+            &-button {
+                outline: none;
+                border: 5px solid $color1;
+                background-color: transparent;
+                padding: .8rem 2rem;
+                border-radius: 15px;
+                font-size: 1.25rem;
+                font-weight: bold;
+                cursor: pointer;
+
+                a {
+                    color: $color3 !important;
+                }
+            }
+        }
+    }
+
+    .chatImageStyle {
+        width: 40vw;
+        min-width: 200px;
+
+        // md
+        @include for-md-only {
+            opacity: 0.3;
+        }
+
+        // xl
+        @include for-xl-only {
+            opacity: 1;
+            z-index: 0;
+        }
+    }
+}

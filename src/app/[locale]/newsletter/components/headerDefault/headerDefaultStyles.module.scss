@@ -1,0 +1,85 @@
+@import "../../../../../abstract/abstract";
+
+.wrapper {
+    @include screenSize(100vw, auto);
+    @include displayFlex(center, center, row);
+    background-color: $color3;
+    z-index: 99;
+    position: relative;
+
+    a {
+        color: $color2;
+        transition: all 0.5s linear;
+
+        &:visited {
+            color: $color2;
+        }
+
+        &:hover {
+            transition: all 0.5s ease-in-out;
+            color: $color1;
+        }
+
+        &:active {
+            color: $color1;
+        }
+    }
+
+    .content {
+        @include screenSize(100%, 80px);
+        @include displayFlex(space-between, center, row);
+        padding: .5rem 0;
+        z-index: 999;
+        transition: all .5s ease-in;
+
+        &__logo {
+            position: relative;
+
+            .logo {
+                display: none;
+
+                //md
+                @include for-md-only {
+                    display: flex;
+                    @include navbarLogo();
+                    max-width: 206px;
+                }
+            }
+
+            .logoMobile {
+                @include navbarLogo();
+
+                //md
+                @include for-md-only {
+                    display: none
+                }
+            }
+        }
+
+        &__contactUs {
+            color: white;
+
+            a {
+                @include textNavbar();
+                cursor: pointer;
+
+                &:hover {
+                    color: $color2 !important;
+                }
+
+                &::before {
+                    content: "{";
+                    color: $color1;
+                    font-weight: bold;
+                }
+
+                &::after {
+                    content: "}";
+                    color: $color1;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+
+}
