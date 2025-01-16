@@ -8,7 +8,7 @@ import { object, string } from "yup";
 
 export const EmailInput = () => {
   const formSchema = object({
-    email: string().email("*E-mail inválido").required("*Verifique o e-mail inserido"),
+    email: string().email("*Verifique o e-mail inserido").required("*O E-mail é obrigatório"),
   });
 
   return (
