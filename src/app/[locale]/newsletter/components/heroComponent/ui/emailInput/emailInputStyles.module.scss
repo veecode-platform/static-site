@@ -41,6 +41,8 @@
         @include screenSize(100%, auto);
         @include displayFlex(center, center, column);
         gap: .8rem;
+        border: none;
+        outline: none;
 
         // xl
         @include for-xl-only {
@@ -56,6 +58,10 @@
             border-radius: 5px;
             font-size: 1.1rem;
 
+            &__error {
+                border: 1px solid $danger;
+            }
+
             // xl
             @include for-xl-only {
                 height: 56px;
@@ -69,6 +75,13 @@
             @include displayFlex(center, center, row);
             gap: .5rem
         }
+    }
+
+    .errors {
+        @include screenSize(100%, 42px);
+        color: $danger;
+        font-size: .7rem;
+        text-align: left;
     }
 
 }
