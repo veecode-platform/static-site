@@ -1,0 +1,32 @@
+@import "../../abstract/abstract";
+
+.root {
+    position: fixed;
+    top: 80px;
+    right: 0;
+    @include screenSize(600px, 70px);
+    border-radius: 10px 5px 10px 10px;
+    transition: all .5s ease-in-out;
+    @include displayFlex('flex-start', 'center', 'row');
+    padding: .8rem;
+    gap: 1rem
+}
+
+.hide {
+    margin-right: -600px;
+    transition: all .5s ease-in-out;
+}
+
+.show {
+    margin-right: 5px;
+    transition: all .5s ease-in;
+}
+
+.success {
+    background: $success;
+}
+
+.error {
+    background: $dangerBg;
+    color: $danger;
+}
