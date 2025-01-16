@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
 import "../global.scss";
 import { poppins } from "@/font";
 
@@ -32,7 +31,9 @@ export default function NewsLetterLayout({
 }>) {
   return (
     <html lang="pt">
-      <body className={poppins.className}>{children}</body>
+      <body className={poppins.className}>
+        {children}
+        </body>
     </html>
   );
 }
