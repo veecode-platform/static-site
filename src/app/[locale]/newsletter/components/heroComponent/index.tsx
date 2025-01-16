@@ -1,7 +1,7 @@
 import { Container } from "@/components";
 import style from "./HeroComponentStyles.module.scss";
 import Image from "next/image";
-import { EmailInput } from "./emailInput";
+import { EmailInput } from "./ui/emailInput";
 
 const ChatImage = "/assets/newsletter/img.png";
 
