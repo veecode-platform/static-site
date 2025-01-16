@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { use } from "react";
 import { Button } from "@/components";
 import style from "./emailInputStyles.module.scss";
 import { RiMailSendLine } from "react-icons/ri";
@@ -8,6 +8,7 @@ import { Form, Formik } from "formik";
 import { object, string } from "yup";
 import { UseNewsletterData } from "@/hooks/useNewsLetter";
 import { EmailInputProps } from "./types";
+import { useRouter } from "@/i18n/routing";
 
 export const EmailInput : React.FC<EmailInputProps> = ({handleFeedback}) => {
 
@@ -15,19 +16,22 @@ export const EmailInput : React.FC<EmailInputProps> = ({handleFeedback}) => {
     email: string().email("*Verifique o e-mail inserido").required("*O E-mail é obrigatório"),
   });
 
+  const router = useRouter();
+
   return (
     <div className={style.field}>
       <span className={style.field__label}>Insira seu endereço de e-mail abaixo</span>
       <Formik
         initialValues={{ email: "" }}
         validationSchema={formSchema}
-        onSubmit={async (values) => {
+        onSubmit={async (values, {resetForm}) => {
           try{
-            // await UseNewsletterData(values.email);
+            await UseNewsletterData(values.email);
             console.log(values);
             handleFeedback("create",{variant: "success", message: "Sua resposta foi registrada com sucesso!"});
             setTimeout(()=>{handleFeedback("remove",{variant: null, message: ""})}, 5000);
-
+            resetForm();
+            router.push("/");
           } catch (error) {
             console.log("ERRO NO TRY CATCH", error)
             handleFeedback("create",{variant: "error", message: "Houve um erro, tente novamente"});
