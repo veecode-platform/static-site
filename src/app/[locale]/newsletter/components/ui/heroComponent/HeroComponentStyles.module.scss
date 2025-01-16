@@ -1,0 +1,96 @@
+@import "../../../../../../abstract/abstract";
+
+.wrapper {
+    @include screenSize(100vw, auto);
+    @include displayFlex(flex-start, center, column-reverse);
+    position: relative;
+    padding: 2rem .6rem;
+
+    // xl
+    @include for-xl-only {
+        @include screenSize(100vw, calc(100vh - 80px));
+        @include displayFlex(space-between, center, row);
+        max-width: $maxWidthDefault;
+        margin: auto;
+        padding: 2rem 0rem;
+    }
+
+    .content {
+        @include screenSize(100%, auto);
+
+        // lg
+        @include for-lg-only {
+            @include screenSize(80%, 100%);
+            margin: auto
+        }
+
+        &__text {
+            @include screenSize(100%, 100%);
+            @include displayFlex(center, center, column);
+            gap: 2rem;
+
+            // xl
+            @include for-xl-only {
+                align-items: flex-start
+            }
+
+            &-title {
+                @include titleXL(center);
+
+                // xl
+                @include for-xl-only {
+                    width: 75%;
+                    text-align: left;
+                }
+
+                // 2xl
+                @include for-2xl-only {
+                    width: 85%
+                }
+            }
+
+            &-details {
+                @include text(center);
+
+                //xl
+                @include for-xl-only {
+                    width: 80%;
+                    text-align: left;
+                }
+
+                // 2xl
+                @include for-2xl-only {
+                    width: 85%
+                }
+            }
+
+            &-button {
+                outline: none;
+                border: 5px solid $color1;
+                background-color: transparent;
+                padding: .8rem 2rem;
+                border-radius: 15px;
+                font-size: 1.25rem;
+                font-weight: bold;
+                cursor: pointer;
+
+                a {
+                    color: $color3 !important;
+                }
+            }
+        }
+    }
+
+    .chatImageStyle {
+        width: 40vw;
+        min-width: 200px;
+
+        // xl
+        @include for-xl-only {
+            opacity: 1;
+            z-index: 0;
+            min-width: auto;
+            width: 45vw;
+        }
+    }
+}
