@@ -13,3 +13,4 @@ export { SwitchLanguage } from "./ui/switchLanguage";
 export { FaqList } from "./ui/faqList";
 export { Chatbot } from "./ui/chatBot";
 export { ScrollTop } from "./ui/scrollTop";
+export { Feedback } from "./feedback";
