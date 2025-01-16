@@ -1,25 +1,40 @@
 @import "../../abstract/abstract";
 
 .root {
-    position: fixed;
+    @include screenSize(100vw, 70px);
+    position: absolute;
     top: 80px;
     right: 0;
-    @include screenSize(600px, 70px);
     border-radius: 10px 5px 10px 10px;
     transition: all .5s ease-in-out;
     @include displayFlex('flex-start', 'center', 'row');
     padding: .8rem;
-    gap: 1rem
+    gap: 1rem;
+
+    // md
+    @include for-md-only {
+        @include screenSize(600px, 70px);
+    }
 }
 
 .hide {
-    margin-right: -600px;
+    margin-right: -100vw;
     transition: all .5s ease-in-out;
+
+    // md
+    @include for-md-only {
+        margin-right: -600px;
+    }
 }
 
 .show {
-    margin-right: 5px;
+    margin-right: 0px;
     transition: all .5s ease-in;
+
+    // md
+    @include for-md-only {
+        margin-right: 1px;
+    }
 }
 
 .success {
