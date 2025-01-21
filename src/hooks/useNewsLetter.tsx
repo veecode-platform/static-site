@@ -7,9 +7,7 @@ export const UseNewsletterData = async (email: string) => {
       email
     };
 
-    const { data } = await api.post("/contacts", body);
-
-    console.log("RESPOSTA DO USENEWSNETTER", data);
+    const { data } = await api.post("/newsletter", body);
 
     return data;
   } catch (error: any) {
