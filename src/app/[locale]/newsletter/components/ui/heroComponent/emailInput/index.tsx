@@ -31,7 +31,7 @@ export const EmailInput : React.FC<EmailInputProps> = ({handleFeedback}) => {
             handleFeedback("create",{variant: "success", message: "Sua resposta foi registrada com sucesso!"});
             setTimeout(()=>{handleFeedback("remove",{variant: null, message: ""})}, 5000);
             resetForm();
-            router.push("/");
+            setTimeout(()=>{router.push("/")}, 5000);
           } catch (error) {
             console.log("ERRO NO TRY CATCH", error)
             handleFeedback("create",{variant: "error", message: "Houve um erro, tente novamente"});
