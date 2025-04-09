@@ -1,8 +1,8 @@
-import { use } from 'react';
-import { useTranslations } from 'next-intl';
-import { setRequestLocale } from 'next-intl/server';
 import {
-  Chatbot, Footer, Header, 
+  getTranslations, setRequestLocale, 
+} from 'next-intl/server';
+import {
+  Chatbot, Footer, Header,
 } from '@/components';
 import { PageProps } from '@/utils/types/pageProps';
 import style from './home/HomeStyles.module.scss';
@@ -12,14 +12,12 @@ import { ToolsDetails } from './home/toolsDetails';
 import { TransformTeamSection } from './home/transformTeamSection';
 
 export default async function Homepage({ params }: PageProps) {
-  const { locale } = use(params);
+  const { locale } = await params;
   // Enable static rendering
   setRequestLocale(locale);
 
-  // const t = await getTranslations({ locale, namespace: "home" });
-  // const a = await getTranslations({ locale, namespace: "accessibility" });
-  const t = useTranslations('home');
-  const a = useTranslations('accessibility');
+  const t = await getTranslations({ locale, namespace: 'home' });
+  const a = await getTranslations({ locale, namespace: 'accessibility' });
 
   const tools = [
     {

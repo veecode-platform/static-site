@@ -1,5 +1,3 @@
-import { use } from 'react';
-import { useTranslations } from 'next-intl';
 import {
   getTranslations, setRequestLocale, 
 } from 'next-intl/server';
@@ -26,14 +24,13 @@ export function generateStaticParams() {
   return routing.locales.map(locale => ({ locale }));
 }
 
-export default function TermsOfServicePage({ params }: PageProps) {
-  const { locale } = use(params);
+export default async function TermsOfServicePage({ params }: PageProps) {
+  const { locale } = await params;
 
   // Enable static rendering
   setRequestLocale(locale);
 
-  // const t = await getTranslations({ locale, namespace: "termsOfService" });
-  const t = useTranslations('termsOfService');
+  const t = await getTranslations({ locale, namespace: 'termsOfService' });
 
   return (
     <DefaultPage titleBar title={t('title')} noPrevious showButton showOptions>

@@ -1,5 +1,3 @@
-import { use } from 'react';
-import { useTranslations } from 'next-intl';
 import {
   getTranslations, setRequestLocale, 
 } from 'next-intl/server';
@@ -27,16 +25,13 @@ export function generateStaticParams() {
   return routing.locales.map(locale => ({ locale }));
 }
 
-export default function FreePlanPage({ params }: PageProps) {
-  const { locale } = use(params);
+export default async function FreePlanPage({ params }: PageProps) {
+  const { locale } = await params;
   // Enable static rendering
   setRequestLocale(locale);
 
-  // const t = await getTranslations({ locale, namespace: "freePlan" });
-  // const a = await getTranslations({ locale, namespace: "accessibility" });
-
-  const t = useTranslations('freePlan');
-  const a = useTranslations('accessibility');
+  const t = await getTranslations({ locale, namespace: 'freePlan' });
+  const a = await getTranslations({ locale, namespace: 'accessibility' });
 
   return (
     <DefaultPage noFooter showButton={false}>

@@ -1,4 +1,3 @@
-import { use } from 'react';
 import { Locale } from 'next-intl';
 import { setRequestLocale } from 'next-intl/server';
 import { DefaultPage } from '@/components';
@@ -36,8 +35,8 @@ export async function generateStaticParams() {
   });
 }
 
-export default function PluginDocPage(props: Props) {
-  const { locale, path } = use(props.params);
+export default async function PluginDocPage(props: Props) {
+  const { locale, path } = await props.params;
   // Enable static rendering
   setRequestLocale(locale);
 

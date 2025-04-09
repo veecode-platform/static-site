@@ -1,5 +1,3 @@
-import { use } from 'react';
-import { useTranslations } from 'next-intl';
 import {
   getTranslations, setRequestLocale, 
 } from 'next-intl/server';
@@ -42,16 +40,14 @@ export function generateStaticParams() {
   return routing.locales.map(locale => ({ locale }));
 }
 
-export default function PricingPage({ params }: PageProps) {
-  const { locale } = use(params);
+export default async function PricingPage({ params }: PageProps) {
+  const { locale } = await params;
 
   // Enable static rendering
   setRequestLocale(locale);
 
-  // const t = await getTranslations({ locale, namespace: "pricing" });
-  // const a = await getTranslations({ locale, namespace: "accessibility" });
-  const t = useTranslations('pricing');
-  const a = useTranslations('accessibility');
+  const t = await getTranslations({ locale, namespace: 'pricing' });
+  const a = await getTranslations({ locale, namespace: 'accessibility' });
 
   const guaranteesCards = [
     {

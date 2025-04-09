@@ -1,5 +1,3 @@
-import { use } from 'react';
-import { useTranslations } from 'next-intl';
 import {
   getTranslations, setRequestLocale, 
 } from 'next-intl/server';
@@ -27,14 +25,13 @@ export function generateStaticParams() {
   return routing.locales.map(locale => ({ locale }));
 }
 
-export default function ValidatePage({ params }: PageProps) {
-  const { locale } = use(params);
+export default async function ValidatePage({ params }: PageProps) {
+  const { locale } = await params;
 
   // Enable static rendering
   setRequestLocale(locale);
 
-  // const t = await getTranslations({ locale, namespace: "validate" });
-  const t = useTranslations('validate');
+  const t = await getTranslations({ locale, namespace: 'validate' });
 
   return (
     <DefaultPage noFooter showButton={false}>

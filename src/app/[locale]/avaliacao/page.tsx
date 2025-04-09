@@ -1,4 +1,3 @@
-import { use } from 'react';
 import { setRequestLocale } from 'next-intl/server';
 import { PageProps } from '@/utils/types/pageProps';
 import {
@@ -12,8 +11,8 @@ export async function generateMetadata() {
   };
 }
 
-export default function AvaliacaoPage({ params }: PageProps) {
-  const { locale } = use(params);
+export default async function AvaliacaoPage({ params }: PageProps) {
+  const { locale } = await params;
 
   // Enable static rendering
   setRequestLocale(locale);
