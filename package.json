@@ -9,7 +9,8 @@
     "start": "next start",
     "static": "npx serve@latest out",
     "standalone": "node .next/standalone/server.js",
-    "eslint:fix": "npx eslint . --ext .js,.jsx,.ts,.tsx --fix"
+    "eslint:fix": "npx eslint . --ext .js,.jsx,.ts,.tsx --fix",
+    "deploy": "gh-pages -d out --dotfiles"
   },
   "dependencies": {
     "@emotion/react": "^11.13.3",
