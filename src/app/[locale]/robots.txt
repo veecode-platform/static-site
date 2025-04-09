@@ -12,8 +12,8 @@ Disallow: /404
 Disallow: /pricing
 
 # assets
-Disallow: /assets/default/
-Disallow: /assets/home/
-Disallow: /assets/howitworks/
-Disallow: /assets/icons/
-Disallow: /assets/notFound/
+Disallow: process.env.NEXT_PUBLIC_BASE_PATH/assets/default/
+Disallow: process.env.NEXT_PUBLIC_BASE_PATH/assets/home/
+Disallow: process.env.NEXT_PUBLIC_BASE_PATH/assets/howitworks/
+Disallow: process.env.NEXT_PUBLIC_BASE_PATH/assets/icons/
+Disallow: process.env.NEXT_PUBLIC_BASE_PATH/assets/notFound/

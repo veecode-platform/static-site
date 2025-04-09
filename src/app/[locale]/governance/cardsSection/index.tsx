@@ -2,9 +2,9 @@ import Image from 'next/image';
 import style from './cardsSectionStyles.module.scss';
 import { CardsSectionProps } from './types';
 
-const Icon1 = '/assets/governance/icon1.svg';
-const Icon2 = '/assets/governance/icon2.svg';
-const Icon3 = '/assets/governance/icon3.svg';
+const Icon1 = `${process.env.NEXT_PUBLIC_BASE_PATH}/assets/governance/icon1.svg`;
+const Icon2 = `${process.env.NEXT_PUBLIC_BASE_PATH}/assets/governance/icon2.svg`;
+const Icon3 = `${process.env.NEXT_PUBLIC_BASE_PATH}/assets/governance/icon3.svg`;
 
 export const CardsSection: React.FC<CardsSectionProps> = ({
   card1,

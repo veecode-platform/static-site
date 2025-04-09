@@ -2,7 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import style from './LoadingStyles.module.scss';
 
-const LoadingAnimation = '/assets/icons/loading.gif';
+const LoadingAnimation = `${process.env.NEXT_PUBLIC_BASE_PATH}/assets/icons/loading.gif`;
 
 export const Loading = () => {
   return (

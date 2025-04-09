@@ -5,7 +5,7 @@ import { Container } from '@/components';
 import style from './PageNotFoundStyles.module.scss';
 
 
-const ImageNotFound = '/assets/notFound/404.png';
+const ImageNotFound = `${process.env.NEXT_PUBLIC_BASE_PATH}/assets/notFound/404.png`;
 
 export const PageNotFound = () => {
   return (

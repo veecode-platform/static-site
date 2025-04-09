@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { Container } from '@/components';
 import style from './HeroComponentStyles.module.scss';
 
-const VeeCodeImg = '/assets/avaliacao/logo-rotate.png';
+const VeeCodeImg = `${process.env.NEXT_PUBLIC_BASE_PATH}/assets/avaliacao/logo-rotate.png`;
 
 export const HeroComponent = () => {
   return (

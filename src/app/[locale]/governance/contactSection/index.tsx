@@ -6,7 +6,7 @@ import {
 import style from './contactSectionStyles.module.scss';
 import { ContactSectionProps } from './types';
 
-const NotebookImg = '/assets/governance/notebook.svg';
+const NotebookImg = `${process.env.NEXT_PUBLIC_BASE_PATH}/assets/governance/notebook.svg`;
 
 export const ContactSection: React.FC<ContactSectionProps> = ({
   description,

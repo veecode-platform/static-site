@@ -11,16 +11,16 @@ import {
 import { CardItem } from './cardItem';
 import style from './HowItWorksStyles.module.scss';
 
-//assets
-const Icon1 = '/assets/howitworks/icon1.png';
-const Icon2 = '/assets/howitworks/icon2.png';
-const Icon3 = '/assets/howitworks/icon3.png';
-const Icon4 = '/assets/howitworks/icon4.png';
-const Icon5 = '/assets/howitworks/icon5.png';
-const Icon6 = '/assets/howitworks/icon6.png';
-const Icon7 = '/assets/howitworks/icon7.png';
-const Icon8 = '/assets/howitworks/icon8.png';
-const Icon9 = '/assets/howitworks/icon9.png';
+// assets
+const Icon1 = `${process.env.NEXT_PUBLIC_BASE_PATH}/assets/howitworks/icon1.png`;
+const Icon2 = `${process.env.NEXT_PUBLIC_BASE_PATH}/assets/howitworks/icon2.png`;
+const Icon3 = `${process.env.NEXT_PUBLIC_BASE_PATH}/assets/howitworks/icon3.png`;
+const Icon4 = `${process.env.NEXT_PUBLIC_BASE_PATH}/assets/howitworks/icon4.png`;
+const Icon5 = `${process.env.NEXT_PUBLIC_BASE_PATH}/assets/howitworks/icon5.png`;
+const Icon6 = `${process.env.NEXT_PUBLIC_BASE_PATH}/assets/howitworks/icon6.png`;
+const Icon7 = `${process.env.NEXT_PUBLIC_BASE_PATH}/assets/howitworks/icon7.png`;
+const Icon8 = `${process.env.NEXT_PUBLIC_BASE_PATH}/assets/howitworks/icon8.png`;
+const Icon9 = `${process.env.NEXT_PUBLIC_BASE_PATH}/assets/howitworks/icon9.png`;
 
 export async function generateMetadata(props: Omit<LayoutProps, 'children'>) {
   const { locale } = await props.params;

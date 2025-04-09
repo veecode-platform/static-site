@@ -12,7 +12,7 @@ import {
 import style from './ContactUsStyles.module.scss';
 import { FormElement } from './ui/FormElement';
 
-const flowImage = '/assets/icons/contact_form_img.png';
+const flowImage = `${process.env.NEXT_PUBLIC_BASE_PATH}/assets/icons/contact_form_img.png`;
 
 export async function generateMetadata(props: Omit<LayoutProps, 'children'>) {
   const { locale } = await props.params;

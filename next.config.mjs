@@ -6,7 +6,7 @@ const withNextIntl = createNextIntlPlugin();
 const nextConfig = {
   output: "export", // static,
   trailingSlash: true,
-  basePath: '/static-site', 
+  basePath: process.env.NEXT_PUBLIC_BASE_PATH || '',
   logging: {
     fetches: {
       hmrRefreshes: true,

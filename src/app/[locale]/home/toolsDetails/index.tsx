@@ -4,7 +4,7 @@ import { Container } from '@/components';
 import style from './ToolsDetails.module.scss';
 import { toolsDetailsProps } from './types';
 
-const Banner = '/assets/home/bglight.webp';
+const Banner = `${process.env.NEXT_PUBLIC_BASE_PATH}/assets/home/bglight.webp`;
 
 export const ToolsDetails: React.FC<toolsDetailsProps> = ({
   title,

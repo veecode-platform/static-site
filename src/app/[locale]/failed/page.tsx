@@ -11,7 +11,7 @@ import {
 } from '@/utils/types/pageProps';
 import style from './FailedStyles.module.scss';
 
-const FailedImage = '/assets/icons/failed.png';
+const FailedImage = `${process.env.NEXT_PUBLIC_BASE_PATH}/assets/icons/failed.png`;
 
 export async function generateMetadata(props: Omit<LayoutProps, 'children'>) {
   const { locale } = await props.params;
