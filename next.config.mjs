@@ -4,8 +4,8 @@ const withNextIntl = createNextIntlPlugin();
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // dynamic
-  output: "standalone",
+  // output: "standalone",   // dynamic
+  output: "export", // static
   logging: {
     fetches: {
       hmrRefreshes: true,
