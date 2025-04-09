@@ -10,7 +10,7 @@
     @include screenSize(100%, auto);
 
     .titleWrapper {
-      @include backgroundImage('#{process.env.NEXT_PUBLIC_BASE_PATH}/assets/default/banner.webp');
+      @include backgroundImage($basePath+'/assets/default/banner.webp');
       @include displayFlex(center, center, row);
       padding: 2.5em 0;
 

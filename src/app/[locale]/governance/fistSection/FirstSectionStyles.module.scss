@@ -3,7 +3,7 @@
 .firstSection {
     @include screenSize(100vw, auto);
     @include displayFlex(center, center, row);
-    @include backgroundImage("#{process.env.NEXT_PUBLIC_BASE_PATH}/assets/governance/banner1-mobile.png");
+    @include backgroundImage($basePath+"/assets/governance/banner1-mobile.png");
     background-position-x: 100%;
     padding: 10rem 0;
     min-height: 70vh;
@@ -16,7 +16,7 @@
 
     // lg
     @include for-lg-only {
-        @include backgroundImage("#{process.env.NEXT_PUBLIC_BASE_PATH}/assets/governance/banner1.png");
+        @include backgroundImage($basePath+"/assets/governance/banner1.png");
     }
 
     // xl
