@@ -57,6 +57,7 @@ export const HeroComponent = () => {
         width={750}
         height={750}
         className={style.chatImageStyle}
+        unoptimized
         style={{
           height: 'auto',
         }}

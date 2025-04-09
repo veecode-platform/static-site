@@ -35,6 +35,7 @@ export const Footer = () => {
               style={{
                 height: 'auto',
               }}
+              unoptimized
               className={style.logo}
             />
             <ul className={style.items}>

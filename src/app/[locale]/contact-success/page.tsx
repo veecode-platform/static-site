@@ -49,6 +49,7 @@ export default async function ContactSuccessPage({ params }: PageProps) {
             width: '100%',
             height: 'auto',
           }}
+          unoptimized
           className={style.content__image}
         />
         <div className={style.content__details}>

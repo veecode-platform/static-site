@@ -25,6 +25,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
             width: '100%',
             height: 'auto',
           }}
+          unoptimized
           className={style.content__image}
         />
         <div className={style.content__text}>

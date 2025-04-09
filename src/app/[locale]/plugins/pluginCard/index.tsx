@@ -27,6 +27,7 @@ export const PluginCard: React.FC<PluginsCardProps> = ({
                 width: '100%',
                 height: 'auto',
               }}
+              unoptimized
               priority
             />
           </div>

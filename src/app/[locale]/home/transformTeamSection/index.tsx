@@ -25,6 +25,7 @@ export const TransformTeamSection: React.FC<TransformTeamSectionProps> = ({
         height={500}
         sizes="100vw"
         priority
+        unoptimized
         className={style.bannerMobile}
       />
       {/* Banner Desktop */}
@@ -35,6 +36,7 @@ export const TransformTeamSection: React.FC<TransformTeamSectionProps> = ({
         height={500}
         sizes="100vw"
         priority
+        unoptimized
         className={style.bannerDesktop}
       />
 
@@ -64,6 +66,7 @@ export const TransformTeamSection: React.FC<TransformTeamSectionProps> = ({
                 width={500}
                 height={500}
                 priority
+                unoptimized
                 style={{
                   width: '100%',
                   height: 'auto',

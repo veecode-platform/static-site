@@ -21,6 +21,7 @@ export const ToolsDetails: React.FC<toolsDetailsProps> = ({
         height={500}
         sizes="100vw"
         priority
+        unoptimized
         className={style.banner}
       />
       <Container>
@@ -44,6 +45,7 @@ export const ToolsDetails: React.FC<toolsDetailsProps> = ({
                         width: '100%',
                         height: 'auto',
                       }}
+                      unoptimized
                     />
                   </div>
                   <div className={style.card__text}>

@@ -48,6 +48,7 @@ export default async function FailedPage({ params }: PageProps) {
               width: '100%',
               height: 'auto',
             }}
+            unoptimized
             className={style['content__image-img']}
           />
         </div>

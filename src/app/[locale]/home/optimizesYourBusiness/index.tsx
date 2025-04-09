@@ -20,6 +20,7 @@ export const OptimizeYourBusiness: React.FC<OptimizesyourBusinessProps> = ({
         sizes="100vw"
         priority
         className={style.banner}
+        unoptimized
       />
       <Container>
         <article className={style.content}>
@@ -47,6 +48,7 @@ export const OptimizeYourBusiness: React.FC<OptimizesyourBusinessProps> = ({
                   width: '100%',
                   height: 'auto',
                 }}
+                unoptimized
               />
             </div>
           </div>

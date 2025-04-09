@@ -27,6 +27,7 @@ export const HeaderDefault = () => {
                   width: '100%',
                   height: 'auto',
                 }}
+                unoptimized
                 className={style.logo}
               />
             </Link>
@@ -44,6 +45,7 @@ export const HeaderDefault = () => {
                   width: '100%',
                   height: 'auto',
                 }}
+                unoptimized
                 className={style.logoMobile}
               />
             </Link>

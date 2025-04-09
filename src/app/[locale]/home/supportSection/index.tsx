@@ -23,6 +23,7 @@ export const SupportSection: React.FC<SupportSectionProps> = ({
         height={500}
         sizes="100vw"
         priority
+        unoptimized
         className={style.bannerDesktop}
       />
       <Container>
@@ -52,6 +53,7 @@ export const SupportSection: React.FC<SupportSectionProps> = ({
                           width: '100%',
                           height: 'auto',
                         }}
+                        unoptimized
                       />
                     </div>
                     <div className={style.card__desc}>

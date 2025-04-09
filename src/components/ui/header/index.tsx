@@ -51,6 +51,7 @@ export const Header: React.FC<HeaderProps> = ({
                     width: '100%',
                     height: 'auto',
                   }}
+                  unoptimized
                   className={style.logo}
                 />
                 <Image
@@ -63,6 +64,7 @@ export const Header: React.FC<HeaderProps> = ({
                     width: '100%',
                     height: 'auto',
                   }}
+                  unoptimized
                   className={style.logoMobile}
                 />
               </NavigationLink>

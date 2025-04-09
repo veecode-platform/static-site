@@ -22,6 +22,7 @@ export const PageNotFound = () => {
               width: '100%',
               height: 'auto',
             }}
+            unoptimized
             className={style.content__img}
           />
           <div className={style.content__goBack}>

@@ -32,6 +32,7 @@ export const CardsSection: React.FC<CardsSectionProps> = ({
               width: '100%',
               height: 'auto',
             }}
+            unoptimized
             className={style.cardIcon}
           />
         </div>
@@ -50,6 +51,7 @@ export const CardsSection: React.FC<CardsSectionProps> = ({
               width: '100%',
               height: 'auto',
             }}
+            unoptimized
             className={style.cardIcon}
           />
         </div>
@@ -67,6 +69,7 @@ export const CardsSection: React.FC<CardsSectionProps> = ({
               width: '100%',
               height: 'auto',
             }}
+            unoptimized
             className={style.cardIcon}
           />
         </div>
@@ -85,6 +88,7 @@ export const CardsSection: React.FC<CardsSectionProps> = ({
               width: '100%',
               height: 'auto',
             }}
+            unoptimized
             className={style.cardIcon}
           />
           <div className={style.card__label}>
@@ -102,6 +106,7 @@ export const CardsSection: React.FC<CardsSectionProps> = ({
               width: '100%',
               height: 'auto',
             }}
+            unoptimized
             className={style.cardIcon}
           />
           <div className={style.card__label}>
@@ -119,6 +124,7 @@ export const CardsSection: React.FC<CardsSectionProps> = ({
               width: '100%',
               height: 'auto',
             }}
+            unoptimized
             className={style.cardIcon}
           />
           <div className={style.card__label}>

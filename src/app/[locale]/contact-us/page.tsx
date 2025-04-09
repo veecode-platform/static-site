@@ -67,6 +67,7 @@ export default async function ContactUsPage({ params }: PageProps) {
                 width: '100%',
                 height: 'auto',
               }}
+              unoptimized
               priority
             />
           </div>

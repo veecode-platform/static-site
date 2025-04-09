@@ -17,6 +17,7 @@ export const Card: React.FC<GuaranteeCardProps> = ({
           alt={title}
           width={160}
           height={158}
+          unoptimized
           style={{ width: '100%', height: 'auto' }}
         />
       </div>

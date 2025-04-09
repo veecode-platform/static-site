@@ -20,6 +20,7 @@ export const CardItem: React.FC<CardItemProps> = ({
             width: '100%',
             height: 'auto',
           }}
+          unoptimized
           className={style['cardItem__image-img']}
         />
       </div>

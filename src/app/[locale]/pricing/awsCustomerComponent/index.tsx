@@ -20,6 +20,7 @@ const AwsCustomerComponent: React.FC<cardAwsContentProps> = ({
             width={320}
             height={111}
             priority
+            unoptimized
             style={{
               width: '100%',
               height: 'auto',

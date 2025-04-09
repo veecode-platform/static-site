@@ -43,6 +43,7 @@ export const HeroComponent = () => {
         style={{
           height: 'auto',
         }}
+        unoptimized
       />
       <Image
         src={VeeCodeImg}
@@ -53,6 +54,7 @@ export const HeroComponent = () => {
         style={{
           height: 'auto',
         }}
+        unoptimized
       />
     </section>
   );

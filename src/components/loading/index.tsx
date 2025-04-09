@@ -17,6 +17,7 @@ export const Loading = () => {
           width: '100%',
           height: 'auto',
         }}
+        unoptimized
         className={style.loading__animation}
       />   
     </div>
