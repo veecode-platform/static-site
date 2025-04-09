@@ -18,81 +18,81 @@
 <url>
 <loc>http://localhost:3000/en/en/pricing/</loc>
 <xhtml:link rel="alternate" hreflang="en" href="http://localhost:3000/en/en/pricing/" />
-<xhtml:link rel="alternate" hreflang="pt" href="http://localhost:3000/pt/pt/planos/" />
+<xhtml:link rel="alternate" hreflang="pt" href="http://localhost:3000/pt/pt/pricing/" />
 </url>
 <url>
 <loc>http://localhost:3000/en/en/pricing/#plans/</loc>
 <xhtml:link rel="alternate" hreflang="en" href="http://localhost:3000/en/en/pricing/#plans/" />
-<xhtml:link rel="alternate" hreflang="pt" href="http://localhost:3000/pt/pt/planos/#plans/" />
+<xhtml:link rel="alternate" hreflang="pt" href="http://localhost:3000/pt/pt/pricing/#plans/" />
 </url>
 <url>
-<loc>http://localhost:3000/en/en/free-plan?plan=free/</loc>
-<xhtml:link rel="alternate" hreflang="en" href="http://localhost:3000/en/en/free-plan?plan=free/" />
-<xhtml:link rel="alternate" hreflang="pt" href="http://localhost:3000/pt/pt/plano-gratis?plan=free/" />
+<loc>http://localhost:3000/enfree-plan?plan=free/</loc>
+<xhtml:link rel="alternate" hreflang="en" href="http://localhost:3000/enfree-plan?plan=free/" />
+<xhtml:link rel="alternate" hreflang="pt" href="http://localhost:3000/ptfree-plan?plan=free/" />
 </url>
 <url>
 <loc>http://localhost:3000/en/en/contact-us/</loc>
 <xhtml:link rel="alternate" hreflang="en" href="http://localhost:3000/en/en/contact-us/" />
-<xhtml:link rel="alternate" hreflang="pt" href="http://localhost:3000/pt/pt/fale-conosco/" />
+<xhtml:link rel="alternate" hreflang="pt" href="http://localhost:3000/pt/pt/contact-us/" />
 </url>
 <url>
 <loc>http://localhost:3000/en/en/contact-success/</loc>
 <xhtml:link rel="alternate" hreflang="en" href="http://localhost:3000/en/en/contact-success/" />
-<xhtml:link rel="alternate" hreflang="pt" href="http://localhost:3000/pt/pt/contato-recebido/" />
+<xhtml:link rel="alternate" hreflang="pt" href="http://localhost:3000/pt/pt/contact-success/" />
 </url>
 <url>
 <loc>http://localhost:3000/en/en/contact-failed/</loc>
 <xhtml:link rel="alternate" hreflang="en" href="http://localhost:3000/en/en/contact-failed/" />
-<xhtml:link rel="alternate" hreflang="pt" href="http://localhost:3000/pt/pt/contato-falhado/" />
+<xhtml:link rel="alternate" hreflang="pt" href="http://localhost:3000/pt/pt/contact-failed/" />
 </url>
 <url>
 <loc>http://localhost:3000/en/en/how-it-works/</loc>
 <xhtml:link rel="alternate" hreflang="en" href="http://localhost:3000/en/en/how-it-works/" />
-<xhtml:link rel="alternate" hreflang="pt" href="http://localhost:3000/pt/pt/como-funciona/" />
+<xhtml:link rel="alternate" hreflang="pt" href="http://localhost:3000/pt/pt/how-it-works/" />
 </url>
 <url>
 <loc>http://localhost:3000/en/en/support/</loc>
 <xhtml:link rel="alternate" hreflang="en" href="http://localhost:3000/en/en/support/" />
-<xhtml:link rel="alternate" hreflang="pt" href="http://localhost:3000/pt/pt/suporte/" />
+<xhtml:link rel="alternate" hreflang="pt" href="http://localhost:3000/pt/pt/support/" />
 </url>
 <url>
 <loc>http://localhost:3000/en/en/terms-of-service/</loc>
 <xhtml:link rel="alternate" hreflang="en" href="http://localhost:3000/en/en/terms-of-service/" />
-<xhtml:link rel="alternate" hreflang="pt" href="http://localhost:3000/pt/pt/termos-de-servico/" />
+<xhtml:link rel="alternate" hreflang="pt" href="http://localhost:3000/pt/pt/terms-of-service/" />
 </url>
 <url>
 <loc>http://localhost:3000/en/en/privacy-policy/</loc>
 <xhtml:link rel="alternate" hreflang="en" href="http://localhost:3000/en/en/privacy-policy/" />
-<xhtml:link rel="alternate" hreflang="pt" href="http://localhost:3000/pt/pt/politica-de-privacidade/" />
+<xhtml:link rel="alternate" hreflang="pt" href="http://localhost:3000/pt/pt/privacy-policy/" />
 </url>
 <url>
 <loc>http://localhost:3000/en/en/faq/</loc>
 <xhtml:link rel="alternate" hreflang="en" href="http://localhost:3000/en/en/faq/" />
-<xhtml:link rel="alternate" hreflang="pt" href="http://localhost:3000/pt/pt/perguntas-frequentes/" />
+<xhtml:link rel="alternate" hreflang="pt" href="http://localhost:3000/pt/pt/faq/" />
 </url>
 <url>
 <loc>http://localhost:3000/en/en/success/</loc>
 <xhtml:link rel="alternate" hreflang="en" href="http://localhost:3000/en/en/success/" />
-<xhtml:link rel="alternate" hreflang="pt" href="http://localhost:3000/pt/pt/tudo-certo/" />
+<xhtml:link rel="alternate" hreflang="pt" href="http://localhost:3000/pt/pt/success/" />
 </url>
 <url>
 <loc>http://localhost:3000/en/en/failed/</loc>
 <xhtml:link rel="alternate" hreflang="en" href="http://localhost:3000/en/en/failed/" />
-<xhtml:link rel="alternate" hreflang="pt" href="http://localhost:3000/pt/pt/houve-um-erro/" />
+<xhtml:link rel="alternate" hreflang="pt" href="http://localhost:3000/pt/pt/failed/" />
 </url>
 <url>
 <loc>http://localhost:3000/en/en/validate/</loc>
 <xhtml:link rel="alternate" hreflang="en" href="http://localhost:3000/en/en/validate/" />
-<xhtml:link rel="alternate" hreflang="pt" href="http://localhost:3000/pt/pt/validacao/" />
+<xhtml:link rel="alternate" hreflang="pt" href="http://localhost:3000/pt/pt/validate/" />
 </url>
 <url>
 <loc>http://localhost:3000/en/en/validate?plan=standard/</loc>
 <xhtml:link rel="alternate" hreflang="en" href="http://localhost:3000/en/en/validate?plan=standard/" />
-<xhtml:link rel="alternate" hreflang="pt" href="http://localhost:3000/pt/pt/validacao?plan=standard/" />
+<xhtml:link rel="alternate" hreflang="pt" href="http://localhost:3000/pt/pt/validate?plan=standard/" />
 </url>
 <url>
 <loc>http://localhost:3000/en/en/governance/</loc>
 <xhtml:link rel="alternate" hreflang="en" href="http://localhost:3000/en/en/governance/" />
-<xhtml:link rel="alternate" hreflang="pt" href="http://localhost:3000/pt/pt/governancia/" />
+<xhtml:link rel="alternate" hreflang="pt" href="http://localhost:3000/pt/pt/governance/" />
 </url>
 </urlset>
