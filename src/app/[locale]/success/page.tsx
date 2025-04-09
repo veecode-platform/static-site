@@ -1,50 +1,69 @@
-import { Button, DefaultPage, NavigationLink } from "@/components";
-import { routing } from "@/i18n/routing";
-import { getTranslations, setRequestLocale } from "next-intl/server";
-import style from "./SuccessStyles.module.scss";
+import { use } from 'react';
+import Image from 'next/image';
+import { useTranslations } from 'next-intl';
+import {
+  getTranslations, setRequestLocale, 
+} from 'next-intl/server';
+import {
+  Button, DefaultPage, NavigationLink, 
+} from '@/components';
+import { routing } from '@/i18n/routing';
+import {
+  LayoutProps, PageProps, 
+} from '@/utils/types/pageProps';
+import style from './SuccessStyles.module.scss';
 
-const SuccessImage = "/assets/icons/success.png";
+const SuccessImage = '/assets/icons/success.png';
 
-type Props = {
-  params: { locale: string };
-};
-
-export async function generateMetadata({
-  params: { locale },
-}: Omit<Props, "children">) {
-  const t = await getTranslations({ locale, namespace: "metadata" });
+export async function generateMetadata(props: Omit<LayoutProps, 'children'>) {
+  const { locale } = await props.params;
+  const t = await getTranslations({ locale, namespace: 'metadata' });
 
   return {
-    title: t("success.title"),
-    description: t("success.description"),
+    title: t('success.title'),
+    description: t('success.description'),
   };
 }
 
 export function generateStaticParams() {
-  return routing.locales.map((locale) => ({ locale }));
+  return routing.locales.map(locale => ({ locale }));
 }
 
-export default async function SuccessPage({ params: { locale } }: Props) {
+export default function SuccessPage({ params }: PageProps) {
+  const { locale } = use(params);
+
   // Enable static rendering
   setRequestLocale(locale);
 
-  const t = await getTranslations({ locale, namespace: "feedback" });
+  // const t = await getTranslations({ locale, namespace: "feedback" });
+  const t = useTranslations('feedback');
 
   return (
     <DefaultPage noBack showOptions>
       <article className={style.content}>
         <div className={style.content__image}>
-          <img src={SuccessImage} alt="Success Animation" />
+          <Image
+            src={SuccessImage}
+            priority
+            alt="Success Animation"
+            width={200}
+            height={62}
+            style={{
+              width: '100%',
+              height: 'auto',
+            }}
+            className={style['content__image-img']}
+          />
         </div>
         <div className={style.content__details}>
-          {t.rich("payment.success", {
+          {t.rich('payment.success', {
             p: (chunks: any) => <p>{chunks}</p>,
           })}
         </div>
         <div className={style.content__buttonWrapper}>
           <NavigationLink href="/">
-            <Button aria-label={t("buttonLabelSuccess")}>
-              {t("buttonLabelSuccess")}
+            <Button aria-label={t('buttonLabelSuccess')}>
+              {t('buttonLabelSuccess')}
             </Button>
           </NavigationLink>
         </div>

@@ -1,4 +1,4 @@
-import { IFaq } from "../types";
+import { IFaq } from '../types';
 
 export interface AcordionItemProps {
   item: IFaq;

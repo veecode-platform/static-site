@@ -1,36 +1,37 @@
-"use client";
+'use client';
 
-import { ScrollTop } from "@/components";
-import { Remark } from "react-remark";
-import rehypeHighlight from "rehype-highlight";
-import rehypeSlug from "rehype-slug";
-import remarkGemoji from "remark-gemoji";
-import style from "./PluginContentStyles.module.scss";
-import React from "react";
-import convertUrlToRaw from "@/utils/helpers/convertUrlToRaw";
-import { PluginContentProps } from "./types";
+import React from 'react';
+import { Remark } from 'react-remark';
+import rehypeHighlight from 'rehype-highlight';
+import rehypeSlug from 'rehype-slug';
+import remarkGemoji from 'remark-gemoji';
+import { ScrollTop } from '@/components';
+import convertUrlToRaw from '@/utils/helpers/convertUrlToRaw';
+import style from './PluginContentStyles.module.scss';
+import { PluginContentProps } from './types';
 
 const LinkTag = ({ href, children }: { href: string; children: any }) => {
-  const label = children.join(" ");
+  const label = children.join(' ');
   return <a href={href}>{label}</a>;
 };
 
 export const PluginContent: React.FC<PluginContentProps> = ({ pluginData }) => {
-  const [content, setContent] = React.useState("");
+  const [content, setContent] = React.useState('');
 
   React.useEffect(() => {
     const rawUrl = convertUrlToRaw(pluginData!.url);
     if (rawUrl) {
       fetch(rawUrl)
-        .then((response) => response.text())
-        .then((data) => {
+        .then(response => response.text())
+        .then(data => {
           setContent(data);
         })
-        .catch((error) => {
-          console.error("Error:", error);
+        .catch(error => {
+          // eslint-disable-next-line no-console
+          console.error('Error:', error);
         });
     }
-  }, []);
+  }, [pluginData]);
 
   return (
     <>

@@ -10,7 +10,7 @@
         @include screenSize(25%, auto);
         @include displayFlex(center, center, row);
 
-        img {
+        &-img {
             @include screenSize(100%, auto);
             @include pulseAnimation();
         }

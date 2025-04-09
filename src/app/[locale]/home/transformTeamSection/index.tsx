@@ -1,11 +1,13 @@
-import style from "./TransformTeamSection.module.scss";
-import { Button, Container, ExternalLink } from "@/components";
-import type { TransformTeamSectionProps } from "./type";
-import Image from "next/image";
+import Image from 'next/image';
+import {
+  Button, Container, ExternalLink, 
+} from '@/components';
+import style from './TransformTeamSection.module.scss';
+import type { TransformTeamSectionProps } from './type';
 
-const ComputerImg = "/assets/home/notebook2.png";
-const BannerMobile = "/assets/home/banner-mobile.png";
-const BannerDesktop = "/assets/home/banner.webp";
+const ComputerImg = '/assets/home/notebook2.png';
+const BannerMobile = '/assets/home/banner-mobile.png';
+const BannerDesktop = '/assets/home/banner.webp';
 
 export const TransformTeamSection: React.FC<TransformTeamSectionProps> = ({
   title,
@@ -63,8 +65,8 @@ export const TransformTeamSection: React.FC<TransformTeamSectionProps> = ({
                 height={500}
                 priority
                 style={{
-                  width: "100%",
-                  height: "auto",
+                  width: '100%',
+                  height: 'auto',
                 }}
               />
             </div>

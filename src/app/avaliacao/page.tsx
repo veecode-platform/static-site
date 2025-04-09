@@ -1,6 +1,6 @@
-import { redirect } from "next/navigation";
+import { redirect } from 'next/navigation';
 
 export default function AvaliacaoPageRedirect() {
-  redirect(`/pt/avaliacao`);
+  redirect('/pt/avaliacao');
   return null;
 }

@@ -1,7 +1,9 @@
-import { Button, NavigationLink } from "@/components";
-import style from "./PluginCard.module.scss";
-import { PluginsCardProps } from "./types";
-import Image from "next/image";
+import Image from 'next/image';
+import {
+  Button, NavigationLink, 
+} from '@/components';
+import style from './PluginCard.module.scss';
+import { PluginsCardProps } from './types';
 
 export const PluginCard: React.FC<PluginsCardProps> = ({
   image,
@@ -14,7 +16,7 @@ export const PluginCard: React.FC<PluginsCardProps> = ({
   return (
     <div className={style.card}>
       <div className={style.card__content}>
-        <header className={style["card__content-header"]}>
+        <header className={style['card__content-header']}>
           <div className={style.icon}>
             <Image
               src={image}
@@ -22,8 +24,8 @@ export const PluginCard: React.FC<PluginsCardProps> = ({
               width={112}
               height={112}
               style={{
-                width: "100%",
-                height: "auto",
+                width: '100%',
+                height: 'auto',
               }}
               priority
             />
@@ -31,8 +33,8 @@ export const PluginCard: React.FC<PluginsCardProps> = ({
           <div className={style.titlebar}>
             <h2 className={style.titlebar__title}>{title}</h2>
             <div className={style.titlebar__tags}>
-              {tags.map((tag) => (
-                <span key={tag} className={style["titlebar__tags-chips"]}>
+              {tags.map(tag => (
+                <span key={tag} className={style['titlebar__tags-chips']}>
                   {tag}
                 </span>
               ))}
@@ -40,7 +42,7 @@ export const PluginCard: React.FC<PluginsCardProps> = ({
           </div>
         </header>
 
-        <div className={style["card__content-text"]}>
+        <div className={style['card__content-text']}>
           <p className={style.desc}>{desc}</p>
         </div>
       </div>

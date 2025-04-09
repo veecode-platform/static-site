@@ -1,6 +1,10 @@
-"use client";
+/* eslint-disable no-console */
+'use client';
 
-import { useEffect } from "react";
+import { useEffect } from 'react';
+import {
+  Button, DefaultPage, 
+} from '@/components';
 
 type Props = {
   error: Error;
@@ -12,5 +16,10 @@ export default function Error({ error, reset }: Props) {
     console.error(error);
   }, [error]);
 
-  return <h1>Error</h1>;
+  return <DefaultPage>
+    <h1>Error</h1>
+    <Button onClick={reset}>
+      Back
+    </Button>
+  </DefaultPage>;
 }

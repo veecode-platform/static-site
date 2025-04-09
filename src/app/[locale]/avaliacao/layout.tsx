@@ -1,14 +1,14 @@
-import type { Metadata } from "next";
-import "../global.scss";
-import { poppins } from "@/font";
+import { poppins } from '@/font';
+import type { Metadata } from 'next';
+import '../global.scss';
 
 const thumbnailImageUrl =
-  "https://cdn.platform.vee.codes/landing-page/thumbnail.png";
+  'https://cdn.platform.vee.codes/landing-page/thumbnail.png';
 
 export const metadata: Metadata = {
-  title: "VeeCode Platform | Avaliacao",
-  description: "Nível de adoção de práticas de Platform Engineering",
-  keywords: ["Avaliacao", "VeeCode", "Devportal", "Backstage"],
+  title: 'VeeCode Platform | Avaliacao',
+  description: 'Nível de adoção de práticas de Platform Engineering',
+  keywords: ['Avaliacao', 'VeeCode', 'Devportal', 'Backstage'],
   openGraph: {
     images: thumbnailImageUrl,
   },

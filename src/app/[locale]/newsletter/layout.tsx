@@ -1,14 +1,14 @@
-import type { Metadata } from "next";
-import "../global.scss";
-import { poppins } from "@/font";
+import { poppins } from '@/font';
+import type { Metadata } from 'next';
+import '../global.scss';
 
 const thumbnailImageUrl =
-  "https://cdn.platform.vee.codes/landing-page/thumbnail.png";
+  'https://cdn.platform.vee.codes/landing-page/thumbnail.png';
 
 export const metadata: Metadata = {
-  title: "VeeCode Platform | Newsletter",
-  description: "Conecte-se ao universo VeeCode",
-  keywords: ["newsletter", "VeeCode", "Devportal", "Backstage"],
+  title: 'VeeCode Platform | Newsletter',
+  description: 'Conecte-se ao universo VeeCode',
+  keywords: ['newsletter', 'VeeCode', 'Devportal', 'Backstage'],
   openGraph: {
     images: thumbnailImageUrl,
   },
@@ -31,9 +31,7 @@ export default function NewsLetterLayout({
 }>) {
   return (
     <html lang="pt">
-      <body className={poppins.className}>
-        {children}
-        </body>
+      <body className={poppins.className}>{children}</body>
     </html>
   );
 }

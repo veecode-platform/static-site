@@ -1,5 +1,8 @@
-"use client";
+'use client';
 
+import React from 'react';
+import { Field } from 'formik';
+import { useTranslations } from 'next-intl';
 import {
   Label,
   InputField,
@@ -10,11 +13,10 @@ import {
   CheckboxLabel,
   TextAreaField,
   WrapperTextArea,
-} from "./styles";
-import React from "react";
-import { Field } from "formik";
-import { CheckboxProps, InputProps, TextAreaProps } from "./types";
-import { useTranslations } from "next-intl";
+} from './styles';
+import {
+  CheckboxProps, InputProps, TextAreaProps, 
+} from './types';
 
 export const Input: React.FC<InputProps> = ({
   name,
@@ -53,17 +55,17 @@ export const Checkbox: React.FC<CheckboxProps> = ({
   children,
   terms,
 }) => {
-  const t = useTranslations("contactUs.form.terms");
+  const t = useTranslations('contactUs.form.terms');
 
   const termsData = (
     <>
-      {t("checkbox1.label")}
+      {t('checkbox1.label')}
       <a target="_blank" href="/terms-of-service">
-        {t("checkbox1.linkLabel")}
-      </a>{" "}
-      {t("checkbox2.label")}
+        {t('checkbox1.linkLabel')}
+      </a>{' '}
+      {t('checkbox2.label')}
       <a target="_blank" href="/privacy-policy">
-        {t("checkbox2.linkLabel")}
+        {t('checkbox2.linkLabel')}
       </a>
     </>
   );

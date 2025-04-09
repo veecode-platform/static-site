@@ -5,9 +5,11 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "build:static": "next build && next export",
     "start": "next start",
     "static": "npx serve@latest out",
-    "standalone": "node .next/standalone/server.js"
+    "standalone": "node .next/standalone/server.js",
+    "eslint:fix": "npx eslint . --ext .js,.jsx,.ts,.tsx --fix"
   },
   "dependencies": {
     "@emotion/react": "^11.13.3",
@@ -26,7 +28,7 @@
     "next": "14.2.16",
     "next-export-i18n": "^3.0.0",
     "next-i18next": "^15.3.1",
-    "next-intl": "^3.23.5",
+    "next-intl": "^4.0.2",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-gtm-module": "^2.0.11",
@@ -47,9 +49,14 @@
     "@types/node": "^22.7.4",
     "@types/react": "^18.3.11",
     "@types/react-dom": "^18",
+    "@typescript-eslint/eslint-plugin": "^8.29.1",
+    "@typescript-eslint/parser": "^8.29.1",
     "eslint": "^8",
     "eslint-config-next": "14.2.16",
+    "eslint-config-prettier": "^10.1.1",
+    "eslint-plugin-prettier": "^5.2.6",
     "eslint-plugin-unused-imports": "^4.1.4",
+    "prettier": "^3.5.3",
     "typescript": "^5"
   },
   "packageManager": "yarn@4.5.0"

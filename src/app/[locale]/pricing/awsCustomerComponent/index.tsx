@@ -1,9 +1,9 @@
-import Image from "next/image";
-import style from "./awsCustomerComponent.module.scss";
-import CardAwsContent from "./cardAwsContent";
-import { cardAwsContentProps } from "./types";
+import Image from 'next/image';
+import style from './awsCustomerComponent.module.scss';
+import CardAwsContent from './cardAwsContent';
+import { cardAwsContentProps } from './types';
 
-const AwsMarketPlaceLogo = "/assets/pricing/aws-consumer/aws-marketplace.png";
+const AwsMarketPlaceLogo = '/assets/pricing/aws-consumer/aws-marketplace.png';
 
 const AwsCustomerComponent: React.FC<cardAwsContentProps> = ({
   title,
@@ -21,8 +21,8 @@ const AwsCustomerComponent: React.FC<cardAwsContentProps> = ({
             height={111}
             priority
             style={{
-              width: "100%",
-              height: "auto",
+              width: '100%',
+              height: 'auto',
             }}
           />
         </div>
@@ -33,7 +33,7 @@ const AwsCustomerComponent: React.FC<cardAwsContentProps> = ({
       </div>
 
       <article className={style.content__awsCards}>
-        {cards.map((card) => (
+        {cards.map(card => (
           <CardAwsContent
             key={card.id}
             title={card.title}

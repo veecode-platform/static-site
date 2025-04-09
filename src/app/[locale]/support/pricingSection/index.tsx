@@ -1,5 +1,5 @@
-import style from "./PricingSection.module.scss";
-import { PricingSectionProps } from "./types";
+import style from './PricingSection.module.scss';
+import { PricingSectionProps } from './types';
 
 export const PricingSection: React.FC<PricingSectionProps> = ({
   title,

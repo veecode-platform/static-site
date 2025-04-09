@@ -14,16 +14,20 @@
     "max-len": [
       "error",
       {
-        "code": 80
+        "code": 150
       }
     ],
     "quotes": [
       "error",
-      "single"
+      "single",
+      {
+        "avoidEscape": true,
+        "allowTemplateLiterals": true
+      }
     ],
     "semi": [
       "error",
-      "never"
+      "always"
     ],
     "arrow-parens": [
       "error",
@@ -33,29 +37,73 @@
       "error",
       "prefer-double"
     ],
+    "no-console": "warn",
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": [
+      "warn",
+      {
+        "argsIgnorePattern": "^_",
+        "varsIgnorePattern": "^_",
+        "ignoreRestSiblings": true
+      }
+    ],
+    "import/order": [
+      "error",
+      {
+        "groups": [
+          "builtin",
+          "external",
+          "internal",
+          "parent",
+          "sibling",
+          "index",
+          "object",
+          "type"
+        ],
+        "newlines-between": "never",
+        "alphabetize": {
+          "order": "asc",
+          "caseInsensitive": true
+        },
+        "pathGroups": [
+          {
+            "pattern": "react",
+            "group": "builtin",
+            "position": "before"
+          }
+        ],
+        "pathGroupsExcludedImportTypes": [
+          "react"
+        ]
+      }
+    ],
+    "object-curly-newline": [
+      "error",
+      {
+        "ImportDeclaration": {
+          "multiline": true,
+          "minProperties": 2,
+          "consistent": true
+        },
+        "ExportDeclaration": {
+          "multiline": true,
+          "minProperties": 2,
+          "consistent": true
+        }
+      }
+    ],
     "comma-dangle": [
       "error",
-      "es5"
-    ],
-    "no-unused-vars": "warn",
-    "no-console": "warn",
-    "no-restricted-imports": [
-      "error",
       {
-        "name": "next/link",
-        "message": "Please import from `@/i18n/routing` instead."
-      },
-      {
-        "name": "next/navigation",
-        "importNames": [
-          "redirect",
-          "permanentRedirect",
-          "useRouter",
-          "usePathname"
-        ],
-        "message": "Please import from `@/i18n/routing` instead."
+        "arrays": "always-multiline",
+        "objects": "always-multiline",
+        "imports": "always-multiline",
+        "exports": "always-multiline",
+        "functions": "never"
       }
-    ]
+    ],
+    "@typescript-eslint/no-empty-interface": "off",
+    "@typescript-eslint/no-explicit-any": "off"
   },
   "ignorePatterns": [
     "node_modules",

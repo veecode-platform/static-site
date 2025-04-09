@@ -1,9 +1,7 @@
-"use client";
+'use client';
 
-import style from "./FooterStyles.module.scss";
-import { gtagEvents } from "@/utils/helpers/gtag";
-import { useTranslations } from "next-intl";
-import { ExternalLink, NavigationLink, Container } from "@/components";
+import Image from 'next/image';
+import { useTranslations } from 'next-intl';
 import {
   RiTwitterXFill,
   RiInstagramLine,
@@ -11,14 +9,18 @@ import {
   RiYoutubeFill,
   RiDiscordFill,
   // RiFacebookBoxFill,
-} from "react-icons/ri";
-import Image from "next/image";
+} from 'react-icons/ri';
+import {
+  ExternalLink, NavigationLink, Container, 
+} from '@/components';
+import { gtagEvents } from '@/utils/helpers/gtag';
+import style from './FooterStyles.module.scss';
 
-const Logo = "/assets/logo/logo.png";
+const Logo = '/assets/logo/logo.png';
 
 export const Footer = () => {
-  const t = useTranslations("footer");
-  const a = useTranslations("accessibility");
+  const t = useTranslations('footer');
+  const a = useTranslations('accessibility');
 
   return (
     <footer className={style.footer}>
@@ -31,7 +33,7 @@ export const Footer = () => {
               height={71}
               alt="Veecode Plataform"
               style={{
-                height: "auto",
+                height: 'auto',
               }}
               className={style.logo}
             />
@@ -46,7 +48,7 @@ export const Footer = () => {
               </li> */}
               <li>
                 <ExternalLink
-                  description={a("external-links.instagram")}
+                  description={a('external-links.instagram')}
                   href="https://www.instagram.com/veecodeplatform/"
                 >
                   <RiInstagramLine />
@@ -54,7 +56,7 @@ export const Footer = () => {
               </li>
               <li>
                 <ExternalLink
-                  description={a("external-links.linkedin")}
+                  description={a('external-links.linkedin')}
                   href="https://www.linkedin.com/showcase/veecode-platform/"
                 >
                   <RiLinkedinBoxFill />
@@ -62,7 +64,7 @@ export const Footer = () => {
               </li>
               <li>
                 <ExternalLink
-                  description={a("external-links.x")}
+                  description={a('external-links.x')}
                   href="https://twitter.com/veecodeplatform"
                 >
                   <RiTwitterXFill />
@@ -70,7 +72,7 @@ export const Footer = () => {
               </li>
               <li>
                 <ExternalLink
-                  description={a("external-links.discord")}
+                  description={a('external-links.discord')}
                   href="https://discord.gg/pREwxeVzAD"
                 >
                   <RiDiscordFill />
@@ -78,7 +80,7 @@ export const Footer = () => {
               </li>
               <li>
                 <ExternalLink
-                  description={a("external-links.youtube")}
+                  description={a('external-links.youtube')}
                   href="https://www.youtube.com/@veecodeplatform-br"
                 >
                   <RiYoutubeFill />
@@ -87,35 +89,35 @@ export const Footer = () => {
             </ul>
           </div>
           <div className={style.content__details}>
-            <div className={style["content__details-lists"]}>
+            <div className={style['content__details-lists']}>
               <ul>
                 <li>
-                  <span>{t("about-title")}</span>
+                  <span>{t('about-title')}</span>
                 </li>
                 <li>
                   <NavigationLink href="/how-it-works">
-                    {t("about-option1")}
+                    {t('about-option1')}
                   </NavigationLink>
                 </li>
 
                 <li>
                   <NavigationLink href="/support">
-                    {t("about-option2")}
+                    {t('about-option2')}
                   </NavigationLink>
                 </li>
 
-                <li onClick={() => gtagEvents("joinUs")}>
+                <li onClick={() => gtagEvents('joinUs')}>
                   <ExternalLink
-                    description={a("external-links.github")}
+                    description={a('external-links.github')}
                     href="https://github.com/vfipaas/safira-support/discussions"
                   >
-                    {t("about-option3")}
-                  </ExternalLink>{" "}
+                    {t('about-option3')}
+                  </ExternalLink>{' '}
                 </li>
               </ul>
               <ul>
                 <li>
-                  <span>{t("docs-title")}</span>
+                  <span>{t('docs-title')}</span>
                 </li>
                 {/* <ExternalLink href="https://docs.platform.vee.codes/safira-cli/intro">
                   <li onClick={() => gtagEvents("safiraDocs")}>
@@ -123,67 +125,67 @@ export const Footer = () => {
                   </li>
                 </ExternalLink> */}
 
-                <li onClick={() => gtagEvents("vkdrDocs")}>
+                <li onClick={() => gtagEvents('vkdrDocs')}>
                   <ExternalLink
-                    description={a("external-links.vkdr")}
+                    description={a('external-links.vkdr')}
                     href="https://docs.platform.vee.codes/vkdr/intro/"
                   >
-                    {t("docs-option2")}
+                    {t('docs-option2')}
                   </ExternalLink>
                 </li>
 
-                <li onClick={() => gtagEvents("devportal")}>
+                <li onClick={() => gtagEvents('devportal')}>
                   <ExternalLink
-                    description={a("external-links.docs")}
+                    description={a('external-links.docs')}
                     href="https://docs.platform.vee.codes/devportal/intro/"
                   >
-                    {t("docs-option3")}
+                    {t('docs-option3')}
                   </ExternalLink>
                 </li>
               </ul>
               <ul>
                 <li>
-                  <span>{t("more-title")}</span>
+                  <span>{t('more-title')}</span>
                 </li>
 
                 <li>
                   <ExternalLink
-                    description={a("external-links.blog")}
+                    description={a('external-links.blog')}
                     href="https://blog.platform.vee.codes/"
                   >
-                    {t("more-option1")}
+                    {t('more-option1')}
                   </ExternalLink>
                 </li>
 
                 <li>
                   <NavigationLink href="/terms-of-service">
-                    {t("more-option2")}{" "}
+                    {t('more-option2')}{' '}
                   </NavigationLink>
                 </li>
 
                 <li>
                   <NavigationLink href="/privacy-policy">
-                    {t("more-option3")}
+                    {t('more-option3')}
                   </NavigationLink>
                 </li>
 
                 <li>
                   <NavigationLink href="/contact-us">
-                    {t("more-option4")}
+                    {t('more-option4')}
                   </NavigationLink>
                 </li>
 
                 <li>
-                  {" "}
+                  {' '}
                   <NavigationLink href="/faq">
-                    {t("more-option5")}
+                    {t('more-option5')}
                   </NavigationLink>
                 </li>
 
                 <li>
-                  {" "}
+                  {' '}
                   <NavigationLink href="/plugins">
-                    {t("more-option6")}{" "}
+                    {t('more-option6')}{' '}
                   </NavigationLink>
                 </li>
               </ul>
@@ -192,7 +194,7 @@ export const Footer = () => {
         </section>
         <section className={style.footer__copy}>
           <p>
-            Copyright &copy; {new Date().getFullYear()} {t("copyright")}
+            Copyright &copy; {new Date().getFullYear()} {t('copyright')}
           </p>
         </section>
       </Container>

@@ -1,2 +1,2 @@
-export { HeaderDefault } from "./headerDefault";
-export { HeroComponent } from "./heroComponent";
+export { HeaderDefault } from './headerDefault';
+export { HeroComponent } from './heroComponent';

@@ -1,5 +1,5 @@
-import { FirstSectionProps } from "./types";
-import style from "./FirstSectionStyles.module.scss";
+import style from './FirstSectionStyles.module.scss';
+import { FirstSectionProps } from './types';
 
 export const FirstSection: React.FC<FirstSectionProps> = ({
   title,
@@ -8,8 +8,8 @@ export const FirstSection: React.FC<FirstSectionProps> = ({
   return (
     <section className={style.firstSection}>
       <div className={style.firstSection__content}>
-        <h2 className={style["firstSection__content-title"]}>{title}</h2>
-        <p className={style["firstSection__content-subtitle"]}>{description}</p>
+        <h2 className={style['firstSection__content-title']}>{title}</h2>
+        <p className={style['firstSection__content-subtitle']}>{description}</p>
       </div>
     </section>
   );

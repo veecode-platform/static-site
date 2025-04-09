@@ -1,16 +1,24 @@
-import React from "react";
-import style from "./LoadingStyles.module.scss";
+import React from 'react';
+import Image from 'next/image';
+import style from './LoadingStyles.module.scss';
 
-const LoadingAnimation = "/assets/icons/loading.gif";
+const LoadingAnimation = '/assets/icons/loading.gif';
 
 export const Loading = () => {
   return (
     <div className={style.loading}>
-      <img
+      <Image
         src={LoadingAnimation}
+        priority
         alt="Loading animation"
+        width={200}
+        height={62}
+        style={{
+          width: '100%',
+          height: 'auto',
+        }}
         className={style.loading__animation}
-      />
+      />   
     </div>
   );
 };

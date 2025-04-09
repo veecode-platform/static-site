@@ -1,14 +1,16 @@
-"use client";
+'use client';
 
-import React from "react";
-import { useTranslations } from "next-intl";
-import style from "./SwitchLanguageStyles.module.scss";
-import { IoLanguageOutline } from "react-icons/io5";
-import { usePathname, useRouter } from "@/i18n/routing";
+import React from 'react';
+import { useTranslations } from 'next-intl';
+import { IoLanguageOutline } from 'react-icons/io5';
+import {
+  usePathname, useRouter, 
+} from '@/i18n/routing';
+import style from './SwitchLanguageStyles.module.scss';
 
 export const SwitchLanguage = () => {
   const [dropdownShow, setDropdownShow] = React.useState<boolean>(false);
-  const t = useTranslations("localeSwitcher");
+  const t = useTranslations('localeSwitcher');
 
   const pathName = usePathname();
   const router = useRouter();
@@ -34,21 +36,21 @@ export const SwitchLanguage = () => {
         <div className={style.dropdown}>
           <ul className={style.dropdown__list}>
             <li
-              className={style["dropdown__list-item"]}
-              onClick={(e) => handleChooseLanguage("pt")}
+              className={style['dropdown__list-item']}
+              onClick={() => handleChooseLanguage('pt')}
             >
-              {t.rich("pt", {
-                p: (chunks) => <p>{chunks}</p>,
-                span: (chunks) => <span>{chunks}</span>,
+              {t.rich('pt', {
+                p: chunks => <p>{chunks}</p>,
+                span: chunks => <span>{chunks}</span>,
               })}
             </li>
             <li
-              className={style["dropdown__list-item"]}
-              onClick={(e) => handleChooseLanguage("en")}
+              className={style['dropdown__list-item']}
+              onClick={() => handleChooseLanguage('en')}
             >
-              {t.rich("en", {
-                p: (chunks) => <p>{chunks}</p>,
-                span: (chunks) => <span>{chunks}</span>,
+              {t.rich('en', {
+                p: chunks => <p>{chunks}</p>,
+                span: chunks => <span>{chunks}</span>,
               })}
             </li>
           </ul>

@@ -1,5 +1,5 @@
-import style from "./SupportCategories.module.scss";
-import { SupportCategoriesProps } from "./types";
+import style from './SupportCategories.module.scss';
+import { SupportCategoriesProps } from './types';
 
 export const SupportCategories: React.FC<SupportCategoriesProps> = ({
   title,

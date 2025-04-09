@@ -1,9 +1,9 @@
-import { Container } from "@/components";
-import style from "./HeroComponentStyles.module.scss";
-import Image from "next/image";
-import Link from "next/link";
+import Image from 'next/image';
+import Link from 'next/link';
+import { Container } from '@/components';
+import style from './HeroComponentStyles.module.scss';
 
-const VeeCodeImg = "/assets/avaliacao/logo-rotate.png";
+const VeeCodeImg = '/assets/avaliacao/logo-rotate.png';
 
 export const HeroComponent = () => {
   return (
@@ -11,12 +11,12 @@ export const HeroComponent = () => {
       <Container>
         <div className={style.content}>
           <div className={style.content__text}>
-            <h1 className={style["content__text-title"]}>
-              Nível de adoção de práticas de{" "}
+            <h1 className={style['content__text-title']}>
+              Nível de adoção de práticas de{' '}
               <strong>Platform Engineering</strong>
             </h1>
-            <p className={style["content__text-details"]}>
-              Descubra o nível de adoção de práticas de{" "}
+            <p className={style['content__text-details']}>
+              Descubra o nível de adoção de práticas de{' '}
               <strong>Platform Engineering</strong> da sua equipe e receba um
               breve diagnóstico gratuito com oportunidades de aprimoramento.
               Preencha nosso formulário e receba insights sobre como fortalecer
@@ -24,7 +24,7 @@ export const HeroComponent = () => {
             </p>
 
             <button
-              className={style["content__text-button"]}
+              className={style['content__text-button']}
               aria-label="Fazer avaliação"
             >
               <Link href="https://docs.google.com/forms/d/e/1FAIpQLSc_afWLVhssuQCBh9XlGIJcqlT4ignKL9gKN3xYSGDtRoyDog/viewform">
@@ -41,7 +41,7 @@ export const HeroComponent = () => {
         height={750}
         className={style.firstLogo}
         style={{
-          height: "auto",
+          height: 'auto',
         }}
       />
       <Image
@@ -51,7 +51,7 @@ export const HeroComponent = () => {
         height={750}
         className={style.secondLogo}
         style={{
-          height: "auto",
+          height: 'auto',
         }}
       />
     </section>

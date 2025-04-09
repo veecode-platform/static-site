@@ -1,11 +1,11 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 import {
   CheckboxFieldProps,
   CheckboxLabelProps,
   InputFieldProps,
   LabelProps,
   TextAreaFieldProps,
-} from "./types";
+} from './types';
 
 /*input*/
 export const Wrapper = styled.div`
@@ -21,11 +21,11 @@ export const LabelWraper = styled.div`
 `;
 
 export const Label = styled.label<LabelProps>`
-  color: ${(props) => (props.$error ? "#DB0000" : "#f3f3f3")};
+  color: ${props => (props.$error ? '#DB0000' : '#f3f3f3')};
   font-size: 12px;
   font-weight: 500;
   min-width: 50%;
-  text-align: ${(props) => (props.$errorLabel ? "right" : "left")};
+  text-align: ${props => (props.$errorLabel ? 'right' : 'left')};
 `;
 
 export const InputField = styled.input<InputFieldProps>`
@@ -35,8 +35,8 @@ export const InputField = styled.input<InputFieldProps>`
   outline: none;
   background-color: #f3f3f3;
   //color: #FAFAFA;
-  border: ${(props) =>
-    props.error ? "1px solid #DB0000" : "1px solid #33FFCE"};
+  border: ${props =>
+    props.error ? '1px solid #DB0000' : '1px solid #33FFCE'};
   font-size: 16px;
   padding: 0.25em 0.5em;
 
@@ -70,14 +70,14 @@ export const WrapperCheckbox = styled(Wrapper)<CheckboxFieldProps>`
   justify-content: flex-start;
   column-gap: 0.5vw;
   row-gap: 0vh;
-  height: ${(props) => (props.fullHeight ? "60px" : "32px")};
-  width: ${(props) => (props.fullHeight ? "auto" : "49%")};
+  height: ${props => (props.fullHeight ? '60px' : '32px')};
+  width: ${props => (props.fullHeight ? 'auto' : '49%')};
   @media (max-width: 420px) {
     gap: 3vw;
   }
 `;
 
-export const Checkboxfield = styled.input.attrs({ type: "checkbox" })`
+export const Checkboxfield = styled.input.attrs({ type: 'checkbox' })`
   cursor: pointer;
   width: 0.9vw;
   height: 0.9vw;
@@ -91,7 +91,7 @@ export const Checkboxfield = styled.input.attrs({ type: "checkbox" })`
 export const CheckboxLabel = styled(Label)<CheckboxLabelProps>`
     max-width: 100%;
     font-size: small;
-    color: ${(props) => (props.altColor ? "grey" : "inherit")};
+    color: ${props => (props.altColor ? 'grey' : 'inherit')};
     a{
         text-decoration: underline;
         cursor: pointer
@@ -120,8 +120,8 @@ export const TextAreaField = styled.textarea<TextAreaFieldProps>`
   height: auto;
   min-height: 15vh;
   outline: none;
-  border: ${(props) =>
-    props.error ? "1px solid #DB0000" : "1px solid #33FFCE"};
+  border: ${props =>
+    props.error ? '1px solid #DB0000' : '1px solid #33FFCE'};
   font-size: 16px;
   padding: 0.25em 0.5em;
   font-family: inherit;

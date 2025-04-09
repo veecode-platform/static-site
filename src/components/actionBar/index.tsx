@@ -1,7 +1,9 @@
-import style from "./ActionBarStyles.module.scss";
-import { ActionBarProps } from "./types";
-import { Button } from "../button";
-import { ExternalLink, NavigationLink } from "../ui/links";
+import { Button } from '../button';
+import {
+  ExternalLink, NavigationLink, 
+} from '../ui/links';
+import style from './ActionBarStyles.module.scss';
+import { ActionBarProps } from './types';
 
 export const ActionBar: React.FC<ActionBarProps> = ({
   title,
@@ -15,14 +17,14 @@ export const ActionBar: React.FC<ActionBarProps> = ({
         <h4>{title}</h4>
       </div>
       <div className={style.content__button}>
-        {variant === "contact" && (
+        {variant === 'contact' && (
           <NavigationLink href="/contact-us">
             <Button aria-label={buttonLabel}>{buttonLabel}</Button>
           </NavigationLink>
         )}
-        {variant === "docs" && (
+        {variant === 'docs' && (
           <ExternalLink
-            description={linkLabel ?? ""}
+            description={linkLabel ?? ''}
             href="https://docs.platform.vee.codes/"
           >
             <Button aria-label={buttonLabel}>{buttonLabel}</Button>

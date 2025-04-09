@@ -1,47 +1,54 @@
-import { DefaultPage, FaqList } from "@/components";
-import { routing } from "@/i18n/routing";
-import { getTranslations, setRequestLocale } from "next-intl/server";
-import style from "./ContactUsStyles.module.scss";
-import { FormElement } from "./ui/FormElement";
-import Image from "next/image";
+import { use } from 'react';
+import Image from 'next/image';
+import { useTranslations } from 'next-intl';
+import {
+  getTranslations, setRequestLocale, 
+} from 'next-intl/server';
+import {
+  DefaultPage, FaqList, 
+} from '@/components';
+import { routing } from '@/i18n/routing';
+import {
+  LayoutProps, PageProps, 
+} from '@/utils/types/pageProps';
+import style from './ContactUsStyles.module.scss';
+import { FormElement } from './ui/FormElement';
 
-const flowImage = "/assets/icons/contact_form_img.png";
+const flowImage = '/assets/icons/contact_form_img.png';
 
-type Props = {
-  params: { locale: string };
-};
-
-export async function generateMetadata({
-  params: { locale },
-}: Omit<Props, "children">) {
-  const t = await getTranslations({ locale, namespace: "metadata" });
+export async function generateMetadata(props: Omit<LayoutProps, 'children'>) {
+  const { locale } = await props.params;
+  const t = await getTranslations({ locale, namespace: 'metadata' });
 
   return {
-    title: t("contact-us.title"),
-    description: t("contact-us.description"),
+    title: t('contact-us.title'),
+    description: t('contact-us.description'),
   };
 }
 
 export function generateStaticParams() {
-  return routing.locales.map((locale) => ({ locale }));
+  return routing.locales.map(locale => ({ locale }));
 }
 
-export default async function ContactUsPage({ params: { locale } }: Props) {
+export default function ContactUsPage({ params }: PageProps) {
+  const { locale } = use(params);
+
   // Enable static rendering
   setRequestLocale(locale);
 
-  const t = await getTranslations({ locale, namespace: "contactUs" });
+  // const t = await getTranslations({ locale, namespace: "contactUs" });
+  const t = useTranslations('contactUs');
 
   return (
     <DefaultPage
       showButton
       titleBar
-      title={t("title")}
+      title={t('title')}
       noBack
       showOptions
       subtitle={
         <>
-          {t.rich("subtitle", {
+          {t.rich('subtitle', {
             strong: (chunks: any) => (
               <strong>
                 <a href="mailto: platform-sales@vee.codes">{chunks}</a>
@@ -53,28 +60,28 @@ export default async function ContactUsPage({ params: { locale } }: Props) {
     >
       <section className={style.content}>
         <div className={style.content__options}>
-          <div className={style["content__options-decoration"]}>
+          <div className={style['content__options-decoration']}>
             <Image
               src={flowImage}
               alt="contact us image"
               width={653}
               height={653}
               style={{
-                width: "100%",
-                height: "auto",
+                width: '100%',
+                height: 'auto',
               }}
               priority
             />
           </div>
 
-          <div className={style["content__options-formWraper"]}>
+          <div className={style['content__options-formWraper']}>
             <FormElement type="CONTACT-US" company />
           </div>
         </div>
         <div className={style.content__faq}>
           <div>
-            <h1>{t("faqSection.title")}</h1>
-            <h2>{t("faqSection.subtitle")}</h2>
+            <h1>{t('faqSection.title')}</h1>
+            <h2>{t('faqSection.subtitle')}</h2>
           </div>
           <FaqList />
         </div>

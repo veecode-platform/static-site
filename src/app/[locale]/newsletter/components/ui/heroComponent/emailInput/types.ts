@@ -1,5 +1,5 @@
-import { IFeedback } from "../state/types";
+import { IFeedback } from '../state/types';
 
 export interface EmailInputProps {
-    handleFeedback: (action: "create" | "remove" , feeback: IFeedback) => void
+  handleFeedback: (action: 'create' | 'remove', feeback: IFeedback) => void;
 }

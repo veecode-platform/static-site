@@ -1,7 +1,9 @@
-import Image from "next/image";
-import { Button, ExternalLink, NavigationLink } from "@/components";
-import style from "./cardAwsContent.module.scss";
-import { CardAwsContentProps } from "./types";
+import Image from 'next/image';
+import {
+  Button, ExternalLink, NavigationLink, 
+} from '@/components';
+import style from './cardAwsContent.module.scss';
+import { CardAwsContentProps } from './types';
 
 const CardAwsContent: React.FC<CardAwsContentProps> = ({
   title,
@@ -23,8 +25,8 @@ const CardAwsContent: React.FC<CardAwsContentProps> = ({
           height={200}
           unoptimized
           style={{
-            width: "100%",
-            height: "auto",
+            width: '100%',
+            height: 'auto',
           }}
           priority
         />

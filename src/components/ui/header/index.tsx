@@ -1,22 +1,22 @@
-"use client";
+'use client';
 
-import React from "react";
-import classNames from "classnames";
-import style from "./HeaderStyles.module.scss";
-import { HeaderProps } from "./types";
-import { useTranslations } from "next-intl";
-import { FaBars } from "react-icons/fa";
+import React from 'react';
+import classNames from 'classnames';
+import Image from 'next/image';
+import { useTranslations } from 'next-intl';
+import { FaBars } from 'react-icons/fa';
 import {
   SwitchLanguage,
   Container,
   ExternalLink,
   NavigationLink,
   Button,
-} from "@/components";
-import Image from "next/image";
+} from '@/components';
+import style from './HeaderStyles.module.scss';
+import { HeaderProps } from './types';
 
-const Logo = "/assets/logo/logo.png";
-const LogoMobile = "/assets/logo/logo-mobile.png";
+const Logo = '/assets/logo/logo.png';
+const LogoMobile = '/assets/logo/logo-mobile.png';
 
 export const Header: React.FC<HeaderProps> = ({
   fixedHeader,
@@ -26,8 +26,8 @@ export const Header: React.FC<HeaderProps> = ({
 }) => {
   const [open, setOpen] = React.useState(false);
 
-  const t = useTranslations("header");
-  const a = useTranslations("accessibility");
+  const t = useTranslations('header');
+  const a = useTranslations('accessibility');
 
   return (
     <>
@@ -48,8 +48,8 @@ export const Header: React.FC<HeaderProps> = ({
                   width={200}
                   height={62}
                   style={{
-                    width: "100%",
-                    height: "auto",
+                    width: '100%',
+                    height: 'auto',
                   }}
                   className={style.logo}
                 />
@@ -60,8 +60,8 @@ export const Header: React.FC<HeaderProps> = ({
                   width={34}
                   height={48}
                   style={{
-                    width: "100%",
-                    height: "auto",
+                    width: '100%',
+                    height: 'auto',
                   }}
                   className={style.logoMobile}
                 />
@@ -73,36 +73,36 @@ export const Header: React.FC<HeaderProps> = ({
                 <>
                   <div className={style.nav__options}>
                     <ExternalLink
-                      description={a("external-links.docs")}
+                      description={a('external-links.docs')}
                       href="https://docs.platform.vee.codes/"
                     >
-                      <h2>{t("docs")} </h2>
+                      <h2>{t('docs')} </h2>
                     </ExternalLink>
                   </div>
 
                   <div className={style.nav__options}>
                     <ExternalLink
-                      description={a("external-links.blog")}
+                      description={a('external-links.blog')}
                       href="https://blog.platform.vee.codes/"
                     >
-                      <h2>{t("blog")}</h2>
+                      <h2>{t('blog')}</h2>
                     </ExternalLink>
                   </div>
 
                   <div className={style.nav__options}>
                     <NavigationLink href="/plugins">
-                      <h2>{t("plugins")}</h2>
+                      <h2>{t('plugins')}</h2>
                     </NavigationLink>
                   </div>
 
                   <div className={style.nav__options}>
                     <NavigationLink href="/pricing">
-                      <h2>{t("pricing")}</h2>
+                      <h2>{t('pricing')}</h2>
                     </NavigationLink>
                   </div>
                   <div className={style.nav__options}>
                     <NavigationLink href="/contact-us">
-                      <h2>{t("contactUs")}</h2>
+                      <h2>{t('contactUs')}</h2>
                     </NavigationLink>
                   </div>
                 </>
@@ -111,11 +111,11 @@ export const Header: React.FC<HeaderProps> = ({
               {showButton && (
                 <div className={style.nav__options}>
                   <ExternalLink
-                    description={a("external-links.demo")}
+                    description={a('external-links.demo')}
                     href="https://devportal.demo.vee.codes/"
                   >
-                    <Button aria-label={t("demo")} headerButton>
-                      {t("demo")}
+                    <Button aria-label={t('demo')} headerButton>
+                      {t('demo')}
                     </Button>
                   </ExternalLink>
                 </div>
@@ -137,8 +137,8 @@ export const Header: React.FC<HeaderProps> = ({
 
       <ul
         className={classNames({
-          [style["menuMobile"]]: open,
-          [style["menuMobileHide"]]: !open,
+          [style['menuMobile']]: open,
+          [style['menuMobileHide']]: !open,
         })}
       >
         <li className={style.menuMobile__item}>
@@ -146,32 +146,32 @@ export const Header: React.FC<HeaderProps> = ({
         </li>
         <li className={style.menuMobile__item}>
           <ExternalLink
-            description={a("external-links.docs")}
+            description={a('external-links.docs')}
             href="https://docs.platform.vee.codes/"
           >
-            {t("docs")}
+            {t('docs')}
           </ExternalLink>
         </li>
         <li className={style.menuMobile__item}>
           <ExternalLink
-            description={a("external-links.blog")}
+            description={a('external-links.blog')}
             href="https://blog.platform.vee.codes/"
           >
-            {t("blog")}
+            {t('blog')}
           </ExternalLink>
         </li>
         <li className={style.menuMobile__item}>
-          <NavigationLink href="/plugins">{t("plugins")}</NavigationLink>
+          <NavigationLink href="/plugins">{t('plugins')}</NavigationLink>
         </li>
         <li className={style.menuMobile__item}>
-          <NavigationLink href="/pricing">{t("pricing")}</NavigationLink>
+          <NavigationLink href="/pricing">{t('pricing')}</NavigationLink>
         </li>
         <li className={style.menuMobile__item}>
           <ExternalLink
-            description={a("external-links.demo")}
+            description={a('external-links.demo')}
             href="https://devportal.demo.vee.codes/"
           >
-            {t("demo")}
+            {t('demo')}
           </ExternalLink>
         </li>
       </ul>

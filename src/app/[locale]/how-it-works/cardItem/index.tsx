@@ -1,5 +1,6 @@
-import style from "./CardItem.module.scss";
-import { CardItemProps } from "./types";
+import Image from 'next/image';
+import style from './CardItem.module.scss';
+import { CardItemProps } from './types';
 
 export const CardItem: React.FC<CardItemProps> = ({
   image,
@@ -9,11 +10,22 @@ export const CardItem: React.FC<CardItemProps> = ({
   return (
     <div className={style.cardItem}>
       <div className={style.cardItem__image}>
-        <img src={image} alt={title} />
+        <Image
+          src={image}
+          priority
+          alt={title}
+          width={200}
+          height={62}
+          style={{
+            width: '100%',
+            height: 'auto',
+          }}
+          className={style['cardItem__image-img']}
+        />
       </div>
       <div className={style.cardItem__details}>
-        <h2 className={style["cardItem__details-title"]}>{title}</h2>
-        <div className={style["cardItem__details-text"]}>{children}</div>
+        <h2 className={style['cardItem__details-title']}>{title}</h2>
+        <div className={style['cardItem__details-text']}>{children}</div>
       </div>
     </div>
   );

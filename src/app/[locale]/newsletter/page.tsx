@@ -1,18 +1,19 @@
-import { setRequestLocale } from "next-intl/server";
-import { HeaderDefault, HeroComponent } from "./components";
-
-type Props = {
-  params: { locale: string };
-};
+import { use } from 'react';
+import { setRequestLocale } from 'next-intl/server';
+import { PageProps } from '@/utils/types/pageProps';
+import {
+  HeaderDefault, HeroComponent, 
+} from './components';
 
 export async function generateMetadata() {
   return {
-    title: "VeeCode Platform | Newsletter",
-    description: "Conecte-se ao universo VeeCode",
+    title: 'VeeCode Platform | Newsletter',
+    description: 'Conecte-se ao universo VeeCode',
   };
 }
 
-export default function NewsletterPage({ params: { locale } }: Props) {
+export default function NewsletterPage({ params }: PageProps) {
+  const { locale } = use(params);
   // Enable static rendering
   setRequestLocale(locale);
 

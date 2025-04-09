@@ -8,7 +8,7 @@ const storage = {
       const update = JSON.stringify({ ...user, ...obj });
       localStorage.setItem(name, update);
     }
-  }
+  },
 };
 
 export default storage;

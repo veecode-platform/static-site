@@ -1,10 +1,12 @@
 /* eslint-disable @next/next/no-img-element */
-import { Button, Container, NavigationLink } from "@/components";
-import style from "./SupportSection.module.scss";
-import { SupportSectionProps } from "./types";
-import Image from "next/image";
+import Image from 'next/image';
+import {
+  Button, Container, NavigationLink, 
+} from '@/components';
+import style from './SupportSection.module.scss';
+import { SupportSectionProps } from './types';
 
-const BannerDesktop = "/assets/home/bg3.webp";
+const BannerDesktop = '/assets/home/bg3.webp';
 
 export const SupportSection: React.FC<SupportSectionProps> = ({
   title,
@@ -26,9 +28,9 @@ export const SupportSection: React.FC<SupportSectionProps> = ({
       <Container>
         <article className={style.content}>
           <div className={style.content__text}>
-            <div className={style["content__text-title"]}>
+            <div className={style['content__text-title']}>
               <h2>{title}</h2>
-              <div className={style["content__text-buttonWrapper"]}>
+              <div className={style['content__text-buttonWrapper']}>
                 <NavigationLink href="/pricing/#plans" prefetch={false}>
                   <Button aria-label={buttonLabel}>{buttonLabel}</Button>
                 </NavigationLink>
@@ -36,8 +38,8 @@ export const SupportSection: React.FC<SupportSectionProps> = ({
             </div>
 
             <div className={style.content__cardsSection}>
-              <div className={style["content__cardsSection-cards"]}>
-                {supportItems.map((item) => (
+              <div className={style['content__cardsSection-cards']}>
+                {supportItems.map(item => (
                   <div key={item.id} className={style.card}>
                     <div className={style.card__icon}>
                       <Image
@@ -47,8 +49,8 @@ export const SupportSection: React.FC<SupportSectionProps> = ({
                         height={80}
                         priority
                         style={{
-                          width: "100%",
-                          height: "auto",
+                          width: '100%',
+                          height: 'auto',
                         }}
                       />
                     </div>

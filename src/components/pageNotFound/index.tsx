@@ -1,16 +1,29 @@
-import { Container } from "@/components";
-import style from "./PageNotFoundStyles.module.scss";
-import Link from "next/link";
-import { GoHome } from "react-icons/go";
+import Image from 'next/image';
+import Link from 'next/link';
+import { GoHome } from 'react-icons/go';
+import { Container } from '@/components';
+import style from './PageNotFoundStyles.module.scss';
 
-const ImageNotFound = "/assets/notFound/404.png";
+
+const ImageNotFound = '/assets/notFound/404.png';
 
 export const PageNotFound = () => {
   return (
     <article className={style.root}>
       <Container>
         <div className={style.content}>
-          <img src={ImageNotFound} alt="Page Not Found Image" />
+          <Image
+            src={ImageNotFound}
+            priority
+            alt="Page Not Found Image"
+            width={200}
+            height={62}
+            style={{
+              width: '100%',
+              height: 'auto',
+            }}
+            className={style.content__img}
+          />
           <div className={style.content__goBack}>
             <Link href="/en/">
               <GoHome title="Home" />

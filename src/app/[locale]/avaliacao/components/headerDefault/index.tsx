@@ -1,11 +1,11 @@
-import React from "react";
-import style from "./headerDefaultStyles.module.scss";
-import { Container } from "@/components";
-import Image from "next/image";
-import Link from "next/link";
+import React from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
+import { Container } from '@/components';
+import style from './headerDefaultStyles.module.scss';
 
-const Logo = "/assets/logo/logo.png";
-const LogoMobile = "/assets/logo/logo-mobile.png";
+const Logo = '/assets/logo/logo.png';
+const LogoMobile = '/assets/logo/logo-mobile.png';
 
 export const HeaderDefault = () => {
   return (
@@ -15,7 +15,8 @@ export const HeaderDefault = () => {
           <div className={style.content__logo}>
             <Link
               href="https://platform.vee.codes"
-              aria-label="Link para acessar a página inicial do site da VeeCode Platform"
+              aria-label="Link para acessar a página 
+              inicial do site da VeeCode Platform"
             >
               <Image
                 src={Logo}
@@ -24,15 +25,16 @@ export const HeaderDefault = () => {
                 width={200}
                 height={62}
                 style={{
-                  width: "100%",
-                  height: "auto",
+                  width: '100%',
+                  height: 'auto',
                 }}
                 className={style.logo}
               />
             </Link>
             <Link
               href="https://platform.vee.codes"
-              aria-label="Link para acessar a página inicial do site da VeeCode Platform"
+              aria-label="Link para acessar a página inicial 
+              do site da VeeCode Platform"
             >
               <Image
                 src={LogoMobile}
@@ -41,8 +43,8 @@ export const HeaderDefault = () => {
                 width={34}
                 height={48}
                 style={{
-                  width: "100%",
-                  height: "auto",
+                  width: '100%',
+                  height: 'auto',
                 }}
                 className={style.logoMobile}
               />

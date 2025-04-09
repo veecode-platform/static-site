@@ -1,14 +1,14 @@
-"use client";
+'use client';
 
-import React from "react";
-import style from "./ScrollStyles.module.scss";
-import { FaAngleUp } from "react-icons/fa";
+import React from 'react';
+import { FaAngleUp } from 'react-icons/fa';
+import style from './ScrollStyles.module.scss';
 
 //scroll function
 const scrollToTop = () => {
   window.scrollTo({
     top: 0,
-    behavior: "smooth",
+    behavior: 'smooth',
   });
 };
 
@@ -20,14 +20,14 @@ export const ScrollTop = () => {
     if (scrolled > 900) return setVisible(true);
     if (scrolled <= 900) return setVisible(false);
   };
-  if (typeof window !== "undefined") {
-    window.addEventListener("scroll", toggleVisible);
+  if (typeof window !== 'undefined') {
+    window.addEventListener('scroll', toggleVisible);
   }
   return (
     <>
       <button
         onClick={scrollToTop}
-        style={{ display: visible ? "inline" : "none" }}
+        style={{ display: visible ? 'inline' : 'none' }}
         className={style.top}
         aria-label="scroll-up"
       >

@@ -1,9 +1,9 @@
-"use client";
+'use client';
 
-import { useRouter } from "@/i18n/routing";
-import style from "./BackButton.module.scss";
-import { BackButtonProps } from "./types";
-import { FaLongArrowAltLeft } from "react-icons/fa";
+import { FaLongArrowAltLeft } from 'react-icons/fa';
+import { useRouter } from '@/i18n/routing';
+import style from './BackButton.module.scss';
+import { BackButtonProps } from './types';
 
 export const BackButton: React.FC<BackButtonProps> = ({
   backToUrl,
@@ -12,11 +12,9 @@ export const BackButton: React.FC<BackButtonProps> = ({
   const router = useRouter();
 
   const HandlerBack = () => {
-    if (backToUrl) {
-      router.push(backToUrl as any);
-    } else {
-      noPrevious ? router.push("/") : router.back();
-    }
+    if (backToUrl)  return router.push(backToUrl as any);
+    else if(noPrevious) return router.push('/');
+    return router.back();
   };
 
   return (

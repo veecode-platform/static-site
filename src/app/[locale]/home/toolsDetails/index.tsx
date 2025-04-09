@@ -1,10 +1,10 @@
-import Link from "next/link";
-import style from "./ToolsDetails.module.scss";
-import { Container } from "@/components";
-import { toolsDetailsProps } from "./types";
-import Image from "next/image";
+import Image from 'next/image';
+import Link from 'next/link';
+import { Container } from '@/components';
+import style from './ToolsDetails.module.scss';
+import { toolsDetailsProps } from './types';
 
-const Banner = "/assets/home/bglight.webp";
+const Banner = '/assets/home/bglight.webp';
 
 export const ToolsDetails: React.FC<toolsDetailsProps> = ({
   title,
@@ -30,8 +30,8 @@ export const ToolsDetails: React.FC<toolsDetailsProps> = ({
           </div>
 
           <div className={style.wrapper_cardsWrapper}>
-            <div className={style["wrapper_cardsWrapper-cards"]}>
-              {tools.map((item) => (
+            <div className={style['wrapper_cardsWrapper-cards']}>
+              {tools.map(item => (
                 <div key={item.id} className={style.card}>
                   <div className={style.card__icon}>
                     <Image
@@ -41,8 +41,8 @@ export const ToolsDetails: React.FC<toolsDetailsProps> = ({
                       height={80}
                       priority
                       style={{
-                        width: "100%",
-                        height: "auto",
+                        width: '100%',
+                        height: 'auto',
                       }}
                     />
                   </div>
@@ -54,7 +54,7 @@ export const ToolsDetails: React.FC<toolsDetailsProps> = ({
             </div>
           </div>
 
-          <div className={style["wrapper_cardsWrapper-subtitle"]}>
+          <div className={style['wrapper_cardsWrapper-subtitle']}>
             <p>{subtitle}</p>
             <Link
               href="https://docs.platform.vee.codes/devportal/intro"

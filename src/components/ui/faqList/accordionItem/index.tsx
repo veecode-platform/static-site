@@ -1,8 +1,10 @@
-import React, { useRef } from "react";
-import style from "./AccordionItem.module.scss";
-import classNames from "classnames";
-import { BsPlus, BsDash } from "react-icons/bs";
-import { AcordionItemProps } from "./types";
+import React from 'react';
+import classNames from 'classnames';
+import {
+  BsPlus, BsDash, 
+} from 'react-icons/bs';
+import style from './AccordionItem.module.scss';
+import { AcordionItemProps } from './types';
 
 export const AccordionItem: React.FC<AcordionItemProps> = ({
   item,
@@ -10,7 +12,7 @@ export const AccordionItem: React.FC<AcordionItemProps> = ({
   active,
 }) => {
   const { title, answer } = item;
-  const contentElement = useRef();
+  // const contentElement = useRef();
 
   return (
     <li

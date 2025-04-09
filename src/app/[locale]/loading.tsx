@@ -1,11 +1,13 @@
-import { DefaultPage, Loading } from "@/components";
-import React from "react";
+import React from 'react';
+import {
+  DefaultPage, Loading, 
+} from '@/components';
 
 const LoadingStyle = {
-  minHeight: "75vh",
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
+  minHeight: '75vh',
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
 };
 
 const loading = () => {

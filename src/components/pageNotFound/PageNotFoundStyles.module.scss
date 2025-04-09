@@ -11,7 +11,7 @@
         @include displayFlex(center, center, column);
         gap: 2rem;
 
-        img {
+        &__img {
             width: 100%;
             max-width: 380px;
 

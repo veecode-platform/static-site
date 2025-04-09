@@ -1,1 +1,1 @@
-export { HeroComponent } from "./heroComponent"
+export { HeroComponent } from './heroComponent';

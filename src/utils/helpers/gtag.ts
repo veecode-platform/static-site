@@ -12,9 +12,9 @@ export const gtagPurchase = (id: string, plan: IPlan) => {
     items: [
       {
         item_id: plan.id,
-        item_name: plan.name
-      }
-    ]
+        item_name: plan.name,
+      },
+    ],
   };
   window.gtag('event', 'purchase', params);
 };

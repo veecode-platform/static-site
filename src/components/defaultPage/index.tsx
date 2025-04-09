@@ -1,8 +1,10 @@
-import style from "./DefaultPageStyles.module.scss";
-import { Header, Footer, Container } from "../../components";
-import { DefaultPageProps } from "./types";
-import classNames from "classnames";
-import { BackButton } from "./ui/BackButton";
+import classNames from 'classnames';
+import {
+  Header, Footer, Container, 
+} from '../../components';
+import style from './DefaultPageStyles.module.scss';
+import { DefaultPageProps } from './types';
+import { BackButton } from './ui/BackButton';
 
 export const DefaultPage: React.FC<DefaultPageProps> = ({
   titleBar,
@@ -30,24 +32,24 @@ export const DefaultPage: React.FC<DefaultPageProps> = ({
           {titleBar ? (
             <article className={style.titleWrapper}>
               <div className={style.titleWrapper__content}>
-                {title !== "" ? (
-                  <h1 className={style["titleWrapper__content-title"]}>
+                {title !== '' ? (
+                  <h1 className={style['titleWrapper__content-title']}>
                     {title}
                   </h1>
                 ) : (
-                  ""
+                  ''
                 )}
-                {subtitle !== "" ? (
-                  <h2 className={style["titleWrapper__content-subtitle"]}>
+                {subtitle !== '' ? (
+                  <h2 className={style['titleWrapper__content-subtitle']}>
                     {subtitle}
                   </h2>
                 ) : (
-                  ""
+                  ''
                 )}
               </div>
             </article>
           ) : (
-            ""
+            ''
           )}
           <Container>
             <article

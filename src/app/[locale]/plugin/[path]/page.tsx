@@ -1,35 +1,43 @@
-import { DefaultPage } from "@/components";
-import { routing } from "@/i18n/routing";
-import { getAllPlugins, getPluginByPath } from "@/lib";
-import { setRequestLocale } from "next-intl/server";
-import { PluginContent } from "./ui/PluginContent";
+import { use } from 'react';
+import { Locale } from 'next-intl';
+import { setRequestLocale } from 'next-intl/server';
+import { DefaultPage } from '@/components';
+import { routing } from '@/i18n/routing';
+import {
+  getAllPlugins, getPluginByPath, 
+} from '@/lib';
+import { PluginContent } from './ui/PluginContent';
+
+export const dynamic = 'force-static';
 
 type Props = {
-  params: { locale: string; path: string };
+  params: Promise<{ locale: Locale; path: string }>;
 };
 
-export async function generateStaticParams() {
-  return routing.locales.flatMap((locale) => {
-    const plugins = getAllPlugins(locale);
-    return plugins.map((plugin) => ({
-      locale,
-      path: plugin.path,
-    }));
-  });
-}
-
-export async function generateMetadata({ params: { path, locale } }: Props) {
+export async function generateMetadata(props: Props) {
+  const { locale, path } = await props.params;
   const plugin = getPluginByPath(locale, path);
 
   return {
     title: `VeeCode Platform | ${plugin.title ?? path}`,
     description:
       plugin.desc ||
-      "Choose the technology that is most compatible with your business.",
+      'Choose the technology that is most compatible with your business.',
   };
 }
 
-export default function PluginDocPage({ params: { locale, path } }: Props) {
+export async function generateStaticParams() {
+  return routing.locales.flatMap(locale => {
+    const plugins = getAllPlugins(locale);
+    return plugins.map(plugin => ({
+      locale,
+      path: plugin.path,
+    }));
+  });
+}
+
+export default function PluginDocPage(props: Props) {
+  const { locale, path } = use(props.params);
   // Enable static rendering
   setRequestLocale(locale);
 

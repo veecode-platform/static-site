@@ -43,7 +43,7 @@
             @include displayFlex(flex-start, center, row);
         }
 
-        img {
+        &-img {
             @include screenSize(30%, auto);
             max-width: 120px;
 

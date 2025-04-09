@@ -8,23 +8,23 @@ const Toast = {
   success: (message: string) => {
     toast.success(message, {
       theme: 'colored',
-      position: 'top-center'
+      position: 'top-center',
     });
   },
 
   error: (message: string) => {
     toast.error(message, {
       theme: 'colored',
-      position: 'bottom-left'
+      position: 'bottom-left',
     });
   },
 
   warning: (message: string) => {
     toast.warn(message, {
       theme: 'colored',
-      position: 'bottom-center'
+      position: 'bottom-center',
     });
-  }
+  },
 };
 
 export default Toast;

@@ -1,36 +1,42 @@
-"use client";
+'use client';
 
-import style from "./FormElementStyles.module.scss";
-import { Formik, Form } from "formik";
-import { object, string } from "yup";
-import TagManager from "react-gtm-module";
-import { useTranslations } from "next-intl";
-import { UseContactData } from "@/hooks/useContactData";
-import { Button, Checkbox, Input, TextArea } from "@/components";
-import { FormElementProps } from "./types";
-import { useRouter } from "@/i18n/routing";
+import {
+  Formik, Form, 
+} from 'formik';
+import { useTranslations } from 'next-intl';
+import TagManager from 'react-gtm-module';
+import {
+  object, string, 
+} from 'yup';
+import {
+  Button, Checkbox, Input, TextArea, 
+} from '@/components';
+import { UseContactData } from '@/hooks/useContactData';
+import { useRouter } from '@/i18n/routing';
+import style from './FormElementStyles.module.scss';
+import { FormElementProps } from './types';
 
 export const FormElement: React.FC<FormElementProps> = ({
   company,
   checkbox,
   type,
 }) => {
-  const t = useTranslations("contactUs.form");
+  const t = useTranslations('contactUs.form');
 
   const formSchema = object({
-    name: string().required("*required"),
-    company: string().required("*required").default(null),
-    email: string().email("*invalid email").required("*required"),
-    question: string().required("*required"),
+    name: string().required('*required'),
+    company: string().required('*required').default(null),
+    email: string().email('*invalid email').required('*required'),
+    question: string().required('*required'),
   });
 
   const router = useRouter();
 
   const tagManagerArgs = {
-    gtmId: "GTM-56RG967",
+    gtmId: 'GTM-56RG967',
     events: {
       generateLead: {
-        currency: "USD",
+        currency: 'USD',
         value: 1,
       },
     },
@@ -40,10 +46,10 @@ export const FormElement: React.FC<FormElementProps> = ({
     <div className={style.formWrapper}>
       <Formik
         initialValues={{
-          name: "",
-          company: "",
-          email: "",
-          question: "",
+          name: '',
+          company: '',
+          email: '',
+          question: '',
           type: type,
           vkpr: false,
           safiracli: false,
@@ -51,13 +57,15 @@ export const FormElement: React.FC<FormElementProps> = ({
           devportal: false,
         }}
         validationSchema={formSchema}
-        onSubmit={async (values) => {
+        onSubmit={async values => {
           try {
             await UseContactData(values);
             TagManager.initialize(tagManagerArgs);
-            router.push("/contact-success");
-          } catch (error) {
-            router.push("/contact-failed");
+            router.push('/contact-success');
+          } catch (error:unknown) {
+            // eslint-disable-next-line no-console
+            console.error(error);
+            router.push('/contact-failed');
           }
         }}
       >
@@ -65,21 +73,21 @@ export const FormElement: React.FC<FormElementProps> = ({
           <Form onSubmit={handleSubmit} className={style.form}>
             <Input
               name="name"
-              placeholder={t("name.placeholder")}
-              label={t("name.label")}
+              placeholder={t('name.placeholder')}
+              label={t('name.label')}
               error={errors.name && touched.name && errors.name}
             />
             <Input
               name="email"
-              placeholder={t("email.placeholder")}
-              label={t("email.label")}
+              placeholder={t('email.placeholder')}
+              label={t('email.label')}
               error={errors.email && touched.email && errors.email}
             />
             {company && (
               <Input
                 name="company"
-                placeholder={t("org.placeholder")}
-                label={t("org.label")}
+                placeholder={t('org.placeholder')}
+                label={t('org.label')}
                 error={errors.company && touched.company && errors.company}
               />
             )}
@@ -94,19 +102,19 @@ export const FormElement: React.FC<FormElementProps> = ({
             )}
             <TextArea
               name="question"
-              placeholder={t("message.placeholder")}
-              label={t("message.label")}
+              placeholder={t('message.placeholder')}
+              label={t('message.label')}
               error={errors.question && touched.question && errors.question}
             ></TextArea>
 
             <div className={style.form__buttonWrapper}>
               <Button
-                aria-label={t("buttonLabel")}
+                aria-label={t('buttonLabel')}
                 type="submit"
                 loading={isSubmitting}
                 alt
               >
-                {t("buttonLabel")}
+                {t('buttonLabel')}
               </Button>
             </div>
           </Form>

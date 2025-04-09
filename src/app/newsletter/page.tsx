@@ -1,6 +1,6 @@
-import { redirect } from "next/navigation";
+import { redirect } from 'next/navigation';
 
 export default function NewsletterPageRedirect() {
-  redirect(`/pt/newsletter`);
+  redirect('/pt/newsletter');
   return null;
 }

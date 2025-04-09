@@ -1,10 +1,10 @@
-import style from "./OptimizeYourBusiness.module.scss";
-import { Container } from "@/components";
-import { OptimizesyourBusinessProps } from "./type";
-import Image from "next/image";
+import Image from 'next/image';
+import { Container } from '@/components';
+import style from './OptimizeYourBusiness.module.scss';
+import { OptimizesyourBusinessProps } from './type';
 
-const DevportalImage = "/assets/home/printdevportal.png";
-const Banner = "/assets/home/bg2.webp";
+const DevportalImage = '/assets/home/printdevportal.png';
+const Banner = '/assets/home/bg2.webp';
 
 export const OptimizeYourBusiness: React.FC<OptimizesyourBusinessProps> = ({
   title,
@@ -23,7 +23,7 @@ export const OptimizeYourBusiness: React.FC<OptimizesyourBusinessProps> = ({
       />
       <Container>
         <article className={style.content}>
-          <div className={style["content__text"]}>
+          <div className={style['content__text']}>
             {/* Title */}
             <div className={style.title}>
               <h2>{title}</h2>
@@ -35,7 +35,7 @@ export const OptimizeYourBusiness: React.FC<OptimizesyourBusinessProps> = ({
               </div>
             </div>
           </div>
-          <div className={style["content__image"]}>
+          <div className={style['content__image']}>
             <div className={style.image}>
               <Image
                 src={DevportalImage}
@@ -44,8 +44,8 @@ export const OptimizeYourBusiness: React.FC<OptimizesyourBusinessProps> = ({
                 height={500}
                 priority
                 style={{
-                  width: "100%",
-                  height: "auto",
+                  width: '100%',
+                  height: 'auto',
                 }}
               />
             </div>
