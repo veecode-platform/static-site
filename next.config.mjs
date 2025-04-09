@@ -6,6 +6,7 @@ const withNextIntl = createNextIntlPlugin();
 const nextConfig = {
   output: "export", // static,
   trailingSlash: true,
+  basePath: '/static-site', 
   logging: {
     fetches: {
       hmrRefreshes: true,
