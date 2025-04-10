@@ -26,7 +26,7 @@ const nextConfig = {
       NEXT_PUBLIC_GOOGLE_TAG_MANAGER: process.env.NEXT_PUBLIC_GOOGLE_TAG_MANAGER,
       NEXT_PUBLIC_LAMBDA_BASE_URL: process.env.NEXT_PUBLIC_LAMBDA_BASE_URL,
       NEXT_PUBLIC_NEUROLEAD_ID: process.env.NEXT_PUBLIC_NEUROLEAD_ID,
-      LAMBDA_API_KEY: process.env.LAMBDA_API_KEY
+      NEXT_PUBLIC_LAMBDA_API_KEY: process.env.LAMBDA_API_KEY
     },
     source: "/(.*)",
     headers: [

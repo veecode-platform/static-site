@@ -27,7 +27,7 @@ jobs:
           NEXT_PUBLIC_GOOGLE_TAG_MANAGER: ${{ secrets.NEXT_PUBLIC_GOOGLE_TAG_MANAGER }}
           NEXT_PUBLIC_LAMBDA_BASE_URL: ${{ secrets.NEXT_PUBLIC_LAMBDA_BASE_URL }}
           NEXT_PUBLIC_NEUROLEAD_ID: ${{ secrets.NEXT_PUBLIC_NEUROLEAD_ID }}
-          LAMBDA_API_KEY: ${{ secrets.LAMBDA_API_KEY }}
+          NEXT_PUBLIC_LAMBDA_API_KEY: ${{ secrets.LAMBDA_API_KEY }}
         run: yarn build
 
       - name: Deploy to GitHub Pages
