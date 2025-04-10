@@ -1,13 +1,15 @@
 import createNextIntlPlugin from "next-intl/plugin";
 
 const withNextIntl = createNextIntlPlugin();
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH;
+const safeBasePath = basePath && basePath.startsWith('/') ? basePath : '';
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: "export", // static,
   trailingSlash: true,
-  basePath: process.env.NEXT_PUBLIC_BASE_PATH || '',
-  assetPrefix: process.env.NEXT_PUBLIC_BASE_PATH || '',
+  basePath: safeBasePath,
+  assetPrefix: safeBasePath,
   logging: {
     fetches: {
       hmrRefreshes: true,
