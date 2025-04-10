@@ -5,9 +5,9 @@ import {
 import style from './TransformTeamSection.module.scss';
 import type { TransformTeamSectionProps } from './type';
 
-const ComputerImg = `${process.env.NEXT_PUBLIC_BASE_PATH}/assets/home/notebook2.png`;
-const BannerMobile = `${process.env.NEXT_PUBLIC_BASE_PATH}/assets/home/banner-mobile.png`;
-const BannerDesktop = `${process.env.NEXT_PUBLIC_BASE_PATH}/assets/home/banner.webp`;
+const ComputerImg = `/assets/home/notebook2.png`;
+const BannerMobile = `/assets/home/banner-mobile.png`;
+const BannerDesktop = `/assets/home/banner.webp`;
 
 export const TransformTeamSection: React.FC<TransformTeamSectionProps> = ({
   title,

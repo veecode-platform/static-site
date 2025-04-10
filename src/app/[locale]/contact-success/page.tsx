@@ -12,7 +12,7 @@ import {
 import style from './SuccessStyles.module.scss';
 
 
-const SuccessImage = `${process.env.NEXT_PUBLIC_BASE_PATH}/assets/icons/success.png`;
+const SuccessImage = `/assets/icons/success.png`;
 
 export async function generateMetadata(props: Omit<LayoutProps, 'children'>) {
   const { locale } = await props.params;

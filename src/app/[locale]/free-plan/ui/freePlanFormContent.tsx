@@ -30,7 +30,7 @@ import {
 import { UseContactData } from '@/hooks/useContactData';
 import style from './FreePlanFormContentStyles.module.scss';
 
-const SuccessAnimation = `${process.env.NEXT_PUBLIC_BASE_PATH}/assets/animations/success.json`;
+const SuccessAnimation = `/assets/animations/success.json`;
 
 export const FreePlanFormContent = () => {
   const [open, setOpen] = React.useState<boolean>(false);

@@ -5,7 +5,7 @@ import {
 import style from './SupportSection.module.scss';
 import { SupportSectionProps } from './types';
 
-const BannerDesktop = `${process.env.NEXT_PUBLIC_BASE_PATH}/assets/home/bg3.webp`;
+const BannerDesktop = `/assets/home/bg3.webp`;
 
 export const SupportSection: React.FC<SupportSectionProps> = ({
   title,

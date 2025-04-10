@@ -4,8 +4,8 @@ import Link from 'next/link';
 import { Container } from '@/components';
 import style from './headerDefaultStyles.module.scss';
 
-const Logo = `${process.env.NEXT_PUBLIC_BASE_PATH}/assets/logo/logo.png`;
-const LogoMobile = `${process.env.NEXT_PUBLIC_BASE_PATH}/assets/logo/logo-mobile.png`;
+const Logo = `/assets/logo/logo.png`;
+const LogoMobile = `/assets/logo/logo-mobile.png`;
 
 export const HeaderDefault = () => {
   return (

@@ -19,12 +19,12 @@ import { PlansDetails } from './plansDetails';
 import style from './PricingStyles.module.scss';
 
 // assets
-const Img1 = `${process.env.NEXT_PUBLIC_BASE_PATH}/assets/pricing/icon3.png`;
-const Img2 = `${process.env.NEXT_PUBLIC_BASE_PATH}/assets/pricing/icon1.png`;
-const Img3 = `${process.env.NEXT_PUBLIC_BASE_PATH}/assets/pricing/icon2.png`;
-const AwsAmi = `${process.env.NEXT_PUBLIC_BASE_PATH}/assets/pricing/aws-consumer/ami.png`;
-const LauchWorkshopImg = `${process.env.NEXT_PUBLIC_BASE_PATH}/assets/pricing/aws-consumer/lauch-workshop.png`;
-const FastTrackImg = `${process.env.NEXT_PUBLIC_BASE_PATH}/assets/pricing/aws-consumer/fast-track.png`;
+const Img1 = `/assets/pricing/icon3.png`;
+const Img2 = `/assets/pricing/icon1.png`;
+const Img3 = `/assets/pricing/icon2.png`;
+const AwsAmi = `/assets/pricing/aws-consumer/ami.png`;
+const LauchWorkshopImg = `/assets/pricing/aws-consumer/lauch-workshop.png`;
+const FastTrackImg = `/assets/pricing/aws-consumer/fast-track.png`;
 
 export async function generateMetadata(props: Omit<LayoutProps, 'children'>) {
   const { locale } = await props.params;

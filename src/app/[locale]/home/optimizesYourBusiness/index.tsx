@@ -3,8 +3,8 @@ import { Container } from '@/components';
 import style from './OptimizeYourBusiness.module.scss';
 import { OptimizesyourBusinessProps } from './type';
 
-const DevportalImage = `${process.env.NEXT_PUBLIC_BASE_PATH}/assets/home/printdevportal.png`;
-const Banner = `${process.env.NEXT_PUBLIC_BASE_PATH}/assets/home/bg2.webp`;
+const DevportalImage = `/assets/home/printdevportal.png`;
+const Banner = `/assets/home/bg2.webp`;
 
 export const OptimizeYourBusiness: React.FC<OptimizesyourBusinessProps> = ({
   title,

@@ -3,7 +3,7 @@
 .contactSection {
     @include screenSize(100vw, auto);
     @include displayFlex(center, center, row);
-    @include backgroundImage($basePath+"/assets/governance/banner2.png");
+    @include backgroundImage("/assets/governance/banner2.png");
     background-position-x: 100%;
     padding: 6rem 0;
     min-height: 70vh;

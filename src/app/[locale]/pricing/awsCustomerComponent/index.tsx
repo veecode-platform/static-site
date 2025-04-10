@@ -3,7 +3,7 @@ import style from './awsCustomerComponent.module.scss';
 import CardAwsContent from './cardAwsContent';
 import { cardAwsContentProps } from './types';
 
-const AwsMarketPlaceLogo = `${process.env.NEXT_PUBLIC_BASE_PATH}/assets/pricing/aws-consumer/aws-marketplace.png`;
+const AwsMarketPlaceLogo = `/assets/pricing/aws-consumer/aws-marketplace.png`;
 
 const AwsCustomerComponent: React.FC<cardAwsContentProps> = ({
   title,

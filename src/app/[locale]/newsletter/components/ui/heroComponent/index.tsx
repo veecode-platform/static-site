@@ -12,7 +12,7 @@ import {
 } from './state/feedbackReducer';
 import { IFeedback } from './state/types';
 
-const ChatImage = `${process.env.NEXT_PUBLIC_BASE_PATH}/assets/newsletter/img.png`;
+const ChatImage = `/assets/newsletter/img.png`;
 
 export const HeroComponent = () => {
   const [showFeedback, setShowFeedback] = React.useState<boolean>(false);
