@@ -4,8 +4,8 @@ import Link from 'next/link';
 import { Container } from '@/components';
 import style from './headerDefaultStyles.module.scss';
 
-const Logo = `/assets/logo/logo.png`;
-const LogoMobile = `/assets/logo/logo-mobile.png`;
+const Logo = `/assets/logo/logo.svg`;
+const LogoMobile = `/assets/logo/logo-mobile.svg`;
 
 export const HeaderDefault = () => {
   return (

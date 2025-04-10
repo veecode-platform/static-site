@@ -3,7 +3,7 @@ import { Container } from '@/components';
 import style from './OptimizeYourBusiness.module.scss';
 import { OptimizesyourBusinessProps } from './type';
 
-const DevportalImage = `/assets/home/printdevportal.png`;
+const DevportalImage = `/assets/home/printdevportal.svg`;
 const Banner = `/assets/home/bg2.webp`;
 
 export const OptimizeYourBusiness: React.FC<OptimizesyourBusinessProps> = ({

@@ -5,8 +5,8 @@ import {
 import style from './TransformTeamSection.module.scss';
 import type { TransformTeamSectionProps } from './type';
 
-const ComputerImg = `/assets/home/notebook2.png`;
-const BannerMobile = `/assets/home/banner-mobile.png`;
+const ComputerImg = `/assets/home/notebook.svg`;
+const BannerMobile = `/assets/home/banner-mobile.webp`;
 const BannerDesktop = `/assets/home/banner.webp`;
 
 export const TransformTeamSection: React.FC<TransformTeamSectionProps> = ({

@@ -15,8 +15,8 @@ import {
 import style from './HeaderStyles.module.scss';
 import { HeaderProps } from './types';
 
-const Logo = `/assets/logo/logo.png`;
-const LogoMobile = `/assets/logo/logo-mobile.png`;
+const Logo = `/assets/logo/logo.svg`;
+const LogoMobile = `/assets/logo/logo-mobile.svg`;
 
 export const Header: React.FC<HeaderProps> = ({
   fixedHeader,

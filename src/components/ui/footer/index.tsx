@@ -16,7 +16,7 @@ import {
 import { gtagEvents } from '@/utils/helpers/gtag';
 import style from './FooterStyles.module.scss';
 
-const Logo = `/assets/logo/logo.png`;
+const Logo = `/assets/logo/logo.svg`;
 
 export const Footer = () => {
   const t = useTranslations('footer');

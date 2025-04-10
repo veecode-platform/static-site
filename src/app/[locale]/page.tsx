@@ -22,28 +22,28 @@ export default async function Homepage({ params }: PageProps) {
   const tools = [
     {
       id: 0,
-      icon: `/assets/home/toolsDetails/1.png`,
+      icon: `/assets/home/toolsDetails/1.svg`,
       desc: t.rich('card-1', {
         strong: chunks => <strong>{chunks}</strong>,
       }),
     },
     {
       id: 1,
-      icon: `/assets/home/toolsDetails/2.png`,
+      icon: `/assets/home/toolsDetails/2.svg`,
       desc: t.rich('card-2', {
         strong: chunks => <strong>{chunks}</strong>,
       }),
     },
     {
       id: 2,
-      icon: `/assets/home/toolsDetails/3.png`,
+      icon: `/assets/home/toolsDetails/3.svg`,
       desc: t.rich('card-3', {
         strong: chunks => <strong>{chunks}</strong>,
       }),
     },
     {
       id: 3,
-      icon: `/assets/home/toolsDetails/4.png`,
+      icon: `/assets/home/toolsDetails/4.svg`,
       desc: t.rich('card-4', {
         strong: chunks => <strong>{chunks}</strong>,
       }),
