@@ -6,7 +6,8 @@ const withNextIntl = createNextIntlPlugin();
 const nextConfig = {
   output: "export", // static,
   trailingSlash: true,
-  // basePath: process.env.NEXT_PUBLIC_BASE_PATH || '',
+  basePath: process.env.NEXT_PUBLIC_BASE_PATH || '',
+  assetPrefix: process.env.NEXT_PUBLIC_BASE_PATH || '',
   logging: {
     fetches: {
       hmrRefreshes: true,
@@ -15,6 +16,15 @@ const nextConfig = {
       deviceSizes: [640, 768, 769, 1024, 1280, 1536, 2048, 3840],
       minimumCacheTTL: 60,
       unoptimized: true,
+    },
+    env: {
+      NEXT_PUBLIC_BASE_PATH: process.env.NEXT_PUBLIC_BASE_PATH,
+      NEXT_PUBLIC_ANALYTICS_ID: process.env.NEXT_PUBLIC_ANALYTICS_ID,
+      NEXT_PUBLIC_HOST_URL: process.env.NEXT_PUBLIC_HOST_URL,
+      NEXT_PUBLIC_GOOGLE_TAG_MANAGER: process.env.NEXT_PUBLIC_GOOGLE_TAG_MANAGER,
+      NEXT_PUBLIC_LAMBDA_BASE_URL: process.env.NEXT_PUBLIC_LAMBDA_BASE_URL,
+      NEXT_PUBLIC_NEUROLEAD_ID: process.env.NEXT_PUBLIC_NEUROLEAD_ID,
+      LAMBDA_API_KEY: process.env.LAMBDA_API_KEY
     },
     source: "/(.*)",
     headers: [
