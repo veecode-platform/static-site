@@ -43,10 +43,15 @@
       .logo {
         display: none;
 
-        //md
-        @include for-md-only {
+        //lg
+        @include for-lg-only {
           display: flex;
           @include navbarLogo();
+          max-width: 210px
+        }
+
+        //xl
+        @include for-xl-only {
           max-width: 280px
         }
       }
@@ -56,7 +61,7 @@
         max-width: 60px;
 
         //md
-        @include for-md-only {
+        @include for-lg-only {
           display: none
         }
       }
