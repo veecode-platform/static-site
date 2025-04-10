@@ -53,6 +53,7 @@
 
       .logoMobile {
         @include navbarLogo();
+        max-width: 60px;
 
         //md
         @include for-md-only {

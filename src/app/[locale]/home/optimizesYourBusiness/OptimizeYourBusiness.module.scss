@@ -27,7 +27,7 @@
     .content {
         @include screenSize(100%, auto);
         @include displayFlex(center, center, column-reverse);
-        padding: 2rem 0;
+        padding: 2rem 0 4rem 0;
         gap: .5rem;
 
         //md
