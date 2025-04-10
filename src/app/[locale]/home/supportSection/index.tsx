@@ -21,7 +21,6 @@ export const SupportSection: React.FC<SupportSectionProps> = ({
         width={500}
         height={500}
         sizes="100vw"
-        priority
         unoptimized
         className={style.bannerDesktop}
       />
@@ -47,7 +46,6 @@ export const SupportSection: React.FC<SupportSectionProps> = ({
                         alt=""
                         width={80}
                         height={80}
-                        priority
                         style={{
                           width: '100%',
                           height: 'auto',

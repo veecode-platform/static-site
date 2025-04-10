@@ -20,7 +20,6 @@ export const ToolsDetails: React.FC<toolsDetailsProps> = ({
         width={500}
         height={500}
         sizes="100vw"
-        priority
         unoptimized
         className={style.banner}
       />
@@ -40,7 +39,6 @@ export const ToolsDetails: React.FC<toolsDetailsProps> = ({
                       alt=""
                       width={80}
                       height={80}
-                      priority
                       style={{
                         width: '100%',
                         height: 'auto',

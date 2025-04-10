@@ -40,7 +40,6 @@ export default async function FailedPage({ params }: PageProps) {
         <div className={style.content__image}>
           <Image
             src={FailedImage}
-            priority
             alt="Failed Animation"
             width={200}
             height={62}

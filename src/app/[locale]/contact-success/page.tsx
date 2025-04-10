@@ -41,7 +41,6 @@ export default async function ContactSuccessPage({ params }: PageProps) {
       <article className={style.content}>
         <Image
           src={SuccessImage}
-          priority
           alt="Success Animation"
           width={200}
           height={62}

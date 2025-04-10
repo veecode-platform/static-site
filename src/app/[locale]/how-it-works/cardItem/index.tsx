@@ -12,7 +12,6 @@ export const CardItem: React.FC<CardItemProps> = ({
       <div className={style.cardItem__image}>
         <Image
           src={image}
-          priority
           alt={title}
           width={200}
           height={62}

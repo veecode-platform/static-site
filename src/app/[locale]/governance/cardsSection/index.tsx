@@ -24,7 +24,6 @@ export const CardsSection: React.FC<CardsSectionProps> = ({
         <div className={style.cardGrey}>
           <Image
             src={Icon1}
-            priority
             alt=""
             width={200}
             height={62}
@@ -43,7 +42,6 @@ export const CardsSection: React.FC<CardsSectionProps> = ({
         <div className={style.cardGrey}>
           <Image
             src={Icon2}
-            priority
             alt=""
             width={200}
             height={62}
@@ -61,7 +59,6 @@ export const CardsSection: React.FC<CardsSectionProps> = ({
         <div className={style.cardGreen}>
           <Image
             src={Icon3}
-            priority
             alt=""
             width={200}
             height={62}
@@ -80,7 +77,6 @@ export const CardsSection: React.FC<CardsSectionProps> = ({
         <div className={style.card}>
           <Image
             src={Icon1}
-            priority
             alt=""
             width={200}
             height={62}
@@ -98,7 +94,6 @@ export const CardsSection: React.FC<CardsSectionProps> = ({
         <div className={style.card}>
           <Image
             src={Icon2}
-            priority
             alt=""
             width={200}
             height={62}
@@ -116,7 +111,6 @@ export const CardsSection: React.FC<CardsSectionProps> = ({
         <div className={style.card}>
           <Image
             src={Icon3}
-            priority
             alt=""
             width={200}
             height={62}

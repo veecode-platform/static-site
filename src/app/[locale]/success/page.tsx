@@ -41,7 +41,6 @@ export default async function SuccessPage({ params }: PageProps) {
         <div className={style.content__image}>
           <Image
             src={SuccessImage}
-            priority
             alt="Success Animation"
             width={200}
             height={62}

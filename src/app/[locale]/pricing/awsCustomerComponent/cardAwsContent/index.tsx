@@ -28,7 +28,6 @@ const CardAwsContent: React.FC<CardAwsContentProps> = ({
             width: '100%',
             height: 'auto',
           }} 
-          priority
         />
       </div>
       <div className={style.card__body}>

@@ -18,7 +18,6 @@ export const OptimizeYourBusiness: React.FC<OptimizesyourBusinessProps> = ({
         width={500}
         height={500}
         sizes="100vw"
-        priority
         className={style.banner}
         unoptimized
       />

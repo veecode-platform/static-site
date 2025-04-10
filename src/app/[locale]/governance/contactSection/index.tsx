@@ -17,7 +17,6 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
       <article className={style.content}>
         <Image
           src={NotebookImg}
-          priority
           alt=""
           width={200}
           height={62}
