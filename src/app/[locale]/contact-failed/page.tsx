@@ -9,7 +9,7 @@ import { routing } from '@/i18n/routing';
 import {
   LayoutProps, PageProps, 
 } from '@/utils/types/pageProps';
-import style from './SuccessStyles.module.scss';
+import style from './ContactFailedStyles.module.scss';
 
 const FailedImage = `/assets/icons/failed.png`;
 
@@ -38,18 +38,20 @@ export default async function ContactSuccessPage({ params }: PageProps) {
   return (
     <DefaultPage noBack showOptions>
       <article className={style.content}>
-        <Image
-          src={FailedImage}
-          alt="Failed Animation" 
-          width={200}
-          height={62}
-          style={{
-            width: '100%',
-            height: 'auto',
-          }}
-          unoptimized
-          className={style.content__image}
-        />
+        <div className={style.content__image}>
+          <Image
+            src={FailedImage}
+            alt="Failed Animation" 
+            width={200}
+            height={62}
+            style={{
+              width: '100%',
+              height: 'auto',
+            }}
+            unoptimized
+            className={style['content__image-img']}
+          />
+        </div>
         <div className={style.content__details}>
           {t.rich('contact.error', {
             p: chunks => <p>{chunks}</p>,
