@@ -1,98 +1,98 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
 <url>
-<loc>http://localhost:3000/en/en</loc>
-<xhtml:link rel="alternate" hreflang="en" href="http://localhost:3000/en/en" />
-<xhtml:link rel="alternate" hreflang="pt" href="http://localhost:3000/pt/pt" />
+<loc>https://platform.vee.codes/en/en</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://platform.vee.codes/en/en" />
+<xhtml:link rel="alternate" hreflang="pt" href="https://platform.vee.codes/pt/pt" />
 </url>
 <url>
-<loc>http://localhost:3000/en/en/plugins/</loc>
-<xhtml:link rel="alternate" hreflang="en" href="http://localhost:3000/en/en/plugins/" />
-<xhtml:link rel="alternate" hreflang="pt" href="http://localhost:3000/pt/pt/plugins/" />
+<loc>https://platform.vee.codes/en/en/plugins/</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://platform.vee.codes/en/en/plugins/" />
+<xhtml:link rel="alternate" hreflang="pt" href="https://platform.vee.codes/pt/pt/plugins/" />
 </url>
 <url>
-<loc>http://localhost:3000/en/en/plugin/</loc>
-<xhtml:link rel="alternate" hreflang="en" href="http://localhost:3000/en/en/plugin/" />
-<xhtml:link rel="alternate" hreflang="pt" href="http://localhost:3000/pt/pt/plugin/" />
+<loc>https://platform.vee.codes/en/en/plugin/</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://platform.vee.codes/en/en/plugin/" />
+<xhtml:link rel="alternate" hreflang="pt" href="https://platform.vee.codes/pt/pt/plugin/" />
 </url>
 <url>
-<loc>http://localhost:3000/en/en/pricing/</loc>
-<xhtml:link rel="alternate" hreflang="en" href="http://localhost:3000/en/en/pricing/" />
-<xhtml:link rel="alternate" hreflang="pt" href="http://localhost:3000/pt/pt/pricing/" />
+<loc>https://platform.vee.codes/en/en/pricing/</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://platform.vee.codes/en/en/pricing/" />
+<xhtml:link rel="alternate" hreflang="pt" href="https://platform.vee.codes/pt/pt/pricing/" />
 </url>
 <url>
-<loc>http://localhost:3000/en/en/pricing/#plans/</loc>
-<xhtml:link rel="alternate" hreflang="en" href="http://localhost:3000/en/en/pricing/#plans/" />
-<xhtml:link rel="alternate" hreflang="pt" href="http://localhost:3000/pt/pt/pricing/#plans/" />
+<loc>https://platform.vee.codes/en/en/pricing/#plans/</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://platform.vee.codes/en/en/pricing/#plans/" />
+<xhtml:link rel="alternate" hreflang="pt" href="https://platform.vee.codes/pt/pt/pricing/#plans/" />
 </url>
 <url>
-<loc>http://localhost:3000/enfree-plan?plan=free/</loc>
-<xhtml:link rel="alternate" hreflang="en" href="http://localhost:3000/enfree-plan?plan=free/" />
-<xhtml:link rel="alternate" hreflang="pt" href="http://localhost:3000/ptfree-plan?plan=free/" />
+<loc>https://platform.vee.codes/enfree-plan?plan=free/</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://platform.vee.codes/enfree-plan?plan=free/" />
+<xhtml:link rel="alternate" hreflang="pt" href="https://platform.vee.codes/ptfree-plan?plan=free/" />
 </url>
 <url>
-<loc>http://localhost:3000/en/en/contact-us/</loc>
-<xhtml:link rel="alternate" hreflang="en" href="http://localhost:3000/en/en/contact-us/" />
-<xhtml:link rel="alternate" hreflang="pt" href="http://localhost:3000/pt/pt/contact-us/" />
+<loc>https://platform.vee.codes/en/en/contact-us/</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://platform.vee.codes/en/en/contact-us/" />
+<xhtml:link rel="alternate" hreflang="pt" href="https://platform.vee.codes/pt/pt/contact-us/" />
 </url>
 <url>
-<loc>http://localhost:3000/en/en/contact-success/</loc>
-<xhtml:link rel="alternate" hreflang="en" href="http://localhost:3000/en/en/contact-success/" />
-<xhtml:link rel="alternate" hreflang="pt" href="http://localhost:3000/pt/pt/contact-success/" />
+<loc>https://platform.vee.codes/en/en/contact-success/</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://platform.vee.codes/en/en/contact-success/" />
+<xhtml:link rel="alternate" hreflang="pt" href="https://platform.vee.codes/pt/pt/contact-success/" />
 </url>
 <url>
-<loc>http://localhost:3000/en/en/contact-failed/</loc>
-<xhtml:link rel="alternate" hreflang="en" href="http://localhost:3000/en/en/contact-failed/" />
-<xhtml:link rel="alternate" hreflang="pt" href="http://localhost:3000/pt/pt/contact-failed/" />
+<loc>https://platform.vee.codes/en/en/contact-failed/</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://platform.vee.codes/en/en/contact-failed/" />
+<xhtml:link rel="alternate" hreflang="pt" href="https://platform.vee.codes/pt/pt/contact-failed/" />
 </url>
 <url>
-<loc>http://localhost:3000/en/en/how-it-works/</loc>
-<xhtml:link rel="alternate" hreflang="en" href="http://localhost:3000/en/en/how-it-works/" />
-<xhtml:link rel="alternate" hreflang="pt" href="http://localhost:3000/pt/pt/how-it-works/" />
+<loc>https://platform.vee.codes/en/en/how-it-works/</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://platform.vee.codes/en/en/how-it-works/" />
+<xhtml:link rel="alternate" hreflang="pt" href="https://platform.vee.codes/pt/pt/how-it-works/" />
 </url>
 <url>
-<loc>http://localhost:3000/en/en/support/</loc>
-<xhtml:link rel="alternate" hreflang="en" href="http://localhost:3000/en/en/support/" />
-<xhtml:link rel="alternate" hreflang="pt" href="http://localhost:3000/pt/pt/support/" />
+<loc>https://platform.vee.codes/en/en/support/</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://platform.vee.codes/en/en/support/" />
+<xhtml:link rel="alternate" hreflang="pt" href="https://platform.vee.codes/pt/pt/support/" />
 </url>
 <url>
-<loc>http://localhost:3000/en/en/terms-of-service/</loc>
-<xhtml:link rel="alternate" hreflang="en" href="http://localhost:3000/en/en/terms-of-service/" />
-<xhtml:link rel="alternate" hreflang="pt" href="http://localhost:3000/pt/pt/terms-of-service/" />
+<loc>https://platform.vee.codes/en/en/terms-of-service/</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://platform.vee.codes/en/en/terms-of-service/" />
+<xhtml:link rel="alternate" hreflang="pt" href="https://platform.vee.codes/pt/pt/terms-of-service/" />
 </url>
 <url>
-<loc>http://localhost:3000/en/en/privacy-policy/</loc>
-<xhtml:link rel="alternate" hreflang="en" href="http://localhost:3000/en/en/privacy-policy/" />
-<xhtml:link rel="alternate" hreflang="pt" href="http://localhost:3000/pt/pt/privacy-policy/" />
+<loc>https://platform.vee.codes/en/en/privacy-policy/</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://platform.vee.codes/en/en/privacy-policy/" />
+<xhtml:link rel="alternate" hreflang="pt" href="https://platform.vee.codes/pt/pt/privacy-policy/" />
 </url>
 <url>
-<loc>http://localhost:3000/en/en/faq/</loc>
-<xhtml:link rel="alternate" hreflang="en" href="http://localhost:3000/en/en/faq/" />
-<xhtml:link rel="alternate" hreflang="pt" href="http://localhost:3000/pt/pt/faq/" />
+<loc>https://platform.vee.codes/en/en/faq/</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://platform.vee.codes/en/en/faq/" />
+<xhtml:link rel="alternate" hreflang="pt" href="https://platform.vee.codes/pt/pt/faq/" />
 </url>
 <url>
-<loc>http://localhost:3000/en/en/success/</loc>
-<xhtml:link rel="alternate" hreflang="en" href="http://localhost:3000/en/en/success/" />
-<xhtml:link rel="alternate" hreflang="pt" href="http://localhost:3000/pt/pt/success/" />
+<loc>https://platform.vee.codes/en/en/success/</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://platform.vee.codes/en/en/success/" />
+<xhtml:link rel="alternate" hreflang="pt" href="https://platform.vee.codes/pt/pt/success/" />
 </url>
 <url>
-<loc>http://localhost:3000/en/en/failed/</loc>
-<xhtml:link rel="alternate" hreflang="en" href="http://localhost:3000/en/en/failed/" />
-<xhtml:link rel="alternate" hreflang="pt" href="http://localhost:3000/pt/pt/failed/" />
+<loc>https://platform.vee.codes/en/en/failed/</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://platform.vee.codes/en/en/failed/" />
+<xhtml:link rel="alternate" hreflang="pt" href="https://platform.vee.codes/pt/pt/failed/" />
 </url>
 <url>
-<loc>http://localhost:3000/en/en/validate/</loc>
-<xhtml:link rel="alternate" hreflang="en" href="http://localhost:3000/en/en/validate/" />
-<xhtml:link rel="alternate" hreflang="pt" href="http://localhost:3000/pt/pt/validate/" />
+<loc>https://platform.vee.codes/en/en/validate/</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://platform.vee.codes/en/en/validate/" />
+<xhtml:link rel="alternate" hreflang="pt" href="https://platform.vee.codes/pt/pt/validate/" />
 </url>
 <url>
-<loc>http://localhost:3000/en/en/validate?plan=standard/</loc>
-<xhtml:link rel="alternate" hreflang="en" href="http://localhost:3000/en/en/validate?plan=standard/" />
-<xhtml:link rel="alternate" hreflang="pt" href="http://localhost:3000/pt/pt/validate?plan=standard/" />
+<loc>https://platform.vee.codes/en/en/validate?plan=standard/</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://platform.vee.codes/en/en/validate?plan=standard/" />
+<xhtml:link rel="alternate" hreflang="pt" href="https://platform.vee.codes/pt/pt/validate?plan=standard/" />
 </url>
 <url>
-<loc>http://localhost:3000/en/en/governance/</loc>
-<xhtml:link rel="alternate" hreflang="en" href="http://localhost:3000/en/en/governance/" />
-<xhtml:link rel="alternate" hreflang="pt" href="http://localhost:3000/pt/pt/governance/" />
+<loc>https://platform.vee.codes/en/en/governance/</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://platform.vee.codes/en/en/governance/" />
+<xhtml:link rel="alternate" hreflang="pt" href="https://platform.vee.codes/pt/pt/governance/" />
 </url>
 </urlset>
