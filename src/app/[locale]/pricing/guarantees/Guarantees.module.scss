@@ -1,57 +1,64 @@
-@import "../../../../abstract/abstract";
+@use "sass:math";
+@use "sass:list";
+@use "../../../../abstract/abstract" as *;
 
 .guaranteesWrapper {
+  margin: 2em 0;
+  color: $color10;
+
+  @include screenSize(100%, auto);
+  @include displayFlex(center, center, column);
+
+  &__text {
+    padding: 1em 0 4em;
+
     @include screenSize(100%, auto);
-    @include displayFlex(center, center, column);
-    margin: 2em 0;
-    color: $color10;
 
-    &__text {
-        @include screenSize(100%, auto);
-        padding: 1em 0 4em 0;
-
-        //md
-        @include for-md-only {
-            padding: 1em 0 6em 0;
-        }
-
-        //xl
-        @include for-xl-only {
-            @include screenSize(80%, auto);
-            padding: 1em 0 6em 0;
-        }
-
-        &-info {
-            @include titleSm(center);
-            color: $color2;
-
-            a {
-                color: $color7;
-                transition: all .5s ease-in-out;
-
-                &:hover {
-                    color: $color1;
-                    transition: all .5s ease-in;
-                }
-            }
-        }
+    // md
+    @include for-md-only {
+      padding: 1em 0 6em;
     }
 
-    &__cards {
-        @include screenSize(100%, auto);
-        display: grid;
-        grid-template: repeat(3, 1fr) / 1fr;
-        justify-content: space-between;
+    // xl
+    @include for-xl-only {
+      padding: 1em 0 6em;
 
-        //md
-        @include for-md-only {
-            gap: 2rem
-        }
-
-        //lg
-        @include for-lg-only {
-            grid-template: 1fr/repeat(3, 1fr);
-            gap: 0;
-        }
+      @include screenSize(80%, auto);
     }
+
+    &-info {
+      color: $color2;
+
+      @include titleSm(center);
+
+      a {
+        color: $color7;
+        transition: all 0.5s ease-in-out;
+
+        &:hover {
+          color: $color1;
+          transition: all 0.5s ease-in;
+        }
+      }
+    }
+  }
+
+  &__cards {
+    display: grid;
+    justify-content: space-between;
+    grid-template: list.slash(repeat(3, 1fr), 1fr);
+
+    @include screenSize(100%, auto);
+
+    // md
+    @include for-md-only {
+      gap: 2rem;
+    }
+
+    // lg
+    @include for-lg-only {
+      gap: 0;
+      grid-template: list.slash(1fr, repeat(3, 1fr));
+    }
+  }
 }

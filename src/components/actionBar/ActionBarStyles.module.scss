@@ -1,19 +1,21 @@
-@import "../../abstract/abstract";
+@use "../../abstract/abstract" as *;
 
 .content {
+    margin: 1rem 0 2rem;
+    padding: 2.5em 2.5em 2em;
+    border-radius: .5em;
+    gap: 1rem;
+
     @include screenSize(100%, auto);
     @include displayFlex(center, center, column);
-    padding: 2.5em 2.5em 2em 2.5em;
-    border-radius: .5em;
-    margin: 1rem 0 2rem 0;
-    gap: 1rem;
-    @include glassEffect();
+    @include glassEffect;
 
     // lg
     @include for-lg-only {
-        @include displayFlex(center, center, row);
         padding: 3em;
         gap: 5rem;
+
+        @include displayFlex(center, center, row);
     }
 
     &__title {

@@ -1,15 +1,17 @@
-@import "../../../../abstract/abstract";
+@use "../../../../abstract/abstract" as *;
 
 .content {
-  @include screenSize(100%, auto);
-  @include displayFlex(center, center, column);
   gap: 3rem;
   margin-top: 2rem;
 
+  @include screenSize(100%, auto);
+  @include displayFlex(center, center, column);
+
   &__titleWrapper {
+    gap: 2rem;
+
     @include screenSize(100%, auto);
     @include displayFlex(center, center, column);
-    gap: 2rem;
 
     //lg
     @include for-lg-only {
@@ -18,13 +20,15 @@
 
     .awsMarketplaceLogo {
       width: 20rem;
-      @include glassEffect();
       padding: 1.5rem;
+
+      @include glassEffect;
     }
 
     .awsTitle {
-      @include titleMain(center);
       color: $color1;
+
+      @include titleMain(center);
 
       //lg
       @include for-lg-only {
@@ -39,6 +43,7 @@
 
     p {
       color: $color2;
+
       @include titleSm(center);
 
       //lg
@@ -49,9 +54,10 @@
   }
 
   &__awsCards {
+    gap: 2rem;
+
     @include screenSize(100%, auto);
     @include displayFlex(center, center, column);
-    gap: 2rem;
   }
 
 }

@@ -1,18 +1,20 @@
-@import "../../../../abstract/abstract";
+@use "../../../../abstract/abstract" as *;
 
 .wrapper {
+    padding: 1em 0 2em;
+
     @include screenSize(100%, auto);
     @include displayFlex(center, center, row);
-    padding: 1em 0 2em 0;
 
     .content {
         @include screenSize(100%, auto);
         @include displayFlex(center, center, column);
 
         &__title {
-            @include titleSm(left);
-            margin-bottom: .7em;
             cursor: pointer;
+            margin-bottom: .7em;
+
+            @include titleSm(left);
         }
 
         &__desc {
@@ -24,13 +26,13 @@
             }
 
             a {
-                color: $color7;
                 font-weight: 600;
+                color: $color7;
                 transition: all .4s linear;
 
                 &:hover {
-                    transition: all .4s linear;
                     color: $color1;
+                    transition: all .4s linear;
                 }
             }
         }

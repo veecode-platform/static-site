@@ -1,13 +1,18 @@
-@import "../../../../../abstract/abstract";
+@use "../../../../../abstract/abstract" as *;
 
 .wrapper {
-    @include screenSize(100vw, calc(100vh - $headerHeight));
-    @include displayFlex(center, center, column);
-    overflow-y: hidden;
     position: relative;
+    overflow-y: hidden;
+
+    &{
+      @include screenSize(100vw, calc(100vh - $headerHeight));
+      @include displayFlex(center, center, column);
+    }
 
     .content {
-        @include screenSize(100%, 100%);
+        &{
+            @include screenSize(100%, 100%);
+        }
 
         // lg
         @include for-xl-only {
@@ -15,13 +20,17 @@
         }
 
         &__text {
-            @include screenSize(100%, 100%);
-            @include displayFlex(center, center, column);
             gap: 2rem;
+
+            &{
+              @include screenSize(100%, 100%);
+              @include displayFlex(center, center, column);
+            }
 
             // md
             @include for-md-only {
                 width: 80%;
+
                 @include displayFlex(center, flex-start, column);
             }
 
@@ -44,14 +53,14 @@
             }
 
             &-button {
-                outline: none;
-                border: 5px solid $color1;
-                background-color: transparent;
                 padding: .8rem 2rem;
-                border-radius: 15px;
                 font-size: 1.25rem;
                 font-weight: bold;
+                border: 5px solid $color1;
+                background-color: transparent;
+                border-radius: 15px;
                 cursor: pointer;
+                outline: none;
 
                 a {
                     color: $color3 !important;
@@ -64,8 +73,8 @@
         position: absolute;
         top: -25rem;
         right: -2rem;
-        opacity: 0.1;
         z-index: -1;
+        opacity: 0.1;
 
         // md
         @include for-md-only {
@@ -74,13 +83,14 @@
 
         // xl
         @include for-xl-only {
-            opacity: 1;
             z-index: 0;
+            opacity: 1;
         }
     }
 
     .secondLogo {
         @extend .firstLogo;
+
         top: 21rem;
         right: 5rem;
     }

@@ -1,4 +1,4 @@
-@import"../../abstract/abstract";
+@use "../../abstract/abstract" as *;
 
 .loading {
     @include screenSize(100%, 100%);

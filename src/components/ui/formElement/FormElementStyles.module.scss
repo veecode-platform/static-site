@@ -1,20 +1,23 @@
-@import"../../../abstract/abstract";
+@use "../../../abstract/abstract" as *;
 
 .formWrapper {
+    padding: 1em;
+
     @include screenSize(100%, auto);
     @include displayFlex(center, center, row);
     @include displayFlex(center, center, column);
-    @include glassEffect();
-    padding: 1em;
+    @include glassEffect;
+
     // //mobile(S)
     // @include for-phoneS-only{
     //     width: 85vw;
     // }
 
     .form {
-        @include displayFlex(center, center, column);
         width: 100%;
         gap: 1.2vh;
+
+        @include displayFlex(center, center, column);
 
         &__buttonWrapper {
             @include screenSize(100%, auto);
@@ -23,14 +26,13 @@
 
         &__checkboxWrapper {
             display: flex;
-            flex-direction: row;
+            flex-basis: 100%;
             justify-content: flex-start;
             align-items: flex-start;
-            gap: 0.1vh;
             width: 100%;
             margin: 1vh;
-            flex-basis: 100%;
-            flex-wrap: wrap;
+            flex-flow: row wrap;
+            gap: 0.1vh;
 
             h1 {
                 width: 100%;

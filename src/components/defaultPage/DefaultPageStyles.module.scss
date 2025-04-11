@@ -1,18 +1,20 @@
-@import "../../abstract/abstract";
+@use "../../abstract/abstract" as *;
 
 .root {
+  color: $color2;
+  background-color: $color9;
+
   @include screenSize(100vw, auto);
   @include displayFlex(center, center, column);
-  background-color: $color9;
-  color: $color2;
 
   .content {
     @include screenSize(100%, auto);
 
     .titleWrapper {
+      padding: 2.5em 0;
+
       @include backgroundImage('/assets/default/banner.webp');
       @include displayFlex(center, center, row);
-      padding: 2.5em 0;
 
       //lg
       @include for-lg-only {
@@ -20,13 +22,15 @@
       }
 
       &__content {
-        @include containerLayout();
         max-width: $maxWidthDefault;
 
+        @include containerLayout;
+
         &-title {
-          @include titleMain(left);
-          margin-bottom: 2vh;
           color: $color1;
+          margin-bottom: 2vh;
+
+          @include titleMain(left);
         }
 
         &-subtitle {
@@ -36,14 +40,15 @@
           @include for-lg-only {
             display: flex;
             color: $color2;
+
             @include text(left);
 
             strong,
             a {
               margin: 0 .5rem;
               color: $color1;
-              cursor: pointer;
               transition: all .5s ease-in-out;
+              cursor: pointer;
 
               &:hover {
                 color: $color7;
@@ -56,9 +61,10 @@
     }
 
     .contentWrapper {
+      margin: auto;
+
       @include screenSize(100%, auto);
       @include displayFlex(center, center, column);
-      margin: auto;
 
       &__spaces {
         padding: 4em 0;

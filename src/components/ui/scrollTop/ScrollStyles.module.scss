@@ -1,26 +1,27 @@
-@import "../../../abstract/abstract";
+@use "../../../abstract/abstract" as *;
 
 .top {
+    position: fixed;
+    top: 80%;
+    left: 85%;
+    z-index: 99999;
     width: 50px;
     height: 50px;
-    position: fixed;
-    left: 85%;
-    top: 80%;
-    font-size: 2rem;
-    cursor: pointer;
-    border: none;
-    outline: none;
-    border-radius: 50%;
-    opacity: .2;
     padding: 5px;
-    z-index: 99999;
-    @include displayFlex(center, center, row);
+    font-size: 2rem;
+    border: none;
+    opacity: .2;
     transition: all 0.3s ease;
+    border-radius: 50%;
+    cursor: pointer;
+    outline: none;
+
+    @include displayFlex(center, center, row);
 
     //md
     @include for-md-only {
-        font-size: 2.5rem;
         left: 90%;
+        font-size: 2.5rem;
     }
 
     //lg
@@ -30,9 +31,9 @@
 
     //xl
     @include for-xl-only {
+        left: 90%;
         width: 60px;
         height: 60px;
-        left: 90%;
         font-size: 3rem;
     }
 

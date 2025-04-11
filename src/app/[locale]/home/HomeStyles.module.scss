@@ -1,4 +1,4 @@
-@import "../../../abstract/abstract";
+@use "../../../abstract/abstract" as *;
 
 .root {
     background-color: $color3

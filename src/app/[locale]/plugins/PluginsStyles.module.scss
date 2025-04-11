@@ -1,18 +1,19 @@
-@import "../../../abstract/abstract";
+@use "../../../abstract/abstract" as *;
 
 
 .wrapper {
-    @include screenSize(100%, auto);
     display: grid;
-    grid-template: auto / 100%;
     justify-content: center;
     gap: 2rem;
+    grid-template: auto / 100%;
     margin-bottom: 10rem;
+
+    @include screenSize(100%, auto);
 
     //lg 
     @include for-lg-only {
-        grid-template: auto / repeat(2, 50%);
         gap: 1.5rem;
+        grid-template: auto / repeat(2, 50%);
     }
 
     //xl

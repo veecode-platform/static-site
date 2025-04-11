@@ -1,10 +1,11 @@
-@import "../../../abstract/abstract";
+@use "../../../abstract/abstract" as *;
 
 .footer {
-    @include screenSize(100vw, auto);
-    @include displayFlex(center, center, column);
     background-color: $color3;
     padding-top: 15vh;
+
+    @include screenSize(100vw, auto);
+    @include displayFlex(center, center, column);
 
     a {
         color: $color2;
@@ -15,8 +16,8 @@
         }
 
         &:hover {
-            transition: all .5s ease-in-out;
             color: $color1;
+            transition: all .5s ease-in-out;
         }
 
         &:active {
@@ -25,10 +26,11 @@
     }
 
     .content {
-        @include screenSize(100%, auto);
-        @include displayFlex(center, center, column);
         color: $color2;
         padding-bottom: 5vh;
+
+        @include screenSize(100%, auto);
+        @include displayFlex(center, center, column);
 
         // XL
         @include for-xl-only {
@@ -36,9 +38,10 @@
         }
 
         &__logoAndSocial {
+            position: relative;
+
             @include screenSize(100%, 100%);
             @include displayFlex(center, center, column);
-            position: relative;
 
             // XL
             @include for-xl-only {
@@ -47,13 +50,14 @@
             }
 
             .logo {
-                @include footerLogo();
+                @include footerLogo;
             }
 
             .items {
+                max-width: 200px;
+
                 @include screenSize(35vw, auto);
                 @include displayFlex(center, center, row);
-                max-width: 200px;
 
                 // SM
                 @include for-sm-only {
@@ -72,10 +76,11 @@
                 }
 
                 li {
+                    cursor: pointer;
+
                     @include displayFlex(center, center, row);
                     @include screenSize(100%, auto);
-                    cursor: pointer;
-                    @include footerIcons();
+                    @include footerIcons;
 
                     a {
                         color: $color1;
@@ -83,8 +88,8 @@
                         vertical-align: middle;
 
                         &:hover {
-                            transition: all .5s linear;
                             color: $color10;
+                            transition: all .5s linear;
                         }
                     }
                 }
@@ -101,9 +106,10 @@
             }
 
             &-lists {
+                margin-top: 4rem;
+
                 @include screenSize(100%, auto);
                 @include displayFlex(center, center, column);
-                margin-top: 4rem;
 
                 //xl
                 @include for-xl-only {
@@ -111,22 +117,24 @@
                 }
 
                 ul {
+                    margin: .6em 0;
+
                     @include screenSize(100%, auto);
                     @include displayFlex(center, center, column);
-                    margin: .6em 0;
 
                     //xl
                     @include for-xl-only {
-                        @include screenSize(33.3%, auto);
                         margin: 1em 0;
+
+                        @include screenSize(33.3%, auto);
                     }
 
                     li {
-                        cursor: pointer;
-                        @include footerText('flex-end');
                         opacity: .9;
-
                         transition: all .5s ease-in-out;
+                        cursor: pointer;
+
+                        @include footerText('flex-end');
 
                         &:hover {
                             color: $color1;
@@ -134,8 +142,8 @@
                         }
 
                         span {
+                            color: #FFF;
                             opacity: 1;
-                            color: #FFFFFF;
                         }
 
                         a {
@@ -148,11 +156,12 @@
     }
 
     &__copy {
-        @include screenSize(100%, auto);
-        @include displayFlex(center, center, column);
         padding: 3vh 0;
         color: $color2;
         border-top: 1px solid $color8;
+
+        @include screenSize(100%, auto);
+        @include displayFlex(center, center, column);
 
         p {
             @include footerText("center");

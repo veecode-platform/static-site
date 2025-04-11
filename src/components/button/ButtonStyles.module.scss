@@ -1,86 +1,84 @@
-@import "../../abstract/abstract";
+@use "../../abstract/abstract" as *;
 
 .button {
-    @include buttonLayout();
-    @include buttonText();
-    border-radius: 1.5em;
-    border: 2px solid $color1;
-    color: $color1;
-    background: transparent;
-    transition: all 0.5s linear;
-    font-family: var(--font-poppins);
+  color: $color1;
+  background: transparent;
+  border: 2px solid $color1;
+  transition: all 0.5s linear;
+  border-radius: 1.5em;
+  font-family: var(--font-poppins);
 
-    &:hover:not([disabled]) {
-        background: linear-gradient(45deg, $color1, $color7);
-        color: $color3 !important;
-        transition: all 0.4s linear;
-        -webkit-transform: scale(1.03);
-        transform: scale(1.03);
+  @include buttonLayout;
+  @include buttonText;
+
+  &:hover:not([disabled]) {
+    color: $color3 !important;
+    background: linear-gradient(45deg, $color1, $color7);
+    transition: all 0.4s linear;
+    transform: scale(1.03);
+  }
+
+  a {
+    color: $color2 !important;
+    text-decoration: none;
+
+    &:visited {
+      color: $color3;
     }
 
-    a {
-        text-decoration: none;
-        color: $color2 !important;
-
-        &:visited {
-            color: $color3;
-        }
-
-        &:hover {
-            color: $color3 !important;
-        }
+    &:hover {
+      color: $color3 !important;
     }
+  }
 }
 
 .buttonLg {
-    @extend .button;
+  @extend .button;
 }
 
 .buttonMd {
-    @extend .button;
+  @extend .button;
 }
 
 .buttonSm {
-    font-weight: 500;
-    padding: 0.9em 1.2em;
-    min-width: auto;
+  min-width: auto;
+  padding: 0.9em 1.2em;
+  font-weight: 500;
 }
 
 .buttonModal {
-    @extend .button;
-    color: #FFF;
-    border: none;
-    // min-width: 9vw;
-    // padding: 1em;
-    background-color: $color7;
+  @extend .button;
 
-    &:hover:not([disabled]) {
-        background: linear-gradient(45deg, $color1);
-        color: #FFF;
-        transition: all 0.4s linear;
-        -webkit-transform: scale(1.03);
-        transform: scale(1.03);
-    }
+  color: #FFF;
+  border: none;
+  background-color: $color7;
+
+  &:hover:not([disabled]) {
+    color: #FFF;
+    background: linear-gradient(45deg, $color1);
+    transition: all 0.4s linear;
+    transform: scale(1.03);
+  }
 }
 
 .loader {
-    width: 1.1vw;
-    height: 1.1vw;
-    border: 3px solid $color1;
-    margin-right: 0.5vw;
-    border-bottom-color: transparent;
-    border-radius: 50%;
-    display: inline-block;
-    box-sizing: border-box;
-    animation: rotation 1s linear infinite;
+  display: inline-block;
+  width: 1.1vw;
+  height: 1.1vw;
+  border: 3px solid $color1;
+  animation: rotation 1s linear infinite;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  box-sizing: border-box;
+  margin-right: 0.5vw;
 }
 
 @keyframes rotation {
-    0% {
-        transform: rotate(0deg);
-    }
+  0% {
+    transform: rotate(0deg);
+  }
 
-    100% {
-        transform: rotate(360deg);
-    }
+  100% {
+    transform: rotate(360deg);
+  }
 }

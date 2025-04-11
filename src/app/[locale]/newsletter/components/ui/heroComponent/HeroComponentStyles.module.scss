@@ -1,17 +1,19 @@
-@import "../../../../../../abstract/abstract";
+@use "../../../../../../abstract/abstract" as *;
 
 .wrapper {
+    padding: 2rem .6rem;
+
     @include screenSize(100vw, auto);
     @include displayFlex(flex-start, center, column-reverse);
-    padding: 2rem .6rem;
 
     // xl
     @include for-xl-only {
-        @include screenSize(100vw, calc(100vh - 80px));
-        @include displayFlex(space-between, center, row);
         max-width: $maxWidthDefault;
         margin: auto;
-        padding: 2rem 0rem;
+        padding: 2rem 0;
+
+        @include screenSize(100vw, calc(100vh - 80px));
+        @include displayFlex(space-between, center, row);
     }
 
     .content {
@@ -19,14 +21,16 @@
 
         // lg
         @include for-lg-only {
+            margin: auto;
+
             @include screenSize(80%, 100%);
-            margin: auto
         }
 
         &__text {
+            gap: 2rem;
+
             @include screenSize(100%, 100%);
             @include displayFlex(center, center, column);
-            gap: 2rem;
 
             // xl
             @include for-xl-only {
@@ -64,14 +68,14 @@
             }
 
             &-button {
-                outline: none;
-                border: 5px solid $color1;
-                background-color: transparent;
                 padding: .8rem 2rem;
-                border-radius: 15px;
                 font-size: 1.25rem;
                 font-weight: bold;
+                border: 5px solid $color1;
+                background-color: transparent;
+                border-radius: 15px;
                 cursor: pointer;
+                outline: none;
 
                 a {
                     color: $color3 !important;
@@ -86,10 +90,10 @@
 
         // xl
         @include for-xl-only {
-            opacity: 1;
             z-index: 0;
-            min-width: auto;
             width: 45vw;
+            min-width: auto;
+            opacity: 1;
         }
     }
 }

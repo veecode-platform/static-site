@@ -1,22 +1,25 @@
-@import "../../../../../abstract/abstract";
+@use "../../../../../abstract/abstract" as *;
 
 .wrapper {
-    @include screenSize(100%, auto);
     min-height: 50vh;
     margin: auto;
 
+    @include screenSize(100%, auto);
+
     h1 {
         color: $color17;
-        @include titleMd(left);
-        padding-bottom: 2rem;
         border-bottom: 1px solid $color4;
+        padding-bottom: 2rem;
+
+        @include titleMd(left);
     }
 
     h3 {
-        color: $color17;
-        @include titleSm(left);
-        margin-top: 2rem;
         padding: .8rem 0;
+        color: $color17;
+        margin-top: 2rem;
+
+        @include titleSm(left);
     }
 
     h5 {
@@ -30,14 +33,16 @@
     }
 
     p {
-        text-indent: .2rem;
-        @include text(left);
         margin: 1rem 0;
+        text-indent: .2rem;
+
+        @include text(left);
     }
 
     ul {
-        list-style-position: inside;
         margin: 2rem 0;
+        list-style-position: inside;
+
         @include text(left);
     }
 
@@ -46,12 +51,12 @@
     }
 
     code:not([class]) {
-        background: #FFFFFF65;
-        padding: .2rem;
-        border-radius: 5px;
         margin: 0 .2rem;
-        font-weight: 600;
+        padding: .2rem;
         font-size: 1.1rem;
+        font-weight: 600;
+        background: #FFFFFF65;
+        border-radius: 5px;
     }
 
     .link {
@@ -64,9 +69,10 @@
 
 
     blockquote {
-        @include glassEffect();
-        padding: .8rem;
         margin: .5rem 0;
+        padding: .8rem;
+
+        @include glassEffect;
     }
 
     hr {

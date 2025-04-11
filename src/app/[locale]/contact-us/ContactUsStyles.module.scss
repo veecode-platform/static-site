@@ -1,15 +1,17 @@
-@import "../../../abstract/abstract";
+@use "../../../abstract/abstract" as *;
 
 
 .content {
-    @include screenSize(100%, auto);
-    @include displayFlex(center, center, column);
     color: $color2;
 
+    @include screenSize(100%, auto);
+    @include displayFlex(center, center, column);
+
     &__options {
+        padding: 1em 0;
+
         @include displayFlex(center, center, column);
         @include screenSize(95%, auto);
-        padding: 1em 0;
 
         // md
         @include for-md-only {
@@ -19,9 +21,10 @@
 
         //lg
         @include for-lg-only {
+            padding: 1em 0;
+
             @include screenSize(100%, auto);
             @include displayFlex(space-evenly, flex-start, row);
-            padding: 1em 0 1em 0;
         }
 
         &-decoration {
@@ -29,13 +32,15 @@
 
             // lg
             @include for-lg-only {
-                @include displayFlex(center, center, column);
                 max-width: 50%;
+
+                @include displayFlex(center, center, column);
             }
 
             img {
                 width: 100%;
-                @include pulseAnimation();
+
+                @include pulseAnimation;
             }
         }
 
@@ -56,14 +61,16 @@
     }
 
     &__faq {
+        margin: 8em 0 0;
+
         @include screenSize(100%, auto);
         @include displayFlex(center, center, column);
-        margin: 8em 0 0 0;
 
         h1 {
-            @include titleMd(center);
-            margin-bottom: 2vh;
             color: $color1;
+            margin-bottom: 2vh;
+
+            @include titleMd(center);
         }
 
         h2 {
@@ -73,6 +80,7 @@
             @include for-sm-only {
                 display: flex;
                 color: $color2;
+
                 @include titleSm(center);
             }
 

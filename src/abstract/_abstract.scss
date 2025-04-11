@@ -1,2 +1,7 @@
-@import 'functions', 'variables', 'responsive', 'layout', 'typography',
-  'animation', 'effects';
+@forward 'functions';
+@forward 'variables';
+@forward 'responsive';
+@forward 'layout';
+@forward 'typography';
+@forward 'animation';
+@forward 'effects';

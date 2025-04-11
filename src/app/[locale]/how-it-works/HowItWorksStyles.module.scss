@@ -1,10 +1,11 @@
-@import"../../../abstract/abstract";
+@use "../../../abstract/abstract" as *;
 
 .root {
-    @include screenSize(100%, auto);
-    @include displayFlex(center, center, column);
     gap: 1rem;
     margin-bottom: 2rem;
+
+    @include screenSize(100%, auto);
+    @include displayFlex(center, center, column);
 
     //lg
     @include for-lg-only {

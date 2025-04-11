@@ -1,14 +1,15 @@
-@import "../../../../abstract/abstract";
+@use "../../../../abstract/abstract" as *;
 
 .item {
-    @include displayFlex(space-between, center, column);
     padding: 1.5vh 2vw;
-    margin-bottom: 2vh;
-    transition: all .5s ease-in-out;
-    @include glassEffectDark();
     color: $color2;
+    transition: all .5s ease-in-out;
     border-radius: .8em;
     cursor: pointer;
+    margin-bottom: 2vh;
+
+    @include displayFlex(space-between, center, column);
+    @include glassEffectDark;
 
     // lg
     @include for-lg-only {
@@ -18,6 +19,7 @@
 
     &__title {
         width: 100%;
+
         @include displayFlex(space-between, center, row);
     }
 
@@ -27,19 +29,21 @@
 
     p {
         width: 90%;
-        @include faqTitle();
+
+        @include faqTitle;
     }
 
 
     button {
+        font-size: 7vw;
+        color: $color1;
+        border: none;
+        background-color: $color9;
+        cursor: pointer;
+        outline: none;
+
         @include screenSize(10%, 60px);
         @include displayFlex(center, center, row);
-        outline: none;
-        background-color: $color9;
-        border: none;
-        color: $color1;
-        font-size: 7vw;
-        cursor: pointer;
 
         // lg
         @include for-lg-only {
@@ -53,21 +57,22 @@
     }
 
     .cardAnswer {
-        @include screenSize(80%, 100px);
-        @include faqBody();
         color: $color10;
-        transition: all .2s ease-in-out;
         opacity: 1;
+        transition: all .2s ease-in-out;
 
-        &__reset {
-            opacity: 0;
-            transition: all .2s ease-in-out;
-        }
+        @include screenSize(80%, 100px);
+        @include faqBody;
 
 
         //xl
         @include for-xl-only {
             @include screenSize(100%, 120px);
+        }
+
+        &__reset {
+            opacity: 0;
+            transition: all .2s ease-in-out;
         }
 
     }
@@ -79,10 +84,11 @@
     }
 
     .show {
+        padding: 1em 0;
+        transition: all .5s ease-in-out;
+
         @include screenSize(100%, 100%);
         @include displayFlex(flex-start, center, row);
-        transition: all .5s ease-in-out;
-        padding: 1em 0;
 
         //xl
         @include for-xl-only {

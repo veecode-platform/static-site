@@ -1,11 +1,12 @@
-@import '../../../abstract/abstract';
+@use '../../../abstract/abstract' as *;
 
 .breadcrumb {
+  color: $color2;
+  border-radius: 1.3em;
+  padding-bottom: 2rem;
+
   @include screenSize(100%, auto);
   @include displayFlex(center, center, row);
-  border-radius: 1.3em;
-  color: $color2;
-  padding-bottom: 2rem;
 
   //md
   @include for-md-only {
@@ -22,16 +23,17 @@
     @include displayFlex(center, center, row);
 
     span {
-      @include screenSize(30px, 30px);
-      @include displayFlex(center, center, row);
       padding: .5rem .6rem;
-      border-radius: 100px;
       background: transparent;
       border: 2px solid $color1;
-      margin-right: 0.5em;
-      @include label();
       transition: all 0.3s linear;
+      border-radius: 100px;
       cursor: pointer;
+      margin-right: 0.5em;
+
+      @include screenSize(30px, 30px);
+      @include displayFlex(center, center, row);
+      @include label;
 
       //lg
       @include for-lg-only {
@@ -59,8 +61,8 @@
       //     font-size: 2.4vw;
       // }
       &:hover {
-        background: $color1;
         color: $color3;
+        background: $color1;
         transition: all 0.3s linear;
       }
     }
@@ -68,6 +70,7 @@
     p {
       font-size: 12px;
       margin-left: 0.8em;
+
       // //tablet
       // @include for-tablet-only{
       //     font-size: 1.3vw;
@@ -89,16 +92,18 @@
     }
 
     .selected {
-      background: $color1;
       color: $color3;
+      background: $color1;
     }
   }
 
   &__divider {
-    @include screenSize(2%, auto);
-    @include displayFlex(center, center, row);
     margin: .2em;
     font-size: 30px;
+
+    @include screenSize(2%, auto);
+    @include displayFlex(center, center, row);
+
     // @include displayFlex(center, center, row);
     //     //mobile(S)
     //     @include for-phoneS-only{

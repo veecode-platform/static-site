@@ -1,10 +1,11 @@
-@import "../../../../abstract/abstract";
+@use "../../../../abstract/abstract" as *;
 
 .planTable {
+  position: relative;
+
   @include screenSize(100%, auto);
   @include displayFlex(center, center, column);
-  @include glassEffect();
-  position: relative;
+  @include glassEffect;
 
   //lg
   @include for-lg-only {
@@ -13,9 +14,10 @@
   }
 
   &__title {
+    padding-top: 4em;
+
     @include screenSize(100%, auto);
     @include displayFlex(center, center, row);
-    padding-top: 4em;
 
     &-title {
       @include titleMd(center);
@@ -41,11 +43,12 @@
   }
 
   &__button {
+    min-height: auto;
+    border-top: 1px solid $color7;
+    padding-bottom: 2em;
+
     @include screenSize(80%, auto);
     @include displayFlex(space-around, center, column);
-    border-top: 1px solid $color7;
-    min-height: auto;
-    padding-bottom: 2em;
 
     //md
     @include for-md-only {
@@ -58,9 +61,10 @@
     }
 
     &-label {
+      padding: 2em 0;
+
       @include screenSize(100%, auto);
       @include displayFlex(center, center, column);
-      padding: 2em 0;
 
       // lg
       @include for-lg-only {
@@ -72,14 +76,16 @@
       }
 
       span {
-        @include titleSm(center);
         color: $color2;
         text-decoration: none;
 
+        @include titleSm(center);
+
         p {
-          @include text(center);
-          text-decoration: none;
           color: $color17;
+          text-decoration: none;
+
+          @include text(center);
         }
       }
 
@@ -90,14 +96,16 @@
   }
 
   &__list {
-    border-top: 1px solid $color7;
-    @include resetList();
-    @include screenSize(80%, auto);
     padding: 3em 0;
+    border-top: 1px solid $color7;
+
+    @include resetList;
+    @include screenSize(80%, auto);
 
     li {
-      @include text(left);
       padding: 0.5em 0;
+
+      @include text(left);
 
       span {
         font-size: 1rem;
@@ -110,7 +118,7 @@
       }
 
       .sublist {
-        @include resetList();
+        @include resetList;
       }
     }
   }

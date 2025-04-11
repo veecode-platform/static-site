@@ -1,21 +1,19 @@
-@import '../abstract/abstract';
-@import 'highlight.js/styles/github-dark.css';
+@use '../abstract/abstract' as *;
 
 html,
 * {
-  @include resetAll();
-  @include resetList();
+  @include resetAll;
+  @include resetList;
 }
 
 html,
 body {
-  overflow-x: hidden;
-  overflow-y: auto;
+  font-size: $font-body;
+  overflow: hidden auto;
+  box-sizing: border-box;
+  font-family: var(--font-poppins);
   scroll-behavior: smooth;
   scroll-snap-type: y mandatory;
-  font-family: var(--font-poppins);
-  box-sizing: border-box;
-  font-size: $font-body;
 
   &::-webkit-scrollbar {
     width: 8px;
@@ -40,8 +38,8 @@ body {
 }
 
 a {
-  text-decoration: none;
   color: $color2;
+  text-decoration: none;
 
   &:visited {
     color: inherit;

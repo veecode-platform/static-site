@@ -1,18 +1,20 @@
-@import "../../../../abstract/abstract";
+@use "../../../../abstract/abstract" as *;
 
 .cardItem {
-    @include screenSize(100%, auto);
-    @include displayFlex(center, center, column);
-    gap: 2rem;
+    padding: 3em;
     border: 1px solid $color4;
     border-radius: 1em;
-    padding: 3em;
+    gap: 2rem;
+
+    @include screenSize(100%, auto);
+    @include displayFlex(center, center, column);
 
     //lg
     @include for-lg-only {
-        @include displayFlex(center, flex-start, row);
-        border: none;
         padding: 0;
+        border: none;
+
+        @include displayFlex(center, flex-start, row);
     }
 
     a {
@@ -44,8 +46,9 @@
         }
 
         &-img {
-            @include screenSize(30%, auto);
             max-width: 120px;
+
+            @include screenSize(30%, auto);
 
             // sm
             @include for-sm-only {
@@ -54,16 +57,18 @@
 
             // lg
             @include for-lg-only {
-                @include screenSize(100%, auto);
                 max-width: auto;
+
+                @include screenSize(100%, auto);
             }
         }
     }
 
     &__details {
+        gap: 2rem;
+
         @include screenSize(100%, auto);
         @include displayFlex(center, center, column);
-        gap: 2rem;
 
         //lg
         @include for-lg-only {

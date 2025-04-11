@@ -1,15 +1,17 @@
-@import"../../abstract/abstract";
+@use "../../abstract/abstract" as *;
 
 .root {
-    @include screenSize(100vw, 100vh);
-    @include displayFlex(center, center, row);
     background-color: $color3;
     overflow-y: hidden;
 
+    @include screenSize(100vw, 100vh);
+    @include displayFlex(center, center, row);
+
     .content {
+        gap: 2rem;
+
         @include screenSize(100%, auto);
         @include displayFlex(center, center, column);
-        gap: 2rem;
 
         &__img {
             width: 100%;
@@ -22,13 +24,13 @@
         }
 
         &__goBack {
-            color: $color1;
             font-size: 45px;
+            color: $color1;
             transition: all .5s ease-out;
 
             &:hover {
-                transform: scale(1.15);
                 transition: all .5s ease-in;
+                transform: scale(1.15);
             }
         }
     }

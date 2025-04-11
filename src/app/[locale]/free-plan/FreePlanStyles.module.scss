@@ -1,6 +1,4 @@
-@import"../../../abstract/abstract";
-
-
+@use "../../../abstract/abstract" as *;
 
 .content {
     @include screenSize(100%, auto);
@@ -12,14 +10,16 @@
     }
 
     .text {
+        padding: 2em 0;
+
         @include screenSize(100%, auto);
         @include displayFlex(flex-start, center, column);
-        padding: 2em 0;
 
         // lg
         @include for-lg-only {
+            padding: 0 0 2rem;
+
             @include screenSize(40%, auto);
-            padding: 0rem 0 2rem 0;
         }
 
         strong {
@@ -31,12 +31,13 @@
 
             // lg
             @include for-lg-only {
-                margin: 2rem 0 1.5rem 0;
+                margin: 2rem 0 1.5rem;
             }
 
             h2 {
-                @include titleMain(center);
                 color: $color2;
+
+                @include titleMain(center);
 
                 // lg
                 @include for-lg-only {
@@ -50,21 +51,24 @@
 
             //lg
             @include for-lg-only {
-                @include displayFlex(flex-start, flex-start, column);
                 margin: 1.2em .5em 1.5em 0;
+
+                @include displayFlex(flex-start, flex-start, column);
             }
 
             p {
-                @include text(start);
                 color: $color2;
+
+                @include text(start);
             }
         }
     }
 
     &__options {
+        padding: 1em 0 6em;
+
         @include screenSize(100%, auto);
         @include displayFlex(center, center, column);
-        padding: 1em 0 6em 0;
 
         //lg
         @include for-lg-only {
@@ -73,8 +77,9 @@
 
         //xl
         @include for-xl-only {
+            padding: 2em 0 4em;
+
             @include screenSize(45%, auto);
-            padding: 2em 0 4em 0;
         }
     }
 }

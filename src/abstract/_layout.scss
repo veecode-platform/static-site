@@ -1,12 +1,16 @@
-@import './functions', './responsive', './variables';
+@use 'functions' as *;
+@use 'responsive' as *;
+@use 'variables' as *;
 
 @mixin buttonLayout() {
-  @include displayFlex(center, center, row);
-  outline: none;
-  cursor: pointer;
-  font-weight: 500;
+  &{
+    min-width: 200px;
   padding: 0.9em 2em;
-  min-width: 200px;
+  font-weight: 500;
+  cursor: pointer;
+  outline: none;
+
+  @include displayFlex(center, center, row);
 
   /* sm */
   @include for-sm-only {
@@ -28,9 +32,11 @@
     min-width: 12vw;
     padding: 1.2rem 2.2rem;
   }
+  }
 }
 
 @mixin labelLayout() {
+ &{
   padding: 0.625rem 1.25rem;
 
   /* tablets */
@@ -47,10 +53,12 @@
   @include for-lg-only {
     padding: 1rem 2rem;
   }
+ }
 }
 
 @mixin cardLayout() {
-  width: 100%;
+  &{
+    width: 100%;
   margin: 0.625rem;
 
   /* tablets */
@@ -70,9 +78,11 @@
     width: 22%;
     margin: 0.625rem;
   }
+  }
 }
 
 @mixin navbarLogo() {
+ &{
   width: 3.5rem;
   height: auto;
 
@@ -95,14 +105,18 @@
   @include for-xl-only {
     width: 200px;
   }
+ }
 }
 
 @mixin footerLogo() {
+&{
   width: 14.25rem;
   height: auto;
 }
+}
 
 @mixin footerIcons() {
+ &{
   font-size: 2.5rem;
 
   /* SM */
@@ -119,11 +133,13 @@
   @include for-lg-only {
     font-size: 2.25rem;
   }
+ }
 }
 
 // container
 
 @mixin containerLayout() {
+ &{
   width: 90%;
   min-width: 350px;
 
@@ -136,4 +152,5 @@
   @include for-lg-only {
     width: 85%;
   }
+ }
 }

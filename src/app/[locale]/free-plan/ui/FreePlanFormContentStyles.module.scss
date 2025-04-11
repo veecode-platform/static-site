@@ -1,19 +1,20 @@
-@import "../../../../abstract/abstract";
+@use "../../../../abstract/abstract" as *;
 
 
 .formWrapper {
-    @include displayFlex(center, center, column);
-    @include glassEffect();
-    background-color: $color12;
     width: 100%;
-    padding: 1vw 1vw;
-    border-radius: 15px;
     padding: 1rem;
+    background-color: $color12;
+    border-radius: 15px;
+
+    @include displayFlex(center, center, column);
+    @include glassEffect;
 
     .form {
-        @include displayFlex(center, center, column);
         width: 100%;
         gap: 1.2vh;
+
+        @include displayFlex(center, center, column);
 
         &__buttonWrapper {
             @include screenSize(100%, auto);
@@ -21,8 +22,9 @@
         }
 
         .actions {
-            @include displayFlex(center, center, row);
             padding: 2.5rem 0;
+
+            @include displayFlex(center, center, row);
         }
 
         .animation {

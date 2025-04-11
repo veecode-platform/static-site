@@ -1,12 +1,13 @@
-@import "../../../abstract/abstract";
+@use "../../../abstract/abstract" as *;
 
 .wrapper {
     @include screenSize(100vw, auto);
     @include displayFlex(center, center, row);
 
     .content {
-        @include screenSize(100%, auto);
         color: $color2;
+
+        @include screenSize(100%, auto);
 
         //md
         @include for-md-only {
@@ -19,8 +20,9 @@
         }
 
         &__faqList {
-            @include screenSize(100%, auto);
             padding: 2rem 0;
+
+            @include screenSize(100%, auto);
 
             //lg
             @include for-lg-only {

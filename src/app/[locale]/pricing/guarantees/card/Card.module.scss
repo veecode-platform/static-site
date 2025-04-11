@@ -1,14 +1,15 @@
-@import "../../../../../abstract/abstract";
-
+@use "../../../../../abstract/abstract" as *;
 .card {
-  @include screenSize(auto, auto);
-  @include displayFlex(flex-start, center, column);
   margin: 1em;
 
+  @include screenSize(auto, auto);
+  @include displayFlex(flex-start, center, column);
+
   &__image {
-    @include screenSize(30vw, auto);
     max-width: 160px;
     opacity: 0.8;
+
+    @include screenSize(30vw, auto);
 
     //md
     @include for-md-only {
@@ -22,8 +23,9 @@
   }
 
   &__title {
-    @include titleSm(center);
     margin: 1.5em auto;
+
+    @include titleSm(center);
   }
 
   &__desc {

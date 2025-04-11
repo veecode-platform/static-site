@@ -1,43 +1,48 @@
-@import "../../../../abstract/abstract";
+@use "../../../../abstract/abstract" as *;
 
 .wrapper {
     @include screenSize(100%, auto);
     @include displayFlex(column, flex-start, column);
 
     .title {
-        @include titleSm(left);
+        margin: 1.2em 0 .8em;
         cursor: pointer;
-        margin: 1.2em 0 .8em 0;
+
+        @include titleSm(left);
     }
 
     .details {
+        padding: 1rem 0;
+
         @include screenSize(100%, auto);
         @include displayFlex(center, center, row);
-        padding: 1rem 0;
 
         //lg
         @include for-lg-only {
-            margin-top: 1.2em;
             padding: 2em 0.5em;
             border: 2px solid $color4;
             border-radius: .8em;
+            margin-top: 1.2em;
         }
 
         &__list {
-            @include screenSize(100%, auto);
-            @include displayFlex(center, flex-start, column);
             flex-wrap: nowrap;
             margin: auto;
 
+            @include screenSize(100%, auto);
+            @include displayFlex(center, flex-start, column);
+
             //lg
             @include for-lg-only {
+                flex-wrap: wrap;
+
                 @include screenSize(97%, auto);
                 @include displayFlex(center, center, row);
-                flex-wrap: wrap;
             }
 
             &-item {
                 width: 90%;
+
                 @include text(left);
 
                 //lg

@@ -1,15 +1,16 @@
-@import "../../abstract/abstract";
+@use "../../abstract/abstract" as *;
 
 .root {
-    @include screenSize(100vw, 70px);
     position: absolute;
     top: 80px;
     right: 0;
-    border-radius: 10px 5px 10px 10px;
-    transition: all .5s ease-in-out;
-    @include displayFlex('flex-start', 'center', 'row');
     padding: .8rem;
+    transition: all .5s ease-in-out;
+    border-radius: 10px 5px 10px 10px;
     gap: 1rem;
+
+    @include screenSize(100vw, 70px);
+    @include displayFlex('flex-start', 'center', 'row');
 
     // md
     @include for-md-only {
@@ -18,8 +19,8 @@
 }
 
 .hide {
-    margin-right: -100vw;
     transition: all .5s ease-in-out;
+    margin-right: -100vw;
 
     // md
     @include for-md-only {
@@ -28,8 +29,8 @@
 }
 
 .show {
-    margin-right: 0px;
     transition: all .5s ease-in;
+    margin-right: 0;
 
     // md
     @include for-md-only {
@@ -42,6 +43,6 @@
 }
 
 .error {
-    background: $dangerBg;
     color: $danger;
+    background: $dangerBg;
 }

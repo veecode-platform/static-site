@@ -1,34 +1,33 @@
-@import "../../../../abstract/abstract";
+@use "../../../../abstract/abstract" as *;
 
 .root {
+    position: relative;
+    padding: 2rem 0;
+    background: $color3;
+
     @include screenSize(100%, auto);
     @include displayFlex(center, center, row);
-    background: $color3;
-    padding: 2rem 0;
-    position: relative;
 
     // lg
     @include for-lg-only {
-        padding: 3rem 0 5rem 0;
+        padding: 3rem 0 5rem;
     }
 
     .banner {
         position: absolute;
-        left: 0;
-        top: 0;
-        right: 0;
-        bottom: 0;
+        z-index: 0;
         width: 100vw;
         height: 100%;
-        z-index: 0;
+        inset: 0;
     }
 
 
     .content {
+        padding: 2rem 0 4rem;
+        gap: .5rem;
+
         @include screenSize(100%, auto);
         @include displayFlex(center, center, column-reverse);
-        padding: 2rem 0 4rem 0;
-        gap: .5rem;
 
         //md
         @include for-md-only {
@@ -37,8 +36,9 @@
 
         //lg
         @include for-lg-only {
-            @include displayFlex(space-between, center, row-reverse);
             gap: 1.8rem;
+
+            @include displayFlex(space-between, center, row-reverse);
         }
 
         //xl
@@ -47,10 +47,11 @@
         }
 
         &__text {
+            z-index: 2;
+            padding: 0;
+
             @include screenSize(100%, auto);
             @include displayFlex(center, center, column);
-            padding: 0em;
-            z-index: 2;
 
             //lg
             @include for-lg-only {
@@ -59,12 +60,14 @@
             }
 
             .title {
-                @include screenSize(100%, auto);
                 margin: auto;
 
+                @include screenSize(100%, auto);
+
                 h2 {
-                    @include titleMain(center);
                     color: $color2;
+
+                    @include titleMain(center);
 
                     //lg
                     @include for-lg-only {
@@ -74,15 +77,17 @@
             }
 
             .details {
+                padding: 1em 0;
+
                 @include screenSize(100%, auto);
                 @include displayFlex(center, center, column);
-                padding: 1em 0;
 
                 // lg
                 @include for-lg-only {
+                    padding-top: 3em;
+
                     @include screenSize(98%, auto);
                     @include displayFlex(center, flex-start, column);
-                    padding-top: 3em;
                 }
 
                 &_text {
@@ -95,8 +100,9 @@
                     }
 
                     p {
-                        @include text(center);
                         color: $color2;
+
+                        @include text(center);
 
                         // lg
                         @include for-lg-only {
@@ -113,30 +119,34 @@
         }
 
         &__image {
+            position: relative;
+            padding: 2em 0 1em;
+
             @include screenSize(100%, auto);
             @include displayFlex(center, center, row);
-            padding: 2em 0 1em 0;
-            position: relative;
 
             // lg
             @include for-lg-only {
+                padding: 1em 0;
+
                 @include screenSize(60%, 100%);
                 @include displayFlex(center, center, row);
-                padding: 1em 0 1em 0;
             }
 
             .image {
-                @include screenSize(90%, auto);
-                border-radius: 8px;
-                @include shadowSpecial();
                 max-width: 45rem;
+                border-radius: 8px;
                 object-fit: cover;
                 object-position: 0%;
 
+                @include screenSize(90%, auto);
+                @include shadowSpecial;
+
                 // lg
                 @include for-lg-only {
-                    @include screenSize(100%, auto);
                     min-height: 350px;
+
+                    @include screenSize(100%, auto);
                 }
             }
         }

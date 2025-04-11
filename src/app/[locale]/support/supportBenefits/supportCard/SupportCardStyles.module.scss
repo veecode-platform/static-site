@@ -1,12 +1,13 @@
-@import"../../../../../abstract/abstract";
+@use "../../../../../abstract/abstract" as *;
 
 .card {
-    @include screenSize(100%, auto);
-    @include displayFlex(center, center, column);
+    margin: .5em;
     padding: 1.5em 0;
     border: 1px solid $color4;
     border-radius: .9em;
-    margin: .5em;
+
+    @include screenSize(100%, auto);
+    @include displayFlex(center, center, column);
 
     //lg
     @include for-lg-only {
@@ -16,12 +17,13 @@
     }
 
     &__icon {
-        @include screenSize(100%, 100%);
-        align-self: flex-start;
-        @include displayFlex(center, center, row);
+        padding: 0.2em;
         font-size: 10vw;
         color: $color1;
-        padding: 0.2em;
+        align-self: flex-start;
+
+        @include screenSize(100%, 100%);
+        @include displayFlex(center, center, row);
 
         // lg
         @include for-lg-only {
@@ -32,12 +34,14 @@
     }
 
     &__details {
-        @include screenSize(90%, auto);
         padding: 1em 1.2em;
 
+        @include screenSize(90%, auto);
+
         &-title {
-            @include titleCard(center);
             margin-bottom: 0.7em;
+
+            @include titleCard(center);
 
             //lg
             @include for-lg-only {

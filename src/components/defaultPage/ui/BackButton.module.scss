@@ -1,18 +1,18 @@
-@import "../../../abstract/abstract";
+@use "../../../abstract/abstract" as *;
 
 .back {
-    @include screenSize(100%, auto);
-    @include displayFlex(center, center, row);
     font-size: 3rem;
     color: $color7;
-    padding-bottom: 2em;
-    cursor: pointer;
     transition: all .5s linear;
+    cursor: pointer;
+    padding-bottom: 2em;
+
+    @include screenSize(100%, auto);
+    @include displayFlex(center, center, row);
 
     &:hover {
-        transition: all .5s linear;
         color: $color1;
-        -webkit-transform: scale(1.05);
+        transition: all .5s linear;
         transform: scale(1.05);
     }
 

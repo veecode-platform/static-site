@@ -1,35 +1,37 @@
-@import "../../../abstract/abstract";
+@use "../../../abstract/abstract" as *;
 
 .content {
-    @include screenSize(100%, auto);
-    color: $color10;
+  color: $color10;
+  @include screenSize(100%, auto);
 
-    h2 {
-        @include titleMd(left);
-        @include screenSize(100%, auto);
-        color: $color2;
-        margin: 0.7em 0;
+  h2 {
+    margin: 0.7em 0;
+    color: $color2;
+    @include titleMd(left);
+    & {
+      @include screenSize(100%, auto);
     }
+  }
 
-    h3 {
-        margin: 1.5em 0 .7em 0;
-        color: $color2;
-        @include titleSm(left);
+  h3 {
+    margin: 1.5em 0 0.7em;
+    color: $color2;
+    @include titleSm(left);
+  }
+
+  p {
+    margin: 0.5em 0;
+    @include text(left);
+  }
+
+  a {
+    color: $color7;
+    transition: all 0.4s linear;
+    cursor: pointer;
+
+    &:hover {
+      color: $color1;
+      transition: all 0.4s linear;
     }
-
-    p {
-        @include text(left);
-        margin: 0.5em 0;
-    }
-
-    a {
-        color: $color7;
-        transition: all 0.4s linear;
-        cursor: pointer;
-
-        &:hover {
-            transition: all 0.4s linear;
-            color: $color1;
-        }
-    }
+  }
 }

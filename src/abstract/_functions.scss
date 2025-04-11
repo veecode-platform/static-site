@@ -5,7 +5,8 @@
   padding: 0;
   box-sizing: border-box;
   scrollbar-width: none;
-  /*firefox*/
+
+  /* firefox */
 }
 
 //reset list
@@ -15,22 +16,26 @@
 
 //reset <a>
 @mixin resetLink($color) {
-  text-decoration: none;
   color: $color;
+  text-decoration: none;
 }
 
 // screen
 @mixin screenSize($width, $height) {
+ &{
   width: $width;
   height: $height;
+ }
 }
 
 //display flex
 @mixin displayFlex($jty-cnt, $align-itm, $direction) {
-  display: flex;
-  justify-content: #{$jty-cnt};
-  align-items: #{$align-itm};
-  flex-direction: #{$direction};
+  & {
+    display: flex;
+    flex-direction: #{$direction};
+    justify-content: #{$jty-cnt};
+    align-items: #{$align-itm};
+  }
 }
 
 //fontSize
@@ -39,7 +44,9 @@
 }
 
 @mixin fontSize($size) {
-  font-size: calculateRem($size);
+  &{
+    font-size: calculateRem($size);
+  }
 }
 
 //placeholder selector
@@ -53,41 +60,46 @@
 
 //Background Image - Cover
 @mixin backgroundImage($url) {
-  background-image: url($url);
-  background-size: cover;
+  &{
+    background-image: url($url);
+    background-size: cover;
+  }
 }
 
 //wrapper
 @mixin wrapperCenter($size, $direction) {
-  width: $size;
+ &{
   display: flex;
+  flex-direction: $direction;
   justify-content: center;
   align-items: center;
-  flex-direction: $direction;
+  width: $size;
   margin: auto;
+ }
 }
 
 // HEXAGON
 @mixin hexagonFactory($width, $height, $backgroundColor) {
-  $halfWidth: $width / 2; // Half the width of the hexagon
+ &{
+  $halfWidth: $width * 0.5; // Half the width of the hexagon
   $triangleHeight: $halfWidth * tan(30deg); // Height of upper and lower triangles
 
-  width: $width;
-  height: $height - (2 * $triangleHeight);
-  background-color: $backgroundColor;
   position: relative;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  width: $width;
+  height: $height - (2 * $triangleHeight);
   text-align: center;
+  background-color: $backgroundColor;
 
   &::before,
   &::after {
-    content: "";
     position: absolute;
     width: 0;
     border-left: $halfWidth solid transparent;
     border-right: $halfWidth solid transparent;
+    content: "";
   }
 
   &::before {
@@ -99,4 +111,5 @@
     top: 100%;
     border-top: $triangleHeight solid $backgroundColor;
   }
+ }
 }

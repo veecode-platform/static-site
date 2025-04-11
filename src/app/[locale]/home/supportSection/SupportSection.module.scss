@@ -1,58 +1,61 @@
-@import "../../../../abstract/abstract";
+@use "../../../../abstract/abstract" as *;
 
 .root {
+    position: relative;
+    background: linear-gradient(to bottom, $color19, $color3, $color3);
+    overflow-y: hidden;
+
     @include screenSize(100vw, auto);
     @include displayFlex(center, center, row);
-    background: linear-gradient(to bottom, $color19, $color3, $color3);
-    position: relative;
-    overflow-y: hidden;
 
     .bannerDesktop {
         display: none;
 
         //lg
         @include for-lg-only {
-            display: block;
             position: absolute;
-            left: 0;
-            top: 0;
-            right: 0;
-            bottom: 0;
+            z-index: 0;
+            display: block;
             width: 100vw;
             height: 100%;
-            z-index: 0;
+            inset: 0;
         }
 
     }
 
     .content {
+        z-index: 1;
+        color: $color2;
+
         @include screenSize(100%, auto);
         @include displayFlex(center, center, column);
-        color: $color2;
-        z-index: 1;
 
 
         //xl
         @include for-xl-only {
             max-width: $maxWidthDefault;
+
             @include displayFlex(center, flex-start, column);
         }
 
         &__text {
+            z-index: 1;
+            padding: 5rem 0;
+
             @include screenSize(100%, auto);
             @include displayFlex(center, center, column);
-            padding: 5rem 0;
-            z-index: 1;
 
             //xl
             @include for-xl-only {
-                @include displayFlex(center, flex-start, column);
                 padding: 8em 0;
+
+                @include displayFlex(center, flex-start, column);
             }
 
             &-title {
-                @include screenSize(100%, auto);
                 margin: 2em 0 1.5em;
+
+                @include screenSize(100%, auto);
 
                 //xl
                 @include for-xl-only {
@@ -60,9 +63,10 @@
                 }
 
                 h2 {
-                    @include titleMain(center);
                     color: $color2;
                     margin-bottom: 3rem;
+
+                    @include titleMain(center);
 
                     //lg
                     @include for-lg-only {
@@ -76,9 +80,10 @@
             }
 
             &-buttonWrapper {
+                padding: 1em 0;
+
                 @include screenSize(100%, auto);
                 @include displayFlex(center, center, row);
-                padding: 1em 0;
 
                 // lg
                 @include for-lg-only {
@@ -94,16 +99,18 @@
             @include displayFlex(center, flex-start, column);
 
             &-cards {
-                @include screenSize(100%, auto);
-                margin: 3rem 0 0 0;
-                @include displayFlex(center, center, column);
+                margin: 3rem 0 0;
                 gap: 1rem;
+
+                @include screenSize(100%, auto);
+                @include displayFlex(center, center, column);
 
                 //lg
                 @include for-lg-only {
-                    @include displayFlex(center, flex-start, column);
+                    margin: 6rem 0 0;
                     gap: 2rem;
-                    margin: 6rem 0 0 0;
+
+                    @include displayFlex(center, flex-start, column);
                 }
 
                 //xl
@@ -113,17 +120,19 @@
 
 
                 .card {
-                    @include displayFlex(center, center, column);
-                    border: 1px solid $color8;
                     padding: 1.5rem;
+                    border: 1px solid $color8;
                     border-radius: 14px;
                     gap: 2rem;
 
+                    @include displayFlex(center, center, column);
+
                     //md
                     @include for-md-only {
+                        border: none;
+
                         @include screenSize(100%, auto);
                         @include displayFlex(flex-start, center, row);
-                        border: none;
                     }
 
                     // lg
@@ -147,6 +156,7 @@
 
                     &__desc {
                         width: 100%;
+
                         @include bodyCard(center);
 
                         //lg
@@ -160,13 +170,13 @@
                         p {
                             width: 100%;
 
-                            strong {
-                                margin-right: .4rem;
-                            }
-
                             //lg
                             @include for-lg-only {
                                 width: 90%
+                            }
+
+                            strong {
+                                margin-right: .4rem;
                             }
 
                         }

@@ -1,17 +1,19 @@
-@import "../../../../abstract/abstract";
+@use "../../../../abstract/abstract" as *;
 
 .cards {
+    padding: 2em 0;
+
     @include screenSize(100%, auto);
     @include displayFlex(center, center, column);
-    padding: 2em 0;
 
     //lg
     @include for-lg-only {
-        padding: 4em 0 3em 0;
+        padding: 4em 0 3em;
     }
 
     .title {
-        @include titleSm(left);
         cursor: pointer;
+
+        @include titleSm(left);
     }
 }

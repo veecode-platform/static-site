@@ -1,10 +1,11 @@
-@import "../../../abstract/abstract";
+@use "../../../abstract/abstract" as *;
 
 .content {
-    @include screenSize(100%, auto);
-    @include displayFlex(center, center, column);
+    padding: 1em 0 10em;
     background-color: $color9;
-    padding: 1em 0 10em 0;
+
+      @include screenSize(100%, auto);
+      @include displayFlex(center, center, column);
 
     &__image {
         @include screenSize(25%, auto);
@@ -12,7 +13,7 @@
 
         &-img {
             @include screenSize(100%, auto);
-            @include pulseAnimation();
+            @include pulseAnimation;
         }
     }
 
@@ -20,13 +21,15 @@
         margin-top: 4em;
 
         p {
-            @include typography(1.2vw, center, 1.5em, 400);
             color: $color2;
+
+            @include typography(1.2vw, center, 1.5em, 400);
         }
     }
 
     &__buttonWrapper {
         margin-top: 3em;
+
         @include screenSize(50%, auto);
         @include displayFlex(space-around, center, row);
     }

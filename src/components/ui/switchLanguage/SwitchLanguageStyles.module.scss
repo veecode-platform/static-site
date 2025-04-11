@@ -1,60 +1,64 @@
-@import "../../../abstract/abstract";
+@use "../../../abstract/abstract" as *;
 
 .root {
     position: relative;
+
     @include displayFlex(center, center, row);
 
     .button {
-        @include screenSize(50px, 50px);
-        @include displayFlex(center, center, row);
-        border-radius: 1px;
-        @include glassEffectDark();
-        color: $color2;
         font-size: 25px;
+        color: $color2;
+        transition: all .5s ease-in;
+        border-radius: 1px;
         cursor: pointer;
         outline: none;
-        transition: all .5s ease-in;
+
+        @include screenSize(50px, 50px);
+        @include displayFlex(center, center, row);
+        @include glassEffectDark;
 
         &:hover {
-            opacity: 0.9;
             color: $color1;
+            opacity: 0.9;
             transition: all .5s ease-in-out;
         }
     }
 
     .dropdown {
-        @include screenSize(90px, auto);
-        background: #070707;
-        border-radius: 10px;
-        border: 1px solid #ffffff2e;
-        border-radius: 0 5px 5px 5px;
-        padding: .3rem;
-        transition: all .5s linear;
         position: absolute;
         top: 101%;
         left: 55%;
+        padding: .3rem;
+        background: #070707;
+        border: 1px solid #ffffff2e;
+        transition: all .5s linear;
+        border-radius: 0 5px 5px;
+
+        @include screenSize(90px, auto);
 
 
         &__list {
             width: 100%;
-            @include displayFlex(center, flex-start, column);
             gap: .5rem;
 
+            @include displayFlex(center, flex-start, column);
+
             &-item {
-                @include screenSize(100%, 32px);
-                @include displayFlex(center, center, row);
-                background-color: $color3;
                 padding: 0 .2rem;
-                gap: .8rem;
-                cursor: pointer;
                 font-size: 18px;
                 color: $color2;
                 transition: all .5s ease-in-out;
+                background-color: $color3;
                 border-radius: 3px;
+                cursor: pointer;
+                gap: .8rem;
+
+                @include screenSize(100%, 32px);
+                @include displayFlex(center, center, row);
 
                 &:hover {
-                    background-color: $color4;
                     transition: all .5s ease-in;
+                    background-color: $color4;
                 }
             }
         }

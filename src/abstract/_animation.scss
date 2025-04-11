@@ -6,39 +6,33 @@
 **/
 
 @mixin pulseAnimation() {
-  display: inline-block;
-  vertical-align: middle;
-  -webkit-transform: perspective(1px) translateZ(0);
-  transform: perspective(1px) translateZ(0);
-  box-shadow: 0 0 1px transparent;
+  &{
+    display: inline-block;
+    box-shadow: 0 0 1px transparent;
+    transform: perspective(1px) translateZ(0);
+    animation-direction: alternate;
+    animation-duration: 0.5s;
+    animation-name: ef-pulse-grow;
+    animation-timing-function: linear;
+    vertical-align: middle;
+  }
 
-  -webkit-animation-name: ef-pulse-grow;
-  animation-name: ef-pulse-grow;
-  -webkit-animation-duration: 0.5s;
-  animation-duration: 0.5s;
-  -webkit-animation-timing-function: linear;
-  animation-timing-function: linear;
-  -webkit-animation-direction: alternate;
-  animation-direction: alternate;
-
-  @-webkit-keyframes ef-pulse-grow {
+  @keyframes ef-pulse-grow {
     50% {
-      -webkit-transform: scale(1.1);
       transform: scale(1.1);
     }
+
     100% {
-      -webkit-transform: scale(1);
       transform: scale(1);
     }
   }
 
   @keyframes ef-pulse-grow {
     50% {
-      -webkit-transform: scale(1.1);
       transform: scale(1.1);
     }
+
     100% {
-      -webkit-transform: scale(1);
       transform: scale(1);
     }
   }

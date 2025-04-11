@@ -1,163 +1,166 @@
-@import "../../../../abstract/abstract";
+@use "../../../../abstract/abstract" as *;
 
 .content {
-    @include screenSize(100vw, auto);
-    padding: 4rem 0;
-    background: $color2;
-    @include displayFlex(center, center, row);
-    position: relative;
+  position: relative;
+  padding: 4rem 0;
+  background: $color2;
 
-    //lg
+  @include screenSize(100vw, auto);
+  @include displayFlex(center, center, row);
+
+  // lg
+  @include for-lg-only {
+    padding: 8rem 0;
+  }
+
+  .banner {
+    display: none;
+
+    // md
+    @include for-md-only {
+      position: absolute;
+      z-index: 0;
+      width: 100vw;
+      height: 100%;
+      inset: 0;
+    }
+  }
+
+  .wrapper {
+    max-width: $maxWidthDefault;
+    gap: 3rem;
+
+    @include screenSize(100%, auto);
+    @include displayFlex(center, center, column);
+
+    // lg
     @include for-lg-only {
-        padding: 8rem 0;
+      gap: 3rem;
     }
 
-    .banner {
-        display: none;
+    &_title {
+      z-index: 2;
+      align-self: center;
 
-        //md
-        @include for-md-only {
-            position: absolute;
-            left: 0;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            width: 100vw;
-            height: 100%;
-            z-index: 0;
-        }
+      @include screenSize(100%, auto);
+
+      span {
+        color: $color7;
+        background-clip: text;
+        background-image: linear-gradient(to bottom, $color7, $color7, $color1);
+        -webkit-text-fill-color: transparent;
+      }
+
+      h2 {
+        color: $color8;
+
+        @include titleMd(center);
+      }
     }
 
-    .wrapper {
+    &_cardsWrapper {
+      z-index: 2;
+      align-self: center;
+
+      @include screenSize(100%, auto);
+      @include displayFlex(center, center, row);
+
+      &-cards {
+        display: grid;
+        padding: 2rem 0;
+        gap: 2rem;
+        grid-template-columns: repeat(1, 1fr);
+
         @include screenSize(100%, auto);
+
+        // sm
+        @include for-sm-only {
+          min-width: auto;
+          gap: 1rem;
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        // xl
+        @include for-xl-only {
+          flex-direction: column;
+          width: 90vw;
+          max-width: $maxWidthDefault;
+          gap: 0.5rem;
+          grid-template-columns: repeat(4, 1fr);
+        }
+
+        .card {
+          padding: 3rem 2rem;
+          border: 2px solid $color1;
+          border-radius: 24px;
+          gap: 2rem;
+
+          @include displayFlex(space-between, center, column);
+          @include screenSize(100%, auto);
+          @include boxShadow2;
+
+          &__icon {
+            width: 60px;
+            height: auto;
+
+            // md
+            @include for-md-only {
+              width: 90px;
+            }
+          }
+
+          &__text {
+            // md
+            @include for-md-only {
+              min-height: 168px;
+            }
+
+            p {
+              color: $color8;
+
+              @include bodyCard(center);
+            }
+          }
+        }
+      }
+
+      &-subtitle {
+        z-index: 2;
+        gap: 1.5rem;
+        padding-bottom: 3em;
+
+        @include screenSize(85%, auto);
         @include displayFlex(center, center, column);
-        gap: 3rem;
-        max-width: $maxWidthDefault;
 
-        // lg
-        @include for-lg-only {
-            gap: 3rem;
+        p {
+          color: $color8;
+
+          @include titleMd(center);
         }
 
-        &_title {
-            @include screenSize(100%, auto);
-            align-self: center;
-            z-index: 2;
-
-            span {
-                background-image: linear-gradient(to bottom, $color7, $color7, $color1);
-                color: $color7;
-                background-clip: text;
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
-            }
-
-            h2 {
-                @include titleMd(center);
-                color: $color8;
-            }
+        span {
+          font-weight: 700;
+          color: $color16;
         }
-
-        &_cardsWrapper {
-            @include screenSize(100%, auto);
-            @include displayFlex(center, center, row);
-            align-self: center;
-            z-index: 2;
-
-            &-cards {
-                @include screenSize(100%, auto);
-                padding: 2rem 0;
-                display: grid;
-                grid-template-columns: repeat(1, 1fr);
-                gap: 2rem;
-
-                // sm
-                @include for-sm-only {
-                    grid-template-columns: repeat(2, 1fr);
-                    min-width: auto;
-                    gap: 1rem;
-                }
-
-                // xl
-                @include for-xl-only {
-                    width: 90vw;
-                    grid-template-columns: repeat(4, 1fr);
-                    gap: .5rem;
-                    flex-direction: column;
-                    max-width: $maxWidthDefault;
-                }
-
-                .card {
-                    @include displayFlex(space-between, center, column);
-                    @include screenSize(100%, auto);
-                    padding: 3rem 2rem;
-                    border-radius: 24px;
-                    border: 2px solid $color1;
-                    @include boxShadow2();
-                    gap: 2rem;
-
-
-                    &__icon {
-                        width: 60px;
-                        height: auto;
-
-                        //md
-                        @include for-md-only {
-                            width: 90px;
-                        }
-                    }
-
-                    &__text {
-
-                        // md
-                        @include for-md-only {
-                            min-height: 168px;
-                        }
-
-                        p {
-                            @include bodyCard(center);
-                            color: $color8;
-                        }
-                    }
-                }
-            }
-
-            &-subtitle {
-                @include screenSize(85%, auto);
-                @include displayFlex(center, center, column);
-                padding-bottom: 3em;
-                gap: 1.5rem;
-                z-index: 2;
-
-                p {
-                    @include titleMd(center);
-                    color: $color8;
-                }
-
-                span {
-                    font-weight: 700;
-                    color: $color16;
-                }
-
-            }
-
-        }
-
-        .button {
-            @include buttonLayout();
-            @include buttonText();
-            background: $color1;
-            @include boxShadow2();
-            transition: all .5s ease-in-out;
-            border: none;
-            outline: none;
-            border-radius: 10px;
-            z-index: 2;
-
-            &:hover {
-                transition: all .5s ease-in;
-                transform: scale(1.05);
-            }
-        }
+      }
     }
+
+    .button {
+      z-index: 2;
+      background: $color1;
+      border: none;
+      transition: all 0.5s ease-in-out;
+      border-radius: 10px;
+      outline: none;
+
+      @include buttonLayout;
+      @include buttonText;
+      @include boxShadow2;
+
+      &:hover {
+        transition: all 0.5s ease-in;
+        transform: scale(1.05);
+      }
+    }
+  }
 }

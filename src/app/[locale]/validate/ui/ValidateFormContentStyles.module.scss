@@ -1,12 +1,13 @@
-@import"../../../../abstract/abstract";
+@use "../../../../abstract/abstract" as *;
 
 
 .formWrapper {
+    padding: 1rem;
+    background-color: $color12;
+
     @include screenSize(100%, auto);
     @include displayFlex(center, center, column);
-    @include glassEffect();
-    background-color: $color12;
-    padding: 1rem;
+    @include glassEffect;
 
     //sm
     @include for-sm-only {
@@ -21,9 +22,10 @@
     }
 
     .form {
-        @include displayFlex(center, center, column);
         width: 100%;
         gap: 1.2vh;
+
+        @include displayFlex(center, center, column);
 
         &__buttonWrapper {
             @include screenSize(100%, auto);
@@ -31,8 +33,9 @@
         }
 
         .actions {
-            @include displayFlex(center, center, row);
             padding: 2.5rem 0;
+
+            @include displayFlex(center, center, row);
         }
 
         .astronault {

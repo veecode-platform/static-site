@@ -1,13 +1,13 @@
 //Variables
 $color1: #33ffce;
 $color2: #fafafa;
-$color3: #000000;
-$color4: #555555;
+$color3: #000;
+$color4: #555;
 $color5: #1c8068;
 $color6: #1c806971;
 $color7: #28cca4;
 $color8: #302c2c;
-$color9: #111111;
+$color9: #111;
 $color10: #cdcdcd;
 $color11: #0a3b30;
 $color12: #55555520;
@@ -19,7 +19,7 @@ $color17: #f5f5f5;
 $color18: #2f2b2b;
 $color19: #082c24;
 $color20: #161616c7;
-$danger : #e6113f;
+$danger: #e6113f;
 $dangerBg: #facfd8;
 $success: #34d399;
 
@@ -42,6 +42,8 @@ $headerHeight: 80px;
 
 :export {
   color1: $color1;
+  color10: $color4;
+  color11: $color4;
   color2: $color2;
   color3: $color3;
   color4: $color4;
@@ -50,6 +52,4 @@ $headerHeight: 80px;
   color7: $color4;
   color8: $color4;
   color9: $color4;
-  color10: $color4;
-  color11: $color4;
 }

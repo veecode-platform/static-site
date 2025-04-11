@@ -1,13 +1,15 @@
-@import "../../../../abstract/abstract";
+@use "../../../../abstract/abstract" as *;
 
 .card {
-    @include screenSize(100%, auto);
     margin-bottom: 2em;
 
+    @include screenSize(100%, auto);
+
     &__title {
-        @include titleSm(left);
         margin: .7em 0;
         cursor: pointer;
+
+        @include titleSm(left);
     }
 
     &__desc {

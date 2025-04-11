@@ -1,33 +1,37 @@
-@import"../../../abstract/abstract";
-
+@use "../../../abstract/abstract" as *;
 
 .container {
+    color: $color2;
+
     @include screenSize(100%, auto);
     @include displayFlex(center, center, column);
-    color: $color2;
 }
 
 .content {
+    margin-top: 1.5em;
+
     @include screenSize(100%, auto);
     @include displayFlex(center, center, column);
-    margin-top: 1.5em;
 
     //lg
     @include for-lg-only {
-        @include displayFlex(space-between, flex-start, row);
         gap: 1rem;
+
+        @include displayFlex(space-between, flex-start, row);
     }
 
     .text {
+        padding: 2rem 0;
+
         @include screenSize(100%, auto);
         @include displayFlex(flex-start, center, column);
-        padding: 2rem 0;
 
         //lg
         @include for-lg-only {
+            padding: 0 0 2rem;
+
             @include screenSize(50%, auto);
             @include displayFlex(center, flex-start, column);
-            padding: 0rem 0 2rem 0;
         }
 
         strong {
@@ -35,17 +39,18 @@
         }
 
         &__header {
-            margin: 1rem 0 1.5rem 0;
+            margin: 1rem 0 1.5rem;
 
             //sm
             @include for-sm-only {
-                margin: 2rem 0 1.5rem 0;
+                margin: 2rem 0 1.5rem;
             }
 
 
             h2 {
-                @include titleMain(center);
                 color: $color2;
+
+                @include titleMain(center);
 
                 //lg 
                 @include for-lg-only {
@@ -59,27 +64,30 @@
 
             //lg
             @include for-lg-only {
-                @include displayFlex(center, center, column);
                 margin: 1.2em .5em 1.5em 0;
+
+                @include displayFlex(center, center, column);
             }
 
             p {
-                @include text(left);
                 color: $color2;
                 margin-bottom: 1rem;
+
+                @include text(left);
             }
         }
     }
 
     &__options {
+        padding: 1em 0 6em;
+
         @include screenSize(100%, auto);
         @include displayFlex(center, center, column);
-        padding: 1em 0 6em 0;
 
         //md
         @include for-md-only {
             width: 70%;
-            padding: 2em 0 4em 0;
+            padding: 2em 0 4em;
         }
 
         //lg

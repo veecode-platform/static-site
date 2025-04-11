@@ -1,11 +1,12 @@
-@import "../../../../../abstract/abstract";
+@use "../../../../../abstract/abstract" as *;
 
 .wrapper {
+    position: relative;
+    z-index: 99;
+    background-color: $color3;
+
     @include screenSize(100vw, auto);
     @include displayFlex(center, center, row);
-    background-color: $color3;
-    z-index: 99;
-    position: relative;
 
     a {
         color: $color2;
@@ -16,8 +17,8 @@
         }
 
         &:hover {
-            transition: all 0.5s ease-in-out;
             color: $color1;
+            transition: all 0.5s ease-in-out;
         }
 
         &:active {
@@ -26,11 +27,12 @@
     }
 
     .content {
+        z-index: 999;
+        padding: .5rem 0;
+        transition: all .5s ease-in;
+
         @include screenSize(100%, 80px);
         @include displayFlex(space-between, center, row);
-        padding: .5rem 0;
-        z-index: 999;
-        transition: all .5s ease-in;
 
         &__logo {
             position: relative;
@@ -41,13 +43,14 @@
                 //md
                 @include for-md-only {
                     display: flex;
-                    @include navbarLogo();
                     max-width: 206px;
+
+                    @include navbarLogo;
                 }
             }
 
             .logoMobile {
-                @include navbarLogo();
+                @include navbarLogo;
 
                 //md
                 @include for-md-only {
@@ -60,23 +63,24 @@
             color: white;
 
             a {
-                @include textNavbar();
                 cursor: pointer;
+
+                @include textNavbar;
 
                 &:hover {
                     color: $color2 !important;
                 }
 
                 &::before {
-                    content: "{";
-                    color: $color1;
                     font-weight: bold;
+                    color: $color1;
+                    content: "{";
                 }
 
                 &::after {
-                    content: "}";
-                    color: $color1;
                     font-weight: bold;
+                    color: $color1;
+                    content: "}";
                 }
             }
         }

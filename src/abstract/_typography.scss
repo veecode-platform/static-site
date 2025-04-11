@@ -1,4 +1,6 @@
-@import './functions', './responsive', './variables';
+@use 'functions' as *;
+@use 'responsive' as *;
+@use 'variables' as *;
 
 //fonts
 $font-text: 'Poppins', sans-serif;
@@ -6,49 +8,60 @@ $font-body: 16px;
 
 //font
 @mixin typography($fontSize, $align, $lineHeight, $weight) {
-  width: auto;
-  font-size: $fontSize;
-  text-align: $align;
-  line-height: $lineHeight;
-  font-weight: $weight;
+  & {
+    width: auto;
+    font-size: $fontSize;
+    font-weight: $weight;
+    line-height: $lineHeight;
+    text-align: $align;
+  }
 }
 
 // text
-
 @mixin textNavbar() {
   @include typography(1.12rem, left, 1.625rem, 400);
 
   /* sm */
   @include for-sm-only {
-    font-size: 1rem;
+    & {
+      font-size: 1rem;
+    }
   }
 
   /* md */
   @include for-md-only {
-    font-size: 1.125rem;
+    & {
+      font-size: 1.125rem;
+    }
   }
 
   /* large */
   @include for-lg-only {
-    font-size: 1.25rem;
+    & {
+      font-size: 1.25rem;
+    }
   }
 
   /* XL */
   @include for-xl-only {
-    font-size: 20px;
-    text-align: center;
+    & {
+      font-size: 20px;
+      text-align: center;
+    }
   }
 }
 
 /*
 *
-*  Titles
+* Titles
 *
 */
 
 @mixin titleXL($align) {
-  @include typography(2.5rem, $align, 3rem, 600);
-  letter-spacing: 0.5px;
+  & {
+    letter-spacing: 0.5px;
+    @include typography(2.5rem, $align, 3rem, 600);
+  }
 
   /* sm */
   @include for-sm-only {
@@ -67,8 +80,10 @@ $font-body: 16px;
 }
 
 @mixin titleMain($align) {
-  @include typography(1.5rem, $align, 2rem, 700);
-  letter-spacing: 0.5px;
+  & {
+    letter-spacing: 0.5px;
+    @include typography(1.5rem, $align, 2rem, 700);
+  }
 
   /* sm */
   @include for-sm-only {
@@ -87,8 +102,10 @@ $font-body: 16px;
 }
 
 @mixin titleMd($align) {
-  @include typography(1.25rem, $align, 1.75rem, 600);
-  letter-spacing: 0.5px;
+  & {
+    letter-spacing: 0.5px;
+    @include typography(1.25rem, $align, 1.75rem, 600);
+  }
 
   /* tablets */
   @include for-tablet-only {
@@ -107,8 +124,10 @@ $font-body: 16px;
 }
 
 @mixin titleSm($align) {
-  @include typography(1.125rem, $align, 1.75rem, 600);
-  letter-spacing: 0.5px;
+  & {
+    letter-spacing: 0.5px;
+    @include typography(1.125rem, $align, 1.75rem, 600);
+  }
 
   /* sm */
   @include for-sm-only {
@@ -128,12 +147,14 @@ $font-body: 16px;
 
 /*
 *
-*  Text
+* Text
 *
 */
 
 @mixin text($align) {
-  @include typography(0.875rem, $align, 1.25rem, 400);
+  & {
+    @include typography(0.875rem, $align, 1.25rem, 400);
+  }
 
   /* sm */
   @include for-sm-only {
@@ -152,32 +173,36 @@ $font-body: 16px;
 }
 
 @mixin label() {
-  @include typography(0.875rem, 'center', 1.25rem, 500);
+  & {
+    @include typography(0.875rem, center, 1.25rem, 500);
+  }
 
   /* tablets */
   @include for-md-only {
-    @include typography(1rem, 'center', 1.5rem, 500);
+    @include typography(1rem, center, 1.5rem, 500);
   }
 
   /* laptops */
   @include for-lg-only {
-    @include typography(1.125rem, 'center', 1.625rem, 500);
+    @include typography(1.125rem, center, 1.625rem, 500);
   }
 
   /* xl */
   @include for-xl-only {
-    @include typography(.875rem, 'center', 1.75rem, 500);
+    @include typography(.875rem, center, 1.75rem, 500);
   }
 }
 
 /*
 *
-*  Cards
+* Cards
 *
 */
 
 @mixin titleCard($align) {
-  @include typography(1.125rem, $align, 1.5rem, 600);
+  & {
+    @include typography(1.125rem, $align, 1.5rem, 600);
+  }
 
   /* sm */
   @include for-sm-only {
@@ -196,7 +221,9 @@ $font-body: 16px;
 }
 
 @mixin bodyCard($align) {
-  @include typography(0.875rem, $align, 1.25rem, 400);
+  & {
+    @include typography(0.875rem, $align, 1.25rem, 400);
+  }
 
   /* sm */
   @include for-sm-only {
@@ -221,7 +248,9 @@ $font-body: 16px;
 */
 
 @mixin footerText($align) {
-  @include typography(0.75rem, $align, 1.125rem, 400);
+  & {
+    @include typography(0.75rem, $align, 1.125rem, 400);
+  }
 
   /* SM */
   @include for-sm-only {
@@ -249,21 +278,23 @@ $font-body: 16px;
 */
 
 @mixin buttonText() {
-  @include typography(0.875rem, 'center', 1.125rem, 400);
+  & {
+    @include typography(0.875rem, center, 1.125rem, 400);
+  }
 
   /* sm */
   @include for-sm-only {
-    @include typography(1rem, 'center', 1.25rem, 400);
+    @include typography(1rem, center, 1.25rem, 400);
   }
 
   /* md */
   @include for-md-only {
-    @include typography(1.125rem, 'center', 1.35rem, 400);
+    @include typography(1.125rem, center, 1.35rem, 400);
   }
 
   /* lg */
   @include for-lg-only {
-    @include typography(1.25rem, 'center', 1.5rem, 400);
+    @include typography(1.25rem, center, 1.5rem, 400);
   }
 }
 
@@ -272,49 +303,69 @@ $font-body: 16px;
 */
 
 @mixin faqTitle() {
-  @include typography(0.93rem, 'left', 1.5rem, 500);
+  & {
+    @include typography(0.93rem, left, 1.5rem, 500);
+  }
 
   //sm
   @include for-sm-only {
-    font-size: 0.812rem;
+    & {
+      font-size: 0.812rem;
+    }
   }
 
   // md
-  @include for-sm-only {
-    font-size: 1rem;
+  @include for-md-only {
+    & {
+      font-size: 1rem;
+    }
   }
 
   //lg
   @include for-lg-only {
-    font-size: 0.812rem;
+    & {
+      font-size: 0.812rem;
+    }
   }
 
   //xl
   @include for-xl-only {
-    font-size: 20px;
+    & {
+      font-size: 20px;
+    }
   }
 }
 
 @mixin faqBody() {
-  @include typography(0.93rem, 'left', 1.5rem, 300);
+  & {
+    @include typography(0.93rem, left, 1.5rem, 300);
+  }
 
   //sm
   @include for-sm-only {
-    font-size: 0.812rem;
+    & {
+      font-size: 0.812rem;
+    }
   }
 
   // md
-  @include for-sm-only {
-    font-size: 1rem;
+  @include for-md-only {
+    & {
+      font-size: 1rem;
+    }
   }
 
   //lg
   @include for-lg-only {
-    font-size: 0.812rem;
+    & {
+      font-size: 0.812rem;
+    }
   }
 
   //xl
   @include for-xl-only {
-    font-size: 18px;
+    & {
+      font-size: 18px;
+    }
   }
 }

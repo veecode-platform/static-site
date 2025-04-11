@@ -1,11 +1,12 @@
-@import "../../../abstract/abstract";
+@use "../../../abstract/abstract" as *;
 
 .wrapper {
+  position: relative;
+  z-index: 99;
+  background-color: $color3;
+
   @include screenSize(100vw, auto);
   @include displayFlex(center, center, row);
-  background-color: $color3;
-  z-index: 99;
-  position: relative;
 
   a {
     color: $color2;
@@ -16,8 +17,8 @@
     }
 
     &:hover {
-      transition: all 0.5s ease-in-out;
       color: $color1;
+      transition: all 0.5s ease-in-out;
     }
 
     &:active {
@@ -31,11 +32,12 @@
   }
 
   .content {
+    z-index: 999;
+    padding: .5rem 0;
+    transition: all .5s ease-in;
+
     @include screenSize(100%, 80px);
     @include displayFlex(space-between, center, row);
-    padding: .5rem 0;
-    z-index: 999;
-    transition: all .5s ease-in;
 
     &__logo {
       position: relative;
@@ -46,8 +48,9 @@
         //lg
         @include for-lg-only {
           display: flex;
-          @include navbarLogo();
-          max-width: 210px
+          max-width: 210px;
+
+          @include navbarLogo;
         }
 
         //xl
@@ -57,8 +60,9 @@
       }
 
       .logoMobile {
-        @include navbarLogo();
         max-width: 60px;
+
+        @include navbarLogo;
 
         //md
         @include for-lg-only {
@@ -84,9 +88,10 @@
           }
 
           h2 {
-            cursor: pointer;
             opacity: 1;
-            @include textNavbar();
+            cursor: pointer;
+
+            @include textNavbar;
           }
         }
 
@@ -103,14 +108,14 @@
 
     .mobileButton {
       display: flex;
+      padding: .5rem;
+      font-size: 2rem;
+      color: $color2;
       background: transparent;
       ;
       border: none;
-      outline: none;
-      color: $color2;
-      font-size: 2rem;
-      padding: .5rem;
       cursor: pointer;
+      outline: none;
 
       //xl
       @include for-xl-only {
@@ -123,20 +128,22 @@
 
 
 .menuMobile {
-  @include screenSize(100vw, 100vh);
-  margin-left: 0;
-  margin-top: 80px;
-  transition: all .5s ease-in;
-  background-color: $color9;
-  color: $color2;
   position: fixed;
   top: 0;
   z-index: 9999999999;
+  color: $color2;
+  transition: all .5s ease-in;
+  background-color: $color9;
+  margin-left: 0;
+  margin-top: 80px;
+
+  @include screenSize(100vw, 100vh);
 
   //md
   @include for-md-only {
-    @include screenSize(80vw, 100vh);
     max-width: 600px;
+
+    @include screenSize(80vw, 100vh);
   }
 
   //xl
@@ -145,25 +152,28 @@
   }
 
   &__item {
-    @include screenSize(95%, 56px);
-    @include displayFlex(flex-start, center, row);
-    border-radius: 10px;
-    cursor: pointer;
     margin: .5rem auto;
     background: $color20;
+    border-radius: 10px;
+    cursor: pointer;
+
+    @include screenSize(95%, 56px);
+    @include displayFlex(flex-start, center, row);
 
     a {
-      @include screenSize(100%, 100%);
-      border-radius: 10px;
       padding: 0 .8rem;
+      border-radius: 10px;
+
+      @include screenSize(100%, 100%);
       @include displayFlex(flex-start, center, row);
-      @include textNavbar();
+      @include textNavbar;
     }
   }
 }
 
 .menuMobileHide {
   @extend .menuMobile;
-  margin-left: -1100vw;
+
   transition: all .5s ease-in-out;
+  margin-left: -1100vw;
 }
