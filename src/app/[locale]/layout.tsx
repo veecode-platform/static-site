@@ -11,6 +11,7 @@ import { routing } from '@/i18n/routing';
 // import { LANGUAGES } from '@/utils/constants/languages';
 import './global.scss';
 import { LayoutProps } from '@/utils/types/pageProps';
+import 'highlight.js/styles/github-dark.css';
 
 const thumbnailImageUrl =
   'https://cdn.platform.vee.codes/landing-page/thumbnail.png';

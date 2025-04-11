@@ -1,0 +1,66 @@
+{
+    "extends": "stylelint-config-standard-scss",
+    "plugins": [
+        "stylelint-order"
+    ],
+    "rules": {
+        "scss/at-rule-no-unknown": true,
+        "scss/declaration-nested-properties-no-mixed": true,
+        "declaration-block-no-duplicate-properties": true,
+        "order/order": [
+            "custom-properties",
+            "declarations",
+            {
+                "type": "at-rule",
+                "name": "include"
+            },
+            "rules"
+        ],
+        "order/properties-order": [
+            [
+                "position",
+                "top",
+                "right",
+                "bottom",
+                "left",
+                "z-index",
+                "display",
+                "flex",
+                "flex-grow",
+                "flex-shrink",
+                "flex-basis",
+                "flex-direction",
+                "flex-wrap",
+                "justify-content",
+                "align-items",
+                "align-content",
+                "order",
+                "width",
+                "min-width",
+                "max-width",
+                "height",
+                "min-height",
+                "max-height",
+                "margin",
+                "padding",
+                "font",
+                "font-size",
+                "font-weight",
+                "line-height",
+                "text-align",
+                "color",
+                "background",
+                "border",
+                "box-shadow",
+                "overflow",
+                "visibility",
+                "opacity",
+                "transition",
+                "transform"
+            ],
+            {
+                "unspecified": "bottomAlphabetical"
+            }
+        ]
+    }
+}

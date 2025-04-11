@@ -1,4 +1,5 @@
 import './global.scss';
+import 'highlight.js/styles/github-dark.css';
 
 type Props = {
   children: React.ReactNode;
