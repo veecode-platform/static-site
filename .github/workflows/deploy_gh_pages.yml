@@ -35,4 +35,4 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./out
-          cname: cname-landing-page-teste.homolog.platform.vee.codes
+          cname: platform.vee.codes
