@@ -7,8 +7,6 @@ import {
 } from '@/lib';
 import { PluginContent } from './ui/PluginContent';
 
-// export const dynamic = 'force-static';
-
 type Props = {
   params: Promise<{ locale: Locale; path: string }>;
 };
